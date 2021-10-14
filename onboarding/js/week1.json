@@ -1,0 +1,552 @@
+{
+    "week1": {
+        "day1": {
+            "txt": "Day 1 <br>Monday on Route (Today's Focus: Sales Center Start/End of Day Process)",
+            "short_txt": "<span>Day 1:</span><br>Sales Center Start/End of Day Process",
+            "icon": "ico_21",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Start of day procedures",
+                    "cat_icon": "ico_03",
+                    "messages": {
+                        "message1": {
+                            "txt": "Welcome! Your first step each day will be to initiate 'Start of Day' procedures in the HHC system. It is critical to ensure these activities are completed correctly as they will help ensure you stay organized throughout the entire day.",
+                            "tasks": {
+                                "task1": "Verify the sales date on the screen. Call support at 1-855-218-1613",
+                                "task2": "Review start of day procedures"
+                            }
+                        },
+                        "message2": {
+                            "txt": "Once you have received the daily Load Invoice, validate that you have received all product listed. Compare physical product to quantities listed on Load Invoice. Use the HHC to make any needed adjustments to your original Load Invoice. Mark any and all adjustments on the Load Invoice as well.",
+                            "tasks": {
+                                "task1": "Validate load invoice quantities compared to physical product",
+                                "task2": "Make and finalize load adjustments"
+                            }
+                        },
+                        "message3": {
+                            "txt": "After making any needed adjustments to Load Invoice, finalize the Load Invoice in your HHC. Once Load Invoice is finalized you will need to print a Stop Distribution Report to aid in building your load by customer. Best practice is to track products by checking off products directly on your Stop Distribution Report.",
+                            "tasks": {
+                                "task1": "Sync printer",
+                                "task2": "Print stop distribution report"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Sorting your load",
+                    "cat_icon": "ico_06",
+                    "messages": {
+                        "message1": {
+                            "txt": "Using the Stop Distribution Report, stage and build out your product load by customer. Use a different set of trays and dollies for each customer, building each load by SKU. Once you have completed your load, a best practice is to 'tag' each stack with the name of the customer it is planned for. This will allow for you to keep customers organized together on your delivery vehicle.",
+                            "tasks": {
+                                "task1": "Stage trays and dollies by customer",
+                                "task2": "Demonstrate proper tray handling techniques",
+                                "task3": "Build load and check off UPCs from stop distribution report",
+                                "task4": "Tag completed stacks with customer name and number"
+                            }
+                        },
+                        "message2": {
+                            "txt": "Once you have completed building your load, submit your updated Load Invoice to the Depot Coordinator for adjustments. In unmanned facilities you will need to follow the local process for making adjustments.",
+                            "tasks": {
+                                "task1": "Submit load invoice for credit"
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Loading delivery vehicle",
+                    "cat_icon": "ico_26",
+                    "messages": {
+                        "message1": {
+                            "txt": "After building your load and making any needed adjustments to your Load Invoice you will need to load your delivery vehicle. Best practice is to load customers in reverse order, with your last customers being loaded first and your first customers being loaded last. Be sure to secure any and all loads before departing the Sales Center dock. Be sure to clean up your work area after building your load, placing all trays and dollies in the proper locations and removing any trash from your work area. Ensure you have your HHC and Printer, along with any needed POS materials and extra printer paper, before departing the Sales Center.",
+                            "tasks": {
+                                "task1": "Load stacks in reverse route order (last stops first / first stops last)",
+                                "task2": "Secure all dollies and boxed product",
+                                "task3": "Stack and return empty trays",
+                                "task4": "Grab all supplied (HHC, printer paper, POS materials) before departing",
+                                "task5": "Note the invoice on record is what is charged that day"
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Store procedures",
+                    "cat_icon": "ico_09",
+                    "messages": {
+                        "message1": {
+                            "txt": "Whew! That was a lot to take in this morning! For the rest of the day, observe your COACH as they operate their route. Feel free to ask questions as you go. Pay attention to how your COACH merchandises product on the shelves and displays.",
+                            "tasks": {
+                                "task1": "Operate the route as usual",
+                                "task2": "Demonstrate merchandising principles",
+                                "task3": "Explain date coding on bags and packages"
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "End of day procedures",
+                    "cat_icon": "ico_27",
+                    "messages": {
+                        "message1": {
+                            "txt": "Almost there! The last step in your day will be to initiate 'End of Day' procedures in the HHC. It is crucial these activities are completed correctly to ensure proper accounting of returns and any product remaining on the truck (truckstock). This is the final step in your daily product accountability process.",
+                            "tasks": {
+                                "task1": "Initiate end of day procedures",
+                                "task2": "Finalize and transfer returns",
+                                "task3": "Verify truck stock inventory",
+                                "task4": "Print the daily settlement report",
+                                "task5": "Communicate the HHC"
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with the OSL in classroom. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day2": {
+            "txt": "Day 2 <br>Tuesday Classroom Day with OSL (Today's Focus: Fundamentals, Introductions to Systems)",
+            "short_txt": "<span>Day 2:</span><br>Fundamentals, Introductions to Systems",
+            "icon": "ico_04",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Sales Center",
+                    "cat_icon": "ico_04",
+                    "messages": {
+                        "message1": {
+                            "txt": "Welcome back! Today you will spend the day with the Operational Sales Leader (OSL). You will get several pieces of valuable information and begin to familiarize yourself with several processes.",
+                            "tasks": {
+                                "task1": "Welcome the NEW IBP to the Sales Center"
+                            }
+                        },
+                        "message2": {
+                            "txt": "Knowing the BBU associates in the Sales Center will make you feel more comfortable and provide additional resources for assistance. The OSL will facilitate brief introductions of BBU associates in your Sales Center. While meeting these associates, you will tour the Sales Center to familiarize yourself. The OSL will also explain any important Safety and Operational protocols, including a recap of the load shipping process.",
+                            "tasks": {
+                                "task1": "Introduce NEW IBP to any BBU associates",
+                                "task2": "Tour Sales Center explaining Safety and Operational protocols"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Contacts",
+                    "cat_icon": "ico_11",
+                    "messages": {
+                        "message1": {
+                            "txt": "There are several important pieces of information you will need to be successful in the operation of your route. The OSL will provide those to you this morning.",
+                            "tasks": {
+                                "task1": "Give local contact numbers",
+                                "task2": "Give IBP branded shirts and ordering information",
+                                "task3": "Hand out samples of core products "
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Brand & Merchandising",
+                    "cat_icon": "ico_17",
+                    "messages": {
+                        "message1": {
+                            "txt": "Understanding the power of our Brands and proper Merchandising standards will aid in your success as a Business Owner. The OSL has several Brand Education and Merchandising videos for you to view.",
+                            "tasks": {
+                                "task1": "Show brand education videos",
+                                "task2": "Show DSDE merchandising standards video"
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Distribution Agreement",
+                    "cat_icon": "ico_02",
+                    "messages": {
+                        "message1": {
+                            "txt": "Understanding the Distribution Agreement is important. The OSL will review both the IBP and Bakery obligations under the Distribution Agreement with you.",
+                            "tasks": {
+                                "task1": "Review Article 4 & 6 (Sale of Product & Distributor Obligations)",
+                                "task2": "Review Article 8 (Bakery Obligations)"
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "ION Access",
+                    "cat_icon": "ico_22",
+                    "messages": {
+                        "message1": {
+                            "txt": "You will need access to ION, BBU's proprietary ordering system. You will learn more about ION and how to place orders later in your Onboarding. For now, the OSL will need to request access to ION for you. This access will be effective once you take possession of the route after the Effective Date of Purchase.",
+                            "tasks": {
+                                "task1": "Request ION access for the NEW IBP"
+                            }
+                        }
+                    }
+                },
+                "cat6": {
+                    "cat_txt": "HHC",
+                    "cat_icon": "ico_16",
+                    "messages": {
+                        "message1": {
+                            "txt": "Understanding all the functions of the HHC will allow for easier use in route operations. The OSL will discuss the important functions of the HHC with you.",
+                            "tasks": {
+                                "task1": "Discuss SBT product life-cycle and how account for product"
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with the MSL in classroom and market. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day3": {
+            "txt": "Day 3 <br>Wednesday Market Day with MSL (Today's Focus: Market)",
+            "short_txt": "<span>Day 3:</span><br> Wednesday Market Day with MSL",
+            "icon": "ico_24",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Business Review",
+                    "cat_icon": "ico_09",
+                    "messages": {
+                        "message1": {
+                            "txt": "Understanding which products are most important to your business will aid in your success. The Market Sales Leader (MSL) will go through a business review of the accounts in the geography you are purchasing. This will include products that drive growth and freshness.",
+                            "tasks": {
+                                "task1": "Discuss business using Qlik (frontline Business Review)",
+                                "task2": "Identify core products and growth drivers",
+                                "task3": "Identify core products lagging in freshness"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Sales Tools",
+                    "cat_icon": "ico_13",
+                    "messages": {
+                        "message1": {
+                            "txt": "Knowing how to sell your products to store decision makers is important. Fact Based Selling will help gain secondary displays to support promotional events. The MSL will guide you through the Fact Based Selling process.",
+                            "tasks": {
+                                "task1": "Communicate benefits of fact based selling"
+                            }
+                        },
+                        "message2": {
+                            "txt": "You will regularly receive communication in regards to upcoming promotions with your customers via Promotional Calendars. Understanding how to access and read these calendars will aid in proper promotional planning and ordering.",
+                            "tasks": {
+                                "task1": "Show how to access and read promotional calendars",
+                                "task2": "Explain importance of promotional calendars when ordering"
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Market Tour",
+                    "cat_icon": "ico_27",
+                    "messages": {
+                        "message1": {
+                            "txt": "It is important to familiarize yourself with your accounts. Knowing where they are, what the layout of the store is, and where secondary displays are located will ease the transition into route ownership. The MSL will take you on a tour of your major accounts, allowing you to get a feel for them and meet store decision makers.",
+                            "tasks": {
+                                "task1": "Tour market including major accounts"
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with your COACH. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day4": {
+            "txt": "Day 4 <br>Thursday on Route (Today's Focus: Sales Center AM/PM Process)",
+            "short_txt": "<span>Day 4:</span><br>Thursday on Route",
+            "icon": "ico_25",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Start of day procedures",
+                    "cat_icon": "ico_08",
+                    "messages": {
+                        "message1": {
+                            "txt": "Start of Day procedures",
+                            "tasks": {
+                                "task1": "Verify the sales date on the screen. Call support at 1-855-218-1613",
+                                "task2": "Review start of day procedures",
+                                "task3": "Check in returns according to local sales center guidelines",
+                                "task4": "Stack product in the same order as listed in the returns invoice",
+                                "task5": "Validate load invoice quantities compared to physical product",
+                                "task6": "Make and finalize load adjustments",
+                                "task7": "Sync printer",
+                                "task8": "Print stop distribution report"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Sorting your load",
+                    "cat_icon": "ico_07",
+                    "messages": {
+                        "message1": {
+                            "txt": "Building load and finalizing daily purchases (invoice)",
+                            "tasks": {
+                                "task1": "Stage trays and dollies by customer",
+                                "task2": "Demonstrate proper tray handling techniques",
+                                "task3": "Build load and check off UPCs from stop distribution report",
+                                "task4": "Tag completed stacks with customer name and number",
+                                "task5": "Submit load invoice for credit"
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Loading delivery vehicle",
+                    "cat_icon": "ico_20",
+                    "messages": {
+                        "message1": {
+                            "txt": "Loading delivery vehicle and sales tools",
+                            "tasks": {
+                                "task1": "Load stacks in reverse route order (last stops first / first stops last)",
+                                "task2": "Secure all dollies and boxed product",
+                                "task3": "Stack and return empty trays",
+                                "task4": "Grab all supplied (HHC, printer paper, POS materials) before departing",
+                                "task5": "Note the invoice on record is what is charged that day"
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Store procedures",
+                    "cat_icon": "ico_22",
+                    "messages": {
+                        "message1": {
+                            "txt": "Basic store procedures",
+                            "tasks": {
+                                "task1": "Operate the route as usual",
+                                "task2": "Demonstrate merchandising principles",
+                                "task3": "Explain date coding on bags and packages"
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "End of day procedures",
+                    "cat_icon": "ico_24",
+                    "messages": {
+                        "message1": {
+                            "txt": "End of Day procedures",
+                            "tasks": {
+                                "task1": "Initiate end of day procedures",
+                                "task2": "Finalize and transfer returns",
+                                "task3": "Verify truck stock inventory",
+                                "task4": "Print the daily settlement report",
+                                "task5": "Communicate the HHC"
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with your COACH. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day5": {
+            "txt": "Day 5 <br>Friday on Route (Today's Focus: Sales Center AM/PM Process)",
+            "short_txt": "<span>Day 5:</span><br>Friday on Route",
+            "icon": "ico_12",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Start of day procedures",
+                    "cat_icon": "ico_04",
+                    "messages": {
+                        "message1": {
+                            "txt": "Start of Day procedures",
+                            "tasks": {
+                                "task1": "Verify the sales date on the screen. Call support at 1-855-218-1613",
+                                "task2": "Review start of day procedures",
+                                "task3": "Check in returns according to local sales center guidelines",
+                                "task4": "Stack product in the same order as listed in the returns invoice",
+                                "task5": "Validate load invoice quantities compared to physical product",
+                                "task6": "Make and finalize load adjustments",
+                                "task7": "Sync printer",
+                                "task8": "Print stop distribution report"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Sorting your load",
+                    "cat_icon": "ico_11",
+                    "messages": {
+                        "message1": {
+                            "txt": "Building load and finalizing daily purchases (invoice)",
+                            "tasks": {
+                                "task1": "Stage trays and dollies by customer",
+                                "task2": "Demonstrate proper tray handling techniques",
+                                "task3": "Build load and check off UPCs from stop distribution report",
+                                "task4": "Tag completed stacks with customer name and number",
+                                "task5": "Submit load invoice for credit"
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Loading delivery vehicle",
+                    "cat_icon": "ico_17",
+                    "messages": {
+                        "message1": {
+                            "txt": "Loading delivery vehicle and sales tools",
+                            "tasks": {
+                                "task1": "Load stacks in reverse route order (last stops first / first stops last)",
+                                "task2": "Secure all dollies and boxed product",
+                                "task3": "Stack and return empty trays",
+                                "task4": "Grab all supplied (HHC, printer paper, POS materials) before departing",
+                                "task5": "Note the invoice on record is what is charged that day"
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Store procedures",
+                    "cat_icon": "ico_02",
+                    "messages": {
+                        "message1": {
+                            "txt": "Basic store procedures",
+                            "tasks": {
+                                "task1": "Operate the route as usual",
+                                "task2": "Demonstrate merchandising principles",
+                                "task3": "Explain date coding on bags and packages"
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "End of day procedures",
+                    "cat_icon": "ico_22",
+                    "messages": {
+                        "message1": {
+                            "txt": "End of Day procedures",
+                            "tasks": {
+                                "task1": "Initiate end of day procedures",
+                                "task2": "Finalize and transfer returns",
+                                "task3": "Verify truck stock inventory",
+                                "task4": "Print the daily settlement report",
+                                "task5": "Communicate the HHC"
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with your COACH. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day6": {
+            "txt": "Day 6 <br>Saturday on Route (Today's Focus: Sales Center AM/PM Process)",
+            "short_txt": "<span>Day 6:</span><br> Saturday on Route",
+            "icon": "ico_14",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Start of day procedures",
+                    "cat_icon": "ico_03",
+                    "messages": {
+                        "message1": {
+                            "txt": "Start of Day procedures",
+                            "tasks": {
+                                "task1": "Verify the sales date on the screen. Call support at 1-855-218-1613",
+                                "task2": "Review start of day procedures",
+                                "task3": "Check in returns according to local sales center guidelines",
+                                "task4": "Stack product in the same order as listed in the returns invoice",
+                                "task5": "Validate load invoice quantities compared to physical product",
+                                "task6": "Make and finalize load adjustments",
+                                "task7": "Sync printer",
+                                "task8": "Print stop distribution report"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Sorting your load",
+                    "cat_icon": "ico_06",
+                    "messages": {
+                        "message1": {
+                            "txt": "Building load and finalizing daily purchases (invoice)",
+                            "tasks": {
+                                "task1": "Stage trays and dollies by customer",
+                                "task2": "Demonstrate proper tray handling techniques",
+                                "task3": "Build load and check off UPCs from stop distribution report",
+                                "task4": "Tag completed stacks with customer name and number",
+                                "task5": "Submit load invoice for credit"
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Loading delivery vehicle",
+                    "cat_icon": "ico_26",
+                    "messages": {
+                        "message1": {
+                            "txt": "Loading delivery vehicle and sales tools",
+                            "tasks": {
+                                "task1": "Load stacks in reverse route order (last stops first / first stops last)",
+                                "task2": "Secure all dollies and boxed product",
+                                "task3": "Stack and return empty trays",
+                                "task4": "Grab all supplied (HHC, printer paper, POS materials) before departing",
+                                "task5": "Note the invoice on record is what is charged that day"
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Store procedures",
+                    "cat_icon": "ico_09",
+                    "messages": {
+                        "message1": {
+                            "txt": "Basic store procedures",
+                            "tasks": {
+                                "task1": "Operate the route as usual",
+                                "task2": "Demonstrate merchandising principles",
+                                "task3": "Explain date coding on bags and packages"
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "End of day procedures",
+                    "cat_icon": "ico_27",
+                    "messages": {
+                        "message1": {
+                            "txt": "End of Day procedures",
+                            "tasks": {
+                                "task1": "Initiate end of day procedures",
+                                "task2": "Finalize and transfer returns",
+                                "task3": "Verify truck stock inventory",
+                                "task4": "Print the daily settlement report",
+                                "task5": "Communicate the HHC"
+                            }
+                        }
+                    }
+                },
+                "cat6": {
+                    "cat_txt": "Knowledge Check",
+                    "cat_icon": "ico_26",
+                    "messages": {
+                        "message1": {
+                            "txt": "Knowledge Check",
+                            "tasks": {
+                                "task1": "Ask if any topics need to be revisited from knowledge check"
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Establish time and location with COACH for Sunday pull-ups."
+        },
+        "day7": {
+            "txt": "Day 7 <br>Sunday Pull-Ups",
+            "short_txt": "<span>Day 7:</span><br> Sunday Pull-Ups",
+            "icon": "ico_16",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Product Rotation/Merchandising",
+                    "cat_icon": "ico_08",
+                    "messages": {
+                        "message1": {
+                            "txt": "On a non-delivery day, it is important you visit your customers to work up and back stock while also pulling up the shelf and displays. This also is an opportunity to discuss business with store decision makers.",
+                            "tasks": {
+                                "task1": "Merchandise the shelf and displays at each customer",
+                                "task2": "Merchandise backstock from the backroom",
+                                "task3": "Discuss importance of proper product rotation"
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with your COACH. Establish a start time and plan to meet them at the Sales Center."
+        }
+    },
+    "visible": true
+}

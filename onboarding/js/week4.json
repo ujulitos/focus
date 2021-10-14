@@ -1,0 +1,428 @@
+{
+    "week4": {
+        "day22": {
+            "txt": "Day 22 <br>Monday on Route (Today's Focus: Business Operation / Customer Relations)",
+            "short_txt": "<span>Day 22:</span><br>Business Operation / Customer Relations",
+            "icon": "ico_21",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Start of Day Procedures",
+                    "cat_icon": "ico_03",
+                    "messages": {
+                        "message1": {
+                            "txt": "Good morning! As you experienced in previous weeks, initiating 'Start of Day' procedures in the HHC is critical to daily organization. Work the process you learned last week, from validating your load through departing from the sales center. Refer back to Week One if you have any questions.",
+                            "tasks": {
+                                "task1": "Ensure the start of day process is completed properly",
+                                "task2": "Reinforce invoice is final once the sales center is departed"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Store Procedures",
+                    "cat_icon": "ico_06",
+                    "messages": {
+                        "message1": {
+                            "txt": "Navigating your customer accounts will help in building solid business relationships. Be sure to complete all steps in the process, from invoicing customers, working backstock and new product, to speaking with customer decision makers.",
+                            "tasks": {
+                                "task1": "Assist the in-store process from receiving to merchandising"
+
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Scan Based Trading",
+                    "cat_icon": "ico_26",
+                    "messages": {
+                        "message1": {
+                            "txt": "Understanding Scan Based Trading (SBT) is a crucial part of route operation. A count of inventory should be taken in every SBT account each week. This count should be completed on the first day of service each week. You will learn more about SBT later in your Onboarding. Complete inventories in all applicable accounts. If you are purchasing the route from another IBP, ensure they are present for these important inventory counts this week.",
+                            "tasks": {
+                                "task1": "Assist pulling returns from the shelf and displays",
+                                "task2": "Assist completing an SBT inventory, including all backstock and displays (Monday only)",
+                                "task3": "Validate the inventory counts are correct (on behalf of the company or in the presence of selling IBP)"
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Merchandising",
+                    "cat_icon": "ico_09",
+                    "messages": {
+                        "message1": {
+                            "txt": "Proper merchandising to DSDE standards can greatly enhance your success. Quality merchandising is your 'Silent Seller' representing you and your brands when you are not in the store. Your MSL will discuss the DSDE merchandising standards with you and help you set both the shelf and any secondary displays to standard.",
+                            "tasks": {
+                                "task1": "Explain DSDE merchandising standards",
+                                "task2": "Set the customer's shelf to plan-o-gram (POG)"
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "Building Relationships with Decision Makers/Selling",
+                    "cat_icon": "ico_27",
+                    "messages": {
+                        "message1": {
+                            "txt": "Building relationships with the decision makers in your customers will aid in being a successful business owner. It is important to have regular communication with decision makers, updating them on current status and gaining support for upcoming promotional events. Assist this week while your MSL has converstations with store decision makers.",
+                            "tasks": {
+                                "task1": "Sell in a secondary display using fact based selling"
+                            }
+                        }
+                    }
+                },
+                "cat6": {
+                    "cat_txt": "End of Day Procedures",
+                    "cat_icon": "ico_16",
+                    "messages": {
+                        "message1": {
+                            "txt": "Complete the 'End of Day' procedures in the HHC. Be sure to validate any and all truckstock, and create plans to sell that product the following delivery day.",
+                            "tasks": {
+                                "task1": "Ensure the end of day process and communication of the is understood."
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with your MSL. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day23": {
+            "txt": "Day 23 <br>Tuesday on Route (Today's Focus: Business Operation / Customer Relations)",
+            "short_txt": "<span>Day 23:</span><br>Business Operation / Customer Relations",
+            "icon": "ico_04",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Start of day procedures",
+                    "cat_icon": "ico_04",
+                    "messages": {
+                        "message1": {
+                            "txt": "Start of day procedures",
+                            "tasks": {
+                                "task1": "Ensure the start of day process is completed properly"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Store Procedures",
+                    "cat_icon": "ico_11",
+                    "messages": {
+                        "message1": {
+                            "txt": "Receiving, invoicing, and in-store procedures",
+                            "tasks": {
+                                "task1": "Assist the in-store process from receiving to merchandising"
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Merchandising",
+                    "cat_icon": "ico_17",
+                    "messages": {
+                        "message1": {
+                            "txt": "Merchandising and DSDE Standards",
+                            "tasks": {
+                                "task1": "Explain DSDE merchandising standards",
+                                "task2": "Set the customer's shelf to plan-o-gram (POG)"
+
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Building Relationships with Decision Makers/Selling",
+                    "cat_icon": "ico_02",
+                    "messages": {
+                        "message1": {
+                            "txt": "Building relationships with the decision makers and fact based selling",
+                            "tasks": {
+                                "task1": "Sell in a secondary display using fact based selling"
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "End of Day Procedures",
+                    "cat_icon": "ico_22",
+                    "messages": {
+                        "message1": {
+                            "txt": "End of day procedures",
+                            "tasks": {
+                                "task1": "Ensure the end of day process and communication of the is understood."
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with your MSL. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day24": {
+            "txt": "Day 24 <br>Wednesday (Today's Focus: ION & SCO Training)",
+            "short_txt": "<span>Day 24:</span><br>ION & SCO Training",
+            "icon": "ico_24",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Product Rotation/Merchandising",
+                    "cat_icon": "ico_09",
+                    "messages": {
+                        "message1": {
+                            "txt": "On a non-delivery day, it is important you visit your customers to work up and back stock while also pulling up the shelf and and displays. This also is an opportunity to discuss business with store decision makers.",
+                            "tasks": {
+                                "task1": "Merchandise the shelf and displays at each customer",
+                                "task2": "Merchandise backstock from the backroom",
+                                "task3": "Discuss importance of proper product rotation filling in gaps where necessary"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Closing",
+                    "cat_icon": "ico_13",
+                    "messages": {
+                        "message1": {
+                            "txt": "Continue ION training/SCO training",
+                            "tasks": {
+                                "task1": "Discuss how to adjust an order at the product level in ION (delivery percentage patterns, promotional activity, SCO, etc.)"
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with your COACH on route. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day25": {
+            "txt": "Day 25 <br>Thursday (Today's Focus: Business Operation/Customer Relations)",
+            "short_txt": "<span>Day 25:</span><br>Business Operation/Customer Relations",
+            "icon": "ico_25",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Start of day procedures",
+                    "cat_icon": "ico_08",
+                    "messages": {
+                        "message1": {
+                            "txt": "Start of day procedures",
+                            "tasks": {
+                                "task1": "Reinforce invoice is final once the sales center is departed"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Store Procedures",
+                    "cat_icon": "ico_07",
+                    "messages": {
+                        "message1": {
+                            "txt": "Receiving, invoicing, and in-store procedures",
+                            "tasks": {
+                                "task1": "Assist the in-store process from receiving to merchandising"
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Merchandising",
+                    "cat_icon": "ico_20",
+                    "messages": {
+                        "message1": {
+                            "txt": "Merchandising and DSDE Standards",
+                            "tasks": {
+                                "task1": "Explain DSDE merchandising standards",
+                                "task2": "Set the customer's shelf to plan-o-gram (POG)"
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Building Relationships with Decision Makers/Selling",
+                    "cat_icon": "ico_22",
+                    "messages": {
+                        "message1": {
+                            "txt": "Building relationships with the decision makers and fact based selling",
+                            "tasks": {
+                                "task1": "Sell in a secondary display using fact based selling"
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "End of Day Procedures",
+                    "cat_icon": "ico_24",
+                    "messages": {
+                        "message1": {
+                            "txt": "End of day procedures",
+                            "tasks": {
+                                "task1": "Ensure the end of day process and communication of the is understood."
+
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with your MSL. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day26": {
+            "txt": "Day 26 <br>Friday (Today's Focus: Business Operation/Customer Relations)",
+            "short_txt": "<span>Day 26:</span><br>Business Operation/Customer Relations",
+            "icon": "ico_12",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Start of day procedures",
+                    "cat_icon": "ico_04",
+                    "messages": {
+                        "message1": {
+                            "txt": "Start of day procedures",
+                            "tasks": {
+                                "task1": "Reinforce invoice is final once the sales center is departed"
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Store Procedures",
+                    "cat_icon": "ico_11",
+                    "messages": {
+                        "message1": {
+                            "txt": "Receiving, invoicing, and in-store procedures",
+                            "tasks": {
+                                "task1": "Assist the in-store process from receiving to merchandising"
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Merchandising",
+                    "cat_icon": "ico_17",
+                    "messages": {
+                        "message1": {
+                            "txt": "Merchandising and DSDE Standards",
+                            "tasks": {
+                                "task1": "Explain DSDE merchandising standards",
+                                "task2": "Set the customer's shelf to plan-o-gram (POG)"
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Building Relationships with Decision Makers/Selling",
+                    "cat_icon": "ico_02",
+                    "messages": {
+                        "message1": {
+                            "txt": "Building relationships with the decision makers and fact based selling",
+                            "tasks": {
+                                "task1": "Ensure the end of day process and communication of the is understood."
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "Knowledge Check",
+                    "cat_icon": "ico_14",
+                    "messages": {
+                        "message1": {
+                            "txt": "MSL Questions and Onboarding Survey",
+                            "tasks": {
+                                "task1": "* Utilize the attached document to ask follow-up questions of the IBP about their learnings.",
+                                "task2": "* Supply the Onboarding Survey link to the IBP and ask them to complete."
+
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow will be a day with your MSL. Establish a start time and plan to meet them at the Sales Center."
+        },
+        "day27": {
+            "txt": "Day 27 <br>Saturday (Today's Focus: Business Operation/Customer Relations)",
+            "short_txt": "<span>Day 27:</span><br>Business Operation/Customer Relations",
+            "icon": "ico_14",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Start of day procedures",
+                    "cat_icon": "ico_03",
+                    "messages": {
+                        "message1": {
+                            "txt": "Start of day procedures",
+                            "tasks": {
+                                "task1": "Reinforce invoice is final once the sales center is departed"
+
+                            }
+                        }
+                    }
+                },
+                "cat2": {
+                    "cat_txt": "Store Procedures",
+                    "cat_icon": "ico_06",
+                    "messages": {
+                        "message1": {
+                            "txt": "Receiving, invoicing, and in-store procedures",
+                            "tasks": {
+                                "task1": "Assist the in-store process from receiving to merchandising"
+                            }
+                        }
+                    }
+                },
+                "cat3": {
+                    "cat_txt": "Merchandising",
+                    "cat_icon": "ico_26",
+                    "messages": {
+                        "message1": {
+                            "txt": "Merchandising and DSDE Standards",
+                            "tasks": {
+                                "task1": "Explain DSDE merchandising standards",
+                                "task2": "Set the customer's shelf to plan-o-gram (POG)"
+                            }
+                        }
+                    }
+                },
+                "cat4": {
+                    "cat_txt": "Building Relationships with Decision Makers/Selling",
+                    "cat_icon": "ico_09",
+                    "messages": {
+                        "message1": {
+                            "txt": "Building relationships with the decision makers and fact based selling",
+                            "tasks": {
+                                "task1": "Sell in a secondary display using fact based selling"
+                            }
+                        }
+                    }
+                },
+                "cat5": {
+                    "cat_txt": "End of Day Procedures",
+                    "cat_icon": "ico_27",
+                    "messages": {
+                        "message1": {
+                            "txt": "End of day procedures",
+                            "tasks": {
+                                "task1": "Ensure the end of day process and communication of the is understood."
+
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Tomorrow you will pull up your stores."
+        },
+        "day28": {
+            "txt": "Day 28 <br>Sunday (Today's Focus: Pull Ups)",
+            "short_txt": "<span>Day 28:</span><br> Pull Ups",
+            "icon": "ico_16",
+            "cats": {
+                "cat1": {
+                    "cat_txt": "Product Rotation/Merchandising",
+                    "cat_icon": "ico_08",
+                    "messages": {
+                        "message1": {
+                            "txt": "On a non-delivery day, it is important you visit your customers to work up and back stock while also pulling up the shelf and and displays. This also is an opportunity to discuss business with store decision makers.",
+                            "tasks": {
+                                "task1": "Merchandise the shelf and displays at each customer",
+                                "task2": "Merchandise backstock from the backroom"
+
+                            }
+                        }
+                    }
+                }
+            },
+            "final_message": "Congratulations! You have completed the 4 weeks of onboarding. Tomorrow will be your first day operating the route on your own. Remember, you can reach out to your COACH or MSL if you have questions. Good luck!"
+        }
+    },
+    "visible": true
+}

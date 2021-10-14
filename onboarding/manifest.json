@@ -1,0 +1,29 @@
+{
+    "name": "Onboarding",
+    "short_name": "Onboarding",
+    "start_url": "/Onboarding",
+    "display": "standalone",
+    "background_color": "#222",
+    "theme_color": "#222",
+    "icons": [{
+            "src": "favicon-1x.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "favicon-2x.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "favicon-3x.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "favicon-4x.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+}

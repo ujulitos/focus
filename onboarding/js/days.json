@@ -1,0 +1,175 @@
+{
+    "days": {
+        "day1": {
+            "txt": "Day 1: Sales Center Start/End of Day Process",
+            "icon": "apartment",
+            "categorias": {
+                "cat1": {
+                    "cat_txt": "Start of the day Procedures",
+                    "cat_icon": "schedule"
+                },
+                "cat2": {
+                    "cat_txt": "Sorting your Load",
+                    "cat_icon": "inventory_2"
+                },
+                "cat3": {
+                    "cat_txt": "Loading delivery vehicle",
+                    "cat_icon": "stars"
+                },
+                "cat4": {
+                    "cat_txt": "Store procedures",
+                    "cat_icon": "style"
+                },
+                "cat5": {
+                    "cat_txt": "End of day procedures",
+                    "cat_icon": "restaurant_menu"
+                }
+            }
+        },
+        "day2": {
+            "txt": "Day 2: Fundamentals, Introductions to Systems",
+            "icon": "menu_book",
+            "categorias": {
+                "cat1": {
+                    "cat_txt": "Sales Center",
+                    "cat_icon": "schedule"
+                },
+                "cat2": {
+                    "cat_txt": "Contacts",
+                    "cat_icon": "inventory_2"
+                },
+                "cat3": {
+                    "cat_txt": "Brand & Merchandising",
+                    "cat_icon": "stars"
+                },
+                "cat4": {
+                    "cat_txt": "Distribution Agreement",
+                    "cat_icon": "style"
+                },
+                "cat5": {
+                    "cat_txt": "ION Access",
+                    "cat_icon": "restaurant_menu"
+                },
+                "cat6": {
+                    "cat_txt": "SBT",
+                    "cat_icon": "stars"
+                },
+                "cat7": {
+                    "cat_txt": "HHC",
+                    "cat_icon": "style"
+                }
+            }
+        },
+        "day3": {
+            "txt": "Day 3: Wednesday Market Day with MSL",
+            "icon": "storefront",
+            "categorias": {
+                "cat1": {
+                    "cat_txt": "Business Review",
+                    "cat_icon": "schedule"
+                },
+                "cat2": {
+                    "cat_txt": "Sales Tools",
+                    "cat_icon": "inventory_2"
+                },
+                "cat3": {
+                    "cat_txt": "Market Tour",
+                    "cat_icon": "restaurant_menu"
+                }
+            }
+        },
+        "day4": {
+            "txt": "Day 4: Thursday on Route",
+            "icon": "directions_bike",
+            "categorias": {
+                "cat1": {
+                    "cat_txt": "Start of the day Procedures",
+                    "cat_icon": "schedule"
+                },
+                "cat2": {
+                    "cat_txt": "Sorting your Load",
+                    "cat_icon": "inventory_2"
+                },
+                "cat3": {
+                    "cat_txt": "Loading delivery vehicle",
+                    "cat_icon": "stars"
+                },
+                "cat4": {
+                    "cat_txt": "Store procedures",
+                    "cat_icon": "restaurant_menu"
+                },
+                "cat5": {
+                    "cat_txt": "End of day procedures",
+                    "cat_icon": "style"
+                }
+            }
+        },
+        "day5": {
+            "txt": "Day 5: Friday on Route",
+            "icon": "camera_roll",
+            "categorias": {
+                "cat1": {
+                    "cat_txt": "Start of the day Procedures",
+                    "cat_icon": "schedule"
+                },
+                "cat2": {
+                    "cat_txt": "Sorting your Load",
+                    "cat_icon": "inventory_2"
+                },
+                "cat3": {
+                    "cat_txt": "Loading delivery vehicle",
+                    "cat_icon": "stars"
+                },
+                "cat4": {
+                    "cat_txt": "Store procedures",
+                    "cat_icon": "style"
+                },
+                "cat5": {
+                    "cat_txt": "End of day procedures",
+                    "cat_icon": "restaurant_menu"
+                },
+                "cat6": {
+                    "cat_txt": "Knowledge Check",
+                    "cat_icon": "style"
+                }
+            }
+        },
+        "day6": {
+            "txt": "Day 6: Saturday on Route",
+            "icon": "flight",
+            "categorias": {
+                "cat1": {
+                    "cat_txt": "Start of the day Procedures",
+                    "cat_icon": "schedule"
+                },
+                "cat2": {
+                    "cat_txt": "Sorting your Load",
+                    "cat_icon": "inventory_2"
+                },
+                "cat3": {
+                    "cat_txt": "Loading delivery vehicle",
+                    "cat_icon": "stars"
+                },
+                "cat4": {
+                    "cat_txt": "Store procedures",
+                    "cat_icon": "style"
+                },
+                "cat5": {
+                    "cat_txt": "End of day procedures",
+                    "cat_icon": "restaurant_menu"
+                }
+            }
+        },
+        "day7": {
+            "txt": "Day 7: Sunday Pull-Ups",
+            "icon": "hotel",
+            "categorias": {
+                "cat1": {
+                    "cat_txt": "Product Rotation/Merchandising",
+                    "cat_icon": "restaurant_menu"
+                }
+            }
+        }
+    },
+    "visible": true
+}
