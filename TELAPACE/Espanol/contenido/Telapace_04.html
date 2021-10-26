@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="es" />
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/preloadjs-0.6.2.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/Time.js"></script>
+    <script src="js/Animations.min.js"></script>
+    <script src="js/bounce.min.js"></script>
+    <link rel="stylesheet" href="css/Reset.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/Style.css" type="text/css" charset="utf-8" />
+    <title>Slide 1</title>
+</head>
+
+<body>
+    <div id="contenido">
+        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Telapace_04/img01.png" />
+        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/Telapace_04/img02.png" />
+        <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/Telapace_04/img03.png" />
+        <img id="imagen4" class="element" _origenx="0" _origeny="0" src="images/Telapace_04/img04.png" />
+        <img id="imagen5" class="element" _origenx="0" _origeny="0" src="images/Telapace_04/img05.png" />
+        <img id="imagen6" class="element" _origenx="0" _origeny="0" src="images/Telapace_04/img06.png" />
+        <img id="imagen7" class="element" _origenx="0" _origeny="0" src="images/Telapace_04/img07.png" />
+
+        <img id="botonIniciar" class="element" _origenx="920" _origeny="320" src="images/Telapace_04/botonIniciar.png" />
+
+        <img id="boton1" class="element" _origenx="250" _origeny="200" src="images/Telapace_04/boton1.png" />
+        <img id="boton2" class="element" _origenx="600" _origeny="200" src="images/Telapace_04/boton2.png" />
+
+        <img id="retroBien" class="element" _origenx="0" _origeny="0" src="images/Telapace_04/retroBien.png" />
+        <img id="retroMal" class="element" _origenx="0" _origeny="0" src="images/Telapace_04/retroMal.png" />
+        <img id="botonContinuar" class="element" _origenx="920" _origeny="320" src="images/Telapace_04/botonContinuar.png" />
+        <img id="botonReiniciar" class="element" _origenx="550" _origeny="400" src="images/Telapace_04/botonReiniciar.png" />
+        <!-- <img id="botonAtras" class="element" _origenx="400" _origeny="527" src="images/Telapace_04/botonAtras.png" />
+        <img id="botonAdelante" class="element" _origenx="572" _origeny="527" src="images/Telapace_04/botonAdelante.png" /> -->
+
+
+        <!-- cargador -->
+        <div id="cargando" class=" cargando" style="width: 100px; height: 100px;"><svg style="margin: auto; background: transparent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <g transform="translate(20 50)">
+                    <circle cx="0" cy="0" r="6" fill="#C4007A" transform="scale(0.220385 0.220385)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.375s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(40 50)">
+                    <circle cx="0" cy="0" r="6" fill="#F6921E" transform="scale(0.564378 0.564378)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.25s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(60 50)">
+                    <circle cx="0" cy="0" r="6" fill="#66458E" transform="scale(0.881747 0.881747)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.125s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(80 50)">
+                    <circle cx="0" cy="0" r="6" fill="#00ADEE" transform="scale(0.992922 0.992922)">
+                        <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+            </svg>
+        </div>
+        <!-- <img id="cargando" class="cargando" src="images/cargando.gif"></img> -->
+        <canvas id="canvas_id"></canvas>
+
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+
+        var cuantasRespuestas = 2;
+        var correcta = 1;
+
+        cacularEscala();
+        ajustarEscenario();
+
+        function preload() {
+            animacion_entrada($("#cargando"), "default", .2, 0);
+            var preload = new createjs.LoadQueue();
+            preload.addEventListener("complete", iniciaCargador);
+            $.each($('.element'), function() {
+                preload.loadFile($("#" + this.id).attr('src'));
+                //console.log($("#" + this.id).attr('src'));
+            });
+        }
+
+        function iniciaCargador(event) {
+            console.log('load complete');
+            $.each($('.element'), function() {
+                inicializar($("#" + this.id));
+            });
+            $("#cargando").show();
+            $("#cargando").css({
+                'opacity': '1'
+            });
+            animacion_salida($("#cargando"), "desaparece", 0, muestraContenido);
+        }
+
+
+        function muestraContenido() {
+            animacion_entrada($("#imagen1"), "default", .5, .2);
+            animacion_entrada($("#imagen2"), "arriba_abajo", .5, .7);
+            animacion_entrada($("#imagen3"), "izq_der", .5, 1.3);
+            animacion_entrada($("#imagen4"), "der_izq", .5, 2);
+            animacion_entrada($("#imagen5"), "arriba_abajo", .5, 2.5);
+            parpadea($("#botonIniciar"), 3);
+        }
+
+
+        ///////////////// botonIniciar ////////////////
+        $("#botonIniciar").click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                TweenMax.killTweensOf($(this));
+                $(this).hide();
+                $(this).css({
+                    'cursor': 'default',
+                    'opacity': '0'
+                });
+                animacion_salida($("#imagen3"), "derecha_izquierda", 0);
+                animacion_salida($("#imagen4"), "derecha_izquierda", .2);
+                animacion_salida($("#imagen5"), "derecha_izquierda", .4);
+                animacion_entrada($("#imagen6"), "izq_der", .5, .8);
+                animacion_entrada($("#imagen7"), "arriba_abajo", .5, 1);
+
+                animacion_entrada($("#boton1"), "default", .3, 1.5);
+                animacion_entrada($("#boton2"), "default", .3, 1.7);
+                $("#boton1, #boton2").css({
+                    'cursor': 'pointer'
+                });
+            }
+        });
+
+        ///////////////// botones respuesta ////////////////
+        for (a = 1; a <= cuantasRespuestas; a++) {
+            $("#boton" + a).click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    var cualBoton = parseInt($(this).attr('id').substr(5, 2));
+                    // console.log('cualBoton', cualBoton);
+                    // TweenMax.killTweensOf($(this));
+                    // $(this).hide();
+                    $(this).css({
+                        'cursor': 'default'
+                        // 'opacity': '0'
+                    });
+                    califica(cualBoton);
+                    // terminarPantalla();
+                    // parent.nextPage();
+                }
+            });
+        }
+
+        function califica(cualRespuesta) {
+            console.log('califica', cualRespuesta);
+
+            animacion_salida($("#imagen6, #imagen7, #boton1, #boton2"), "desaparece", 0);
+
+            if (cualRespuesta == correcta) {
+                animacion_entrada($("#retroBien"), "izq_der", .7, .5);
+                parpadea($("#botonContinuar"), 1);
+            } else {
+                animacion_entrada($("#retroMal"), "izq_der", .7, .5);
+                parpadea($("#botonReiniciar"), 1);
+            }
+        }
+
+        ///////////////// botonReiniciar ////////////////
+        $("#botonReiniciar").click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                TweenMax.killTweensOf($(this));
+                $(this).hide();
+
+                parent.reLoad();
+            }
+        });
+
+        ///////////////// botonContinuar ////////////////
+        $("#botonContinuar").click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                TweenMax.killTweensOf($(this));
+                $(this).hide();
+
+                terminarPantalla();
+                parent.nextPage();
+            }
+        });
+
+
+
+        preload();
+
+    });
+
+</script>
+
+</html>
