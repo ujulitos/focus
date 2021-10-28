@@ -16,12 +16,12 @@ body {
 }
 
 .logo_bimbo {
-    height: 100px;
+    height: 120px;
     background-image: url(../img/logo_splash.png);
-    background-size: 70%;
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: -50px;
+    margin-bottom: 0px;
 }
 
 .siluetas {
