@@ -9,6 +9,15 @@ html.hc-nav-yscroll {
     min-height: 100%
 } */
 
+.side_logo {
+    height: 100px;
+    background-image: url(../img/bimbo_bakeries_usa_logo.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px;
+}
+
 #side_menu {
     display: none;
 }
