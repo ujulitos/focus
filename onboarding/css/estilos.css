@@ -22,7 +22,7 @@ body {
     height: 50px;
     padding-top: 6px;
     margin-top: -50px;
-    background-color: #222;
+    background-color: #001489;
     z-index: 999;
     pointer-events: none;
 }
@@ -37,11 +37,11 @@ body {
 
 .navbar_boton_atras,
 .navbar_boton_ayuda,
-.navbar_boton_salir {
+.navbar_boton_salir,
+.navbar_boton_menu {
     position: absolute;
     cursor: pointer;
     pointer-events: all;
-
 }
 
 .navbar_boton_atras {
@@ -64,7 +64,7 @@ body {
     /*display: none;*/
     display: flex;
     align-items: center;
-    margin-top: -33px;
+    margin-top: -4px;
     right: 20px;
 }
 
@@ -72,6 +72,9 @@ body {
     font-weight: bold;
 }
 
+.navbar_boton_menu {
+    margin-top: -4px;
+}
 
 .container {
     width: 100%;
@@ -110,6 +113,10 @@ body {
 .centrado {
     text-align: center;
     align-items: center;
+}
+
+.izq {
+    margin-left: 20px;
 }
 
 .justificado {
@@ -294,7 +301,7 @@ td:first-child {
     text-align: center;
     margin: -25px -30px 25px -30px;
     padding: 10px 25px 0px 25px;
-    background-color: #222;
+    background-color: #001489;
     color: #fff;
 }
 
@@ -585,23 +592,25 @@ td:first-child {
 .boton_register,
 .boton_reporte {
     border-radius: 50px;
-    background-color: #6c8be2 !important;
+    background-color: #001489 !important;
     color: #fff !important;
 }
 
 .boton_register:hover,
 .boton_reporte:hover {
-    background-color: #4a6bc7 !important;
+    background-color: #334ac9 !important;
 }
 
-.boton_cancel_reg {
+.boton_cancel_reg,
+.boton_logout {
     border-radius: 50px;
     background-color: #f0887a !important;
     color: #fff !important;
     /* margin-right: 5%; */
 }
 
-.boton_cancel_reg:hover {
+.boton_cancel_reg:hover,
+.boton_logout:hover {
     background-color: #e66452 !important;
 }
 
@@ -617,7 +626,8 @@ td:first-child {
 }
 
 .boton_register,
-.boton_reporte {
+.boton_reporte,
+.boton_logout {
     font-size: 10px;
     /* width: 70px; */
     height: 30px;

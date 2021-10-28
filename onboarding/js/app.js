@@ -64,9 +64,9 @@ var mensajeErrorLogin = 'Please provide valid data.';
 var mensajeErrorRegister = 'Please fill all inputs with valid data.';
 
 
-var revisaConexion = function() {
+var revisaConexion = function () {
     var connectedRef = firebase.database().ref(".info/connected");
-    connectedRef.on("value", function(snap) {
+    connectedRef.on("value", function (snap) {
         connected = false;
         $('#divBloqConexion').show();
         if (snap.val() === true) {
@@ -77,6 +77,18 @@ var revisaConexion = function() {
         }
     });
 }
+
+var Nav = new hcOffcanvasNav('#side_menu', {
+    disableAt: false,
+    customToggle: '#navbar_boton_menu',
+    levelSpacing: 40,
+    navTitle: 'ORIENTATION PLAYBOOK',
+    levelTitles: true,
+    levelTitleAsBack: false,
+    pushContent: false,
+    labelClose: false,
+    levelOpen: 'overlap'
+});
 
 
 var email = 'pre@i4l.mx';
@@ -89,7 +101,7 @@ function login(cualUsuario, cualPassword) {
     console.log('elPassword', elPassword);
 
     habilitaBoton($('#botonEntrar'), false);
-    baseOk = firebase.auth().signInWithEmailAndPassword(email, password).then(function(result) {
+    baseOk = firebase.auth().signInWithEmailAndPassword(email, password).then(function (result) {
             //  console.log('baseOk', baseOk);
 
             var user = firebase.auth().currentUser;
@@ -116,12 +128,12 @@ function login(cualUsuario, cualPassword) {
                     var valBuscar1 = 'Username';
                     var valBuscar2 = cualUsuario;
 
-                    firebase.database().ref(laUrlBase + 'Usuarios').orderByChild(valBuscar1).equalTo(valBuscar2).once('value').then(function(snapshot) {
+                    firebase.database().ref(laUrlBase + 'Usuarios').orderByChild(valBuscar1).equalTo(valBuscar2).once('value').then(function (snapshot) {
 
                         if (snapshot.val() != null) {
                             console.log('snapshot.val()', snapshot.val());
 
-                            snapshot.forEach(function(childSnapshot) {
+                            snapshot.forEach(function (childSnapshot) {
                                 usuarioKey = childSnapshot.key;
                                 // console.log('usuarioKey', usuarioKey);
                                 usuarioContrasena = snapshot.child(childSnapshot.key).child('Password').val();
@@ -147,7 +159,7 @@ function login(cualUsuario, cualPassword) {
 
             }
         },
-        function(error) {
+        function (error) {
             $('.mensaje_error_login').text(mensajeErrorLogin);
             habilitaBoton($('#botonEntrar'), true);
         });
@@ -301,10 +313,10 @@ function ingresa(usuarioId) {
     if (usuarioId != null) {
 
         if (revisaConexion) {
-            firebase.database().ref(laUrlBase + 'Usuarios').orderByChild('Id').equalTo(usuarioId).once('value').then(function(snapshot) {
+            firebase.database().ref(laUrlBase + 'Usuarios').orderByChild('Id').equalTo(usuarioId).once('value').then(function (snapshot) {
                 if (snapshot.val() != null) {
 
-                    snapshot.forEach(function(childSnapshot) {
+                    snapshot.forEach(function (childSnapshot) {
                         var elNombreRes = snapshot.child(childSnapshot.key).child('Name').val();
                         elPerfilNombre = elNombreRes;
                         var elId = snapshot.child(childSnapshot.key).child('Id').val();
@@ -379,11 +391,11 @@ function loginUser() {
 function cierraSesion() {
     console.log('cerrando sesion');
 
-    var onComplete = function(error) {
+    var onComplete = function (error) {
         if (error) {
             console.log('Ocurrió un error en la sincronización.');
         } else {
-            firebase.auth().signOut().then(function() {
+            firebase.auth().signOut().then(function () {
 
                 habilitaBoton($('#botonEntrar'), true);
                 $("#inputUsuario, #inputPassword").prop("disabled", false);
@@ -402,11 +414,13 @@ function cierraSesion() {
                 usuarioSeleccionado = undefined;
 
                 loadSeccion('login');
-            }, function(error) {
+            }, function (error) {
 
             });
             usuarioId = '';
             console.log('Sincronización realizada.');
+
+            cierraMenu();
         }
     };
 
@@ -414,6 +428,10 @@ function cierraSesion() {
         "Activo": false
     }, onComplete);
 
+}
+
+function cierraMenu() {
+    Nav.close();
 }
 
 
@@ -427,14 +445,14 @@ function cargador(evento) {
             });
             $("#cargando_int").animate({
                 'opacity': '0.3'
-            }, duracion, function() {
+            }, duracion, function () {
 
             });
             break;
         case 'oculta':
             $("#cargando_int").animate({
                 'opacity': '0'
-            }, duracion, function() {
+            }, duracion, function () {
                 $('#cargando').css({
                     'display': 'none'
                 });
@@ -451,7 +469,7 @@ function loadSeccion(cualseccion) {
     console.log('seccionActual', seccionActual);
 
     $("#container").empty();
-    $("#container").load('inc/' + cualseccion + '.html', function(response, status, xhr) {
+    $("#container").load('inc/' + cualseccion + '.html', function (response, status, xhr) {
         console.log('status', status);
     });
 
@@ -484,7 +502,7 @@ function loadSeccion(cualseccion) {
         });
     }
 
-    $(document).off('click', '#navbar_boton_atras').on('click', '#navbar_boton_atras', function(e) {
+    $(document).off('click', '#navbar_boton_atras').on('click', '#navbar_boton_atras', function (e) {
         if (seccionActual == 'semanas') {
             loadSeccion('login');
         }
@@ -496,9 +514,14 @@ function loadSeccion(cualseccion) {
         }
     });
 
-    $(document).off('click', '#navbar_boton_salir').on('click', '#navbar_boton_salir', function(e) {
+    $(document).off('click', '#navbar_boton_salir').on('click', '#navbar_boton_salir', function (e) {
         cierraSesion();
     });
+
+    $('#botonLogOut').click(function () {
+        cierraSesion();
+    });
+
 }
 
 
@@ -524,7 +547,7 @@ function reAjustaTamano() {
 }
 
 function activaRadio() {
-    $('[data-toggle="wizard-radio"]').click(function() {
+    $('[data-toggle="wizard-radio"]').click(function () {
         wizard = $(this).closest('.wizard-card');
         wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
         $(this).addClass('active');
@@ -534,7 +557,7 @@ function activaRadio() {
 }
 
 function activaCheckbox() {
-    $('[data-toggle="wizard-checkbox"]').click(function() {
+    $('[data-toggle="wizard-checkbox"]').click(function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
             $(this).find('[type="checkbox"]').removeAttr('checked');
@@ -562,18 +585,17 @@ var isMobile = detectMobile();
 
 
 
-$(document).ready(function() {
-
+$(document).ready(function () {
 
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/js/sw.js', {
                 scope: '/js/'
             })
-            .then(function(registration) {
+            .then(function (registration) {
                 console.log('Service Worker Registered');
             });
 
-        navigator.serviceWorker.ready.then(function(registration) {
+        navigator.serviceWorker.ready.then(function (registration) {
             console.log('Service Worker Ready');
         });
     }
@@ -607,5 +629,6 @@ $(document).ready(function() {
     // leeLocalStorage();
     ran = generarId();
     location.hash = "?" + ran;
+
 
 });

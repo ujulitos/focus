@@ -3,8 +3,8 @@
     "short_name": "Onboarding",
     "start_url": "/Onboarding",
     "display": "standalone",
-    "background_color": "#222",
-    "theme_color": "#222",
+    "background_color": "#001489",
+    "theme_color": "#001489",
     "icons": [{
             "src": "favicon-1x.png",
             "type": "image/png",
