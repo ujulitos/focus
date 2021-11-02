@@ -256,11 +256,14 @@
                                 })) : r.appendChild(e.content)
                             });
                             f && void 0 !== t && !1 !== te.insertBack && "overlap" === te.levelOpen && (s = ee.children(r, "ul"), a = te.levelTitleAsBack && a || te.labelBack || "", l = ee.createElement("a", {
-                                href: "#",
-                                class: "nav-back-button",
-                                role: "menuitem",
-                                tabindex: 0
-                            }, [a, ee.createElement("span")]), !0 === te.insertBack || 0 === te.insertBack ? (a = ee.createElement("div", {
+                                    href: "#",
+                                    class: "nav-back-button",
+                                    role: "menuitem",
+                                    tabindex: 0
+                                },
+                                [a, ee.createElement("span", {
+                                    class: "menu_arrow material-icons-outlined"
+                                }, 'navigate_before')]), !0 === te.insertBack || 0 === te.insertBack ? (a = ee.createElement("div", {
                                 class: "nav-back"
                             }, l), r.insertBefore(a, ee.children(r, ":not(.level-title)")[0])) : (o = ee.createElement("li", {
                                 class: "nav-item nav-back"

@@ -4,24 +4,22 @@ function activaSeccionHome() {
 
     ajustaTamano();
 
-    if (elRol == 'IBP') {
-        $('#divSelectPar').hide();
-        $('#divReportes').hide();
-    }
+    // if (elRol == 'IBP') {
+    $('#divSelectPar').hide();
     $('#divReportes').hide();
-    $('#divSemanas, #flechaAbajoSemanas, #flechaAbajoDias').hide();
-
+    // }
+    // $('#divSemanas, #flechaAbajoSemanas, #flechaAbajoDias').show();
 
     function leeUsuarios() {
 
         if (revisaConexion) {
-            firebase.database().ref(laUrlBase + 'Usuarios').once('value').then(function(snapshot) {
+            firebase.database().ref(laUrlBase + 'Usuarios').once('value').then(function (snapshot) {
                 if (snapshot.val() != null) {
                     var contadorUsuarios = 0;
                     cuantosUsuarios = 0;
                     console.log('-----------------------');
 
-                    snapshot.forEach(function(childSnapshot) {
+                    snapshot.forEach(function (childSnapshot) {
                         if (snapshot.child(childSnapshot.key).child('Id').val() != undefined && snapshot.child(childSnapshot.key).child('Id').val() != null) {
                             contadorUsuarios++;
                             this['usuarioPerfil' + contadorUsuarios] = snapshot.child(childSnapshot.key).child('Perfil').val();
@@ -64,7 +62,7 @@ function activaSeccionHome() {
         }
         console.log('dataSet', dataSet);
 
-        $('#elSelectPar').on('change', function() {
+        $('#elSelectPar').on('change', function () {
             var elPar = $("#elSelectPar :selected").text();
             var elParID = $("#elSelectPar :selected").val();
             seleccionaUsuario(elPar, elParID);
@@ -92,7 +90,7 @@ function activaSeccionHome() {
         usuarioSeleccionadoId = cualUsuarioId;
 
         $('#divReportes').hide();
-        $('#divReportes').fadeIn();
+        // $('#divReportes').fadeIn();
         $('#divSemanas, #flechaAbajoSemanas, #flechaAbajoDias').hide();
         $('#divSemanas').fadeIn();
 
@@ -103,7 +101,7 @@ function activaSeccionHome() {
         console.log('leeStatus', cualUsuarioId, elRol);
 
         if (revisaConexion) {
-            firebase.database().ref(laUrlBase + 'Usuarios/' + cualUsuarioId + '/Registro').once('value').then(function(snapshot) {
+            firebase.database().ref(laUrlBase + 'Usuarios/' + cualUsuarioId + '/Registro').once('value').then(function (snapshot) {
                 if (snapshot.val() != null) {
 
                     arrayStatus = snapshot.val();
@@ -181,28 +179,28 @@ function activaSeccionHome() {
         }
 
         for (a = 1; a <= cuantasSemanas; a++) {
-            $("#boton_semana" + a).mouseover(function(event) {
+            $("#boton_semana" + a).mouseover(function (event) {
                 for (b = 1; b <= cuantasSemanas; b++) {
                     $("#boton_semana" + b).css({
                         'background-color': 'transparent'
                     })
                 }
                 $("#boton_semana" + laSemanaSel).css({
-                    'background-color': '#444444'
+                    'background-color': '#eeeeee'
                 })
                 $(this).css({
-                    'background-color': '#444444'
+                    'background-color': '#eeeeee'
                 })
             });
-            $("#boton_semana" + a).mouseout(function(event) {
+            $("#boton_semana" + a).mouseout(function (event) {
                 $(this).css({
                     'background-color': 'transparent'
                 })
                 $("#boton_semana" + laSemanaSel).css({
-                    'background-color': '#444444'
+                    'background-color': '#eeeeee'
                 })
             });
-            $("#boton_semana" + a).click(function(event) {
+            $("#boton_semana" + a).click(function (event) {
                 event.preventDefault();
                 var cualSemana = parseInt($(this).attr('id').substr(12, 2));
                 console.log('cualSemana', cualSemana);
@@ -313,7 +311,7 @@ function activaSeccionHome() {
             })
         }
         $("#boton_semana" + laSemana).css({
-            'background-color': '#444444'
+            'background-color': '#eeeeee'
         })
 
 
@@ -344,7 +342,7 @@ function activaSeccionHome() {
                 })
             }
             $("#cardDia" + elDia).css({
-                'background-color': '#dadada'
+                'background-color': '#eeeeee'
             })
 
 
@@ -374,7 +372,7 @@ function activaSeccionHome() {
                     }
 
 
-                    $("#dia" + a + "_Categoria" + b).mouseover(function(event) {
+                    $("#dia" + a + "_Categoria" + b).mouseover(function (event) {
                         for (c = 1; c <= cuantosDias; c++) {
                             for (d = 1; d <= that['cuantasCategorias' + c]; d++) {
                                 $("#dia" + c + "_Categoria" + d).css({
@@ -389,7 +387,7 @@ function activaSeccionHome() {
                             'background-color': '#eeeeee'
                         })
                     });
-                    $("#dia" + a + "_Categoria" + b).mouseout(function(event) {
+                    $("#dia" + a + "_Categoria" + b).mouseout(function (event) {
                         $(this).css({
                             'background-color': 'transparent'
                         })
@@ -397,7 +395,7 @@ function activaSeccionHome() {
                             'background-color': '#eeeeee'
                         })
                     });
-                    $("#dia" + a + "_Categoria" + b).click(function(event) {
+                    $("#dia" + a + "_Categoria" + b).click(function (event) {
                         event.preventDefault();
                         var cualDia = parseInt($(this).attr('id').substr(3, 1));
                         var cualCategoria = parseInt($(this).attr('id').substr(14, 2));
@@ -415,28 +413,28 @@ function activaSeccionHome() {
         }
 
         for (a = 1; a <= cuantosDias; a++) {
-            $("#cardDia" + a).mouseover(function(event) {
+            $("#cardDia" + a).mouseover(function (event) {
                 for (b = 1; b <= cuantosDias; b++) {
                     $("#cardDia" + b).css({
                         'background-color': 'transparent'
                     })
                 }
                 $("#cardDia" + elDiaSel).css({
-                    'background-color': '#dadada'
+                    'background-color': '#eeeeee'
                 })
                 $(this).css({
-                    'background-color': '#dadada'
+                    'background-color': '#eeeeee'
                 })
             });
-            $("#cardDia" + a).mouseout(function(event) {
+            $("#cardDia" + a).mouseout(function (event) {
                 $(this).css({
                     'background-color': 'transparent'
                 })
                 $("#cardDia" + elDiaSel).css({
-                    'background-color': '#dadada'
+                    'background-color': '#eeeeee'
                 })
             });
-            $("#cardDia" + a).click(function(event) {
+            $("#cardDia" + a).click(function (event) {
                 event.preventDefault();
                 var cualDia = parseInt($(this).attr('id').substr(7, 2));
                 console.log('cualDia', cualDia);
@@ -456,7 +454,7 @@ function activaSeccionHome() {
             if (laCategoria != undefined || laCategoria != 0) {
                 loadCategoria(elDia);
                 $('#divCategorias').hide();
-               $('#divCategorias, #flechaAbajoDias').fadeIn();
+                $('#divCategorias, #flechaAbajoDias').fadeIn();
                 ajustaTamano();
             }
         }
@@ -469,18 +467,27 @@ function activaSeccionHome() {
     }
 
 
-    $("#botonReporteStatus").click(function(event) {
+    $("#botonReporteStatus").click(function (event) {
         // $(document).off('click', '#botonReporteStatus').on('click', '#botonReporteStatus', function(e) {
         //   event.preventDefault();
         // window.location.href = 'docs/Onboarding_Status_Report.xlsx';
         descargaReporteStatus();
     });
 
-    $("#botonReporteDetail").click(function(event) {
+    $("#botonReporteDetail").click(function (event) {
         //  $(document).off('click', '#botonReporteDetail').on('click', '#botonReporteDetail', function(e) {
         //   event.preventDefault();
         // window.location.href = 'docs/Onboarding_Detailed_Report.xlsx';
         descargaReporteDetalle();
     });
+
+
+    // siempre carga por default 
+    laSemana = 1;
+    laSemanaSel = 1;
+    elDia = 1;
+    elDiaSel = 1;
+    laCategoria = 1;
+    laCategoriaSel = 1;
 
 }

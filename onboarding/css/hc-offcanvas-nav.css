@@ -113,7 +113,7 @@ html.hc-nav-yscroll {
 }
 
 .hc-offcanvas-nav .nav-item-wrapper {
-    position: relative
+    position: relative;
 }
 
 .hc-offcanvas-nav .nav-item-link {
@@ -383,4 +383,21 @@ body.theme-default .hc-offcanvas-nav .nav-wrapper>.nav-content>ul:first-of-type>
 
 body.theme-default .hc-offcanvas-nav .nav-wrapper>.nav-content>ul:not(:last-child) {
     border-bottom: 2px solid #2c5e8f57
+}
+
+
+
+
+.hc-offcanvas-nav li:not(.custom-content) a {
+    display: flex;
+}
+
+.menu_icon,
+.menu_icon_int {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.menu_arrow {
+    margin-left: auto;
 }

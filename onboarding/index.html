@@ -30,8 +30,6 @@
     <script src="js/pouchdb.min.js"></script>
 
     <!-- Fonts and Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
@@ -39,9 +37,8 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-
     <link href="css/hc-offcanvas-nav.css" rel="stylesheet" />
-
+    <link href="css/calendar.css" rel="stylesheet" />
     <link href="css/estilos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -74,19 +71,72 @@
             <li>
                 <div class="centrado side_logo"></div>
             </li>
-            <li><a data-nav-close="false" href="#">Reports</a>
+            <li><a href="javascript: loadSeccion('home');"><span class="menu_icon material-icons-outlined">roofing</span>Home</a></li>
+
+            <li>
+                <a data-nav-close="false" href="#">
+                    <span class="menu_icon material-icons-outlined">bar_chart</span>
+                    Reports
+                    <span class="menu_arrow material-icons-outlined">navigate_next</span>
+                </a>
+
+
+
                 <ul>
-                    <!-- <li><a href="#">Status Report</a></li> -->
                     <li>
+                        <div style="display: flex;"><span class="menu_icon_int material-icons-outlined">bar_chart</span>Reports</div>
+                        <br><br>
                         <div id="botonReporteStatus" class="button boton_reporte">Status Report</div>
                         <div id="botonReporteDetail" class="button boton_reporte">Detailed Report</div>
                     </li>
                 </ul>
             </li>
-            <li><a href="#">Task Calendar</a></li>
-            <li><a data-nav-close="false" href="#">Tools</a>
+            <li><a href="javascript: loadSeccion('calendar');"><span class="menu_icon material-icons-outlined">event_available</span>Task Calendar</a></li>
+            <li><a data-nav-close="false" href="#"><span class="menu_icon material-icons-outlined">construction</span>Tools<span class="menu_arrow material-icons-outlined">navigate_next</span></a>
                 <ul>
-                    <li><a href="#">Distribution Agreement</a></li>
+                    <li>
+                        <div style="display: flex;"><span class="menu_icon_int material-icons-outlined">construction</span>Tools</div>
+                        <br>
+                    </li>
+
+                    <li>
+                        <div id="botonTool1" class="button boton_tool">Distribution Agreement</div>
+                        <br>
+                        <div id="botonTool2" class="button boton_tool">Handheld (HHC)</div>
+                        <br>
+                        <div id="botonTool3" class="button boton_tool">ION Coaching</div>
+                        <br>
+                        <div id="botonTool4" class="button boton_tool">ION Set Up</div>
+                        <br>
+                        <div id="botonTool5" class="button boton_tool">Merchandising - Best Practices</div>
+                        <br>
+                        <div id="botonTool6" class="button boton_tool">Merchandising - Arnold</div>
+                        <br>
+                        <div id="botonTool7" class="button boton_tool">Merchandising - Ball Park</div>
+                        <br>
+                        <div id="botonTool8" class="button boton_tool">Merchandising - Bimbo & Marinela</div>
+                        <br>
+                        <div id="botonTool9" class="button boton_tool">Merchandising - Brownberry</div>
+                        <br>
+                        <div id="botonTool10" class="button boton_tool">Merchandising - Entenmann's</div>
+                        <br>
+                        <div id="botonTool11" class="button boton_tool">Merchandising - Oroweat</div>
+                        <br>
+                        <div id="botonTool12" class="button boton_tool">Merchandising - Sara Lee</div>
+                        <br>
+                        <div id="botonTool13" class="button boton_tool">Merchandising - Takis</div>
+                        <br>
+                        <div id="botonTool14" class="button boton_tool">Merchandising - Thomas</div>
+                        <br>
+                        <div id="botonTool15" class="button boton_tool">Safe Carry Over (SCO)</div>
+                        <br>
+                        <div id="botonTool16" class="button boton_tool">Scan Based Trading (SBT)</div>
+                        <br>
+                        <div id="botonTool17" class="button boton_tool">Settlement</div>
+                        <br>
+                    </li>
+
+                    <!-- <li><a href="#">Distribution Agreement</a></li>
                     <li><a href="#">Handheld (HHC)</a></li>
                     <li><a href="#">ION Coaching</a></li>
                     <li><a href="#">ION Set Up</a></li>
@@ -102,7 +152,7 @@
                     <li><a href="#">Merchandising - Thomas</a></li>
                     <li><a href="#">Safe Carry Over (SCO)</a></li>
                     <li><a href="#">Scan Based Trading (SBT)</a></li>
-                    <li><a href="#">Settlement</a></li>
+                    <li><a href="#">Settlement</a></li> -->
                 </ul>
             </li>
             <!-- <li><a data-nav-close="false" href="#">Log Out</a> -->
@@ -138,6 +188,7 @@
 <script src="js/sec_login.js"></script>
 <script src="js/sec_home.js"></script>
 <script src="js/sec_tasks.js"></script>
+<script src="js/sec_calendar.js"></script>
 <script src="js/reporteStatus.js"></script>
 <script src="js/reporteDetalle.js"></script>
 
