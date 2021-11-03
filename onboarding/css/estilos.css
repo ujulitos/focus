@@ -16,8 +16,8 @@ body {
 }
 
 .logo_bimbo {
-    height: 120px;
-    background-image: url(../img/logo_splash.png);
+    height: 50px;
+    background-image: url(../img/logo_int.png);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -316,10 +316,39 @@ td:first-child {
 
 /* divs */
 
-#divSelectPar {
+/* #buscadorIBP {
     text-align: center;
     margin: -25px -30px 25px -30px;
     padding: 10px 25px 0px 25px;
+    background-color: #001489;
+}
+
+#elSelectPar {
+    min-width: 50%;
+    border: 1px solid #ff7f50b3;
+    color: coral;
+    font-weight: 500;
+}
+
+#buscadorClean {
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 8px;
+    color: rgb(255, 193, 187);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#buscadorClean:hover {
+    color: #fa7a50;
+} */
+
+
+#divSelectPar {
+    text-align: center;
+    margin: -25px -30px 25px -30px;
+    padding: 10px 25px 20px 25px;
     background-color: #001489;
     color: #fff;
 }
@@ -328,7 +357,7 @@ td:first-child {
     min-width: 50%;
     /* background-color: #222; */
     border: 1px solid #ff7f50b3;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     color: coral;
 }
 
@@ -579,7 +608,7 @@ td:first-child {
 }
 
 .titulo_categoria {
-    display: flex;
+    /* display: flex; */
 }
 
 .titulo_categoria_img {
@@ -587,7 +616,11 @@ td:first-child {
 }
 
 .titulo_categoria_txt {
-    font-size: 20px;
+    font-size: 26px;
+}
+
+.titulo_subcategoria_txt {
+    font-size: 22px;
 }
 
 .tabla_row {

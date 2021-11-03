@@ -1,13 +1,16 @@
 function activaSeccionHome() {
     console.log('seccionHome');
-    var cuantosDias;
+    var cuantasCats;
 
     ajustaTamano();
 
-    // if (elRol == 'IBP') {
-    $('#divSelectPar').hide();
-    $('#divReportes').hide();
-    // }
+    if (elRol == 'IBP') {
+        $('#buscadorIBP').hide();
+    }
+    if (elRol == 'Coach') {
+        habilitaBoton($('#botonReporteStatus'), false);
+        habilitaBoton($('#botonReporteDetail'), false);
+    }
     // $('#divSemanas, #flechaAbajoSemanas, #flechaAbajoDias').show();
 
     function leeUsuarios() {
@@ -54,6 +57,38 @@ function activaSeccionHome() {
     function llenaUsuarios() {
         var dataSet = [];
 
+
+        // $("#elSelectPar").keyup(function () {
+        //     if ($(this).val().length > 2) {
+        //         // console.log("buscando ok", $(this).val());
+
+        //         for (a = 0; a < cuantosUsuarios; a++) {
+        //             if (that['usuarioId' + a].toLowerCase().includes($(this).val().toLowerCase()) ||
+        //                 that['usuarioName' + a].toLowerCase().includes($(this).val().toLowerCase())) {
+        //                 console.log('Encontré la palabra', $(this).val(), 'con el recurso', that['usuarioName' + a], a);
+        //                 seleccionaUsuario(that['usuarioName' + a], that['usuarioId' + a]);
+        //                 // return;
+        //             } else {
+        //                 console.log('No encontré nada');
+        //                 $('#divSemanas').hide();
+        //                 $('#divCategorias').hide();
+        //             }
+        //         }
+        //     } else {
+        //         $('#divSemanas').hide();
+        //         $('#divCategorias').hide();
+        //     }
+        // });
+
+        // $("#buscadorClean").click(function (e) {
+        //     e.preventDefault();
+        //     $("#elSelectPar").val('');
+        //     $("#elSelectPar").keyup();
+        // });
+
+
+        $("select").select2();
+
         $('#elSelectPar').empty();
         $('#elSelectPar').append('<option value=" " selected disabled>Select IBP</option>');
         for (a = 0; a < cuantosUsuarios; a++) {
@@ -80,8 +115,8 @@ function activaSeccionHome() {
         console.log('seleccionaUsuario', cualUsuario, cualUsuarioId);
 
         if (cualUsuarioId != usuarioSeleccionadoId) {
-            laSemana = 0;
-            laSemanaSel = 0;
+            laSemana = 1;
+            laSemanaSel = 1;
             $('#divDias').hide();
             $('#flechaAbajoDias').hide();
             $('#divCategorias').hide();
@@ -107,17 +142,14 @@ function activaSeccionHome() {
                     arrayStatus = snapshot.val();
                     console.log('arrayStatus', arrayStatus);
 
-                    _that['arrayStatusWeeks' + el_sub] = arrayStatus['status' + el_sub].weeks_completed;
-                    console.log('arrayStatusWeeks', el_sub, _that['arrayStatusWeeks' + el_sub]);
+                    _that.arrayStatusWeeks = arrayStatus.status.weeks_completed;
+                    console.log('arrayStatusWeeks', _that.arrayStatusWeeks);
 
-                    _that['arrayStatusDays' + el_sub] = arrayStatus['status' + el_sub].days_completed;
-                    console.log('arrayStatusDays', el_sub, _that['arrayStatusDays' + el_sub]);
-
-                    _that['arrayStatusCats' + el_sub] = arrayStatus['status' + el_sub].cats_completed;
-                    if (_that['arrayStatusCats' + el_sub] == undefined) {
-                        _that['arrayStatusCats' + el_sub] = [0];
+                    _that.arrayStatusCats = arrayStatus.status.cats_completed;
+                    if (_that.arrayStatusCats == undefined) {
+                        _that.arrayStatusCats = [0];
                     }
-                    console.log('arrayStatusCats', el_sub, _that['arrayStatusCats' + el_sub]);
+                    console.log('arrayStatusCats', _that.arrayStatusCats);
 
                     return cargaSemanas();
                 } else {
@@ -133,7 +165,7 @@ function activaSeccionHome() {
     // Semanas
     function cargaSemanas() {
         $.ajax({
-            url: 'js/semanas.json',
+            url: 'js/tasks.json',
             type: 'get',
             dataType: 'json',
             cache: false,
@@ -159,7 +191,8 @@ function activaSeccionHome() {
         // }
         for (a = 1; a <= cuantasSemanas; a++) {
             contenidoSemanas += '<div id="boton_semana' + a + '" class="card card_semana boton_semana">';
-            contenidoSemanas += '<p>' + Object.values(dataWeeks.weeks)[(a - 1)] + '</p>';
+            contenidoSemanas += '<p>' + Object.values(dataWeeks.weeks)[(a - 1)].name + '</p>';
+
             contenidoSemanas += '</div>';
         }
 
@@ -175,7 +208,7 @@ function activaSeccionHome() {
         });
 
         if (laSemana != undefined && laSemana != 0) {
-            cargaDias();
+            pintaCategorias(data);
         }
 
         for (a = 1; a <= cuantasSemanas; a++) {
@@ -206,12 +239,10 @@ function activaSeccionHome() {
                 console.log('cualSemana', cualSemana);
                 laSemanaSel = cualSemana;
                 laSemana = cualSemana;
-                elDia = 0;
-                elDiaSel = 0;
                 laCategoria = 0;
                 laCategoriaSel = 0;
 
-                cargaDias();
+                pintaCategorias(data);
             });
         }
 
@@ -222,17 +253,16 @@ function activaSeccionHome() {
 
     switch (elRol) {
 
+        case 'Admin':
+            break;
+
         case 'Coach':
-            el_sub = '_coach';
-            el_sub_par = '_ibp';
             leeUsuarios();
             break;
 
         case 'IBP':
             $('#divSemanas, #flechaAbajoSemanas').hide();
             $('#divSemanas, #flechaAbajoSemanas').fadeIn();
-            el_sub = '_ibp';
-            el_sub_par = '_coach';
             leeStatus(usuarioId);
             break;
 
@@ -241,68 +271,45 @@ function activaSeccionHome() {
     }
 
 
-
-    // $(document).off('click', '#boton_semana1').on('click', '#boton_semana1', function(e) {
-    //     event.preventDefault();
-    //     var cualSemana = parseInt($(this).attr('id').substr(12, 2));
-    //     console.log('cualSemana', cualSemana);
-    //     laSemana = cualSemana;
-
-    //     loadSeccion('dias');
-    // });
-
-    // Dias
-    function cargaDias() {
-        $.ajax({
-            url: 'js/week' + laSemana + '.json',
-            type: 'get',
-            dataType: 'json',
-            cache: false,
-            success: pintaDias,
-            async: true,
-        });
-    };
-
-    function pintaDias(data) {
+    // pintaCategorias 
+    function pintaCategorias(data) {
         console.log(data);
 
-        cuantosDias = Object.keys(data['week' + laSemana]).length;
-        console.log('cuantosDias', cuantosDias);
+        cuantasCats = Object.keys(data.weeks['week' + laSemana].cats).length;
+        console.log('cuantasCats', cuantasCats);
 
-        for (a = 1; a <= cuantosDias; a++) {
-            this['cuantasCategorias' + a] = Object.keys(Object.values(data['week' + laSemana])[(a - 1)].cats).length;
+
+        for (a = 1; a <= cuantasSemanas; a++) {
+            this['cuantasCategorias' + a] = Object.keys(Object.values(data.weeks['week' + a].cats)).length;
             console.log('cuantasCategorias' + a, this['cuantasCategorias' + a]);
+
+            for (b = 1; b <= this['cuantasCategorias' + a]; b++) {
+                this['cuantasSubcategorias' + b] = Object.keys(Object.values(data.weeks['week' + a].cats)[(b - 1)].subcats).length;
+                console.log('cuantasSubcategorias' + b, this['cuantasSubcategorias' + b]);
+            }
         }
+
+
         that = this;
 
 
-        var contenidoDias = '';
-        $('#losDias').empty();
+        // var contenidoDias = '';
+        // $('#losDias').empty();
 
-        for (a = 1; a <= cuantosDias; a++) {
-            contenidoDias += '<div id="cardDia' + a + '" class="card card_dia boton_dia">';
-            contenidoDias += '<p>' + Object.values(data['week' + laSemana])[(a - 1)].short_txt + '</p>';
-            contenidoDias += '<img src="./img/' + Object.values(data['week' + laSemana])[(a - 1)].icon + '.png" />';
-            contenidoDias += '</div>';
-        }
-        $('#losDias').append(contenidoDias);
+        // for (a = 1; a <= cuantasCats; a++) {
+        //     contenidoDias += '<div id="cardDia' + a + '" class="card card_dia boton_dia">';
+        //     contenidoDias += '<p>' + Object.values(data['week' + laSemana])[(a - 1)].short_txt + '</p>';
+        //     contenidoDias += '<img src="./img/' + Object.values(data['week' + laSemana])[(a - 1)].icon + '.png" />';
+        //     contenidoDias += '</div>';
+        // }
+        // $('#losDias').append(contenidoDias);
 
-        $('#divDias, #flechaAbajoDias').hide();
-        $('#divDias, #flechaAbajoSemanas').fadeIn();
-        $('#divCategorias').hide();
+        // $('#divDias, #flechaAbajoDias').hide();
+        // $('#divDias, #flechaAbajoSemanas').fadeIn();
+        // $('#divCategorias').hide();
 
 
-        $('.carousel_dias').owlCarousel('destroy');
-        $(".carousel_dias").owlCarousel({
-            items: 2,
-            margin: 0,
-            loop: false,
-            nav: true,
-            dots: true
-        });
-        $('.carousel_dias').css({
-            'opacity': '1'
-        })
+
 
 
         for (b = 1; b <= cuantasSemanas; b++) {
@@ -315,19 +322,18 @@ function activaSeccionHome() {
         })
 
 
-        function loadCategoria(cualCategoria) {
-            console.log('loadCategoria', cualCategoria);
+        function loadCategoria(cualSemana) {
+            console.log('loadCategoria', cualSemana);
+
+            $('#tituloCategorias').html(Object.values(dataWeeks.weeks)[(laSemana - 1)].name);
 
             var contenidoCategorias = '';
             $('#lasCategorias').empty();
 
-            elDiaTotal = Object.values(data['week' + laSemana])[(elDia - 1)].short_txt.split(':')[0];
-            // console.log('elDiaTotal', elDiaTotal);
-
-            for (b = 1; b <= that['cuantasCategorias' + cualCategoria]; b++) {
-                contenidoCategorias += '<div id="dia' + cualCategoria + '_Categoria' + b + '" class="boton_categoria centrado">';
-                contenidoCategorias += '<p>' + Object.values(Object.values(data['week' + laSemana])[(cualCategoria - 1)].cats)[(b - 1)].cat_txt + '</p>';
-                contenidoCategorias += '<img class="img_centrado" src="./img/' + Object.values(Object.values(data['week' + laSemana])[(cualCategoria - 1)].cats)[(b - 1)].cat_icon + '.png"</>';
+            for (b = 1; b <= that['cuantasCategorias' + laSemana]; b++) {
+                contenidoCategorias += '<div id="semana' + cualSemana + '_Categoria' + b + '" class="boton_categoria centrado">';
+                contenidoCategorias += '<img class="img_centrado" src="./img/' + Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].icon + '.png"</>';
+                contenidoCategorias += '<p>' + Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].name + '</p>';
                 contenidoCategorias += '</div>';
             }
             // }
@@ -336,33 +342,23 @@ function activaSeccionHome() {
             $('#lasCategorias').append(contenidoCategorias);
 
 
-            for (b = 1; b <= cuantosDias; b++) {
-                $("#cardDia" + b).css({
-                    'background-color': 'transparent'
-                })
-            }
-            $("#cardDia" + elDia).css({
-                'background-color': '#eeeeee'
-            })
-
-
-            for (a = 1; a <= cuantosDias; a++) {
+            for (a = 1; a <= cuantasSemanas; a++) {
                 for (b = 1; b <= that['cuantasCategorias' + a]; b++) {
-                    $("#dia" + a + "_Categoria" + b).css({
+                    $("#semana" + a + "_Categoria" + b).css({
                         'background-color': 'transparent'
                     })
                 }
             }
-            $("#dia" + elDia + "_Categoria" + laCategoria).css({
+            $("#semana" + laSemana + "_Categoria" + laCategoria).css({
                 'background-color': '#eeeeee'
             })
 
 
-            for (a = 1; a <= cuantosDias; a++) {
+            for (a = 1; a <= cuantasSemanas; a++) {
                 for (b = 1; b <= that['cuantasCategorias' + a]; b++) {
 
-                    if ($.inArray('week' + laSemana + '_day' + elDia + '_cat' + b, _that['arrayStatusCats' + el_sub]) != -1) {
-                        $("#dia" + elDia + "_Categoria" + b + " p").css({
+                    if ($.inArray('week' + laSemana + '_cat' + b, _that.arrayStatusCats) != -1) {
+                        $("#semana" + laSemana + "_Categoria" + b + " p").css({
                             'background-color': '#c9fda8',
                             'border-radius': '50px',
                             'width': '80%',
@@ -372,36 +368,36 @@ function activaSeccionHome() {
                     }
 
 
-                    $("#dia" + a + "_Categoria" + b).mouseover(function (event) {
-                        for (c = 1; c <= cuantosDias; c++) {
+                    $("#semana" + a + "_Categoria" + b).mouseover(function (event) {
+                        for (c = 1; c <= cuantasSemanas; c++) {
                             for (d = 1; d <= that['cuantasCategorias' + c]; d++) {
-                                $("#dia" + c + "_Categoria" + d).css({
+                                $("#semana" + c + "_Categoria" + d).css({
                                     'background-color': 'transparent'
                                 })
                             }
                         }
-                        $("#dia" + elDiaSel + "_Categoria" + laCategoriaSel).css({
+                        $("#semana" + laSemanaSel + "_Categoria" + laCategoriaSel).css({
                             'background-color': '#eeeeee'
                         })
                         $(this).css({
                             'background-color': '#eeeeee'
                         })
                     });
-                    $("#dia" + a + "_Categoria" + b).mouseout(function (event) {
+                    $("#semana" + a + "_Categoria" + b).mouseout(function (event) {
                         $(this).css({
                             'background-color': 'transparent'
                         })
-                        $("#dia" + elDiaSel + "_Categoria" + laCategoriaSel).css({
+                        $("#semana" + laSemanaSel + "_Categoria" + laCategoriaSel).css({
                             'background-color': '#eeeeee'
                         })
                     });
-                    $("#dia" + a + "_Categoria" + b).click(function (event) {
+                    $("#semana" + a + "_Categoria" + b).click(function (event) {
                         event.preventDefault();
-                        var cualDia = parseInt($(this).attr('id').substr(3, 1));
-                        var cualCategoria = parseInt($(this).attr('id').substr(14, 2));
-                        console.log('cualDia', cualDia, 'cualCategoria', cualCategoria);
-                        elDia = cualDia;
-                        elDiaSel = cualDia;
+                        var cualSemana = parseInt($(this).attr('id').substr(6, 1));
+                        var cualCategoria = parseInt($(this).attr('id').substr(17, 2));
+                        console.log('cualSemana', cualSemana, 'cualCategoria', cualCategoria);
+                        laSemana = cualSemana;
+                        laSemanaSel = cualSemana;
                         laCategoria = cualCategoria;
                         laCategoriaSel = cualCategoria;
 
@@ -412,47 +408,47 @@ function activaSeccionHome() {
 
         }
 
-        for (a = 1; a <= cuantosDias; a++) {
-            $("#cardDia" + a).mouseover(function (event) {
-                for (b = 1; b <= cuantosDias; b++) {
-                    $("#cardDia" + b).css({
-                        'background-color': 'transparent'
-                    })
-                }
-                $("#cardDia" + elDiaSel).css({
-                    'background-color': '#eeeeee'
-                })
-                $(this).css({
-                    'background-color': '#eeeeee'
-                })
-            });
-            $("#cardDia" + a).mouseout(function (event) {
-                $(this).css({
-                    'background-color': 'transparent'
-                })
-                $("#cardDia" + elDiaSel).css({
-                    'background-color': '#eeeeee'
-                })
-            });
-            $("#cardDia" + a).click(function (event) {
-                event.preventDefault();
-                var cualDia = parseInt($(this).attr('id').substr(7, 2));
-                console.log('cualDia', cualDia);
-                elDia = cualDia;
-                elDiaSel = cualDia;
-                laCategoria = 0;
+        // for (a = 1; a <= cuantasCats; a++) {
+        //     $("#cardDia" + a).mouseover(function (event) {
+        //         for (b = 1; b <= cuantasCats; b++) {
+        //             $("#cardDia" + b).css({
+        //                 'background-color': 'transparent'
+        //             })
+        //         }
+        //         $("#cardDia" + elDiaSel).css({
+        //             'background-color': '#eeeeee'
+        //         })
+        //         $(this).css({
+        //             'background-color': '#eeeeee'
+        //         })
+        //     });
+        //     $("#cardDia" + a).mouseout(function (event) {
+        //         $(this).css({
+        //             'background-color': 'transparent'
+        //         })
+        //         $("#cardDia" + elDiaSel).css({
+        //             'background-color': '#eeeeee'
+        //         })
+        //     });
+        //     $("#cardDia" + a).click(function (event) {
+        //         event.preventDefault();
+        //         var cualDia = parseInt($(this).attr('id').substr(7, 2));
+        //         console.log('cualDia', cualDia);
+        //         elDia = cualDia;
+        //         elDiaSel = cualDia;
+        //         laCategoria = 0;
 
-                laCategoriaSel = 0;
-                loadCategoria(elDia);
-                $('#divCategorias').hide();
-                $('#divCategorias, #flechaAbajoDias').fadeIn();
-                ajustaTamano();
-            });
-        }
+        //         laCategoriaSel = 0;
+        //         loadCategoria(laSemana);
+        //         $('#divCategorias').hide();
+        //         $('#divCategorias, #flechaAbajoDias').fadeIn();
+        //         ajustaTamano();
+        //     });
+        // }
 
-        if (elDia != 0) {
+        if (laSemana != 0) {
             if (laCategoria != undefined || laCategoria != 0) {
-                loadCategoria(elDia);
+                loadCategoria(laSemana);
                 $('#divCategorias').hide();
                 $('#divCategorias, #flechaAbajoDias').fadeIn();
                 ajustaTamano();
@@ -468,26 +464,18 @@ function activaSeccionHome() {
 
 
     $("#botonReporteStatus").click(function (event) {
-        // $(document).off('click', '#botonReporteStatus').on('click', '#botonReporteStatus', function(e) {
-        //   event.preventDefault();
-        // window.location.href = 'docs/Onboarding_Status_Report.xlsx';
-        descargaReporteStatus();
+        // descargaReporteStatus();
     });
 
     $("#botonReporteDetail").click(function (event) {
-        //  $(document).off('click', '#botonReporteDetail').on('click', '#botonReporteDetail', function(e) {
-        //   event.preventDefault();
-        // window.location.href = 'docs/Onboarding_Detailed_Report.xlsx';
-        descargaReporteDetalle();
+        // descargaReporteDetalle();
     });
 
 
     // siempre carga por default 
     laSemana = 1;
     laSemanaSel = 1;
-    elDia = 1;
-    elDiaSel = 1;
-    laCategoria = 1;
-    laCategoriaSel = 1;
+    laCategoria = 0;
+    laCategoriaSel = 0;
 
 }
