@@ -217,22 +217,22 @@ function activaSeccionHome() {
             $("#boton_semana" + a).mouseover(function (event) {
                 for (b = 1; b <= cuantasSemanas; b++) {
                     $("#boton_semana" + b).css({
-                        'background-color': 'transparent'
+                        'background-color': '#d0dcee'
                     })
                 }
                 $("#boton_semana" + laSemanaSel).css({
-                    'background-color': '#eeeeee'
+                    'background-color': '#d0dcee'
                 })
                 $(this).css({
-                    'background-color': '#eeeeee'
+                    'background-color': '#e6edf9'
                 })
             });
             $("#boton_semana" + a).mouseout(function (event) {
                 $(this).css({
-                    'background-color': 'transparent'
+                    'background-color': '#d0dcee'
                 })
                 $("#boton_semana" + laSemanaSel).css({
-                    'background-color': '#eeeeee'
+                    'background-color': '#e6edf9'
                 })
             });
             $("#boton_semana" + a).click(function (event) {
@@ -316,11 +316,11 @@ function activaSeccionHome() {
 
         for (b = 1; b <= cuantasSemanas; b++) {
             $("#boton_semana" + b).css({
-                'background-color': 'transparent'
+                'background-color': '#d0dcee'
             })
         }
         $("#boton_semana" + laSemana).css({
-            'background-color': '#eeeeee'
+            'background-color': '#e6edf9'
         })
 
 
