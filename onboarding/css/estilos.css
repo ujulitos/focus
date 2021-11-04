@@ -487,8 +487,16 @@ td:first-child {
 
 .owl-prev {}
 
+.owl-prev span {
+    color: #B2C7E7;
+}
+
 .owl-next {
     margin-left: 110%;
+}
+
+.owl-next span {
+    color: #B2C7E7;
 }
 
 .owl-dots {
