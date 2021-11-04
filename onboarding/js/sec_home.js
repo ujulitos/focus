@@ -8,6 +8,8 @@ function activaSeccionHome() {
     if (elRol == 'IBP') {
         $('#buscadorIBP').hide();
         $('#divSelectPar').hide();
+        habilitaBoton($('#botonReporteStatus'), true);
+        habilitaBoton($('#botonReporteDetail'), true);
     }
     if (elRol == 'Coach') {
         habilitaBoton($('#botonReporteStatus'), false);
