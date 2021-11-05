@@ -626,6 +626,10 @@ td:first-child {
     padding-bottom: 15px;
 }
 
+.boton_categoria p {
+    color: #aa3032;
+}
+
 /* #lasCategorias {
     display: none;
 } */
