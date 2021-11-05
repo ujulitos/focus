@@ -8,13 +8,15 @@ function activaSeccionHome() {
     if (elRol == 'IBP') {
         $('#buscadorIBP').hide();
         $('#divSelectPar').hide();
-        habilitaBoton($('#botonReporteStatus'), true);
-        habilitaBoton($('#botonReporteDetail'), true);
+        // habilitaBoton($('#botonReporteStatus'), true);
+        // habilitaBoton($('#botonReporteDetail'), true);
     }
     if (elRol == 'Coach') {
         habilitaBoton($('#botonReporteStatus'), false);
         habilitaBoton($('#botonReporteDetail'), false);
     }
+
+
     // $('#divSemanas, #flechaAbajoSemanas, #flechaAbajoDias').show();
 
     function leeUsuarios() {
@@ -105,6 +107,15 @@ function activaSeccionHome() {
             var elPar = $("#elSelectPar :selected").text();
             var elParID = $("#elSelectPar :selected").val();
             seleccionaUsuario(elPar, elParID);
+            console.log('usuarioSeleccionadoId', usuarioSeleccionadoId);
+
+            if (usuarioSeleccionadoId == undefined) {
+                habilitaBoton($('#botonReporteStatus'), false);
+                habilitaBoton($('#botonReporteDetail'), false);
+            } else {
+                habilitaBoton($('#botonReporteStatus'), true);
+                habilitaBoton($('#botonReporteDetail'), true);
+            }
         });
 
         if (usuarioSeleccionadoId != undefined || usuarioSeleccionadoId != null) {
@@ -195,6 +206,7 @@ function activaSeccionHome() {
         // }
         for (a = 1; a <= cuantasSemanas; a++) {
             contenidoSemanas += '<div id="boton_semana' + a + '" class="card card_semana boton_semana">';
+            contenidoSemanas += '<img class="img_centrado" src="./img/' + Object.values(dataWeeks.weeks)[(a - 1)].icon + '.png"</>';
             contenidoSemanas += '<p>' + Object.values(dataWeeks.weeks)[(a - 1)].name + '</p>';
 
             contenidoSemanas += '</div>';
@@ -472,55 +484,55 @@ function activaSeccionHome() {
 
         switch (cualTool) {
             case 1:
-                window.open('docs/Distribution_Agreement.pptx');
+                window.open('docs/Distribution_Agreement.pdf');
                 break;
             case 2:
                 window.open('docs/Handheld_(HHC).pdf');
                 break;
             case 3:
-                window.open('docs/ION_Coaching.pptx');
+                window.open('docs/ION_Coaching.pdf');
                 break;
             case 4:
-                window.open('docs/ION_SetUp.pptx');
+                window.open('docs/ION_SetUp.pdf');
                 break;
             case 5:
                 window.open('docs/Merchandising_Best_Practices.mov');
                 break;
             case 6:
-                // window.open('docs/Distribution_Agreement.pptx');
+                // window.open('docs/Distribution_Agreement.pdf');
                 break;
             case 7:
-                // window.open('docs/Distribution_Agreement.pptx');
+                // window.open('docs/Distribution_Agreement.pdf');
                 break;
             case 8:
-                // window.open('docs/Distribution_Agreement.pptx');
+                // window.open('docs/Distribution_Agreement.pdf');
                 break;
             case 9:
-                // window.open('docs/Distribution_Agreement.pptx');
+                // window.open('docs/Distribution_Agreement.pdf');
                 break;
             case 10:
-                // window.open('docs/Distribution_Agreement.pptx');
+                // window.open('docs/Distribution_Agreement.pdf');
                 break;
             case 11:
-                // window.open('docs/Distribution_Agreement.pptx');
+                // window.open('docs/Distribution_Agreement.pdf');
                 break;
             case 12:
                 window.open('docs/Merchandising_SaraLee.mov');
                 break;
             case 13:
-                // window.open('docs/Distribution_Agreement.pptx');
+                // window.open('docs/Distribution_Agreement.pdf');
                 break;
             case 14:
                 window.open('docs/Merchandising_Thomas.mov');
                 break;
             case 15:
-                window.open('docs/Safe_Carry_Over_(SCO).pptx');
+                window.open('docs/Safe_Carry_Over_(SCO).pdf');
                 break;
             case 16:
-                window.open('docs/Scan_Based_Trading_(SBT).pptx');
+                window.open('docs/Scan_Based_Trading_(SBT).pdf');
                 break;
             case 17:
-                window.open('docs/SETTLEMENT.pptx');
+                window.open('docs/SETTLEMENT.pdf');
                 break;
 
             default:
@@ -533,11 +545,11 @@ function activaSeccionHome() {
 
 
     $("#botonReporteStatus").click(function (event) {
-        // descargaReporteStatus();
+        descargaReporteStatus();
     });
 
     $("#botonReporteDetail").click(function (event) {
-        // descargaReporteDetalle();
+        descargaReporteDetalle();
     });
 
     // tools

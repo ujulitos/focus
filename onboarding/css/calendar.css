@@ -16,8 +16,8 @@
   }
 
   .responsive-calendar-modal {
-      background-color: #1d86c8;
-      color: white;
+      /* background-color: #1d86c8; */
+      /* color: white; */
       padding: 1em;
   }
 
@@ -93,4 +93,15 @@
       top: 2px;
       right: 2px;
       z-index: 1;
+  }
+
+  h5 {
+      font-weight: 400;
+      color: #001489;
+      margin-bottom: 10px;
+  }
+
+  p {
+      font-weight: 400;
+      color: #222;
   }

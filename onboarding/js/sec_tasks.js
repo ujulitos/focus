@@ -28,21 +28,22 @@
          console.log('cuantasCats', cuantasCats);
 
          for (a = 1; a <= cuantasCats; a++) {
-             this['cuantasCategorias' + a] = Object.keys(Object.values(data.weeks['week' + laSemana].cats)).length;
-             console.log('cuantasCategorias' + a, this['cuantasCategorias' + a]);
+             this['cuantasCategorias' + laSemana] = Object.keys(Object.values(data.weeks['week' + laSemana].cats)).length;
+             console.log('cuantasCategorias' + laSemana, this['cuantasCategorias' + laSemana]);
 
-             for (b = 1; b <= this['cuantasCategorias' + a]; b++) {
-                 this['cat' + a + '_cuantasSubcategorias' + b] = Object.keys(Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].subcats).length;
-                 console.log('cat' + a + '_cuantasSubcategorias' + b, this['cat' + a + '_cuantasSubcategorias' + b]);
+             for (b = 1; b <= this['cuantasCategorias' + laSemana]; b++) {
+                 this['cat' + laSemana + '_cuantasSubcategorias' + b] = Object.keys(Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].subcats).length;
+                 console.log('cat' + laSemana + '_cuantasSubcategorias' + b, this['cat' + laSemana + '_cuantasSubcategorias' + b]);
 
-                 for (c = 1; c <= this['cat' + a + '_cuantasSubcategorias' + b]; c++) {
-                     this['cat' + a + '_subcat' + b + '_cuantasTasks' + c] = Object.keys(Object.values(Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].subcats)[(c - 1)].tasks).length;
-                     console.log('cat' + a + '_subcat' + b + '_cuantasTasks' + c, this['cat' + a + '_subcat' + b + '_cuantasTasks' + c]);
+                 for (c = 1; c <= this['cat' + laSemana + '_cuantasSubcategorias' + b]; c++) {
+                     this['cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c] = Object.keys(Object.values(Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].subcats)[(c - 1)].tasks).length;
+                     console.log('cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c, this['cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c]);
+
                  }
              }
          }
 
-         for (d = 1; d <= this['cat' + laCategoria + '_cuantasSubcategorias' + laSemana]; d++) {
+         for (d = 1; d <= this['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; d++) {
              totalTasksPorCategoria += Object.keys(Object.values(Object.values(data.weeks['week' + laSemana].cats)[(laCategoria - 1)].subcats)[(d - 1)].tasks).length;
              console.log('totalTasksPorCategoria', totalTasksPorCategoria);
          }
@@ -57,7 +58,6 @@
          //  console.log('totalDiasPorSemana', totalDiasPorSemana);
          totalCategoriasPorSemana = Object.keys(data.weeks['week' + laSemana].cats).length;
          console.log('totalCategoriasPorSemana', totalCategoriasPorSemana);
-
 
 
          totalGlobalCategorias = totalCategoriasPorSemana;
@@ -78,7 +78,11 @@
          contenidoTasks += '<br>';
 
 
+         console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa', laSemana, laCategoria);
+
          for (b = 1; b <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; b++) {
+
+             console.log('laCategorialaCategorialaCategorialaCategoria', laCategoria, b);
 
              contenidoTasks += '<br>';
              contenidoTasks += '<table style="width:100%">';
@@ -89,7 +93,8 @@
              contenidoTasks += '<th>Done</th>';
              contenidoTasks += '</tr>';
 
-             for (c = 1; c <= that['cat' + laCategoria + '_subcat' + laCategoria + '_cuantasTasks' + b]; c++) {
+
+             for (c = 1; c <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
 
                  contenidoTasks += '<tr class="tabla_row" style="height: 200px;">';
 
@@ -122,7 +127,7 @@
 
 
          for (b = 1; b <= that['cuantasCategorias' + laSemana]; b++) {
-             for (c = 1; c <= that['cat' + laSemana + '_subcat' + laCategoria + '_cuantasTasks' + b]; c++) {
+             for (c = 1; c <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
 
                  $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).click(function (event) {
                      event.preventDefault();
@@ -213,7 +218,7 @@
                  //  var cualCheckeaPrevPerfil = cualCheckea.split('_p')[0];
                  //  var cualCheckeaPerfil = parseInt(cualCheckea.split('_p')[1]);
              }
-             console.log('checkea', cualCheckea);
+             //  console.log('checkea', cualCheckea);
 
 
              __that.numTasksChecked = 0;
@@ -239,8 +244,8 @@
                  __that.numTasksChecked = $(".check1:checkbox:checked").length;
              });
 
-             console.log('arrayTasks', __that.arrayTasks);
-             console.log('numTasksChecked', __that.numTasksChecked, ' y totalTasksPorCategoria', totalTasksPorCategoria);
+             //  console.log('arrayTasks', __that.arrayTasks);
+             //  console.log('numTasksChecked', __that.numTasksChecked, ' y totalTasksPorCategoria', totalTasksPorCategoria);
          }, 10);
      }
 
@@ -288,13 +293,13 @@
 
          //  setTimeout(function() {
          for (a = 0; a < __that.arrayTasks.length; a++) {
-             console.log('inArray', $.inArray(__that.arrayTasks[a], __that.arrayTasks));
+             //  console.log('inArray', $.inArray(__that.arrayTasks[a], __that.arrayTasks));
              checkea(__that.arrayTasks[a]);
          }
          //  }, 1000);
 
          for (b = 1; b <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; b++) {
-             for (c = 1; c <= that['cat' + laCategoria + '_subcat' + laCategoria + '_cuantasTasks' + b]; c++) {
+             for (c = 1; c <= that['cat' + laCategoria + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
                  if (elRol === 'Coach') {
                      $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).parent().css({
                          "opacity": "0.5"

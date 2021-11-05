@@ -53,6 +53,26 @@ function activaSeccionCalendar() {
                             }
                         ]
                     },
+                    "2021-11-12": {
+                        "number": 1,
+                        "badgeClass": "badge-success",
+                        // "url": "https://codepen.io/alenabdula/pen/OPEpGL",
+                        "dayEvents": [{
+                            "title": "Help friend developer",
+                            "status": "Urgent",
+                            "time": "10:30PM"
+                        }]
+                    },
+                    "2021-11-24": {
+                        "number": 1,
+                        "badgeClass": "badge-success",
+                        // "url": "https://codepen.io/alenabdula/pen/OPEpGL",
+                        "dayEvents": [{
+                            "title": "Shake it salt shaker!",
+                            "status": "Chill",
+                            "time": "10:45PM"
+                        }]
+                    },
                 },
                 /* end events */
                 // onActiveDayHover: function (events) {
@@ -87,13 +107,23 @@ function activaSeccionCalendar() {
                     $output = '<div class="responsive-calendar-modal">';
                     $.each($dayEvents, function () {
                         $.each($(this), function (key) {
-                            $output += '<h5>Title: ' + $(this)[key].title + '</h5>' + '<p>Status: ' + $(this)[key].status + '<br />' + $(this)[key].time + '</p>';
+                            $output += '<h5>' + $(this)[key].title + '</h5>' + '<p>' + $(this)[key].status + '<br />' + $(this)[key].time + '</p><br />';
                         });
                     });
                     $output + '</div>';
 
                     if ($isHoveredClick) {
-                        $placeholder.html($output);
+                        // $placeholder.html($output);
+
+                        Swal.fire({
+                            title: $output
+                            // text: $output
+                            // icon: 'info'
+                        });
+                        $('.swal2-container').css({
+                            'z-index': '9999'
+                        })
+
                     } else {
                         fadeOutModalBox(500);
                     }

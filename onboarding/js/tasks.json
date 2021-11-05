@@ -2,6 +2,7 @@
     "weeks": {
         "week1": {
             "name": "Week 1",
+            "icon": "ico_week02",
             "cats": {
                 "cat1": {
                     "name": "Classroom",
@@ -28,7 +29,7 @@
                 },
                 "cat2": {
                     "name": "Market",
-                    "icon": "ico_01",
+                    "icon": "ico_24",
                     "subcats": {
                         "subcat1": {
                             "name": "Market",
@@ -45,7 +46,7 @@
                 },
                 "cat3": {
                     "name": "On Route",
-                    "icon": "ico_01",
+                    "icon": "ico_25",
                     "subcats": {
                         "subcat1": {
                             "name": "Start of Day Process (Sales Center)",
@@ -110,6 +111,7 @@
         },
         "week2": {
             "name": "Week 2",
+            "icon": "ico_week02",
             "cats": {
                 "cat1": {
                     "name": "Classroom",
@@ -135,7 +137,7 @@
                 },
                 "cat2": {
                     "name": "On Route",
-                    "icon": "ico_01",
+                    "icon": "ico_25",
                     "subcats": {
                         "subcat1": {
                             "name": "Start of Day Process (Sales Center)",
@@ -200,6 +202,7 @@
         },
         "week3": {
             "name": "Week 3",
+            "icon": "ico_week02",
             "cats": {
                 "cat1": {
                     "name": "Classroom",
@@ -219,7 +222,7 @@
                 },
                 "cat2": {
                     "name": "On Route",
-                    "icon": "ico_01",
+                    "icon": "ico_25",
                     "subcats": {
                         "subcat1": {
                             "name": "Start of Day Process (Sales Center)",
@@ -284,10 +287,11 @@
         },
         "week4": {
             "name": "Week 4",
+            "icon": "ico_week02",
             "cats": {
                 "cat1": {
                     "name": "On Route",
-                    "icon": "ico_01",
+                    "icon": "ico_25",
                     "subcats": {
                         "subcat1": {
                             "name": "AM or Start of Day Process (Sales Center)",

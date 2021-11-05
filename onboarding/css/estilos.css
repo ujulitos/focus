@@ -25,8 +25,8 @@ body {
 }
 
 .siluetas {
-    height: 300px;
-    background-image: url(../img/siluetas01.png);
+    height: 200px;
+    background-image: url(../img/panes_linea01.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -267,7 +267,16 @@ td:first-child {
 #subsec_login,
 #subsec_register {
     /* background-color: #fff; */
-    width: 50%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 250px;
+    max-width: 500px;
+}
+
+.login_correo,
+.login_contrasena {
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     min-width: 250px;
@@ -599,9 +608,17 @@ td:first-child {
 .boton_semana {
     padding: 10px;
     /* color: #fff; */
-    height: 60px !important;
-    font-size: 20px;
+    height: 70px !important;
+    font-size: 18px;
     line-height: 2.8;
+    color: #a4292d;
+}
+
+.boton_semana img {
+    width: 40px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0px;
+    margin-bottom: -5px;
 }
 
 .boton_categoria img {
