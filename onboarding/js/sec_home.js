@@ -543,15 +543,6 @@ function activaSeccionHome() {
 
 
 
-
-    $("#botonReporteStatus").click(function (event) {
-        descargaReporteStatus();
-    });
-
-    $("#botonReporteDetail").click(function (event) {
-        descargaReporteDetalle();
-    });
-
     // tools
     for (a = 1; a <= cuantosTools; a++) {
         $("#botonTool" + a).click(function (event) {
@@ -571,3 +562,19 @@ function activaSeccionHome() {
     laCategoriaSel = 0;
 
 }
+
+$(document).ready(function () {
+
+    // $(document).off('click', '#botonReporteStatus').on('click', '#botonReporteStatus', function (e) {
+    $("#botonReporteStatus").click(function (event) {
+        event.preventDefault();
+        descargaReporteStatus();
+    });
+
+    // $(document).off('click', '#botonReporteDetail').on('click', '#botonReporteDetail', function (e) {
+    $("#botonReporteDetail").click(function (event) {
+        event.preventDefault();
+        descargaReporteDetalle();
+
+    });
+});
