@@ -6,7 +6,7 @@
             "cats": {
                 "cat1": {
                     "name": "Classroom",
-                    "icon": "ico_01",
+                    "icon": "ico_11",
                     "subcats": {
                         "subcat1": {
                             "name": "Sales center, brand education, merchandising, disribution agreement, SBT, & HHC",
@@ -115,7 +115,7 @@
             "cats": {
                 "cat1": {
                     "name": "Classroom",
-                    "icon": "ico_01",
+                    "icon": "ico_11",
                     "subcats": {
                         "subcat1": {
                             "name": "ION/SCO & Settlement",
@@ -206,7 +206,7 @@
             "cats": {
                 "cat1": {
                     "name": "Classroom",
-                    "icon": "ico_01",
+                    "icon": "ico_11",
                     "subcats": {
                         "subcat1": {
                             "name": "Route Closing & ION/SCO",
