@@ -1,5 +1,7 @@
 function descargaReporteStatus() {
 
+    loadSeccion('home');
+    
     if (elRol == 'IBP') {
         var laURLId = "" + laUrlAPI + "/Usuarios/" + usuarioId + ".json?auth=" + secret + "";
         console.log('laURLId', laURLId);
