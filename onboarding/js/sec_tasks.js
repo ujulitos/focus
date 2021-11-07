@@ -78,11 +78,7 @@
          contenidoTasks += '<br>';
 
 
-         console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa', laSemana, laCategoria);
-
          for (b = 1; b <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; b++) {
-
-             console.log('laCategorialaCategorialaCategorialaCategoria', laCategoria, b);
 
              contenidoTasks += '<br>';
              contenidoTasks += '<table style="width:100%">';
@@ -126,7 +122,7 @@
          $('#lasTasks').append(contenidoTasks);
 
 
-         for (b = 1; b <= that['cuantasCategorias' + laSemana]; b++) {
+         for (b = 1; b <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; b++) {
              for (c = 1; c <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
 
                  $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).click(function (event) {
@@ -218,7 +214,7 @@
                  //  var cualCheckeaPrevPerfil = cualCheckea.split('_p')[0];
                  //  var cualCheckeaPerfil = parseInt(cualCheckea.split('_p')[1]);
              }
-             //  console.log('checkea', cualCheckea);
+             //   console.log('checkea', cualCheckea);
 
 
              __that.numTasksChecked = 0;
