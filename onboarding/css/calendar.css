@@ -101,7 +101,8 @@
       margin-bottom: 10px;
   }
 
-  p {
+  p,
+  span {
       font-weight: 400;
       color: #222;
   }

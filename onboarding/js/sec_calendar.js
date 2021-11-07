@@ -37,40 +37,243 @@ function activaSeccionCalendar() {
             var $cal = $('.responsive-calendar');
             $cal.responsiveCalendar({
                 events: {
-                    "2021-11-02": {
-                        "number": 2,
+                    "2021-11-01": {
+                        // "number": 1,
                         "badgeClass": "badge-success",
-                        // "url": "https://codepen.io/alenabdula/pen/OPEpGL",
                         "dayEvents": [{
-                                "title": "Help friend developer",
-                                "status": "Urgent",
-                                "time": "10:30PM"
-                            },
-                            {
-                                "title": "Shake it salt shaker!",
-                                "status": "Chill",
-                                "time": "10:45PM"
-                            }
-                        ]
+                            "title": "Peer Route",
+                            "status": "Start/End of day Focus"
+                        }]
+                    },
+                    "2021-11-02": {
+                        // "number": 6,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Day with OSL",
+                            "status": "AM w/Peer"
+                        }, {
+                            "title": "",
+                            "status": "Brand Education"
+                        }, {
+                            "title": "",
+                            "status": "DSDE Merchandising"
+                        }, {
+                            "title": "",
+                            "status": "Distribution Agreement"
+                        }, {
+                            "title": "",
+                            "status": "SBT"
+                        }, {
+                            "title": "",
+                            "status": "HHC"
+                        }]
+                    },
+                    "2021-11-03": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Market with MSL",
+                            "status": "Market with MSL"
+                        }]
+                    },
+                    "2021-11-04": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "Start/End of day Focus"
+                        }]
+                    },
+                    "2021-11-05": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "Start/End of day Focus"
+                        }]
+                    },
+                    "2021-11-06": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "Start/End of day Focus"
+                        }]
+                    },
+
+
+                    "2021-11-08": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "In-Store Focus"
+                        }]
+                    },
+                    "2021-11-09": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "In-Store Focus"
+                        }]
+                    },
+                    "2021-11-10": {
+                        // "number": 3,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Day with OSL",
+                            "status": "ION/SCO"
+                        }, {
+                            "title": "",
+                            "status": "Settlement Overview"
+                        }, {
+                            "title": "",
+                            "status": "Knowledge Check Quiz"
+                        }]
+                    },
+                    "2021-11-11": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "In-Store Focus"
+                        }]
                     },
                     "2021-11-12": {
-                        "number": 1,
+                        // "number": 1,
                         "badgeClass": "badge-success",
-                        // "url": "https://codepen.io/alenabdula/pen/OPEpGL",
                         "dayEvents": [{
-                            "title": "Help friend developer",
-                            "status": "Urgent",
-                            "time": "10:30PM"
+                            "title": "Peer Route",
+                            "status": "In-Store Focus"
+                        }]
+                    },
+                    "2021-11-13": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "In-Store Focus"
+                        }]
+                    },
+
+                    "2021-11-15": {
+                        // "number": 2,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "Full Route"
+                        }, {
+                            "title": "",
+                            "status": "ION-SCO"
+                        }]
+                    },
+                    "2021-11-16": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "Full Route"
+                        }]
+                    },
+                    "2021-11-17": {
+                        // "number": 3,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Day with OSL",
+                            "status": "Route Closing"
+                        }, {
+                            "title": "",
+                            "status": "ION/SCO"
+                        }, {
+                            "title": "",
+                            "status": "Knowledge Check Quiz"
+                        }]
+                    },
+                    "2021-11-18": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "Full Route"
+                        }]
+                    },
+                    "2021-11-19": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "Full Route"
+                        }]
+                    },
+                    "2021-11-20": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Peer Route",
+                            "status": "Full Route"
+                        }]
+                    },
+
+
+                    "2021-11-22": {
+                        // "number": 3,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Own Route",
+                            "status": "Business Operation"
+                        }, {
+                            "title": "",
+                            "status": "SBT Inventory"
+                        }, {
+                            "title": "",
+                            "status": "ION-SCO"
+                        }]
+                    },
+                    "2021-11-23": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Own Route",
+                            "status": "Business Operation"
                         }]
                     },
                     "2021-11-24": {
-                        "number": 1,
+                        // "number": 2,
                         "badgeClass": "badge-success",
-                        // "url": "https://codepen.io/alenabdula/pen/OPEpGL",
                         "dayEvents": [{
-                            "title": "Shake it salt shaker!",
-                            "status": "Chill",
-                            "time": "10:45PM"
+                            "title": "Day with OSL",
+                            "status": "Optional"
+                        }, {
+                            "title": "",
+                            "status": "ION/SCO"
+                        }]
+                    },
+                    "2021-11-25": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Own Route",
+                            "status": "Business Operation"
+                        }]
+                    },
+                    "2021-11-26": {
+                        // "number": 2,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Own Route",
+                            "status": "Business Operation"
+                        }, {
+                            "title": "",
+                            "status": "MSL Lead Q&A"
+                        }]
+                    },
+                    "2021-11-27": {
+                        // "number": 1,
+                        "badgeClass": "badge-success",
+                        "dayEvents": [{
+                            "title": "Own Route",
+                            "status": "Business Operation"
                         }]
                     },
                 },
@@ -107,10 +310,13 @@ function activaSeccionCalendar() {
                     $output = '<div class="responsive-calendar-modal">';
                     $.each($dayEvents, function () {
                         $.each($(this), function (key) {
-                            $output += '<h5>' + $(this)[key].title + '</h5>' + '<p>' + $(this)[key].status + '<br />' + $(this)[key].time + '</p><br />';
+                            // $output += '<h5>' + $(this)[key].title + '</h5>' + '<p>' + $(this)[key].status + '<br />' + $(this)[key].time + '</p><br />';
+                            $output += '<h5>' + $(this)[key].title + '</h5>' + '<span>' + $(this)[key].status + '</span><br />';
+                            // $output += '<h5>' + $(this)[key].title + '</h5><br />';
                         });
+                        // $output += '<p>' + $(this).status + '</p><br />';
                     });
-                    $output + '</div>';
+                    $output + '<br></div>';
 
                     if ($isHoveredClick) {
                         // $placeholder.html($output);
