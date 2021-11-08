@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="es" />
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/preloadjs-0.6.2.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/Time.js"></script>
+    <script src="js/Animations.min.js"></script>
+    <script src="js/bounce.min.js"></script>
+    <link rel="stylesheet" href="css/Reset.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/Style.css" type="text/css" charset="utf-8" />
+    <title>Slide 1</title>
+</head>
+
+<body>
+    <div id="contenido">
+        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/img01.png" />
+        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/img02.png" />
+        <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/img03.png" />
+        <img id="imagen4" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/img04.png" />
+        <img id="imagen5" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/img05.png" />
+        <img id="imagen6" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/img06.png" />
+        <img id="imagen7" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/img07.png" />
+        <img id="imagen8" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/img08.png" />
+        <img id="imagen9" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/img09.png" />
+
+        <input id="texto1" type="text" class="element boton" _origenx="113" _origeny="271" style="width:62px; height:18px; font-size: 16px; color: #004698;">
+        <input id="texto2" type="text" class="element boton" _origenx="113" _origeny="300" style="width:62px; height:18px; font-size: 16px; color: #004698;">
+        <input id="texto3" type="text" class="element boton" _origenx="386" _origeny="300" style="width:62px; height:18px; font-size: 16px; color: #004698;">
+        <input id="texto4" type="text" class="element boton" _origenx="113" _origeny="325" style="width:62px; height:18px; font-size: 16px; color: #004698;">
+        <input id="texto5" type="text" class="element boton" _origenx="113" _origeny="350" style="width:72px; height:18px; font-size: 16px; color: #004698;">
+        <!-- <input id="texto6" type="text" class="element boton" _origenx="174" _origeny="399" style="width:43px; height:18px; font-size: 16px; color: #004698;"> -->
+        <!-- <input id="texto7" type="text" class="element boton" _origenx="263" _origeny="399" style="width:43px; height:18px; font-size: 16px; color: #004698;"> -->
+        <!-- <input id="texto8" type="text" class="element boton" _origenx="147" _origeny="424" style="width:40px; height:18px; font-size: 16px; color: #004698;"> -->
+        <!-- <input id="texto9" type="text" class="element boton" _origenx="211" _origeny="424" style="width:40px; height:18px; font-size: 16px; color: #004698;"> -->
+        <!-- <input id="texto10" type="text" class="element boton" _origenx="295" _origeny="424" style="width:40px; height:18px; font-size: 16px; color: #004698;"> -->
+        <!-- <input id="texto11" type="text" class="element boton" _origenx="369" _origeny="424" style="width:40px; height:18px; font-size: 16px; color: #004698;"> -->
+        <!-- <input id="texto12" type="text" class="element boton" _origenx="200" _origeny="450" style="width:86px; height:18px; font-size: 16px; color: #004698;"> -->
+
+        <img id="botonIniciar" class="element" _origenx="515" _origeny="430" src="images/Teradata_Ejercicio_09/botonIniciar.png" />
+        <img id="botonValidar" class="element" _origenx="700" _origeny="535" src="images/Teradata_Ejercicio_09/botonValidar.png" />
+
+        <img id="instruccion" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/instruccion.png" />
+        <img id="botonCerrarInst" class="element" _origenx="800" _origeny="280" src="images/Teradata_Ejercicio_09/botonCerrar.png" />
+        <img id="retroBien" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/retroBien.png" />
+        <img id="retroMal" class="element" _origenx="0" _origeny="0" src="images/Teradata_Ejercicio_09/retroMal.png" />
+        <img id="botonCerrarRetroBien" class="element" _origenx="760" _origeny="180" src="images/Teradata_Ejercicio_09/botonCerrar.png" />
+        <img id="botonCerrarRetroMal" class="element" _origenx="720" _origeny="145" src="images/Teradata_Ejercicio_09/botonCerrar.png" />
+        <img id="botonReiniciar" class="element" _origenx="700" _origeny="535" src="images/Teradata_Ejercicio_09/botonReiniciar.png" />
+        <img id="botonAtras" class="element" _origenx="400" _origeny="527" src="images/Teradata_Ejercicio_09/botonAtras.png" />
+        <img id="botonAdelante" class="element" _origenx="572" _origeny="527" src="images/Teradata_Ejercicio_09/botonAdelante.png" />
+        <img id="botonInstrucciones" class="element" _origenx="455" _origeny="512" src="images/Teradata_Ejercicio_09/botonInstrucciones.png" />
+
+        <!-- cargador -->
+        <div id="cargando" class=" cargando" style="width: 100px; height: 100px;"><svg style="margin: auto; background: transparent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <g transform="translate(20 50)">
+                    <circle cx="0" cy="0" r="6" fill="#C4007A" transform="scale(0.220385 0.220385)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.375s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(40 50)">
+                    <circle cx="0" cy="0" r="6" fill="#F6921E" transform="scale(0.564378 0.564378)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.25s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(60 50)">
+                    <circle cx="0" cy="0" r="6" fill="#66458E" transform="scale(0.881747 0.881747)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.125s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(80 50)">
+                    <circle cx="0" cy="0" r="6" fill="#00ADEE" transform="scale(0.992922 0.992922)">
+                        <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+            </svg>
+        </div>
+        <!-- <img id="cargando" class="cargando" src="images/cargando.gif"></img> -->
+        <canvas id="canvas_id"></canvas>
+
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+
+        var momento = 0;
+        var cuantosValores = 5;
+        var aprueba = false;
+        this.valorOk1 = "CASE";
+        this.valorOk2 = "WHEN";
+        this.valorOk3 = "THEN";
+        this.valorOk4 = "ELSE";
+        this.valorOk5 = "END AS";
+        that = this;
+
+        cacularEscala();
+        ajustarEscenario();
+
+        function preload() {
+            animacion_entrada($("#cargando"), "default", .2, 0);
+            var preload = new createjs.LoadQueue();
+            preload.addEventListener("complete", iniciaCargador);
+            $.each($('.element'), function() {
+                preload.loadFile($("#" + this.id).attr('src'));
+                //console.log($("#" + this.id).attr('src'));
+            });
+        }
+
+        function iniciaCargador(event) {
+            console.log('load complete');
+            $.each($('.element'), function() {
+                inicializar($("#" + this.id));
+            });
+            $("#cargando").show();
+            $("#cargando").css({
+                'opacity': '1'
+            });
+            animacion_salida($("#cargando"), "desaparece", 0, muestraContenido);
+            // QUITAR
+            // animacion_salida($("#cargando"), "desaparece", 0, iniciaEjerecicio);
+        }
+
+
+        function muestraContenido() {
+            momento = 1;
+            console.log('momento', momento);
+            animacion_entrada($("#imagen1"), "default", .5, .2);
+            animacion_entrada($("#imagen2"), "arriba_abajo", .5, .7);
+
+            animacion_entrada($("#imagen3"), "der_izq", .5, 1.3);
+            animacion_entrada($("#imagen4"), "izq_der", .5, 1.7);
+            animacion_entrada($("#imagen5"), "der_izq", .5, 2.2);
+            // parent.playAudio(1, 2000, terminaAudio1);
+            parpadea($("#botonIniciar"), 3);
+        }
+
+        function muestraContenido2() {
+            momento = 2;
+            console.log('momento', momento);
+            animacion_salida($("#imagen3"), "izquierda_derecha", 0);
+            animacion_salida($("#imagen4"), "derecha_izquierda", .2);
+            animacion_salida($("#imagen5"), "izquierda_derecha", .4);
+            animacion_salida($("#imagen2"), "arriba_abajo", .6);
+
+            animacion_entrada($("#imagen6"), "default", .5, 1.3);
+            animacion_entrada($("#imagen7"), "default", .5, 1.7);
+            animacion_entrada($("#imagen8"), "izq_der", .5, 2);
+            // parent.playAudio(1, 2000, terminaAudio1);
+
+            setTimeout(function() {
+                animacion_entrada($("#botonAtras"), "default", .5, 0);
+                $("#botonAtras").css({
+                    'cursor': 'pointer'
+                })
+                parpadea($("#botonAdelante"), 0);
+            }, 2500);
+        }
+
+        function iniciaEjerecicio() {
+            momento = 3;
+            console.log('momento', momento);
+
+            animacion_entrada($("#imagen9"), "default", .5, .5);
+            setTimeout(function() {
+                for (a = 1; a <= cuantosValores; a++) {
+                    that['valorObtenido' + a] = '';
+                    $("#texto" + a).val('');
+                    $("#texto" + a).show().css({
+                        'opacity': '1',
+                        'font-weight': 'bold'
+                    });
+                }
+            }, 1000);
+            setTimeout(function() {
+                animacion_entrada($("#botonValidar"), "default", .5, 0);
+                $("#botonValidar").css({
+                    'cursor': 'pointer'
+                })
+                muestraInstruccion();
+            }, 1500);
+        }
+
+        ///////////////// Area Error ////////////////
+        // $("#imagen9").click(function() {
+        //     parent.playAudio(3, 100);
+        // });
+
+        ///////////////// botonInstrucciones ////////////////
+        $("#botonInstrucciones").click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                muestraInstruccion();
+            }
+        });
+
+        ///////////////// botonCerrar ////////////////
+        $("#botonCerrarInst").click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                cierraInstruccion();
+            }
+        });
+
+        ///////////////// botonIniciar ////////////////
+        $("#botonIniciar").click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                TweenMax.killTweensOf($(this));
+                $(this).hide();
+                $(this).css({
+                    'cursor': 'default',
+                    'opacity': '0'
+                });
+                muestraContenido2();
+            }
+        });
+        ///////////////// botonAtras ////////////////
+        $("#botonAtras").click(function(e) {
+            e.preventDefault();
+            if ($(this).css('cursor') == 'pointer') {
+                // TweenMax.killTweensOf($(this));
+                TweenMax.killTweensOf($("#botonAdelante"));
+                animacion_salida($("#imagen2, #imagen3, #imagen4, #imagen5, #imagen6, #imagen7, #imagen8, #imagen9, #retroBien, #retroMal, #instruccion"), "desaparece", 0);
+                for (a = 1; a <= cuantosValores; a++) {
+                    animacion_salida($("#texto" + a), "desaparece", 0);
+                }
+
+                switch (momento) {
+                    case 2:
+                        $("#botonAtras").hide();
+                        $("#botonAdelante").hide();
+                        muestraContenido();
+                        break;
+                    case 3:
+                        // muestraContenido2();
+                        momento = 2;
+                        console.log('momento', momento);
+                        $("#botonInstrucciones, #botonValidar").hide();
+                        $(this).css({
+                            'cursor': 'default',
+                            'opacity': '.3'
+                        });
+
+                        animacion_entrada($("#imagen6"), "default", .5, .3);
+                        animacion_entrada($("#imagen7"), "default", .5, .7);
+                        animacion_entrada($("#imagen8"), "izq_der", .5, 1);
+                        // parent.playAudio(1, 2000, terminaAudio1);
+
+                        setTimeout(function() {
+                            animacion_entrada($("#botonAtras"), "default", .5, 0);
+                            $("#botonAtras").css({
+                                'cursor': 'pointer'
+                            })
+                            parpadea($("#botonAdelante"), 0);
+                        }, 1500);
+                        break;
+
+                    default:
+                        break;
+                }
+
+            }
+        });
+        ///////////////// botonAdelante ////////////////
+        $("#botonAdelante").click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                TweenMax.killTweensOf($(this));
+                // $(this).hide();
+                $(this).css({
+                    'cursor': 'default',
+                    'opacity': '.3'
+                });
+                animacion_salida($("#imagen8"), "derecha_izquierda", 0);
+                animacion_salida($("#imagen7"), "default", .2);
+
+                setTimeout(function() {
+                    iniciaEjerecicio();
+                }, 500);
+            }
+        });
+
+        ///////////////// botonReiniciar ////////////////
+        $("#botonReiniciar").click(function(e) {
+            e.preventDefault();
+            if ($(this).css('cursor') == 'pointer') {
+                reiniciar();
+            }
+        });
+
+        ///////////////// botonCerrarRetro ////////////////
+        $("#botonCerrarRetroBien, #botonCerrarRetroMal").click(function(e) {
+            e.preventDefault();
+            if ($(this).css('cursor') == 'pointer') {
+                TweenMax.killTweensOf($(this));
+                $(this).hide();
+                animacion_salida($("#retroBien, #retroMal"), "default", 0);
+                for (a = 1; a <= cuantosValores; a++) {
+                    $("#texto" + a).attr('disabled', 'disabled');
+                }
+            }
+        });
+
+
+        ///////////////// click Input ////////////////  
+        for (a = 1; a <= cuantosValores; a++) {
+            $("#texto" + a).click(function() {
+                var cualBoton = parseInt($(this).attr('id').substr(5, 2));
+                console.log("Respuesta", cualBoton, that['valorOk' + cualBoton]);
+            });
+        }
+
+        ///////////////// botonValidar ////////////////  
+        $("#botonValidar").click(function() {
+            $(this).hide();
+            var contador = 0;
+            for (a = 1; a <= cuantosValores; a++) {
+                that['valorObtenido' + a] = $("#texto" + a).val();
+                contador++;
+                if (that['valorObtenido' + a].toLowerCase() != that['valorOk' + a].toLowerCase()) {
+                    aprueba = false;
+                    retroalimenta();
+                    return;
+                } else {
+                    if (contador >= cuantosValores) {
+                        aprueba = true;
+                        retroalimenta();
+                    }
+                }
+            }
+        });
+
+        function muestraInstruccion() {
+            animacion_entrada($("#instruccion"), "default", .5, .2);
+            $("#botonValidar").hide();
+            $("#botonAtras").css({
+                'cursor': 'default',
+                'opacity': '.3'
+            });
+            animacion_salida($("#botonInstrucciones"), "arriba_abajo", 0);
+            parpadea($("#botonCerrarInst"), .5);
+        }
+
+        function cierraInstruccion() {
+            animacion_salida($("#instruccion"), "default", .2);
+            $("#botonCerrarInst, #instruccion").hide().css({
+                'cursor': 'default',
+                'opacity': '0'
+            });
+            animacion_entrada($("#botonInstrucciones"), "abajo_arriba", .8, .2);
+            $("#botonAtras").css({
+                'cursor': 'pointer',
+                'opacity': '1'
+            });
+            $("#botonInstrucciones").css({
+                'cursor': 'pointer'
+            });
+            animacion_entrada($("#botonValidar"), "default", .5, .5);
+            $("#botonValidar").css({
+                'cursor': 'pointer'
+            })
+        }
+
+        function retroalimenta() {
+            console.log('retroalimenta', aprueba);
+
+            if (aprueba) {
+                console.log("Bien :)");
+                parent.playAudio(2, 100);
+                // animacion_salida($("#imagen5"), "desaparece", 5);
+                animacion_salida($("#instrucciones"), "desaparece", 0);
+                animacion_entrada($("#retroBien"), "default", 0.3, 0.3);
+                parpadea($("#botonCerrarRetroBien"), 0.7);
+                terminarPantalla();
+            } else {
+                parent.playAudio(3, 100);
+                animacion_entrada($("#retroMal"), "default", 0.3, 0.3);
+                parpadea($("#botonCerrarRetroMal"), 0.7);
+                console.log("Mal :(");
+            }
+            $("#botonValidar").hide();
+            $("#botonAtras, #botonInstrucciones").css({
+                'cursor': 'default',
+                'opacity': '.3'
+            });
+            parpadea($("#botonReiniciar"), 1);
+        }
+
+        function reiniciar() {
+            TweenMax.killTweensOf($(this));
+            animacion_salida($("#imagen2, #imagen3, #imagen4, #imagen5, #imagen6, #imagen7, #imagen8, #imagen9, #retroBien, #retroMal, #instruccion, #botonCerrarRetroBien, #botonCerrarRetroMal, #botonReiniciar"), "desaparece", 0);
+            for (a = 1; a <= cuantosValores; a++) {
+                $("#texto" + a).removeAttr('disabled');
+                $("#texto" + a).hide();
+            }
+            iniciaEjerecicio();
+        }
+
+
+        preload();
+
+    });
+
+</script>
+
+</html>
