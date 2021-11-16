@@ -3,15 +3,19 @@ function activaSeccionHome() {
     var cuantasCats;
     var cuantosTools = 17;
 
+    var laURLTasks = "" + laUrlAPI + "/Tasks/.json?auth=" + secret + "";
+    console.log('laURLTasks', laURLTasks);
+
+
     ajustaTamano();
 
-    if (elRol == 'IBP') {
+    if (elRol === 'IBP') {
         $('#buscadorIBP').hide();
         $('#divSelectPar').hide();
         // habilitaBoton($('#botonReporteStatus'), true);
         // habilitaBoton($('#botonReporteDetail'), true);
     }
-    if (elRol == 'Coach') {
+    if (elRol === 'Coach' || elRol === 'Admin') {
         habilitaBoton($('#botonReporteStatus'), false);
         habilitaBoton($('#botonReporteDetail'), false);
     }
@@ -180,7 +184,8 @@ function activaSeccionHome() {
     // Semanas
     function cargaSemanas() {
         $.ajax({
-            url: 'js/tasks.json',
+            url: laURLTasks,
+            // url: 'js/tasks.json',
             type: 'get',
             dataType: 'json',
             cache: false,
@@ -270,6 +275,7 @@ function activaSeccionHome() {
     switch (elRol) {
 
         case 'Admin':
+            leeUsuarios();
             break;
 
         case 'Coach':
@@ -291,16 +297,16 @@ function activaSeccionHome() {
     function pintaCategorias(data) {
         console.log(data);
 
-        cuantasCats = Object.keys(data.weeks['week' + laSemana].cats).length;
+        cuantasCats = Object.keys(data.weeks['week0' + laSemana].cats).length;
         console.log('cuantasCats', cuantasCats);
 
 
         for (a = 1; a <= cuantasSemanas; a++) {
-            this['cuantasCategorias' + a] = Object.keys(Object.values(data.weeks['week' + a].cats)).length;
+            this['cuantasCategorias' + a] = Object.keys(Object.values(data.weeks['week0' + a].cats)).length;
             console.log('cuantasCategorias' + a, this['cuantasCategorias' + a]);
 
             for (b = 1; b <= this['cuantasCategorias' + a]; b++) {
-                this['cuantasSubcategorias' + b] = Object.keys(Object.values(data.weeks['week' + a].cats)[(b - 1)].subcats).length;
+                this['cuantasSubcategorias' + b] = Object.keys(Object.values(data.weeks['week0' + a].cats)[(b - 1)].subcats).length;
                 console.log('cuantasSubcategorias' + b, this['cuantasSubcategorias' + b]);
             }
         }
@@ -314,8 +320,8 @@ function activaSeccionHome() {
 
         // for (a = 1; a <= cuantasCats; a++) {
         //     contenidoDias += '<div id="cardDia' + a + '" class="card card_dia boton_dia">';
-        //     contenidoDias += '<p>' + Object.values(data['week' + laSemana])[(a - 1)].short_txt + '</p>';
-        //     contenidoDias += '<img src="./img/' + Object.values(data['week' + laSemana])[(a - 1)].icon + '.png" />';
+        //     contenidoDias += '<p>' + Object.values(data['week0' + laSemana])[(a - 1)].short_txt + '</p>';
+        //     contenidoDias += '<img src="./img/' + Object.values(data['week0' + laSemana])[(a - 1)].icon + '.png" />';
         //     contenidoDias += '</div>';
         // }
         // $('#losDias').append(contenidoDias);
@@ -348,8 +354,8 @@ function activaSeccionHome() {
 
             for (b = 1; b <= that['cuantasCategorias' + laSemana]; b++) {
                 contenidoCategorias += '<div id="semana' + cualSemana + '_Categoria' + b + '" class="boton_categoria centrado">';
-                contenidoCategorias += '<img class="img_centrado" src="./img/' + Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].icon + '.png"</>';
-                contenidoCategorias += '<p>' + Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].name + '</p>';
+                contenidoCategorias += '<img class="img_centrado" src="./img/' + Object.values(data.weeks['week0' + laSemana].cats)[(b - 1)].icon + '.png"</>';
+                contenidoCategorias += '<p>' + Object.values(data.weeks['week0' + laSemana].cats)[(b - 1)].name + '</p>';
                 contenidoCategorias += '</div>';
             }
             // }

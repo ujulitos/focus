@@ -1,25 +1,25 @@
 {
     "weeks": {
-        "week1": {
+        "week01": {
             "name": "Week 1",
             "icon": "ico_week02",
             "cats": {
-                "cat1": {
+                "cat01": {
                     "name": "On Route",
                     "icon": "ico_25",
                     "subcats": {
-                        "subcat1": {
+                        "subcat01": {
                             "name": "Day 1 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -34,18 +34,18 @@
                                 "task21": "Once you have left the sales center, the invoice on record is what is charged to the IBP that day"
                             }
                         },
-                        "subcat2": {
+                        "subcat02": {
                             "name": "Day 1 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -55,28 +55,28 @@
                                 "task16": "Scan returns before exiting store"
                             }
                         },
-                        "subcat3": {
+                        "subcat03": {
                             "name": "Day 1 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
-                        "subcat4": {
+                        "subcat04": {
                             "name": "Day 2 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -91,18 +91,18 @@
                                 "task21": "Once you have left the sales center, the invoice on record is what is charged to the IBP that day"
                             }
                         },
-                        "subcat5": {
+                        "subcat05": {
                             "name": "Day 2 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -112,28 +112,28 @@
                                 "task16": "Scan returns before exiting store"
                             }
                         },
-                        "subcat6": {
+                        "subcat06": {
                             "name": "Day 2 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
-                        "subcat7": {
+                        "subcat07": {
                             "name": "Day 3 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -148,18 +148,18 @@
                                 "task21": "Once you have left the sales center, the invoice on record is what is charged to the IBP that day"
                             }
                         },
-                        "subcat8": {
+                        "subcat08": {
                             "name": "Day 3 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -169,28 +169,28 @@
                                 "task16": "Scan returns before exiting store"
                             }
                         },
-                        "subcat9": {
+                        "subcat09": {
                             "name": "Day 3 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
                         "subcat10": {
                             "name": "Day 4 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -208,15 +208,15 @@
                         "subcat11": {
                             "name": "Day 4 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -229,31 +229,31 @@
                         "subcat12": {
                             "name": "Day 4 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         }
                     }
                 },
-                "cat2": {
+                "cat02": {
                     "name": "Classroom",
                     "icon": "ico_11",
                     "subcats": {
-                        "subcat1": {
+                        "subcat01": {
                             "name": "Sales center, brand education, merchandising, disribution agreement, SBT, & HHC",
                             "tasks": {
-                                "task1": "Introduce to sales center associates and leaders",
-                                "task2": "Tour sales center, discuss safety & operational protocols",
-                                "task3": "Provide contacts (ROS, MSL, OSL)",
-                                "task4": "Order welcome kit, provide order information for additional shirts",
-                                "task5": "Provide samples of core products the NEW IBP will be selling",
-                                "task6": "Brand education videos",
-                                "task7": "DSDE merchandising standards video & discuss",
-                                "task8": "Review Article 4 & 6 (Sale of Product & Distributor Obligations)",
-                                "task9": "Review Article 8 (Bakery Obligations)",
+                                "task01": "Introduce to sales center associates and leaders",
+                                "task02": "Tour sales center, discuss safety & operational protocols",
+                                "task03": "Provide contacts (ROS, MSL, OSL)",
+                                "task04": "Order welcome kit, provide order information for additional shirts",
+                                "task05": "Provide samples of core products the NEW IBP will be selling",
+                                "task06": "Brand education videos",
+                                "task07": "DSDE merchandising standards video & discuss",
+                                "task08": "Review Article 4 & 6 (Sale of Product & Distributor Obligations)",
+                                "task09": "Review Article 8 (Bakery Obligations)",
                                 "task10": "Request ION access for route the NEW IBP is purchasing",
                                 "task11": "SBT process",
                                 "task12": "HHC orientation"
@@ -261,45 +261,45 @@
                         }
                     }
                 },
-                "cat3": {
+                "cat03": {
                     "name": "Market",
                     "icon": "ico_24",
                     "subcats": {
-                        "subcat1": {
+                        "subcat01": {
                             "name": "Market",
                             "tasks": {
-                                "task1": "Business review using Qlik",
-                                "task2": "Promotional Calendars - where located, how to read & leverage for selling",
-                                "task3": "Market Tour, walk the Golden Path looking for opportunities",
-                                "task4": "Market Tour, discuss DSDE merchandising & the why's",
-                                "task5": "Market Tour, relate merchandising standards to in-store display",
-                                "task6": "Market Tour, how displays impact ordering"
+                                "task01": "Business review using Qlik",
+                                "task02": "Promotional Calendars - where located, how to read & leverage for selling",
+                                "task03": "Market Tour, walk the Golden Path looking for opportunities",
+                                "task04": "Market Tour, discuss DSDE merchandising & the why's",
+                                "task05": "Market Tour, relate merchandising standards to in-store display",
+                                "task06": "Market Tour, how displays impact ordering"
                             }
                         }
                     }
                 }
             }
         },
-        "week2": {
+        "week02": {
             "name": "Week 2",
             "icon": "ico_week02",
             "cats": {
-                "cat1": {
+                "cat01": {
                     "name": "On Route",
                     "icon": "ico_25",
                     "subcats": {
-                        "subcat1": {
+                        "subcat01": {
                             "name": "Day 1 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -314,18 +314,18 @@
                                 "task21": "Once you have left the sales center, the invoice on record is what is charged to the IBP that day"
                             }
                         },
-                        "subcat2": {
+                        "subcat02": {
                             "name": "Day 1 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -335,28 +335,28 @@
                                 "task16": "Scan returns before exiting store"
                             }
                         },
-                        "subcat3": {
+                        "subcat03": {
                             "name": "Day 1 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
-                        "subcat4": {
+                        "subcat04": {
                             "name": "Day 2 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -371,18 +371,18 @@
                                 "task21": "Once you have left the sales center, the invoice on record is what is charged to the IBP that day"
                             }
                         },
-                        "subcat5": {
+                        "subcat05": {
                             "name": "Day 2 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -392,28 +392,28 @@
                                 "task16": "Scan returns before exiting store"
                             }
                         },
-                        "subcat6": {
+                        "subcat06": {
                             "name": "Day 2 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
-                        "subcat7": {
+                        "subcat07": {
                             "name": "Day 3 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -428,18 +428,18 @@
                                 "task21": "Once you have left the sales center, the invoice on record is what is charged to the IBP that day"
                             }
                         },
-                        "subcat8": {
+                        "subcat08": {
                             "name": "Day 3 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -449,28 +449,28 @@
                                 "task16": "Scan returns before exiting store"
                             }
                         },
-                        "subcat9": {
+                        "subcat09": {
                             "name": "Day 3 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
                         "subcat10": {
                             "name": "Day 4 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -488,15 +488,15 @@
                         "subcat11": {
                             "name": "Day 4 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -509,25 +509,25 @@
                         "subcat12": {
                             "name": "Day 4 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
                         "subcat13": {
                             "name": "Day 5 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -545,15 +545,15 @@
                         "subcat14": {
                             "name": "Day 5 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -566,31 +566,31 @@
                         "subcat15": {
                             "name": "Day 5 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         }
                     }
                 },
-                "cat2": {
+                "cat02": {
                     "name": "Classroom",
                     "icon": "ico_11",
                     "subcats": {
-                        "subcat1": {
+                        "subcat01": {
                             "name": "ION/SCO & Settlement",
                             "tasks": {
-                                "task1": "Knowledge Check Week 1 Quiz",
-                                "task2": "ION navigation & functions",
-                                "task3": "How to order and when to adjust",
-                                "task4": "Explain delivery percentage patterns",
-                                "task5": "Explain order windows and product lead times",
-                                "task6": "Discuss promotional calendars for ordering",
-                                "task7": "SCO",
-                                "task8": "In the Future (Set up NEW IBP access to ION simulation)",
-                                "task9": "Settlement",
+                                "task01": "Knowledge Check Week 1 Quiz",
+                                "task02": "ION navigation & functions",
+                                "task03": "How to order and when to adjust",
+                                "task04": "Explain delivery percentage patterns",
+                                "task05": "Explain order windows and product lead times",
+                                "task06": "Discuss promotional calendars for ordering",
+                                "task07": "SCO",
+                                "task08": "In the Future (Set up NEW IBP access to ION simulation)",
+                                "task09": "Settlement",
                                 "task10": "When it is delivered, how to access it, Analyst contact information",
                                 "task11": "Supply NEW IBP information Settlement 101 webinar"
                             }
@@ -599,26 +599,26 @@
                 }
             }
         },
-        "week3": {
+        "week03": {
             "name": "Week 3",
             "icon": "ico_week02",
             "cats": {
-                "cat1": {
+                "cat01": {
                     "name": "On Route",
                     "icon": "ico_25",
                     "subcats": {
-                        "subcat1": {
+                        "subcat01": {
                             "name": "Day 1 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -633,18 +633,18 @@
                                 "task21": "Once you have left the sales center, the invoice on record is what is charged to the IBP that day"
                             }
                         },
-                        "subcat2": {
+                        "subcat02": {
                             "name": "Day 1 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -654,28 +654,28 @@
                                 "task16": "Scan returns before exiting store"
                             }
                         },
-                        "subcat3": {
+                        "subcat03": {
                             "name": "Day 1 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
-                        "subcat4": {
+                        "subcat04": {
                             "name": "Day 2 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -690,18 +690,18 @@
                                 "task21": "Once you have left the sales center, the invoice on record is what is charged to the IBP that day"
                             }
                         },
-                        "subcat5": {
+                        "subcat05": {
                             "name": "Day 2 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -711,28 +711,28 @@
                                 "task16": "Scan returns before exiting store"
                             }
                         },
-                        "subcat6": {
+                        "subcat06": {
                             "name": "Day 2 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
-                        "subcat7": {
+                        "subcat07": {
                             "name": "Day 3 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -747,18 +747,18 @@
                                 "task21": "Once you have left the sales center, the invoice on record is what is charged to the IBP that day"
                             }
                         },
-                        "subcat8": {
+                        "subcat08": {
                             "name": "Day 3 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -768,28 +768,28 @@
                                 "task16": "Scan returns before exiting store"
                             }
                         },
-                        "subcat9": {
+                        "subcat09": {
                             "name": "Day 3 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
                         "subcat10": {
                             "name": "Day 4 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -807,15 +807,15 @@
                         "subcat11": {
                             "name": "Day 4 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -828,25 +828,25 @@
                         "subcat12": {
                             "name": "Day 4 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         },
                         "subcat13": {
                             "name": "Day 5 - Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
-                                "task2": "How to Sync Printer to HHC (show at least once)",
-                                "task3": "Get & Read Load Invoice from sales center",
-                                "task4": "Check in returns following sales center guidelines, (stack in order printed)",
-                                "task5": "Compare load invoice quantities vs physical product",
-                                "task6": "Make load adjustments in HHC",
-                                "task7": "Suspend load adjustments",
-                                "task8": "Print stop distribution report and explain how to read",
-                                "task9": "Stage trays & dollies to build load out by customer",
+                                "task01": "Check if HHC communicated & verify sales date, incorrect call 1-855-218-1613",
+                                "task02": "How to Sync Printer to HHC (show at least once)",
+                                "task03": "Get & Read Load Invoice from sales center",
+                                "task04": "Check in returns following sales center guidelines, (stack in order printed)",
+                                "task05": "Compare load invoice quantities vs physical product",
+                                "task06": "Make load adjustments in HHC",
+                                "task07": "Suspend load adjustments",
+                                "task08": "Print stop distribution report and explain how to read",
+                                "task09": "Stage trays & dollies to build load out by customer",
                                 "task10": "Discuss proper tray handling",
                                 "task11": "Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)",
                                 "task12": "Make load adjustments in HHC for any damages",
@@ -864,15 +864,15 @@
                         "subcat14": {
                             "name": "Day 5 - Store/Account Process",
                             "tasks": {
-                                "task1": "Unload product from delivery vehicle",
-                                "task2": "Customer receiving procedures",
-                                "task3": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
-                                "task4": "How to read & understand dates",
-                                "task5": "Pull returns set aside (unless account requires scan out before new product brought in)",
-                                "task6": "Access inventory count function in HHC (on Monday)",
-                                "task7": "Complete SBT inventory (on Monday), print and keep with paperwork",
-                                "task8": "Work backstock to the shelf",
-                                "task9": "Rotate product (fast moving locations)",
+                                "task01": "Unload product from delivery vehicle",
+                                "task02": "Customer receiving procedures",
+                                "task03": "Invoicing in HHC (both deliveries and returns). Keep signed copy.",
+                                "task04": "How to read & understand dates",
+                                "task05": "Pull returns set aside (unless account requires scan out before new product brought in)",
+                                "task06": "Access inventory count function in HHC (on Monday)",
+                                "task07": "Complete SBT inventory (on Monday), print and keep with paperwork",
+                                "task08": "Work backstock to the shelf",
+                                "task09": "Rotate product (fast moving locations)",
                                 "task10": "Work new product",
                                 "task11": "Discuss DSDE merchandising",
                                 "task12": "Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up",
@@ -885,65 +885,65 @@
                         "subcat16": {
                             "name": "Day 5 - End of Day Process",
                             "tasks": {
-                                "task1": "Verify truckstock inventory",
-                                "task2": "Check in returns following sales center guidelines (stack in order printed)",
-                                "task3": "Finalize and transfer returns in HHC",
-                                "task4": "Print daily settlement report",
-                                "task5": "Communicate HHC"
+                                "task01": "Verify truckstock inventory",
+                                "task02": "Check in returns following sales center guidelines (stack in order printed)",
+                                "task03": "Finalize and transfer returns in HHC",
+                                "task04": "Print daily settlement report",
+                                "task05": "Communicate HHC"
                             }
                         }
                     }
                 },
-                "cat2": {
+                "cat02": {
                     "name": "Classroom",
                     "icon": "ico_11",
                     "subcats": {
-                        "subcat1": {
+                        "subcat01": {
                             "name": "Route Closing & ION/SCO",
                             "tasks": {
-                                "task1": "Knowledge Check Week 2 Quiz",
-                                "task2": "Route Closing",
-                                "task3": "ION navigation & functions",
-                                "task4": "SCO",
-                                "task5": "Settlement overview"
+                                "task01": "Knowledge Check Week 2 Quiz",
+                                "task02": "Route Closing",
+                                "task03": "ION navigation & functions",
+                                "task04": "SCO",
+                                "task05": "Settlement overview"
                             }
                         }
                     }
                 }
             }
         },
-        "week4": {
+        "week04": {
             "name": "Week 4",
             "icon": "ico_week02",
             "cats": {
-                "cat1": {
+                "cat01": {
                     "name": "On Route",
                     "icon": "ico_25",
                     "subcats": {
-                        "subcat1": {
+                        "subcat01": {
                             "name": "AM or Start of Day Process (Sales Center)",
                             "tasks": {
-                                "task1": "NEW IBP complete AM process"
+                                "task01": "NEW IBP complete AM process"
                             }
                         },
-                        "subcat2": {
+                        "subcat02": {
                             "name": "Store/Account Process",
                             "tasks": {
-                                "task1": "NEW IBP complete all steps in-store process",
-                                "task2": "NEW IBP complete SBT inventory (on Monday)",
-                                "task3": "Ensure selling IBP is present for SBT counts or validate counts are correct for company route",
-                                "task4": "Set up safe carry over for stores",
-                                "task5": "ION ordering",
-                                "task6": "DSDE merchandising standards followed",
-                                "task7": "Introduce IBP to store manager (decision makers)",
-                                "task8": "NEW IBP fact-based sell to gain support"
+                                "task01": "NEW IBP complete all steps in-store process",
+                                "task02": "NEW IBP complete SBT inventory (on Monday)",
+                                "task03": "Ensure selling IBP is present for SBT counts or validate counts are correct for company route",
+                                "task04": "Set up safe carry over for stores",
+                                "task05": "ION ordering",
+                                "task06": "DSDE merchandising standards followed",
+                                "task07": "Introduce IBP to store manager (decision makers)",
+                                "task08": "NEW IBP fact-based sell to gain support"
                             }
                         },
-                        "subcat3": {
+                        "subcat03": {
                             "name": "PM or End of Day Process",
                             "tasks": {
-                                "task1": "NEW IBP complete End of Day process",
-                                "task2": "NEW IBP communicate HHC and set up for HOME wifi"
+                                "task01": "NEW IBP complete End of Day process",
+                                "task02": "NEW IBP communicate HHC and set up for HOME wifi"
                             }
                         }
                     }

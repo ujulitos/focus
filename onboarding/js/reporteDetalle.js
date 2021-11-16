@@ -100,15 +100,15 @@ function descargaReporteDetalle() {
 
 
                     for (a = 1; a <= cuantasSemanas; a++) {
-                        that['cuantasCats_Semana' + a] = Object.keys(Object.values(dataTasks.weeks['week' + a].cats)).length;
+                        that['cuantasCats_Semana' + a] = Object.keys(Object.values(dataTasks.weeks['week0' + a].cats)).length;
                         // console.log(' cuantasCats_Semana', a, that['cuantasCats_Semana' + a])
 
                         for (b = 1; b <= that['cuantasCats_Semana' + a]; b++) {
-                            that['cuantasCats_Semana' + a + '_subCat' + b] = Object.keys(Object.values(dataTasks.weeks['week' + a].cats)[(b - 1)].subcats).length;
+                            that['cuantasCats_Semana' + a + '_subCat' + b] = Object.keys(Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].subcats).length;
                             // console.log('cuantasCats_Semana', a + '_subCat' + b, that['cuantasCats_Semana' + a + '_subCat' + b])
 
                             for (c = 1; c <= that['cuantasCats_Semana' + a + '_subCat' + b]; c++) {
-                                that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c] = Object.keys(Object.values(Object.values(dataTasks.weeks['week' + a].cats)[(b - 1)].subcats)[(c - 1)].tasks).length;
+                                that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c] = Object.keys(Object.values(Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].subcats)[(c - 1)].tasks).length;
                                 // console.log('cuantasCats_Semana', a + '_subCat' + b + '_task' + c, that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c]);
 
                             }
@@ -162,14 +162,14 @@ function descargaReporteDetalle() {
                                     if (b <= 1 && c <= 1 && d <= 1) {
                                         that['idTablaSemana'] = a;
                                         // console.log('that[idTablaSemana]', that['idTablaSemana']);
-                                        contenidoReporte += '<td>' + dataTasks.weeks['week' + a].name.replace(/ /g, "&nbsp;") + '</td>';
+                                        contenidoReporte += '<td>' + dataTasks.weeks['week0' + a].name.replace(/ /g, "&nbsp;") + '</td>';
                                     } else {
                                         contenidoReporte += '<td></td>';
                                     }
                                     if (c <= 1 && d <= 1) {
                                         that['idTablaCat'] = b;
                                         // console.log('that[idTablaCat]', that['idTablaCat']);
-                                        contenidoReporte += '<td>' + Object.values(dataTasks.weeks['week' + a].cats)[(b - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
+                                        contenidoReporte += '<td>' + Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
                                     } else {
                                         contenidoReporte += '<td></td>';
                                     }
@@ -177,13 +177,13 @@ function descargaReporteDetalle() {
                                     if (d <= 1) {
                                         that['idTablaSubCat'] = c;
                                         // console.log('that[idTablaSubCat]', that['idTablaSubCat']);
-                                        contenidoReporte += '<td>' + Object.values(Object.values(Object.values(dataTasks.weeks['week' + a].cats))[(b - 1)].subcats)[(c - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
+                                        contenidoReporte += '<td>' + Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
                                     } else {
                                         contenidoReporte += '<td></td>';
                                     }
                                     that['idTablaTarea'] = d;
                                     // console.log('that[idTablaTarea]', that['idTablaTarea']);
-                                    contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)].replace(/ /g, "&nbsp;") + '</td>';
+                                    contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)].replace(/ /g, "&nbsp;") + '</td>';
 
 
                                     for (m = 1; m <= cuantasTasks; m++) {

@@ -1,5 +1,10 @@
  function activaSeccionTasks() {
      console.log('seccionTasks');
+
+     var laURLTasks = "" + laUrlAPI + "/Tasks/.json?auth=" + secret + "";
+     console.log('laURLTasks', laURLTasks);
+
+
      ajustaTamano();
 
      //  var totalDiasPorSemana = 0;
@@ -12,7 +17,8 @@
 
      function cargaTasks() {
          $.ajax({
-             url: 'js/tasks.json',
+             //  url: 'js/tasks.json',
+             url: laURLTasks,
              type: 'get',
              dataType: 'json',
              cache: false,
@@ -24,19 +30,19 @@
      function pintaTasks(data) {
          console.log(data);
 
-         cuantasCats = Object.keys(data.weeks['week' + laSemana].cats).length;
+         cuantasCats = Object.keys(data.weeks['week0' + laSemana].cats).length;
          console.log('cuantasCats', cuantasCats);
 
          for (a = 1; a <= cuantasCats; a++) {
-             this['cuantasCategorias' + laSemana] = Object.keys(Object.values(data.weeks['week' + laSemana].cats)).length;
+             this['cuantasCategorias' + laSemana] = Object.keys(Object.values(data.weeks['week0' + laSemana].cats)).length;
              console.log('cuantasCategorias' + laSemana, this['cuantasCategorias' + laSemana]);
 
              for (b = 1; b <= this['cuantasCategorias' + laSemana]; b++) {
-                 this['cat' + laSemana + '_cuantasSubcategorias' + b] = Object.keys(Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].subcats).length;
+                 this['cat' + laSemana + '_cuantasSubcategorias' + b] = Object.keys(Object.values(data.weeks['week0' + laSemana].cats)[(b - 1)].subcats).length;
                  console.log('cat' + laSemana + '_cuantasSubcategorias' + b, this['cat' + laSemana + '_cuantasSubcategorias' + b]);
 
                  for (c = 1; c <= this['cat' + laSemana + '_cuantasSubcategorias' + b]; c++) {
-                     this['cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c] = Object.keys(Object.values(Object.values(data.weeks['week' + laSemana].cats)[(b - 1)].subcats)[(c - 1)].tasks).length;
+                     this['cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c] = Object.keys(Object.values(Object.values(data.weeks['week0' + laSemana].cats)[(b - 1)].subcats)[(c - 1)].tasks).length;
                      console.log('cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c, this['cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c]);
 
                  }
@@ -44,7 +50,7 @@
          }
 
          for (d = 1; d <= this['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; d++) {
-             totalTasksPorCategoria += Object.keys(Object.values(Object.values(data.weeks['week' + laSemana].cats)[(laCategoria - 1)].subcats)[(d - 1)].tasks).length;
+             totalTasksPorCategoria += Object.keys(Object.values(Object.values(data.weeks['week0' + laSemana].cats)[(laCategoria - 1)].subcats)[(d - 1)].tasks).length;
              console.log('totalTasksPorCategoria', totalTasksPorCategoria);
          }
 
@@ -54,9 +60,9 @@
          // for (c = 1; c <= that['cat' + laSemana + '_subcat' + laCategoria + '_cuantasTasks' + b]; c++) {
 
          console.log('totalTasksPorCategoria', totalTasksPorCategoria);
-         //  totalDiasPorSemana = Object.keys(data.weeks['week' + laSemana]).length;
+         //  totalDiasPorSemana = Object.keys(data.weeks['week0' + laSemana]).length;
          //  console.log('totalDiasPorSemana', totalDiasPorSemana);
-         totalCategoriasPorSemana = Object.keys(data.weeks['week' + laSemana].cats).length;
+         totalCategoriasPorSemana = Object.keys(data.weeks['week0' + laSemana].cats).length;
          console.log('totalCategoriasPorSemana', totalCategoriasPorSemana);
 
 
@@ -72,7 +78,7 @@
          contenidoTasks += '<div class="titulo_categoria">';
          // contenidoTasks += '<i class="titulo_categoria_img material-icons-outlined">' + Object.values(Object.values(data['week' + laSemana])[(laSemana - 1)].cats)[(laCategoria - 1)].cat_icon + '</i>';
          // contenidoTasks += '<img  style="display:block;padding-top:20px;padding-bottom:30px; width:55px; margin-left:auto; margin-right:auto;" src="./img/' + Object.values(Object.values(data['week' + laSemana])[(laSemana - 1)].cats)[(laCategoria - 1)].cat_icon + '.png" />';
-         contenidoTasks += '<div class="titulo_categoria_txt centrado">' + Object.values(Object.values(data.weeks['week' + laSemana].cats))[(laCategoria - 1)].name + '</div>';
+         contenidoTasks += '<div class="titulo_categoria_txt centrado">' + Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].name + '</div>';
          contenidoTasks += '</div>';
          contenidoTasks += '<div class="divider_linea"></div>';
          contenidoTasks += '<br>';
@@ -82,9 +88,12 @@
 
              contenidoTasks += '<br>';
              contenidoTasks += '<table style="width:100%">';
-             contenidoTasks += '<div class="titulo_subcategoria_txt">' + Object.values(Object.values(Object.values(data.weeks['week' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].name + '</div>';
+             contenidoTasks += '<div class="titulo_subcategoria_txt">' + Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].name + '</div>';
 
              contenidoTasks += '<tr>';
+             if (elRol === 'Admin') {
+                 contenidoTasks += '<th></th>';
+             }
              contenidoTasks += '<th style="width: 100%;"></th>';
              contenidoTasks += '<th>Done</th>';
              contenidoTasks += '</tr>';
@@ -93,8 +102,11 @@
              for (c = 1; c <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
 
                  contenidoTasks += '<tr class="tabla_row" style="height: 200px;">';
-
-                 contenidoTasks += '<td class=" ">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)] + '</td>';
+                 if (elRol === 'Admin') {
+                     //  contenidoTasks += '<td id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" " style="line-height: 1;"><div id="boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="boton_edit"><span class="icon_edit material-icons">edit</span></div> <div class="boton_cancel"><span class="icon_cancel material-icons">close</span></div> <div class="boton_save"><span class="icon_save material-icons">done</span></div> </td>';
+                     contenidoTasks += '<td id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" " style="line-height: 1;"><div id="boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="boton_edit"><span class="icon_edit material-icons">edit</span></div></td>';
+                 }
+                 contenidoTasks += '<td id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" ">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)] + '</td>';
                  contenidoTasks += '<td>';
                  contenidoTasks += '<input type="checkbox" id="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="check check1">';
                  contenidoTasks += '<label class="label_class" for="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '"></label>';
@@ -107,7 +119,7 @@
          // }
          //  if (laCategoria == that['cuantasCategorias' + laSemana]) {
          // contenidoTasks += '<br><div class="divider_linea"></div>';
-         //  contenidoTasks += '<br><div>' + Object.values(data.weeks['week' + laSemana])[(laSemana - 1)].final_message + '</div>';
+         //  contenidoTasks += '<br><div>' + Object.values(data.weeks['week0' + laSemana])[(laSemana - 1)].final_message + '</div>';
          //  contenidoTasks += '<br><div class="divider_linea"></div>';
          //  }
          contenidoTasks += '<br>';
@@ -124,6 +136,59 @@
 
          for (b = 1; b <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; b++) {
              for (c = 1; c <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
+
+                 $('#boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).click(function (event) {
+                     event.preventDefault();
+                     console.log('edit', $(this).attr('id'));
+                     var laTaskTextoNuevo;
+
+                     Swal.fire({
+                         icon: 'warning',
+                         title: 'Edit this task?',
+                         //  text: "You won't be able to revert this!",
+                         input: 'textarea',
+                         //  inputLabel: 'Message',
+                         inputPlaceholder: 'Type new text...',
+                         inputAttributes: {
+                             'id': 'laTaskTextoEdit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c
+                         },
+                         showCancelButton: true,
+                         confirmButtonColor: '#6ab129',
+                         cancelButtonColor: '#da4730',
+                         confirmButtonText: 'Ok'
+                     }).then((result) => {
+                         if (result.isConfirmed) {
+                             if (result.value.length > 0) {
+
+                                 console.log('result.value', $(this).attr('id').split('boton_edit_')[1], result.value);
+                                 guardaTasksText($(this).attr('id').split('boton_edit_')[1], result.value);
+
+                                 Swal.fire({
+                                     icon: 'success',
+                                     title: 'Task saved'
+                                 })
+                                 $(this).prop("checked", "checked");
+                                 $(this).attr("disabled", "disabled");
+                             } else {
+                                 Swal.fire({
+                                     icon: 'error',
+                                     title: 'The text must not be empty'
+                                 })
+                                 $(this).prop("checked", false);
+                                 $(this).prop("disabled", false);
+                             }
+                         }
+                         if (result.isDismissed || result.isDenied) {
+                             $(this).prop("checked", false);
+                             $(this).prop("disabled", false);
+                         }
+                     });
+                     $('.swal2-container').css({
+                         'z-index': '9999'
+                     });
+
+                 });
+
 
                  $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).click(function (event) {
                      event.preventDefault();
@@ -294,14 +359,14 @@
          }
          //  }, 1000);
 
-         for (b = 1; b <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; b++) {
-             for (c = 1; c <= that['cat' + laCategoria + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
-                 if (elRol === 'Coach') {
-                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).parent().css({
+         for (e = 1; e <= totalTasksPorCategoria; e++) {
+             for (f = 1; f <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + e]; f++) {
+                 if (elRol === 'Coach' || elRol === 'Admin') {
+                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f).parent().css({
                          "opacity": "0.5"
                      })
-                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).prop("disabled", "disabled");
-                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).next().css({
+                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f).prop("disabled", "disabled");
+                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f).next().css({
                          "pointer-events": "none"
                      })
                  }
@@ -333,6 +398,49 @@
          var keyUsuario = dataRef.ref.child(cualUsuarioId + '/Registro/tasks');
          //  console.log(nuevoTaskData);
          firebase.database().ref(keyUsuario).set(__that.arrayTasks, onComplete);
+
+     }
+
+     function guardaTasksText(cualId, cualText) {
+         console.log('guardaTasksText', cualId, cualText);
+
+         var onComplete = function (error) {
+             if (error) {
+                 console.log('Ocurrió un error en la sincronización.');
+             } else {
+                 console.log('Sincronización realizada.');
+
+                 if (!isMobile) {
+                     Scrollbar.destroyAll();
+                 }
+                 cargaTasks();
+             };
+         };
+
+         var elrefTaskIdSemanaPrev = cualId.split('s')[1];
+         //  console.log('elrefTaskIdSemanaPrev', elrefTaskIdSemanaPrev);
+         var elrefTaskIdSemana = elrefTaskIdSemanaPrev.split('_c')[0];
+         //  console.log('elrefTaskIdSemana', elrefTaskIdSemana);
+
+         var elrefTaskIdCatPrev = cualId.split('_c')[1];
+         //  console.log('elrefTaskIdCatPrev', elrefTaskIdCatPrev);
+         var elrefTaskIdCat = elrefTaskIdCatPrev.split('_sc')[0];
+         //  console.log('elrefTaskIdCat', elrefTaskIdCat);
+
+         var elrefTaskIdSubcatPrev = cualId.split('_sc')[1];
+         //  console.log('elrefTaskIdSubcatPrev', elrefTaskIdSubcatPrev);
+         var elrefTaskIdSubcat = elrefTaskIdSubcatPrev.split('_t')[0];
+         //  console.log('elrefTaskIdSubcat', elrefTaskIdSubcat);
+
+         var elrefTaskIdTask = cualId.split('t')[1];
+         //  console.log('elrefTaskIdTask', elrefTaskIdTask);
+
+
+         console.log('Guardando . . . ');
+         var dataRef = firebase.database().ref(laUrlBase + 'Tasks');
+         var keyTask = dataRef.ref.child('weeks/week0' + elrefTaskIdSemana + '/cats/cat0' + elrefTaskIdCat + '/subcats/subcat0' + elrefTaskIdSubcat + '/tasks/task0' + elrefTaskIdTask);
+         //  console.log(nuevoTaskData);
+         firebase.database().ref(keyTask).set(cualText, onComplete);
 
      }
 
@@ -387,7 +495,6 @@
              loadSeccion('home');
          }
      }
-
 
      cargaTasks();
 
