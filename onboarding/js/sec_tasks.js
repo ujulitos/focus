@@ -144,7 +144,7 @@
 
                      Swal.fire({
                          icon: 'warning',
-                         title: 'Edit this task?',
+                         title: 'Edit this task',
                          //  text: "You won't be able to revert this!",
                          input: 'textarea',
                          //  inputLabel: 'Message',
@@ -155,7 +155,7 @@
                          showCancelButton: true,
                          confirmButtonColor: '#6ab129',
                          cancelButtonColor: '#da4730',
-                         confirmButtonText: 'Ok'
+                         confirmButtonText: 'Save'
                      }).then((result) => {
                          if (result.isConfirmed) {
                              if (result.value.length > 0) {
