@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="es" />
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/preloadjs-0.6.2.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/Time.js"></script>
+    <script src="js/Animations.min.js"></script>
+    <script src="js/bounce.min.js"></script>
+    <link rel="stylesheet" href="css/Reset.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/Style.css" type="text/css" charset="utf-8" />
+    <title>Slide 1</title>
+</head>
+
+<body onresize="location.reload()">
+    <div id="contenido">
+        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/img01.png"></img>
+        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/img02.png"></img>
+        <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/img03.png"></img>
+        <img id="imagen4" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/img04.png"></img>
+        <img id="imagen5" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/img05.png"></img>
+
+        <img id="boton1" class="element" _origenx="930" _origeny="280" src="images/SAP_Nomina_Admin_12/boton1.png"></img>
+
+        <img id="sec00_back" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/sec00_back.png"></img>
+        <img id="sec00_ins" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/sec00_ins.png"></img>
+
+        <!--seccion 1-->
+        <img id="sec01_imagen1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/sec01_img01.png"></img>
+        <!-- <img id="sec01_imagen2" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/sec01_img02.png"></img> -->
+
+        <!--seccion 2-->
+        <img id="sec02_imagen1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/sec02_img01.png"></img>
+        <img id="sec02_imagen2" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Admin_12/sec02_img02.png"></img>
+
+
+        <!----------------------------->
+        <img id="btnSiguiente0" class="element" _origenx="1092" _origeny="315" src="images/SAP_Nomina_Admin_12/botonSiguiente.png"></img>
+        <img id="btnAtras0" class="element" _origenx="15" _origeny="315" src="images/SAP_Nomina_Admin_12/botonAtras.png"></img>
+        <img id="btnSiguiente1" class="element" _origenx="1092" _origeny="315" src="images/SAP_Nomina_Admin_12/botonSiguiente.png"></img>
+        <img id="btnAtras1" class="element" _origenx="15" _origeny="315" src="images/SAP_Nomina_Admin_12/botonAtras.png"></img>
+        <img id="btnSiguiente2" class="element" _origenx="1092" _origeny="315" src="images/SAP_Nomina_Admin_12/botonSiguiente.png"></img>
+        <img id="btnAtras2" class="element" _origenx="15" _origeny="315" src="images/SAP_Nomina_Admin_12/botonAtras.png"></img>
+        <img id="btnSiguiente3" class="element" _origenx="1092" _origeny="315" src="images/SAP_Nomina_Admin_12/botonSiguiente.png"></img>
+
+        <img id="botonCerrar" class="element" _origenx="1090" _origeny="140" src="images/SAP_Nomina_Admin_12/botonCerrar.png"></img>
+
+        <!-- cargador -->
+        <div id="cargando" class=" cargando" style="width: 100px; height: 100px;"><svg style="margin: auto; background: transparent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <g transform="translate(20 50)">
+                    <circle cx="0" cy="0" r="6" fill="#e15b64" transform="scale(0.220385 0.220385)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.375s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(40 50)">
+                    <circle cx="0" cy="0" r="6" fill="#f8b26a" transform="scale(0.564378 0.564378)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.25s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(60 50)">
+                    <circle cx="0" cy="0" r="6" fill="#abbd81" transform="scale(0.881747 0.881747)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.125s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(80 50)">
+                    <circle cx="0" cy="0" r="6" fill="#81a3bd" transform="scale(0.992922 0.992922)">
+                        <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+            </svg>
+        </div>
+        <!-- <img id="cargando" class="cargando" src="images/cargando.gif"></img> -->
+
+        <canvas id="canvas_id"></canvas>
+
+    </div>
+</body>
+<style>
+    .boton {
+        background-color: rgba(167, 255, 108, 0);
+        cursor: pointer;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+
+        cacularEscala();
+        ajustarEscenario();
+
+        function preload() {
+            animacion_entrada($("#cargando"), "default", .2, 0);
+            var preload = new createjs.LoadQueue();
+            preload.addEventListener("complete", iniciaCargador);
+            $.each($('.element'), function () {
+                preload.loadFile($("#" + this.id).attr('src'));
+                //console.log($("#" + this.id).attr('src'));
+            });
+        }
+
+        function iniciaCargador(event) {
+            console.log('load complete');
+            $.each($('.element'), function () {
+                inicializar($("#" + this.id));
+            });
+            $("#cargando").show();
+            $("#cargando").css({
+                'opacity': '1'
+            });
+            animacion_salida($("#cargando"), "desaparece", 0, muestraContenido);
+        }
+
+
+        function muestraContenido() {
+            animacion_entrada($("#imagen1"), "default", .7, 0.5);
+            animacion_entrada($("#imagen2"), "izq_der", .7, 1);
+
+            // animacion_salida($("#imagen2"), "desaparece", 16.5);
+            animacion_entrada($("#imagen3"), "default", .7, 3.5);
+            parent.playAudio(12, 1500, terminaAudio1);
+
+        }
+
+        function terminaAudio1() {
+            animacion_entrada($("#imagen4"), "der_izq", .7, 0);
+            animacion_entrada($("#imagen5"), "default", .7, 1.5);
+            parpadea($("#boton1"), 2);
+        }
+
+        $("#boton1").click(function () {
+            if ($(this).css('cursor') == 'pointer') {
+                TweenMax.killTweensOf($(this));
+                $(this).hide();
+                // $(this).css({
+                // 'cursor': 'default',
+                // 'opacity': '1'
+                // });
+
+                animacion_salida($("#imagen5"), "desaparece", 0);
+                desapareceBotonera();
+                setTimeout(function () {
+                    muestraSeccion1();
+                }, 300);
+            }
+        });
+
+
+        // function terminaAudio2() {
+        //     desapareceBotonera();
+        //     setTimeout(function () {
+        //         muestraSeccion1();
+        //     }, 300);
+        // }
+
+
+        function desapareceBotonera() {
+            // animacion_salida($('#pleca'), "desaparece", 0);
+            // animacion_salida($('#imagen1'), "default", 0);
+            // animacion_salida($('#imagen2'), "default", 0);
+            // animacion_salida($('#imagen3'), "default", 0);
+            // animacion_salida($('#pleca1, #pleca2, #pleca3, #pleca4, #pleca5'), "desaparece", 0);
+            animacion_salida($('#btnAtras0, #btnSiguiente0, #btnAtras1, #btnSiguiente1, #btnAtras2, #btnSiguiente2, #btnAtras3, #btnSiguiente3, #btnAtras4, #btnSiguiente4, #btnAtras5, #btnSiguiente5, #btnAtras6, #btnSiguiente6, #btnAtras7, #btnSiguiente7, #btnAtras8, #btnSiguiente8, #btnAtras9, #btnSiguiente9, #btnAtras10, #btnSiguiente10, #btnAtras11, #btnSiguiente11, #btnAtras12, #btnSiguiente12, #btnAtras13, #btnSiguiente13, #btnAtras14, #btnSiguiente14, #btnAtras15, #btnSiguiente15'), "desaparece", 0);
+            animacion_salida($('#botonCerrar'), "default", 0);
+            // $('#btnAtras1, #btnSiguiente1, #btnAtras2, #btnSiguiente2, #btnAtras3, #btnSiguiente3, #btnAtras4, #btnSiguiente4, #btnAtras5, #btnSiguiente5, #btnAtras6, #btnSiguiente6').css({
+            //     'cursor': 'default'
+            // });
+        }
+
+        // $("#btnSiguiente0").click(function() {
+
+        //     if ($(this).css('cursor') == 'pointer') {
+        //         TweenMax.killTweensOf($(this));
+        //         // $(this).hide();
+        //         desapareceBotonera();
+        //         muestraSeccion1();
+        //     }
+        // });
+
+
+
+        function muestraSeccion1() {
+            console.log('1');
+
+            animacion_entrada($("#sec00_back"), "default", 0.7, 0);
+
+            animacion_entrada($("#sec01_imagen1"), "izq_der", 0.7, .5);
+            // animacion_entrada($("#sec01_imagen2"), "izq_der", 0.7, 1);
+
+            parent.playAudio(13, 1000, terminaAudio1_Sec1);
+            animacion_entrada($("#sec00_ins"), "der_izq", 0.7, 4);
+
+            function terminaAudio1_Sec1() {
+                // animacion_entrada($("#btnAtras1"), "default", 0, 0);
+                // $("#btnAtras1").css({
+                //     'opacity': '0.4',
+                //     'cursor': 'default'
+                // });
+                parpadea($("#btnSiguiente1"), 0);
+            }
+
+            function desapareceSeccion1() {
+                animacion_salida($('#sec01_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec01_imagen2'), "desaparece", 0);
+                // animacion_salida($('#sec01_imagen3'), "desaparece", 0);
+            }
+
+            $("#btnSiguiente1").click(function () {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion1();
+                    muestraSeccion2();
+                }
+            });
+
+        };
+
+
+        function muestraSeccion2() {
+            console.log('2');
+
+            animacion_entrada($("#sec02_imagen1"), "der_izq", 0.7, 0.5);
+            animacion_entrada($("#sec02_imagen2"), "der_izq", 0.7, 1);
+
+            // parent.playAudio(43, 1500, terminaAudio1_Sec2);
+
+            // function terminaAudio1_Sec2() {
+            animacion_entrada($("#btnAtras2"), "default", 0, 1.5);
+            $("#btnAtras2").css({
+                'opacity': '1',
+                'cursor': 'pointer'
+            });
+            parpadea($("#botonCerrar"), 2);
+            // terminarPantalla();
+            // }
+
+            function desapareceSeccion2() {
+                animacion_salida($('#sec02_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec02_imagen2'), "desaparece", 0);
+            }
+
+            $("#btnAtras2").click(function () {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion2();
+                    muestraSeccion1();
+                }
+            });
+
+            $("#botonCerrar").click(function () {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion2();
+                    animacion_salida($('#sec00_back'), "desaparece", 0);
+                    animacion_salida($('#sec00_ins'), "desaparece", 0);
+                    terminarPantalla();
+                }
+            });
+            // $("#btnSiguiente2").click(function () {
+            //     if ($(this).css('cursor') == 'pointer') {
+            //         //TweenMax.killTweensOf($(this));
+            //         $(this).hide();
+
+            //         desapareceBotonera();
+            //         desapareceSeccion2();
+            //         muestraSeccion3();
+            //     }
+            // });
+
+        };
+
+
+
+        // function terminaAudio1() {
+        //     terminarPantalla();
+        // }
+
+
+        ///////////////// botón 1 ////////////////
+        // $("#boton1").click(function() {
+        //     if ($(this).css('cursor') == 'pointer') {
+        //         TweenMax.killTweensOf($(this));
+        //         $(this).hide();
+        //         // $(this).css({
+        //         // 'cursor': 'default',
+        //         // 'opacity': '1'
+        //         // });
+
+        //     terminarPantalla();
+        //     parent.nextPage();
+        //     }
+        // });
+
+
+
+        preload();
+
+    });
+</script>
+
+</html>
