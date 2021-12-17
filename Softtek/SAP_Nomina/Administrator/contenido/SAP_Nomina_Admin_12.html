@@ -130,12 +130,13 @@
             animacion_entrada($("#imagen3"), "default", .7, 3.5);
             parent.playAudio(12, 1500, terminaAudio1);
 
+            animacion_entrada($("#imagen5"), "default", .7, 14);
+            animacion_entrada($("#imagen4"), "der_izq", .7, 17.5);
         }
 
         function terminaAudio1() {
-            animacion_entrada($("#imagen4"), "der_izq", .7, 0);
-            animacion_entrada($("#imagen5"), "default", .7, 1.5);
-            parpadea($("#boton1"), 2);
+
+            parpadea($("#boton1"), 0);
         }
 
         $("#boton1").click(function () {

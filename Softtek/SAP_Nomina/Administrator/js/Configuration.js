@@ -83,5 +83,6 @@ var grupoAudios = new buzz.group([
     /*31*/ new buzz.sound("contenido/audios/SAP_Nomina_Admin_16_16", { formats: ["mp3"], preload: true }),
     /*32*/ new buzz.sound("contenido/audios/SAP_Nomina_Admin_16_17", { formats: ["mp3"], preload: true }),
     /*33*/ new buzz.sound("contenido/audios/SAP_Nomina_Admin_16_18", { formats: ["mp3"], preload: true }),
-    /*34*/ new buzz.sound("contenido/audios/SAP_Nomina_Admin_17_01", { formats: ["mp3"], preload: true })
+    /*34*/ new buzz.sound("contenido/audios/SAP_Nomina_Admin_17_01", { formats: ["mp3"], preload: true }),
+    /*35*/ new buzz.sound("contenido/audios/SAP_Nomina_Admin_15_01", { formats: ["mp3"], preload: true })
 ]);
