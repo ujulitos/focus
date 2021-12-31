@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="es" />
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/preloadjs-0.6.2.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/Time.js"></script>
+    <script src="js/Animations.min.js"></script>
+    <script src="js/bounce.min.js"></script>
+    <link rel="stylesheet" href="css/Reset.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/Style.css" type="text/css" charset="utf-8" />
+    <title>Slide 1</title>
+</head>
+
+<body onresize="location.reload()">
+    <div id="contenido">
+        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/img01.png"></img>
+        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/img02.png"></img>
+        <!-- <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/img03.png"></img>
+        <img id="imagen4" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/img04.png"></img> -->
+
+        <img id="sec00_back" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec00_back.png"></img>
+        <img id="sec00_ins" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec00_ins.png"></img>
+        <img id="secXX_ins" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/secXX_ins.png"></img>
+
+        <img id="sec1_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec01_img01.png"></img>
+        <img id="sec2_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec02_img01.png"></img>
+        <img id="sec3_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec03_img01.png"></img>
+        <img id="sec4_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec04_img01.png"></img>
+        <img id="sec5_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec05_img01.png"></img>
+        <img id="sec6_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec06_img01.png"></img>
+        <img id="sec7_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec07_img01.png"></img>
+        <img id="sec8_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec08_img01.png"></img>
+        <img id="sec9_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec09_img01.png"></img>
+        <img id="sec10_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec10_img01.png"></img>
+        <img id="sec11_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec11_img01.png"></img>
+        <img id="sec12_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec12_img01.png"></img>
+        <img id="sec13_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec13_img01.png"></img>
+        <img id="sec14_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec14_img01.png"></img>
+        <img id="sec15_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec15_img01.png"></img>
+        <img id="sec16_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec16_img01.png"></img>
+        <img id="sec17_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec17_img01.png"></img>
+        <img id="sec18_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec18_img01.png"></img>
+        <img id="sec19_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec19_img01.png"></img>
+        <img id="sec20_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec20_img01.png"></img>
+        <img id="sec21_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec21_img01.png"></img>
+        <img id="sec22_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec22_img01.png"></img>
+        <img id="sec23_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec23_img01.png"></img>
+        <img id="sec24_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec24_img01.png"></img>
+        <img id="sec25_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec25_img01.png"></img>
+        <img id="sec26_img1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec26_img01.png"></img>
+        <img id="sec26_img2" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_30/sec26_img02.png"></img>
+
+        <img id="boton1" class="element" _origenx="37" _origeny="237" src="images/SAP_Nomina_Manager_30/boton1.png"></img>
+        <img id="boton2" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton3" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton4" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton5" class="element" _origenx="37" _origeny="309" src="images/SAP_Nomina_Manager_30/boton5.png"></img>
+        <img id="boton6" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton7" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton8" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton9" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton10" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton11" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton12" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton13" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton14" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton15" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton16" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton17" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton18" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton19" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton20" class="element" _origenx="37" _origeny="381" src="images/SAP_Nomina_Manager_30/boton20.png"></img>
+        <img id="boton21" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton22" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton23" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton24" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton25" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+        <img id="boton26" class="element" _origenx="1085" _origeny="340" src="images/SAP_Nomina_Manager_30/botonAdelante.png"></img>
+
+        <!-- <img id="boton4" class="element" _origenx="113" _origeny="362" src="images/SAP_Nomina_Manager_30/boton4.png"></img>
+        <img id="boton5" class="element" _origenx="113" _origeny="412" src="images/SAP_Nomina_Manager_30/boton5.png"></img>
+        <img id="boton6" class="element" _origenx="113" _origeny="462" src="images/SAP_Nomina_Manager_30/boton6.png"></img>
+        <img id="boton7" class="element" _origenx="113" _origeny="513" src="images/SAP_Nomina_Manager_30/boton7.png"></img> -->
+
+        <!-- cargador -->
+        <div id="cargando" class=" cargando" style="width: 100px; height: 100px;"><svg style="margin: auto; background: transparent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <g transform="translate(20 50)">
+                    <circle cx="0" cy="0" r="6" fill="#e15b64" transform="scale(0.220385 0.220385)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.375s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(40 50)">
+                    <circle cx="0" cy="0" r="6" fill="#f8b26a" transform="scale(0.564378 0.564378)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.25s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(60 50)">
+                    <circle cx="0" cy="0" r="6" fill="#abbd81" transform="scale(0.881747 0.881747)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.125s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(80 50)">
+                    <circle cx="0" cy="0" r="6" fill="#81a3bd" transform="scale(0.992922 0.992922)">
+                        <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+            </svg>
+        </div>
+        <!-- <img id="cargando" class="cargando" src="images/cargando.gif"></img> -->
+
+        <canvas id="canvas_id"></canvas>
+
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+
+        cacularEscala();
+        ajustarEscenario();
+
+        var cuantosBotones = 26;
+
+        function preload() {
+            animacion_entrada($("#cargando"), "default", .2, 0);
+            var preload = new createjs.LoadQueue();
+            preload.addEventListener("complete", iniciaCargador);
+            $.each($('.element'), function () {
+                preload.loadFile($("#" + this.id).attr('src'));
+                //console.log($("#" + this.id).attr('src'));
+            });
+        }
+
+        function iniciaCargador(event) {
+            console.log('load complete');
+            $.each($('.element'), function () {
+                inicializar($("#" + this.id));
+            });
+            $("#cargando").show();
+            $("#cargando").css({
+                'opacity': '1'
+            });
+            animacion_salida($("#cargando"), "desaparece", 0, muestraContenido);
+        }
+
+
+        function muestraContenido() {
+            animacion_entrada($("#imagen1"), "default", .7, 0.5);
+            animacion_entrada($("#imagen2"), "izq_der", .7, 1);
+            animacion_entrada($("#sec00_back"), "default", .7, 5);
+            animacion_entrada($("#sec00_ins"), "der_izq", .7, 9.5);
+
+            // animacion_salida($("#imagen2"), "desaparece", 16.5);
+            parent.playAudio(109, 1500, terminaAudio0);
+        }
+
+        function terminaAudio0() {
+            desapareceBotonera();
+            setTimeout(function () {
+                muestraBotonera(1);
+            }, 300);
+        }
+
+        function muestraBotonera(cualBoton) {
+            console.log('muestraBotonera', cualBoton);
+
+            if (cualBoton == 5 || cualBoton == 20 || cualBoton == 26) {
+                desapareceBotonera();
+            }
+
+            if (cualBoton <= cuantosBotones) {
+                parpadea($("#boton" + cualBoton), .6);
+            } else {
+                terminarPantalla();
+            }
+
+            $("#boton" + cualBoton).click(function () {
+                if ($(this).css('cursor') == 'pointer') {
+                    TweenMax.killTweensOf($(this));
+                    // $(this).hide();
+                    // $(this).css({
+                    //     'cursor': 'default',
+                    //     'opacity': '1'
+                    // });
+
+                    if (cualBoton != 1 && cualBoton != 5 && cualBoton != 20 && cualBoton != 27) {
+                        $(this).hide();
+                    } else {
+                        $(this).css({
+                            'cursor': 'default',
+                            'opacity': '1'
+                        });
+                    }
+                    desaparecePantallas();
+
+                    if (cualBoton == 26) {
+                        animacion_salida($("#imagen2"), "desaparece", 0);
+                        animacion_entrada($("#sec" + cualBoton + "_img1"), "izq_der", .7, .5);
+                        animacion_entrada($("#sec" + cualBoton + "_img2"), "default", .7, 1.5);
+                    } else {
+                        animacion_entrada($("#sec" + cualBoton + "_img1"), "default", .7, .5);
+                    }
+
+                    parent.playAudio((109 + cualBoton), 1000, terminaAudio);
+                }
+            });
+
+            function terminaAudio() {
+                console.log('terminaAudio', cualBoton);
+                muestraBotonera((cualBoton + 1));
+            }
+
+        }
+
+
+
+
+        function desapareceBotonera() {
+            animacion_salida($('#boton1, #boton2, #boton3, #boton4, #boton5, #boton6, #boton7, #boton8, #boton9, #boton10, #boton11, #boton12, #boton13, #boton14, #boton15, #btnAtras0, #btnSiguiente0, #btnAtras1, #btnSiguiente1, #btnAtras2, #btnSiguiente2, #btnAtras3, #btnSiguiente3, #btnAtras4, #btnSiguiente4, #btnAtras5, #btnSiguiente5, #btnAtras6, #btnSiguiente6, #btnAtras7, #btnSiguiente7, #btnAtras8, #btnSiguiente8, #btnAtras9, #btnSiguiente9, #btnAtras10, #btnSiguiente10, #btnAtras11, #btnSiguiente11, #btnAtras12, #btnSiguiente12, #btnAtras13, #btnSiguiente13, #btnAtras14, #btnSiguiente14, #btnAtras15, #btnSiguiente15'), "default", 0);
+            animacion_salida($('#botonCerrar'), "default", 0);
+            // $('#btnAtras1, #btnSiguiente1, #btnAtras2, #btnSiguiente2, #btnAtras3, #btnSiguiente3, #btnAtras4, #btnSiguiente4, #btnAtras5, #btnSiguiente5, #btnAtras6, #btnSiguiente6').css({
+            //     'cursor': 'default'
+            // });
+        }
+
+        function desaparecePantallas() {
+            animacion_salida($('#sec1_img1, #sec1_img2, #sec2_img1, #sec2_img2, #sec3_img1, #sec3_img2, #sec4_img1, #sec5_img1, #sec6_img1, #sec7_img1, #sec8_img1, #sec9_img1, #sec10_img1, #sec11_img1, #sec12_img1, #sec13_img1, #sec14_img1, #sec15_img1, #sec16_img1, #sec17_img1, #sec18_img1, #sec19_img1, #sec20_img1, #sec21_img1, #sec22_img1, #sec23_img1, #sec24_img1, #sec25_img1, #sec26_img1, #sec27_img1, #sec28_img1, #sec29_img1, #sec30_img1, #sec31_img1, #sec32_img1, #sec33_img1, #sec34_img1, #sec35_img1, #sec36_img1, #sec37_img1, #sec38_img1, #sec39_img1, #sec40_img1'), "default", 0);
+        }
+
+
+
+
+        preload();
+
+    });
+</script>
+
+</html>
