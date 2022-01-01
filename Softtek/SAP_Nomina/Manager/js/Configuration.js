@@ -4,7 +4,7 @@ var conection = true;
 var mostrarAlertas = false;
 var contentPath = "contenido/";
 var mobileCurse = false;
-var navegationBlock = false;
+var navegationBlock = true;
 var hayEvaluacion = false;
 var minimoAprobatorio = 80;
 var haySubtitulos = false;
@@ -235,4 +235,28 @@ var grupoAudios = new buzz.group([
     /*158*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_34_07", { formats: ["mp3"], preload: true }),
     /*159*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_34_08", { formats: ["mp3"], preload: true }),
     /*160*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_35_01", { formats: ["mp3"], preload: true }),
+    /*161*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_01", { formats: ["mp3"], preload: true }),
+    /*162*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_02", { formats: ["mp3"], preload: true }),
+    /*163*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_03", { formats: ["mp3"], preload: true }),
+    /*164*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_04", { formats: ["mp3"], preload: true }),
+    /*165*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_05", { formats: ["mp3"], preload: true }),
+    /*166*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_06", { formats: ["mp3"], preload: true }),
+    /*167*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_07", { formats: ["mp3"], preload: true }),
+    /*168*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_08", { formats: ["mp3"], preload: true }),
+    /*169*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_09", { formats: ["mp3"], preload: true }),
+    /*170*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_10", { formats: ["mp3"], preload: true }),
+    /*171*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_37_01", { formats: ["mp3"], preload: true }),
+    /*172*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_38_01", { formats: ["mp3"], preload: true }),
+    /*173*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_01", { formats: ["mp3"], preload: true }),
+    /*174*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_02", { formats: ["mp3"], preload: true }),
+    /*175*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_03", { formats: ["mp3"], preload: true }),
+    /*176*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_04", { formats: ["mp3"], preload: true }),
+    /*177*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_05", { formats: ["mp3"], preload: true }),
+    /*178*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_06", { formats: ["mp3"], preload: true }),
+    /*179*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_07", { formats: ["mp3"], preload: true }),
+    /*180*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_08", { formats: ["mp3"], preload: true }),
+    /*181*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_09", { formats: ["mp3"], preload: true }),
+    /*182*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_40_01", { formats: ["mp3"], preload: true }),
+    /*183*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_41_01", { formats: ["mp3"], preload: true }),
+    /*184*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_42_01", { formats: ["mp3"], preload: true })
 ]);
