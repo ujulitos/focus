@@ -1,7 +1,7 @@
 {
     "name": "Orientation",
     "short_name": "Orientation",
-    "start_url": "/Orientation",
+    "start_url": "/orientation",
     "display": "standalone",
     "background_color": "#001489",
     "theme_color": "#001489",
