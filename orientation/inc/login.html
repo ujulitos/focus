@@ -1,0 +1,99 @@
+ <div class="seccion seccion_login centrado">
+
+     <div id="subsec_login">
+
+         <!-- <h2 class="title">Login</h2> -->
+
+         <div class="value-props row">
+             <div class="twelve columns value-prop">
+                 <!-- <i class="img_login login_person_icon material-icons">person</i> -->
+                 <div class="logo_bimbo"></div>
+                 <div class="siluetas"></div>
+             </div>
+         </div>
+
+         <div class="login_correo">
+             <label for="exampleEmailInput">User</label>
+             <input id="inputUsuario" class="u-full-width" type="text" placeholder="Your Username">
+         </div>
+
+         <div class="login_contrasena">
+             <label>Password</label>
+             <input id="inputPassword" class="u-full-width" type="password" placeholder="Your Password">
+         </div>
+
+         <div class="mensaje_error_login"></div>
+
+         <div id="botonEntrar" class="button boton_login">Login</div>
+
+         <!-- <br><br><br>
+         <div>Do you need to register?</div>
+         <div id="botonRegistrar" class="button boton_register" onClick="">Click here</div> -->
+
+     </div>
+
+
+     <div id="subsec_register">
+
+         <div class="row_register">
+
+             <h2 class="title">Register</h2>
+
+             <div class="row">
+                 <div class="label_text five columns">Username:</div>
+                 <input id="regUsername" class="seven columns" type="text" placeholder="Choose a Username" required>
+             </div>
+             <div class="row">
+                 <div class="label_text five columns">Name:</div>
+                 <input id="regName" class="seven columns" type="text" placeholder="Your Name and Surname" required>
+             </div>
+             <div class="row">
+                 <div class="label_text five columns">Country:</div>
+                 <input id="regCountry" class="seven columns" type="text" placeholder="Your Country" required>
+             </div>
+             <div class="row">
+                 <div class="label_text five columns">Region:</div>
+                 <input id="regRegion" class="seven columns" type="text" placeholder="Your Region" required>
+             </div>
+             <div class="row">
+                 <div class="label_text five columns">Birth date:</div>
+                 <input id="regBirth" class="seven columns" type="date" placeholder="Your Birth date" required>
+             </div>
+             <div class="row">
+                 <div class="label_text five columns">Perfil:</div>
+                 <select id="regPerfil" class="seven columns" required></select>
+             </div>
+             <div class="row">
+                 <div class="label_text five columns">Password:</div>
+                 <input id="regPassword" class="seven columns" type="password" placeholder="Your Password" required>
+             </div>
+             <div class="row">
+                 <div class="label_text five columns">Confirm Password:</div>
+                 <input id="regPassword2" class="seven columns" type="password" placeholder="Confirm your Password" required>
+             </div>
+
+             <div class="mensaje_error_register"></div>
+             <br>
+
+             <div class="row">
+                 <div class="six columns">
+                     <div id="botonCancelarReg" class="button boton_cancel_reg">Cancel</div>
+                 </div>
+                 <div class="six columns">
+                     <div id="botonGuardarReg" class="button boton_save_reg">Save</div>
+                 </div>
+             </div>
+
+
+             <br><br>
+
+         </div>
+
+     </div>
+
+
+ </div>
+
+ <script>
+     activaSeccionLogin();
+ </script>
