@@ -1,12 +1,16 @@
-function descargaReporteDetalle() {
+function descargaReporte() {
 
-    loadSeccion('home');
+    // loadSeccion('home');
 
     if (elRol == 'IBP') {
         var laURLId = "" + laUrlAPI + "/Usuarios/" + usuarioId + ".json?auth=" + secret + "";
         console.log('laURLId', laURLId);
     }
     if (elRol == 'Coach') {
+        var laURLId = "" + laUrlAPI + "/Usuarios/" + usuarioSeleccionadoId + ".json?auth=" + secret + "";
+        console.log('laURLId', laURLId);
+    }
+    if (elRol == 'Admin') {
         var laURLId = "" + laUrlAPI + "/Usuarios/" + usuarioSeleccionadoId + ".json?auth=" + secret + "";
         console.log('laURLId', laURLId);
     }
@@ -63,13 +67,8 @@ function descargaReporteDetalle() {
             success: function (dataReg) {
                 console.log(dataReg);
 
-                elId = dataReg.Id;
-                console.log('elId', elId);
-                elNombre = dataReg.Name;
-                console.log('elNombre', elNombre);
-
                 // si no hay registro
-                if (dataReg.Registro == undefined) {
+                if (dataReg.Registro == undefined || dataReg == null) {
                     Swal.fire({
                         title: 'This user has no registration yet',
                         text: "try another user.",
@@ -79,7 +78,10 @@ function descargaReporteDetalle() {
                         'z-index': '9999'
                     })
                 } else {
-
+                    elId = dataReg.Id;
+                    console.log('elId', elId);
+                    elNombre = dataReg.Name;
+                    console.log('elNombre', elNombre);
 
                     elRegistro = Object.values(dataReg.Registro);
                     console.log('elRegistro', elRegistro);
@@ -183,7 +185,8 @@ function descargaReporteDetalle() {
                                     }
                                     that['idTablaTarea'] = d;
                                     // console.log('that[idTablaTarea]', that['idTablaTarea']);
-                                    contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)].replace(/ /g, "&nbsp;") + '</td>';
+                                    // contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)].replace(/ /g, "&nbsp;") + '</td>';
+                                    contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)] + '</td>';
 
 
                                     for (m = 1; m <= cuantasTasks; m++) {

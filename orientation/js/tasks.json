@@ -6,66 +6,70 @@
             "cats": {
                 "cat01": {
                     "name": "On Route",
+                    "subname1": "Week 1 On Route",
+                    "subname2": "Start/End of Day Procedures Focus",
                     "icon": "ico_25",
                     "subcats": {
                         "subcat01": {
-                            "name": "Start of Day Process",
+                            "name": "Start of Day Process",                            
                             "tasks": {
-                                "task01": ["Check if HHC communicated & verify sales date, incorrect call 1-855-218-1614", [1, 2, 3, 4], "no_tool"],
-                                "task02": ["How to Sync Printer to HHC", [1], "no_tool"],
-                                "task03": ["Get & read Load Invoice from sales center", [1, 2, 3, 4], "no_tool"],
-                                "task04": ["Check in returns following sales center guidelines (stack in order printed)", [1, 2, 3, 4], "no_tool"],
-                                "task05": ["Compare load invoice quantities vs physical product", [1, 2, 3, 4], "no_tool"],
-                                "task06": ["Make load adjustments in HHC", [1, 2, 3, 4], "no_tool"],
-                                "task07": ["Suspend load adjustments", [1, 2, 3, 4], "no_tool"],
-                                "task08": ["Print stop distribution report and explain how to read", [1, 2, 3, 4], "no_tool"],
-                                "task09": ["Stage trays & dollies to build load out by customer", [1, 2, 3, 4], "no_tool"],
-                                "task10": ["Discuss proper tray handling", [1, 2, 3, 4], "no_tool"],
-                                "task11": ["Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)", [1, 2, 3, 4], "no_tool"],
-                                "task12": ["Make load adjustments in HHC for any damages", [1, 2, 3, 4], "no_tool"],
-                                "task13": ["Tag completed stacks with customer name and number", [1, 2, 3, 4], "no_tool"],
-                                "task14": ["Submit load invoice for adjustment credit to sales center per local guidelines", [1, 2, 3, 4], "no_tool"],
-                                "task15": ["Finalize load invoice in HHC", [1, 2, 3, 4], "no_tool"],
-                                "task16": ["Load stacks/boxes on vehicle in reverse route order", [1, 2, 3, 4], "no_tool"],
-                                "task17": ["Secure dollies & product", [1, 2, 3, 4], "no_tool"],
-                                "task18": ["Stack and return empty trays to correct location in sales center", [1, 2, 3, 4], "no_tool"],
-                                "task19": ["Pick up adjusted load invoice and verify correct (manned locations)", [1, 2, 3, 4], "no_tool"],
-                                "task20": ["Check for HHC, printer, empty trays and dollies, printer paper, stickers, and displays before leaving", [1, 2, 3, 4], "no_tool"],
-                                "task21": ["Once you have left the sales center, the invoice on record is what is charged to the IBP that day", [1], "no_tool"]
+                                "task01": ["Check if HHC communicated & verify sales date, incorrect call 1-855-218-1614", 4, "no_tool"],
+                                "task02": ["How to Sync Printer to HHC", 1, "no_tool"],
+                                "task03": ["Get & read Load Invoice from sales center", 4, "no_tool"],
+                                "task04": ["Check in returns following sales center guidelines (stack in order printed)", 4, "no_tool"],
+                                "task05": ["Compare load invoice quantities vs physical product", 4, "no_tool"],
+                                "task06": ["Make load adjustments in HHC", 4, "no_tool"],
+                                "task07": ["Suspend load adjustments", 4, "no_tool"],
+                                "task08": ["Print stop distribution report and explain how to read", 4, "no_tool"],
+                                "task09": ["Stage trays & dollies to build load out by customer", 4, "no_tool"],
+                                "task10": ["Discuss proper tray handling", 4, "no_tool"],
+                                "task11": ["Build new load: New IBP call out items and check off skus from the Stop Distribution Report (so they become familiar with abbreviations)", 4, "no_tool"],
+                                "task12": ["Make load adjustments in HHC for any damages", 4, "no_tool"],
+                                "task13": ["Tag completed stacks with customer name and number", 4, "no_tool"],
+                                "task14": ["Submit load invoice for adjustment credit to sales center per local guidelines", 4, "no_tool"],
+                                "task15": ["Finalize load invoice in HHC", 4, "no_tool"],
+                                "task16": ["Load stacks/boxes on vehicle in reverse route order", 4, "no_tool"],
+                                "task17": ["Secure dollies & product", 4, "no_tool"],
+                                "task18": ["Stack and return empty trays to correct location in sales center", 4, "no_tool"],
+                                "task19": ["Pick up adjusted load invoice and verify correct (manned locations)", 4, "no_tool"],
+                                "task20": ["Check for HHC, printer, empty trays and dollies, printer paper, stickers, and displays before leaving", 4, "no_tool"],
+                                "task21": ["Once you have left the sales center, the invoice on record is what is charged to the IBP that day", 1, "no_tool"]
                             }
                         },
                         "subcat02": {
                             "name": "Store/Account Process",
                             "tasks": {
-                                "task01": ["Unload product from delivery vehicle", [1, 2, 3, 4], "no_tool"],
-                                "task02": ["Customer receiving procedures", [1, 2, 3, 4], "no_tool"],
-                                "task03": ["Invoicing in HHC (both deliveries and returns). Keep signed copy.", [1, 2, 3, 4], "no_tool"],
-                                "task04": ["How to read & understand dates", [1, 2, 3, 4], "no_tool"],
-                                "task05": ["Pull returns set aside (unless account requires scan out before new product brought in)", [1, 2, 3, 4], "no_tool"],
-                                "task06": ["Access inventory count function in HHC (on Monday)", [1, 2, 3, 4], "no_tool"],
-                                "task07": ["Complete SBT inventory (on Monday), print and keep with paperwork", [1], "no_tool"],
-                                "task08": ["Work backstock to the shelf", [1, 2, 3, 4], "no_tool"],
-                                "task09": ["Rotate product (fast moving locations)", [1, 2, 3, 4], "no_tool"],
-                                "task10": ["Work new product", [1, 2, 3, 4], "no_tool"],
-                                "task11": ["Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up", [1, 2, 3, 4], "no_tool"],
-                                "task12": ["Introduce store decision makers", [2, 3, 4], "no_tool"],
-                                "task13": ["Scan returns before exiting store", [1, 2, 3, 4], "no_tool"]
+                                "task01": ["Unload product from delivery vehicle", 4, "no_tool"],
+                                "task02": ["Customer receiving procedures", 4, "no_tool"],
+                                "task03": ["Invoicing in HHC (both deliveries and returns). Keep signed copy.", 4, "no_tool"],
+                                "task04": ["How to read & understand dates", 4, "no_tool"],
+                                "task05": ["Pull returns set aside (unless account requires scan out before new product brought in)", 4, "no_tool"],
+                                "task06": ["Access inventory count function in HHC (on Monday)", 4, "no_tool"],
+                                "task07": ["Complete SBT inventory (on Monday), print and keep with paperwork", 1, "no_tool"],
+                                "task08": ["Work backstock to the shelf", 4, "no_tool"],
+                                "task09": ["Rotate product (fast moving locations)", 4, "no_tool"],
+                                "task10": ["Work new product", 4, "no_tool"],
+                                "task11": ["Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up", 4, "no_tool"],
+                                "task12": ["Introduce store decision makers", 4, "no_tool"],
+                                "task13": ["Scan returns before exiting store", 4, "no_tool"]
                             }
                         },
                         "subcat03": {
                             "name": "End of Day Process",
                             "tasks": {
-                                "task01": ["Verify truckstock inventory", [1, 2, 3, 4], "no_tool"],
-                                "task02": ["Check in returns following sales center guidelines (stack in order printed)", [1, 2, 3, 4], "no_tool"],
-                                "task03": ["Finalize and transfer returns in HHC", [1, 2, 3, 4], "no_tool"],
-                                "task04": ["Print daily settlement report", [1, 2, 3, 4], "no_tool"],
-                                "task05": ["Communicate HHC", [1, 2, 3, 4], "no_tool"]
+                                "task01": ["Verify truckstock inventory", 4, "no_tool"],
+                                "task02": ["Check in returns following sales center guidelines (stack in order printed)", 4, "no_tool"],
+                                "task03": ["Finalize and transfer returns in HHC", 4, "no_tool"],
+                                "task04": ["Print daily settlement report", 4, "no_tool"],
+                                "task05": ["Communicate HHC", 4, "no_tool"]
                             }
                         }
                     }
                 },
                 "cat02": {
                     "name": "Classroom",
+                    "subname1": "Week 1",
+                    "subname2": "Classroom Day",
                     "icon": "ico_11",
                     "subcats": {
                         "subcat01": {
@@ -90,6 +94,8 @@
                 },
                 "cat03": {
                     "name": "Market",
+                    "subname1": "Week 1",
+                    "subname2": "Market Day",
                     "icon": "ico_24",
                     "subcats": {
                         "subcat01": {
@@ -113,67 +119,71 @@
             "cats": {
                 "cat01": {
                     "name": "On Route",
+                    "subname1": "Week 2 On Route",
+                    "subname2": "In-Store Focus",
                     "icon": "ico_25",
                     "subcats": {
                         "subcat01": {
                             "name": "Start of Day Process",
                             "tasks": {
-                                "task01": ["Check if HHC communicated & verify sales date, incorrect call 1-855-218-1614", [1, 2, 3, 4, 5], "no_tool"],
-                                "task02": ["Get & read Load Invoice from sales center", [1, 2, 3, 4, 5], "no_tool"],
-                                "task03": ["Check in returns following sales center guidelines (stack in order printed)", [1, 2, 3, 4, 5], "no_tool"],
-                                "task04": ["Compare load invoice quantities vs physical product", [1, 2, 3, 4, 5], "no_tool"],
-                                "task05": ["Make load adjustments in HHC", [1, 2, 3, 4, 5], "no_tool"],
-                                "task06": ["Suspend load adjustments", [1, 2, 3, 4, 5], "no_tool"],
-                                "task07": ["Print stop distribution report and explain how to read", [1, 2, 3, 4, 5], "no_tool"],
-                                "task08": ["Stage trays & dollies to build load out by customer", [1, 2, 3, 4, 5], "no_tool"],
-                                "task09": ["Build new load: Coach call out items and check off skus from the Stop Distribution Report while new IBP pulls items", [1, 2, 3, 4, 5], "no_tool"],
-                                "task10": ["Make load adjustments in HHC for any damages", [1, 2, 3, 4, 5], "no_tool"],
-                                "task11": ["Tag completed stacks with customer name and number", [1, 2, 3, 4, 5], "no_tool"],
-                                "task12": ["Submit load invoice for adjustment credit to sales center per local guidelines", [1, 2, 3, 4, 5], "no_tool"],
-                                "task13": ["Finalize load invoice in HHC", [1, 2, 3, 4, 5], "no_tool"],
-                                "task14": ["Load stacks/boxes on vehicle in reverse route order", [1, 2, 3, 4, 5], "no_tool"],
-                                "task15": ["Secure dollies & product", [1, 2, 3, 4, 5], "no_tool"],
-                                "task16": ["Stack and return empty trays to correct location in sales", [1, 2, 3, 4, 5], "no_tool"],
-                                "task17": ["Pick up adjusted load invoice and verify correct (manned locations)", [1, 2, 3, 4, 5], "no_tool"],
-                                "task18": ["Check for HHC, printer, empty trays and dollies, printer paper, stickers, and displays before leaving", [1, 2, 3, 4, 5], "no_tool"],
-                                "task19": ["Once you have left the sales center, the invoice on record is what is charged to the IBP that day", [1], "no_tool"]
+                                "task01": ["Check if HHC communicated & verify sales date, incorrect call 1-855-218-1614", 5, "no_tool"],
+                                "task02": ["Get & read Load Invoice from sales center", 5, "no_tool"],
+                                "task03": ["Check in returns following sales center guidelines (stack in order printed)", 5, "no_tool"],
+                                "task04": ["Compare load invoice quantities vs physical product", 5, "no_tool"],
+                                "task05": ["Make load adjustments in HHC", 5, "no_tool"],
+                                "task06": ["Suspend load adjustments", 5, "no_tool"],
+                                "task07": ["Print stop distribution report and explain how to read", 5, "no_tool"],
+                                "task08": ["Stage trays & dollies to build load out by customer", 5, "no_tool"],
+                                "task09": ["Build new load: Coach call out items and check off skus from the Stop Distribution Report while new IBP pulls items", 5, "no_tool"],
+                                "task10": ["Make load adjustments in HHC for any damages", 5, "no_tool"],
+                                "task11": ["Tag completed stacks with customer name and number", 5, "no_tool"],
+                                "task12": ["Submit load invoice for adjustment credit to sales center per local guidelines", 5, "no_tool"],
+                                "task13": ["Finalize load invoice in HHC", 5, "no_tool"],
+                                "task14": ["Load stacks/boxes on vehicle in reverse route order", 5, "no_tool"],
+                                "task15": ["Secure dollies & product", 5, "no_tool"],
+                                "task16": ["Stack and return empty trays to correct location in sales", 5, "no_tool"],
+                                "task17": ["Pick up adjusted load invoice and verify correct (manned locations)", 5, "no_tool"],
+                                "task18": ["Check for HHC, printer, empty trays and dollies, printer paper, stickers, and displays before leaving", 5, "no_tool"],
+                                "task19": ["Once you have left the sales center, the invoice on record is what is charged to the IBP that day", 1, "no_tool"]
                             }
                         },
                         "subcat02": {
                             "name": "Store/Account Process",
                             "tasks": {
-                                "task01": ["Unload product from delivery vehicle", [1, 2, 3, 4, 5], "no_tool"],
-                                "task02": ["Customer receiving procedures", [1, 2, 3, 4, 5], "no_tool"],
-                                "task03": ["Invoicing in HHC (both deliveries and returns). Keep signed copy.", [1, 2, 3, 4, 5], "no_tool"],
-                                "task04": ["Pull returns set aside (unless account requires scan out before new product brought in)", [1, 2, 3, 4, 5], "no_tool"],
-                                "task05": ["Access inventory count function in HHC (on Monday)", [1, 2, 3, 4, 5], "no_tool"],
-                                "task06": ["Complete SBT inventory (on Monday), print and keep with paperwork", [1], "no_tool"],
-                                "task07": ["Work backstock to the shelf", [1, 2, 3, 4, 5], "no_tool"],
-                                "task08": ["Rotate product (fast moving locations)", [1, 2, 3, 4, 5], "no_tool"],
-                                "task09": ["Work new product", [1, 2, 3, 4, 5], "no_tool"],
-                                "task10": ["Discuss DSDE merchandising", [1, 2, 3, 4, 5], "no_tool"],
-                                "task11": ["Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up", [1, 2, 3, 4, 5], "no_tool"],
-                                "task12": ["How to read POG (plan-o-gram) for each account", [1, 2, 3, 4, 5], "no_tool"],
-                                "task13": ["How to read shelf tag for each account", [1, 2, 3, 4, 5], "no_tool"],
-                                "task14": ["Introduce store decision makers", [1, 2, 3, 4, 5], "no_tool"],
-                                "task15": ["Sell secondary display to decision maker", [1, 2, 3, 4, 5], "no_tool"],
-                                "task16": ["Scan returns before exiting store", [1, 2, 3, 4, 5], "no_tool"]
+                                "task01": ["Unload product from delivery vehicle", 5, "no_tool"],
+                                "task02": ["Customer receiving procedures", 5, "no_tool"],
+                                "task03": ["Invoicing in HHC (both deliveries and returns). Keep signed copy.", 5, "no_tool"],
+                                "task04": ["Pull returns set aside (unless account requires scan out before new product brought in)", 5, "no_tool"],
+                                "task05": ["Access inventory count function in HHC (on Monday)", 5, "no_tool"],
+                                "task06": ["Complete SBT inventory (on Monday), print and keep with paperwork", 1, "no_tool"],
+                                "task07": ["Work backstock to the shelf", 5, "no_tool"],
+                                "task08": ["Rotate product (fast moving locations)", 5, "no_tool"],
+                                "task09": ["Work new product", 5, "no_tool"],
+                                "task10": ["Discuss DSDE merchandising", 5, "no_tool"],
+                                "task11": ["Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up", 5, "no_tool"],
+                                "task12": ["How to read POG (plan-o-gram) for each account", 5, "no_tool"],
+                                "task13": ["How to read shelf tag for each account", 5, "no_tool"],
+                                "task14": ["Introduce store decision makers", 5, "no_tool"],
+                                "task15": ["Sell secondary display to decision maker", 5, "no_tool"],
+                                "task16": ["Scan returns before exiting store", 5, "no_tool"]
                             }
                         },
                         "subcat03": {
                             "name": "End of Day Process",
                             "tasks": {
-                                "task01": ["Verify truckstock inventory", [1, 2, 3, 4, 5], "no_tool"],
-                                "task02": ["Check in returns following sales center guidelines (stack in order printed)", [1, 2, 3, 4, 5], "no_tool"],
-                                "task03": ["Finalize and transfer returns in HHC", [1, 2, 3, 4, 5], "no_tool"],
-                                "task04": ["Print daily settlement report", [1, 2, 3, 4, 5], "no_tool"],
-                                "task05": ["Communicate HHC", [1, 2, 3, 4, 5], "no_tool"]
+                                "task01": ["Verify truckstock inventory", 5, "no_tool"],
+                                "task02": ["Check in returns following sales center guidelines (stack in order printed)", 5, "no_tool"],
+                                "task03": ["Finalize and transfer returns in HHC", 5, "no_tool"],
+                                "task04": ["Print daily settlement report", 5, "no_tool"],
+                                "task05": ["Communicate HHC", 5, "no_tool"]
                             }
                         }
                     }
                 },
                 "cat02": {
                     "name": "Classroom",
+                    "subname1": "Week 2",
+                    "subname2": "Classroom Day",
                     "icon": "ico_11",
                     "subcats": {
                         "subcat01": {
@@ -203,64 +213,68 @@
             "cats": {
                 "cat01": {
                     "name": "On Route",
+                    "subname1": "Week 3 On Route",
+                    "subname2": "Route Operations Focus",
                     "icon": "ico_25",
                     "subcats": {
                         "subcat01": {
                             "name": "Start of Day Process",
                             "tasks": {
-                                "task01": ["Check if HHC communicated & verify sales date, incorrect call 1-855-218-1614", [1, 2, 3, 4], "no_tool"],
-                                "task02": ["How to Sync Printer to HHC", [1], "no_tool"],
-                                "task03": ["Check in returns following sales center guidelines (stack in order printed)", [1, 2, 3, 4], "no_tool"],
-                                "task04": ["Compare load invoice quantities vs physical product", [1, 2, 3, 4], "no_tool"],
-                                "task05": ["Make load adjustments in HHC", [1, 2, 3, 4], "no_tool"],
-                                "task06": ["Suspend load adjustments", [1, 2, 3, 4], "no_tool"],
-                                "task07": ["Print stop distribution report and explain how to read", [1, 2, 3, 4], "no_tool"],
-                                "task08": ["Stage trays & dollies to build load out by customer", [1, 2, 3, 4], "no_tool"],
-                                "task09": ["Build new load: Check product skus from the Stop Distribution Report", [1, 2, 3, 4], "no_tool"],
-                                "task10": ["Make load adjustments in HHC for any damages", [1, 2, 3, 4], "no_tool"],
-                                "task11": ["Tag completed stacks with customer name and number", [1, 2, 3, 4], "no_tool"],
-                                "task12": ["Submit load invoice for adjustment credit to sales center per local guidelines", [1, 2, 3, 4], "no_tool"],
-                                "task13": ["Finalize load invoice in HHC", [1, 2, 3, 4], "no_tool"],
-                                "task14": ["Load stacks/boxes on vehicle in reverse route order", [1, 2, 3, 4], "no_tool"],
-                                "task15": ["Secure dollies & product", [1, 2, 3, 4], "no_tool"],
-                                "task16": ["Stack and return empty trays to correct location in sales center", [1, 2, 3, 4], "no_tool"],
-                                "task17": ["Pick up adjusted load invoice and verify correct (manned locations)", [1, 2, 3, 4], "no_tool"],
-                                "task18": ["Check for HHC, printer, empty trays and dollies, printer paper, stickers, and displays before leaving", [1, 2, 3, 4], "no_tool"]
+                                "task01": ["Check if HHC communicated & verify sales date, incorrect call 1-855-218-1614", 4, "no_tool"],
+                                "task02": ["How to Sync Printer to HHC", 1, "no_tool"],
+                                "task03": ["Check in returns following sales center guidelines (stack in order printed)", 4, "no_tool"],
+                                "task04": ["Compare load invoice quantities vs physical product", 4, "no_tool"],
+                                "task05": ["Make load adjustments in HHC", 4, "no_tool"],
+                                "task06": ["Suspend load adjustments", 4, "no_tool"],
+                                "task07": ["Print stop distribution report and explain how to read", 4, "no_tool"],
+                                "task08": ["Stage trays & dollies to build load out by customer", 4, "no_tool"],
+                                "task09": ["Build new load: Check product skus from the Stop Distribution Report", 4, "no_tool"],
+                                "task10": ["Make load adjustments in HHC for any damages", 4, "no_tool"],
+                                "task11": ["Tag completed stacks with customer name and number", 4, "no_tool"],
+                                "task12": ["Submit load invoice for adjustment credit to sales center per local guidelines", 4, "no_tool"],
+                                "task13": ["Finalize load invoice in HHC", 4, "no_tool"],
+                                "task14": ["Load stacks/boxes on vehicle in reverse route order", 4, "no_tool"],
+                                "task15": ["Secure dollies & product", 4, "no_tool"],
+                                "task16": ["Stack and return empty trays to correct location in sales center", 4, "no_tool"],
+                                "task17": ["Pick up adjusted load invoice and verify correct (manned locations)", 4, "no_tool"],
+                                "task18": ["Check for HHC, printer, empty trays and dollies, printer paper, stickers, and displays before leaving", 4, "no_tool"]
                             }
                         },
                         "subcat02": {
                             "name": "Store/Account Process",
                             "tasks": {
-                                "task01": ["Unload product from delivery vehicle", [1, 2, 3, 4], "no_tool"],
-                                "task02": ["Customer receiving procedures", [1, 2, 3, 4], "no_tool"],
-                                "task03": ["Invoicing in HHC (both deliveries and returns). Keep signed copy.", [1, 2, 3, 4], "no_tool"],
-                                "task04": ["Pull returns set aside (unless account requires scan out before new product brought in)", [1, 2, 3, 4], "no_tool"],
-                                "task05": ["Access inventory count function in HHC (on Monday)", [1], "no_tool"],
-                                "task06": ["Complete SBT inventory (on Monday), print and keep with paperwork", [1], "no_tool"],
-                                "task07": ["Work backstock to the shelf", [1, 2, 3, 4], "no_tool"],
-                                "task08": ["Rotate product (fast moving locations)", [1, 2, 3, 4], "no_tool"],
-                                "task09": ["Work new product", [1, 2, 3, 4], "no_tool"],
-                                "task10": ["Follow DSDE merchandising", [1, 2, 3, 4], "no_tool"],
-                                "task11": ["How to read POG (plan-o-gram) for each account", [1, 2], "no_tool"],
-                                "task12": ["How to read shelf tag for each account", [1, 2], "no_tool"],
-                                "task13": ["Sell secondary display to dedision maker", [1, 2, 3, 4], "no_tool"],
-                                "task14": ["Scan returns before exiting store", [1, 2, 3, 4], "no_tool"]
+                                "task01": ["Unload product from delivery vehicle", 4, "no_tool"],
+                                "task02": ["Customer receiving procedures", 4, "no_tool"],
+                                "task03": ["Invoicing in HHC (both deliveries and returns). Keep signed copy.", 4, "no_tool"],
+                                "task04": ["Pull returns set aside (unless account requires scan out before new product brought in)", 4, "no_tool"],
+                                "task05": ["Access inventory count function in HHC (on Monday)", 1, "no_tool"],
+                                "task06": ["Complete SBT inventory (on Monday), print and keep with paperwork", 1, "no_tool"],
+                                "task07": ["Work backstock to the shelf", 4, "no_tool"],
+                                "task08": ["Rotate product (fast moving locations)", 4, "no_tool"],
+                                "task09": ["Work new product", 4, "no_tool"],
+                                "task10": ["Follow DSDE merchandising", 4, "no_tool"],
+                                "task11": ["How to read POG (plan-o-gram) for each account", 2, "no_tool"],
+                                "task12": ["How to read shelf tag for each account", 2, "no_tool"],
+                                "task13": ["Sell secondary display to dedision maker", 4, "no_tool"],
+                                "task14": ["Scan returns before exiting store", 4, "no_tool"]
                             }
                         },
                         "subcat03": {
                             "name": "End of Day Process",
                             "tasks": {
-                                "task01": ["Verify truckstock inventory", [1, 2, 3, 4], "no_tool"],
-                                "task02": ["Check in returns following sales center guidelines (stack in order printed)", [1, 2, 3, 4], "no_tool"],
-                                "task03": ["Finalize and transfer returns in HHC", [1, 2, 3, 4], "no_tool"],
-                                "task04": ["Print daily settlement report", [1, 2, 3, 4], "no_tool"],
-                                "task05": ["Communicate HHC", [1, 2, 3, 4], "no_tool"]
+                                "task01": ["Verify truckstock inventory", 4, "no_tool"],
+                                "task02": ["Check in returns following sales center guidelines (stack in order printed)", 4, "no_tool"],
+                                "task03": ["Finalize and transfer returns in HHC", 4, "no_tool"],
+                                "task04": ["Print daily settlement report", 4, "no_tool"],
+                                "task05": ["Communicate HHC", 4, "no_tool"]
                             }
                         }
                     }
                 },
                 "cat02": {
                     "name": "Classroom",
+                    "subname1": "Week 3",
+                    "subname2": "Classroom Day",
                     "icon": "ico_11",
                     "subcats": {
                         "subcat01": {
@@ -279,6 +293,8 @@
                 },
                 "cat03": {
                     "name": "Market",
+                    "subname1": "Week 3",
+                    "subname2": "Market Day",
                     "icon": "ico_24",
                     "subcats": {
                         "subcat01": {
@@ -302,32 +318,34 @@
             "cats": {
                 "cat01": {
                     "name": "On Route",
+                    "subname1": "Week 4 On Route",
+                    "subname2": "Business Operations",
                     "icon": "ico_25",
                     "subcats": {
                         "subcat01": {
                             "name": "Business Operations",
                             "tasks": {
-                                "task01": ["New IBP complete Start of Day process", [1, 2, 3, 4, 5], "no_tool"]
+                                "task01": ["New IBP complete Start of Day process", 5, "no_tool"]
                             }
                         },
                         "subcat02": {
                             "name": "Store/Account Process",
                             "tasks": {
-                                "task01": ["NEW IBP complete all steps in-store process", [1, 2, 3, 4, 5], "no_tool"],
-                                "task02": ["NEW IBP complete SBT inventory (on Monday)", [1], "no_tool"],
-                                "task03": ["Ensure selling IBP is present for SBT counts or validate counts are correct for company route", [1], "no_tool"],
-                                "task04": ["Set up safe carry over for stores", [1], "no_tool"],
-                                "task05": ["ION ordering", [1, 2, 3, 4, 5], "no_tool"],
-                                "task06": ["DSDE merchandising standards followed", [1, 2, 3, 4, 5], "no_tool"],
-                                "task07": ["Introduce IBP to store manager (decision makers)", [1, 2, 3, 4, 5], "no_tool"],
-                                "task08": ["NEW IBP fact-based sell to gain support", [1, 2, 3, 4, 5], "no_tool"]
+                                "task01": ["NEW IBP complete all steps in-store process", 5, "no_tool"],
+                                "task02": ["NEW IBP complete SBT inventory (on Monday)", 1, "no_tool"],
+                                "task03": ["Ensure selling IBP is present for SBT counts or validate counts are correct for company route", 1, "no_tool"],
+                                "task04": ["Set up safe carry over for stores", 1, "no_tool"],
+                                "task05": ["ION ordering", 5, "no_tool"],
+                                "task06": ["DSDE merchandising standards followed", 5, "no_tool"],
+                                "task07": ["Introduce IBP to store manager (decision makers)", 5, "no_tool"],
+                                "task08": ["NEW IBP fact-based sell to gain support", 5, "no_tool"]
                             }
                         },
                         "subcat03": {
                             "name": "End of Day Process",
                             "tasks": {
-                                "task01": ["NEW IBP complete End of Day process", [1, 2, 3, 4, 5], "no_tool"],
-                                "task02": ["NEW IBP communicate HHC and set up for HOME wifi", [1], "no_tool"]
+                                "task01": ["NEW IBP complete End of Day process", 5, "no_tool"],
+                                "task02": ["NEW IBP communicate HHC and set up for HOME wifi", 1, "no_tool"]
                             }
                         }
                     }
@@ -340,33 +358,35 @@
             "cats": {
                 "cat01": {
                     "name": "30/60/90 Days",
+                    "subname1": "Week 4",
+                    "subname2": "",
                     "icon": "ico_20",
                     "subcats": {
                         "subcat01": {
                             "name": "30 days after route purchase",
                             "tasks": {
-                                "task01": ["Use 1:1 Huddle Review process to complete brief business review. Include 1-2 key takeaways for the IBP to focus on during the next month (process, brand, etc)", ["all"], "no_tool"],
-                                "task02": ["Review SBT lifecycle and processes to ensure understanding. If understanding is not clear, now is time to correct and involve Settlement in review to understand if there are any major results that need correcting", ["all"], "no_tool"],
-                                "task03": ["Review most recent settlement statement with IBP to ensure understanding of how to read/review", ["all"], "no_tool"],
-                                "task04": ["Feedback from IBP, regarding orientation process (survey): https://bimbocx.qualtrics.com/jfe/form/SV_1HaW0p9qeEe8jI2", ["all"], "no_tool"]
+                                "task01": ["Use 1:1 Huddle Review process to complete brief business review. Include 1-2 key takeaways for the IBP to focus on during the next month (process, brand, etc)", "all", "no_tool"],
+                                "task02": ["Review SBT lifecycle and processes to ensure understanding. If understanding is not clear, now is time to correct and involve Settlement in review to understand if there are any major results that need correcting", "all", "no_tool"],
+                                "task03": ["Review most recent settlement statement with IBP to ensure understanding of how to read/review", "all", "no_tool"],
+                                "task04": ["Feedback from IBP, regarding orientation process (survey): https://bimbocx.qualtrics.com/jfe/form/SV_1HaW0p9qeEe8jI2", "all", "no_tool"]
                             }
                         },
                         "subcat02": {
                             "name": "60 days after route purchase",
                             "tasks": {
-                                "task01": ["Business Review deep dive to review first 60 days of ownership. Look at major driver and drags. Create plan to focus on major customers/brands", ["all"], "no_tool"],
-                                "task02": ["Review SBT lifecycle and processes to ensure understanding. If understanding is not clear, now is time to correct and involve Settlement in review to understand if there are any major results that need correcting", ["all"], "no_tool"],
-                                "task03": ["Review SCO settings by store", ["all"], "no_tool"],
-                                "task04": ["Review most recent settlement statement with IBP to ensure understanding of how to read/review", ["all"], "no_tool"]
+                                "task01": ["Business Review deep dive to review first 60 days of ownership. Look at major driver and drags. Create plan to focus on major customers/brands", "all", "no_tool"],
+                                "task02": ["Review SBT lifecycle and processes to ensure understanding. If understanding is not clear, now is time to correct and involve Settlement in review to understand if there are any major results that need correcting", "all", "no_tool"],
+                                "task03": ["Review SCO settings by store", "all", "no_tool"],
+                                "task04": ["Review most recent settlement statement with IBP to ensure understanding of how to read/review", "all", "no_tool"]
                             }
                         },
                         "subcat03": {
                             "name": "90 days after route purchase",
                             "tasks": {
-                                "task01": ["Business Review deep dive to review first 90 days of ownership. Look at major driver and drags. Create plan to focus on major customers/brands", ["all"], "no_tool"],
-                                "task02": ["Review SBT lifecycle and processes to ensure understanding. If understanding is not clear, now is time to correct and involve Settlement in review to understand if there are any major results that need correcting", ["all"], "no_tool"],
-                                "task03": ["Review SCO settings by store", ["all"], "no_tool"],
-                                "task04": ["Review most recent settlement statement with IBP to ensure understanding of how to read/review", ["all"], "no_tool"]
+                                "task01": ["Business Review deep dive to review first 90 days of ownership. Look at major driver and drags. Create plan to focus on major customers/brands", "all", "no_tool"],
+                                "task02": ["Review SBT lifecycle and processes to ensure understanding. If understanding is not clear, now is time to correct and involve Settlement in review to understand if there are any major results that need correcting", "all", "no_tool"],
+                                "task03": ["Review SCO settings by store", "all", "no_tool"],
+                                "task04": ["Review most recent settlement statement with IBP to ensure understanding of how to read/review", "all", "no_tool"]
                             }
                         }
                     }

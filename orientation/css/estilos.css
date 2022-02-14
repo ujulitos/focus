@@ -42,7 +42,7 @@ body {
     margin-top: -50px;
     background-color: #001489;
     z-index: 999;
-    pointer-events: none;
+    pointer-events: auto;
     color: #fff;
 }
 
@@ -54,22 +54,23 @@ body {
     margin-top: -4px;
 }
 
-.navbar_boton_atras,
+.botonHome,
 .navbar_boton_ayuda,
-.navbar_boton_salir,
+.botonAtras,
+.botonSalir,
 .navbar_boton_menu {
     position: absolute;
     cursor: pointer;
     pointer-events: all;
 }
 
-.navbar_boton_atras {
+.botonHome {
     display: none;
-    margin-top: 8px;
+    margin-top: 10px;
     left: 20px;
 }
 
-.navbar_boton_atras i {
+.botonHome i {
     font-size: 30px;
     line-height: .8;
 }
@@ -79,20 +80,42 @@ body {
     right: 20px;
 }
 
-.navbar_boton_salir {
-    /*display: none;*/
-    display: flex;
+.botonAtras {
+    display: none;
+    /* display: flex; */
     align-items: center;
-    margin-top: -4px;
+    margin-top: -32px;
+    right: 60px;
+}
+
+.botonSalir {
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    margin-top: -32px;
     right: 20px;
 }
 
-.navbar_boton_salir span {
+.botonAtras,
+.botonSalir span {
     font-weight: bold;
 }
 
 .navbar_boton_menu {
     margin-top: -4px;
+}
+
+.navbar_tasks {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    padding: 20px 0 10px 0;
+    margin-top: 5px;
+    background-color: #737fc5;
+    z-index: 998;
+    pointer-events: auto;
+    color: #fff;
 }
 
 .container {
@@ -184,8 +207,7 @@ input[type="date"],
 input[type="tel"],
 input[type="url"],
 input[type="password"],
-textarea,
-select {
+textarea {
     /* background-color: #333; */
     border-radius: 50px;
 }
@@ -221,34 +243,57 @@ input[type="checkbox"]:not(old)+label {
 }
 
 input[type="checkbox"]:not(old)+label:before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: 1px double #001489;
-    border-radius: 4px;
-    cursor: pointer;
-    vertical-align: top;
+    content: attr(data-before);
     display: inline-block;
-    padding-left: 6px;
+    width: 100%;
+    height: 20px;
+    background: #e42931;
+    border-color: transparent !important;
+    color: #fff !important;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    padding: 4px;
     transition: background 0.3s ease-out;
 }
 
 input[type="checkbox"]:not(old):checked+label:before {
-    content: '\02714';
-    /* box-shadow: inset 0 0 1px 2px #909196; */
-    background: #001489;
+    /* content: 'Day 1'; */
+    background: #4cb10e;
     color: #fff !important;
-    font-size: 16px;
-    line-height: 1.4;
-    padding-left: 6px;
 }
-
 
 
 th:first-child,
 td:first-child {
     padding-left: 15px;
 }
+
+
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.u-max-full-width {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.u-pull-right {
+    float: right;
+}
+
+.u-pull-left {
+    float: left;
+}
+
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 /* Secciones */
 .seccion {
@@ -314,8 +359,31 @@ td:first-child {
 }
 
 .seccion_tasks {
+    padding-top: 100px;
     /* background-color: #fff;
     color: #222; */
+}
+
+.seccion_calendar {
+    /* background-color: #fff;
+    color: #222; */
+}
+
+.responsive_calendar {
+    overflow-x: auto;
+}
+
+.seccion_tools {
+    /* background-color: #fff;
+    color: #222; */
+}
+
+.seccion_calendar_int {
+    padding-top: 70px;
+}
+
+.seccion_tools_int {
+    padding-top: 70px;
 }
 
 .login_person_icon {
@@ -353,10 +421,11 @@ td:first-child {
     color: #fa7a50;
 } */
 
-
 #divSelectPar {
+    display: none;
+    min-width: 50%;
     text-align: center;
-    margin: -25px -30px 25px -30px;
+    margin: 0px 0px -10px 0px;
     padding: 10px 25px 20px 25px;
     background-color: #001489;
     color: #fff;
@@ -364,12 +433,7 @@ td:first-child {
 
 #elSelectPar {
     min-width: 50%;
-    /* background-color: #222; */
-    border: 1px solid #ff7f50b3;
-    /* border-radius: 10px; */
-    color: coral;
 }
-
 
 #elSelectPar select {
     padding: 5px 8px;
@@ -385,6 +449,25 @@ td:first-child {
     outline: none;
 }
 
+#divTools {
+    display: none;
+    text-align: center;
+    margin: 8px 0px 0px 0px;
+    /* padding: 20px 0px 0px 0px; */
+    background-color: #ededed;
+    color: #222;
+    pointer-events: auto;
+}
+
+#divTools span {
+    font-size: 35px;
+}
+
+#botonReporte,
+#botonCalendario,
+#botonTools {
+    cursor: pointer;
+}
 
 #divReportes {
     text-align: center;
@@ -394,7 +477,7 @@ td:first-child {
 }
 
 #divSemanas {
-    margin: -25px -30px 20px -30px;
+    margin: 50px -30px 20px -30px;
     padding: 25px 50px 70px 50px;
     background-color: #B2C7E7;
     color: #222;
@@ -435,6 +518,7 @@ td:first-child {
     font-size: 30px;
     margin-top: -10px;
 }
+
 
 /* slider */
 .wrapper {
@@ -650,8 +734,19 @@ td:first-child {
     font-size: 26px;
 }
 
-.titulo_subcategoria_txt {
+.subnames {
+    display: inline-block;
+    padding-left: 30px;
+    line-height: 0.7;
+}
+
+.titulo_subcategoria_txt,
+.subname1_txt {
     font-size: 22px;
+}
+
+.subname2_txt {
+    font-size: 16px;
 }
 
 .tabla_row {
@@ -776,9 +871,14 @@ td:first-child {
     line-height: 2.6;
 }
 
+.titulo_subname_txt {
+    float: left;
+    margin-left: 30px;
+}
+
 .boton_guardar {
-    float: right;
-    margin-right: 30px;
+    position: absolute;
+    right: 30px;
     border-radius: 50px;
     background-color: #001489 !important;
 }
@@ -788,12 +888,41 @@ td:first-child {
 }
 
 
+/* progress */
+.progress {
+    background: #dfdfdf;
+    justify-content: flex-start;
+    border-radius: 100px;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    /* padding: 0 5px; */
+    display: flex;
+    height: 14px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.progress_bar {
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #f46a04;
+    height: 30px;
+    width: 0;
+    font-size: 14px;
+    padding-top: 7px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transition: width 1s;
+}
+
+
 /* PC */
 @media only screen and (max-width: 1200px) {
     .caja_input {
         width: 265px;
     }
-
 }
 
 /* Tableta */

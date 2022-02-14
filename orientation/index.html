@@ -37,7 +37,8 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-    <link href="css/hc-offcanvas-nav.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tables.css">
+    <!-- <link href="css/hc-offcanvas-nav.css" rel="stylesheet" /> -->
     <link href="css/calendar.css" rel="stylesheet" />
     <link href="css/select2.min.css" rel="stylesheet" />
     <link href="css/estilos.css" rel="stylesheet" />
@@ -51,23 +52,47 @@
 <body class="theme-default">
 
     <div id="elNavBar" class="navbar">
-        <div id="navbar_boton_atras" class="navbar_boton_atras">
-            <i class="material-icons-outlined">home</i>
+        <div id="botonHome" class="botonHome">
+            <i class="material-icons">home</i>
         </div>
         <div class="docs-header navbar_titulo centrado">ORIENTATION PLAYBOOK</div>
-        <div id="navbar_boton_menu" class="nombre_perfil izq navbar_boton_menu"></div>
+        <div class="nombre_perfil centrado"></div>
+        <!-- <div id="navbar_boton_menu" class="nombre_perfil izq navbar_boton_menu"></div> -->
         <!-- <div id="navbar_boton_ayuda" class="navbar_boton_ayuda">
             <i class="material-icons">info</i>
         </div> -->
-        <div id="navbar_boton_salir" class="navbar_boton_salir">
-            <!-- <i class="material-icons-outlined">highlight_off</i> -->
-            <span>Exit</span>
+        <div id="botonAtras" class="botonAtras">
+            <i class="material-icons">reply</i>
+            <span></span>
+        </div>
+        <div id="botonSalir" class="botonSalir">
+            <i class="material-icons">logout</i>
+            <span></span>
+        </div>
+
+        <div id="divSelectPar" class="centrado">
+            <select id="elSelectPar" class="operator"></select>
+        </div>
+        <div id="divTools" class="row centrado">
+            <span class="three columns">&nbsp;</span>
+            <span id="botonTools" class="two columns material-icons-outlined">construction</span>
+            <span id="botonReporte" class="two columns material-icons-outlined">analytics</span>
+            <span id="botonCalendario" class="two columns material-icons-outlined">calendar_month</span>
+            <span class="three columns">&nbsp;</span>
         </div>
     </div>
+    <div id="elNavBarTasks" class="navbar_tasks">
+        <div class="subnames">
+            <div class="subname1_txt"></div>
+            <br>
+            <div class="subname2_txt"></div>
+        </div>
+        <div id="botonGuardar" class="button button-primary boton_guardar">Save</div>
+    </div>
+    <div id="tablaReporte" class="tablas"></div>
 
 
-
-    <nav id="side_menu">
+    <!-- <nav id="side_menu">
         <ul>
             <li>
                 <div class="centrado side_logo"></div>
@@ -133,33 +158,14 @@
                         <div id="botonTool17" class="button boton_tool">Settlement</div>
                         <br>
                     </li>
-
-                    <!-- <li><a href="#">Distribution Agreement</a></li>
-                    <li><a href="#">Handheld (HHC)</a></li>
-                    <li><a href="#">ION Coaching</a></li>
-                    <li><a href="#">ION Set Up</a></li>
-                    <li><a href="#">Merchandising - Best Practices</a></li>
-                    <li><a href="#">Merchandising - Arnold</a></li>
-                    <li><a href="#">Merchandising - Ball Park</a></li>
-                    <li><a href="#">Merchandising - Bimbo & Marinela</a></li>
-                    <li><a href="#">Merchandising - Brownberry</a></li>
-                    <li><a href="#">Merchandising - Entenmann's</a></li>
-                    <li><a href="#">Merchandising - Oroweat</a></li>
-                    <li><a href="#">Merchandising - Sara Lee</a></li>
-                    <li><a href="#">Merchandising - Takis</a></li>
-                    <li><a href="#">Merchandising - Thomas</a></li>
-                    <li><a href="#">Safe Carry Over (SCO)</a></li>
-                    <li><a href="#">Scan Based Trading (SBT)</a></li>
-                    <li><a href="#">Settlement</a></li> -->
                 </ul>
             </li>
-            <!-- <li><a data-nav-close="false" href="#">Log Out</a> -->
             <li>
                 <br>
                 <div id="botonLogOut" class="button boton_logout">Log Out</div>
             </li>
         </ul>
-    </nav>
+    </nav> -->
 
 
 
@@ -179,7 +185,7 @@
 <script src="js/select2.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/addtohomescreen.js"></script>
-<script src="js/hc-offcanvas-nav.js"></script>
+<!-- <script src="js/hc-offcanvas-nav.js"></script> -->
 <script src="js/app.js"></script>
 
 <!-- secciones -->
@@ -188,8 +194,9 @@
 <script src="js/sec_home.js"></script>
 <script src="js/sec_tasks.js"></script>
 <script src="js/sec_calendar.js"></script>
-<script src="js/reporteStatus.js"></script>
-<script src="js/reporteDetalle.js"></script>
+<script src="js/sec_tools.js"></script>
+<!-- <script src="js/reporteStatus.js"></script> -->
+<script src="js/report.js"></script>
 
 
 </html>

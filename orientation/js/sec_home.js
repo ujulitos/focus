@@ -10,30 +10,19 @@ function activaSeccionHome() {
 
     ajustaTamano();
 
-    if (elRol === 'IBP') {
-        $('#buscadorIBP').hide();
-        $('#divSelectPar').hide();
-        // habilitaBoton($('#botonReporteStatus'), true);
-        // habilitaBoton($('#botonReporteDetail'), true);
-    }
-    if (elRol === 'Coach' || elRol === 'Admin') {
-        habilitaBoton($('#botonReporteStatus'), false);
-        habilitaBoton($('#botonReporteDetail'), false);
-    }
-
 
     // $('#divSemanas, #flechaAbajoSemanas, #flechaAbajoDias').show();
 
     function leeUsuarios() {
 
         if (revisaConexion) {
-            firebase.database().ref(laUrlBase + 'Usuarios').once('value').then(function (snapshot) {
+            firebase.database().ref(laUrlBase + 'Usuarios').once('value').then(function(snapshot) {
                 if (snapshot.val() != null) {
                     var contadorUsuarios = 0;
                     cuantosUsuarios = 0;
                     console.log('-----------------------');
 
-                    snapshot.forEach(function (childSnapshot) {
+                    snapshot.forEach(function(childSnapshot) {
                         if (snapshot.child(childSnapshot.key).child('Id').val() != undefined && snapshot.child(childSnapshot.key).child('Id').val() != null) {
                             contadorUsuarios++;
                             this['usuarioPerfil' + contadorUsuarios] = snapshot.child(childSnapshot.key).child('Perfil').val();
@@ -101,14 +90,20 @@ function activaSeccionHome() {
         $("select").select2();
 
         $('#elSelectPar').empty();
-        $('#elSelectPar').append('<option value=" " selected disabled>Select IBP</option>');
+        $('#elSelectPar').append('<option value="Select IBP" selected disabled>Select IBP</option>');
         for (a = 0; a < cuantosUsuarios; a++) {
             dataSet[a] = [that['usuarioId' + a], that['usuarioName' + a]];
-            $('#elSelectPar').append('<option value="' + [that['usuarioId' + a]] + '">' + [that['usuarioName' + a]] + '</option>');
         }
+        dataSet.sort(new Intl.Collator('es').compare);
         console.log('dataSet', dataSet);
 
-        $('#elSelectPar').on('change', function () {
+        for (a = 0; a < cuantosUsuarios; a++) {
+            $('#elSelectPar').append('<option value="' + dataSet[a][0] + '">' + dataSet[a][1] + '</option>');
+        }
+        $('.select2-search:after').append('<span class="material-icons-outlined">search</span>');
+
+        $('#elSelectPar').on('change', function() {
+            $('#elSelectPar option[value="Select IBP"]').remove();
             var elPar = $("#elSelectPar :selected").text();
             var elParID = $("#elSelectPar :selected").val();
             seleccionaUsuario(elPar, elParID);
@@ -145,9 +140,12 @@ function activaSeccionHome() {
         usuarioSeleccionadoId = cualUsuarioId;
 
         $('#divReportes').hide();
-        // $('#divReportes').fadeIn();
         $('#divSemanas, #flechaAbajoSemanas, #flechaAbajoDias').hide();
         $('#divSemanas').fadeIn();
+
+        if (elRol === 'Admin') {
+            habilitaDiv($('#botonReporte'), true);
+        }
 
         return leeStatus(usuarioSeleccionadoId);
     }
@@ -156,7 +154,7 @@ function activaSeccionHome() {
         console.log('leeStatus', cualUsuarioId, elRol);
 
         if (revisaConexion) {
-            firebase.database().ref(laUrlBase + 'Usuarios/' + cualUsuarioId + '/Registro').once('value').then(function (snapshot) {
+            firebase.database().ref(laUrlBase + 'Usuarios/' + cualUsuarioId + '/Registro').once('value').then(function(snapshot) {
                 if (snapshot.val() != null) {
 
                     arrayStatus = snapshot.val();
@@ -234,7 +232,7 @@ function activaSeccionHome() {
         }
 
         for (a = 1; a <= cuantasSemanas; a++) {
-            $("#boton_semana" + a).mouseover(function (event) {
+            $("#boton_semana" + a).mouseover(function(event) {
                 for (b = 1; b <= cuantasSemanas; b++) {
                     $("#boton_semana" + b).css({
                         'background-color': '#d0dcee'
@@ -247,7 +245,7 @@ function activaSeccionHome() {
                     'background-color': '#e6edf9'
                 })
             });
-            $("#boton_semana" + a).mouseout(function (event) {
+            $("#boton_semana" + a).mouseout(function(event) {
                 $(this).css({
                     'background-color': '#d0dcee'
                 })
@@ -255,7 +253,7 @@ function activaSeccionHome() {
                     'background-color': '#e6edf9'
                 })
             });
-            $("#boton_semana" + a).click(function (event) {
+            $("#boton_semana" + a).click(function(event) {
                 event.preventDefault();
                 var cualSemana = parseInt($(this).attr('id').substr(12, 2));
                 console.log('cualSemana', cualSemana);
@@ -276,16 +274,29 @@ function activaSeccionHome() {
     switch (elRol) {
 
         case 'Admin':
+            $('#divSemanas').css({
+                'margin-top': '75px'
+            })
+
             leeUsuarios();
             break;
 
         case 'Coach':
+            $('#divSemanas').css({
+                'margin-top': '75px'
+            });
+
             leeUsuarios();
             break;
 
         case 'IBP':
             $('#divSemanas, #flechaAbajoSemanas').hide();
             $('#divSemanas, #flechaAbajoSemanas').fadeIn();
+
+            $('#divSemanas').css({
+                'margin-top': '30px'
+            });
+
             leeStatus(usuarioId);
             break;
 
@@ -348,7 +359,7 @@ function activaSeccionHome() {
         function loadCategoria(cualSemana) {
             console.log('loadCategoria', cualSemana);
 
-            $('#tituloCategorias').html(Object.values(dataWeeks.weeks)[(laSemana - 1)].name);
+            // $('#tituloCategorias').html(Object.values(dataWeeks.weeks)[(laSemana - 1)].name);
 
             var contenidoCategorias = '';
             $('#lasCategorias').empty();
@@ -391,7 +402,7 @@ function activaSeccionHome() {
                     }
 
 
-                    $("#semana" + a + "_Categoria" + b).mouseover(function (event) {
+                    $("#semana" + a + "_Categoria" + b).mouseover(function(event) {
                         for (c = 1; c <= cuantasSemanas; c++) {
                             for (d = 1; d <= that['cuantasCategorias' + c]; d++) {
                                 $("#semana" + c + "_Categoria" + d).css({
@@ -406,7 +417,7 @@ function activaSeccionHome() {
                             'background-color': '#eeeeee'
                         })
                     });
-                    $("#semana" + a + "_Categoria" + b).mouseout(function (event) {
+                    $("#semana" + a + "_Categoria" + b).mouseout(function(event) {
                         $(this).css({
                             'background-color': 'transparent'
                         })
@@ -414,7 +425,7 @@ function activaSeccionHome() {
                             'background-color': '#eeeeee'
                         })
                     });
-                    $("#semana" + a + "_Categoria" + b).click(function (event) {
+                    $("#semana" + a + "_Categoria" + b).click(function(event) {
                         event.preventDefault();
                         var cualSemana = parseInt($(this).attr('id').substr(6, 1));
                         var cualCategoria = parseInt($(this).attr('id').substr(17, 2));
@@ -552,7 +563,7 @@ function activaSeccionHome() {
 
     // tools
     for (a = 1; a <= cuantosTools; a++) {
-        $("#botonTool" + a).click(function (event) {
+        $("#botonTool" + a).click(function(event) {
             event.preventDefault();
             var cualBotonTool = parseInt($(this).attr('id').substr(9, 2));
             console.log('cualBotonTool', cualBotonTool);
@@ -570,18 +581,14 @@ function activaSeccionHome() {
 
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     // $(document).off('click', '#botonReporteStatus').on('click', '#botonReporteStatus', function (e) {
-    $("#botonReporteStatus").click(function (event) {
-        event.preventDefault();
-        descargaReporteStatus();
-    });
+    // $("#botonReporteStatus").click(function (event) {
+    //     event.preventDefault();
+    //     descargaReporteStatus();
+    // });
 
     // $(document).off('click', '#botonReporteDetail').on('click', '#botonReporteDetail', function (e) {
-    $("#botonReporteDetail").click(function (event) {
-        event.preventDefault();
-        descargaReporteDetalle();
 
-    });
 });

@@ -46,14 +46,33 @@
                      this['cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c] = Object.keys(Object.values(Object.values(data.weeks['week0' + laSemana].cats)[(b - 1)].subcats)[(c - 1)].tasks).length;
                      console.log('cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c, this['cat' + laSemana + '_cuantasSubcategorias' + b + '_cuantasTasks' + c]);
 
+
+
+
                  }
              }
          }
 
          for (d = 1; d <= this['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; d++) {
-             totalTasksPorCategoria += Object.keys(Object.values(Object.values(data.weeks['week0' + laSemana].cats)[(laCategoria - 1)].subcats)[(d - 1)].tasks).length;
+             for (e = 1; e <= this['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + d]; e++) {
+
+                 if (Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(d - 1)].tasks)[(e - 1)][1] != 'all') {
+
+                     totalTasksPorCategoria += Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(d - 1)].tasks)[(e - 1)][1];
+
+                 } else {
+
+                     totalTasksPorCategoria += 1;
+
+                 }
+             }
              console.log('totalTasksPorCategoria', totalTasksPorCategoria);
          }
+
+         //  for (d = 1; d <= this['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; d++) {
+         //      totalTasksPorCategoria += Object.keys(Object.values(Object.values(data.weeks['week0' + laSemana].cats)[(laCategoria - 1)].subcats)[(d - 1)].tasks).length;
+         //      console.log('totalTasksPorCategoria', totalTasksPorCategoria);
+         //  }
 
          that = this;
 
@@ -74,8 +93,9 @@
          var contenidoTasks = '';
          $('#lasTasks').empty();
 
-         contenidoTasks += '<h3 class="title centrado">' + Object.values(data.weeks)[(laSemana - 1)].name + '</h3>';
-         contenidoTasks += '<br>';
+         //  contenidoTasks += '<h3 class="title centrado">' + Object.values(data.weeks)[(laSemana - 1)].name + '</h3>';
+         //  contenidoTasks += '<div id="botonGuardar" class="button button-primary boton_guardar">Save</div>';
+         //  contenidoTasks += '<br>';
          contenidoTasks += '<div class="titulo_categoria">';
          // contenidoTasks += '<i class="titulo_categoria_img material-icons-outlined">' + Object.values(Object.values(data['week' + laSemana])[(laSemana - 1)].cats)[(laCategoria - 1)].cat_icon + '</i>';
          // contenidoTasks += '<img  style="display:block;padding-top:20px;padding-bottom:30px; width:55px; margin-left:auto; margin-right:auto;" src="./img/' + Object.values(Object.values(data['week' + laSemana])[(laSemana - 1)].cats)[(laCategoria - 1)].cat_icon + '.png" />';
@@ -88,58 +108,76 @@
          for (b = 1; b <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; b++) {
 
              contenidoTasks += '<br>';
-             contenidoTasks += '<table style="width:100%">';
-             contenidoTasks += '<div class="titulo_subcategoria_txt">' + Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].name + '</div>';
 
-             contenidoTasks += '<tr>';
+             contenidoTasks += '<div class="titulo_subcategoria_txt">' + Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].name + '</div>';
+             contenidoTasks += '<br>';
+
+             //  contenidoTasks += '<tr>';
              if (elRol === 'Admin') {
                  contenidoTasks += '<th></th>';
              }
-             contenidoTasks += '<th style="width: 100%;"></th>';
-             contenidoTasks += '<th>Done</th>';
-             contenidoTasks += '</tr>';
-
+             contenidoTasks += '<p style="width: 100%;"></p>';
 
              for (c = 1; c <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
 
-                 contenidoTasks += '<tr class="tabla_row" style="height: 200px;">';
                  if (elRol === 'Admin') {
-                     //  contenidoTasks += '<td id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" " style="line-height: 1;"><div id="boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="boton_edit"><span class="icon_edit material-icons">edit</span></div> <div class="boton_cancel"><span class="icon_cancel material-icons">close</span></div> <div class="boton_save"><span class="icon_save material-icons">done</span></div> </td>';
-                     contenidoTasks += '<td id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" " style="line-height: 1;"><div id="boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="boton_edit"><span class="icon_edit material-icons">edit</span></div></td>';
+                     contenidoTasks += '<div id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" " style="line-height: 1;"><div id="boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="boton_edit"><span class="icon_edit material-icons">edit</span></div></div>';
                  }
-                 //  TODO agregar [0]
-                 contenidoTasks += '<td id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" ">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)] + '</td>';
-                 contenidoTasks += '<td>';
-                 contenidoTasks += '<input type="checkbox" id="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="check check1">';
-                 contenidoTasks += '<label class="label_class" for="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '"></label>';
-                 contenidoTasks += '</td>';
+
+                 if (Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][2] != 'no_tool') {
+                     contenidoTasks += '<div id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" "><a href="' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][2] + '" target="_blank">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][0] + '</a></div>';
+                 } else {
+                     contenidoTasks += '<div id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" ">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][0] + '</div>';
+                 }
+
+                 contenidoTasks += '<table style="width: 80%; margin: 0 auto;">';
+                 //  contenidoTasks += '<tr class="tabla_row">';
+                 //  contenidoTasks += '</tr>';
+                 contenidoTasks += '<tr>';
+
+                 if (Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][1] != 'all') {
+
+                     for (d = 1; d <= Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][1]; d++) {
+                         contenidoTasks += '<td style="border-top: solid 0px #ddd;">';
+                         contenidoTasks += '<input type="checkbox" id="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '_d' + d + '" class="check">';
+                         contenidoTasks += '<label class="label_class" for="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '_d' + d + '" data-before="Day ' + d + '"></label>';
+                         contenidoTasks += '</td>';
+                     }
+                 } else {
+                     contenidoTasks += '<td style="border-top: solid 0px #ddd;">';
+                     contenidoTasks += '<input type="checkbox" id="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="check">';
+                     contenidoTasks += '<label class="label_class" for="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" data-before="Completed"></label>';
+                     contenidoTasks += '</td>';
+                 }
+
                  contenidoTasks += '</tr>';
+                 contenidoTasks += '</table>';
+                 contenidoTasks += '<br>';
+
+
              }
-
-             contenidoTasks += '</table>';
          }
-         // }
-         //  if (laCategoria == that['cuantasCategorias' + laSemana]) {
-         // contenidoTasks += '<br><div class="divider_linea"></div>';
-         //  contenidoTasks += '<br><div>' + Object.values(data.weeks['week0' + laSemana])[(laSemana - 1)].final_message + '</div>';
-         //  contenidoTasks += '<br><div class="divider_linea"></div>';
-         //  }
+
          contenidoTasks += '<br>';
+         contenidoTasks += '<div class="titulo_subcategoria_txt">Progress</div>';
+         contenidoTasks += '<br>';
+         contenidoTasks += '<div class="progress">';
+         contenidoTasks += '<div class="progress_bar">';
+         contenidoTasks += '</div>';
+         contenidoTasks += '</div>';
 
-         if (elRol == 'IBP') {
-             contenidoTasks += '<div id="botonGuardarNext" class="button button-primary boton_guardar">Save & Next</div>';
-             contenidoTasks += '<div id="botonGuardar" class="button button-primary boton_guardar">Save</div>';
-             contenidoTasks += '<div id="botonPrev" class="button button-primary boton_guardar">Previous</div>';
-             contenidoTasks += '<br><br><br><br><br><br>';
-         }
+
 
          $('#lasTasks').append(contenidoTasks);
+
+         $('.subname1_txt').text(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subname1);
+         $('.subname2_txt').text(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subname2);
 
 
          for (b = 1; b <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria]; b++) {
              for (c = 1; c <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
 
-                 $('#boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).click(function (event) {
+                 $('#boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).click(function(event) {
                      event.preventDefault();
                      console.log('edit', $(this).attr('id'));
                      var laTaskTextoNuevo;
@@ -191,37 +229,51 @@
 
                  });
 
+                 if (Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][1] != 'all') {
 
-                 $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).click(function (event) {
-                     event.preventDefault();
+                     for (d = 1; d <= Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][1]; d++) {
 
-                     checkea($(this).attr('id'));
-                     console.log('checkea', $(this).attr('id'));
+                         $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '_d' + d).click(function(event) {
+                             event.preventDefault();
 
-                     // Swal.fire({
-                     //     title: 'Are you sure?',
-                     //     text: "You won't be able to revert this!",
-                     //     icon: 'question',
-                     //     showCancelButton: true,
-                     //     confirmButtonColor: '#6ab129',
-                     //     cancelButtonColor: '#da4730',
-                     //     confirmButtonText: 'Yes, check it!'
-                     // }).then((result) => {
-                     //     if (result.isConfirmed) {
-                     //         Swal.fire(
-                     //             'Checked!',
-                     //             'This task has been checked.',
-                     //             'success'
-                     //         )
-                     //         $(this).prop("checked", "checked");
-                     //         $(this).attr("disabled", "disabled");
-                     //     }
-                     //     if (result.isDismissed || result.isDenied) {
-                     //         $(this).prop("checked", false);
-                     //         $(this).prop("disabled", false);
-                     //     }
-                     // })
-                 });
+                             checkea($(this).attr('id'));
+                             console.log('checkea', $(this).attr('id'));
+
+                             // Swal.fire({
+                             //     title: 'Are you sure?',
+                             //     text: "You won't be able to revert this!",
+                             //     icon: 'question',
+                             //     showCancelButton: true,
+                             //     confirmButtonColor: '#6ab129',
+                             //     cancelButtonColor: '#da4730',
+                             //     confirmButtonText: 'Yes, check it!'
+                             // }).then((result) => {
+                             //     if (result.isConfirmed) {
+                             //         Swal.fire(
+                             //             'Checked!',
+                             //             'This task has been checked.',
+                             //             'success'
+                             //         )
+                             //         $(this).prop("checked", "checked");
+                             //         $(this).attr("disabled", "disabled");
+                             //     }
+                             //     if (result.isDismissed || result.isDenied) {
+                             //         $(this).prop("checked", false);
+                             //         $(this).prop("disabled", false);
+                             //     }
+                             // })
+                         });
+                     }
+                 } else {
+
+                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c).click(function(event) {
+                         event.preventDefault();
+
+                         checkea($(this).attr('id'));
+                         console.log('checkea', $(this).attr('id'));
+                     });
+
+                 }
              }
          }
 
@@ -248,17 +300,17 @@
              }
          }
 
-         $('#botonPrev').click(function (event) {
+         $('#botonPrev').click(function(event) {
              event.preventDefault();
              decrementaCategoria();
          });
 
-         $('#botonGuardar').click(function (event) {
+         $('#botonGuardar').click(function(event) {
              event.preventDefault();
              guardaTasks('normal');
          });
 
-         $('#botonGuardarNext').click(function (event) {
+         $('#botonGuardarNext').click(function(event) {
              event.preventDefault();
              guardaTasks('next');
              incrementaCategoria();
@@ -270,13 +322,13 @@
          ajustaTamano();
 
 
-         return leeRegTasks();
+         return leeRegTasks(data);
      }
 
 
      function checkea(cualCheckea) {
 
-         setTimeout(function () {
+         setTimeout(function() {
              if (cualCheckea != 0) {
                  //  var cualCheckeaPrevPerfil = cualCheckea.split('_p')[0];
                  //  var cualCheckeaPerfil = parseInt(cualCheckea.split('_p')[1]);
@@ -303,17 +355,27 @@
              }
 
 
-             $(".check1:checkbox:checked").each(function () {
-                 __that.numTasksChecked = $(".check1:checkbox:checked").length;
+             $(".check:checkbox:checked").each(function() {
+                 __that.numTasksChecked = $(".check:checkbox:checked").length;
              });
+
+
+             var elPrograsoCat = Math.round((numTasksChecked / totalTasksPorCategoria) * 100);
+             $('.progress_bar').css({
+                 'width': elPrograsoCat + '%'
+             });
+             $('.progress_bar').text(elPrograsoCat + '%');
 
              //  console.log('arrayTasks', __that.arrayTasks);
              //  console.log('numTasksChecked', __that.numTasksChecked, ' y totalTasksPorCategoria', totalTasksPorCategoria);
+             guardaTasks('nada');
+
          }, 10);
+
      }
 
 
-     function leeRegTasks() {
+     function leeRegTasks(data) {
          console.log('leeRegTasks', usuarioId, usuarioSeleccionadoId, elRol);
 
          var cualUsuarioId = usuarioId;
@@ -323,7 +385,7 @@
 
          if (revisaConexion) {
 
-             firebase.database().ref(laUrlBase + 'Usuarios/' + cualUsuarioId + '/Registro').once('value').then(function (snapshot) {
+             firebase.database().ref(laUrlBase + 'Usuarios/' + cualUsuarioId + '/Registro').once('value').then(function(snapshot) {
                  if (snapshot.val() != null) {
                      console.log('snapshot.val()', snapshot.val());
 
@@ -337,11 +399,11 @@
                      }
                      console.log('arrayTasks', __that.arrayTasks);
 
-                     return pintaRegTasks();
+                     return pintaRegTasks(data);
 
                  } else {
                      cuantasTasks = 0;
-                     return pintaRegTasks();
+                     return pintaRegTasks(data);
                  }
              });
 
@@ -351,7 +413,7 @@
      }
 
 
-     function pintaRegTasks() {
+     function pintaRegTasks(data) {
          console.log('pintaRegTasks', elRol);
 
          //  setTimeout(function() {
@@ -363,14 +425,29 @@
 
          for (e = 1; e <= totalTasksPorCategoria; e++) {
              for (f = 1; f <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + e]; f++) {
-                 if (elRol === 'Coach' || elRol === 'Admin') {
-                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f).parent().css({
-                         "opacity": "0.5"
-                     })
-                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f).prop("disabled", "disabled");
-                     $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f).next().css({
-                         "pointer-events": "none"
-                     })
+
+                 if (Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(e - 1)].tasks)[(f - 1)][1] != 'all') {
+                     for (g = 1; g <= Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(e - 1)].tasks)[(f - 1)][1]; g++) {
+                         if (elRol === 'Coach' || elRol === 'Admin') {
+                             $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f + '_d' + g).parent().css({
+                                 "opacity": "0.5"
+                             })
+                             $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f + '_d' + g).prop("disabled", "disabled");
+                             $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f + '_d' + g).next().css({
+                                 "pointer-events": "none"
+                             })
+                         }
+                     }
+                 } else {
+                     if (elRol === 'Coach' || elRol === 'Admin') {
+                         $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f).parent().css({
+                             "opacity": "0.5"
+                         })
+                         $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f).prop("disabled", "disabled");
+                         $('#laTask_s' + laSemana + '_c' + laCategoria + '_sc' + e + '_t' + f).next().css({
+                             "pointer-events": "none"
+                         })
+                     }
                  }
              }
          }
@@ -385,7 +462,7 @@
              cualUsuarioId = usuarioSeleccionadoId;
          }
 
-         var onComplete = function (error) {
+         var onComplete = function(error) {
              if (error) {
                  console.log('Ocurrió un error en la sincronización.');
              } else {
@@ -406,7 +483,7 @@
      function guardaTasksText(cualId, cualText) {
          console.log('guardaTasksText', cualId, cualText);
 
-         var onComplete = function (error) {
+         var onComplete = function(error) {
              if (error) {
                  console.log('Ocurrió un error en la sincronización.');
              } else {
@@ -440,7 +517,7 @@
 
          console.log('Guardando . . . ');
          var dataRef = firebase.database().ref(laUrlBase + 'Tasks');
-         var keyTask = dataRef.ref.child('weeks/week0' + elrefTaskIdSemana + '/cats/cat0' + elrefTaskIdCat + '/subcats/subcat0' + elrefTaskIdSubcat + '/tasks/task0' + elrefTaskIdTask);
+         var keyTask = dataRef.ref.child('weeks/week0' + elrefTaskIdSemana + '/cats/cat0' + elrefTaskIdCat + '/subcats/subcat0' + elrefTaskIdSubcat + '/tasks/task0' + elrefTaskIdTask + '/0/');
          //  console.log(nuevoTaskData);
          firebase.database().ref(keyTask).set(cualText, onComplete);
 
@@ -475,7 +552,7 @@
          }
 
          console.log('arrayStatusCats', _that.arrayStatusCats);
-         var onComplete = function (error) {
+         var onComplete = function(error) {
              if (error) {
                  console.log('Ocurrió un error en la sincronización.');
              } else {
