@@ -368,7 +368,9 @@
 
              //  console.log('arrayTasks', __that.arrayTasks);
              //  console.log('numTasksChecked', __that.numTasksChecked, ' y totalTasksPorCategoria', totalTasksPorCategoria);
-             guardaTasks('nada');
+             if (elRol === 'IBP') {
+                 guardaTasks('nada');
+             }
 
          }, 10);
 
@@ -557,7 +559,7 @@
                  console.log('Ocurrió un error en la sincronización.');
              } else {
                  console.log('Sincronización realizada.');
-                 terminaGuardar(modo);
+                 guardaFecha(modo);
              };
          };
 
@@ -568,6 +570,58 @@
 
      }
 
+     function guardaFecha(modo) {
+         console.log('guardaFecha');
+
+         var cualUsuarioId = usuarioId;
+         if (usuarioSeleccionadoId != undefined) {
+             cualUsuarioId = usuarioSeleccionadoId;
+         }
+
+         var laFechaHoy = obtenerFecha();
+
+         if (revisaConexion) {
+
+             firebase.database().ref(laUrlBase + 'Usuarios/' + cualUsuarioId + '/Registro').once('value').then(function(snapshot) {
+                 if (snapshot.val() != null) {
+                     //  console.log('snapshot.val()', snapshot.val().StartDate);
+
+                     var laStartDate = snapshot.child('StartDate').val();
+                     //  console.log('laStartDate', laStartDate);
+
+                     if (laStartDate == null || laStartDate == undefined) {
+                         return registraFecha(laFechaHoy);
+                     }
+
+                     var isafter = moment(laStartDate).isAfter(laFechaHoy);
+                     //  console.log('isafter', isafter);
+
+                     if (isafter) {
+                         return registraFecha(laFechaHoy);
+                     }
+                 }
+             });
+
+         }
+
+         function registraFecha() {
+             var onComplete = function(error) {
+                 if (error) {
+                     console.log('Ocurrió un error en la sincronización.');
+                 } else {
+                     console.log('Sincronización realizada.');
+                     terminaGuardar(modo);
+                 };
+             };
+
+             console.log('Guardando . . . ');
+             var dataRef = firebase.database().ref(laUrlBase + 'Usuarios');
+             var keyUsuario = dataRef.ref.child(cualUsuarioId + '/Registro/StartDate/');
+             //  console.log(nuevoTaskData);
+             firebase.database().ref(keyUsuario).set(laFechaHoy, onComplete);
+         }
+
+     }
 
      function terminaGuardar(modo) {
          if (modo == 'normal') {

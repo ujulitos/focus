@@ -47,7 +47,7 @@ function descargaReporte() {
             dataType: 'json',
             cache: false,
             async: true,
-        }).done(function (dataTasks) {
+        }).done(function(dataTasks) {
             return consultaId(dataTasks);
         })
     }
@@ -64,7 +64,7 @@ function descargaReporte() {
 
         $.ajax({
             url: laURLId,
-            success: function (dataReg) {
+            success: function(dataReg) {
                 console.log(dataReg);
 
                 // si no hay registro
@@ -85,6 +85,23 @@ function descargaReporte() {
 
                     elRegistro = Object.values(dataReg.Registro);
                     console.log('elRegistro', elRegistro);
+
+                    laStartDate = dataReg.Registro.StartDate;
+                    console.log('laStartDate', laStartDate);
+
+                    if (laStartDate == undefined || laStartDate == null) {
+                        laStartDate = ' ';
+                        Swal.fire({
+                            title: 'This user has no registration yet',
+                            text: "try another user.",
+                            icon: 'info'
+                        });
+                        $('.swal2-container').css({
+                            'z-index': '9999'
+                        })
+                        return;
+                    }
+
 
 
                     if (dataReg.Registro.tasks != null) {
@@ -136,6 +153,8 @@ function descargaReporte() {
                     contenidoReporte += '<thead>';
                     contenidoReporte += '<tr>';
                     contenidoReporte += '<th class="row_head">IBP</th>';
+                    contenidoReporte += '<th class="row_head">Coach Name</th>';
+                    contenidoReporte += '<th class="row_head">Orientation Start Date</th>';
                     contenidoReporte += '<th class="row_head">Weeks</th>';
                     contenidoReporte += '<th class="row_head">Categories</th>';
                     contenidoReporte += '<th class="row_head">Subcategories</th>';
@@ -156,33 +175,19 @@ function descargaReporte() {
                                     that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_Checked'] = false;
 
                                     contenidoReporte += '<tr>';
-                                    if (a <= 1 && b <= 1 && c <= 1 && d <= 1) {
-                                        contenidoReporte += '<td class="row_nombre">' + dataReg.Name.replace(/ /g, "&nbsp;") + '</td>';
-                                    } else {
-                                        contenidoReporte += '<td class="row_nombre"></td>';
-                                    }
-                                    if (b <= 1 && c <= 1 && d <= 1) {
-                                        that['idTablaSemana'] = a;
-                                        // console.log('that[idTablaSemana]', that['idTablaSemana']);
-                                        contenidoReporte += '<td>' + dataTasks.weeks['week0' + a].name.replace(/ /g, "&nbsp;") + '</td>';
-                                    } else {
-                                        contenidoReporte += '<td></td>';
-                                    }
-                                    if (c <= 1 && d <= 1) {
-                                        that['idTablaCat'] = b;
-                                        // console.log('that[idTablaCat]', that['idTablaCat']);
-                                        contenidoReporte += '<td>' + Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
-                                    } else {
-                                        contenidoReporte += '<td></td>';
-                                    }
+                                    contenidoReporte += '<td class="row_nombre">' + dataReg.Name.replace(/ /g, "&nbsp;") + '</td>';
+                                    contenidoReporte += '<td class="row_nombre_coach">' + elPerfilNombre + ' ' + elPerfilApellido + '</td>';
+                                    contenidoReporte += '<td class="row_start_date">' + laStartDate.replace(/ /g, "&nbsp;") + '</td>';
+                                    that['idTablaSemana'] = a;
+                                    // console.log('that[idTablaSemana]', that['idTablaSemana']);
+                                    contenidoReporte += '<td>' + dataTasks.weeks['week0' + a].name.replace(/ /g, "&nbsp;") + '</td>';
+                                    that['idTablaCat'] = b;
+                                    // console.log('that[idTablaCat]', that['idTablaCat']);
+                                    contenidoReporte += '<td>' + Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
 
-                                    if (d <= 1) {
-                                        that['idTablaSubCat'] = c;
-                                        // console.log('that[idTablaSubCat]', that['idTablaSubCat']);
-                                        contenidoReporte += '<td>' + Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
-                                    } else {
-                                        contenidoReporte += '<td></td>';
-                                    }
+                                    that['idTablaSubCat'] = c;
+                                    // console.log('that[idTablaSubCat]', that['idTablaSubCat']);
+                                    contenidoReporte += '<td>' + Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
                                     that['idTablaTarea'] = d;
                                     // console.log('that[idTablaTarea]', that['idTablaTarea']);
                                     // contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)].replace(/ /g, "&nbsp;") + '</td>';
