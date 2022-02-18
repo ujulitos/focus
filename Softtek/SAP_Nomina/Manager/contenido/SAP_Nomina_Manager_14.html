@@ -81,18 +81,19 @@
     </div>
 </body>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
 
         cacularEscala();
         ajustarEscenario();
 
         var cuantosBotones = 7;
+        var botonesTerminados = false;
 
         function preload() {
             animacion_entrada($("#cargando"), "default", .2, 0);
             var preload = new createjs.LoadQueue();
             preload.addEventListener("complete", iniciaCargador);
-            $.each($('.element'), function () {
+            $.each($('.element'), function() {
                 preload.loadFile($("#" + this.id).attr('src'));
                 //console.log($("#" + this.id).attr('src'));
             });
@@ -100,7 +101,7 @@
 
         function iniciaCargador(event) {
             console.log('load complete');
-            $.each($('.element'), function () {
+            $.each($('.element'), function() {
                 inicializar($("#" + this.id));
             });
             $("#cargando").show();
@@ -115,6 +116,7 @@
             animacion_entrada($("#imagen1"), "default", .7, 0.5);
             animacion_entrada($("#imagen2"), "izq_der", .7, 1);
             animacion_entrada($("#sec00_back"), "default", .7, 4);
+            animacion_entrada($("#sec00_ins"), "der_izq", .7, 16);
 
             // animacion_salida($("#imagen2"), "desaparece", 16.5);
             parent.playAudio(19, 1000, terminaAudio0);
@@ -122,30 +124,47 @@
 
         function terminaAudio0() {
             desapareceBotonera();
-            setTimeout(function () {
+            setTimeout(function() {
                 muestraBotonera(1);
             }, 600);
         }
 
         function muestraBotonera(cualBoton) {
             console.log('muestraBotonera', cualBoton);
+            // desapareceBotonera();
 
-            desapareceBotonera();
+            if (botonesTerminados) {
+                for (a = 1; a <= cuantosBotones; a++) {
+                    animacion_entrada($("#boton" + a), "default", .5, 0);
+                    $("#boton" + a).css({
+                        'cursor': 'pointer',
+                        'opacity': '1'
+                    });
+                }
+            }
 
             if (cualBoton <= cuantosBotones) {
                 parpadea($("#boton" + cualBoton), .6);
             } else {
+                botonesTerminados = true;
+                console.log('botonesTerminados', botonesTerminados);
                 terminarPantalla();
+                muestraBotonera(1);
             }
 
-            $("#boton" + cualBoton).click(function () {
+            $("#boton" + cualBoton).click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     TweenMax.killTweensOf($(this));
                     // $(this).hide();
                     $(this).css({
-                        'cursor': 'default',
                         'opacity': '1'
                     });
+                    if (!botonesTerminados) {
+                        $("#boton" + (cualBoton - 1)).css({
+                            'cursor': 'default',
+                            'opacity': '0'
+                        });
+                    }
 
                     desaparecePantallas();
                     animacion_entrada($("#sec0" + cualBoton + "_img01"), "default", .7, .5);

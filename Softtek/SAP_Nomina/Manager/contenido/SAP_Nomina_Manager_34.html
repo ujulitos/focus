@@ -87,18 +87,19 @@
     </div>
 </body>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
 
         cacularEscala();
         ajustarEscenario();
 
         var cuantosBotones = 7;
+        var botonesTerminados = false;
 
         function preload() {
             animacion_entrada($("#cargando"), "default", .2, 0);
             var preload = new createjs.LoadQueue();
             preload.addEventListener("complete", iniciaCargador);
-            $.each($('.element'), function () {
+            $.each($('.element'), function() {
                 preload.loadFile($("#" + this.id).attr('src'));
                 //console.log($("#" + this.id).attr('src'));
             });
@@ -106,7 +107,7 @@
 
         function iniciaCargador(event) {
             console.log('load complete');
-            $.each($('.element'), function () {
+            $.each($('.element'), function() {
                 inicializar($("#" + this.id));
             });
             $("#cargando").show();
@@ -124,57 +125,98 @@
             animacion_entrada($("#sec00_ins"), "der_izq", .7, 8.5);
 
             // animacion_salida($("#imagen2"), "desaparece", 16.5);
+            // QUITAR
             parent.playAudio(152, 1500, terminaAudio0);
+            // parent.playAudio(0, 1500, terminaAudio0);
         }
 
         function terminaAudio0() {
             desapareceBotonera();
-            setTimeout(function () {
+            setTimeout(function() {
                 muestraBotonera(1);
             }, 200);
         }
 
         function muestraBotonera(cualBoton) {
             console.log('muestraBotonera', cualBoton);
+            // desapareceBotonera();
 
-            if (cualBoton == 4 || cualBoton == 6 || cualBoton == 7) {
-                desapareceBotonera();
+            if (botonesTerminados) {
+                for (a = 1; a <= cuantosBotones; a++) {
+                    animacion_entrada($("#boton" + a), "default", .5, 0);
+                    $("#boton" + a).css({
+                        'display': 'block',
+                        'cursor': 'pointer',
+                        'opacity': '1'
+                    });
+                }
+
+                setTimeout(function() {
+                    if (cualBoton != 2) {
+                        $("#boton" + 2).css({
+                            'display': 'none',
+                            'cursor': 'default',
+                            'opacity': '0'
+                        });
+                    }
+                    if (cualBoton != 3) {
+                        $("#boton" + 3).css({
+                            'display': 'none',
+                            'cursor': 'default',
+                            'opacity': '0'
+                        });
+                    }
+                    if (cualBoton != 5) {
+                        $("#boton" + 5).css({
+                            'display': 'none',
+                            'cursor': 'default',
+                            'opacity': '0'
+                        });
+                    }
+                }, 10);
+
+            } else {
+                if (cualBoton == 4 || cualBoton == 6 || cualBoton == 8) {
+                    desapareceBotonera();
+                } else {
+                    desapareceBotoneraInt();
+                }
             }
+
 
             if (cualBoton <= cuantosBotones) {
                 parpadea($("#boton" + cualBoton), .6);
             } else {
+                botonesTerminados = true;
+                console.log('botonesTerminados', botonesTerminados);
                 terminarPantalla();
+                muestraBotonera(1);
             }
 
-            $("#boton" + cualBoton).click(function () {
+            $("#boton" + cualBoton).click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     TweenMax.killTweensOf($(this));
                     // $(this).hide();
-                    // $(this).css({
-                    //     'cursor': 'default',
-                    //     'opacity': '1'
-                    // });
-
-                    if (cualBoton != 1 && cualBoton != 4 && cualBoton != 6 && cualBoton != 7) {
-                        $(this).hide();
+                    $(this).css({
+                        'opacity': '1'
+                    });
+                    if (!botonesTerminados) {
+                        if (cualBoton == 2 || cualBoton == 3 || cualBoton == 5) {
+                            $("#boton" + cualBoton).css({
+                                'cursor': 'default',
+                                'opacity': '0'
+                            });
+                            desapareceBotoneraInt();
+                        }
                     } else {
-                        $(this).css({
-                            'cursor': 'default',
-                            'opacity': '1'
-                        });
+                        desapareceBotonera();
                     }
+
                     desaparecePantallas();
-
-                    if (cualBoton == 26) {
-                        animacion_salida($("#imagen2"), "desaparece", 0);
-                        animacion_entrada($("#sec" + cualBoton + "_img1"), "izq_der", .7, .5);
-                        animacion_entrada($("#sec" + cualBoton + "_img2"), "default", .7, 1.5);
-                    } else {
-                        animacion_entrada($("#sec" + cualBoton + "_img1"), "default", .7, .5);
-                    }
-
+                    animacion_entrada($("#sec" + cualBoton + "_img1"), "default", .7, .5);
+                    // QUITAR
                     parent.playAudio((152 + cualBoton), 1000, terminaAudio);
+                    // parent.playAudio(0, 1000, terminaAudio);
                 }
             });
 
@@ -189,11 +231,18 @@
 
 
         function desapareceBotonera() {
+            console.log('desapareceBotonera');
             animacion_salida($('#boton1, #boton2, #boton3, #boton4, #boton5, #boton6, #boton7, #boton8, #boton9, #boton10, #boton11, #boton12, #boton13, #boton14, #boton15, #btnAtras0, #btnSiguiente0, #btnAtras1, #btnSiguiente1, #btnAtras2, #btnSiguiente2, #btnAtras3, #btnSiguiente3, #btnAtras4, #btnSiguiente4, #btnAtras5, #btnSiguiente5, #btnAtras6, #btnSiguiente6, #btnAtras7, #btnSiguiente7, #btnAtras8, #btnSiguiente8, #btnAtras9, #btnSiguiente9, #btnAtras10, #btnSiguiente10, #btnAtras11, #btnSiguiente11, #btnAtras12, #btnSiguiente12, #btnAtras13, #btnSiguiente13, #btnAtras14, #btnSiguiente14, #btnAtras15, #btnSiguiente15'), "default", 0);
             animacion_salida($('#botonCerrar'), "default", 0);
             // $('#btnAtras1, #btnSiguiente1, #btnAtras2, #btnSiguiente2, #btnAtras3, #btnSiguiente3, #btnAtras4, #btnSiguiente4, #btnAtras5, #btnSiguiente5, #btnAtras6, #btnSiguiente6').css({
             //     'cursor': 'default'
             // });
+        }
+
+        function desapareceBotoneraInt() {
+            console.log('desapareceBotoneraInt');
+            animacion_salida($('#boton2, #boton3, #boton6, #boton7, #btnAtras0, #btnSiguiente0, #btnAtras1, #btnSiguiente1, #btnAtras2, #btnSiguiente2, #btnAtras3, #btnSiguiente3, #btnAtras4, #btnSiguiente4, #btnAtras5, #btnSiguiente5, #btnAtras6, #btnSiguiente6, #btnAtras7, #btnSiguiente7, #btnAtras8, #btnSiguiente8, #btnAtras9, #btnSiguiente9, #btnAtras10, #btnSiguiente10, #btnAtras11, #btnSiguiente11, #btnAtras12, #btnSiguiente12, #btnAtras13, #btnSiguiente13, #btnAtras14, #btnSiguiente14, #btnAtras15, #btnSiguiente15'), "default", 0);
+            animacion_salida($('#botonCerrar'), "default", 0);
         }
 
         function desaparecePantallas() {

@@ -48,9 +48,6 @@
         <img id="sec04_imagen1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_32/sec04_img01.png"></img>
         <img id="sec04_imagen2" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_32/sec04_img02.png"></img>
 
-        <!--seccion 5-->
-        <img id="sec05_imagen1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_32/sec05_img01.png"></img>
-        <!-- <img id="sec05_imagen2" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_32/sec05_img02.png"></img> -->
 
         <!----------------------------->
         <img id="btnSiguiente0" class="element" _origenx="1092" _origeny="315" src="images/SAP_Nomina_Manager_32/botonSiguiente.png"></img>
@@ -67,7 +64,8 @@
         <img id="btnAtras5" class="element" _origenx="15" _origeny="315" src="images/SAP_Nomina_Manager_32/botonAtras.png"></img>
         <img id="btnSiguiente6" class="element" _origenx="1092" _origeny="315" src="images/SAP_Nomina_Manager_32/botonSiguiente.png"></img>
 
-        <img id="boton_sec18_nota" class="element" _origenx="950" _origeny="435" src="images/SAP_Nomina_Manager_32/boton_sec18_nota.png"></img>
+        <img id="botonNota" class="element" _origenx="950" _origeny="425" src="images/SAP_Nomina_Manager_32/botonNota.png"></img>
+        <img id="sec05_imagen1" class="element" _origenx="0" _origeny="0" src="images/SAP_Nomina_Manager_32/sec05_img01.png"></img>
         <img id="botonCerrar" class="element" _origenx="1090" _origeny="140" src="images/SAP_Nomina_Manager_32/botonCerrar.png"></img>
         <img id="botonCerrarNota" class="element" _origenx="1090" _origeny="250" src="images/SAP_Nomina_Manager_32/botonCerrarNota.png"></img>
 
@@ -108,7 +106,7 @@
     }
 </style>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
 
         cacularEscala();
         ajustarEscenario();
@@ -117,7 +115,7 @@
             animacion_entrada($("#cargando"), "default", .2, 0);
             var preload = new createjs.LoadQueue();
             preload.addEventListener("complete", iniciaCargador);
-            $.each($('.element'), function () {
+            $.each($('.element'), function() {
                 preload.loadFile($("#" + this.id).attr('src'));
                 //console.log($("#" + this.id).attr('src'));
             });
@@ -125,7 +123,7 @@
 
         function iniciaCargador(event) {
             console.log('load complete');
-            $.each($('.element'), function () {
+            $.each($('.element'), function() {
                 inicializar($("#" + this.id));
             });
             $("#cargando").show();
@@ -147,7 +145,7 @@
         }
 
         function terminaAudio1() {
-            setTimeout(function () {
+            setTimeout(function() {
                 muestraSeccion1();
             }, 300);
         }
@@ -233,7 +231,7 @@
                 // animacion_salida($('#sec01_imagen3'), "desaparece", 0);
             }
 
-            $("#btnSiguiente1").click(function () {
+            $("#btnSiguiente1").click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     //TweenMax.killTweensOf($(this));
                     $(this).hide();
@@ -271,7 +269,7 @@
                 animacion_salida($('#sec02_imagen2'), "desaparece", 0);
             }
 
-            $("#btnAtras2").click(function () {
+            $("#btnAtras2").click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     //TweenMax.killTweensOf($(this));
                     $(this).hide();
@@ -282,7 +280,7 @@
                 }
             });
 
-            $("#btnSiguiente2").click(function () {
+            $("#btnSiguiente2").click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     //TweenMax.killTweensOf($(this));
                     $(this).hide();
@@ -320,7 +318,7 @@
                 animacion_salida($('#sec03_imagen2'), "desaparece", 0);
             }
 
-            $("#btnAtras3").click(function () {
+            $("#btnAtras3").click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     //TweenMax.killTweensOf($(this));
                     $(this).hide();
@@ -331,7 +329,7 @@
                 }
             });
 
-            $("#btnSiguiente3").click(function () {
+            $("#btnSiguiente3").click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     //TweenMax.killTweensOf($(this));
                     $(this).hide();
@@ -359,17 +357,44 @@
                     'opacity': '1',
                     'cursor': 'pointer'
                 });
-                parpadea($("#btnSiguiente4"), 0);
-                // parpadea($("#botonCerrar"), 2);
-                // terminarPantalla();
+                parpadea($("#botonNota"), 0);
+                // parpadea($("#btnSiguiente4"), 0);
             }
+
+            ///////////////// botonNota ////////////////
+            $("#botonNota").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    TweenMax.killTweensOf($(this));
+                    $(this).hide();
+                    // $(this).css({
+                    // 'cursor': 'default',
+                    // 'opacity': '1'
+                    // });
+                    animacion_entrada($("#sec05_imagen1"), "default", 0.7, 0);
+                    parent.playAudio(142, 500, terminaAudio2_Sec4);
+                }
+            });
+
+            function terminaAudio2_Sec4() {
+                parpadea($("#botonCerrarNota"), 0);
+            }
+
+            $("#botonCerrarNota").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    animacion_salida($('#sec05_imagen1'), "desaparece", 0);
+                    terminarPantalla();
+                }
+            });
 
             function desapareceSeccion4() {
                 animacion_salida($('#sec04_imagen1'), "desaparece", 0);
                 animacion_salida($('#sec04_imagen2'), "desaparece", 0);
             }
 
-            $("#btnAtras4").click(function () {
+            $("#btnAtras4").click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     //TweenMax.killTweensOf($(this));
                     $(this).hide();
@@ -380,16 +405,16 @@
                 }
             });
 
-            $("#btnSiguiente4").click(function () {
-                if ($(this).css('cursor') == 'pointer') {
-                    //TweenMax.killTweensOf($(this));
-                    $(this).hide();
+            // $("#btnSiguiente4").click(function() {
+            //     if ($(this).css('cursor') == 'pointer') {
+            //         //TweenMax.killTweensOf($(this));
+            //         $(this).hide();
 
-                    desapareceBotonera();
-                    desapareceSeccion4();
-                    muestraSeccion5();
-                }
-            });
+            //         desapareceBotonera();
+            //         desapareceSeccion4();
+            //         muestraSeccion5();
+            //     }
+            // });
 
         };
 
@@ -397,8 +422,7 @@
         function muestraSeccion5() {
             console.log('5');
 
-            animacion_entrada($("#sec05_imagen1"), "izq_der", 0.7, 0.5);
-            animacion_entrada($("#sec05_imagen2"), "default", 0.7, 1);
+            animacion_entrada($("#sec05_imagen1"), "default", 0.7, 0.5);
 
             parent.playAudio(142, 1000, terminaAudio1_Sec5);
 
@@ -415,10 +439,9 @@
 
             function desapareceSeccion5() {
                 animacion_salida($('#sec05_imagen1'), "desaparece", 0);
-                animacion_salida($('#sec05_imagen2'), "desaparece", 0);
             }
 
-            $("#btnAtras5").click(function () {
+            $("#btnAtras5").click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     //TweenMax.killTweensOf($(this));
                     $(this).hide();

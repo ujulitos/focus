@@ -258,5 +258,8 @@ var grupoAudios = new buzz.group([
     /*181*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_09", { formats: ["mp3"], preload: true }),
     /*182*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_40_01", { formats: ["mp3"], preload: true }),
     /*183*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_41_01", { formats: ["mp3"], preload: true }),
-    /*184*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_42_01", { formats: ["mp3"], preload: true })
+    /*184*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_42_01", { formats: ["mp3"], preload: true }),
+    /*185*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_09b", { formats: ["mp3"], preload: true }),
+    /*186*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_36_11", { formats: ["mp3"], preload: true }),
+    /*187*/ new buzz.sound("contenido/audios/SAP_Nomina_Manager_39_08b", { formats: ["mp3"], preload: true })
 ]);
