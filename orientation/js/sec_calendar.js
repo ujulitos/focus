@@ -1,6 +1,12 @@
 function activaSeccionCalendar() {
     console.log('seccionCalendar');
 
+    $('.subname1_txt').text('');
+    $('.subname2_txt').text('');
+
+
+
+
     ajustaTamano();
 
 

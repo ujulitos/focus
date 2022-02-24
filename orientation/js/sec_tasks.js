@@ -100,6 +100,7 @@
          // contenidoTasks += '<i class="titulo_categoria_img material-icons-outlined">' + Object.values(Object.values(data['week' + laSemana])[(laSemana - 1)].cats)[(laCategoria - 1)].cat_icon + '</i>';
          // contenidoTasks += '<img  style="display:block;padding-top:20px;padding-bottom:30px; width:55px; margin-left:auto; margin-right:auto;" src="./img/' + Object.values(Object.values(data['week' + laSemana])[(laSemana - 1)].cats)[(laCategoria - 1)].cat_icon + '.png" />';
          contenidoTasks += '<div class="titulo_categoria_txt centrado">' + Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].name + '</div>';
+
          contenidoTasks += '</div>';
          contenidoTasks += '<div class="divider_linea"></div>';
          contenidoTasks += '<br>';
@@ -110,7 +111,7 @@
              contenidoTasks += '<br>';
 
              contenidoTasks += '<div class="titulo_subcategoria_txt">' + Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].name + '</div>';
-             contenidoTasks += '<br>';
+             //  contenidoTasks += '<br>';
 
              //  contenidoTasks += '<tr>';
              if (elRol === 'Admin') {
@@ -118,7 +119,10 @@
              }
              contenidoTasks += '<p style="width: 100%;"></p>';
 
+
              for (c = 1; c <= that['cat' + laSemana + '_cuantasSubcategorias' + laCategoria + '_cuantasTasks' + b]; c++) {
+
+                 contenidoTasks += '<div style="background-color: #ededed; border-radius: 4px; padding: 20px;">';
 
                  if (elRol === 'Admin') {
                      contenidoTasks += '<div id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" " style="line-height: 1;"><div id="boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="boton_edit"><span class="icon_edit material-icons">edit</span></div></div>';
@@ -152,8 +156,8 @@
 
                  contenidoTasks += '</tr>';
                  contenidoTasks += '</table>';
+                 contenidoTasks += '</div>';
                  contenidoTasks += '<br>';
-
 
              }
          }
@@ -165,6 +169,7 @@
          contenidoTasks += '<div class="progress_bar">';
          contenidoTasks += '</div>';
          contenidoTasks += '</div>';
+         contenidoTasks += '<br>';
 
 
 
@@ -320,6 +325,88 @@
          //      var scrollTasks = Scrollbar.init($('.seccion_tasks')[0]);
          //  }
          ajustaTamano();
+
+
+         //  Cambia colores de encabezados
+         switch (laSemana) {
+             case 1:
+                 switch (laCategoria) {
+                     case 1:
+                         $('.titulo_categoria').addClass('titulo_categoria_OnRoute');
+                         break;
+                     case 2:
+                         $('.titulo_categoria').addClass('titulo_categoria_Classroom');
+                         break;
+                     case 3:
+                         $('.titulo_categoria').addClass('titulo_categoria_Market');
+                         break;
+
+                     default:
+                         break;
+                 }
+                 break;
+             case 2:
+                 switch (laCategoria) {
+                     case 1:
+                         $('.titulo_categoria').addClass('titulo_categoria_OnRoute');
+                         break;
+                     case 2:
+                         $('.titulo_categoria').addClass('titulo_categoria_Classroom');
+                         break;
+                     case 3:
+                         $('.titulo_categoria').addClass('titulo_categoria_Market');
+                         break;
+
+                     default:
+                         break;
+                 }
+                 break;
+             case 3:
+                 switch (laCategoria) {
+                     case 1:
+                         $('.titulo_categoria').addClass('titulo_categoria_OnRoute');
+                         break;
+                     case 2:
+                         $('.titulo_categoria').addClass('titulo_categoria_Classroom');
+                         break;
+                     case 3:
+                         $('.titulo_categoria').addClass('titulo_categoria_Market');
+                         break;
+
+                     default:
+                         break;
+                 }
+                 break;
+             case 4:
+                 switch (laCategoria) {
+                     case 1:
+                         $('.titulo_categoria').addClass('titulo_categoria_OnRoute');
+                         break;
+                     case 2:
+                         $('.titulo_categoria').addClass('titulo_categoria_Classroom');
+                         break;
+                     case 3:
+                         $('.titulo_categoria').addClass('titulo_categoria_Market');
+                         break;
+
+                     default:
+                         break;
+                 }
+                 break;
+             case 5:
+                 switch (laCategoria) {
+                     case 1:
+                         $('.titulo_categoria').addClass('titulo_categoria_306090');
+                         break;
+
+                     default:
+                         break;
+                 }
+                 break;
+
+             default:
+                 break;
+         }
 
 
          return leeRegTasks(data);

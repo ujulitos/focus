@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/tables.css">
     <!-- <link href="css/hc-offcanvas-nav.css" rel="stylesheet" /> -->
-    <link href="css/calendar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/calendar.css" />
     <link href="css/select2.min.css" rel="stylesheet" />
     <link href="css/estilos.css" rel="stylesheet" />
 
@@ -53,31 +53,34 @@
 
     <div id="elNavBar" class="navbar">
         <div id="botonHome" class="botonHome">
-            <i class="material-icons">home</i>
+            <i class="material-icons-outlined">home</i>
         </div>
-        <div class="docs-header navbar_titulo centrado">ORIENTATION PLAYBOOK</div>
-        <div class="nombre_perfil centrado"></div>
+        <div class="docs-header navbar_titulo"></div>
+        <div class="nombre_perfil"></div>
         <!-- <div id="navbar_boton_menu" class="nombre_perfil izq navbar_boton_menu"></div> -->
         <!-- <div id="navbar_boton_ayuda" class="navbar_boton_ayuda">
             <i class="material-icons">info</i>
         </div> -->
-        <div id="botonAtras" class="botonAtras">
+        <!-- <div id="botonAtras" class="botonAtras">
             <i class="material-icons">reply</i>
             <span></span>
-        </div>
+        </div> -->
         <div id="botonSalir" class="botonSalir">
             <i class="material-icons">logout</i>
             <span></span>
         </div>
+        <div id="botonAtras" class="botonAtras">
+            <i class="material-icons">reply</i>
+        </div>
 
-        <div id="divSelectPar" class="centrado">
+        <div id="divSelectPar" class="">
             <select id="elSelectPar" class="operator"></select>
         </div>
         <div id="divTools" class="row centrado">
             <span class="three columns">&nbsp;</span>
-            <span id="botonTools" class="two columns material-icons-outlined">construction</span>
-            <span id="botonReporte" class="two columns material-icons-outlined">analytics</span>
-            <span id="botonCalendario" class="two columns material-icons-outlined">calendar_month</span>
+            <div id="botonTools" class="boton_tools"><span class="material-icons-outlined">construction</span>Tools</div>
+            <div id="botonReporte" class="boton_tools"><span class="material-icons-outlined">analytics</span>Reports</div>
+            <div id="botonCalendario" class="boton_tools"> <span class="material-icons-outlined">calendar_month</span>Task Calendar</div>
             <span class="three columns">&nbsp;</span>
         </div>
     </div>
@@ -86,87 +89,10 @@
             <div class="subname1_txt"></div>
             <br>
             <div class="subname2_txt"></div>
-        </div>
-        <div id="botonGuardar" class="button button-primary boton_guardar">Save</div>
+        </div> <!-- <div id="botonGuardar" class="button button-primary boton_guardar">Save</div> -->
+
     </div>
     <div id="tablaReporte" class="tablas"></div>
-
-
-    <!-- <nav id="side_menu">
-        <ul>
-            <li>
-                <div class="centrado side_logo"></div>
-            </li>
-            <li><a href="javascript: loadSeccion('home');"><span class="menu_icon material-icons-outlined">roofing</span>Home</a></li>
-
-            <li>
-                <a data-nav-close="false" href="#">
-                    <span class="menu_icon material-icons-outlined">bar_chart</span>
-                    Reports
-                    <span class="menu_arrow material-icons-outlined">navigate_next</span>
-                </a>
-                <ul>
-                    <li id="menu_reports">
-                        <div style="display: flex;"><span class="menu_icon_int material-icons-outlined">bar_chart</span>Reports</div>
-                        <br><br>
-                        <div id="botonReporteStatus" class="button boton_reporte">Status Report</div>
-                        <div id="botonReporteDetail" class="button boton_reporte">Detailed Report</div>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="javascript: loadSeccion('calendar');"><span class="menu_icon material-icons-outlined">event_available</span>Task Calendar</a></li>
-            <li><a data-nav-close="false" href="#"><span class="menu_icon material-icons-outlined">construction</span>Tools<span class="menu_arrow material-icons-outlined">navigate_next</span></a>
-                <ul>
-                    <li>
-                        <div style="display: flex;"><span class="menu_icon_int material-icons-outlined">construction</span>Tools</div>
-                        <br>
-                    </li>
-
-                    <li>
-                        <div id="botonTool1" class="button boton_tool">Distribution Agreement</div>
-                        <br>
-                        <div id="botonTool2" class="button boton_tool">Handheld (HHC)</div>
-                        <br>
-                        <div id="botonTool3" class="button boton_tool">ION Coaching</div>
-                        <br>
-                        <div id="botonTool4" class="button boton_tool">ION Set Up</div>
-                        <br>
-                        <div id="botonTool5" class="button boton_tool">Merchandising - Best Practices</div>
-                        <br>
-                        <div id="botonTool6" class="button boton_tool">Merchandising - Arnold</div>
-                        <br>
-                        <div id="botonTool7" class="button boton_tool">Merchandising - Ball Park</div>
-                        <br>
-                        <div id="botonTool8" class="button boton_tool">Merchandising - Bimbo & Marinela</div>
-                        <br>
-                        <div id="botonTool9" class="button boton_tool">Merchandising - Brownberry</div>
-                        <br>
-                        <div id="botonTool10" class="button boton_tool">Merchandising - Entenmann's</div>
-                        <br>
-                        <div id="botonTool11" class="button boton_tool">Merchandising - Oroweat</div>
-                        <br>
-                        <div id="botonTool12" class="button boton_tool">Merchandising - Sara Lee</div>
-                        <br>
-                        <div id="botonTool13" class="button boton_tool">Merchandising - Takis</div>
-                        <br>
-                        <div id="botonTool14" class="button boton_tool">Merchandising - Thomas</div>
-                        <br>
-                        <div id="botonTool15" class="button boton_tool">Safe Carry Over (SCO)</div>
-                        <br>
-                        <div id="botonTool16" class="button boton_tool">Scan Based Trading (SBT)</div>
-                        <br>
-                        <div id="botonTool17" class="button boton_tool">Settlement</div>
-                        <br>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <br>
-                <div id="botonLogOut" class="button boton_logout">Log Out</div>
-            </li>
-        </ul>
-    </nav> -->
-
 
 
     <div id="container" class="container"></div>

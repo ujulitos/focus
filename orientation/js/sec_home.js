@@ -1,17 +1,17 @@
 function activaSeccionHome() {
     console.log('seccionHome');
     var cuantasCats;
-    var cuantosTools = 17;
 
     var laURLTasks = "" + laUrlAPI + "/Tasks/.json?auth=" + secret + "";
     // var laURLTasks = "js/tasks.json";
     console.log('laURLTasks', laURLTasks);
 
+    $('.subname1_txt').text('');
+    $('.subname2_txt').text('');
+
 
     ajustaTamano();
 
-
-    // $('#divSemanas, #flechaAbajoSemanas, #flechaAbajoDias').show();
 
     function leeUsuarios() {
 
@@ -56,36 +56,6 @@ function activaSeccionHome() {
 
     function llenaUsuarios() {
         var dataSet = [];
-
-
-        // $("#elSelectPar").keyup(function () {
-        //     if ($(this).val().length > 2) {
-        //         // console.log("buscando ok", $(this).val());
-
-        //         for (a = 0; a < cuantosUsuarios; a++) {
-        //             if (that['usuarioId' + a].toLowerCase().includes($(this).val().toLowerCase()) ||
-        //                 that['usuarioName' + a].toLowerCase().includes($(this).val().toLowerCase())) {
-        //                 console.log('Encontré la palabra', $(this).val(), 'con el recurso', that['usuarioName' + a], a);
-        //                 seleccionaUsuario(that['usuarioName' + a], that['usuarioId' + a]);
-        //                 // return;
-        //             } else {
-        //                 console.log('No encontré nada');
-        //                 $('#divSemanas').hide();
-        //                 $('#divCategorias').hide();
-        //             }
-        //         }
-        //     } else {
-        //         $('#divSemanas').hide();
-        //         $('#divCategorias').hide();
-        //     }
-        // });
-
-        // $("#buscadorClean").click(function (e) {
-        //     e.preventDefault();
-        //     $("#elSelectPar").val('');
-        //     $("#elSelectPar").keyup();
-        // });
-
 
         $("select").select2();
 
@@ -133,15 +103,12 @@ function activaSeccionHome() {
             laSemana = 1;
             laSemanaSel = 1;
             $('#divDias').hide();
-            $('#flechaAbajoDias').hide();
             $('#divCategorias').hide();
         }
         usuarioSeleccionado = cualUsuario;
         usuarioSeleccionadoId = cualUsuarioId;
 
         $('#divReportes').hide();
-        $('#divSemanas, #flechaAbajoSemanas, #flechaAbajoDias').hide();
-        $('#divSemanas').fadeIn();
 
         if (elRol === 'Admin') {
             habilitaDiv($('#botonReporte'), true);
@@ -209,50 +176,57 @@ function activaSeccionHome() {
         //     contenidoSemanas += '</div>';
         // }
         for (a = 1; a <= cuantasSemanas; a++) {
-            contenidoSemanas += '<div id="boton_semana' + a + '" class="card card_semana boton_semana">';
-            contenidoSemanas += '<img class="img_centrado" src="./img/' + Object.values(dataWeeks.weeks)[(a - 1)].icon + '.png"</>';
+            contenidoSemanas += '<div id="boton_semana' + a + '" class="card card_semana boton_semana centrado">';
             contenidoSemanas += '<p>' + Object.values(dataWeeks.weeks)[(a - 1)].name + '</p>';
-
+            // contenidoSemanas += '<img class="img_centrado" src="./img/' + Object.values(dataWeeks.weeks)[(a - 1)].icon + '.png"</>';
             contenidoSemanas += '</div>';
         }
+        contenidoSemanas += '<br>';
 
         $('#lasSemanas').append(contenidoSemanas);
 
-        $('.carousel_semanas').owlCarousel('destroy');
-        $(".carousel_semanas").owlCarousel({
-            items: 2,
-            margin: 0,
-            loop: false,
-            nav: true,
-            dots: true
-        });
+        $('.subname1_txt').text('Weeks');
+
+        $('#divSemanas').hide();
+        $('#divSemanas').fadeIn();
+
+
+        // $('.carousel_semanas').owlCarousel('destroy');
+        // $(".carousel_semanas").owlCarousel({
+        //     items: 2,
+        //     margin: 0,
+        //     loop: false,
+        //     nav: true,
+        //     dots: true
+        // });
+
 
         if (laSemana != undefined && laSemana != 0) {
-            pintaCategorias(data);
+            // pintaCategorias(data);
         }
 
         for (a = 1; a <= cuantasSemanas; a++) {
-            $("#boton_semana" + a).mouseover(function(event) {
-                for (b = 1; b <= cuantasSemanas; b++) {
-                    $("#boton_semana" + b).css({
-                        'background-color': '#d0dcee'
-                    })
-                }
-                $("#boton_semana" + laSemanaSel).css({
-                    'background-color': '#d0dcee'
-                })
-                $(this).css({
-                    'background-color': '#e6edf9'
-                })
-            });
-            $("#boton_semana" + a).mouseout(function(event) {
-                $(this).css({
-                    'background-color': '#d0dcee'
-                })
-                $("#boton_semana" + laSemanaSel).css({
-                    'background-color': '#e6edf9'
-                })
-            });
+            // $("#boton_semana" + a).mouseover(function(event) {
+            //     for (b = 1; b <= cuantasSemanas; b++) {
+            //         $("#boton_semana" + b).css({
+            //             'background-color': '#d0dcee'
+            //         })
+            //     }
+            //     $("#boton_semana" + laSemanaSel).css({
+            //         'background-color': '#d0dcee'
+            //     })
+            //     $(this).css({
+            //         'background-color': '#e6edf9'
+            //     })
+            // });
+            // $("#boton_semana" + a).mouseout(function(event) {
+            //     $(this).css({
+            //         'background-color': '#d0dcee'
+            //     })
+            //     $("#boton_semana" + laSemanaSel).css({
+            //         'background-color': '#e6edf9'
+            //     })
+            // });
             $("#boton_semana" + a).click(function(event) {
                 event.preventDefault();
                 var cualSemana = parseInt($(this).attr('id').substr(12, 2));
@@ -275,7 +249,7 @@ function activaSeccionHome() {
 
         case 'Admin':
             $('#divSemanas').css({
-                'margin-top': '75px'
+                'margin-top': '140px'
             })
 
             leeUsuarios();
@@ -283,18 +257,15 @@ function activaSeccionHome() {
 
         case 'Coach':
             $('#divSemanas').css({
-                'margin-top': '75px'
+                'margin-top': '140px'
             });
 
             leeUsuarios();
             break;
 
         case 'IBP':
-            $('#divSemanas, #flechaAbajoSemanas').hide();
-            $('#divSemanas, #flechaAbajoSemanas').fadeIn();
-
             $('#divSemanas').css({
-                'margin-top': '30px'
+                'margin-top': '130px'
             });
 
             leeStatus(usuarioId);
@@ -308,6 +279,9 @@ function activaSeccionHome() {
     // pintaCategorias 
     function pintaCategorias(data) {
         console.log(data);
+
+        $('#divSemanas').hide();
+        $('#botonAtras').show();
 
         cuantasCats = Object.keys(data.weeks['week0' + laSemana].cats).length;
         console.log('cuantasCats', cuantasCats);
@@ -346,14 +320,14 @@ function activaSeccionHome() {
 
 
 
-        for (b = 1; b <= cuantasSemanas; b++) {
-            $("#boton_semana" + b).css({
-                'background-color': '#d0dcee'
-            })
-        }
-        $("#boton_semana" + laSemana).css({
-            'background-color': '#e6edf9'
-        })
+        // for (b = 1; b <= cuantasSemanas; b++) {
+        //     $("#boton_semana" + b).css({
+        //         'background-color': '#d0dcee'
+        //     })
+        // }
+        // $("#boton_semana" + laSemana).css({
+        //     'background-color': '#e6edf9'
+        // })
 
 
         function loadCategoria(cualSemana) {
@@ -366,65 +340,61 @@ function activaSeccionHome() {
 
             for (b = 1; b <= that['cuantasCategorias' + laSemana]; b++) {
                 contenidoCategorias += '<div id="semana' + cualSemana + '_Categoria' + b + '" class="boton_categoria centrado">';
-                contenidoCategorias += '<img class="img_centrado" src="./img/' + Object.values(data.weeks['week0' + laSemana].cats)[(b - 1)].icon + '.png"</>';
                 contenidoCategorias += '<p>' + Object.values(data.weeks['week0' + laSemana].cats)[(b - 1)].name + '</p>';
+                contenidoCategorias += '<img class="img_right" src="./img/' + Object.values(data.weeks['week0' + laSemana].cats)[(b - 1)].icon + '.png"</>';
                 contenidoCategorias += '</div>';
             }
             // }
-            contenidoCategorias += '<br>';
+            // contenidoCategorias += '<br>';
 
             $('#lasCategorias').append(contenidoCategorias);
 
+            $('.subname1_txt').text('Activities');
 
-            for (a = 1; a <= cuantasSemanas; a++) {
-                for (b = 1; b <= that['cuantasCategorias' + a]; b++) {
-                    $("#semana" + a + "_Categoria" + b).css({
-                        'background-color': 'transparent'
-                    })
-                }
-            }
-            $("#semana" + laSemana + "_Categoria" + laCategoria).css({
-                'background-color': '#eeeeee'
-            })
+            // for (a = 1; a <= cuantasSemanas; a++) {
+            //     for (b = 1; b <= that['cuantasCategorias' + a]; b++) {
+            //         $("#semana" + a + "_Categoria" + b).css({
+            //             'background-color': 'transparent'
+            //         })
+            //     }
+            // }
+            // $("#semana" + laSemana + "_Categoria" + laCategoria).css({
+            //     'background-color': '#eeeeee'
+            // })
 
 
             for (a = 1; a <= cuantasSemanas; a++) {
                 for (b = 1; b <= that['cuantasCategorias' + a]; b++) {
 
                     if ($.inArray('week' + laSemana + '_cat' + b, _that.arrayStatusCats) != -1) {
-                        $("#semana" + laSemana + "_Categoria" + b + " p").css({
-                            'background-color': '#c9fda8',
-                            'border-radius': '50px',
-                            'width': '80%',
-                            'margin-left': 'auto',
-                            'margin-right': 'auto'
-                        })
+                        $("#semana" + laSemana + "_Categoria" + b).addClass('boton_completado');
                     }
 
 
-                    $("#semana" + a + "_Categoria" + b).mouseover(function(event) {
-                        for (c = 1; c <= cuantasSemanas; c++) {
-                            for (d = 1; d <= that['cuantasCategorias' + c]; d++) {
-                                $("#semana" + c + "_Categoria" + d).css({
-                                    'background-color': 'transparent'
-                                })
-                            }
-                        }
-                        $("#semana" + laSemanaSel + "_Categoria" + laCategoriaSel).css({
-                            'background-color': '#eeeeee'
-                        })
-                        $(this).css({
-                            'background-color': '#eeeeee'
-                        })
-                    });
-                    $("#semana" + a + "_Categoria" + b).mouseout(function(event) {
-                        $(this).css({
-                            'background-color': 'transparent'
-                        })
-                        $("#semana" + laSemanaSel + "_Categoria" + laCategoriaSel).css({
-                            'background-color': '#eeeeee'
-                        })
-                    });
+                    // $("#semana" + a + "_Categoria" + b).mouseover(function(event) {
+                    //     for (c = 1; c <= cuantasSemanas; c++) {
+                    //         for (d = 1; d <= that['cuantasCategorias' + c]; d++) {
+                    //             $("#semana" + c + "_Categoria" + d).css({
+                    //                 'background-color': 'transparent'
+                    //             })
+                    //         }
+                    //     }
+                    //     $("#semana" + laSemanaSel + "_Categoria" + laCategoriaSel).css({
+                    //         'background-color': '#eeeeee'
+                    //     })
+                    //     $(this).css({
+                    //         'background-color': '#eeeeee'
+                    //     })
+                    // });
+                    // $("#semana" + a + "_Categoria" + b).mouseout(function(event) {
+                    //     $(this).css({
+                    //         'background-color': 'transparent'
+                    //     })
+                    //     $("#semana" + laSemanaSel + "_Categoria" + laCategoriaSel).css({
+                    //         'background-color': '#eeeeee'
+                    //     })
+                    // });
+
                     $("#semana" + a + "_Categoria" + b).click(function(event) {
                         event.preventDefault();
                         var cualSemana = parseInt($(this).attr('id').substr(6, 1));
@@ -484,7 +454,7 @@ function activaSeccionHome() {
             if (laCategoria != undefined || laCategoria != 0) {
                 loadCategoria(laSemana);
                 $('#divCategorias').hide();
-                $('#divCategorias, #flechaAbajoDias').fadeIn();
+                $('#divCategorias').fadeIn();
                 ajustaTamano();
             }
         }
@@ -496,81 +466,6 @@ function activaSeccionHome() {
         return $.ajax();
     }
 
-
-    function descargaTool(cualTool) {
-        console.log('descargaTool', cualTool);
-
-        switch (cualTool) {
-            case 1:
-                window.open('docs/Distribution_Agreement.pdf');
-                break;
-            case 2:
-                window.open('docs/Handheld_(HHC).pdf');
-                break;
-            case 3:
-                window.open('docs/ION_Coaching.pdf');
-                break;
-            case 4:
-                window.open('docs/ION_SetUp.pdf');
-                break;
-            case 5:
-                window.open('docs/Merchandising_Best_Practices.mov');
-                break;
-            case 6:
-                // window.open('docs/Distribution_Agreement.pdf');
-                break;
-            case 7:
-                // window.open('docs/Distribution_Agreement.pdf');
-                break;
-            case 8:
-                // window.open('docs/Distribution_Agreement.pdf');
-                break;
-            case 9:
-                // window.open('docs/Distribution_Agreement.pdf');
-                break;
-            case 10:
-                // window.open('docs/Distribution_Agreement.pdf');
-                break;
-            case 11:
-                // window.open('docs/Distribution_Agreement.pdf');
-                break;
-            case 12:
-                window.open('docs/Merchandising_SaraLee.mov');
-                break;
-            case 13:
-                // window.open('docs/Distribution_Agreement.pdf');
-                break;
-            case 14:
-                window.open('docs/Merchandising_Thomas.mov');
-                break;
-            case 15:
-                window.open('docs/Safe_Carry_Over_(SCO).pdf');
-                break;
-            case 16:
-                window.open('docs/Scan_Based_Trading_(SBT).pdf');
-                break;
-            case 17:
-                window.open('docs/SETTLEMENT.pdf');
-                break;
-
-            default:
-                break;
-        }
-
-    }
-
-
-
-    // tools
-    for (a = 1; a <= cuantosTools; a++) {
-        $("#botonTool" + a).click(function(event) {
-            event.preventDefault();
-            var cualBotonTool = parseInt($(this).attr('id').substr(9, 2));
-            console.log('cualBotonTool', cualBotonTool);
-
-            descargaTool(cualBotonTool);
-        });
-    }
 
 
     // siempre carga por default 

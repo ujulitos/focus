@@ -1,1 +1,722 @@
-var _0x9aa4=["\x41\x49\x7A\x61\x53\x79\x43\x39\x78\x54\x71\x6E\x37\x55\x5A\x72\x7A\x41\x39\x7A\x52\x73\x69\x6A\x32\x44\x37\x72\x4E\x52\x48\x57\x39\x39\x64\x75\x4C\x34\x55","\x62\x69\x6D\x62\x6F\x70\x72\x65\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x61\x70\x70\x2E\x63\x6F\x6D","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x62\x69\x6D\x62\x6F\x70\x72\x65\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x69\x6F\x2E\x63\x6F\x6D","\x62\x69\x6D\x62\x6F\x70\x72\x65","\x62\x69\x6D\x62\x6F\x70\x72\x65\x2E\x61\x70\x70\x73\x70\x6F\x74\x2E\x63\x6F\x6D","\x39\x34\x38\x39\x30\x36\x38\x39\x30\x36\x31\x31","\x31\x3A\x39\x34\x38\x39\x30\x36\x38\x39\x30\x36\x31\x31\x3A\x77\x65\x62\x3A\x63\x35\x34\x66\x37\x39\x37\x32\x33\x65\x39\x31\x32\x32\x30\x34\x65\x64\x61\x31\x30\x36","\x4C\x50\x30\x59\x6D\x49\x55\x4D\x50\x48\x61\x49\x69\x66\x62\x44\x47\x32\x4F\x59\x47\x45\x37\x35\x4E\x58\x70\x70\x37\x70\x53\x4D\x4C\x6A\x51\x79\x36\x71\x4D\x6F","\x4F\x72\x69\x65\x6E\x74\x61\x74\x69\x6F\x6E\x2F","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x62\x69\x6D\x62\x6F\x70\x72\x65\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x69\x6F\x2E\x63\x6F\x6D\x2F\x4F\x72\x69\x65\x6E\x74\x61\x74\x69\x6F\x6E","\x69\x6E\x69\x74\x69\x61\x6C\x69\x7A\x65\x41\x70\x70","\x61\x72\x72\x61\x79\x53\x74\x61\x74\x75\x73\x57\x65\x65\x6B\x73","\x61\x72\x72\x61\x79\x53\x74\x61\x74\x75\x73\x43\x61\x74\x73","\x43\x68\x65\x63\x6B\x69\x6E\x67\x20\x63\x6F\x6E\x6E\x65\x63\x74\x69\x6F\x6E\x2E\x2E\x2E","\x50\x6C\x65\x61\x73\x65\x20\x70\x72\x6F\x76\x69\x64\x65\x20\x76\x61\x6C\x69\x64\x20\x64\x61\x74\x61\x2E","\x50\x6C\x65\x61\x73\x65\x20\x66\x69\x6C\x6C\x20\x61\x6C\x6C\x20\x69\x6E\x70\x75\x74\x73\x20\x77\x69\x74\x68\x20\x76\x61\x6C\x69\x64\x20\x64\x61\x74\x61\x2E","\x2E\x69\x6E\x66\x6F\x2F\x63\x6F\x6E\x6E\x65\x63\x74\x65\x64","\x72\x65\x66","\x64\x61\x74\x61\x62\x61\x73\x65","\x76\x61\x6C\x75\x65","\x73\x68\x6F\x77","\x23\x64\x69\x76\x42\x6C\x6F\x71\x43\x6F\x6E\x65\x78\x69\x6F\x6E","\x76\x61\x6C","\x63\x6F\x6E\x6E\x65\x63\x74\x65\x64","\x6C\x6F\x67","\x68\x69\x64\x65","\x6F\x6E","\x70\x72\x65\x40\x69\x34\x6C\x2E\x6D\x78","\x69\x34\x6C\x23\x70\x72\x65","\x20\x79\x20","\x65\x6C\x50\x61\x73\x73\x77\x6F\x72\x64","\x23\x62\x6F\x74\x6F\x6E\x45\x6E\x74\x72\x61\x72","\x63\x75\x72\x72\x65\x6E\x74\x55\x73\x65\x72","\x61\x75\x74\x68","\x64\x69\x73\x70\x6C\x61\x79\x4E\x61\x6D\x65","\x65\x6C\x50\x65\x72\x66\x69\x6C\x5F\x44\x42","\x53\x75\x70\x65\x72\x41\x64\x6D\x69\x6E","\x41\x64\x6D\x69\x6E\x69\x73\x74\x72\x61\x64\x6F\x72","\x55\x73\x75\x61\x72\x69\x6F","\x55\x73\x65\x72\x6E\x61\x6D\x65","\x73\x6E\x61\x70\x73\x68\x6F\x74\x2E\x76\x61\x6C\x28\x29","\x6B\x65\x79","\x50\x61\x73\x73\x77\x6F\x72\x64","\x63\x68\x69\x6C\x64","\x75\x73\x75\x61\x72\x69\x6F\x43\x6F\x6E\x74\x72\x61\x73\x65\x6E\x61","\x49\x64","\x66\x6F\x72\x45\x61\x63\x68","\x6D\x65\x6E\x73\x61\x6A\x65\x5F\x65\x72\x72\x6F\x72\x5F\x6C\x6F\x67\x69\x6E","\x74\x65\x78\x74","\x2E\x6D\x65\x6E\x73\x61\x6A\x65\x5F\x65\x72\x72\x6F\x72\x5F\x6C\x6F\x67\x69\x6E","\x74\x68\x65\x6E","\x6F\x6E\x63\x65","\x65\x71\x75\x61\x6C\x54\x6F","\x6F\x72\x64\x65\x72\x42\x79\x43\x68\x69\x6C\x64","\x55\x73\x75\x61\x72\x69\x6F\x73","\x73\x69\x67\x6E\x49\x6E\x57\x69\x74\x68\x45\x6D\x61\x69\x6C\x41\x6E\x64\x50\x61\x73\x73\x77\x6F\x72\x64","\x65\x73","\x6C\x6F\x63\x61\x6C\x65","\x66\x6F\x72\x6D\x61\x74","\x6C\x61\x46\x65\x63\x68\x61","\x6C\x61\x46\x65\x63\x68\x61\x49\x6E\x69\x63\x69\x61\x6C","\x66\x72\x6F\x6D\x4E\x6F\x77","\x6C\x61\x44\x75\x72\x61\x63\x69\x6F\x6E","\x4C\x4C","\x44\x44\x2F\x4D\x4D\x2F\x59\x59\x59\x59","\x6C\x61\x46\x65\x63\x68\x61\x46\x6F\x72\x6D\x61\x74\x65\x61\x64\x61","\x44\x44\x2D\x4D\x4D\x2D\x59\x59\x59\x59","\x6C\x61\x46\x65\x63\x68\x61\x46\x6F\x72\x6D\x61\x74\x65\x61\x64\x61\x45\x73\x70","\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6A\x6B\x6C\x6D\x6E\x6F\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7A\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4A\x4B\x4C\x4D\x4E\x4F\x50\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5A","","\x72\x61\x6E\x64\x6F\x6D","\x6C\x65\x6E\x67\x74\x68","\x66\x6C\x6F\x6F\x72","\x73\x75\x62\x73\x74\x72","\x59\x59\x4D\x4D\x44\x44\x48\x48\x6D\x6D\x73\x73","\x6D\x69\x6E\x75\x74\x65\x73","\x64\x69\x66\x66","\x6C\x61\x53\x65\x73\x73\x69\x6F\x6E\x4D\x69\x6E\x75\x74\x6F\x73","\x74\x6F\x64\x61\x76\xED\x61\x20\x6E\x6F\x20\x65\x78\x70\x69\x72\x61\x20\x6C\x61\x20\x73\x65\x73\x73\x69\x6F\x6E","\x79\x61\x20\x65\x78\x70\x69\x72\xF3\x20\x6C\x61\x20\x73\x65\x73\x73\x69\x6F\x6E","\x6C\x6F\x63\x61\x6C\x53\x74\x6F\x72\x61\x67\x65","\x75\x73\x72","\x70\x73\x77","\x66\x63\x68\x5F\x69\x6E\x69","\x6C\x6F\x63\x61\x6C\x53\x74\x6F\x72\x61\x67\x65\x20\x6E\x6F\x20\x65\x73\x74\xE1\x20\x73\x6F\x70\x6F\x72\x74\x61\x64\x6F\x20\x65\x6E\x20\x65\x73\x74\x65\x20\x6E\x61\x76\x65\x67\x61\x64\x6F\x72\x2E","\x64\x69\x73\x61\x62\x6C\x65\x64","\x61\x74\x74\x72","\x23\x69\x6E\x70\x75\x74\x55\x73\x75\x61\x72\x69\x6F\x2C\x20\x23\x69\x6E\x70\x75\x74\x50\x61\x73\x73\x77\x6F\x72\x64","\x73\x65\x73\x69\x6F\x6E\x45\x78\x70\x69\x72\x61\x64\x61","\x70\x72\x6F\x70","\x6C\x6F\x67\x69\x6E","\x63\x6C\x65\x61\x72","\x64\x65\x73\x68\x61\x62\x69\x6C\x69\x74\x61\x64\x6F","\x61\x64\x64\x43\x6C\x61\x73\x73","\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73","\x75\x73\x75\x61\x72\x69\x6F\x49\x64","\x4E\x61\x6D\x65","\x4C\x61\x73\x74\x5F\x4E\x61\x6D\x65","\x65\x6C\x49\x64","\x50\x65\x72\x66\x69\x6C","\x65\x6C\x52\x6F\x6C","\x43\x6F\x75\x6E\x74\x72\x79","\x65\x6C\x43\x6F\x75\x6E\x74\x72\x79","\x52\x65\x67\x69\x6F\x6E","\x6C\x61\x52\x65\x67\x69\x6F\x6E","\x75\x70\x64\x61\x74\x65","\x55\x73\x75\x61\x72\x69\x6F\x73\x2F","\x6E\x6F\x20\x73\x65\x20\x65\x6E\x63\x75\x65\x6E\x74\x72\x61\x20\x75\x73\x75\x61\x72\x69\x6F","\x23\x69\x6E\x70\x75\x74\x55\x73\x75\x61\x72\x69\x6F","\x23\x69\x6E\x70\x75\x74\x50\x61\x73\x73\x77\x6F\x72\x64","\x2E\x6D\x65\x6E\x73\x61\x6A\x65\x5F\x6E\x6F\x6D\x62\x72\x65\x5F\x70\x65\x72\x66\x69\x6C","\x2E\x6E\x6F\x6D\x62\x72\x65\x5F\x70\x65\x72\x66\x69\x6C","\x68\x6F\x6D\x65","\x31","\x2E\x5F\x6C\x6F\x67\x69\x6E","\x63\x65\x72\x72\x61\x6E\x64\x6F\x20\x73\x65\x73\x69\x6F\x6E","\x4F\x63\x75\x72\x72\x69\xF3\x20\x75\x6E\x20\x65\x72\x72\x6F\x72\x20\x65\x6E\x20\x6C\x61\x20\x73\x69\x6E\x63\x72\x6F\x6E\x69\x7A\x61\x63\x69\xF3\x6E\x2E","\x23\x62\x6F\x74\x6F\x6E\x41\x74\x72\x61\x73","\x23\x62\x6F\x74\x6F\x6E\x53\x61\x6C\x69\x72","\x73\x69\x67\x6E\x4F\x75\x74","\x53\x69\x6E\x63\x72\x6F\x6E\x69\x7A\x61\x63\x69\xF3\x6E\x20\x72\x65\x61\x6C\x69\x7A\x61\x64\x61\x2E","\x62\x6C\x6F\x63\x6B","\x39\x39\x39","\x63\x73\x73","\x23\x63\x61\x72\x67\x61\x6E\x64\x6F","\x30\x2E\x33","\x61\x6E\x69\x6D\x61\x74\x65","\x23\x63\x61\x72\x67\x61\x6E\x64\x6F\x5F\x69\x6E\x74","\x6D\x75\x65\x73\x74\x72\x61","\x30","\x6E\x6F\x6E\x65","\x6F\x63\x75\x6C\x74\x61","\x73\x65\x63\x63\x69\x6F\x6E\x41\x63\x74\x75\x61\x6C","\x65\x6D\x70\x74\x79","\x23\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x69\x6E\x63\x2F","\x2E\x68\x74\x6D\x6C","\x73\x74\x61\x74\x75\x73","\x6C\x6F\x61\x64","\x23\x62\x6F\x74\x6F\x6E\x48\x6F\x6D\x65","\x73\x70\x6C\x61\x73\x68","\x2E\x6E\x61\x76\x62\x61\x72","\x35\x30\x70\x78","\x2E\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x30\x70\x78","\x74\x61\x73\x6B\x73","\x66\x6C\x65\x78","\x2E\x6E\x61\x76\x62\x61\x72\x5F\x74\x61\x73\x6B\x73","\x68\x69\x64\x64\x65\x6E","\x76\x69\x73\x69\x62\x6C\x65","\x23\x64\x69\x76\x53\x65\x6C\x65\x63\x74\x50\x61\x72","\x49\x42\x50","\x23\x64\x69\x76\x54\x6F\x6F\x6C\x73","\x63\x61\x6C\x65\x6E\x64\x61\x72","\x74\x6F\x6F\x6C\x73","\x23\x62\x6F\x74\x6F\x6E\x52\x65\x70\x6F\x72\x74\x65","\x23\x62\x6F\x74\x6F\x6E\x47\x75\x61\x72\x64\x61\x72","\x41\x64\x6D\x69\x6E","\x43\x6F\x61\x63\x68","\x63\x6C\x69\x63\x6B","\x6F\x66\x66","\x23\x62\x6F\x74\x6F\x6E\x43\x61\x6C\x65\x6E\x64\x61\x72\x69\x6F","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x23\x62\x6F\x74\x6F\x6E\x54\x6F\x6F\x6C\x73","\x23\x62\x6F\x74\x6F\x6E\x4C\x6F\x67\x4F\x75\x74","\x2E\x73\x65\x63\x63\x69\x6F\x6E","\x68\x65\x69\x67\x68\x74","\x2E\x77\x69\x7A\x61\x72\x64\x2D\x63\x61\x72\x64","\x63\x6C\x6F\x73\x65\x73\x74","\x61\x63\x74\x69\x76\x65","\x5B\x64\x61\x74\x61\x2D\x74\x6F\x67\x67\x6C\x65\x3D\x22\x77\x69\x7A\x61\x72\x64\x2D\x72\x61\x64\x69\x6F\x22\x5D","\x66\x69\x6E\x64","\x63\x68\x65\x63\x6B\x65\x64","\x72\x65\x6D\x6F\x76\x65\x41\x74\x74\x72","\x5B\x74\x79\x70\x65\x3D\x22\x72\x61\x64\x69\x6F\x22\x5D","\x74\x72\x75\x65","\x68\x61\x73\x43\x6C\x61\x73\x73","\x5B\x74\x79\x70\x65\x3D\x22\x63\x68\x65\x63\x6B\x62\x6F\x78\x22\x5D","\x5B\x64\x61\x74\x61\x2D\x74\x6F\x67\x67\x6C\x65\x3D\x22\x77\x69\x7A\x61\x72\x64\x2D\x63\x68\x65\x63\x6B\x62\x6F\x78\x22\x5D","\x75\x73\x65\x72\x41\x67\x65\x6E\x74","\x6D\x61\x74\x63\x68","\x73\x65\x72\x76\x69\x63\x65\x57\x6F\x72\x6B\x65\x72","\x53\x65\x72\x76\x69\x63\x65\x20\x57\x6F\x72\x6B\x65\x72\x20\x52\x65\x67\x69\x73\x74\x65\x72\x65\x64","\x2F\x6A\x73\x2F\x73\x77\x2E\x6A\x73","\x2F\x6A\x73\x2F","\x72\x65\x67\x69\x73\x74\x65\x72","\x53\x65\x72\x76\x69\x63\x65\x20\x57\x6F\x72\x6B\x65\x72\x20\x52\x65\x61\x64\x79","\x72\x65\x61\x64\x79","\x62\x61\x73\x65\x4F\x66\x66\x6C\x69\x6E\x65","\x68\x61\x73\x68","\x3F"];var config={apiKey:_0x9aa4[0],authDomain:_0x9aa4[1],databaseURL:_0x9aa4[2],projectId:_0x9aa4[3],storageBucket:_0x9aa4[4],messagingSenderId:_0x9aa4[5],appId:_0x9aa4[6]};var secret=_0x9aa4[7];var laUrlBase=_0x9aa4[8];var laUrlAPI=_0x9aa4[9];firebase[_0x9aa4[10]](config);var baseOk;var usuarioId;var elPerfil;var elPerfilNombre;var elPerfilApellido;var elRol;var cuantosUsuarios;var usuarioKey;var contadorKey=0;var usuarioSeleccionado;var usuarioSeleccionadoId;var connected=false;var laFecha;var laFechaFormateada;var laSesionActual;var minutosMaxSession=30;var that;var seccionActual;var laSemana;var elDia;var elDiaTotal;var laCategoria;var laSemanaSel=0;var elDiaSel=0;var laCategoriaSel=0;var dataWeeks;var cuantasSemanas;var totalGlobalCategorias=0;var totalGlobalDias=0;var totalGolabalSemanas=0;this[_0x9aa4[11]]= [];this[_0x9aa4[12]]= [];const arregloJson=[];_that= this;var mensajeConexion=_0x9aa4[13];var mensajeError=_0x9aa4[14];var mensajeErrorLogin=_0x9aa4[14];var mensajeErrorRegister=_0x9aa4[15];var revisaConexion=function(){var _0xbed1x29=firebase[_0x9aa4[18]]()[_0x9aa4[17]](_0x9aa4[16]);_0xbed1x29[_0x9aa4[26]](_0x9aa4[19],function(_0xbed1x2a){connected= false;$(_0x9aa4[21])[_0x9aa4[20]]();if(_0xbed1x2a[_0x9aa4[22]]()=== true){connected= true;console[_0x9aa4[24]](_0x9aa4[23],connected);$(_0x9aa4[21])[_0x9aa4[25]]();return connected}})};var email=_0x9aa4[27];var password=_0x9aa4[28];function login(_0xbed1x2e,_0xbed1x2f){console[_0x9aa4[24]](_0xbed1x2e,_0x9aa4[29],_0xbed1x2f);var _0xbed1x30=md5(_0xbed1x2f);console[_0x9aa4[24]](_0x9aa4[30],_0xbed1x30);habilitaBoton($(_0x9aa4[31]),false);baseOk= firebase[_0x9aa4[33]]()[_0x9aa4[55]](email,password)[_0x9aa4[50]](function(_0xbed1x31){var _0xbed1x32=firebase[_0x9aa4[33]]()[_0x9aa4[32]];var _0xbed1x33,email,_0xbed1x34,_0xbed1x35;if(_0xbed1x32!= null){var _0xbed1x36=_0xbed1x32[_0x9aa4[34]];console[_0x9aa4[24]](_0x9aa4[35],_0xbed1x36);elPerfil= _0xbed1x32[_0x9aa4[34]];console[_0x9aa4[24]](_0x9aa4[35],_0xbed1x36);if(_0xbed1x36=== _0x9aa4[36]|| _0xbed1x36=== _0x9aa4[37]|| _0xbed1x36=== _0x9aa4[38]){var _0xbed1x37=_0x9aa4[39];var _0xbed1x38=_0xbed1x2e;firebase[_0x9aa4[18]]()[_0x9aa4[17]](laUrlBase+ _0x9aa4[54])[_0x9aa4[53]](_0xbed1x37)[_0x9aa4[52]](_0xbed1x38)[_0x9aa4[51]](_0x9aa4[19])[_0x9aa4[50]](function(_0xbed1x39){if(_0xbed1x39[_0x9aa4[22]]()!= null){console[_0x9aa4[24]](_0x9aa4[40],_0xbed1x39[_0x9aa4[22]]());_0xbed1x39[_0x9aa4[46]](function(_0xbed1x3a){usuarioKey= _0xbed1x3a[_0x9aa4[41]];usuarioContrasena= _0xbed1x39[_0x9aa4[43]](_0xbed1x3a[_0x9aa4[41]])[_0x9aa4[43]](_0x9aa4[42])[_0x9aa4[22]]();console[_0x9aa4[24]](_0x9aa4[44],usuarioContrasena);usuarioId= _0xbed1x39[_0x9aa4[43]](_0xbed1x3a[_0x9aa4[41]])[_0x9aa4[43]](_0x9aa4[45])[_0x9aa4[22]]()});if(_0xbed1x30=== usuarioContrasena){registraLocalStorage(_0xbed1x2e,_0xbed1x2f);ingresa(usuarioId)}else {console[_0x9aa4[24]](_0x9aa4[47]);$(_0x9aa4[49])[_0x9aa4[48]](mensajeErrorLogin);habilitaBoton($(_0x9aa4[31]),true)}}else {console[_0x9aa4[24]](_0x9aa4[47]);$(_0x9aa4[49])[_0x9aa4[48]](mensajeErrorLogin);habilitaBoton($(_0x9aa4[31]),true)}})}}},function(_0xbed1x3b){$(_0x9aa4[49])[_0x9aa4[48]](mensajeErrorLogin);habilitaBoton($(_0x9aa4[31]),true)})}function obtenerFecha(){moment[_0x9aa4[57]](_0x9aa4[56]);var laFecha=moment()[_0x9aa4[58]]();console[_0x9aa4[24]](_0x9aa4[59],laFecha);return laFecha}function obtenerFechaInicial(){moment[_0x9aa4[57]](_0x9aa4[56]);laFechaInicial= moment()[_0x9aa4[58]]();console[_0x9aa4[24]](_0x9aa4[60],laFechaInicial);return laFechaInicial}function obtenerDuracion(){moment[_0x9aa4[57]](_0x9aa4[56]);laFechaFinal= moment()[_0x9aa4[58]]();laDuracion= moment(laFechaInicial)[_0x9aa4[61]](true);console[_0x9aa4[24]](_0x9aa4[62],laDuracion);return laDuracion}laFecha= obtenerFecha();laFechaInicial= obtenerFechaInicial();laFechaFinal= moment()[_0x9aa4[58]](_0x9aa4[63]);function obtenerFechaFormateada(){var laFechaFormateada=moment()[_0x9aa4[57]](_0x9aa4[56])[_0x9aa4[58]](_0x9aa4[64]);console[_0x9aa4[24]](_0x9aa4[65],laFechaFormateada);return laFechaFormateada}function obtenerFechaFormateadaEsp(_0xbed1x41){var _0xbed1x42=moment(_0xbed1x41)[_0x9aa4[58]](_0x9aa4[66]);console[_0x9aa4[24]](_0x9aa4[67],_0xbed1x41);return _0xbed1x42}function generarId(){var _0xbed1x44=_0x9aa4[68];var _0xbed1x45=4;code= _0x9aa4[69];for(x= 0;x< _0xbed1x45;x++){rand= Math[_0x9aa4[72]](Math[_0x9aa4[70]]()* _0xbed1x44[_0x9aa4[71]]);code+= _0xbed1x44[_0x9aa4[73]](rand,1)};var _0xbed1x46=moment()[_0x9aa4[58]](_0x9aa4[74]);var _0xbed1x47=(_0xbed1x46)+ code;console[_0x9aa4[24]](_0xbed1x47);return _0xbed1x47}function obtenersesionExpirada(_0xbed1x41){laFechaHoyPrev= obtenerFecha();laFechaHoy= moment(laFechaHoyPrev);_0xbed1x41= moment(_0xbed1x41);var _0xbed1x49=laFechaHoy[_0x9aa4[76]](_0xbed1x41,_0x9aa4[75]);console[_0x9aa4[24]](_0x9aa4[77],_0xbed1x49);if(_0xbed1x49< minutosMaxSession){console[_0x9aa4[24]](_0x9aa4[78]);return false}else {console[_0x9aa4[24]](_0x9aa4[79]);return true}}function registraLocalStorage(_0xbed1x32,password){if(_0x9aa4[80] in  window&& window[_0x9aa4[80]]!== null){localStorage[_0x9aa4[81]]= _0xbed1x32;localStorage[_0x9aa4[82]]= password;localStorage[_0x9aa4[83]]= obtenerFecha()}else {console[_0x9aa4[24]](_0x9aa4[84])}}function leeLocalStorage(){$(_0x9aa4[87])[_0x9aa4[86]](_0x9aa4[85],_0x9aa4[85]);try{usr= localStorage[_0x9aa4[81]];psw= localStorage[_0x9aa4[82]];if(usr!= null&& psw!= null){var _0xbed1x4c=obtenersesionExpirada(localStorage[_0x9aa4[83]]);console[_0x9aa4[24]](_0x9aa4[88],_0xbed1x4c);if(_0xbed1x4c== false){login(usr,psw)}else {$(_0x9aa4[87])[_0x9aa4[89]](_0x9aa4[85],false);eliminaLocalStorage();loadSeccion(_0x9aa4[90])}}else {loadSeccion(_0x9aa4[90]);$(_0x9aa4[87])[_0x9aa4[89]](_0x9aa4[85],false)}}catch(e){storage= {}}}function eliminaLocalStorage(){localStorage[_0x9aa4[91]]()}function habilitaBoton(_0xbed1x4f,_0xbed1x50){if(_0xbed1x50== false){_0xbed1x4f[_0x9aa4[93]](_0x9aa4[92])}else {_0xbed1x4f[_0x9aa4[94]](_0x9aa4[92])}}function habilitaDiv(_0xbed1x4f,_0xbed1x50){if(_0xbed1x50== false){_0xbed1x4f[_0x9aa4[93]](_0x9aa4[85])}else {_0xbed1x4f[_0x9aa4[94]](_0x9aa4[85])}}function ingresa(usuarioId){console[_0x9aa4[24]](_0x9aa4[95],usuarioId);if(usuarioId!= null){if(revisaConexion){firebase[_0x9aa4[18]]()[_0x9aa4[17]](laUrlBase+ _0x9aa4[54])[_0x9aa4[53]](_0x9aa4[45])[_0x9aa4[52]](usuarioId)[_0x9aa4[51]](_0x9aa4[19])[_0x9aa4[50]](function(_0xbed1x39){if(_0xbed1x39[_0x9aa4[22]]()!= null){_0xbed1x39[_0x9aa4[46]](function(_0xbed1x3a){var _0xbed1x53=_0xbed1x39[_0x9aa4[43]](_0xbed1x3a[_0x9aa4[41]])[_0x9aa4[43]](_0x9aa4[96])[_0x9aa4[22]]();elPerfilNombre= _0xbed1x53;var _0xbed1x54=_0xbed1x39[_0x9aa4[43]](_0xbed1x3a[_0x9aa4[41]])[_0x9aa4[43]](_0x9aa4[97])[_0x9aa4[22]]();elPerfilApellido= _0xbed1x54;var _0xbed1x55=_0xbed1x39[_0x9aa4[43]](_0xbed1x3a[_0x9aa4[41]])[_0x9aa4[43]](_0x9aa4[45])[_0x9aa4[22]]();console[_0x9aa4[24]](_0x9aa4[98],_0xbed1x55);elRol= _0xbed1x39[_0x9aa4[43]](_0xbed1x3a[_0x9aa4[41]])[_0x9aa4[43]](_0x9aa4[99])[_0x9aa4[22]]();console[_0x9aa4[24]](_0x9aa4[100],elRol);var _0xbed1x56=_0xbed1x39[_0x9aa4[43]](_0xbed1x3a[_0x9aa4[41]])[_0x9aa4[43]](_0x9aa4[101])[_0x9aa4[22]]();console[_0x9aa4[24]](_0x9aa4[102],_0xbed1x56);var _0xbed1x57=_0xbed1x39[_0x9aa4[43]](_0xbed1x3a[_0x9aa4[41]])[_0x9aa4[43]](_0x9aa4[103])[_0x9aa4[22]]();console[_0x9aa4[24]](_0x9aa4[104],_0xbed1x57);firebase[_0x9aa4[18]]()[_0x9aa4[17]](laUrlBase+ _0x9aa4[106]+ usuarioKey)[_0x9aa4[105]]({"\x41\x63\x74\x69\x76\x6F":true});_0xbed1x58()})}else {console[_0x9aa4[24]](_0x9aa4[107])}})}}else {_0xbed1x58()};function _0xbed1x58(){habilitaBoton($(_0x9aa4[31]),false);$(_0x9aa4[108])[_0x9aa4[22]](_0x9aa4[69]);$(_0x9aa4[109])[_0x9aa4[22]](_0x9aa4[69]);$(_0x9aa4[110])[_0x9aa4[48]](_0x9aa4[69]);$(_0x9aa4[49])[_0x9aa4[48]](_0x9aa4[69]);$(_0x9aa4[111])[_0x9aa4[48]](elPerfilNombre);loadSeccion(_0x9aa4[112])}}function loginUser(){var _0xbed1x32=$(_0x9aa4[108])[_0x9aa4[22]]();var password=$(_0x9aa4[109])[_0x9aa4[22]]();$(_0x9aa4[49])[_0x9aa4[48]](_0x9aa4[69]);var _0xbed1x5a=_0x9aa4[69];if(_0xbed1x32[_0x9aa4[71]]=== 0){_0xbed1x5a+= _0x9aa4[113];$(_0x9aa4[49])[_0x9aa4[48]](mensajeErrorLogin)};if(password[_0x9aa4[71]]=== 0){_0xbed1x5a+= _0x9aa4[113];$(_0x9aa4[49])[_0x9aa4[48]](mensajeErrorLogin)};if(_0xbed1x5a[_0x9aa4[71]]> 0){$(_0x9aa4[49])[_0x9aa4[48]](mensajeErrorLogin)}else {var _0xbed1x5b={Correo:_0xbed1x32,Contrasena:password};login(_0xbed1x5b.Correo,_0xbed1x5b.Contrasena);$(_0x9aa4[114])[_0x9aa4[22]](_0x9aa4[69])}}function cierraSesion(){console[_0x9aa4[24]](_0x9aa4[115]);var _0xbed1x5d=function(_0xbed1x3b){if(_0xbed1x3b){console[_0x9aa4[24]](_0x9aa4[116])}else {firebase[_0x9aa4[33]]()[_0x9aa4[119]]()[_0x9aa4[50]](function(){habilitaBoton($(_0x9aa4[31]),true);$(_0x9aa4[87])[_0x9aa4[89]](_0x9aa4[85],false);eliminaLocalStorage();$(_0x9aa4[117])[_0x9aa4[25]]();$(_0x9aa4[118])[_0x9aa4[25]]();$(_0x9aa4[111])[_0x9aa4[48]](_0x9aa4[69]);seccionActual= undefined;laSemana= undefined;elDia= undefined;laCategoria= undefined;laSemanaSel= undefined;elDiaSel= undefined;laCategoriaSel= undefined;usuarioSeleccionadoId= undefined;usuarioSeleccionado= undefined;loadSeccion(_0x9aa4[90])},function(_0xbed1x3b){});usuarioId= _0x9aa4[69];console[_0x9aa4[24]](_0x9aa4[120]);cierraMenu()}};firebase[_0x9aa4[18]]()[_0x9aa4[17]](laUrlBase+ _0x9aa4[106]+ usuarioKey)[_0x9aa4[105]]({"\x41\x63\x74\x69\x76\x6F":false},_0xbed1x5d)}function cierraMenu(){}function cargador(_0xbed1x60){var _0xbed1x61=100;switch(_0xbed1x60){case _0x9aa4[128]:$(_0x9aa4[124])[_0x9aa4[123]]({'\x64\x69\x73\x70\x6C\x61\x79':_0x9aa4[121],'\x7A\x2D\x69\x6E\x64\x65\x78':_0x9aa4[122]});$(_0x9aa4[127])[_0x9aa4[126]]({'\x6F\x70\x61\x63\x69\x74\x79':_0x9aa4[125]},_0xbed1x61,function(){});break;case _0x9aa4[131]:$(_0x9aa4[127])[_0x9aa4[126]]({'\x6F\x70\x61\x63\x69\x74\x79':_0x9aa4[129]},_0xbed1x61,function(){$(_0x9aa4[124])[_0x9aa4[123]]({'\x64\x69\x73\x70\x6C\x61\x79':_0x9aa4[130]})});break}}function loadSeccion(_0xbed1x63){seccionActual= _0xbed1x63;console[_0x9aa4[24]](_0x9aa4[132],seccionActual);$(_0x9aa4[134])[_0x9aa4[133]]();$(_0x9aa4[134])[_0x9aa4[138]](_0x9aa4[135]+ _0xbed1x63+ _0x9aa4[136],function(_0xbed1x64,_0xbed1x65,_0xbed1x66){console[_0x9aa4[24]](_0x9aa4[137],_0xbed1x65)});$(_0x9aa4[139])[_0x9aa4[25]]();if(seccionActual!= _0x9aa4[140]&& seccionActual!= _0x9aa4[90]&& seccionActual!= _0x9aa4[112]){$(_0x9aa4[139])[_0x9aa4[20]]()};$(_0x9aa4[117])[_0x9aa4[25]]();$(_0x9aa4[118])[_0x9aa4[25]]();if(seccionActual!= _0x9aa4[140]&& seccionActual!= _0x9aa4[90]){$(_0x9aa4[118])[_0x9aa4[20]]();$(_0x9aa4[141])[_0x9aa4[123]]({'\x64\x69\x73\x70\x6C\x61\x79':_0x9aa4[121]});$(_0x9aa4[143])[_0x9aa4[123]]({'\x6D\x61\x72\x67\x69\x6E\x2D\x74\x6F\x70':_0x9aa4[142]})}else {$(_0x9aa4[141])[_0x9aa4[123]]({'\x64\x69\x73\x70\x6C\x61\x79':_0x9aa4[130]});$(_0x9aa4[143])[_0x9aa4[123]]({'\x6D\x61\x72\x67\x69\x6E\x2D\x74\x6F\x70':_0x9aa4[144]})};if(seccionActual== _0x9aa4[145]){$(_0x9aa4[147])[_0x9aa4[123]]({'\x64\x69\x73\x70\x6C\x61\x79':_0x9aa4[146]});$(_0x9aa4[117])[_0x9aa4[20]]()}else {$(_0x9aa4[147])[_0x9aa4[123]]({'\x64\x69\x73\x70\x6C\x61\x79':_0x9aa4[130]})};if(seccionActual== _0x9aa4[90]){$(_0x9aa4[134])[_0x9aa4[123]]({'\x6F\x76\x65\x72\x66\x6C\x6F\x77\x2D\x78':_0x9aa4[148]});seccionActual= undefined;laSemana= undefined;elDia= undefined;laCategoria= undefined;laSemanaSel= undefined;elDiaSel= undefined;laCategoriaSel= undefined}else {$(_0x9aa4[134])[_0x9aa4[123]]({'\x6F\x76\x65\x72\x66\x6C\x6F\x77\x2D\x78':_0x9aa4[149]})};$(_0x9aa4[150])[_0x9aa4[25]]();if(seccionActual=== _0x9aa4[112]){if(elRol!== _0x9aa4[151]){$(_0x9aa4[150])[_0x9aa4[20]]()}};$(_0x9aa4[152])[_0x9aa4[123]]({'\x64\x69\x73\x70\x6C\x61\x79':_0x9aa4[130]});if(seccionActual=== _0x9aa4[112]|| seccionActual=== _0x9aa4[153]|| seccionActual=== _0x9aa4[154]){$(_0x9aa4[152])[_0x9aa4[123]]({'\x64\x69\x73\x70\x6C\x61\x79':_0x9aa4[146]})};habilitaDiv($(_0x9aa4[155]),false);habilitaDiv($(_0x9aa4[156]),true);if(elRol=== _0x9aa4[157]|| elRol=== _0x9aa4[158]){habilitaDiv($(_0x9aa4[156]),false)};$(document)[_0x9aa4[160]](_0x9aa4[159],_0x9aa4[139])[_0x9aa4[26]](_0x9aa4[159],_0x9aa4[139],function(_0xbed1x67){if(seccionActual== _0x9aa4[145]){loadSeccion(_0x9aa4[112])};if(seccionActual== _0x9aa4[153]){loadSeccion(_0x9aa4[112])};if(seccionActual== _0x9aa4[154]){loadSeccion(_0x9aa4[112])}});$(document)[_0x9aa4[160]](_0x9aa4[159],_0x9aa4[155])[_0x9aa4[26]](_0x9aa4[159],_0x9aa4[155],function(_0xbed1x67){descargaReporte()});$(document)[_0x9aa4[160]](_0x9aa4[159],_0x9aa4[161])[_0x9aa4[26]](_0x9aa4[159],_0x9aa4[161],function(_0xbed1x67){event[_0x9aa4[162]]();loadSeccion(_0x9aa4[153])});$(document)[_0x9aa4[160]](_0x9aa4[159],_0x9aa4[163])[_0x9aa4[26]](_0x9aa4[159],_0x9aa4[163],function(_0xbed1x67){loadSeccion(_0x9aa4[154])});$(document)[_0x9aa4[160]](_0x9aa4[159],_0x9aa4[117])[_0x9aa4[26]](_0x9aa4[159],_0x9aa4[117],function(_0xbed1x67){loadSeccion(_0x9aa4[112])});$(document)[_0x9aa4[160]](_0x9aa4[159],_0x9aa4[118])[_0x9aa4[26]](_0x9aa4[159],_0x9aa4[118],function(_0xbed1x67){cierraSesion()});$(_0x9aa4[164])[_0x9aa4[159]](function(){cierraSesion()})}function ajustaTamano(){$(_0x9aa4[165])[_0x9aa4[123]]({'\x68\x65\x69\x67\x68\x74':_0x9aa4[144]});return reAjustaTamano()}function reAjustaTamano(){var _0xbed1x6a=$(document)[_0x9aa4[166]]();var _0xbed1x6b=$(_0x9aa4[165])[_0x9aa4[166]]();if(seccionActual== _0x9aa4[140]|| seccionActual== _0x9aa4[90]|| seccionActual== undefined){$(_0x9aa4[165])[_0x9aa4[123]]({'\x68\x65\x69\x67\x68\x74':(_0xbed1x6a- 60)})}else {if((_0xbed1x6b+ 110)< _0xbed1x6a){$(_0x9aa4[165])[_0x9aa4[123]]({'\x68\x65\x69\x67\x68\x74':(_0xbed1x6a- 110)})}}}function activaRadio(){$(_0x9aa4[170])[_0x9aa4[159]](function(){wizard= $(this)[_0x9aa4[168]](_0x9aa4[167]);wizard[_0x9aa4[171]](_0x9aa4[170])[_0x9aa4[94]](_0x9aa4[169]);$(this)[_0x9aa4[93]](_0x9aa4[169]);$(wizard)[_0x9aa4[171]](_0x9aa4[174])[_0x9aa4[173]](_0x9aa4[172]);$(this)[_0x9aa4[171]](_0x9aa4[174])[_0x9aa4[86]](_0x9aa4[172],_0x9aa4[175])})}function activaCheckbox(){$(_0x9aa4[178])[_0x9aa4[159]](function(){if($(this)[_0x9aa4[176]](_0x9aa4[169])){$(this)[_0x9aa4[94]](_0x9aa4[169]);$(this)[_0x9aa4[171]](_0x9aa4[177])[_0x9aa4[173]](_0x9aa4[172])}else {$(this)[_0x9aa4[93]](_0x9aa4[169]);$(this)[_0x9aa4[171]](_0x9aa4[177])[_0x9aa4[86]](_0x9aa4[172],_0x9aa4[175])}})}function detectMobile(){console[_0x9aa4[24]](_0x9aa4[179],navigator[_0x9aa4[179]]);if(navigator[_0x9aa4[179]][_0x9aa4[180]](/Android/i)|| navigator[_0x9aa4[179]][_0x9aa4[180]](/webOS/i)|| navigator[_0x9aa4[179]][_0x9aa4[180]](/iPhone/i)|| navigator[_0x9aa4[179]][_0x9aa4[180]](/iPad/i)|| navigator[_0x9aa4[179]][_0x9aa4[180]](/iPod/i)|| navigator[_0x9aa4[179]][_0x9aa4[180]](/BlackBerry/i)|| navigator[_0x9aa4[179]][_0x9aa4[180]](/Windows Phone/i)){return true}}var isMobile=detectMobile();$(document)[_0x9aa4[187]](function(){if(_0x9aa4[181] in  navigator){navigator[_0x9aa4[181]][_0x9aa4[185]](_0x9aa4[183],{scope:_0x9aa4[184]})[_0x9aa4[50]](function(_0xbed1x70){console[_0x9aa4[24]](_0x9aa4[182])});navigator[_0x9aa4[181]][_0x9aa4[187]][_0x9aa4[50]](function(_0xbed1x70){console[_0x9aa4[24]](_0x9aa4[186])})};var _0xbed1x71= new PouchDB(_0x9aa4[188]);var _0xbed1x72={};addToHomescreen();habilitaBoton($(_0x9aa4[31]),false);loadSeccion(_0x9aa4[140]);ran= generarId();location[_0x9aa4[189]]= _0x9aa4[190]+ ran})
+// Paper Bootstrap Wizard Functions
+
+var config = {
+    apiKey: "AIzaSyC9xTqn7UZrzA9zRsij2D7rNRHW99duL4U",
+    authDomain: "bimbopre.firebaseapp.com",
+    databaseURL: "https://bimbopre.firebaseio.com",
+    projectId: "bimbopre",
+    storageBucket: "bimbopre.appspot.com",
+    messagingSenderId: "948906890611",
+    appId: "1:948906890611:web:c54f79723e912204eda106"
+};
+var secret = 'LP0YmIUMPHaIifbDG2OYGE75NXpp7pSMLjQy6qMo';
+var laUrlBase = "Orientation/";
+var laUrlAPI = "https://bimbopre.firebaseio.com/Orientation";
+
+firebase.initializeApp(config);
+
+var baseOk;
+var usuarioId;
+var elPerfil;
+var elPerfilNombre;
+var elPerfilApellido;
+var elRol;
+var cuantosUsuarios;
+var usuarioKey;
+var contadorKey = 0;
+var usuarioSeleccionado;
+var usuarioSeleccionadoId;
+var connected = false;
+var laFecha;
+var laFechaFormateada;
+var laSesionActual;
+var minutosMaxSession = 30;
+var that;
+
+var seccionActual;
+var laSemana;
+var elDia;
+var elDiaTotal;
+var laCategoria;
+var laSemanaSel = 0;
+var elDiaSel = 0;
+var laCategoriaSel = 0;
+var dataWeeks;
+var cuantasSemanas;
+/*******Variables definidas por Jordan para funcionalidad de botón Next & Save********/
+var totalGlobalCategorias = 0;
+var totalGlobalDias = 0;
+var totalGolabalSemanas = 0;
+/********************************************************************************************/
+this.arrayStatusWeeks = [];
+this.arrayStatusCats = [];
+const arregloJson = [];
+_that = this;
+
+var mensajeConexion = 'Checking connection...';
+var mensajeError = 'Please provide valid data.';
+var mensajeErrorLogin = 'Please provide valid data.';
+var mensajeErrorRegister = 'Please fill all inputs with valid data.';
+
+
+var revisaConexion = function() {
+    var connectedRef = firebase.database().ref(".info/connected");
+    connectedRef.on("value", function(snap) {
+        connected = false;
+        $('#divBloqConexion').show();
+        if (snap.val() === true) {
+            connected = true;
+            console.log("connected", connected);
+            $('#divBloqConexion').hide();
+            return connected;
+        }
+    });
+}
+
+
+// var Nav = new hcOffcanvasNav('#side_menu', {
+//     // width: 300,
+//     disableAt: false,
+//     customToggle: '#navbar_boton_menu',
+//     levelSpacing: 40,
+//     // navTitle: 'ORIENTATION PLAYBOOK',
+//     levelTitles: false,
+//     levelTitleAsBack: false,
+//     pushContent: false,
+//     // labelClose: 'orale',
+//     labelBack: '',
+//     levelOpen: 'overlap',
+//     insertBack: true
+// });
+
+
+
+var email = 'pre@i4l.mx';
+var password = 'i4l#pre';
+
+function login(cualUsuario, cualPassword) {
+    console.log(cualUsuario, ' y ', cualPassword);
+
+    var elPassword = md5(cualPassword);
+    console.log('elPassword', elPassword);
+
+    habilitaBoton($('#botonEntrar'), false);
+    baseOk = firebase.auth().signInWithEmailAndPassword(email, password).then(function(result) {
+            //  console.log('baseOk', baseOk);
+
+            var user = firebase.auth().currentUser;
+            var name, email, uid, perfil;
+
+            // user.updateProfile({
+            //     displayName: "Usuario"
+            // }).then(function () {
+            //     // Update successful.
+            // }, function (error) {
+            //     // An error happened.
+            // });
+            // console.log('user.displayName', user.displayName);
+
+            if (user != null) {
+
+                var elPerfil_DB = user.displayName;
+                console.log("elPerfil_DB", elPerfil_DB);
+                elPerfil = user.displayName;
+                console.log("elPerfil_DB", elPerfil_DB);
+
+                if (elPerfil_DB === "SuperAdmin" || elPerfil_DB === "Administrador" || elPerfil_DB === "Usuario") {
+
+                    var valBuscar1 = 'Username';
+                    var valBuscar2 = cualUsuario;
+
+                    firebase.database().ref(laUrlBase + 'Usuarios').orderByChild(valBuscar1).equalTo(valBuscar2).once('value').then(function(snapshot) {
+
+                        if (snapshot.val() != null) {
+                            console.log('snapshot.val()', snapshot.val());
+
+                            snapshot.forEach(function(childSnapshot) {
+                                usuarioKey = childSnapshot.key;
+                                // console.log('usuarioKey', usuarioKey);
+                                usuarioContrasena = snapshot.child(childSnapshot.key).child('Password').val();
+                                console.log('usuarioContrasena', usuarioContrasena);
+                                usuarioId = snapshot.child(childSnapshot.key).child('Id').val();
+                                // console.log('usuarioId', usuarioId);
+                            });
+                            if (elPassword === usuarioContrasena) {
+                                registraLocalStorage(cualUsuario, cualPassword);
+                                ingresa(usuarioId);
+                            } else {
+                                console.log('mensaje_error_login');
+                                $('.mensaje_error_login').text(mensajeErrorLogin);
+                                habilitaBoton($('#botonEntrar'), true);
+                            }
+                        } else {
+                            console.log('mensaje_error_login');
+                            $('.mensaje_error_login').text(mensajeErrorLogin);
+                            habilitaBoton($('#botonEntrar'), true);
+                        }
+                    });
+                }
+
+            }
+        },
+        function(error) {
+            $('.mensaje_error_login').text(mensajeErrorLogin);
+            habilitaBoton($('#botonEntrar'), true);
+        });
+}
+
+
+
+///////////////////////////////// fechas ///////////////////////////////////////
+
+function obtenerFecha() {
+    moment.locale('es');
+    var laFecha = moment().format();
+    console.log('laFecha', laFecha);
+
+    //    var tiempo = moment().format('DDMMYYHHmmss');
+    // console.log('tiempo', tiempo);
+
+    return laFecha;
+}
+//obtenerFecha();
+
+function obtenerFechaInicial() {
+    moment.locale('es');
+    laFechaInicial = moment().format();
+    console.log('laFechaInicial', laFechaInicial);
+
+    return laFechaInicial;
+}
+//obtenerFechaInicial();
+
+function obtenerDuracion() {
+    moment.locale('es');
+    laFechaFinal = moment().format();
+    laDuracion = moment(laFechaInicial).fromNow(true);
+    console.log('laDuracion', laDuracion);
+
+    return laDuracion;
+}
+//obtenerDuracion();
+
+
+laFecha = obtenerFecha();
+laFechaInicial = obtenerFechaInicial();
+laFechaFinal = moment().format('LL');
+//
+// console.log('laFecha', laFecha);
+// console.log('laFechaInicial', laFechaInicial);
+// console.log('laFechaFinal', laFechaFinal);
+
+
+function obtenerFechaFormateada() {
+    var laFechaFormateada = moment().locale('es').format('DD/MM/YYYY');
+    console.log('laFechaFormateada', laFechaFormateada);
+
+    return laFechaFormateada;
+};
+
+function obtenerFechaFormateadaEsp(cualFecha) {
+    var laFechaFormateadaEsp = moment(cualFecha).format('DD-MM-YYYY');
+    console.log('laFechaFormateadaEsp', cualFecha);
+
+    return laFechaFormateadaEsp;
+};
+
+
+function generarId() {
+    var caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var longitud = 4;
+    code = '';
+    for (x = 0; x < longitud; x++) {
+        rand = Math.floor(Math.random() * caracteres.length);
+        code += caracteres.substr(rand, 1);
+    }
+    var tiempo = moment().format('YYMMDDHHmmss');
+    var idNuevo = (tiempo) + code;
+    console.log(idNuevo);
+
+    return idNuevo;
+};
+
+function obtenersesionExpirada(cualFecha) {
+    laFechaHoyPrev = obtenerFecha();
+    laFechaHoy = moment(laFechaHoyPrev);
+    cualFecha = moment(cualFecha);
+    // console.log('cualFecha', cualFecha);
+    // console.log('laFechaHoy', laFechaHoy);
+    var laSessionMinutos = laFechaHoy.diff(cualFecha, 'minutes');
+    console.log('laSessionMinutos', laSessionMinutos);
+
+    if (laSessionMinutos < minutosMaxSession) {
+        console.log('todavía no expira la session');
+        return false;
+    } else {
+        console.log('ya expiró la session');
+        return true;
+    };
+};
+
+function registraLocalStorage(user, password) {
+    if ('localStorage' in window && window['localStorage'] !== null) {
+        localStorage.usr = user;
+        localStorage.psw = password;
+        localStorage.fch_ini = obtenerFecha();
+        // console.log('usr', localStorage.usr, ' y psw', localStorage.psw);
+    } else {
+        console.log('localStorage no está soportado en este navegador.');
+    }
+}
+
+function leeLocalStorage() {
+    $("#inputUsuario, #inputPassword").attr("disabled", "disabled");
+    try {
+        usr = localStorage.usr;
+        psw = localStorage.psw;
+        if (usr != null && psw != null) {
+            var sesionExpirada = obtenersesionExpirada(localStorage.fch_ini);
+            console.log('sesionExpirada', sesionExpirada);
+            if (sesionExpirada == false) {
+                login(usr, psw);
+            } else {
+                $("#inputUsuario, #inputPassword").prop("disabled", false);
+                eliminaLocalStorage();
+                loadSeccion('login');
+            }
+        } else {
+            loadSeccion('login');
+            $("#inputUsuario, #inputPassword").prop("disabled", false);
+        }
+    } catch (e) {
+        storage = {};
+    }
+}
+
+function eliminaLocalStorage() {
+    localStorage.clear();
+}
+
+
+function habilitaBoton(cualBoton, modo) {
+    if (modo == false) {
+        cualBoton.addClass('deshabilitado');
+    } else {
+        cualBoton.removeClass('deshabilitado');
+    };
+};
+
+function habilitaDiv(cualBoton, modo) {
+    if (modo == false) {
+        cualBoton.addClass('disabled');
+    } else {
+        cualBoton.removeClass('disabled');
+    };
+};
+
+
+function ingresa(usuarioId) {
+    console.log('usuarioId', usuarioId);
+
+    if (usuarioId != null) {
+
+        if (revisaConexion) {
+            firebase.database().ref(laUrlBase + 'Usuarios').orderByChild('Id').equalTo(usuarioId).once('value').then(function(snapshot) {
+                if (snapshot.val() != null) {
+
+                    snapshot.forEach(function(childSnapshot) {
+                        var elNombreRes = snapshot.child(childSnapshot.key).child('Name').val();
+                        elPerfilNombre = elNombreRes;
+                        var elApellidoRes = snapshot.child(childSnapshot.key).child('Last_Name').val();
+                        elPerfilApellido = elApellidoRes;
+                        var elId = snapshot.child(childSnapshot.key).child('Id').val();
+                        console.log('elId', elId);
+                        elRol = snapshot.child(childSnapshot.key).child('Perfil').val();
+                        console.log('elRol', elRol);
+                        var elCountry = snapshot.child(childSnapshot.key).child('Country').val();
+                        console.log('elCountry', elCountry);
+                        var laRegion = snapshot.child(childSnapshot.key).child('Region').val();
+                        console.log('laRegion', laRegion);
+
+                        firebase.database().ref(laUrlBase + 'Usuarios/' + usuarioKey).update({
+                            "Activo": true
+                        });
+
+                        ingresaOK();
+                    });
+                } else {
+                    console.log('no se encuentra usuario');
+                }
+            });
+        }
+    } else {
+        ingresaOK();
+    }
+
+    function ingresaOK() {
+
+        habilitaBoton($('#botonEntrar'), false);
+        $("#inputUsuario").val('');
+        $("#inputPassword").val('');
+        $('.mensaje_nombre_perfil').text('');
+        $('.mensaje_error_login').text('');
+        $('.nombre_perfil').text(elPerfilNombre);
+
+        // if (!isMobile) {
+        //     Scrollbar.destroyAll();
+        // }
+        loadSeccion('home');
+
+    }
+}
+
+
+function loginUser() {
+    var user = $("#inputUsuario").val();
+    var password = $("#inputPassword").val();
+    $('.mensaje_error_login').text('');
+    var listError = "";
+
+    if (user.length === 0) {
+        listError += '1';
+        $('.mensaje_error_login').text(mensajeErrorLogin);
+    }
+    if (password.length === 0) {
+        listError += '1';
+        $('.mensaje_error_login').text(mensajeErrorLogin);
+    }
+    if (listError.length > 0) {
+        $('.mensaje_error_login').text(mensajeErrorLogin);
+    } else {
+        var userLogin = {
+            Correo: user,
+            Contrasena: password
+        };
+        login(userLogin.Correo, userLogin.Contrasena);
+        $("._login").val('');
+        // $('.mensaje_error_login').addClass('ocultar');
+    }
+}
+
+function cierraSesion() {
+    console.log('cerrando sesion');
+
+    var onComplete = function(error) {
+        if (error) {
+            console.log('Ocurrió un error en la sincronización.');
+        } else {
+            firebase.auth().signOut().then(function() {
+
+                habilitaBoton($('#botonEntrar'), true);
+                $("#inputUsuario, #inputPassword").prop("disabled", false);
+                eliminaLocalStorage();
+                $('#botonAtras').hide();
+                $('#botonSalir').hide();
+                $('.nombre_perfil').text('');
+
+                seccionActual = undefined;
+                laSemana = undefined;
+                elDia = undefined;
+                laCategoria = undefined;
+                laSemanaSel = undefined;
+                elDiaSel = undefined;
+                laCategoriaSel = undefined;
+                usuarioSeleccionadoId = undefined;
+                usuarioSeleccionado = undefined;
+
+                loadSeccion('login');
+            }, function(error) {
+
+            });
+            usuarioId = '';
+            console.log('Sincronización realizada.');
+
+            cierraMenu();
+        }
+    };
+
+    firebase.database().ref(laUrlBase + 'Usuarios/' + usuarioKey).update({
+        "Activo": false
+    }, onComplete);
+
+}
+
+function cierraMenu() {
+    // Nav.close();
+}
+
+
+function cargador(evento) {
+    var duracion = 100;
+    switch (evento) {
+        case 'muestra':
+            $('#cargando').css({
+                'display': 'block',
+                'z-index': '999'
+            });
+            $("#cargando_int").animate({
+                'opacity': '0.3'
+            }, duracion, function() {
+
+            });
+            break;
+        case 'oculta':
+            $("#cargando_int").animate({
+                'opacity': '0'
+            }, duracion, function() {
+                $('#cargando').css({
+                    'display': 'none'
+                });
+            });
+            break;
+    }
+}
+
+
+
+
+function loadSeccion(cualseccion) {
+    seccionActual = cualseccion;
+    console.log('seccionActual', seccionActual);
+
+    $("#container").empty();
+    $("#container").load('inc/' + cualseccion + '.html', function(response, status, xhr) {
+        console.log('status', status);
+    });
+
+    $('#botonHome').hide();
+    if (seccionActual != 'splash' && seccionActual != 'login' && seccionActual != 'home') {
+        $('#botonHome').show();
+    }
+
+    $('#botonAtras').hide();
+    $('#botonSalir').hide();
+    // if (seccionActual != 'splash' && seccionActual != 'login' && seccionActual != 'tasks') {
+    if (seccionActual != 'splash' && seccionActual != 'login') {
+        $('#botonSalir').show();
+        $('.navbar').css({
+            'display': 'block'
+        });
+        $('.container').css({
+            'margin-top': '50px'
+        });
+    } else {
+        $('.navbar').css({
+            'display': 'none'
+        });
+        $('.container').css({
+            'margin-top': '0px'
+        });
+    }
+    if (seccionActual == 'tasks' || seccionActual == 'tools' || seccionActual == 'calendar') {
+        $('.navbar_tasks').css({
+            'display': 'flex'
+        });
+        $('#botonAtras').show();
+    } else {
+        $('.navbar_tasks').css({
+            'display': 'none'
+        });
+    }
+
+
+    if (seccionActual == 'login') {
+        $('#container').css({
+            'overflow-x': 'hidden'
+        });
+
+        seccionActual = undefined;
+        laSemana = undefined;
+        elDia = undefined;
+        laCategoria = undefined;
+        laSemanaSel = undefined;
+        elDiaSel = undefined;
+        laCategoriaSel = undefined;
+
+    } else {
+        $('#container').css({
+            'overflow-x': 'visible'
+        });
+    }
+
+
+    $('#divSelectPar').hide();
+    if (seccionActual === 'home') {
+        if (elRol !== 'IBP') {
+            $('#divSelectPar').show();
+        }
+    }
+
+    $('#divTools').css({
+        'display': 'none'
+    });
+    if (seccionActual === 'home' || seccionActual === 'calendar' || seccionActual === 'tools') {
+        $('#divTools').css({
+            'display': 'flex'
+        });
+    }
+
+    habilitaDiv($('#botonReporte'), false);
+    habilitaDiv($('#botonGuardar'), true);
+    if (elRol === 'Admin' || elRol === 'Coach') {
+        //     habilitaDiv($('#botonReporte'), true);
+        habilitaDiv($('#botonGuardar'), false);
+    }
+
+
+    $(document).off('click', '#botonHome').on('click', '#botonHome', function(e) {
+        if (seccionActual == 'tasks') {
+            loadSeccion('home');
+        }
+        if (seccionActual == 'calendar') {
+            loadSeccion('home');
+        }
+        if (seccionActual == 'tools') {
+            loadSeccion('home');
+        }
+    });
+
+    $(document).off('click', '#botonReporte').on('click', '#botonReporte', function(e) {
+        descargaReporte();
+    });
+
+    $(document).off('click', '#botonCalendario').on('click', '#botonCalendario', function(e) {
+        event.preventDefault();
+        // descargaReporteDetalle();
+        loadSeccion('calendar');
+    });
+
+    $(document).off('click', '#botonTools').on('click', '#botonTools', function(e) {
+        loadSeccion('tools');
+    });
+
+    $(document).off('click', '#botonAtras').on('click', '#botonAtras', function(e) {
+        loadSeccion('home');
+    });
+
+    $(document).off('click', '#botonSalir').on('click', '#botonSalir', function(e) {
+        cierraSesion();
+    });
+
+    $('#botonLogOut').click(function() {
+        cierraSesion();
+    });
+
+}
+
+
+function ajustaTamano() {
+    // console.log(' ajustaTamano');
+    $(".seccion").css({
+        'height': '0px'
+    });
+
+    return reAjustaTamano();
+}
+
+function reAjustaTamano() {
+    var elVPHeight = $(document).height();
+    var elSeccHeight = $(".seccion").height();
+    // console.log(elVPHeight, elSeccHeight);
+
+    if (seccionActual == 'splash' || seccionActual == 'login' || seccionActual == undefined) {
+        // if ((elSeccHeight + 60) < elVPHeight) {
+        $(".seccion").css({
+            'height': (elVPHeight - 60)
+        });
+        // }
+    } else {
+        if ((elSeccHeight + 110) < elVPHeight) {
+            $(".seccion").css({
+                'height': (elVPHeight - 110)
+            });
+        }
+    }
+}
+
+function activaRadio() {
+    $('[data-toggle="wizard-radio"]').click(function() {
+        wizard = $(this).closest('.wizard-card');
+        wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
+        $(this).addClass('active');
+        $(wizard).find('[type="radio"]').removeAttr('checked');
+        $(this).find('[type="radio"]').attr('checked', 'true');
+    });
+}
+
+function activaCheckbox() {
+    $('[data-toggle="wizard-checkbox"]').click(function() {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).find('[type="checkbox"]').removeAttr('checked');
+        } else {
+            $(this).addClass('active');
+            $(this).find('[type="checkbox"]').attr('checked', 'true');
+        }
+    });
+}
+
+function detectMobile() {
+    console.log('userAgent', navigator.userAgent);
+    if (navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i)) {
+
+        return true;
+    }
+}
+var isMobile = detectMobile();
+
+
+
+$(document).ready(function() {
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/js/sw.js', {
+                scope: '/js/'
+            })
+            .then(function(registration) {
+                console.log('Service Worker Registered');
+            });
+
+        navigator.serviceWorker.ready.then(function(registration) {
+            console.log('Service Worker Ready');
+        });
+    }
+
+    var db = new PouchDB('baseOffline');
+
+    // db.changes({
+    //     since: 'now',
+    //     live: true
+    // }).on('change', sincronizaUsuario);
+
+    // db.allDocs({
+    //     include_docs: true,
+    //     descending: true
+    // }, function(err, doc) {
+    //     redrawTodosUI(doc.rows);
+    // });
+
+    // db.put(todo);
+    // db.remove(todo);
+    var elDoc = {};
+
+    addToHomescreen();
+
+
+    /*  Activate the tooltips      */
+    // $('[rel="tooltip"]').tooltip();
+
+    habilitaBoton($('#botonEntrar'), false);
+    loadSeccion('splash');
+    // leeLocalStorage();
+    ran = generarId();
+    location.hash = "?" + ran;
+
+
+});
