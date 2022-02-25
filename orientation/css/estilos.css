@@ -82,7 +82,7 @@ body {
 }
 
 .botonHome {
-    display: none;
+    /* display: none; */
     margin-top: 10px;
     left: 20px;
 }
@@ -441,8 +441,8 @@ td:first-child {
 
 #table_calendar thead tr th:first-child,
 #table_calendar tbody tr th:first-child {
-    writing-mode: vertical-rl;
-    transform: rotate(-180deg);
+    /* writing-mode: vertical-rl;
+    transform: rotate(-180deg); */
     text-align: center;
 }
 
@@ -517,11 +517,12 @@ td:first-child {
 
 #divTools {
     display: none;
-    position: absolute;
+    /* position: absolute; */
     height: 80px;
-    width: 100%;
+    width: 60%;
+    max-width: 600px;
     text-align: center;
-    margin: 83px auto 0px auto;
+    margin: 95px auto 0px auto;
     background-color: #fff;
     pointer-events: auto;
 }
@@ -530,8 +531,8 @@ td:first-child {
 #botonReporte,
 #botonCalendario {
     /* text-align: center; */
-    margin: 0 auto;
-    min-width: fit-content;
+    margin: 0 5px;
+    /* min-width: 155px; */
     cursor: pointer;
 }
 
@@ -639,13 +640,13 @@ td:first-child {
 }
 
 .owl-nav {
-    font-size: 60px;
-    margin-top: -140px;
-    margin-left: -8%;
-    width: 120%;
+    font-size: 40px;
+    margin-top: -60px;
+    margin-left: -68%;
+    width: 123%;
     font-weight: 100;
     color: #8c8c8c;
-    margin-bottom: 120px;
+    margin-bottom: 55px;
     font-weight: 400;
 }
 

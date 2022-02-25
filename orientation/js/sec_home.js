@@ -10,6 +10,17 @@ function activaSeccionHome() {
     $('.subname2_txt').text('');
 
 
+    // $('#divTools').owlCarousel('destroy');
+    $("#divTools").owlCarousel({
+        items: 2,
+        margin: 0,
+        loop: false,
+        nav: true,
+        dots: true
+    });
+    $('#divTools').show();
+
+
     ajustaTamano();
 
 
@@ -191,18 +202,12 @@ function activaSeccionHome() {
         $('#divSemanas').fadeIn();
 
 
-        // $('.carousel_semanas').owlCarousel('destroy');
-        // $(".carousel_semanas").owlCarousel({
-        //     items: 2,
-        //     margin: 0,
-        //     loop: false,
-        //     nav: true,
-        //     dots: true
-        // });
 
 
-        if (laSemana != undefined && laSemana != 0) {
-            // pintaCategorias(data);
+        if (back == 'conBack') {
+            if (laSemana != undefined && laSemana != 0) {
+                pintaCategorias(data);
+            }
         }
 
         for (a = 1; a <= cuantasSemanas; a++) {
@@ -297,37 +302,7 @@ function activaSeccionHome() {
             }
         }
 
-
         that = this;
-
-
-        // var contenidoDias = '';
-        // $('#losDias').empty();
-
-        // for (a = 1; a <= cuantasCats; a++) {
-        //     contenidoDias += '<div id="cardDia' + a + '" class="card card_dia boton_dia">';
-        //     contenidoDias += '<p>' + Object.values(data['week0' + laSemana])[(a - 1)].short_txt + '</p>';
-        //     contenidoDias += '<img src="./img/' + Object.values(data['week0' + laSemana])[(a - 1)].icon + '.png" />';
-        //     contenidoDias += '</div>';
-        // }
-        // $('#losDias').append(contenidoDias);
-
-        // $('#divDias, #flechaAbajoDias').hide();
-        // $('#divDias, #flechaAbajoSemanas').fadeIn();
-        // $('#divCategorias').hide();
-
-
-
-
-
-        // for (b = 1; b <= cuantasSemanas; b++) {
-        //     $("#boton_semana" + b).css({
-        //         'background-color': '#d0dcee'
-        //     })
-        // }
-        // $("#boton_semana" + laSemana).css({
-        //     'background-color': '#e6edf9'
-        // })
 
 
         function loadCategoria(cualSemana) {
@@ -351,17 +326,6 @@ function activaSeccionHome() {
 
             $('.subname1_txt').text('Activities');
 
-            // for (a = 1; a <= cuantasSemanas; a++) {
-            //     for (b = 1; b <= that['cuantasCategorias' + a]; b++) {
-            //         $("#semana" + a + "_Categoria" + b).css({
-            //             'background-color': 'transparent'
-            //         })
-            //     }
-            // }
-            // $("#semana" + laSemana + "_Categoria" + laCategoria).css({
-            //     'background-color': '#eeeeee'
-            // })
-
 
             for (a = 1; a <= cuantasSemanas; a++) {
                 for (b = 1; b <= that['cuantasCategorias' + a]; b++) {
@@ -369,31 +333,6 @@ function activaSeccionHome() {
                     if ($.inArray('week' + laSemana + '_cat' + b, _that.arrayStatusCats) != -1) {
                         $("#semana" + laSemana + "_Categoria" + b).addClass('boton_completado');
                     }
-
-
-                    // $("#semana" + a + "_Categoria" + b).mouseover(function(event) {
-                    //     for (c = 1; c <= cuantasSemanas; c++) {
-                    //         for (d = 1; d <= that['cuantasCategorias' + c]; d++) {
-                    //             $("#semana" + c + "_Categoria" + d).css({
-                    //                 'background-color': 'transparent'
-                    //             })
-                    //         }
-                    //     }
-                    //     $("#semana" + laSemanaSel + "_Categoria" + laCategoriaSel).css({
-                    //         'background-color': '#eeeeee'
-                    //     })
-                    //     $(this).css({
-                    //         'background-color': '#eeeeee'
-                    //     })
-                    // });
-                    // $("#semana" + a + "_Categoria" + b).mouseout(function(event) {
-                    //     $(this).css({
-                    //         'background-color': 'transparent'
-                    //     })
-                    //     $("#semana" + laSemanaSel + "_Categoria" + laCategoriaSel).css({
-                    //         'background-color': '#eeeeee'
-                    //     })
-                    // });
 
                     $("#semana" + a + "_Categoria" + b).click(function(event) {
                         event.preventDefault();
@@ -409,46 +348,8 @@ function activaSeccionHome() {
                     });
                 }
             }
-
         }
 
-        // for (a = 1; a <= cuantasCats; a++) {
-        //     $("#cardDia" + a).mouseover(function (event) {
-        //         for (b = 1; b <= cuantasCats; b++) {
-        //             $("#cardDia" + b).css({
-        //                 'background-color': 'transparent'
-        //             })
-        //         }
-        //         $("#cardDia" + elDiaSel).css({
-        //             'background-color': '#eeeeee'
-        //         })
-        //         $(this).css({
-        //             'background-color': '#eeeeee'
-        //         })
-        //     });
-        //     $("#cardDia" + a).mouseout(function (event) {
-        //         $(this).css({
-        //             'background-color': 'transparent'
-        //         })
-        //         $("#cardDia" + elDiaSel).css({
-        //             'background-color': '#eeeeee'
-        //         })
-        //     });
-        //     $("#cardDia" + a).click(function (event) {
-        //         event.preventDefault();
-        //         var cualDia = parseInt($(this).attr('id').substr(7, 2));
-        //         console.log('cualDia', cualDia);
-        //         elDia = cualDia;
-        //         elDiaSel = cualDia;
-        //         laCategoria = 0;
-
-        //         laCategoriaSel = 0;
-        //         loadCategoria(laSemana);
-        //         $('#divCategorias').hide();
-        //         $('#divCategorias, #flechaAbajoDias').fadeIn();
-        //         ajustaTamano();
-        //     });
-        // }
 
         if (laSemana != 0) {
             if (laCategoria != undefined || laCategoria != 0) {
@@ -469,8 +370,8 @@ function activaSeccionHome() {
 
 
     // siempre carga por default 
-    laSemana = 1;
-    laSemanaSel = 1;
+    // laSemana = 1;
+    // laSemanaSel = 1;
     laCategoria = 0;
     laCategoriaSel = 0;
 

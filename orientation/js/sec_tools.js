@@ -15,22 +15,62 @@ function activaSeccionTools() {
 
         switch (cualTool) {
             case 1:
-                window.open('docs/Distribution_Agreement.pdf');
+                // window.open('docs/Distribution_Agreement.pdf');
+                Swal.fire({
+                    title: 'Distribution Agreement',
+                    html: '<object data="docs/Distribution_Agreement.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    heightAuto: true,
+                    width: '100%',
+                    background: '#f3f3f3',
+                    backdrop: `rgb(0 0 0 / 60%)`
+                });
                 break;
             case 2:
-                window.open('docs/Handheld_(HHC).pdf');
+                // window.open('docs/Handheld_(HHC).pdf');
+                Swal.fire({
+                    title: 'Handheld (HHC)',
+                    html: '<object data="docs/Handheld_(HHC).pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    heightAuto: true,
+                    width: '100%',
+                    background: '#f3f3f3',
+                    backdrop: `rgb(0 0 0 / 60%)`
+                });
                 break;
             case 3:
-                window.open('docs/ION_Coaching.pdf');
+                // window.open('docs/ION_Coaching.pdf');
+                Swal.fire({
+                    title: 'ION Coaching',
+                    html: '<object data="docs/ION_Coaching.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    heightAuto: true,
+                    width: '100%',
+                    background: '#f3f3f3',
+                    backdrop: `rgb(0 0 0 / 60%)`
+                });
                 break;
             case 4:
-                window.open('docs/ION_SetUp.pdf');
+                // window.open('docs/ION_SetUp.pdf');
+                Swal.fire({
+                    title: 'ION SetUp',
+                    html: '<object data="docs/ION_SetUp.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    heightAuto: true,
+                    width: '100%',
+                    background: '#f3f3f3',
+                    backdrop: `rgb(0 0 0 / 60%)`
+                });
                 break;
             case 5:
                 // window.open('docs/Merchandising_Best_Practices.mov');
                 Swal.fire({
                     title: 'Merchandising Best Practices',
-                    html: '<video id="VisaChipCardVideo" width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
                         '<source src="docs/Merchandising_Best_Practices.mov" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -63,7 +103,7 @@ function activaSeccionTools() {
                 // window.open('docs/Merchandising_SaraLee.mov');
                 Swal.fire({
                     title: 'Merchandising SaraLee',
-                    html: '<video id="VisaChipCardVideo" width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
                         '<source src="docs/Merchandising_SaraLee.mov" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -81,7 +121,7 @@ function activaSeccionTools() {
                 // window.open('docs/Merchandising_Thomas.mov');
                 Swal.fire({
                     title: 'Merchandising Thomas',
-                    html: '<video id="VisaChipCardVideo" width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
                         '<source src="docs/Merchandising_Thomas.mov" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -93,13 +133,43 @@ function activaSeccionTools() {
                 });
                 break;
             case 15:
-                window.open('docs/Safe_Carry_Over_(SCO).pdf');
+                // window.open('docs/Safe_Carry_Over_(SCO).pdf');
+                Swal.fire({
+                    title: 'Safe Carry Over (SCO)',
+                    html: '<object data="docs/Safe_Carry_Over_(SCO).pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    heightAuto: true,
+                    width: '100%',
+                    background: '#f3f3f3',
+                    backdrop: `rgb(0 0 0 / 60%)`
+                });
                 break;
             case 16:
-                window.open('docs/Scan_Based_Trading_(SBT).pdf');
+                // window.open('docs/Scan_Based_Trading_(SBT).pdf');
+                Swal.fire({
+                    title: 'Scan Based Trading (SBT)',
+                    html: '<object data="docs/Scan_Based_Trading_(SBT).pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    heightAuto: true,
+                    width: '100%',
+                    background: '#f3f3f3',
+                    backdrop: `rgb(0 0 0 / 60%)`
+                });
                 break;
             case 17:
-                window.open('docs/SETTLEMENT.pdf');
+                // window.open('docs/SETTLEMENT.pdf');
+                Swal.fire({
+                    title: 'Settlement',
+                    html: '<object data="docs/SETTLEMENT.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    heightAuto: true,
+                    width: '100%',
+                    background: '#f3f3f3',
+                    backdrop: `rgb(0 0 0 / 60%)`
+                });
                 break;
 
             default:
