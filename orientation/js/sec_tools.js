@@ -18,7 +18,7 @@ function activaSeccionTools() {
                 // window.open('docs/Distribution_Agreement.pdf');
                 Swal.fire({
                     title: 'Distribution Agreement',
-                    html: '<object data="docs/Distribution_Agreement.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+                    html: '<iframe src="http://docs.google.com/viewer?url=https://muchofocus.com/orientation/docs/Distribution_Agreement.pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
                     showCloseButton: true,
                     showConfirmButton: false,
                     heightAuto: true,
