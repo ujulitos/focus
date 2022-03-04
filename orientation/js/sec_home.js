@@ -18,6 +18,7 @@ function activaSeccionHome() {
         nav: true,
         dots: true
     });
+    $('#divTools').show();
     $('#divToolsWrapper').show();
 
 

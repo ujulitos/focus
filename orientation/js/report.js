@@ -120,7 +120,7 @@ function descargaReporte() {
 
                     for (a = 1; a <= cuantasSemanas; a++) {
                         that['cuantasCats_Semana' + a] = Object.keys(Object.values(dataTasks.weeks['week0' + a].cats)).length;
-                        // console.log(' cuantasCats_Semana', a, that['cuantasCats_Semana' + a])
+                        console.log(' cuantasCats_Semana', a, that['cuantasCats_Semana' + a])
 
                         for (b = 1; b <= that['cuantasCats_Semana' + a]; b++) {
                             that['cuantasCats_Semana' + a + '_subCat' + b] = Object.keys(Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].subcats).length;
