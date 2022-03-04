@@ -41,17 +41,17 @@ function activaSeccionTools() {
                 // });
                 break;
             case 3:
-                // window.open('docs/ION_Coaching.pdf');
-                Swal.fire({
-                    title: 'ION Coaching',
-                    html: '<object data="docs/ION_Coaching.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
-                    showCloseButton: true,
-                    showConfirmButton: false,
-                    heightAuto: true,
-                    width: '100%',
-                    background: '#f3f3f3',
-                    backdrop: `rgb(0 0 0 / 60%)`
-                });
+                window.open('docs/ION_Coaching.pdf');
+                // Swal.fire({
+                //     title: 'ION Coaching',
+                //     html: '<object data="docs/ION_Coaching.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+                //     showCloseButton: true,
+                //     showConfirmButton: false,
+                //     heightAuto: true,
+                //     width: '100%',
+                //     background: '#f3f3f3',
+                //     backdrop: `rgb(0 0 0 / 60%)`
+                // });
                 break;
             case 4:
                 // window.open('docs/ION_SetUp.pdf');
