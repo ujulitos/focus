@@ -28,17 +28,17 @@ function activaSeccionTools() {
                 });
                 break;
             case 2:
-                // window.open('docs/Handheld_(HHC).pdf');
-                Swal.fire({
-                    title: 'Handheld (HHC)',
-                    html: '<iframe src="http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
-                    showCloseButton: true,
-                    showConfirmButton: false,
-                    heightAuto: true,
-                    width: '100%',
-                    background: '#f3f3f3',
-                    backdrop: `rgb(0 0 0 / 60%)`
-                });
+                window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Distribution_Agreement.pdf');
+                // Swal.fire({
+                //     title: 'Handheld (HHC)',
+                //     html: '<iframe src="http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                //     showCloseButton: true,
+                //     showConfirmButton: false,
+                //     heightAuto: true,
+                //     width: '100%',
+                //     background: '#f3f3f3',
+                //     backdrop: `rgb(0 0 0 / 60%)`
+                // });
                 break;
             case 3:
                 // window.open('docs/ION_Coaching.pdf');
