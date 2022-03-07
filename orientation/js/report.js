@@ -68,6 +68,16 @@ function descargaReporte() {
                 console.log(dataReg);
 
                 // si no hay registro
+                if (dataReg == undefined || dataReg == null) {
+                    Swal.fire({
+                        title: 'First select an IBP',
+                        text: "",
+                        icon: 'info'
+                    });
+                    $('.swal2-container').css({
+                        'z-index': '9999'
+                    })
+                }
                 if (dataReg.Registro == undefined || dataReg == null) {
                     Swal.fire({
                         title: 'This user has no registration yet',
@@ -117,10 +127,12 @@ function descargaReporte() {
                     }
                     console.log('cuantasTasks', cuantasTasks);
 
+                    console.log(' cuantasCats_Semana', 1, Object.keys(Object.values(dataTasks.weeks['week0' + 1].cats)).length);
 
                     for (a = 1; a <= cuantasSemanas; a++) {
-                        that['cuantasCats_Semana' + a] = Object.keys(Object.values(dataTasks.weeks['week0' + a].cats)).length;
-                        console.log(' cuantasCats_Semana', a, that['cuantasCats_Semana' + a])
+                        this['cuantasCats_Semana' + a] = Object.keys(Object.values(dataTasks.weeks['week0' + a].cats)).length;
+                        that = this;
+                        console.log(' cuantasCats_Semana', a, this['cuantasCats_Semana' + a]);
 
                         for (b = 1; b <= that['cuantasCats_Semana' + a]; b++) {
                             that['cuantasCats_Semana' + a + '_subCat' + b] = Object.keys(Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].subcats).length;

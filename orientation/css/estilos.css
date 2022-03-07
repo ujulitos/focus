@@ -521,15 +521,21 @@ td:first-child {
     outline: none;
 }
 
+#divToolsWrapper {
+    display: none;
+    background-color: #fff;
+}
+
 #divTools {
     display: none;
     /* position: absolute; */
-    height: 80px;
+    height: 70px;
     width: 60%;
     max-width: 600px;
+    padding-top: 10px;
     text-align: center;
-    margin: 95px auto 0px auto;
-    background-color: #fff;
+    margin: 84px auto 0px auto;
+    /* background-color: #fff; */
     pointer-events: auto;
 }
 
@@ -551,6 +557,7 @@ td:first-child {
 
 .boton_tools {
     max-height: 36px;
+    /* min-width: 100px; */
     display: flex;
     text-align: left;
     color: #fff;

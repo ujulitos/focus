@@ -150,7 +150,7 @@
                  } else {
                      contenidoTasks += '<td style="border-top: solid 0px #ddd;">';
                      contenidoTasks += '<input type="checkbox" id="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="check">';
-                     contenidoTasks += '<label class="label_class" for="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" data-before="Completed"></label>';
+                     contenidoTasks += '<label class="label_class" for="' + 'laTask_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" data-before="To Complete"></label>';
                      contenidoTasks += '</td>';
                  }
 
@@ -430,6 +430,9 @@
                      __that.arrayTasks.splice($.inArray(cualCheckea, __that.arrayTasks), 1);
                  }
                  $('#' + cualCheckea).prop("checked", false);
+                 if ($('#' + cualCheckea).parent().find('label').attr("data-before") == 'Completed') {
+                     $('#' + cualCheckea).parent().find('label').attr("data-before", "To Complete");
+                 }
              } else {
                  if ($.inArray(cualCheckea, __that.arrayTasks) == -1) {
                      if (__that.arrayTasks == 0) {
@@ -439,6 +442,9 @@
                      }
                  }
                  $('#' + cualCheckea).prop("checked", "checked");
+                 if ($('#' + cualCheckea).parent().find('label').attr("data-before") == 'To Complete') {
+                     $('#' + cualCheckea).parent().find('label').attr("data-before", "Completed");
+                 }
              }
 
 

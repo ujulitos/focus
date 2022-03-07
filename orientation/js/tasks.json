@@ -358,7 +358,7 @@
             "cats": {
                 "cat01": {
                     "name": "30/60/90 Days",
-                    "subname1": "Week 4",
+                    "subname1": "30/60/90 Days",
                     "subname2": "",
                     "icon": "ico_28",
                     "subcats": {
