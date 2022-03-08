@@ -130,8 +130,39 @@
 <script src="js/report.js"></script>
 
 
-<!-- <script>
+<script>
+    Swal.fire({
+        title: 'Merchandising Arnold',
+        html: '<video id="vid1" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+            '<source src="docs/Merchandising_Arnold.mp4" type="video/mp4">' +
+            '</video>',
+        showCloseButton: true,
+        showConfirmButton: false,
+        heightAuto: true,
+        width: '100%',
+        background: '#f3f3f3',
+        backdrop: `rgb(0 0 0 / 60%)`
+    });
+
+    var elVid = document.getElementById('vid1');
+    console.log('elVid ok', elVid);
+
+    if (elVid.readyState !== 4) {
+        elVid.addEventListener('canplaythrough', onCanPlay, false);
+        elVid.addEventListener('load', onCanPlay, false);
+        setTimeout(function() {
+            elVid.pause();
+        }, 1);
+    }
+
+    function onCanPlay() {
+        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+        elVid.removeEventListener('load', onCanPlay, false);
+        elVid.play();
+    }
+
+
     $(document).ready(function() {});
-</script> -->
+</script>
 
 </html>

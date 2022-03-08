@@ -81,6 +81,7 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+
                 var elVid = document.getElementById('vid1');
                 console.log('elVid ok', elVid);
 
@@ -97,6 +98,7 @@ function activaSeccionTools() {
                     elVid.removeEventListener('load', onCanPlay, false);
                     elVid.play();
                 }
+
                 break;
             case 6:
                 Swal.fire({
