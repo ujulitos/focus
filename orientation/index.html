@@ -135,7 +135,7 @@
 
         Swal.fire({
             title: 'Merchandising Arnold',
-            html: '<video id="vid" width="100%" class="video" preload autoplay controls controlsList="nodownload" playsinline>' +
+            html: '<video width="100%" class="video" autoplay playsinline controls controlsList="nodownload">' +
                 '<source src="docs/Merchandising_Arnold.mp4" type="video/mp4">' +
                 '</video>',
             showCloseButton: true,
@@ -150,7 +150,7 @@
         var interval = setInterval(function() {
             var countForVideo = document.getElementById('vid').readyState;
             var elVid;
-            console.log('countForVideo', countForVideo);
+            console.log('countForVideo ya', countForVideo);
 
             elVid = document.getElementById('vid');
             // elVid.play();
