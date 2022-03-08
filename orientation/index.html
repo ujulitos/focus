@@ -52,11 +52,6 @@
 
 <body class="theme-default">
 
-    <video width="100%" height="100%" class="video" loop autoplay loop muted playsinline>
-        <source src="docs/Merchandising_Arnold.mp4" type="video/mp4">
-    </video>
-
-
     <div id="elNavBar" class="navbar">
         <div id="botonHome" class="botonHome">
             <i class="material-icons-outlined">home</i>
@@ -134,5 +129,20 @@
 <!-- <script src="js/reporteStatus.js"></script> -->
 <script src="js/report.js"></script>
 
+
+<script>
+    Swal.fire({
+        title: 'Merchandising Arnold',
+        html: '<video width="100%" class="video" autoplay controls controlsList="nodownload" playsinline>' +
+            '<source src="docs/Merchandising_Arnold.mp4" type="video/mp4">' +
+            '</video>',
+        showCloseButton: true,
+        showConfirmButton: false,
+        heightAuto: true,
+        width: '100%',
+        background: '#f3f3f3',
+        backdrop: `rgb(0 0 0 / 60%)`
+    });
+</script>
 
 </html>

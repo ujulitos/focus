@@ -71,7 +71,7 @@ function activaSeccionTools() {
             case 5:
                 Swal.fire({
                     title: 'Merchandising Arnold',
-                    html: '<video width="100%" height="100%" class="video" loop autoplay loop muted playsinline>' +
+                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload" playsinline>' +
                         '<source src="docs/Merchandising_Arnold.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
