@@ -149,6 +149,7 @@
 
         var interval = setInterval(function() {
             var countForVideo = document.getElementById('vid').readyState;
+            console.log('countForVideo', countForVideo);
             if (countForVideo == 4) {
                 document.getElementById('vid').play();
                 console.log('vid play');
