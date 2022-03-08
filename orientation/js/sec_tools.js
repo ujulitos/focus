@@ -72,7 +72,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising Arnold',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merchandising_Arnold.mov" type="video/mp4">' +
+                        '<source src="docs/Merchandising_Arnold.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
@@ -86,7 +86,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising BallPark',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merchandising_BallPark.mov" type="video/mp4">' +
+                        '<source src="docs/Merchandising_BallPark.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
@@ -100,7 +100,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising Barcel-Takis',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merchandising_BarcelTakis.mov" type="video/mp4">' +
+                        '<source src="docs/Merchandising_BarcelTakis.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
@@ -114,7 +114,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising Best Practices',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merchandising_Best_Practices.mov" type="video/mp4">' +
+                        '<source src="docs/Merchandising_Best_Practices.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
@@ -128,7 +128,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising Bimbo-Marinela',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merchandising_BimboMarinela.mov" type="video/mp4">' +
+                        '<source src="docs/Merchandising_BimboMarinela.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
@@ -142,7 +142,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising Brownberry',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merchandising_Brownberry.mov" type="video/mp4">' +
+                        '<source src="docs/Merchandising_Brownberry.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
@@ -156,7 +156,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising Entenmanns',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merchandising_Entenmanns.mov" type="video/mp4">' +
+                        '<source src="docs/Merchandising_Entenmanns.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
@@ -170,7 +170,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising SaraLee',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merchandising_SaraLee.mov" type="video/mp4">' +
+                        '<source src="docs/Merchandising_SaraLee.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
@@ -184,7 +184,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising Thomas',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merchandising_Thomas.mov" type="video/mp4">' +
+                        '<source src="docs/Merchandising_Thomas.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
@@ -199,7 +199,7 @@ function activaSeccionTools() {
                 Swal.fire({
                     title: 'Merchandising Oroweat',
                     html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
-                        '<source src="docs/Merhandising_Oroweat.mov" type="video/mp4">' +
+                        '<source src="docs/Merhandising_Oroweat.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
                     showConfirmButton: false,
