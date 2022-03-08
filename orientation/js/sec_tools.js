@@ -81,9 +81,7 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
-
                 var interval = setInterval(function() {
-
                     var elVid = document.getElementById('vid1');
                     console.log('elVid ok', elVid);
 
@@ -103,14 +101,13 @@ function activaSeccionTools() {
                         elVid.play();
                         clearInterval(interval);
                     }
-
                 }, 2000);
 
                 break;
             case 6:
                 Swal.fire({
                     title: 'Merchandising BallPark',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video id="vid2" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merchandising_BallPark.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -120,11 +117,32 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var interval = setInterval(function() {
+                    var elVid = document.getElementById('vid2');
+                    console.log('elVid ok', elVid);
+
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+                }, 2000);
                 break;
             case 7:
                 Swal.fire({
                     title: 'Merchandising Barcel-Takis',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video id="vid3" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merchandising_BarcelTakis.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -134,11 +152,32 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var interval = setInterval(function() {
+                    var elVid = document.getElementById('vid3');
+                    console.log('elVid ok', elVid);
+
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+                }, 2000);
                 break;
             case 8:
                 Swal.fire({
                     title: 'Merchandising Best Practices',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video id="vid4" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merchandising_Best_Practices.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -148,11 +187,32 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var interval = setInterval(function() {
+                    var elVid = document.getElementById('vid4');
+                    console.log('elVid ok', elVid);
+
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+                }, 2000);
                 break;
             case 9:
                 Swal.fire({
                     title: 'Merchandising Bimbo-Marinela',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video id="vid5" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merchandising_BimboMarinela.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -162,11 +222,32 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var interval = setInterval(function() {
+                    var elVid = document.getElementById('vid5');
+                    console.log('elVid ok', elVid);
+
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+                }, 2000);
                 break;
             case 10:
                 Swal.fire({
                     title: 'Merchandising Brownberry',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video id="vid6" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merchandising_Brownberry.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -176,11 +257,32 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var interval = setInterval(function() {
+                    var elVid = document.getElementById('vid6');
+                    console.log('elVid ok', elVid);
+
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+                }, 2000);
                 break;
             case 11:
                 Swal.fire({
                     title: 'Merchandising Entenmanns',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video id="vid7" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merchandising_Entenmanns.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -190,11 +292,32 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var interval = setInterval(function() {
+                    var elVid = document.getElementById('vid7');
+                    console.log('elVid ok', elVid);
+
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+                }, 2000);
                 break;
             case 12:
                 Swal.fire({
                     title: 'Merchandising SaraLee',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video id="vid8" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merchandising_SaraLee.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -204,11 +327,32 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var interval = setInterval(function() {
+                    var elVid = document.getElementById('vid8');
+                    console.log('elVid ok', elVid);
+
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+                }, 2000);
                 break;
             case 13:
                 Swal.fire({
                     title: 'Merchandising Thomas',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video id="vid9" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merchandising_Thomas.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -218,12 +362,33 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var interval = setInterval(function() {
+                    var elVid = document.getElementById('vid9');
+                    console.log('elVid ok', elVid);
+
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+                }, 2000);
                 break;
             case 14:
                 // window.open('docs/Merchandising_Thomas.mov');
                 Swal.fire({
                     title: 'Merchandising Oroweat',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload">' +
+                    html: '<video id="vid10" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merhandising_Oroweat.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -233,6 +398,27 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var interval = setInterval(function() {
+                    var elVid = document.getElementById('vid10');
+                    console.log('elVid ok', elVid);
+
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+                }, 2000);
                 break;
             case 15:
                 // window.open('docs/Safe_Carry_Over_(SCO).pdf');
