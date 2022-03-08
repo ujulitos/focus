@@ -82,22 +82,29 @@ function activaSeccionTools() {
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
 
-                var elVid = document.getElementById('vid1');
-                console.log('elVid ok', elVid);
+                var interval = setInterval(function() {
 
-                if (elVid.readyState !== 4) {
-                    elVid.addEventListener('canplaythrough', onCanPlay, false);
-                    elVid.addEventListener('load', onCanPlay, false);
-                    setTimeout(function() {
-                        elVid.pause();
-                    }, 1);
-                }
+                    var elVid = document.getElementById('vid1');
+                    console.log('elVid ok', elVid);
 
-                function onCanPlay() {
-                    elVid.removeEventListener('canplaythrough', onCanPlay, false);
-                    elVid.removeEventListener('load', onCanPlay, false);
-                    elVid.play();
-                }
+                    if (elVid.readyState !== 4) {
+                        elVid.addEventListener('canplaythrough', onCanPlay, false);
+                        elVid.addEventListener('load', onCanPlay, false);
+                        setTimeout(function() {
+                            elVid.pause();
+                        }, 1);
+                    } else {
+                        clearInterval(interval);
+                    }
+
+                    function onCanPlay() {
+                        elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                        elVid.removeEventListener('load', onCanPlay, false);
+                        elVid.play();
+                        clearInterval(interval);
+                    }
+
+                }, 2000);
 
                 break;
             case 6:
