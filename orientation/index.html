@@ -135,7 +135,7 @@
 
         Swal.fire({
             title: 'Merchandising Arnold',
-            html: '<video id="vid" width="100%" class="video" autoplay playsinline controls controlsList="nodownload">' +
+            html: '<video id="vid" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                 '<source src="docs/Merchandising_Arnold.mp4" type="video/mp4">' +
                 '</video>',
             showCloseButton: true,
@@ -150,25 +150,22 @@
         var interval = setInterval(function() {
             var countForVideo = document.getElementById('vid').readyState;
             var elVid;
-            console.log('countForVideo ya', countForVideo);
-
+            console.log('countForVideo ok', countForVideo);
             elVid = document.getElementById('vid');
-            // elVid.play();
 
-            if (elVid.readyState !== 4) { //HAVE_ENOUGH_DATA
+            if (elVid.readyState !== 4) {
                 elVid.addEventListener('canplaythrough', onCanPlay, false);
-                elVid.addEventListener('load', onCanPlay, false); //add load event as well to avoid errors, sometimes 'canplaythrough' won't dispatch.
+                elVid.addEventListener('load', onCanPlay, false);
                 setTimeout(function() {
-                    elVid.pause(); //block play so it buffers before playing
-                }, 1); //it needs to be after a delay otherwise it doesn't work properly.
+                    elVid.pause();
+                }, 1);
             } else {
-                //video is ready
+                clearInterval(interval);
             }
 
             function onCanPlay() {
                 elVid.removeEventListener('canplaythrough', onCanPlay, false);
                 elVid.removeEventListener('load', onCanPlay, false);
-                //video is ready
                 elVid.play();
             }
 
