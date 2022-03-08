@@ -71,7 +71,7 @@ function activaSeccionTools() {
             case 5:
                 Swal.fire({
                     title: 'Merchandising Arnold',
-                    html: '<video width="100%" class="video" autoplay controls controlsList="nodownload" playsinline>' +
+                    html: '<video id="vid1" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
                         '<source src="docs/Merchandising_Arnold.mp4" type="video/mp4">' +
                         '</video>',
                     showCloseButton: true,
@@ -81,6 +81,22 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+                var elVid = document.getElementById('vid1');
+                console.log('elVid ok', elVid);
+
+                if (elVid.readyState !== 4) {
+                    elVid.addEventListener('canplaythrough', onCanPlay, false);
+                    elVid.addEventListener('load', onCanPlay, false);
+                    setTimeout(function() {
+                        elVid.pause();
+                    }, 1);
+                }
+
+                function onCanPlay() {
+                    elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                    elVid.removeEventListener('load', onCanPlay, false);
+                    elVid.play();
+                }
                 break;
             case 6:
                 Swal.fire({
