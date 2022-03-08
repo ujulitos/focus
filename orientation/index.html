@@ -153,14 +153,7 @@
             console.log('countForVideo', countForVideo);
 
             elVid = document.getElementById('vid');
-
-            if (countForVideo == 4) {
-                elVid.play();
-                console.log('vid play');
-                clearInterval(interval);
-            }
-
-            elVid.play();
+            // elVid.play();
 
             if (elVid.readyState !== 4) { //HAVE_ENOUGH_DATA
                 elVid.addEventListener('canplaythrough', onCanPlay, false);
