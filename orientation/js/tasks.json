@@ -141,7 +141,7 @@
                                 "task13": ["Finalize load invoice in HHC", 5, "no_tool"],
                                 "task14": ["Load stacks/boxes on vehicle in reverse route order", 5, "no_tool"],
                                 "task15": ["Secure dollies & product", 5, "no_tool"],
-                                "task16": ["Stack and return empty trays to correct location in sales", 5, "no_tool"],
+                                "task16": ["Stack and return empty trays to correct location in sales center", 5, "no_tool"],
                                 "task17": ["Pick up adjusted load invoice and verify correct (manned locations)", 5, "no_tool"],
                                 "task18": ["Check for HHC, printer, empty trays and dollies, printer paper, stickers, and displays before leaving", 5, "no_tool"],
                                 "task19": ["Once you have left the sales center, the invoice on record is what is charged to the IBP that day", 1, "no_tool"]
@@ -219,27 +219,29 @@
                     "subcats": {
                         "subcat01": {
                             "name": "Start of Day Process",
+                            "message": "Don't forget once you have left the sales center, the invoice on record is what is charged to the IBP that day.",
                             "tasks": {
                                 "task01": ["Check if HHC communicated & verify sales date, incorrect call 1-855-218-1614", 4, "no_tool"],
                                 "task02": ["How to Sync Printer to HHC", 1, "no_tool"],
-                                "task03": ["Check in returns following sales center guidelines (stack in order printed)", 4, "no_tool"],
-                                "task04": ["Compare load invoice quantities vs physical product", 4, "no_tool"],
-                                "task05": ["Make load adjustments in HHC", 4, "no_tool"],
-                                "task06": ["Suspend load adjustments", 4, "no_tool"],
-                                "task07": ["Print stop distribution report and explain how to read", 4, "no_tool"],
-                                "task08": ["Stage trays & dollies to build load out by customer", 4, "no_tool"],
-                                "task09": ["Build new load: Check product skus from the Stop Distribution Report", 4, "no_tool"],
-                                "task10": ["Make load adjustments in HHC for any damages", 4, "no_tool"],
-                                "task11": ["Tag completed stacks with customer name and number", 4, "no_tool"],
-                                "task12": ["Submit load invoice for adjustment credit to sales center per local guidelines", 4, "no_tool"],
-                                "task13": ["Finalize load invoice in HHC", 4, "no_tool"],
-                                "task14": ["Load stacks/boxes on vehicle in reverse route order", 4, "no_tool"],
-                                "task15": ["Secure dollies & product", 4, "no_tool"],
-                                "task16": ["Stack and return empty trays to correct location in sales center", 4, "no_tool"],
-                                "task17": ["Pick up adjusted load invoice and verify correct (manned locations)", 4, "no_tool"],
-                                "task18": ["Check for HHC, printer, empty trays and dollies, printer paper, stickers, and displays before leaving", 4, "no_tool"]
+                                "task03": ["Get & read Load Invoice from sales center", 4, "no_tool"],
+                                "task04": ["Check in returns following sales center guidelines (stack in order printed)", 4, "no_tool"],
+                                "task05": ["Compare load invoice quantities vs physical product", 4, "no_tool"],
+                                "task06": ["Make load adjustments in HHC", 4, "no_tool"],
+                                "task07": ["Suspend load adjustments", 4, "no_tool"],
+                                "task08": ["Print stop distribution report and explain how to read", 4, "no_tool"],
+                                "task09": ["Stage trays & dollies to build load out by customer", 4, "no_tool"],
+                                "task10": ["Build new load: Check product skus from the Stop Distribution Report", 4, "no_tool"],
+                                "task11": ["Make load adjustments in HHC for any damages", 4, "no_tool"],
+                                "task12": ["Tag completed stacks with customer name and number", 4, "no_tool"],
+                                "task13": ["Submit load invoice for adjustment credit to sales center per local guidelines", 4, "no_tool"],
+                                "task14": ["Finalize load invoice in HHC", 4, "no_tool"],
+                                "task15": ["Load stacks/boxes on vehicle in reverse route order", 4, "no_tool"],
+                                "task16": ["Secure dollies & product", 4, "no_tool"],
+                                "task17": ["Stack and return empty trays to correct location in sales center", 4, "no_tool"],
+                                "task18": ["Pick up adjusted load invoice and verify correct (manned locations)", 4, "no_tool"],
+                                "task19": ["Check for HHC, printer, empty trays and dollies, printer paper, stickers, and displays before leaving", 4, "no_tool"]                               
                             }
-                        },
+                        },                       
                         "subcat02": {
                             "name": "Store/Account Process",
                             "tasks": {
@@ -253,10 +255,11 @@
                                 "task08": ["Rotate product (fast moving locations)", 4, "no_tool"],
                                 "task09": ["Work new product", 4, "no_tool"],
                                 "task10": ["Follow DSDE merchandising", 4, "no_tool"],
-                                "task11": ["How to read POG (plan-o-gram) for each account", 2, "no_tool"],
-                                "task12": ["How to read shelf tag for each account", 2, "no_tool"],
-                                "task13": ["Sell secondary display to dedision maker", 4, "no_tool"],
-                                "task14": ["Scan returns before exiting store", 4, "no_tool"]
+                                "task11": ["Correct signs, stickers, tails tucked, muffins broadsided, wide pans and bagels stood up", 4, "no_tool"],
+                                "task12": ["How to read POG (plan-o-gram) for each account", 2, "no_tool"],
+                                "task13": ["How to read shelf tag for each account", 2, "no_tool"],
+                                "task14": ["Sell secondary display to decision maker", 4, "no_tool"],
+                                "task15": ["Scan returns before exiting store", 4, "no_tool"]
                             }
                         },
                         "subcat03": {

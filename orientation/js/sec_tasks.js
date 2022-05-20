@@ -5,8 +5,6 @@
      //  var laURLTasks = "js/tasks.json";
      console.log('laURLTasks', laURLTasks);
 
-     var cuantosToolsTasks;
-
      ajustaTamano();
 
      //  var totalDiasPorSemana = 0;
@@ -112,7 +110,6 @@
              contenidoTasks += '<br>';
 
              contenidoTasks += '<div class="titulo_subcategoria_txt">' + Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].name + '</div>';
-             //  contenidoTasks += '<br>';
 
              //  contenidoTasks += '<tr>';
              if (elRol === 'Admin') {
@@ -163,8 +160,12 @@
                  contenidoTasks += '</div>';
                  contenidoTasks += '<br>';
 
-                 cuantosToolsTasks = c;
              }
+
+             if (Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].message != undefined) {
+                 contenidoTasks += '<div class="">' + Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].message + '</div>';
+             }
+
          }
 
          contenidoTasks += '<br>';

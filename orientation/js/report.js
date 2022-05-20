@@ -203,7 +203,7 @@ function descargaReporte() {
                                     that['idTablaTarea'] = d;
                                     // console.log('that[idTablaTarea]', that['idTablaTarea']);
                                     // contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)].replace(/ /g, "&nbsp;") + '</td>';
-                                    contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)] + '</td>';
+                                    contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)][0] + '</td>';
 
 
                                     for (m = 1; m <= cuantasTasks; m++) {
