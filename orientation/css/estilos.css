@@ -784,6 +784,7 @@ td:first-child {
     border-radius: 4px;
     font-size: 18px;
     background-color: #090FF5 !important;
+    color: #fff;
 }
 
 .boton_tool p {

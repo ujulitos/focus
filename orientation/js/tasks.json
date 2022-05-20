@@ -80,14 +80,14 @@
                                 "task03": ["Provide contacts (ROS, MSL, OSL)", "all", "no_tool"],
                                 "task04": ["Order welcome kit from DSDE apparel site, provide IBP link to Aramark", "all", "no_tool"],
                                 "task05": ["Provide samples of core products the NEW IBP will be selling", "all", "no_tool"],
-                                "task06": ["Brand education and merchandising videos", "all", "link"],
-                                "task07": ["DSDE merchandising standards video & discuss", "all", "Merchandising - Best Practices"],
-                                "task08": ["Review Article 4 & 6 (Sale of Product & Distributor Obligations)", "all", "https://gbconnect.sharepoint.com/:p:/s/FrontlineEngagementTeam/EaPw8K-gWR1PuAbjjJ-8NFYBuer7yFnJP8aXK4BF3oKJBA?e=mdxiIA"],
+                                "task06": ["Brand education and merchandising videos", "all", "no_tool"],
+                                "task07": ["DSDE merchandising standards video & discuss", "all", "Merchandising Best Practices", "Merchandising_Best_Practices"],
+                                "task08": ["Review Article 4 & 6 (Sale of Product & Distributor Obligations)", "all", "Distribution Agreement", "Distribution_Agreement"],
                                 "task09": ["Review purchasing customers service expectations (including pull ups)", "all", "no_tool"],
-                                "task10": ["Review Article 8 (Bakery Obligations)", "all", "https://gbconnect.sharepoint.com/:p:/s/FrontlineEngagementTeam/EaPw8K-gWR1PuAbjjJ-8NFYBuer7yFnJP8aXK4BF3oKJBA?e=mdxiIA"],
-                                "task11": ["Request ION access for route the NEW IBP is purchasing", "all", "https://gbconnect.sharepoint.com/:p:/s/FrontlineEngagementTeam/EQpJoO3aXfhKkwyfpc4BsIABejdKW75uUUVsCwC8WDhzeg?e=gHylmP"],
-                                "task12": ["SBT process", "all", "Scan Based Trading (SBT)"],
-                                "task13": ["HHC orientation", "all", "Handheld (HHC)"]
+                                "task10": ["Review Article 8 (Bakery Obligations)", "all", "Distribution Agreement", "Distribution_Agreement"],
+                                "task11": ["Request ION access for route the NEW IBP is purchasing", "all", "ION SetUp", "ION_SetUp"],
+                                "task12": ["SBT process", "all", "Scan Based Trading (SBT)", "Scan_Based_Trading_(SBT)"],
+                                "task13": ["HHC orientation", "all", "Handheld (HHC)", "Handheld_(HHC)"]
                             }
                         }
                     }
@@ -189,17 +189,17 @@
                         "subcat01": {
                             "name": "ION/SCO & Settlement",
                             "tasks": {
-                                "task01": ["Provide Knowledge Check and Review", "all", "https://bimbocx.qualtrics.com/jfe/form/SV_067p2Ifa208iEFo"],
-                                "task02": ["ION Navigation & Functions", "all", "ION"],
-                                "task03": ["ION, How to order and when to adjust", "all", "ION"],
-                                "task04": ["ION, Explain delivery patterns", "all", "ION"],
-                                "task05": ["ION, Explain order windows and product lead times", "all", "ION"],
-                                "task06": ["ION, Discuss promotional calendars for ordering", "all", "ION"],
-                                "task07": ["Safe Carry Over (SCO)", "all", "Safe Carryover (SCO)"],
-                                "task08": ["Settlement Overview", "all", "Settlement"],
-                                "task09": ["Settlement, when it is delivered", "all", "Settlement"],
-                                "task10": ["Settlement, how to access", "all", "Settlement"],
-                                "task11": ["Settlement, Analyst contact information", "all", "Settlement"],
+                                "task01": ["Provide Knowledge Check and Review", "all", "Link", "https://bimbocx.qualtrics.com/jfe/form/SV_067p2Ifa208iEFo"],
+                                "task02": ["ION Navigation & Functions", "all", "Pending...", "Pending"],
+                                "task03": ["ION, How to order and when to adjust", "all", "Pending...", "Pending"],
+                                "task04": ["ION, Explain delivery patterns", "all", "Pending...", "Pending"],
+                                "task05": ["ION, Explain order windows and product lead times", "all", "Pending...", "Pending"],
+                                "task06": ["ION, Discuss promotional calendars for ordering", "all", "Pending...", "Pending"],
+                                "task07": ["Safe Carry Over (SCO)", "all", "Safe Carryover (SCO)", "Safe_Carry_Over_(SCO)"],
+                                "task08": ["Settlement Overview", "all", "Settlement", "Settlement"],
+                                "task09": ["Settlement, when it is delivered", "all", "Settlement", "Settlement"],
+                                "task10": ["Settlement, how to access", "all", "Settlement", "Settlement"],
+                                "task11": ["Settlement, Analyst contact information", "all", "Settlement", "Settlement"],
                                 "task12": ["Supply Settlement 101 Webinar Information", "all", "no_tool"]
                             }
                         }
@@ -280,12 +280,12 @@
                         "subcat01": {
                             "name": "Route Closing & ION/SCO",
                             "tasks": {
-                                "task01": ["Provide 2nd Knowledge Check and Review", "all", "https://bimbocx.qualtrics.com/jfe/form/SV_ctEzZv9emweZzp4"],
+                                "task01": ["Provide 2nd Knowledge Check and Review", "all", "Link", "https://bimbocx.qualtrics.com/jfe/form/SV_ctEzZv9emweZzp4"],
                                 "task02": ["Route Closing", "all", "no_tool"],
-                                "task03": ["Review ION Navigation & Functions", "all", "ION"],
-                                "task04": ["Review & provide SCO amounts for purchasing accounts", "all", "Safe Carry Over (SCO)"],
+                                "task03": ["Review ION Navigation & Functions", "all", "Pending...", "Pending"],
+                                "task04": ["Review & provide SCO amounts for purchasing accounts", "all", "Safe Carry Over (SCO)", "Safe_Carry_Over_(SCO)"],
                                 "task05": ["Review purchasing customers service expectations (including pull ups)", "all", "no_tool"],
-                                "task06": ["Settlement Overview", "all", "Settlement"],
+                                "task06": ["Settlement Overview", "all", "Settlement", "Settlement"],
                                 "task07": ["Discuss Follow Up Days (30, 60, 90, 180 after route purchase)", "all", "no_tool"]
                             }
                         }
@@ -368,7 +368,7 @@
                                 "task01": ["Use 1:1 Huddle Review process to complete brief business review. Include 1-2 key takeaways for the IBP to focus on during the next month (process, brand, etc)", "all", "no_tool"],
                                 "task02": ["Review SBT lifecycle and processes to ensure understanding. If understanding is not clear, now is time to correct and involve Settlement in review to understand if there are any major results that need correcting", "all", "no_tool"],
                                 "task03": ["Review most recent settlement statement with IBP to ensure understanding of how to read/review", "all", "no_tool"],
-                                "task04": ["Feedback from IBP, regarding orientation process (survey): https://bimbocx.qualtrics.com/jfe/form/SV_1HaW0p9qeEe8jI2", "all", "no_tool"]
+                                "task04": ["Feedback from IBP, regarding orientation process (survey)", "all", "Link", "https://bimbocx.qualtrics.com/jfe/form/SV_1HaW0p9qeEe8jI2"]
                             }
                         },
                         "subcat02": {

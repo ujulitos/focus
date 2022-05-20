@@ -5,6 +5,7 @@
      //  var laURLTasks = "js/tasks.json";
      console.log('laURLTasks', laURLTasks);
 
+     var cuantosToolsTasks;
 
      ajustaTamano();
 
@@ -128,15 +129,18 @@
                      contenidoTasks += '<div id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" " style="line-height: 1;"><div id="boton_edit_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class="boton_edit"><span class="icon_edit material-icons">edit</span></div></div>';
                  }
 
-                 if (Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][2] != 'no_tool') {
-                     contenidoTasks += '<div id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" "><a href="' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][2] + '" target="_blank">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][0] + '</a></div>';
-                 } else {
-                     contenidoTasks += '<div id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" ">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][0] + '</div>';
-                 }
+                 contenidoTasks += '<div id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" class=" ">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][0] + '</div>';
 
                  contenidoTasks += '<table style="width: 80%; margin: 0 auto;">';
                  //  contenidoTasks += '<tr class="tabla_row">';
                  //  contenidoTasks += '</tr>';
+
+                 if (Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][2] != 'no_tool') {
+                     //  contenidoTasks += '<div id="' + 'laTaskTexto_s' + laSemana + '_c' + laCategoria + '_sc' + b + '_t' + c + '" id="" class="boton_tool"><a href="' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][2] + '" target="_blank">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][0] + '</a></div>';
+
+                     contenidoTasks += '<div id="' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][3] + '" class="boton_tool">' + Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][2] + '</div>';
+                 }
+
                  contenidoTasks += '<tr>';
 
                  if (Object.values(Object.values(Object.values(Object.values(data.weeks['week0' + laSemana].cats))[(laCategoria - 1)].subcats)[(b - 1)].tasks)[(c - 1)][1] != 'all') {
@@ -159,6 +163,7 @@
                  contenidoTasks += '</div>';
                  contenidoTasks += '<br>';
 
+                 cuantosToolsTasks = c;
              }
          }
 
@@ -324,6 +329,23 @@
          //  if (!isMobile) {
          //      var scrollTasks = Scrollbar.init($('.seccion_tasks')[0]);
          //  }
+
+
+         $(".boton_tool").click(function(event) {
+             event.preventDefault();
+             var cualBotonTool = $(this).attr('id');
+             var cualBotonToolLink = 0;
+             if (cualBotonTool.substr(0, 4) == "http") {
+                 cualBotonTool = "http";
+                 cualBotonToolLink = $(this).attr('id');
+             }
+             console.log('cualBotonTool', cualBotonTool);
+
+             descargaToolTask(cualBotonTool, cualBotonToolLink);
+         });
+
+
+
          ajustaTamano();
 
 
@@ -722,6 +744,7 @@
          }
      }
 
+
      cargaTasks();
 
  }
@@ -792,4 +815,495 @@
          laSemana++;
          loadSeccion('tasks');
      }
+ }
+
+
+
+
+
+ function descargaToolTask(cualTool, cualLink) {
+     console.log('descargaToolTask', cualTool, cualLink);
+
+     switch (cualTool) {
+         case "Merchandising_Best_Practices":
+             Swal.fire({
+                 title: 'Merchandising Best Practices',
+                 html: '<video id="vid4" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merchandising_Best_Practices.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid4');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+             break;
+         case "Distribution_Agreement":
+             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Distribution_Agreement.pdf');
+             // Swal.fire({
+             //     title: 'Distribution Agreement',
+             //     html: '<iframe src="http://docs.google.com/viewer?url=' + laURL + 'docs/Distribution_Agreement.pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+             //     showCloseButton: true,
+             //     showConfirmButton: false,
+             //     heightAuto: true,
+             //     width: '100%',
+             //     background: '#f3f3f3',
+             //     backdrop: `rgb(0 0 0 / 60%)`
+             // });
+             break;
+         case "ION_SetUp":
+             // window.open('docs/ION_SetUp.pdf');
+             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/ION_SetUp.pdf');
+             // Swal.fire({
+             //     title: 'ION SetUp',
+             //     html: '<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=' + laURL + 'docs/ION_SetUp.pdf" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+             //     showCloseButton: true,
+             //     showConfirmButton: false,
+             //     heightAuto: true,
+             //     width: '100%',
+             //     background: '#f3f3f3',
+             //     backdrop: `rgb(0 0 0 / 60%)`
+             // });
+             break;
+         case "Handheld_(HHC)":
+             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf');
+             // Swal.fire({
+             //     title: 'Handheld (HHC)',
+             //     html: '<iframe src="http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+             //     showCloseButton: true,
+             //     showConfirmButton: false,
+             //     heightAuto: true,
+             //     width: '100%',
+             //     background: '#f3f3f3',
+             //     backdrop: `rgb(0 0 0 / 60%)`
+             // });
+             break;
+         case "Scan_Based_Trading_(SBT)":
+             // window.open('docs/Scan_Based_Trading_(SBT).pdf');
+             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Scan_Based_Trading_(SBT).pdf');
+             // Swal.fire({
+             //     title: 'Scan Based Trading (SBT)',
+             //     html: '<object data="docs/Scan_Based_Trading_(SBT).pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+             //     showCloseButton: true,
+             //     showConfirmButton: false,
+             //     heightAuto: true,
+             //     width: '100%',
+             //     background: '#f3f3f3',
+             //     backdrop: `rgb(0 0 0 / 60%)`
+             // });
+             break;
+         case "Safe_Carry_Over_(SCO)":
+             // window.open('docs/Safe_Carry_Over_(SCO).pdf');
+             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Safe_Carry_Over_(SCO).pdf');
+             // Swal.fire({
+             //     title: 'Safe Carry Over (SCO)',
+             //     html: '<object data="docs/Safe_Carry_Over_(SCO).pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+             //     showCloseButton: true,
+             //     showConfirmButton: false,
+             //     heightAuto: true,
+             //     width: '100%',
+             //     background: '#f3f3f3',
+             //     backdrop: `rgb(0 0 0 / 60%)`
+             // });
+             break;
+         case "Settlement":
+             // window.open('docs/SETTLEMENT.pdf');
+             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             // Swal.fire({
+             //     title: 'Settlement',
+             //     html: '<object data="docs/SETTLEMENT.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+             //     showCloseButton: true,
+             //     showConfirmButton: false,
+             //     heightAuto: true,
+             //     width: '100%',
+             //     background: '#f3f3f3',
+             //     backdrop: `rgb(0 0 0 / 60%)`
+             // });
+             break;
+         case "http":
+             // window.open('docs/SETTLEMENT.pdf');
+             window.open(cualLink);
+             // Swal.fire({
+             //     title: 'Settlement',
+             //     html: '<object data="docs/SETTLEMENT.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+             //     showCloseButton: true,
+             //     showConfirmButton: false,
+             //     heightAuto: true,
+             //     width: '100%',
+             //     background: '#f3f3f3',
+             //     backdrop: `rgb(0 0 0 / 60%)`
+             // });
+             break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+         case 3:
+             // window.open('docs/ION_Coaching.pdf');
+             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/ION_Coaching.pdf');
+             // Swal.fire({
+             //     title: 'ION Coaching',
+             //     html: '<object data="docs/ION_Coaching.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
+             //     showCloseButton: true,
+             //     showConfirmButton: false,
+             //     heightAuto: true,
+             //     width: '100%',
+             //     background: '#f3f3f3',
+             //     backdrop: `rgb(0 0 0 / 60%)`
+             // });
+             break;
+
+         case 5:
+             Swal.fire({
+                 title: 'Merchandising Arnold',
+                 html: '<video id="vid1" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merchandising_Arnold.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid1');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+
+             break;
+         case 6:
+             Swal.fire({
+                 title: 'Merchandising BallPark',
+                 html: '<video id="vid2" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merchandising_BallPark.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid2');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+             break;
+         case 7:
+             Swal.fire({
+                 title: 'Merchandising Barcel-Takis',
+                 html: '<video id="vid3" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merchandising_BarcelTakis.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid3');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+             break;
+         case 9:
+             Swal.fire({
+                 title: 'Merchandising Bimbo-Marinela',
+                 html: '<video id="vid5" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merchandising_BimboMarinela.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid5');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+             break;
+         case 10:
+             Swal.fire({
+                 title: 'Merchandising Brownberry',
+                 html: '<video id="vid6" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merchandising_Brownberry.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid6');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+             break;
+         case 11:
+             Swal.fire({
+                 title: 'Merchandising Entenmanns',
+                 html: '<video id="vid7" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merchandising_Entenmanns.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid7');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+             break;
+         case 12:
+             Swal.fire({
+                 title: 'Merchandising SaraLee',
+                 html: '<video id="vid8" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merchandising_SaraLee.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid8');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+             break;
+         case 13:
+             Swal.fire({
+                 title: 'Merchandising Thomas',
+                 html: '<video id="vid9" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merchandising_Thomas.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid9');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+             break;
+         case 14:
+             // window.open('docs/Merchandising_Thomas.mov');
+             Swal.fire({
+                 title: 'Merchandising Oroweat',
+                 html: '<video id="vid10" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                     '<source src="docs/Merhandising_Oroweat.mp4" type="video/mp4">' +
+                     '</video>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             var interval = setInterval(function() {
+                 var elVid = document.getElementById('vid10');
+                 console.log('elVid ok', elVid);
+
+                 if (elVid.readyState !== 4) {
+                     elVid.addEventListener('canplaythrough', onCanPlay, false);
+                     elVid.addEventListener('load', onCanPlay, false);
+                     setTimeout(function() {
+                         elVid.pause();
+                     }, 1);
+                 } else {
+                     clearInterval(interval);
+                 }
+
+                 function onCanPlay() {
+                     elVid.removeEventListener('canplaythrough', onCanPlay, false);
+                     elVid.removeEventListener('load', onCanPlay, false);
+                     elVid.play();
+                     clearInterval(interval);
+                 }
+             }, 2000);
+             break;
+
+         default:
+             break;
+     }
+
  }
