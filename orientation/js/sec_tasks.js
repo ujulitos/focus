@@ -862,86 +862,86 @@
              }, 2000);
              break;
          case "Distribution_Agreement":
-             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Distribution_Agreement.pdf');
-             // Swal.fire({
-             //     title: 'Distribution Agreement',
-             //     html: '<iframe src="http://docs.google.com/viewer?url=' + laURL + 'docs/Distribution_Agreement.pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
-             //     showCloseButton: true,
-             //     showConfirmButton: false,
-             //     heightAuto: true,
-             //     width: '100%',
-             //     background: '#f3f3f3',
-             //     backdrop: `rgb(0 0 0 / 60%)`
-             // });
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Distribution_Agreement.pdf');
+             Swal.fire({
+                 title: 'ION Coaching',
+                 html: '<iframe src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
              break;
          case "ION_SetUp":
              // window.open('docs/ION_SetUp.pdf');
-             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/ION_SetUp.pdf');
-             // Swal.fire({
-             //     title: 'ION SetUp',
-             //     html: '<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=' + laURL + 'docs/ION_SetUp.pdf" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
-             //     showCloseButton: true,
-             //     showConfirmButton: false,
-             //     heightAuto: true,
-             //     width: '100%',
-             //     background: '#f3f3f3',
-             //     backdrop: `rgb(0 0 0 / 60%)`
-             // });
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/ION_SetUp.pdf');
+             Swal.fire({
+                 title: 'ION Coaching',
+                 html: '<iframe src="https://' + laURL + 'docs/ION_SetUp.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
              break;
          case "Handheld_(HHC)":
-             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf');
-             // Swal.fire({
-             //     title: 'Handheld (HHC)',
-             //     html: '<iframe src="http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
-             //     showCloseButton: true,
-             //     showConfirmButton: false,
-             //     heightAuto: true,
-             //     width: '100%',
-             //     background: '#f3f3f3',
-             //     backdrop: `rgb(0 0 0 / 60%)`
-             // });
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf');
+             Swal.fire({
+                 title: 'Handheld (HHC)',
+                 html: '<iframe src="http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
              break;
          case "Scan_Based_Trading_(SBT)":
              // window.open('docs/Scan_Based_Trading_(SBT).pdf');
-             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Scan_Based_Trading_(SBT).pdf');
-             // Swal.fire({
-             //     title: 'Scan Based Trading (SBT)',
-             //     html: '<object data="docs/Scan_Based_Trading_(SBT).pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
-             //     showCloseButton: true,
-             //     showConfirmButton: false,
-             //     heightAuto: true,
-             //     width: '100%',
-             //     background: '#f3f3f3',
-             //     backdrop: `rgb(0 0 0 / 60%)`
-             // });
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Scan_Based_Trading_(SBT).pdf');
+             Swal.fire({
+                 title: 'ION Coaching',
+                 html: '<iframe src="https://' + laURL + 'docs/Scan_Based_Trading_(SBT).pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
              break;
          case "Safe_Carry_Over_(SCO)":
              // window.open('docs/Safe_Carry_Over_(SCO).pdf');
-             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Safe_Carry_Over_(SCO).pdf');
-             // Swal.fire({
-             //     title: 'Safe Carry Over (SCO)',
-             //     html: '<object data="docs/Safe_Carry_Over_(SCO).pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
-             //     showCloseButton: true,
-             //     showConfirmButton: false,
-             //     heightAuto: true,
-             //     width: '100%',
-             //     background: '#f3f3f3',
-             //     backdrop: `rgb(0 0 0 / 60%)`
-             // });
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Safe_Carry_Over_(SCO).pdf');
+             Swal.fire({
+                 title: 'ION Coaching',
+                 html: '<iframe src="https://' + laURL + 'docs/Safe_Carry_Over_(SCO).pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
              break;
          case "Settlement":
              // window.open('docs/SETTLEMENT.pdf');
-             window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
-             // Swal.fire({
-             //     title: 'Settlement',
-             //     html: '<object data="docs/SETTLEMENT.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
-             //     showCloseButton: true,
-             //     showConfirmButton: false,
-             //     heightAuto: true,
-             //     width: '100%',
-             //     background: '#f3f3f3',
-             //     backdrop: `rgb(0 0 0 / 60%)`
-             // });
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             Swal.fire({
+                 title: 'ION Coaching',
+                 html: '<iframe src="https://' + laURL + 'docs/SETTLEMENT.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
              break;
          case "http":
              // window.open('docs/SETTLEMENT.pdf');
