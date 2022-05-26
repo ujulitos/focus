@@ -27,7 +27,7 @@ function activaSeccionTools() {
 
                 Swal.fire({
                     title: 'Handheld (HHC)',
-                    html: '<iframe src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width: 500px; height: 10000px" width="100%" height="80vh"></iframe>',
+                    html: '<iframe src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="overflow: auto; -webkit-overflow-scrolling: touch; height: 500px; min-height:80vh; width: 500px; height: 10000px" width="100%" height="80vh"></iframe>',
                     showCloseButton: true,
                     showConfirmButton: false,
                     heightAuto: false,
