@@ -30,7 +30,7 @@ function activaSeccionTools() {
                     html: '<iframe src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width: 500px; height: 10000px" width="100%" height="80vh"></iframe>',
                     showCloseButton: true,
                     showConfirmButton: false,
-                    heightAuto: true,
+                    heightAuto: false,
                     width: '100%',
                     height: '80vh',
                     background: '#f3f3f3',
