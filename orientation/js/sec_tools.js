@@ -27,11 +27,12 @@ function activaSeccionTools() {
 
                 Swal.fire({
                     title: 'Handheld (HHC)',
-                    html: '<iframe src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                    html: '<iframe src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width: 500px; height: 10000px" width="100%" height="80vh"></iframe>',
                     showCloseButton: true,
                     showConfirmButton: false,
                     heightAuto: true,
                     width: '100%',
+                    height: '80vh',
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
