@@ -17,24 +17,24 @@ function activaSeccionTools() {
             case 1:
                 // window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Distribution_Agreement.pdf');
 
-                $('.modal').addClass('modal-open');
+                // $('.modal').addClass('modal-open');
 
-                $('.close-modal').click(function() {
-                    $('.modal').removeClass('modal-open');
-                });
-
-
-
-                // Swal.fire({
-                //     title: 'Distribution Agreement',
-                //     html: '<iframe src="http://docs.google.com/viewer?url=' + laURL + 'docs/Distribution_Agreement.pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
-                //     showCloseButton: true,
-                //     showConfirmButton: false,
-                //     heightAuto: true,
-                //     width: '100%',
-                //     background: '#f3f3f3',
-                //     backdrop: `rgb(0 0 0 / 60%)`
+                // $('.close-modal').click(function() {
+                //     $('.modal').removeClass('modal-open');
                 // });
+
+
+
+                Swal.fire({
+                    title: 'Handheld (HHC)',
+                    html: '<iframe src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    heightAuto: true,
+                    width: '100%',
+                    background: '#f3f3f3',
+                    backdrop: `rgb(0 0 0 / 60%)`
+                });
                 break;
             case 2:
                 // window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf');
