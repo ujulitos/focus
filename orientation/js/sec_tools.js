@@ -51,7 +51,7 @@ function activaSeccionTools() {
                 // window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf');
                 Swal.fire({
                     title: 'Handheld (HHC)',
-                    html: '<iframe src="https://' + laURL + 'docs/Handheld_(HHC).pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                    html: '<iframe id="pdfFrame" src="https://' + laURL + 'docs/Handheld_(HHC).pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
                     showCloseButton: true,
                     showConfirmButton: false,
                     heightAuto: true,
@@ -59,6 +59,17 @@ function activaSeccionTools() {
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+
+                $('#pdfFrame').hide();
+                var pdfFrame = document.getElementById('pdfFrame');
+                pdfFrame.contentWindow.location.replace('https://' + laURL + 'docs/Distribution_Agreement.pdf');
+                $('#pdfFrame').on('load', function() {
+                    $('#pdfFrame').show();
+                    var documentWidth = $(document).width()
+                    var scale = (documentWidth / 800) * 0.95;
+                    $('#pdfFrame').css("-webkit-transform", "scale(" + scale + ")");
+                });
+
                 break;
             case 3:
                 // window.open('docs/ION_Coaching.pdf');
