@@ -44,7 +44,7 @@ function activaSeccionTools() {
                     $('#pdfFrame').on('load', function() {
                         $('#pdfFrame').show();
                         var documentWidth = $(document).width()
-                        var scale = (documentWidth / 500) * 0.95;
+                        var scale = (documentWidth / documentWidth) * 0.95;
                         $('#pdfFrame').css("-webkit-transform", "scale(" + scale + ")");
                     });
                 }, 500);
