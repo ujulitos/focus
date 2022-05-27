@@ -27,15 +27,25 @@ function activaSeccionTools() {
 
                 Swal.fire({
                     title: 'Handheld (HHC)',
-                    html: '<iframe src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="overflow: auto; -webkit-overflow-scrolling: touch; height: 500px; min-height:80vh; width: 500px; height: 10000px" width="100%" height="80vh"></iframe>',
+                    html: '<iframe id="pdfFrame" src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="overflow: auto; -webkit-overflow-scrolling: touch; height: 500px; min-height:80vh; width: 500px; height: 10000px" width="100%" height="80vh"></iframe>',
                     showCloseButton: true,
                     showConfirmButton: false,
                     heightAuto: false,
                     width: '100%',
-                    height: '80vh',
                     background: '#f3f3f3',
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
+
+                $('#pdfFrame').hide();
+                var pdfFrame = document.getElementById('pdfFrame');
+                pdfFrame.contentWindow.location.replace('https://' + laURL + 'docs/Distribution_Agreement.pdf');
+                $('#pdfFrame').on('load', function() {
+                    $('#pdfFrame').show();
+                    var documentWidth = $(document).width()
+                    var scale = (documentWidth / 500) * 0.95;
+                    $('#pdfFrame').css("-webkit-transform", "scale(" + scale + ")");
+                });
+
                 break;
             case 2:
                 // window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf');
