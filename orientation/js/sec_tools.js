@@ -63,15 +63,17 @@ function activaSeccionTools() {
                     backdrop: `rgb(0 0 0 / 60%)`
                 });
 
-                $('#pdfFrame').hide();
-                var pdfFrame = document.getElementById('pdfFrame');
-                pdfFrame.contentWindow.location.replace('https://' + laURL + 'docs/Distribution_Agreement.pdf');
-                $('#pdfFrame').on('load', function() {
-                    $('#pdfFrame').show();
-                    var documentWidth = $(document).width()
-                    var scale = (documentWidth / '100%') * 0.95;
-                    $('#pdfFrame').css("-webkit-transform", "scale(" + scale + ")");
-                });
+                setTimeout(function() {
+                    $('#pdfFrame').hide();
+                    var pdfFrame = document.getElementById('pdfFrame');
+                    pdfFrame.contentWindow.location.replace('https://' + laURL + 'docs/Distribution_Agreement.pdf');
+                    $('#pdfFrame').on('load', function() {
+                        $('#pdfFrame').show();
+                        var documentWidth = $(document).width()
+                        var scale = (documentWidth / '100%') * 0.95;
+                        $('#pdfFrame').css("-webkit-transform", "scale(" + scale + ")");
+                    });
+                }, 500);
 
                 break;
             case 3:
