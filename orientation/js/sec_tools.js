@@ -66,7 +66,7 @@ function activaSeccionTools() {
                 $('#pdfFrame').on('load', function() {
                     $('#pdfFrame').show();
                     var documentWidth = $(document).width()
-                    var scale = (documentWidth / 800) * 0.95;
+                    var scale = (documentWidth / '100%') * 0.95;
                     $('#pdfFrame').css("-webkit-transform", "scale(" + scale + ")");
                 });
 
