@@ -1,40 +1,540 @@
-<!DOCTYPE html>
-
-<html lang="es">
-
-
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="es-MX">
+<!--<![endif]-->
 
 <head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta charset="UTF-8">
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
 
-    <title>Focus - Advanced Learning Strategies</title>
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Lala Admin">
+    <link rel="icon" sizes="192x192" href="images/ms-icon-310x310.png">
 
-    <style>
+    <meta name="description" content="Desarrollo de cursos e-learning. Cursos en línea en México. Desarrollo elearning.">
+    <meta name="keywords" content="focus, Advanced Learning Strategies, Cursos eLearning, e-learning, scorm, elearning, elearning mexico, focus, focus, lms, moodle, gamificacion, gamification, SCORM, SCORM 1.2, SCORM 2004, consultoria en elearning">
+    <meta name="Search.description" content="Desarrollo de contenidos de capacitación (eLearning)">
+    <meta name="Search.keywords" content="focus, Advanced Learning Strategies. Desarrollo de cursos e-learning. Cursos en línea en México. Desarrollo elearning. focus.">
+    <meta name="rank-words" content="focus, Advanced Learning Strategies, Cursos eLearning, e-learning, scorm, elearning, elearning mexico, focus, focus, lms, moodle, gamificacion, gamification, SCORM, SCORM 1.2, SCORM 2004, consultoria en elearning">
+    <meta name="Search.rank-words" content="focus, Advanced Learning Strategies, Cursos eLearning, e-learning, scorm, elearning, elearning mexico, focus, focus, lms, moodle, gamificacion, gamification, SCORM, SCORM 1.2, SCORM 2004, consultoria en elearning">
+    <meta name="site" content="http://focuslearning.tk">
+    <meta name="Search.site" content="http://focuslearning.tk">
+    <meta name="locale" content="es-MX">
+    <meta name="Search.locale" content="es-MX">
+    <meta name="country" content="MX">
+    <meta name="Search.country" content="MX">
+    <meta name="short-title" content="focus, Advanced Learning Strategies">
+    <meta name="Search.short-title" content="focus, Advanced Learning Strategies">
+    <meta name="Search.language" content="es">
+    <meta name="subcategory" content="capacitacion">
+    <meta name="Search.subcategory" content="electronica">
+    <meta name="robots" content="index, follow">
+    <meta name="Search.robots" content="index, follow">
+    <meta name="category" content="educacion">
+    <meta name="Search.category" content="educacion">
+    <meta name="trackingurl" content="http://focuslearning.tk">
+    <meta name="Search.trackingurl" content="http://focuslearning.tk">
+    <meta name="contentcategory" content="capacitacion, electronica, eLearning">
+    <meta name="Search.contentcategory" content="educacion, scorm, elearning">
+    <meta name="author" content="Enrique Juárez, http://focuslearning.tk">
+    <meta name="Search.author" content="Enrique Juárez, http://focuslearning.tk">
 
-        body {
+    <title>focus: Advanced Learning Strategies</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            font-family: Geneva, Arial, Helvetica, sans-serif;
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#464646">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#464646">
 
-            font-size: 14px;
-
-        }
-
-
-
-    </style>
-
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/etline-font.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
-focus
+<body id="top">
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <section class="hero">
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo"><a href="#"><img src="img/focus_logo.png" alt="focus, advanced learning strategies"></a></div>
+                    <div class="header-nav">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="#nosotros">Qué es Focus</a></li>
+                                <li><a href="#servicios">Servicios</a></li>
+                                <li><a href="#portafolio">Portafolio</a></li>
+                                <li><a href="#contacto">Contacto</a></li>
+                                <!-- <li><a href="http://focuslearning.tk/blog">Blog</a></li> -->
+                                <!-- <li><a href="#ingles">Inglés</a></li> -->
+                            </ul>
+                            <!-- <ul class="member-actions">
+                                <li><a href="#download" class="login">Log in</a></li>
+                                <li><a href="#download" class="btn-white btn-small">Sign up</a></li>
+                            </ul> -->
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#"><span></span></a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-content text-center">
+                        <img src="img/focus_logo_gde.png" alt="focus logo"> <br><br><br>
 
-<body>
+                        <!-- <a href="#" class="btn btn-fill btn-large btn-margin-right">Download</a> <a href="#" class="btn btn-accent btn-large">Learn more</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="down-arrow floating-arrow"><i class="fa fa-angle-down"></i></div>
+    </section>
+
+    <section class="intro section-padding text-center" id="nosotros">
+        <div class="container">
+            <!-- <div class="col-md-12 text-center">
+				<h3>Acerca de nosotros</h3>
+				<br>
+			</div> -->
+            <h4 style="line-height:30px;"><b>focus</b> es un equipo de expertos con más de 22 años de experiencia en eLearning. Dominamos los estándares SCORM 1.2, 2004, AICC, TinCan, y todo tipo de LMS. En <b>focus</b> nos convertimos en socios estratégicos de nuestros clientes para apoyar en la transmisión del conocimiento y, así, generar valor agregado. Diseñamos e implementamos estrategias avanzadas de capacitación para transmitir efectivamente el conocimiento a cualquier rincón del mundo, en cualquier momento. Sin necesidad de estar online.</h4>
+
+
+            <br><br>
+            <div class="row">
+                <div class="col-md-4 intro-feature">
+                    <div class="intro-icon">
+                        <span class="icon icon-tools icon-list"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>Diseñamos modelos</h5>
+                        <p>De la mano del cliente creamos modelos de aprendizaje utilizando los diferentes métodos cognitivos para una transmisión efectiva del conocimiento.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 intro-feature">
+                    <div class="intro-icon">
+                        <span class="icon icon-linegraph icon-list"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>Implementamos estrategias</h5>
+                        <p>Desarrollamos la tecnología necesaria para implementar efectivamente la estrategia de capacitación que mejor se adapte a cada persona. No es necesario estar conectado a internet para aprender.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 intro-feature">
+                    <div class="intro-icon">
+                        <span class="icon icon-genius icon-list"></span>
+                    </div>
+                    <div class="intro-content last">
+                        <h5>Creamos un canal de comunicación</h5>
+                        <p>Sabemos que la conectividad es prioridad hoy en día. Por ello creamos canales de comunicación para los usuarios en los que puedan compartir datos, fomentando así la sana competencia. La base de la gamificación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features section-padding" id="servicios">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-7">
+                    <div class="feature-list">
+                        <h3>Hacemos eLearning!</h3>
+                        <br><br>
+                        <!-- <p>Actualmente los dispositivos móviles son la herramienta más utilizada, y la información debe estar disponible en todo momento. Apostamos a la movilidad y la accesibilidad de esa información.</p> -->
+                        <ul class="features-stack">
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <span class="icon icon-notebook icon-list"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>RapidLearning</h5>
+                                    <p>Su desarrollo utiliza plantillas prediseñadas. Puede contener una actividad de reforzamiento y una evaluación final.</p>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <span class="icon icon-desktop icon-list"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>FullLearning</h5>
+                                    <p>Es un desarrollo a la medida. Generalmente consta de una serie de contenidos ligados tipo mapa curricular (eLearning, lecturas, cápsulas de video, etc.). Para su implementación en un LMS se crean prerrequisitos, ponderación para las actividades,
+                                        etc.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <span class="icon icon-mobile icon-list"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h5>MobileLearning</h5>
+                                    <p>Es un reforzamiento para el plan de capacitación principal. Está enfocado 100% a los dispositivos móviles, y consta de actividades tipo gamificación (quizes, memoramas, maratón, etc) de tipo colaborativas. Los participantes pueden colaborar y
+                                        competir entre ellos, generando así valor en el entrenamiento.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="device-showcase">
+            <div class="devices">
+                <div class="ipad-wrap wp1"></div>
+                <div class="iphone-wrap wp2"></div>
+            </div>
+        </div>
+        <div class="responsive-feature-img"><img src="img/devices.jpg" alt="responsive devices"></div>
+    </section>
+
+    <section class="features-extra section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="feature-list">
+                        <h3>Mobile First! Offline First!</h3>
+                        <p>Actualmente los dispositivos móviles son la herramienta más utilizada, y la información debe estar disponible en todo momento. Apostamos por la movilidad y la accesibilidad de la información. </p>
+                        <p>Sabemos que la tecnología puede “aprender” a predecir tendencias o generar analíticas. Estamos enfocados en el desarrollo de tecnología de vanguardia con conceptos como “mobile first” y “offline first”.</p>
+                        <a href="docs/FocusLearning_Brochure.pdf" target="_blank" class="btn btn-ghost btn-accent btn-small">Descargar Brochure</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="macbook-wrap wp3"></div>
+        <div class="responsive-feature-img"><img src="img/tableta.jpg" alt="responsive devices"></div>
+    </section>
+
+    <section class="portafolio section-padding" id="portafolio">
+        <div class="container">
+            <div class="col-md-12 text-center">
+                <h2>Algo de nuestro trabajo</h2>
+                <!-- <p>Algunos de nuestros trabajos</p> -->
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <article class="portafolio-post">
+                            <figure>
+                                <a href="img/portafolio_img_01.jpg" class="single_image">
+                                    <div class="portafolio_img_wrap">
+                                        <div class="overlay">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <img src="img/portafolio_img_01_tmb.jpg" alt="focus portafolio image" />
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <p>Plataforma de Administración de contenidos gamificados</p>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="portafolio-post">
+                            <figure>
+                                <a href="img/portafolio_img_02.jpg" class="single_image">
+                                    <div class="portafolio_img_wrap">
+                                        <div class="overlay">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <img src="img/portafolio_img_02_tmb.jpg" alt="focus portafolio image" />
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <p>Plantilla eLearning responsiva desarrollada en HTML5</p>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="portafolio-post">
+                            <figure>
+                                <a href="img/portafolio_img_03.jpg" class="single_image">
+                                    <div class="portafolio_img_wrap">
+                                        <div class="overlay">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <img src="img/portafolio_img_03_tmb.jpg" class="single_image" alt="focus portafolio image" />
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <p>FullLearning responsivo desarrollado en HTML5</p>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <article class="portafolio-post">
+                            <figure>
+                                <a href="img/portafolio_img_04.jpg" class="single_image">
+                                    <div class="portafolio_img_wrap">
+                                        <div class="overlay">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <img src="img/portafolio_img_04_tmb.jpg" class="single_image" alt="focus portafolio image" />
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <p>RapidLearning desarrollado en Flash</p>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="portafolio-post">
+                            <figure>
+                                <a href="img/portafolio_img_05.jpg" class="single_image">
+                                    <div class="portafolio_img_wrap">
+                                        <div class="overlay">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <img src="img/portafolio_img_05_tmb.jpg" class="single_image" alt="focus portafolio image" />
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <p>Test de estilos de aprendizaje desarrollado en PHP</p>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="portafolio-post">
+                            <figure>
+                                <a href="img/portafolio_img_06.jpg" class="single_image">
+                                    <div class="portafolio_img_wrap">
+                                        <div class="overlay">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <img src="img/portafolio_img_06_tmb.jpg" class="single_image" alt="focus portafolio image" />
+                                    </div>
+                                </a>
+                                <figcaption>
+                                    <p>Juego de laberinto desarrollado en HTML5</p>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="testimonial-slider section-padding text-center" id="clientes">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="flexslider">
+						<ul class="slides">
+							<li>
+								<div class="avatar"><img src="img/avatar.jpg" alt="focus Testimonial Avatar"></div>
+								<h2>"Lorem ipsum dolor sit amet, nullam lucia nisi."</h2>
+								<p class="author">Peter Finlan, Product Designer.</p>
+							</li>
+							<li>
+								<div class="avatar"><img src="img/mani.jpg" alt="focus Testimonial Avatar"></div>
+								<h2>"Nunc vel maximus purus. Nullam ac urna ornare."</h2>
+								<p class="author">Manoela Ilic, Founder @ Codrops.</p>
+							</li>
+							<li>
+								<div class="avatar"><img src="img/130.jpg" alt="focus Testimonial Avatar"></div>
+								<h2>"Nullam ac urna ornare, ultrices nisl ut, lacinia nisi."</h2>
+								<p class="author">Blaz Robar, Pixel Guru</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
 
 
 
+    <section class="contacto section-padding" id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div>
+                        <h3>Contacto</h3>
+                        <p>Si estás interesado en nuestras soluciones o tienes alguna consulta, no dudes en contactar con nosotros. En breve nos pondremos en contacto contigo.</p>
+                    </div>
+                    <!-- <br><br>
+					<ul class="contacto-stack">
+						<li class="contacto-item">
+							<div class="contacto-icon">
+								<span class="icon icon-chat icon-list"></span>
+							</div>
+							<div class="contacto-content">
+								<p>Tel: (+52) 5534004400</p>
+							</div>
+						</li>
+						<li class="contacto-item">
+							<div class="contacto-icon">
+								<span class="icon icon-envelope icon-list"></span>
+							</div>
+							<div class="contacto-content">
+								<p>e-mail: <a href="mailto:contacto@focuslearning.tk">contacto@focuslearning.tk</a></p>
+							</div>
+						</li>
+						<li class="contacto-item">
+							<div class="contacto-icon">
+								<span class="icon icon-map-pin icon-list"></span>
+							</div>
+							<div class="contacto-content">
+								<p>Dirección: Calle y número.</p>
+							</div>
+						</li>
+					</ul>-->
+                    <br><br>
+
+                    <ul class="contacto-stack">
+                        <li class="contacto-item">
+                            <div class="contacto-icon">
+                                <a class="btn-vacio icon icon-linkedin" href="https://www.linkedin.com/company/focuslearning" , target="_blank"></a>
+                            </div>
+                            <div class="contacto-icon">
+                                <a class="btn-vacio icon icon-facebook" href="https://www.facebook.com/focuslearningmx" , target="_blank"></a>
+                            </div>
+                            <div class="contacto-icon">
+                                <a class="btn-vacio icon icon-twitter" href="#contacto"></a>
+                            </div>
+                            <div class="contacto-icon">
+                                <a class="btn-vacio icon icon-googleplus" href="#contacto"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <br><br>
+
+                <div class="col-md-6 col-md-push-1">
+                    <form action="js/mail.php" class="probootstrap-form">
+                        <div class="form-group">
+                            <h5 id="form_nombre">Nombre</h5>
+                            <div id="form_nombre_warning"></div>
+                            <input type="text" id="contacto_nombre" class="form-control" placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <h5 id="form_email">Correo</h5>
+                            <div id="form_email_warning"></div>
+                            <input type="email" id="contacto_email" class="form-control" placeholder="tu@correo.com">
+                        </div>
+                        <div class="form-group">
+                            <h5 id="form_mensaje">Mensaje</h5>
+                            <div id="form_mensaje_warning"></div>
+                            <textarea name="contacto_mensaje" id="contacto_mensaje" cols="30" rows="5" class="form-control" placeholder="Escribe tu mensaje..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div id="form_contacto_success"></div>
+                            <a id="contacto_enviar" class="btn btn-fill btn-large btn-margin-right">Enviar mensaje</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="to-top">
+        <div class="container">
+            <div class="row">
+                <div class="to-top-wrap">
+                    <a href="#top" class="top"><i class="fa fa-angle-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-links">
+                        <ul class="footer-group">
+                            <li><a href="#nosotros">Qué es Focus</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#portafolio">Portafolio</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                            <!-- <li><a href="http://focuslearning.tk/blog">Blog</a></li> -->
+                            <!-- <li><a href="#ingles">Inglés</a></li> -->
+                        </ul>
+                        <div class="footer-logo"><img src="img/focus_logo_med.png" alt="focus logo"></div><br><br>
+                        <p style="padding-bottom:0px;">® FOCUS - ADVANCED LEARNING STRATEGIES</p>
+                    </div>
+                </div>
+                <!-- <div class="social-share">
+                    <p>Share focus with your friends</p>
+                    <a href="https://twitter.com/peterfinlan" class="twitter-share"><i class="fa fa-twitter"></i></a> <a href="#" class="facebook-share"><i class="fa fa-facebook"></i></a>
+                </div> -->
+            </div>
+        </div>
+
+        <img src="http://www.reliablecounter.com/count.php?page=focuslearning.tk/&digit=style/black-and-white/2/&reloads=0" alt="" title="" border="0">
+
+    </footer>
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'http://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 
-
-
 </html>
-
