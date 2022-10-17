@@ -21,7 +21,7 @@ function iniciarAplicacion() {
     cargarPagina(noPagina);
 }
 
-//Metodos para avanzar y retroceder página------------------------------
+//Metodos para avanzar y retroceder página------------------------------>
 function siguientePagina() {
     if (noPagina < totalPaginas - 1) {
 
