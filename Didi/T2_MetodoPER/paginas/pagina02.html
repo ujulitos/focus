@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 02</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+<style>
+    .cursorBtn {
+        cursor: pointer;
+    }
+</style>
+
+<body class="pagina">
+
+    <img class="elementos" id="texto02" src="../img/pagina02/texto.png" data-posX="0" data-posY="0" alt="">
+
+    <img class="elementos" id="info_menu" src="../img/pagina02/info_menu.png" data-posX="40" data-posY="248.453" alt="">
+    <img class="elementos" id="info_recargar" src="../img/pagina02/info_recargar.png" data-posX="282" data-posY="248.453" alt="">
+    <img class="elementos" id="info_bocina" src="../img/pagina02/info_bocina.png" data-posX="519" data-posY="248.453" alt="">
+    <img class="elementos" id="info_navegacion" src="../img/pagina02/info_navegacion.png" data-posX="764" data-posY="199.124" alt="">
+
+    <img class="elementos cursorBtn" id="menu" src="../img/pagina02/menu.png" data-posX="124.783" data-posY="224.115" alt="">
+    <img class="elementos cursorBtn" id="recargar" src="../img/pagina02/recargar.png" data-posX="364.285" data-posY="224.115" alt="">
+    <img class="elementos cursorBtn" id="bocina" src="../img/pagina02/bocina.png" data-posX="600.276" data-posY="224.115" alt="">
+    <img class="elementos cursorBtn" id="navegacion" src="../img/pagina02/navegacion.png" data-posX="817" data-posY="183" alt="">
+
+
+    <!-- Script de la página -->
+    <script>
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const texto = $('#texto02');
+        const btnMenu = $('#menu');
+        const btnRecargar = $('#recargar');
+        const btnBocina = $('#bocina');
+        const btnNavegacion = $('#navegacion');
+
+        const info_menu = $('#info_menu');
+        const info_recargar = $('#info_recargar');
+        const info_bocina = $('#info_bocina');
+        const info_navegacion = $('#info_navegacion');
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.activarBotonAtras();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido() {
+            aplicacion.reproducirAudio(audio[0], hoverBotones, 1);
+            animacionEntrada(texto, 'arriba-abajo', 1, 1);
+
+            animacionEntrada(info_menu, 'default', 1, 1);
+            animacionEntrada(info_bocina, 'default', 1, 1);
+            animacionEntrada(info_navegacion, 'default', 1, 1);
+            animacionEntrada(info_recargar, 'default', 1, 1);
+
+            animacionEntrada(btnMenu, 'arriba-abajo', 1, 1.5);
+            animacionEntrada(btnRecargar, 'arriba-abajo', 1, 2);
+            animacionEntrada(btnBocina, 'arriba-abajo', 1, 2.5);
+            animacionEntrada(btnNavegacion, 'arriba-abajo', 1, 3);
+
+            info_menu.css({
+                'display': 'none',
+            });
+            info_bocina.css({
+                'display': 'none',
+            });
+            info_navegacion.css({
+                'display': 'none',
+            });
+            info_recargar.css({
+                'display': 'none',
+            });
+
+        }
+
+        function hoverBotones() {
+            btnMenu.hover(function() {
+                info_menu.css("display", "block");
+            }, function() {
+                info_menu.css("display", "none");
+            });
+            btnBocina.hover(function() {
+                info_bocina.css("display", "block");
+            }, function() {
+                info_bocina.css("display", "none");
+            });
+            btnNavegacion.hover(function() {
+                info_navegacion.css("display", "block");
+            }, function() {
+                info_navegacion.css("display", "none");
+            });
+            btnRecargar.hover(function() {
+                info_recargar.css("display", "block");
+            }, function() {
+                info_recargar.css("display", "none");
+            });
+
+            aplicacion.terminaPantalla();
+        }
+    </script>
+</body>
+
+</html>

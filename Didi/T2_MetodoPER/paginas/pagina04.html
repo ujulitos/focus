@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 04</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina04/titulo.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01" src="../img/pagina04/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img02" src="../img/pagina04/img02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img03" src="../img/pagina04/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img04" src="../img/pagina04/img04.png" data-posX="0" data-posY="0" />
+
+    <img class="elementos" id="pregunta01" src="../img/pagina04/pregunta01.png" data-posX="0" data-posY="" />
+    <img class="elementos boton" id="respuesta01_1" src="../img/pagina04/respuesta01_1.png" data-posX="380" data-posY="300" />
+    <img class="elementos boton" id="respuesta01_2" src="../img/pagina04/respuesta01_2.png" data-posX="380" data-posY="370" />
+    <img class="elementos boton" id="respuesta01_3" src="../img/pagina04/respuesta01_3.png" data-posX="380" data-posY="440" />
+    <img class="elementos" id="retro01_Bien" src="../img/pagina04/retro01_Bien.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar01" src="../img/pagina04/botonCerrar.png" data-posX="730" data-posY="175" />
+
+    <img class="elementos" id="pregunta02" src="../img/pagina04/pregunta02.png" data-posX="0" data-posY="0" />
+    <img class="elementos boton" id="respuesta02_1" src="../img/pagina04/respuesta02_1.png" data-posX="380" data-posY="300" />
+    <img class="elementos boton" id="respuesta02_2" src="../img/pagina04/respuesta02_2.png" data-posX="380" data-posY="370" />
+    <img class="elementos boton" id="respuesta02_3" src="../img/pagina04/respuesta02_3.png" data-posX="380" data-posY="440" />
+    <img class="elementos" id="retro02_Bien" src="../img/pagina04/retro02_Bien.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar02" src="../img/pagina04/botonCerrar.png" data-posX="730" data-posY="175" />
+
+    <img class="elementos" id="pregunta03" src="../img/pagina04/pregunta03.png" data-posX="0" data-posY="0" />
+    <img class="elementos boton" id="respuesta03_1" src="../img/pagina04/respuesta03_1.png" data-posX="255" data-posY="300" />
+    <img class="elementos boton" id="respuesta03_2" src="../img/pagina04/respuesta03_2.png" data-posX="500" data-posY="250" />
+    <img class="elementos boton" id="respuesta03_3" src="../img/pagina04/respuesta03_3.png" data-posX="760" data-posY="290" />
+    <img class="elementos" id="retro03_Bien" src="../img/pagina04/retro03_Bien.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar03" src="../img/pagina04/botonCerrar.png" data-posX="730" data-posY="175" />
+
+    <img class="elementos" id="pregunta04" src="../img/pagina04/pregunta04.png" data-posX="0" data-posY="0" />
+    <img class="elementos boton" id="respuesta04_1" src="../img/pagina04/respuesta04_1.png" data-posX="255" data-posY="300" />
+    <img class="elementos boton" id="respuesta04_2" src="../img/pagina04/respuesta04_2.png" data-posX="500" data-posY="250" />
+    <img class="elementos boton" id="respuesta04_3" src="../img/pagina04/respuesta04_3.png" data-posX="760" data-posY="290" />
+    <img class="elementos" id="retro04_Bien" src="../img/pagina04/retro04_Bien.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar04" src="../img/pagina04/botonCerrar.png" data-posX="730" data-posY="175" />
+
+    <img class="elementos" id="pregunta05" src="../img/pagina04/pregunta05.png" data-posX="0" data-posY="0" />
+    <img class="elementos boton" id="respuesta05_1" src="../img/pagina04/respuesta05_1.png" data-posX="255" data-posY="300" />
+    <img class="elementos boton" id="respuesta05_2" src="../img/pagina04/respuesta05_2.png" data-posX="500" data-posY="250" />
+    <img class="elementos boton" id="respuesta05_3" src="../img/pagina04/respuesta05_3.png" data-posX="760" data-posY="290" />
+    <img class="elementos" id="retro05_Bien" src="../img/pagina04/retro05_Bien.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar05" src="../img/pagina04/botonCerrar.png" data-posX="730" data-posY="175" />
+
+    <img class="elementos" id="pregunta06" src="../img/pagina04/pregunta06.png" data-posX="0" data-posY="0" />
+    <img class="elementos boton" id="respuesta06_1" src="../img/pagina04/respuesta06_1.png" data-posX="255" data-posY="300" />
+    <img class="elementos boton" id="respuesta06_2" src="../img/pagina04/respuesta06_2.png" data-posX="500" data-posY="250" />
+    <img class="elementos boton" id="respuesta06_3" src="../img/pagina04/respuesta06_3.png" data-posX="760" data-posY="290" />
+    <img class="elementos" id="retro06_Bien" src="../img/pagina04/retro06_Bien.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar06" src="../img/pagina04/botonCerrar.png" data-posX="800" data-posY="145" />
+
+    <img class="elementos" id="pregunta07" src="../img/pagina04/pregunta07.png" data-posX="0" data-posY="0" />
+    <img class="elementos boton" id="respuesta07_1" src="../img/pagina04/respuesta07_1.png" data-posX="255" data-posY="300" />
+    <img class="elementos boton" id="respuesta07_2" src="../img/pagina04/respuesta07_2.png" data-posX="500" data-posY="250" />
+    <img class="elementos boton" id="respuesta07_3" src="../img/pagina04/respuesta07_3.png" data-posX="760" data-posY="290" />
+    <img class="elementos" id="retro07_Bien" src="../img/pagina04/retro07_Bien.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar07" src="../img/pagina04/botonCerrar.png" data-posX="800" data-posY="145" />
+
+    <img class="elementos" id="retroFinal01" src="../img/pagina04/retroFinal01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="retroFinal02" src="../img/pagina04/retroFinal02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="retroFinal03" src="../img/pagina04/retroFinal03.png" data-posX="0" data-posY="0" />
+
+    <!-- Script de la página -->
+    <script>
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+        let aciertos = 0;
+        const cuantasPreguntas = 7;
+        let laPregunta = 1;
+
+        const boton = $('.boton');
+        boton.css({
+            'cursor': 'pointer'
+        });
+
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
+        const img03 = $('#img03');
+        const img04 = $('#img04');
+
+        this.pregunta01 = $('#pregunta01');
+        this.respuesta01_1 = $('#respuesta01_1');
+        this.respuesta01_2 = $('#respuesta01_2');
+        this.respuesta01_3 = $('#respuesta01_3');
+        this.retro01_Bien = $('#retro01_Bien');
+        this.botonCerrar01 = $('#botonCerrar01');
+
+        this.pregunta02 = $('#pregunta02');
+        this.respuesta02_1 = $('#respuesta02_1');
+        this.respuesta02_2 = $('#respuesta02_2');
+        this.respuesta02_3 = $('#respuesta02_3');
+        this.retro02_Bien = $('#retro02_Bien');
+        this.botonCerrar02 = $('#botonCerrar02');
+
+        this.pregunta03 = $('#pregunta03');
+        this.respuesta03_1 = $('#respuesta03_1');
+        this.respuesta03_2 = $('#respuesta03_2');
+        this.respuesta03_3 = $('#respuesta03_3');
+        this.retro03_Bien = $('#retro03_Bien');
+        this.botonCerrar03 = $('#botonCerrar03');
+
+        this.pregunta04 = $('#pregunta04');
+        this.respuesta04_1 = $('#respuesta04_1');
+        this.respuesta04_2 = $('#respuesta04_2');
+        this.respuesta04_3 = $('#respuesta04_3');
+        this.retro04_Bien = $('#retro04_Bien');
+        this.botonCerrar04 = $('#botonCerrar04');
+
+        this.pregunta05 = $('#pregunta05');
+        this.respuesta05_1 = $('#respuesta05_1');
+        this.respuesta05_2 = $('#respuesta05_2');
+        this.respuesta05_3 = $('#respuesta05_3');
+        this.retro05_Bien = $('#retro05_Bien');
+        this.botonCerrar05 = $('#botonCerrar05');
+
+        this.pregunta06 = $('#pregunta06');
+        this.respuesta06_1 = $('#respuesta06_1');
+        this.respuesta06_2 = $('#respuesta06_2');
+        this.respuesta06_3 = $('#respuesta06_3');
+        this.retro06_Bien = $('#retro06_Bien');
+        this.botonCerrar06 = $('#botonCerrar06');
+
+        this.pregunta07 = $('#pregunta07');
+        this.respuesta07_1 = $('#respuesta07_1');
+        this.respuesta07_2 = $('#respuesta07_2');
+        this.respuesta07_3 = $('#respuesta07_3');
+        this.retro07_Bien = $('#retro07_Bien');
+        this.botonCerrar07 = $('#botonCerrar07');
+
+        this.retroFinal01 = $('#retroFinal01');
+        this.retroFinal02 = $('#retroFinal02');
+        this.retroFinal03 = $('#retroFinal03');
+
+        const that = this;
+
+        // Audios------------------------------------------------------
+        this.audioIntro = [
+            new Audio('../audios/DiDi_PER_3.mp3'),
+            new Audio('../audios/DiDi_PER_4.2.mp3'),
+        ]
+        this.audio1 = [
+            new Audio('../audios/DiDi_PER_4.mp3'),
+            new Audio('../audios/DiDi_PER_4.1.mp3'),
+            new Audio('../audios/DiDi_PER_5.mp3'),
+        ]
+        this.audio2 = [
+            new Audio('../audios/DiDi_PER_6.mp3'),
+            new Audio('../audios/DiDi_PER_6.1.mp3'),
+            new Audio('../audios/DiDi_PER_7.mp3'),
+        ]
+        this.audio3 = [
+            new Audio('../audios/DiDi_PER_8.mp3'),
+            new Audio('../audios/DiDi_PER_8.1.mp3'),
+            new Audio('../audios/DiDi_PER_9.mp3'),
+        ]
+        this.audio4 = [
+            new Audio('../audios/DiDi_PER_10.mp3'),
+            new Audio('../audios/DiDi_PER_10.1.mp3'),
+            new Audio('../audios/DiDi_PER_11.mp3'),
+        ]
+        this.audio5 = [
+            new Audio('../audios/DiDi_PER_12.mp3'),
+            new Audio('../audios/DiDi_PER_12.1.mp3'),
+            new Audio('../audios/DiDi_PER_13.mp3'),
+        ]
+        this.audio6 = [
+            new Audio('../audios/DiDi_PER_14.mp3'),
+            new Audio('../audios/DiDi_PER_14.1.mp3'),
+            new Audio('../audios/DiDi_PER_15.mp3'),
+        ]
+        this.audio7 = [
+            new Audio('../audios/DiDi_PER_16.mp3'),
+            new Audio('../audios/DiDi_PER_16.1.mp3'),
+            new Audio('../audios/DiDi_PER_16.2.mp3'),
+            new Audio('../audios/DiDi_PER_17.mp3'),
+        ]
+        this.audioFinal = [
+            new Audio('../audios/DiDi_PER_18.mp3'),
+            new Audio('../audios/DiDi_PER_19.mp3'),
+            new Audio('../audios/DiDi_PER_20.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'default', 1, 1);
+            animacionEntrada(img02, 'default', 1, 1.5);
+
+            // QUITAR
+            aplicacion.reproducirAudio(audioIntro[0], iniciaActividad, 3);
+
+            animacionEntrada(img03, 'izquierda-derecha', 1, 2);
+            animacionEntrada(img04, 'derecha-izquierda', 1, 5);
+
+            // iniciaActividad(laPregunta);
+        }
+
+
+        function iniciaActividad() {
+            animacionSalida(img04, 'default', 1, 0);
+            animacionSalida(img03, 'default', 1, .2);
+            animacionSalida(img02, 'izquierda-derecha', 1, .5);
+
+            pregunta(laPregunta);
+        }
+
+
+        function pregunta(cualPregunta) {
+            console.log('Pregunta', cualPregunta);
+
+            animacionSalida(that['pregunta0' + (cualPregunta - 1)], 'default', 1, 0);
+            animacionSalida(that['respuesta0' + (cualPregunta - 1) + '_' + 1], 'default', 1, 0);
+            animacionSalida(that['respuesta0' + (cualPregunta - 1) + '_' + 2], 'default', 1, 0);
+            animacionSalida(that['respuesta0' + (cualPregunta - 1) + '_' + 3], 'default', 1, 0);
+
+            animacionEntrada(that['pregunta0' + cualPregunta], 'default', 1, 1);
+            aplicacion.reproducirAudio(that['audio' + cualPregunta][0], terminaAudio1, 1.5);
+
+            function terminaAudio1() {
+                if (cualPregunta == 7) {
+                    aplicacion.reproducirAudio(that['audio' + cualPregunta][1], terminaAudio2, 0);
+
+                    function terminaAudio2() {
+                        aplicacion.reproducirAudio(that['audio' + cualPregunta][2], entranRespuestas, 0);
+                    }
+
+                } else {
+                    aplicacion.reproducirAudio(that['audio' + cualPregunta][1], entranRespuestas, 0);
+                }
+            }
+
+            function entranRespuestas() {
+                aplicacion.reproducirAudio(audioIntro[1], activaRespuestas, 0);
+                animacionEntrada(that['respuesta0' + cualPregunta + '_' + 1], 'default', 1, 0);
+                animacionEntrada(that['respuesta0' + cualPregunta + '_' + 2], 'default', 1, .2);
+                animacionEntrada(that['respuesta0' + cualPregunta + '_' + 3], 'default', 1, .4);
+            }
+
+            function activaRespuestas() {
+                that['respuesta0' + cualPregunta + '_' + 1].click(function(e) {
+                    e.preventDefault();
+                    aciertos += 1;
+                });
+                that['respuesta0' + cualPregunta + '_' + 2].click(function(e) {
+                    e.preventDefault();
+                    aciertos += 2;
+                });
+                that['respuesta0' + cualPregunta + '_' + 3].click(function(e) {
+                    e.preventDefault();
+                    aciertos += 3;
+                });
+                for (a = 1; a <= 3; a++) {
+                    that['respuesta0' + cualPregunta + '_' + a].click(function(e) {
+                        e.preventDefault();
+                        console.log('aciertos', aciertos);
+                        animacionEntrada(that['retro0' + cualPregunta + '_Bien'], 'default', .5, .2);
+                        if (cualPregunta == 7) {
+                            aplicacion.reproducirAudio(that['audio' + cualPregunta][3], terminaAudioRetro, 1);
+                        } else {
+                            aplicacion.reproducirAudio(that['audio' + cualPregunta][2], terminaAudioRetro, 1);
+                        }
+                    });
+                }
+
+                function terminaAudioRetro() {
+                    parpadear(that['botonCerrar0' + cualPregunta]);
+
+                    that['botonCerrar0' + cualPregunta].click(function(e) {
+                        e.preventDefault();
+                        animacionSalida(that['botonCerrar0' + cualPregunta], 'default', 1, 0);
+                        animacionSalida(that['retro0' + cualPregunta + '_Bien'], 'default', 1, 0);
+                        if (laPregunta < cuantasPreguntas) {
+                            laPregunta++;
+                            pregunta(laPregunta);
+                        } else {
+                            retroFinal();
+                        }
+                    });
+                }
+
+            }
+
+            function retroFinal() {
+                console.log('retroFinal con aciertos', aciertos);
+
+                animacionSalida(that['pregunta0' + cuantasPreguntas], 'default', 1, 0);
+                animacionSalida(that['respuesta0' + cuantasPreguntas + '_' + 1], 'default', 1, 0);
+                animacionSalida(that['respuesta0' + cuantasPreguntas + '_' + 2], 'default', 1, 0);
+                animacionSalida(that['respuesta0' + cuantasPreguntas + '_' + 3], 'default', 1, 0);
+
+                if (aciertos <= 12) {
+                    animacionEntrada(retroFinal01, 'default', 1, 0);
+                    aplicacion.reproducirAudio(audioFinal[0], finalPantalla, 1);
+                } else if (aciertos >= 13 && aciertos <= 18) {
+                    animacionEntrada(retroFinal02, 'default', 1, 0);
+                    aplicacion.reproducirAudio(audioFinal[1], finalPantalla, 1);
+                } else if (aciertos >= 19) {
+                    animacionEntrada(retroFinal03, 'default', 1, 0);
+                    aplicacion.reproducirAudio(audioFinal[2], finalPantalla, 1);
+                }
+            }
+
+        }
+
+        function finalPantalla() {
+            aplicacion.terminaPantalla();
+        }
+    </script>
+</body>
+
+</html>
