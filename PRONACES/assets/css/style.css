@@ -240,6 +240,35 @@ h6 {
     }
 }
 
+.boton {
+    font-size: 14px;
+    padding: 4px 14px;
+    border: 0;
+    border-radius: 50px;
+    background: #ef6603;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #f78b3e;
+
+}
+
+.imagen100 {
+    width: 100%;
+}
+
+.card {
+    /* margin: 10px; */
+}
+
+.card-text {
+    font-size: 14px;
+    text-align: justify;
+}
+
 /**
 * Mobile Navigation 
 */
