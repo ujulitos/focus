@@ -60,11 +60,11 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
-            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/DiDi_PER_22.mp3'),
+            new Audio('../audios/DiDi_PER_23.mp3'),
+            new Audio('../audios/DiDi_PER_24.mp3'),
+            new Audio('../audios/DiDi_PER_25.mp3'),
+            new Audio('../audios/DiDi_PER_26.mp3'),
         ]
 
         // Al cargarse la página
@@ -105,25 +105,31 @@
 
         function hoverBotones() {
             btnMenu.hover(function() {
+                aplicacion.reproducirAudio(audio[1], nada, 0);
                 info_menu.css("display", "block");
             }, function() {
                 info_menu.css("display", "none");
             });
             btnBocina.hover(function() {
+                aplicacion.reproducirAudio(audio[3], nada, 0);
                 info_bocina.css("display", "block");
             }, function() {
                 info_bocina.css("display", "none");
             });
             btnNavegacion.hover(function() {
+                aplicacion.reproducirAudio(audio[4], nada, 0);
                 info_navegacion.css("display", "block");
             }, function() {
                 info_navegacion.css("display", "none");
             });
             btnRecargar.hover(function() {
+                aplicacion.reproducirAudio(audio[2], nada, 0);
                 info_recargar.css("display", "block");
             }, function() {
                 info_recargar.css("display", "none");
             });
+
+            function nada() {}
 
             aplicacion.terminaPantalla();
         }
