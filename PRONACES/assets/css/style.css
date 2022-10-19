@@ -88,10 +88,12 @@ h6 {
 --------------------------------------------------------------*/
 #header {
     height: 70px;
-    transition: all 0.5s;
     z-index: 997;
-    transition: all 0.5s;
-    background: rgba(42, 44, 57, 0.9);
+    /* background: rgba(42, 44, 57, 0.9); */
+    /* background: url(../img/fondoBordado.png) center center; */
+
+    padding: 50px 0;
+    transition: all 300ms ease-in-out;
 }
 
 #header.header-transparent {
@@ -99,8 +101,10 @@ h6 {
 }
 
 #header.header-scrolled {
-    /* background: rgba(121, 122, 129, 0.9); */
-    background: url(../img/fondoBordado.png) center center;
+    background-color: #3b091c;
+
+    padding: 20px 0;
+    transition: all 300ms ease-in-out;
 }
 
 #header .logo h1 {
@@ -1688,7 +1692,11 @@ section {
 /* media */
 
 
-@media screen and (max-width:992px) {}
+@media screen and (max-width:992px) {
+    #header {
+        padding: 20px 0;
+    }
+}
 
 @media screen and (max-width: 768px) {}
 
