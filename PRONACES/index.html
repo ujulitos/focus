@@ -28,6 +28,8 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/css/menu.css">
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -50,6 +52,53 @@
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <a href="index.html"><img src="assets/img/logoRepositorioChico.png" alt="" class="img-fluid"></a>
             </div>
+
+
+
+            <nav>
+                <ul class="cd-primary-nav">
+                    <li><a href="#tonach">TONACH</a></li>
+                    <li><a href="#gral">PROYECTO GENERAL</a></li>
+
+                    <ul class="cd-secondary-nav mt-3">
+                        <li> DIÁLOGO DE SABERES
+                            <br><i class="bi-chevron-down chevron"></i></li>
+
+                        <ul class="cd-secondary-nav mt-3">
+                            <li> QUIÉNES DIALOGAN
+                                <br><i class="bi-chevron-down chevron"></i> </li>
+                            <li><a href="#comunidades">COMUNIDADES</a></li>
+                            <li><a href="#investigadoras">INVESTIGADORAS</a></li>
+                        </ul>
+
+
+                        <ul class="cd-terciary-nav mt-3">
+                            <li> SABERES DE MUJERES
+                                <br><i class="bi-chevron-down chevron"></i> </li>
+                            <li><a href="#narrativas_embarazo">NARRATIVAS SOBRE EMBARAZO</a></li>
+                            <li><a href="#narrativas_nacimiento">NARRATIVAS SOBRE NACIMIENTO</a></li>
+                            <li><a href="#narrativas_crianza">NARRATIVAS SOBRE CRIANZA</a></li>
+                            <li><a href="#parteras">NUESTRAS PARTERAS</a></li>
+                            <li><a href="#repositorio">REPOSITORIO RESERVADO</a></li>
+                            <li><a href="#biblioteca">BIBLIOTECA Y SITIOS DE INTERÉS</a></li>
+                        </ul>
+                    </ul>
+
+                    <li><a href="#pedagogia">PEDAGOGÍA DE SABERES</a></li>
+                </ul>
+            </nav>
+
+            <div class="cd-overlay-nav">
+                <span></span>
+            </div> <!-- cd-overlay-nav -->
+
+            <div class="cd-overlay-content">
+                <span></span>
+            </div> <!-- cd-overlay-content -->
+
+
+
+
 
             <nav id="navbar" class="navbar">
                 <ul>
@@ -82,8 +131,10 @@
                     </li>
                     <li><a class="nav-link scrollto" href="#pedagogia">PEDAGOGÍA DE SABERES</a></li>
                 </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+                <i class="cd-nav-trigger"><span class="cd-icon"></span></i>
+                <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+            </nav>
+
 
         </div>
     </header><!-- End Header -->
@@ -443,6 +494,11 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/velocity.min.js"></script>
+    <script src="assets/js/menu.js"></script>
+
 
 </body>
 
