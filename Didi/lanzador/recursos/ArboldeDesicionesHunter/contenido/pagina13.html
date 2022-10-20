@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 13 | I4L</title>
+</head>
+<body class="pagina-interna">
+    <img class="elementos" id="fondo" src="./img/pagina13/fondo.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos respuestas" id="r1" src="./img/pagina13/r1.png" data-posX="413" data-posY="317" alt="">
+    <img class="elementos respuestas" id="r2" src="./img/pagina13/r2.png" data-posX="743" data-posY="317" alt="">
+    <img class="elementos respuestas" id="r3" src="./img/pagina13/r3.png" data-posX="84" data-posY="317" alt="">
+
+
+    <!-- Script de la página -->
+    <script type="module">
+
+        // Importaciones---------------------------------------------------
+        import {aplicacion} from './js/app.js';
+        import {cargando} from './js/funciones.js';
+        import {animacionEntrada, parpadea, animacionSalida} from './js/animaciones.js';
+
+        // Variables-------------------------------------------------------
+        
+        const fondo = $('#fondo');
+        const r1 = $('#r1');
+        const r2 = $('#r2');
+        const r3 = $('#r3');
+
+        const respuestas = $('.respuestas');
+
+        // Audio-----------------------------------------------------------
+        const audio = [
+            new Audio('./audios/arbol_h_13.mp3'),
+            new Audio('./audios/arbol_h_13.1.mp3'),
+        ]
+
+        //Al cargar la página
+        jQuery(function($){
+            aplicacion.bloquearNavegacion();
+            cargando(iniciarPagina);
+        });
+
+        const iniciarPagina = ()=>{
+            aplicacion.reproducirAudio(audio[0], elegir, 1000);
+            animacionEntrada(fondo, 'izquierda-derecha', 1, 1);
+            animacionEntrada(r1, 'arriba-abajo', 1, 2);
+            animacionEntrada(r2, 'arriba-abajo', 1, 2.5);
+            animacionEntrada(r3, 'arriba-abajo', 1, 1.5);
+        }
+
+        const elegir = ()=>{
+            aplicacion.reproducirAudio(audio[1], mensaje, 1000);
+        }
+
+        const mensaje = ()=>{
+            respuestas.css({
+                'cursor': 'pointer',
+                'opacity': '.75'
+            });
+        }
+
+        r1.hover(function(){
+            r1.css({
+                'transition': 'all .3s ease',
+                'opacity': '1'
+            });
+        }, function(){
+            r1.css({
+                'transition': 'all .3s ease',
+                'opacity': '.75'
+            });
+        });
+        
+        r2.hover(function(){
+            r2.css({
+                'transition': 'all .3s ease',
+                'opacity': '1'
+            });
+        }, function(){
+            r2.css({
+                'transition': 'all .3s ease',
+                'opacity': '.75'
+            });
+        });
+        
+        r3.hover(function(){
+            r3.css({
+                'transition': 'all .3s ease',
+                'opacity': '1'
+            });
+        }, function(){
+            r3.css({
+                'transition': 'all .3s ease',
+                'opacity': '.75'
+            });
+        });
+
+        r1.click(function(){
+            if(r1.css('cursor') == 'pointer'){
+                aplicacion.addPuntaje(1)
+                aplicacion.irPagina(5);
+            }
+        });
+
+        r2.click(function(){
+            if(r2.css('cursor') == 'pointer'){
+                aplicacion.addPuntaje(2)
+                aplicacion.irPagina(14);
+            }
+        });
+
+        r3.click(function(){
+            if(r3.css('cursor') == 'pointer'){
+                aplicacion.addPuntaje(3)
+                aplicacion.irPagina(19);
+            }
+        });
+
+    </script>
+
+    <!-- Termina Script -->
+</body>
+</html>
