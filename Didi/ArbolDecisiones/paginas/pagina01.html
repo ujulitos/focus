@@ -31,10 +31,12 @@
 
     <img class="elementos boton" id="botonRecurso1" src="../img/pagina01/botonRecurso1.png" data-posX="300" data-posY="230" />
     <img class="elementos" id="palomaGris1" src="../img/pagina01/palomaGris.png" data-posX="650" data-posY="228" />
+    <img class="elementos" id="palomaAmarilla1" src="../img/pagina01/palomaAmarilla.png" data-posX="650" data-posY="228" />
     <img class="elementos" id="palomaVerde1" src="../img/pagina01/palomaVerde.png" data-posX="650" data-posY="228" />
 
     <img class="elementos boton" id="botonRecurso2" src="../img/pagina01/botonRecurso2.png" data-posX="300" data-posY="330" />
     <img class="elementos" id="palomaGris2" src="../img/pagina01/palomaGris.png" data-posX="650" data-posY="328" />
+    <img class="elementos" id="palomaAmarilla2" src="../img/pagina01/palomaAmarilla.png" data-posX="650" data-posY="328" />
     <img class="elementos" id="palomaVerde2" src="../img/pagina01/palomaVerde.png" data-posX="650" data-posY="328" />
 
     <style>
@@ -63,14 +65,17 @@
 
         this.botonRecurso1 = $('#botonRecurso1');
         this.palomaGris1 = $('#palomaGris1');
+        this.palomaAmarilla1 = $('#palomaAmarilla1');
         this.palomaVerde1 = $('#palomaVerde1');
 
         this.botonRecurso2 = $('#botonRecurso2');
         this.palomaGris2 = $('#palomaGris2');
+        this.palomaAmarilla2 = $('#palomaAmarilla2');
         this.palomaVerde2 = $('#palomaVerde2');
 
 
-        const cuantosRecursos = 2;
+        var cuantosRecursos = 2;
+        var elRecursoNum;
         this.recurso1 = 'ArboldeDesicionesHunter';
         this.recurso2 = 'ArboldeDesicionesFarming';
         this.recursoEstatus1;
@@ -131,14 +136,16 @@
         botonRegistrar.click(function() {
             if (botonRegistrar.css('cursor') == 'pointer') {
                 // aplicacion.siguientePagina();
-                const elNombre = inputNombre.val();
+                var elNombre = inputNombre.val();
+                parent.elUsuario = elNombre;
+                parent.registraIniciado();
                 iniciaRecursos(elNombre);
             }
         });
 
 
-        function iniciaRecursos(elNombre) {
-            console.log('iniciaRecursos con usuario', elNombre);
+        function iniciaRecursos(cualNombre) {
+            console.log('iniciaRecursos con usuario', cualNombre);
 
             animacionSalida(img02, 'default', .2, 0);
             animacionSalida(inputNombre, 'default', .2, 0);
@@ -147,20 +154,29 @@
             animacionEntrada(botonRecurso1, 'aparecer', 1, .5);
             animacionEntrada(botonRecurso2, 'aparecer', 1, .5);
 
-            setTimeout(() => {
-                leeRecursos();
-            }, 500);
+            // setTimeout(() => {
+            //     leeRecursos(cualNombre);
+            // }, 500);
 
         }
 
-        function leeRecursos() {
+
+        function leeRecursos(cualNombre) {
+            console.log('leeRecursos', cualNombre);
 
             for (a = 1; a <= cuantosRecursos; a++) {
-                console.log('el estatus del recurso ' + a + ' :', that['recursoEstatus' + a]);
 
-                if (that['recursoEstatus' + a] == 'completado') {
+                console.log('el estatus del recurso ' + a + ':', parent['recursoEstatus' + a]);
+
+                if (parent['recursoEstatus' + a] == 'incomplete') {
+                    animacionEntrada(that['palomaAmarilla' + a], 'aparecer', 1, .5);
+                } else if (parent['recursoEstatus' + a] == 'completed') {
                     animacionEntrada(that['palomaVerde' + a], 'aparecer', 1, .5);
-                } else {
+                } else if (parent['recursoEstatus' + a] == 'passed') {
+                    animacionEntrada(that['palomaVerde' + a], 'aparecer', 1, .5);
+                } else if (parent['recursoEstatus' + a] == 'failed') {
+                    animacionEntrada(that['palomaGris' + a], 'aparecer', 1, .5);
+                } else if (parent['recursoEstatus' + a] == 'noVisitado') {
                     animacionEntrada(that['palomaGris' + a], 'aparecer', 1, .5);
                 }
 
@@ -168,18 +184,29 @@
                     e.preventDefault();
                     if ($(this).css('cursor') == 'pointer') {
                         let cualRecurso = parseInt($(this).attr('id').substr(12, 2));
+                        elRecursoNum = cualRecurso;
                         lanzaRecurso(cualRecurso);
                     }
                 });
-            }
 
+            }
         }
+
+
 
         function lanzaRecurso(cualRecurso) {
             console.log('lanzaRecurso', cualRecurso);
 
             let laVentana = window.open('../recursos/' + that['recurso' + cualRecurso] + '/index.html', '_blank', 'toolbar=no, scrollbars=no, titlebar=no, status=no, menubar=no, location=no, resizable=yes, top=0, left=0, width=' + screen.width + ', height=' + screen.height + '');
 
+        }
+
+
+        function estatusReurso(estado) {
+            if (estado == null || estado == undefined || !estado) {
+                estado = 'incomplete';
+            }
+            parent.registraEstatusRecurso(elRecursoNum, estado);
         }
     </script>
 </body>

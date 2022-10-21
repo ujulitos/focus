@@ -23,6 +23,13 @@
     <script src="./js/librerias/jquery.ui.touch-punch.min.js"></script>
     <script src="./js/librerias/gsap.min.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase-database.js"></script>
+    <script src="./js/moment.js"></script>
+    <script src="./js/browserDct.min.js"></script>
+    <script src="./js/ApiI4L.min.js"></script>
+
 </head>
 
 <body class="cont-principal">
@@ -33,7 +40,7 @@
         <div id="spinner"></div>
 
         <!-- Contenedor de visualización de las páginas -->
-        <iframe class="cont-paginas">
+        <iframe id="contenidoPaginas" class="cont-paginas">
 
         </iframe>
 
@@ -81,22 +88,6 @@
                         <li class="temas" data-pagina="1">
                             <i class='bx bx-square-rounded'></i>
                             <p>Bienvenida</p>
-                        </li>
-                        <li class="temas" data-pagina="2">
-                            <i class='bx bx-square-rounded'></i>
-                            <p>Guía de Navegación</p>
-                        </li>
-                        <li class="temas" data-pagina="3">
-                            <i class='bx bx-square-rounded'></i>
-                            <p>Presentación</p>
-                        </li>
-                        <li class="temas" data-pagina="4">
-                            <i class='bx bx-square-rounded'></i>
-                            <p>Caso</p>
-                        </li>
-                        <li class="temas" data-pagina="5">
-                            <i class='bx bx-square-rounded'></i>
-                            <p>Cierre</p>
                         </li>
                     </ul>
                 </div>
