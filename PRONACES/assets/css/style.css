@@ -251,6 +251,8 @@ h6 {
     }
 }
 
+/* mios */
+
 .boton {
     font-size: 14px;
     padding: 4px 14px;
@@ -291,6 +293,17 @@ h6 {
     font-size: 14px;
     text-align: justify;
 }
+
+.vertical_middle {
+    line-height: 100px;
+    text-align: center;
+}
+
+.vertical_middle img {
+    max-height: 50px;
+}
+
+/* mios */
 
 /**
 * Mobile Navigation 
@@ -608,7 +621,7 @@ section {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #900C3F;
-    font-family: "Raleway";
+    font-family: "Poppins";
 }
 
 .section-title h2::after {
@@ -629,7 +642,7 @@ section {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #900C3F;
-    font-family: "Raleway";
+    font-family: "Poppins";
 }
 
 .section-title p {
