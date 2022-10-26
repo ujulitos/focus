@@ -43,7 +43,6 @@
 
 <body id="top">
 
-    <!-- ======= Header ======= -->
     <header id="header" class="hero fixed-top d-flex align-items-center header-tr ansparent">
         <div class="container d-flex align-items-center justify-content-between">
 
@@ -54,11 +53,11 @@
             </div>
 
 
-
+            <!-- menú movil -->
             <nav>
                 <ul class="cd-primary-nav">
-                    <li><a href="#tonach">TONACH</a></li>
-                    <li><a href="#gral">PROYECTO GENERAL</a></li>
+                    <li><a onclick="navega('tonach');" href="#tonach">TONACH</a></li>
+                    <li><a onclick="navega('proyecto_gral');" href="#proyecto_gral">PROYECTO GENERAL</a></li>
 
                     <ul class="cd-secondary-nav mt-3">
                         <li> DIÁLOGO DE SABERES
@@ -67,24 +66,24 @@
                         <ul class="cd-secondary-nav mt-3">
                             <li> QUIÉNES DIALOGAN
                                 <br><i class="bi-chevron-down chevron"></i> </li>
-                            <li><a href="#investigadoras">INVESTIGADORAS</a></li>
-                            <li><a href="#comunidades">COMUNIDADES</a></li>
+                            <li><a onclick="navega('investigadoras');" href="#investigadoras">INVESTIGADORAS</a></li>
+                            <li><a onclick="navega('comunidades');" href="#comunidades">COMUNIDADES</a></li>
                         </ul>
 
 
                         <ul class="cd-terciary-nav mt-3">
                             <li> SABERES DE MUJERES
                                 <br><i class="bi-chevron-down chevron"></i> </li>
-                            <li><a href="#narrativas_embarazo">NARRATIVAS SOBRE EMBARAZO</a></li>
-                            <li><a href="#narrativas_nacimiento">NARRATIVAS SOBRE NACIMIENTO</a></li>
-                            <li><a href="#narrativas_crianza">NARRATIVAS SOBRE CRIANZA</a></li>
-                            <li><a href="#parteras">NUESTRAS PARTERAS</a></li>
-                            <li><a href="#repositorio">REPOSITORIO RESERVADO</a></li>
-                            <li><a href="#biblioteca">BIBLIOTECA Y SITIOS DE INTERÉS</a></li>
+                            <li><a onclick="navega('narrativas_embarazo');" href="#narrativas_embarazo">NARRATIVAS SOBRE EMBARAZO</a></li>
+                            <li><a onclick="navega('narrativas_nacimiento');" href="#narrativas_nacimiento">NARRATIVAS SOBRE NACIMIENTO</a></li>
+                            <li><a onclick="navega('narrativas_crianza');" href="#narrativas_crianza">NARRATIVAS SOBRE CRIANZA</a></li>
+                            <li><a onclick="navega('parteras');" href="#parteras">NUESTRAS PARTERAS</a></li>
+                            <li><a onclick="navega('repositorio');" href="#repositorio">REPOSITORIO RESERVADO</a></li>
+                            <li><a onclick="navega('biblioteca');" href="#biblioteca">BIBLIOTECA Y SITIOS DE INTERÉS</a></li>
                         </ul>
                     </ul>
 
-                    <li><a href="#pedagogia">PEDAGOGÍA DE SABERES</a></li>
+                    <li><a onclick="navega('pedagogia');" href="#pedagogia">PEDAGOGÍA DE SABERES</a></li>
                 </ul>
             </nav>
 
@@ -94,50 +93,51 @@
 
             <div class="cd-overlay-content">
                 <span></span>
-            </div> <!-- cd-overlay-content -->
+            </div>
+            <!-- menú movil -->
 
 
 
-
-
+            <!-- menú desktop -->
             <nav id="navbar" class="navbar">
                 <ul>
                     <!-- <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li> -->
-                    <li><a class="nav-link scrollto" href="#tonach">TONACH</a></li>
-                    <li><a class="nav-link scrollto" href="#gral">PROYECTO GENERAL</a></li>
+                    <li><a class="nav-link scrollto" onclick="navega('tonach');" href="#tonach">TONACH</a></li>
+                    <li><a class="nav-link scrollto" onclick="navega('proyecto_gral');" href="#proyecto_gral">PROYECTO GENERAL</a></li>
                     <li class="dropdown"><a href="#nada"><span>DIÁLOGO DE SABERES</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <!-- <li><a href="#">Drop Down 1</a></li> -->
                             <li class="dropdown"><a href="#nada"><span>QUIÉNES DIALOGAN</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
-                                    <li><a href="#investigadoras">INVESTIGADORAS</a></li>
-                                    <li><a href="#comunidades">COMUNIDADES</a></li>
+                                    <li><a onclick="navega('investigadoras');" href="#investigadoras">INVESTIGADORAS</a></li>
+                                    <li><a class="nav-link scrollto" onclick="navega('comunidades');" href="#comunidades">COMUNIDADES</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#nada"><span>SABERES DE MUJERES</span> <i class="bi bi-chevron-right"></i></a>
                                 <ul>
                                     <!-- <li><a href="#">Drop Down 1</a></li> -->
-                                    <li><a href="#narrativas_embarazo">NARRATIVAS SOBRE EMBARAZO</a></li>
-                                    <li><a href="#narrativas_nacimiento">NARRATIVAS SOBRE NACIMIENTO</a></li>
-                                    <li><a href="#narrativas_crianza">NARRATIVAS SOBRE CRIANZA</a></li>
-                                    <li><a href="#parteras">NUESTRAS PARTERAS</a></li>
-                                    <li><a href="#repositorio">REPOSITORIO RESERVADO</a></li>
-                                    <li><a href="#biblioteca">BIBLIOTECA Y SITIOS DE INTERÉS</a></li>
+                                    <li><a onclick="navega('narrativas_embarazo');" href="#narrativas_embarazo">NARRATIVAS SOBRE EMBARAZO</a></li>
+                                    <li><a onclick="navega('narrativas_nacimiento');" href="#narrativas_nacimiento">NARRATIVAS SOBRE NACIMIENTO</a></li>
+                                    <li><a onclick="navega('narrativas_crianza');" href="#narrativas_crianza">NARRATIVAS SOBRE CRIANZA</a></li>
+                                    <li><a onclick="navega('parteras');" href="#parteras">NUESTRAS PARTERAS</a></li>
+                                    <li><a onclick="navega('repositorio');" href="#repositorio">REPOSITORIO RESERVADO</a></li>
+                                    <li><a onclick="navega('biblioteca');" href="#biblioteca">BIBLIOTECA Y SITIOS DE INTERÉS</a></li>
                                     <!-- <li><a href="#">Drop Down 2</a></li> -->
                                 </ul>
                             </li>
                             <!-- <li><a href="#">Drop Down 2</a></li> -->
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="#pedagogia">PEDAGOGÍA DE SABERES</a></li>
+                    <li><a class="nav-link scrollto" onclick="navega('pedagogia');" href="#pedagogia">PEDAGOGÍA DE SABERES</a></li>
                 </ul>
                 <i class="cd-nav-trigger"><span class="cd-icon"></span></i>
                 <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
             </nav>
+            <!-- menú desktop -->
 
 
         </div>
-    </header><!-- End Header -->
+    </header>
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
@@ -147,50 +147,6 @@
                 <img src="assets/img/logoRepositorio.png" alt="logo">
             </div>
         </div>
-
-        <!-- <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
-
-            <div class="carousel-item active">
-                <div class="carousel-container"> </div>
-            </div> -->
-
-
-        <!-- Slide 1 -->
-        <!-- <div class="carousel-item active">
-                <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Selecao</span></h2>
-                    <p class="animate__animated fanimate__adeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                    <li><a href="#tonach" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a></li>
-                </div>
-            </div> -->
-
-        <!-- Slide 2 -->
-        <!-- <div class="carousel-item">
-                <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                    <li><a href="#tonach" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a></li>
-                </div>
-            </div> -->
-
-        <!-- Slide 3 -->
-        <!-- <div class="carousel-item">
-                <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                    <li><a href="#tonach" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a></li>
-                </div>
-            </div> -->
-
-        <!-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
-            </a> -->
-
-        <!-- <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-            </a> -->
-
-        <!-- </div> -->
 
         <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
             <defs>
@@ -207,7 +163,8 @@
             </g>
         </svg>
 
-    </section><!-- End Hero -->
+    </section>
+    <!-- End Hero -->
 
     <main id="main">
 
@@ -221,7 +178,7 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 text-center mt-4 mt-lg-0">
-                    <img src="assets/img/equipoTrabajo.jpg" class="img-fluid imagen_derecha">
+                    <img src="assets/img/fotoParterasCompleta.jpg" class="img-fluid imagen_derecha">
                 </div>
 
                 <br>
@@ -285,8 +242,8 @@
 
 
 
-        <!-- ======= gral Section ======= -->
-        <section id="gral" class="services">
+        <!-- ======= proyecto_gral Section ======= -->
+        <section id="proyecto_gral" class="services">
             <div class="container">
 
                 <div class="section-title" data-aos="zoom-out">
@@ -358,13 +315,14 @@
             </div>
 
 
-        </section><!-- End gral Section -->
+        </section>
+        <!-- End proyecto_gral Section -->
 
 
 
 
 
-
+        <!-- ======= investigadoras Section ======= -->
         <section id="investigadoras" class="section_fondo">
             <section id="investigadorasInt" class="portfolio-details">
                 <div class="container">
@@ -373,7 +331,11 @@
                         <h2>INVESTIGADORAS</h2>
                     </div>
 
-                    <br>
+                    <div class="col-lg-12 col-md-12 text-center mt-4 mt-lg-0">
+                        <img src="assets/img/3/3_1/3_1_1/equipoTrabajo.jpg" class="img-fluid imagen_derecha">
+                    </div>
+
+                    <br> <br> <br>
                     <div class="fondo1">
 
                         <div class="section-title" data-aos="zoom-out">
@@ -867,7 +829,7 @@
                                                     </p>
                                                     <br>
                                                     <span style="text-align: right;">
-                                                        <button class="boton">Leer más</button>
+                                                        <button class="boton" onclick="navega('invest_veracruz_4');">Leer más</button>
                                                     </span>
                                                 </div>
                                             </div>
@@ -887,10 +849,52 @@
                 </div>
             </section>
         </section>
+        <!-- End investigadoras Section -->
 
 
 
-        <!-- ======= dialogo Section ======= -->
+
+
+
+        <!-- ======= invest_veracruz_4 Section ======= -->
+        <section id="invest_veracruz_4" class="portfolio">
+
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-right">
+                    <h2>Lic. Angélica Castañeda Monte</h2>
+                </div>
+
+                <div class="row content">
+
+                    <div class="col-12">
+                        <div class="row card- g-0 border-0 flex-md-row mb-4 shadow- h-100">
+                            <div class="col-lg-6 d-lg-block text-center">
+                                <img src="assets/img/3/3_1/3_1_1/veracruz/AngelicaCastaneda.png" class="img-fluid imagen100" alt="">
+                            </div>
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <h4 class="d-inline-block mb-2 text-danger">Lic. Angélica Castañeda Monte </h4>
+                                <p class="card-text mb-auto">
+                                    Mujer totonacahablante. Licenciada en Gestión Intercultural para el Desarrollo por UV. Cuenta con la capacitación para activistas indígenas por parte de Slow Food “Derechos de los pueblos y de las mujeres indígenas y soberanía alimentaria”.
+                                </p>
+                                <br>
+                                <span style="text-align: right;">
+                                    <button onclick="navega('investigadoras');" class="boton">Regresar</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+        <!-- End invest_veracruz_4 Section -->
+
+
+
+        
+
+
+        <!-- ======= pedagogia Section ======= -->
         <section id="pedagogia" class="portfolio">
             <div class="container">
 
@@ -922,10 +926,13 @@
 
             </div>
         </section>
+        <!-- End pedagogia Section -->
+
+
 
 
         <!-- ======= logos Section ======= -->
-        <section id="pedagogia" class="portfolio pb-3">
+        <section id="logos" class="pt-0 pb-3">
             <div class="container">
 
                 <div class="row">
@@ -959,12 +966,15 @@
 
             </div>
         </section>
+        <!-- End logos Section -->
 
 
 
-    </main><!-- End #main -->
+    </main>
 
-    <!-- ======= Footer ======= -->
+
+
+
     <footer id="footer">
         <div class="container">
             <!-- <h3>Selecao</h3> -->
@@ -987,9 +997,10 @@
             <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
             <!-- </div> -->
         </div>
-    </footer><!-- End Footer -->
+    </footer>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>
@@ -1005,6 +1016,7 @@
     <script src="assets/js/jquery-2.1.1.min.js"></script>
     <script src="assets/js/velocity.min.js"></script>
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/navegacion.js"></script>
 
 
 </body>
