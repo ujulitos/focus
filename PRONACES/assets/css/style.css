@@ -285,11 +285,16 @@ h6 {
     width: 100% !important;
 }
 
+.imagen90 {
+    width: 90% !important;
+}
+
 @media (max-width: 575px) {
 
     .imagen25,
     .imagen50,
     .imagen75,
+    .imagen90,
     .imagen100 {
         width: calc(100vw - 120px) !important;
     }
