@@ -35,6 +35,6 @@ function navega(seccion, home) {
 }
 
 function activaSeccion(seccion) {
-    console.log('activaSeccion');
+    console.log('activaSeccion', seccion);
 
 }
