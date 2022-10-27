@@ -1,0 +1,94 @@
+<section id="narrativas_embarazo" class="about">
+    <div class="container">
+
+        <div class="section-pretitle">
+            <t1>Diálogo de Saberes </t1>
+            <tm>/</tm>
+            <t2>Saberes de Mujeres</t2>
+        </div>
+
+        <div class="section-title" data-aos="fade-right">
+            <h2>Narrativas sobre embarazo </h2>
+        </div>
+
+
+        <br> <br>
+
+        <div class="row mt-0 mt-lg-0">
+
+            <div class="col-lg-6 justificado mt-4 mt-lg-0">
+
+                <strong>Calentar el cuerpo.</strong> Cuando una mujer no puede quedar embarazada, se recurre a una persona que, a través de la práctica conoce cuál es el procedimiento para poder “calentar el cuerpo” o bien “calentar el vientre”...
+                <br> <br>
+                <div style="text-align: right;">
+                    <button class="boton" onclick="abrePDF('narr_emb_1');">Ver tríptico</button>
+                </div>
+
+                <div class="divisor"></div>
+
+                <strong>Protección contra los eclipses.</strong> Cuando sabemos que habrá un eclipse la embarazada tiene que protegerse haciendo uso de una pulserita roja y tiene que quedarse adentro de la casa sin salir durante este fenómeno…
+                <br> <br>
+                <div style="text-align: right;">
+                    <button class="boton" onclick="abrePDF('narr_emb_2');">Ver tríptico</button>
+                </div>
+
+
+                <div class="divisor"></div>
+
+                audios
+
+            </div>
+
+
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <img src="assets/img/3/3_2/3_2_1/imgComodin.jpg" class="img-fluid imagen_redondeada imagen90">
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</section>
+
+<!-- <br> <br> <br> -->
+
+<div class="divisor_final"></div>
+
+
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+
+<script>
+    $(document).ready(function() {
+
+        // new bootstrap.Modal(document.getElementById('invest_hidalgo_1'));
+
+    });
+
+    function abrePDF(cualPDF) {
+        console.log('abrePDF', cualPDF);
+
+        switch (cualPDF) {
+            case 'narr_emb_1':
+                window.open('assets/docs/3/3_2/3_2_1/pdf/CalentarelCuerpo.pdf');
+                break;
+            case 'narr_emb_2':
+                window.open('assets/docs/3/3_2/3_2_1/pdf/Embarazo_nahuatl_espaniol.pdf');
+                break;
+
+            default:
+                break;
+        }
+    }
+</script>
