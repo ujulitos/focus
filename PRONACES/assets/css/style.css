@@ -36,7 +36,7 @@ h6 {
     text-align: justify;
 }
 
-.imagen_derecha {
+.imagen_redondeada {
     /* padding: 0 20px; */
     border-radius: 8px;
 }
@@ -284,6 +284,17 @@ h6 {
 .imagen100 {
     width: 100% !important;
 }
+
+@media (max-width: 575px) {
+
+    .imagen25,
+    .imagen50,
+    .imagen75,
+    .imagen100 {
+        width: calc(100vw - 120px) !important;
+    }
+}
+
 
 .card {
     /* margin: 10px; */
@@ -608,6 +619,10 @@ section {
     overflow: hidden;
 }
 
+#main section {
+    padding-top: 150px;
+}
+
 .section-title {
     padding-bottom: 40px;
 }
@@ -664,11 +679,17 @@ section {
     margin: 50px 10px;
 }
 
+.divisor_modal {
+    margin-top: -30px !important;
+    margin-bottom: -60px !important;
+    padding: 0 30px 0 10px;
+}
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 .about {
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 .about .content h3 {
@@ -1682,6 +1703,13 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+/* #logos {
+    padding-bottom: 170px !important; 
+} */
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 #footer {
     /* background: #650d2e; */
     background: url("../img/fondoBordado.png") center center;
@@ -1691,6 +1719,9 @@ section {
     font-size: 14px;
     text-align: center;
     padding: 30px 0;
+    /* position: fixed;
+    width: 100%;
+    bottom: 0; */
 }
 
 #footer h3 {
