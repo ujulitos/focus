@@ -241,10 +241,12 @@ a:visited {
 }
 
 #simp .simp-footer {
-    padding: 10px 10px 12px;
-    font-size: 90%;
+    padding: 20px 10px;
+    font-size: 130%;
     text-align: center;
     opacity: 0.7;
+    font-weight: bold;
+    color: #ff7c1e;
 }
 
 #simp .simp-display {
