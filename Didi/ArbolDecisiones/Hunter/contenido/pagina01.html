@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 01 | I4L</title>
+</head>
+<body class="pagina-interna">
+    <img class="elementos" id="inicio" src="./img/pagina01/texto.png" data-posX="0" data-posY="0">
+    <img class="elementos" id="boton" src="./img/pagina01/boton.png" data-posX="747" data-posY="383">
+    <!-- Script de la página -->
+    <script type="module">
+
+        // Importaciones---------------------------------------------------
+        import {aplicacion} from './js/app.js';
+        import {cargando} from './js/funciones.js';
+        import {animacionEntrada, parpadea} from './js/animaciones.js';
+        
+        // Variables-------------------------------------------------------
+        const inicio = $('#inicio');
+        const boton = $('#boton');
+
+        // Audio-----------------------------------------------------------
+        const audio = [
+            new Audio('./audios/arbol_h_1.mp3')
+        ]
+
+        //Al cargar la página
+        jQuery(function($){ 
+            aplicacion.bloquearNavegacion(); 
+            cargando(iniciarPagina);
+        });
+
+        const iniciarPagina = ()=>{
+            aplicacion.reproducirAudio(audio[0], finalPagina, 1);
+            animacionEntrada(inicio, 'izquierda-derecha', 1);
+        }
+
+        const finalPagina = ()=>{
+            parpadea(boton);
+        }
+
+        boton.click(()=>{
+            aplicacion.nextPag();
+        });
+
+    </script>
+
+    <!-- Termina Script -->
+</body>
+</html>
