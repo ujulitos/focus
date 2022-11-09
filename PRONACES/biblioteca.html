@@ -43,11 +43,8 @@
             $.ajax({
                 url: 'assets/docs/3/3_2/3_2_6/_libros.json',
                 type: 'GET',
-                data: {
-                    get_param: 'value'
-                },
                 dataType: 'JSON',
-                cache: false,
+                // cache: false,
                 // async: true,
             }).done(function(data, textStatus, jqXHR) {
                 if (console && console.log) {
