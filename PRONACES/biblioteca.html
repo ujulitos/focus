@@ -42,14 +42,19 @@
         function cargaLibros() {
             $.ajax({
                 url: 'assets/docs/3/3_2/3_2_6/_libros.json',
-                type: 'get',
+                type: 'POST',
                 dataType: 'json',
                 cache: false,
                 success: pintaLibros,
+                error: muestraError,
                 async: true,
             });
         }
         cargaLibros();
+    }
+
+    function muestraError() {
+        console.log('error');
     }
 
     function pintaLibros(data) {
