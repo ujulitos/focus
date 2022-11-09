@@ -1,4 +1,4 @@
-<section id="biblioteca" class="about">
+<section id="biblioteca" class="services">
     <div class="container">
 
         <div class="section-pretitle">
@@ -12,14 +12,13 @@
         </div>
 
 
-
-
+        <div id="rowLibros" class="row row_libros"></div>
 
 
     </div>
 </section>
 
-<br> <br> <br> <br>
+<!-- <br> <br> <br> <br> -->
 
 <div class="divisor_final"></div>
 
@@ -33,20 +32,81 @@
 <script>
     $(document).ready(function() {
 
-        // new bootstrap.Modal(document.getElementById('invest_hidalgo_1'));
+        activaLibros();
 
     });
+
+    function activaLibros() {
+        console.log('activaLibros');
+
+        function cargaLibros() {
+            $.ajax({
+                url: 'assets/docs/3/3_2/3_2_6/_libros.json',
+                type: 'get',
+                dataType: 'json',
+                cache: false,
+                success: pintaLibros,
+                async: true,
+            });
+        }
+        cargaLibros();
+    }
+
+    function pintaLibros(data) {
+        console.log(data);
+
+        cuantosLibros = Object.keys(data).length;
+        console.log('cuantosLibros', cuantosLibros);
+
+        var contenidoLibros = '';
+        $('#rowLibros').empty();
+
+        for (a = 1; a <= cuantosLibros; a++) {
+
+            contenidoLibros += '<div class="icon-box mt-3">';
+            contenidoLibros += '<div class="row">';
+            contenidoLibros += '<div class="col-2">';
+            contenidoLibros += '<img src="assets/img/libro.png" class="icono_libro" style="width: 100%;" />';
+            contenidoLibros += '</div>';
+            contenidoLibros += '<div class="col-10">';
+            contenidoLibros += '<h4 class="title">' + Object.values(data)[(a - 1)].titulo + '</h4>';
+            contenidoLibros += '<p class="description">';
+            contenidoLibros += '<b>Autor:</b> ' + Object.values(data)[(a - 1)].autor + '';
+            contenidoLibros += '<br>';
+            contenidoLibros += '<b>Categoría:</b> ' + Object.values(data)[(a - 1)].tema + '.';
+            contenidoLibros += '<br>';
+            contenidoLibros += '<b>Año:</b> ' + Object.values(data)[(a - 1)].anio + '';
+            contenidoLibros += '</p>';
+            contenidoLibros += '<div style="text-align: right;">';
+            contenidoLibros += '<button class="boton" onclick="abrePDF(' + "'" + Object.values(data)[(a - 1)].archivo + "'" + ');">Abrir libro</button>';
+            contenidoLibros += '</div>';
+            contenidoLibros += '</div>';
+            contenidoLibros += '</div>';
+            contenidoLibros += '</div>';
+
+        }
+
+        $('#rowLibros').append(contenidoLibros);
+    }
+
+
+
 
     function abrePDF(cualPDF) {
         console.log('abrePDF', cualPDF);
 
-        switch (cualPDF) {
-            case 'parteras_1':
-                window.open('assets/docs/3/3_2/3_2_4/pdf/Parteras.pdf');
-                break;
+        window.open('assets/docs/3/3_2/3_2_6/libros/' + cualPDF + '.pdf');
 
-            default:
-                break;
-        }
+        // switch (cualPDF) {
+        //     case 'libro_1':
+        //         window.open('assets/docs/3/3_2/3_2_6/libros/Acosta C., M. y D. Cleghorn. Mujer indígena y cuidados durante el embarazo y puerperio..pdf');
+        //         break;
+        //     case 'libro_1':
+        //         window.open('assets/docs/3/3_2/3_2_6/libros/Acosta C., M. y D. Cleghorn. Mujer indígena y cuidados durante el embarazo y puerperio..pdf');
+        //         break;
+
+        //     default:
+        //         break;
+        // }
     }
 </script>
