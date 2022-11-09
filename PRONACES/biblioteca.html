@@ -42,15 +42,20 @@
         function cargaLibros() {
             $.ajax({
                 url: 'assets/docs/3/3_2/3_2_6/_libros.json',
-                type: 'POST',
+                type: 'GET',
                 dataType: 'json',
                 cache: false,
                 success: pintaLibros,
                 error: muestraError,
+                status: muestraStatus,
                 async: true,
             });
         }
         cargaLibros();
+    }
+
+    function muestraStatus() {
+        console.log('status');
     }
 
     function muestraError() {
