@@ -1,0 +1,136 @@
+<section id="parteras" class="about">
+    <div class="container">
+
+        <div class="section-pretitle">
+            <t1>Diálogo de Saberes </t1>
+            <tm>/</tm>
+            <t2>Saberes de Mujeres</t2>
+        </div>
+
+        <div class="section-title" data-aos="fade-right">
+            <h2>Nuestras parteras </h2>
+        </div>
+
+
+        <br> <br>
+
+        <div class="row mt-0 mt-lg-0">
+
+            <div class="col-lg-6 justificado mt-4 mt-lg-0">
+
+                En las comunidades indígenas mexicanas muchos embarazos y partos se atienden por parteras tradicionales. Las parteras adquieren sus conocimientos durante largos años de práctica y en muchos casos se sienten llamadas a ejercer esta actividad y cultivar su don...
+                <br> <br>
+                <div style="text-align: right;">
+                    <button class="boton" onclick="abrePDF('parteras_1');">Leer más</button>
+                </div>
+
+                <div class="divisor"></div>
+
+                Las parteras, ocupan una posición importante en las comunidades indígenas, al ser poseedoras de un cúmulo de saberes importantes para la reproducción y sostenimiento de la vida, como los saberes sobre el cuidado durante el embarazo, el parto, puerperio...
+                <br> <br>
+                <div style="text-align: right;">
+                    <button class="boton" onclick="abrePDF('parteras_2');">Leer más</button>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <img src="assets/img/3/3_2/3_2_1/imgComodin.jpg" class="img-fluid imagen_redondeada imagen90">
+            </div>
+        </div>
+
+
+
+        <div class="divisor"></div>
+
+
+        <div class="section-title" data-aos="fade-right">
+            <h3>Videos</h3>
+        </div>
+
+
+
+        <div class="col-lg-12 col-md-12 text-center mt-4 mt-lg-5">
+            <div class="section-pretitle" style="text-align: left;">
+                <t1>Dieta de la madre y Ritual de baño</t1>
+            </div>
+            <video class="video" width="70%" height="400" controls>
+                <source src="assets/docs/3/3_2/3_2_4/video/Dieta_de_la_madre_y_Ritual_de_Banio_1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="col-lg-12 col-md-12 text-center mt-4 mt-lg-5">
+            <div class="section-pretitle" style="text-align: left;">
+                <t1>Oficio de la partería</t1>
+            </div>
+            <video class="video" width="70%" height="400" controls>
+                <source src="assets/docs/3/3_2/3_2_4/video/Oficio_de_la_parteria_Registro_2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="col-lg-12 col-md-12 text-center mt-4 mt-lg-5">
+            <div class="section-pretitle" style="text-align: left;">
+                <t1>Partera Margarita Hernández Santiago Ahuacapa </t1>
+            </div>
+            <video class="video" width="70%" height="400" controls>
+                <source src="assets/docs/3/3_2/3_2_4/video/Partera_Margarita_Hernandez_Santiago_Ahuacapa_2.mp4" type="video/mp4">
+            </video>
+            <br> <br>
+            <div style="text-align: center;">
+                <button class="boton" onclick="abrePDF('parteras_3');">Ver transcripción</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+</section>
+
+<!-- <br> <br> <br> -->
+
+<div class="divisor_final"></div>
+
+
+
+<script src="assets/js/audio_player.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+
+<script>
+    $(document).ready(function() {
+
+        // new bootstrap.Modal(document.getElementById('invest_hidalgo_1'));
+
+    });
+
+    function abrePDF(cualPDF) {
+        console.log('abrePDF', cualPDF);
+
+        switch (cualPDF) {
+            case 'parteras_1':
+                window.open('assets/docs/3/3_2/3_2_4/pdf/Parteras.pdf');
+                break;
+            case 'parteras_2':
+                window.open('assets/docs/3/3_2/3_2_4/pdf/NuestrasParteras.pdf');
+                break;
+            case 'parteras_3':
+                window.open('assets/docs/3/3_2/3_2_4/pdf/ParteraMargarita.pdf');
+                break;
+
+            default:
+                break;
+        }
+    }
+</script>

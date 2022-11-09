@@ -1,0 +1,105 @@
+<section id="narrativas_embarazo" class="about">
+    <div class="container">
+
+        <div class="section-pretitle">
+            <t1>Diálogo de Saberes </t1>
+            <tm>/</tm>
+            <t2>Saberes de Mujeres</t2>
+        </div>
+
+        <div class="section-title" data-aos="fade-right">
+            <h2>Narrativas sobre embarazo </h2>
+        </div>
+
+
+        <br> <br>
+
+        <div class="row mt-0 mt-lg-0">
+
+            <div class="col-lg-6 justificado mt-4 mt-lg-0">
+
+                <strong>Calentar el cuerpo.</strong> Cuando una mujer no puede quedar embarazada, se recurre a una persona que, a través de la práctica conoce cuál es el procedimiento para poder “calentar el cuerpo” o bien “calentar el vientre”...
+                <br> <br>
+                <div style="text-align: right;">
+                    <button class="boton" onclick="abrePDF('narr_emb_1');">Leer más</button>
+                </div>
+
+                <div class="divisor"></div>
+
+                <strong>Protección contra los eclipses.</strong> Cuando sabemos que habrá un eclipse la embarazada tiene que protegerse haciendo uso de una pulserita roja y tiene que quedarse adentro de la casa sin salir durante este fenómeno…
+                <br> <br>
+                <div style="text-align: right;">
+                    <button class="boton" onclick="abrePDF('narr_emb_2');">Leer más</button>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <img src="assets/img/3/3_2/3_2_1/imgComodin.jpg" class="img-fluid imagen_redondeada imagen90">
+            </div>
+        </div>
+
+
+
+        <div class="divisor"></div>
+
+
+        <div class="section-title" data-aos="fade-right">
+            <h3>Audios</h3>
+            <!-- <p>What we do offer</p> -->
+        </div>
+
+        <!-- Audio Player -->
+        <div class="simple-audio-player" id="simp" data-config='{"shide_top":false,"shide_btm":false,"auto_load":false}'>
+            <div class="simp-playlist">
+                <ul>
+                    <li><span class="simp-source" data-src="assets/docs/3/3_2/3_2_1/audio/EvitarPartoComplicado.m4a">Evitar un parto complicado</li>
+                    <li><span class="simp-source" data-src="assets/docs/3/3_2/3_2_1/audio/MalDeOjoEmbarazo.m4a">Mal de ojo en el embarazo </li>
+                    <li><span class="simp-source" data-src="assets/docs/3/3_2/3_2_1/audio/PrevencionDolorOidoRecienNacido.m4a">Prevención de dolor de oídos en el recién nacido </li>
+                    <li><span class="simp-source" data-src="assets/docs/3/3_2/3_2_1/audio/ProteccionContraEclipses.m4a">Protección contra los eclipses </li>
+                    <li><span class="simp-source" data-src="assets/docs/3/3_2/3_2_1/audio/TormentasElectricasTlatomoniyanih.m4a">Tormentas eléctricas - tlatomoniyanih </li>
+                </ul>
+            </div>
+            <div class="simp-footer"> </div>
+        </div>
+
+
+
+    </div>
+</section>
+
+<!-- <br> <br> <br> -->
+
+<div class="divisor_final"></div>
+
+
+
+<script src="assets/js/audio_player.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+
+<script>
+    $(document).ready(function() {
+
+        // new bootstrap.Modal(document.getElementById('invest_hidalgo_1'));
+
+    });
+
+    function abrePDF(cualPDF) {
+        console.log('abrePDF', cualPDF);
+
+        switch (cualPDF) {
+            case 'narr_emb_1':
+                window.open('assets/docs/3/3_2/3_2_1/pdf/CalentarelCuerpo.pdf');
+                break;
+            case 'narr_emb_2':
+                window.open('assets/docs/3/3_2/3_2_1/pdf/Embarazo_nahuatl_espaniol.pdf');
+                break;
+
+            default:
+                break;
+        }
+    }
+</script>
