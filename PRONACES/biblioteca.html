@@ -47,15 +47,14 @@
                 cache: false,
                 success: pintaLibros,
                 error: muestraError,
-                status: muestraStatus,
                 async: true,
+            }).fail(function(jqXHR, textStatus, errorThrown) {
+                if (console && console.log) {
+                    console.log("La solicitud a fallado: " + textStatus);
+                }
             });
         }
         cargaLibros();
-    }
-
-    function muestraStatus() {
-        console.log('status');
     }
 
     function muestraError() {
