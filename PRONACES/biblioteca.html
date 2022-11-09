@@ -41,11 +41,11 @@
 
         function cargaLibros() {
             $.ajax({
-                url: 'assets/docs/3/3_2/3_2_6/_libros.json',
+                url: 'assets/docs/3/3_2/3_2_6/libros.json',
                 type: 'GET',
                 dataType: 'JSON',
-                // cache: false,
-                // async: true,
+                cache: false,
+                async: true,
             }).done(function(data, textStatus, jqXHR) {
                 if (console && console.log) {
                     console.log("La solicitud se ha completado correctamente.");
