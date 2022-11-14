@@ -40,7 +40,8 @@
 
         //Al cargar la página
         jQuery(function($){ 
-            cargando(iniciarPagina);
+            aplicacion.bloquearNavegacion();  
+          cargando(iniciarPagina);
         });
 
         const iniciarPagina = ()=>{
