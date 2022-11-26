@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 10</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina10/titulo.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01" src="../img/pagina10/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img02" src="../img/pagina10/img02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img03" src="../img/pagina10/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img04" src="../img/pagina10/img04.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img05" src="../img/pagina10/img05.png" data-posX="0" data-posY="0" />
+
+    <img class="elementos" id="boton1" src="../img/pagina10/boton1.png" data-posX="95" data-posY="260" />
+
+
+    <!-- Script de la página -->
+    <script>
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
+        const img03 = $('#img03');
+        const img04 = $('#img04');
+        const img05 = $('#img05');
+        const boton1 = $('#boton1');
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Pfizer_Planta_10_01.mp3'),
+            new Audio('../audios/Pfizer_Planta_10_02.mp3'),
+            new Audio('../audios/Pfizer_Planta_10_03.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
+            animacionEntrada(img02, 'arriba-abajo', 1, 1.5);
+            animacionEntrada(img03, 'aparecer', 1, 2);
+
+            // setTimeout(() => {
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, 2);
+            // }, 1000);
+            // aplicacion.activarBotonAdelante();
+        }
+
+        function terminaAudio1() {
+            parpadear(boton1);
+            aplicacion.reproducirAudio(audio[1], terminaAudio2, .5);
+        }
+
+        function terminaAudio2() {
+
+            // boton1
+            boton1.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    dejarParpadear($(this));
+                    animacionSalida($(this), 'default', 1, 0);
+
+                    animacionSalida(img02, 'default', 1, 0);
+                    animacionSalida(img03, 'default', 1, 0);
+
+                    animacionEntrada(img04, 'arriba-abajo', 1, .5);
+                    animacionEntrada(img05, 'aparecer', 1, 1);
+                    aplicacion.reproducirAudio(audio[2], terminaAudio3, 1);
+                }
+            });
+
+        }
+
+        function terminaAudio3() {
+            aplicacion.terminaPantalla();
+        }
+    </script>
+</body>
+
+</html>

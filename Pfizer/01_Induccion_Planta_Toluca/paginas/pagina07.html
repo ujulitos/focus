@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 07</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina07/titulo.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01" src="../img/pagina07/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img02" src="../img/pagina07/img02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img03" src="../img/pagina07/img03.png" data-posX="0" data-posY="0" />
+
+    <img class="elementos" id="boton1" src="../img/pagina07/boton1.png" data-posX="20" data-posY="120" />
+    <img class="elementos" id="boton2" src="../img/pagina07/boton2.png" data-posX="40" data-posY="250" />
+    <img class="elementos" id="boton3" src="../img/pagina07/boton3.png" data-posX="780" data-posY="110" />
+    <img class="elementos" id="boton4" src="../img/pagina07/boton4.png" data-posX="810" data-posY="220" />
+    <img class="elementos" id="boton5" src="../img/pagina07/boton5.png" data-posX="690" data-posY="370" />
+    <img class="elementos" id="boton6" src="../img/pagina07/boton6.png" data-posX="820" data-posY="400" />
+
+    <img class="elementos" id="popup1" src="../img/pagina07/popup1.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar1" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="150" />
+    <img class="elementos" id="popup2" src="../img/pagina07/popup2.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar2" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="150" />
+    <img class="elementos" id="popup3" src="../img/pagina07/popup3.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar3" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="150" />
+    <img class="elementos" id="popup4" src="../img/pagina07/popup4.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar4" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="150" />
+    <img class="elementos" id="popup5" src="../img/pagina07/popup5.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar5" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="150" />
+    <img class="elementos" id="popup6" src="../img/pagina07/popup6.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar6" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="150" />
+
+    <!-- Script de la página -->
+    <script>
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
+        const img03 = $('#img03');
+
+        const boton1 = $('#boton1');
+        const popup1 = $('#popup1');
+        const botonCerrar1 = $('#botonCerrar1');
+        const boton2 = $('#boton2');
+        const popup2 = $('#popup2');
+        const botonCerrar2 = $('#botonCerrar2');
+        const boton3 = $('#boton3');
+        const popup3 = $('#popup3');
+        const botonCerrar3 = $('#botonCerrar3');
+        const boton4 = $('#boton4');
+        const popup4 = $('#popup4');
+        const botonCerrar4 = $('#botonCerrar4');
+        const boton5 = $('#boton5');
+        const popup5 = $('#popup5');
+        const botonCerrar5 = $('#botonCerrar5');
+        const boton6 = $('#boton6');
+        const popup6 = $('#popup6');
+        const botonCerrar6 = $('#botonCerrar6');
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Pfizer_Planta_06_04.mp3'),
+            new Audio('../audios/Pfizer_Planta_07_01.mp3'),
+            new Audio('../audios/Pfizer_Planta_07_02.mp3'),
+            new Audio('../audios/Pfizer_Planta_07_03.mp3'),
+            new Audio('../audios/Pfizer_Planta_07_04.mp3'),
+            new Audio('../audios/Pfizer_Planta_07_05.mp3'),
+            new Audio('../audios/Pfizer_Planta_07_06.mp3'),
+            new Audio('../audios/Pfizer_Planta_07_07.mp3'),
+            new Audio('../audios/Pfizer_Planta_07_08.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
+            animacionEntrada(img02, 'aparecer', 1, 1.5);
+
+            // setTimeout(() => {
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, .5);
+            // }, 1000);
+            // aplicacion.activarBotonAdelante();
+        }
+
+        function terminaAudio1() {
+            aplicacion.reproducirAudio(audio[1], terminaAudio2, 0);
+        }
+
+        function terminaAudio2() {
+            animacionSalida(img02, 'default', 1, 0);
+            animacionSalida(img01, 'default', 1, .3);
+
+            animacionEntrada(img03, 'aparecer', 1, 0);
+
+            setTimeout(() => {
+                parpadear(boton1);
+            }, 500);
+        }
+
+        // boton1
+        boton1.click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                dejarParpadear($(this));
+
+                animacionEntrada(popup1, 'aparecer', 1, 0);
+                aplicacion.reproducirAudio(audio[2], terminaAudioPopup1, .5);
+            }
+        });
+
+        function terminaAudioPopup1() {
+            parpadear(botonCerrar1);
+
+            botonCerrar1.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    animacionSalida(popup1, 'default', 1, 0);
+                    animacionSalida($(this), 'default', 1, 0);
+                    parpadear(boton2);
+                }
+            });
+        }
+
+        // boton2
+        boton2.click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                dejarParpadear($(this));
+
+                animacionEntrada(popup2, 'aparecer', 1, 0);
+                aplicacion.reproducirAudio(audio[3], terminaAudioPopup2_1, .5);
+            }
+        });
+
+        function terminaAudioPopup2_1() {
+            aplicacion.reproducirAudio(audio[4], terminaAudioPopup2_2, 0);
+        }
+
+        function terminaAudioPopup2_2() {
+            parpadear(botonCerrar2);
+
+            botonCerrar2.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    animacionSalida(popup2, 'default', 1, 0);
+                    animacionSalida($(this), 'default', 1, 0);
+                    parpadear(boton3);
+                }
+            });
+        }
+
+        // boton3
+        boton3.click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                dejarParpadear($(this));
+
+                animacionEntrada(popup3, 'aparecer', 1, 0);
+                aplicacion.reproducirAudio(audio[5], terminaAudioPopup3, .5);
+            }
+        });
+
+        function terminaAudioPopup3() {
+            parpadear(botonCerrar3);
+
+            botonCerrar3.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    animacionSalida(popup3, 'default', 1, 0);
+                    animacionSalida($(this), 'default', 1, 0);
+                    parpadear(boton4);
+                }
+            });
+        }
+
+        // boton4
+        boton4.click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                dejarParpadear($(this));
+
+                animacionEntrada(popup4, 'aparecer', 1, 0);
+                aplicacion.reproducirAudio(audio[6], terminaAudioPopup4, .5);
+            }
+        });
+
+        function terminaAudioPopup4() {
+            parpadear(botonCerrar4);
+
+            botonCerrar4.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    animacionSalida(popup4, 'default', 1, 0);
+                    animacionSalida($(this), 'default', 1, 0);
+                    parpadear(boton5);
+                }
+            });
+        }
+
+        // boton5
+        boton5.click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                dejarParpadear($(this));
+
+                animacionEntrada(popup5, 'aparecer', 1, 0);
+                aplicacion.reproducirAudio(audio[7], terminaAudioPopup5, .5);
+            }
+        });
+
+        function terminaAudioPopup5() {
+            parpadear(botonCerrar5);
+
+            botonCerrar5.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    animacionSalida(popup5, 'default', 1, 0);
+                    animacionSalida($(this), 'default', 1, 0);
+                    parpadear(boton6);
+                }
+            });
+        }
+
+        // boton6
+        boton6.click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                dejarParpadear($(this));
+
+                animacionEntrada(popup6, 'aparecer', 1, 0);
+                aplicacion.reproducirAudio(audio[8], terminaAudioPopup6, .5);
+            }
+        });
+
+        function terminaAudioPopup6() {
+            parpadear(botonCerrar6);
+
+            botonCerrar6.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    animacionSalida(popup6, 'default', 1, 0);
+                    animacionSalida($(this), 'default', 1, 0);
+                    terminaAudioFinal();
+                }
+            });
+        }
+
+
+        function terminaAudioFinal() {
+            aplicacion.terminaPantalla();
+        }
+    </script>
+</body>
+
+</html>
