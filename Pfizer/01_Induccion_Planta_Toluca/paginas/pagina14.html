@@ -30,12 +30,12 @@
     <img class="elementos" id="img01" src="../img/pagina14/img01.png" data-posX="0" data-posY="0">
     <img class="elementos" id="img02" src="../img/pagina14/img02.png" data-posX="0" data-posY="0" alt="">
 
-    <div _id="1" id="lugar1" class="elementos boton drop" data-posX="804" data-posY="132" style="width: 100px; height: 30px;"></div>
-    <div _id="2" id="lugar2" class="elementos boton drop" data-posX="552" data-posY="178" style="width: 100px; height: 30px;"></div>
-    <div _id="3" id="lugar3" class="elementos boton drop" data-posX="544" data-posY="242" style="width: 100px; height: 30px;"></div>
-    <div _id="4" id="lugar4" class="elementos boton drop" data-posX="403" data-posY="305" style="width: 250px; height: 30px;"></div>
-    <div _id="5" id="lugar5" class="elementos boton drop" data-posX="660" data-posY="352" style="width: 200px; height: 30px;"></div>
-    <div _id="6" id="lugar6" class="elementos boton drop" data-posX="584" data-posY="420" style="width: 250px; height: 30px;"></div>
+    <div _id="3" id="lugar3" class="elementos boton drop" data-posX="804" data-posY="132" style="width: 100px; height: 30px;"></div>
+    <div _id="6" id="lugar6" class="elementos boton drop" data-posX="552" data-posY="178" style="width: 100px; height: 30px;"></div>
+    <div _id="5" id="lugar5" class="elementos boton drop" data-posX="544" data-posY="242" style="width: 100px; height: 30px;"></div>
+    <div _id="1" id="lugar1" class="elementos boton drop" data-posX="403" data-posY="305" style="width: 250px; height: 30px;"></div>
+    <div _id="2" id="lugar2" class="elementos boton drop" data-posX="660" data-posY="352" style="width: 200px; height: 30px;"></div>
+    <div _id="4" id="lugar4" class="elementos boton drop" data-posX="584" data-posY="420" style="width: 250px; height: 30px;"></div>
 
     <img class="elementos element drag" _id="1" id="pieza1" src="../img/pagina14/pieza1.png" data-posX="110" data-posY="140" alt="">
     <img class="elementos element drag" _id="2" id="pieza2" src="../img/pagina14/pieza2.png" data-posX="118" data-posY="195" alt="">
@@ -47,9 +47,9 @@
     <img class="elementos" id="botonValidar" src="../img/pagina14/botonValidar.png" data-posX="100" data-posY="370" alt="">
 
     <img class="elementos" id="retroBien" src="../img/pagina14/retroBien.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="botonContinuar" src="../img/pagina14/botonContinuar.png" data-posX="227" data-posY="365" alt="">
+    <img class="elementos" id="botonContinuar" src="../img/pagina14/botonContinuar.png" data-posX="432" data-posY="370" alt="">
     <img class="elementos" id="retroMal" src="../img/pagina14/retroMal.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="botonReintentar" src="../img/pagina14/botonReintentar.png" data-posX="760" data-posY="365" alt="">
+    <img class="elementos" id="botonReintentar" src="../img/pagina14/botonReintentar.png" data-posX="430" data-posY="375" alt="">
 
 
     <style>
@@ -80,7 +80,8 @@
             const retroMal = $('#retroMal');
 
 
-            var scalePage = 1;
+            var scalePage = calcularEscala();
+            console.log('scalePage', scalePage);
             var cuantasPreguntas = 6; //← Numero de preguntas
             var contador = 0;
             var no_objetos = new Array(6, 0); //← Numero de Piezas
@@ -124,6 +125,7 @@
             // iniciaActividad //
             function iniciaActividad() {
                 console.log("Objetos: " + no_objetos[0]);
+
                 for (i = 1; i <= no_objetos[0]; i++) {
                     $("#drag" + i).attr("_id" + i);
                     $("#drop" + i).attr("_id" + i);
@@ -133,6 +135,38 @@
                     animacionEntrada($("#pieza" + i), "izquierda-derecha", 1, 0 + (i * .1));
                     animacionEntrada($("#lugar" + i), "default", 1, 0 + (i * 0));
                 }
+
+
+                var dragActivo;
+                $(".drag").mousedown(function() {
+                    // if ($(this).css('cursor') == 'pointer') {
+                    $(this).removeClass('match');
+                    $(".drag").css({
+                        'z-index': '900'
+                    });
+                    $(this).css({
+                        'z-index': '999'
+                    });
+                    // }
+                });
+
+
+                $(".drag").mouseup(function() {
+                    if (!$(this).hasClass('match')) {
+                        console.log("No tiene class match");
+
+                        // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
+
+                        TweenMax.to($(this), .5, {
+                            top: (parseInt($(this).attr("data-posY")) * scalePage),
+                            left: (parseInt($(this).attr("data-posX")) * scalePage),
+                            ease: Back.easeOut
+                        });
+
+                    } else {
+                        console.log("No Se mueve");
+                    }
+                });
 
                 $(".drag").css("cursor", "pointer");
                 $(".drag").draggable({
@@ -148,7 +182,7 @@
                             dragsColocados[(dragActivo - 1)] = false;
                             console.log("dragsColocados al drag", dragsColocados);
 
-                            // $("#botonValidar").hide();
+                            $("#botonValidar").hide();
                         }
 
                     }
@@ -166,42 +200,11 @@
                         console.log("dragsColocados al drop", dragsColocados);
 
                         if ($("#lugar" + dropActivo).css('display') == 'block') {
-                            // $("#lugar" + dropActivo).hide();
+                            $("#lugar" + dropActivo).hide();
                             $("#pieza" + dragActivo).addClass('match');
                             checkMatch();
                         }
 
-                    }
-                });
-
-                var dragActivo;
-                $(".drag").mousedown(function() {
-                    if ($(this).css('cursor') == 'pointer') {
-                        $(this).removeClass('match');
-                        $(".drag").css({
-                            'z-index': '900'
-                        });
-                        $(this).css({
-                            'z-index': '999'
-                        });
-                    }
-                });
-
-
-                $(".drag").mouseup(function() {
-                    if (!$(this).hasClass('match')) {
-                        console.log("No tiene class match");
-
-                        // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
-
-                        TweenMax.to($(this), .5, {
-                            top: (parseInt($(this).attr("data-posY") - 0) * scalePage),
-                            left: (parseInt($(this).attr("data-posX") - 0) * scalePage),
-                            ease: Back.easeOut
-                        });
-
-                    } else {
-                        console.log("No Se mueve");
                     }
                 });
 
@@ -212,54 +215,89 @@
                 function checkMatch() {
                     // console.log("revisando match");
 
-                    if ((dragActivo == '3' && dropActivo == '1') || (dragActivo == '6' && dropActivo == '2') || (dragActivo == '5' && dropActivo == '3') || (dragActivo == '1' && dropActivo == '4') || (dragActivo == '2' && dropActivo == '5') || (dragActivo == '4' && dropActivo == '6')) {
-                        // console.log("Hizo Match! 1");
-                        contador++;
+                    // if ((dragActivo == '3' && dropActivo == '1') || (dragActivo == '6' && dropActivo == '2') || (dragActivo == '5' && dropActivo == '3') || (dragActivo == '1' && dropActivo == '4') || (dragActivo == '2' && dropActivo == '5') || (dragActivo == '4' && dropActivo == '6')) {
+                    //     // console.log("Hizo Match! 1");
+                    //     contador++;
 
-                        TweenMax.killTweensOf($("#pieza" + dragActivo));
+                    TweenMax.killTweensOf($("#pieza" + dragActivo));
 
-                        TweenMax.to($("#pieza" + dragActivo), .01, {
-                            top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) - 5 * scalePage),
-                            left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) + 10 * scalePage)
-                        });
+                    TweenMax.to($("#pieza" + dragActivo), .01, {
+                        top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) * scalePage),
+                        left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) * scalePage)
+                    });
 
-                        $("#pieza" + dragActivo).css({
-                            'cursor': 'default'
-                        });
-                        // $("#pieza" + dragActivo).removeClass('drag');
-                        $("#pieza" + dragActivo).draggable("destroy");
+                    // $("#pieza" + dragActivo).css({
+                    //     'cursor': 'default'
+                    // });
+                    // $("#pieza" + dragActivo).removeClass('drag');
+                    // $("#pieza" + dragActivo).draggable("destroy");
 
-                        console.log("drag: " + dragActivo + " con drop: " + dropActivo);
+                    console.log("drag: " + dragActivo + " con drop: " + dropActivo);
 
-                        // if (dropActivo == dragActivo) {
-                        aciertos++;
+                    if (dropActivo == dragActivo) {
                         that["bien" + dropActivo] = true;
-                        // }
+                    } else {
+                        that["bien" + dropActivo] = false;
                     }
-                    console.log('aciertos ' + aciertos);
+                    // }
+                    // console.log('aciertos ' + aciertos);
                     // console.log('contador ' + contador + ' no_objetos ' + no_objetos);
 
-                    if (contador == no_objetos[0]) {
-                        console.log('Termina');
-
+                    losColocados = $.inArray(false, dragsColocados);
+                    console.log('losColocados', losColocados);
+                    if (losColocados == -1) {
                         parpadear($("#botonValidar"));
-
+                        // } else {
+                        //     $("#botonValidar").hide();
                     }
 
                 }
 
                 $("#botonValidar").click(function() {
+                    TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    retroalimenta();
+
+                    dejarParpadear($(this));
+                    animacionSalida($(this), 'default', .5, 0);
+
+                });
+
+                function retroalimenta() {
+                    console.log('retroalimenta');
+
+                    $(".drag").css({
+                        'z-index': '-900',
+                        'display': 'none'
+                    });
+
+                    for (var i = 1; i <= cuantasPreguntas; i++) {
+                        console.log("bien", i, that["bien" + i]);
+
+                        if (that["bien" + i] == true) {
+                            aciertos++;
+                        }
+                    }
+                    console.log('aciertos', aciertos, ' y ', that["bien" + dropActivo]);
+
+                    //var puntuacion = Math.round((aciertos * 100) / cuantasPreguntas);
+                    //console.log("puntuacion:", puntuacion);
+
+                    //parent.set("cmi.core.score.raw", puntuacion);
+                    //var success = parent.save();
+                    //if (!success) {}
+
+
                     if (aciertos >= cuantasPreguntas) {
                         animacionEntrada($("#retroBien"), "aparecer", 1, 0);
                         aplicacion.reproducirAudio(audio[0], terminaAudioRetroBien, .5);
+                        // aplicacion.terminaPantalla();
                     } else {
                         animacionEntrada($("#retroMal"), "aparecer", 1, 0);
                         aplicacion.reproducirAudio(audio[1], terminaAudioRetroMal, .5);
                     }
-                    $(".drag").css({
-                        'z-index': '0'
-                    });
-                });
+                }
 
                 function terminaAudioRetroBien() {
                     parpadear($("#botonContinuar"));

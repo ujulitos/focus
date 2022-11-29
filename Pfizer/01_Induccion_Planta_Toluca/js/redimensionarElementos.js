@@ -1,8 +1,8 @@
-function redimensionarElementos() {
-    let escalaTemplate = 1;
-    const ancho = 1024;
-    const alto = 620;
+let escalaTemplate = 1;
+const ancho = 1024;
+const alto = 620;
 
+function redimensionarElementos() {
     setTimeout(() => {
 
         const anchoPantalla = $(window).width();
@@ -25,8 +25,33 @@ function redimensionarElementos() {
             if (elementos) {
                 posicionarElemento(elementos, escalaTemplate);
             }
+            calcularEscala();
         }, 10);
     }, 10);
+}
+
+function calcularEscala() {
+    let escalaTemplate2 = 1;
+
+    //  setTimeout(() => {
+    const anchoPantalla = $(window).width();
+    const alturaPantalla = $(window).height();
+
+    const escalaX = anchoPantalla / ancho;
+    //  console.log('escalaX', escalaX);
+    const escalaY = alturaPantalla / alto;
+    //  console.log('escalaY', escalaY);
+
+    if (anchoPantalla < ancho) {
+        if (escalaX <= escalaY) {
+            escalaTemplate2 = escalaX;
+        } else {
+            escalaTemplate2 = escalaY;
+        }
+    }
+    //  console.log('escalaTemplate2', escalaTemplate2);
+    return escalaTemplate2;
+    //  }, 10);
 }
 
 function posicionarElemento(elementos, escala) {

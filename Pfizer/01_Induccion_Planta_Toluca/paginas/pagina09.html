@@ -74,12 +74,13 @@
             animacionEntrada(img01, 'aparecer', 1, 1);
 
             // setTimeout(() => {
-            aplicacion.reproducirAudio(audio[0], terminaAudio1, 1);
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, .5);
             // }, 1000);
             // aplicacion.activarBotonAdelante();
         }
 
         function terminaAudio1() {
+            animacionEntrada(img02, 'aparecer', 1, 0);
             aplicacion.reproducirAudio(audio[1], terminaAudio2, .5);
         }
 

@@ -28,7 +28,7 @@
     <img class="elementos" id="img01" src="../img/pagina19/img01.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img03" src="../img/pagina19/img03.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img02" src="../img/pagina19/img02.png" data-posX="0" data-posY="0" />
-    <img class="elementos" id="boton1" src="../img/pagina19/boton1.png" data-posX="435" data-posY="320" />
+    <img class="elementos" id="boton1" src="../img/pagina19/boton1.png" data-posX="435" data-posY="340" />
 
 
     <!-- Script de la página -->
@@ -79,6 +79,10 @@
             });
 
             aplicacion.terminaPantalla();
+            setTimeout(() => {
+                aplicacion.desactivarBotonAdelante();
+            }, 500);
+
         }
     </script>
 </body>
