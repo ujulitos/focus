@@ -39,6 +39,7 @@
         //Al cargar la página
         jQuery(function($){ 
             aplicacion.bloquearNavegacion();
+            aplicacion.desactivarSiguiente(); 
             cargando(iniciarPagina);
         });
 
@@ -114,7 +115,7 @@
         r3.click(function(){
             if(r3.css('cursor') == 'pointer'){
                 aplicacion.addPuntaje(3)
-                aplicacion.irPagina(18);
+                aplicacion.irPagina(19);
             }
         });
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>Página 07 | I4L</title>
 </head>
 <style>
-    .op:hover{
+    .op:hover {
         filter: saturate(180%);
     }
 </style>
+
 <body class="pagina-interna">
     <img class="elementos" id="fondo" src="./img/pagina07/fondo.png" data-posX="0" data-posY="0">
     <img class="elementos op" id="op1" src="./img/pagina07/op1.png" data-posX="710" data-posY="350">
@@ -41,6 +43,7 @@
         //Al cargar la página
         jQuery(function($){ 
             aplicacion.bloquearNavegacion();
+            aplicacion.desactivarSiguiente(); 
             cargando(iniciarPagina);
         });
 
@@ -94,4 +97,5 @@
 
     <!-- Termina Script -->
 </body>
+
 </html>

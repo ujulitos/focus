@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página 05 | I4L</title>
 </head>
+
 <body class="pagina-interna">
     <img class="elementos" id="fondo" src="./img/pagina05/fondo.png" data-posX="0" data-posY="0" alt="">
     <img class="elementos respuestas" id="r1" src="./img/pagina05/r1.png" data-posX="200" data-posY="216" alt="">
@@ -40,6 +42,7 @@
         //Al cargar la página
         jQuery(function($){
             aplicacion.bloquearNavegacion();  
+            aplicacion.desactivarSiguiente(); 
             cargando(iniciarPagina);
         });
 
@@ -129,4 +132,5 @@
 
     <!-- Termina Script -->
 </body>
+
 </html>

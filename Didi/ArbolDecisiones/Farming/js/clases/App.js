@@ -155,6 +155,10 @@ export class App {
         activarBotonAtras();
     }
 
+    desactivarSiguiente() {
+        desactivarBotonSiguiente();
+    }
+
     //Metodos para reproducir y silenciar audios---------------------------------
 
     reproducirAudio(audio, funcion, delay = 0) {
@@ -249,17 +253,17 @@ export class App {
 
     //DiDi------------------------------------------------------------------------
     basico() {
-        this.op1++;
+        this.op1 += 1;
         console.log('basico: ', this.op1);
     }
 
     intermedio() {
-        this.op2 += 2;
+        this.op2 += 1;
         console.log('intermedio: ', this.op2);
     }
 
     avanzado() {
-        this.op3 += 3;
+        this.op3 += 1;
         console.log('avanzado: ', this.op3);
     }
 

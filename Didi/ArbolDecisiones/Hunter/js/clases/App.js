@@ -152,6 +152,10 @@ export class App {
         activarBotonAtras();
     }
 
+    desactivarSiguiente() {
+        desactivarBotonSiguiente();
+    }
+
     //Metodos para reproducir y silenciar audios---------------------------------
 
     reproducirAudio(audio, funcion, delay = 0) {

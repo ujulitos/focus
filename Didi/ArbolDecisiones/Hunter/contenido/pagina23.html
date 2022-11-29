@@ -29,6 +29,7 @@
 
         jQuery(function($){
             aplicacion.bloquearNavegacion();
+            aplicacion.desactivarSiguiente(); 
             cargando(iniciarPagina);
         });
 
@@ -42,9 +43,10 @@
             aplicacion.guardarCalificacion(puntuacion);
             aplicacion.categoria('Avanzado');
             parent.elNivel = 'Avanzado';
-            setTimeout(()=>{
+            // setTimeout(()=>{
+                aplicacion.terminaPantalla();
                 aplicacion.irPagina(24);
-            }, 1000);
+            // }, 1000);
         }
 
     </script>

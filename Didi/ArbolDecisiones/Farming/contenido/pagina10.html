@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>Página 10 | I4L</title>
 </head>
 <style>
-    .op:hover{
+    .op:hover {
         filter: saturate(180%);
     }
 </style>
+
 <body class="pagina-interna">
     <img class="elementos" id="fondo" src="./img/pagina10/fondo.png" data-posX="0" data-posY="0">
 
@@ -33,6 +35,7 @@
         //Al cargar la página
         jQuery(function($){ 
             aplicacion.bloquearNavegacion();
+            aplicacion.desactivarSiguiente(); 
             cargando(iniciarPagina);
         });
 
@@ -42,9 +45,10 @@
         }
 
         const finalPagina = ()=>{
-            setTimeout( () => {
+            // setTimeout( () => {
+                aplicacion.terminaPantalla();
                 aplicacion.irPagina(23);
-            }, 5000 );
+            // }, 5000 );
         }
 
 
@@ -52,4 +56,5 @@
 
     <!-- Termina Script -->
 </body>
+
 </html>

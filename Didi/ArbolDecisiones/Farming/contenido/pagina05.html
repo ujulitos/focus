@@ -44,7 +44,8 @@
         //Al cargar la página
         jQuery(function($){ 
             aplicacion.bloquearNavegacion();
-            cargando(iniciarPagina);
+            aplicacion.desactivarSiguiente(); 
+             cargando(iniciarPagina);
         });
 
         const iniciarPagina = ()=>{
