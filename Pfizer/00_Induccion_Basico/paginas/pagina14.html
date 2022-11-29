@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 14</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina14/titulo.png" data-posX="0" data-posY="0" />
+    <img id="img01" class="elementos" src="../img/pagina14/img01.png" data-posX="0" data-posY="0" />
+    <img id="img02" class="elementos" src="../img/pagina14/img02.png" data-posX="0" data-posY="0" />
+
+    <img id="seleccion" class="elementos" src="../img/pagina14/seleccion.png" data-posX="0" data-posY="0" />
+
+    <img id="pregunta1" class="elementos" src="../img/pagina14/pregunta1.png" data-posX="0" data-posY="0" />
+    <img id="pregunta2" class="elementos" src="../img/pagina14/pregunta2.png" data-posX="0" data-posY="0" />
+    <img id="pregunta3" class="elementos" src="../img/pagina14/pregunta3.png" data-posX="0" data-posY="0" />
+    <img id="pregunta4" class="elementos" src="../img/pagina14/pregunta4.png" data-posX="0" data-posY="0" />
+    <img id="pregunta5" class="elementos" src="../img/pagina14/pregunta5.png" data-posX="0" data-posY="0" />
+    <!-- <img id="pregunta6" class="elementos" src="../img/pagina14/pregunta6.png" data-posX="0" data-posY="0" />
+    <img id="pregunta7" class="elementos" src="../img/pagina14/pregunta7.png" data-posX="0" data-posY="0" />
+    <img id="pregunta8" class="elementos" src="../img/pagina14/pregunta8.png" data-posX="0" data-posY="0" />
+    <img id="pregunta9" class="elementos" src="../img/pagina14/pregunta9.png" data-posX="0" data-posY="0" />
+    <img id="pregunta10" class="elementos" src="../img/pagina14/pregunta10.png" data-posX="0" data-posY="0" /> -->
+
+    <!-- <img id="numero1" class="elementos" src="../img/pagina14/numero1.png" data-posX="0" data-posY="0" />
+    <img id="numero2" class="elementos" src="../img/pagina14/numero2.png" data-posX="0" data-posY="0" />
+    <img id="numero3" class="elementos" src="../img/pagina14/numero3.png" data-posX="0" data-posY="0" />
+    <img id="numero4" class="elementos" src="../img/pagina14/numero4.png" data-posX="0" data-posY="0" />
+    <img id="numero5" class="elementos" src="../img/pagina14/numero5.png" data-posX="0" data-posY="0" /> -->
+
+    <div id="btn_option1" class="elementos btn_green" data-posX="345" data-posY="422" style="width:140px; height:45px;"></div>
+    <div id="btn_option2" class="elementos btn_green" data-posX="525" data-posY="422" style="width:140px; height:45px;"></div>
+    <!-- <div id="btn_option3" class="elementos btn_green" data-posX="165" data-posY="340" style="width:683px; height:25px;"></div> -->
+
+    <img id="paloma" class="elementos" src="../img/pagina14/paloma.png" data-posX="725" data-posY="418" />
+    <img id="tache" class="elementos" src="../img/pagina14/tache.png" data-posX="725" data-posY="418" />
+    <img id="retroBien" class="elementos" src="../img/pagina14/retroBien.png" data-posX="0" data-posY="0" />
+    <img id="retroMal" class="elementos" src="../img/pagina14/retroMal.png" data-posX="0" data-posY="0" />
+    <!-- <img id="retroMal2" class="elementos" src="../img/pagina14/retroMal2.png" data-posX="0" data-posY="0" /> -->
+
+    <!-- <img id="botonIniciar" class="elementos" src="../img/pagina14/botonIniciar.png" data-posX="0" data-posY="0" /> -->
+    <img id="botonValidar" class="elementos" src="../img/pagina14/botonValidar.png" data-posX="445" data-posY="480" />
+    <img id="botonReintentar" class="elementos" src="../img/pagina14/botonReintentar.png" data-posX="375" data-posY="350" />
+    <img id="botonReiniciar" class="elementos" src="../img/pagina14/botonReiniciar.png" data-posX="414" data-posY="350" />
+
+    <div _id="1" id="lugar1" class="elementos btn_green drop" data-posX="170" data-posY="260" style="width: 500px; height: 270px;"></div>
+    <img class="elementos element drag" _id="1" id="pieza1" src="../img/pagina14/pieza1.png" data-posX="810" data-posY="110" alt="">
+
+</body>
+
+<style>
+    .btn_green {
+        background-color: rgba(137, 232, 74, 0);
+    }
+</style>
+
+<!-- Script de la página -->
+<script>
+    // Variable----------------------------------------------------
+    let aplicacion = parent;
+
+    const titulo = $('#titulo');
+    const img01 = $('#img01');
+    const img02 = $('#img02');
+
+    const botonValidar = $('#botonValidar');
+    const botonReintentar = $('#botonReintentar');
+    const botonReiniciar = $('#botonReiniciar');
+
+    // Arrastre-- -- -- -- -- -- -- -- -- -
+    var scalePage = calcularEscala();
+    console.log('scalePage', scalePage);
+    var contador = 0;
+    var no_objetos = new Array(1, 0); //← Numero de Piezas
+    var dragsColocados = new Array();
+
+    for (var i = 1; i <= no_objetos; i++) {
+        this["bien" + i] = false;
+    }
+    var that;
+    that = this;
+    // Arrastre-- -- -- -- -- -- -- -- -- -
+
+    // Audios------------------------------------------------------
+    const audio = [
+        new Audio('../audios/Pfizer_Basico_14_01.mp3'),
+        new Audio('../audios/Pfizer_Basico_14_02.mp3'),
+        new Audio('../audios/Pfizer_Basico_14_03.mp3'),
+    ]
+
+    // Al cargarse la página
+    $(window).on("load", function() {
+        redimensionarElementos();
+        aplicacion.cargando(iniciarContenido);
+        // aplicacion.activarBotonAdelante();
+    });
+
+
+    var respuestasCorrectas = new Array(2, 1, 2, 2, 1);
+    var lasCalificaciones = new Array();
+    var cuantasPreguntas = 5;
+    // var preguntasRandom = noRepRandom(respuestasCorrectas.length);
+    var preguntasRandom = new Array(1, 2, 3, 4, 5);
+    var cuantasRespuestas;
+    console.log('preguntasRandom', preguntasRandom);
+
+    var contador = 1;
+    var aciertos = 0;
+    var errores = 0;
+    var minimo = 80;
+    var puntuacion = 0;
+    var cualBoton;
+
+
+    function iniciarContenido() {
+        animacionEntrada(titulo, 'izquierda-derecha', 1, .5);
+        animacionEntrada(img01, 'aparecer', 1, 1);
+        animacionEntrada(img02, 'aparecer', 1, 1.5);
+
+        // setTimeout(() => {
+        aplicacion.reproducirAudio(audio[0], terminaAudio1, 2);
+        // }, 1000);
+        // aplicacion.activarBotonAdelante();
+
+        // parpadear($("#botonIniciar"));
+
+        function terminaAudio1() {
+            setTimeout(() => {
+                // QUITAR
+                lanzarPregunta(contador);
+                // aciertos = 5;
+                // retroalimenta();
+                // iniciaArrastre();
+            }, 500);
+        }
+    };
+
+
+    // ///////////////// botonIniciar ////////////////
+    // $("#botonIniciar").click(function() {
+    //     TweenMax.killTweensOf($(this));
+    //     $(this).hide();
+
+    //     animacionSalida($("#imagen3"), "derecha_izquierda",1, 0);
+    //     animacionSalida($("#img02"), "default", 1,.5);
+    //     animacionEntrada($("#imagen4"), "der_izq", .5, 1);
+
+    // });
+
+    function lanzarPregunta(cualPregunta) {
+        console.log('Pregunta ' + preguntasRandom[(cualPregunta - 1)] + ', correcta: ' + respuestasCorrectas[(preguntasRandom[(cualPregunta - 1)] - 1)]);
+
+        contador++;
+
+        $("#paloma, #tache, #btn_option1, #btn_option2, #btn_option3, #seleccion").hide();
+        $("#pregunta" + preguntasRandom[(cualPregunta - 2)]).hide();
+        // $("#numero" + (contador - 2)).hide();
+        // animacionSalida($("#imagen4"), "desaparece", 1,0);
+        // animacionSalida($("#imagen4_"), "desaparece", 1,0);
+        // animacionEntrada($("#numero" + (contador - 1)), "default", .4, 0.2);
+        animacionEntrada($("#pregunta" + preguntasRandom[(cualPregunta - 1)]), "default", .1, 0.2);
+
+        // setTimeout(function() {
+
+        // if ((preguntasRandom[(cualPregunta - 1)] == 8) || (preguntasRandom[(cualPregunta - 1)] == 9) || (preguntasRandom[(cualPregunta - 1)] == 10)) {
+        //     cuantasRespuestas = 2;
+        //     animacionEntrada($("#imagen4_"), "default", .4, 0);
+        // } else {
+        cuantasRespuestas = 3;
+        // animacionEntrada($("#imagen4"), "default", .4, 0);
+        // }
+
+        for (var a = 1; a <= cuantasRespuestas; a++) {
+
+            animacionEntrada($("#btn_option" + a), "default", .4, 0);
+            $("#btn_option" + a).css({
+                'cursor': 'pointer'
+            }).show();
+
+            if (preguntasRandom[(cualPregunta - 1)] == 2 || preguntasRandom[(cualPregunta - 1)] == 9 || preguntasRandom[(cualPregunta - 1)] == 10) {
+                $("#btn_option" + 3).hide();
+            }
+
+            $("#btn_option" + a).click(function() {
+                cualBoton = parseInt($(this).attr("id").substr(10, 2));
+                // console.log('cualBoton', cualBoton);
+
+                var elTop = parseInt($(this).css("top").substr(0, $(this).css("top").length - 2)) - 0 + "px";
+                var elLeft = parseInt($(this).css("left").substr(0, $(this).css("left").length - 2)) - 0 + "px";
+                // console.log('elTop', elTop);
+
+                $("#seleccion").hide();
+                // TweenMax.to($("#seleccion"), .5, {
+                // 	alpha: 1,
+                // 	top: elTop,
+                // 	display: "block"
+                // });
+                $("#seleccion").css({
+                    'top': elTop,
+                    'left': elLeft
+                });
+                animacionEntrada($("#seleccion"), "default", .3, 0);
+                parpadear($("#botonValidar"));
+
+                // $(this).off();
+            });
+        }
+        // }, 1000);
+
+
+        $("#botonValidar").click(function() {
+            TweenMax.killTweensOf($(this));
+            $(this).hide();
+            $("#btn_option1, #btn_option2, #btn_option3, #btn_option4").hide();
+
+            if (cualBoton == respuestasCorrectas[(preguntasRandom[(cualPregunta - 1)] - 1)]) {
+                console.log('bien');
+                aciertos++;
+
+                // var suTop = parseInt($("#btn_option" + cualBoton).css("top"));
+                // console.log('suTop', suTop);
+
+                // $("#paloma").css({
+                //     'top': (suTop + 10)
+                // });
+                $("#paloma").show();
+                animacionSalida($("#paloma"), "desaparece", .5, 2);
+            } else {
+                console.log('mal');
+
+                // var suTop = parseInt($("#btn_option" + cualBoton).css("top"));
+                // console.log('suTop', suTop);
+
+                // $("#tache").css({
+                //     'top': (suTop + 10)
+                // });
+                $("#tache").show();
+                animacionSalida($("#tache"), "desaparece", .5, 2);
+            }
+            console.log('aciertos ' + aciertos);
+
+            if (contador <= cuantasPreguntas) {
+                setTimeout(function() {
+                    $("#botonValidar").off();
+                    lanzarPregunta(contador);
+                }, 2500);
+            } else {
+                setTimeout(function() {
+                    retroalimenta();
+                }, 2500);
+            }
+
+        });
+    }
+
+
+    function retroalimenta() {
+        // console.log('Soy el intento', aplicacion.verIntento());
+        console.log('contador', contador);
+
+        $("#img02, #paloma, #tache, #seleccion").hide();
+        $("#pregunta" + preguntasRandom[(contador - 2)]).hide();
+        // $("#numero" + cuantasPreguntas).hide();
+
+        var puntuacion = Math.round((aciertos * 100) / cuantasPreguntas);
+        console.log("puntuacion:", puntuacion);
+
+        if (puntuacion >= minimo) {
+            animacionEntrada($("#retroBien"), "aparecer", 1, 0);
+            aplicacion.reproducirAudio(audio[1], terminaAudioRetroBien, .5);
+        } else {
+            // if (aplicacion.verIntento() >= 3) {
+            //     animacionEntrada($("#retroMal2"), "aparecer", 1, 0);
+            //     parpadear(botonReiniciar);
+            // } else {
+            animacionEntrada($("#retroMal"), "aparecer", 1, 0);
+            aplicacion.reproducirAudio(audio[2], terminaAudioRetroMal, .5);
+            // }
+        }
+
+        function terminaAudioRetroBien() {
+            iniciaArrastre()
+        }
+
+        function terminaAudioRetroMal() {
+            parpadear($("#botonReintentar"));
+            $("#botonReintentar").click(function() {
+                aplicacion.recargarPagina();
+            });
+        }
+
+    }
+
+
+    // Arrastre-- -- -- -- -- -- -- -- -- -
+    function iniciaArrastre() {
+        console.log("Objetos: " + no_objetos[0]);
+        for (i = 1; i <= no_objetos[0]; i++) {
+            $("#drag" + i).attr("_id" + i);
+            $("#drop" + i).attr("_id" + i);
+            dragsColocados[dragsColocados.length] = false;
+            //$("#drop"+i).show();
+
+            animacionEntrada($("#pieza" + i), "aparece", 1, 0 + (i * .1));
+            animacionEntrada($("#lugar" + i), "default", 1, 0 + (i * 0));
+        }
+
+        $(".drag").css("cursor", "pointer");
+        $(".drag").draggable({
+            drag: function(event, ui) {
+                dragActivo = $(this).attr("_id");
+                console.log("Drag seleccionado: " + dragActivo);
+
+                if (dragsColocados[(dragActivo - 1)] != false) {
+                    var elLugarPos = dragsColocados[(dragActivo - 1)].indexOf('drop') + 4;
+                    var elLugar = parseInt(dragsColocados[(dragActivo - 1)].substr(elLugarPos, 2));
+                    console.log("elLugar", elLugar);
+                    $("#lugar" + elLugar).show();
+                    dragsColocados[(dragActivo - 1)] = false;
+                    console.log("dragsColocados al drag", dragsColocados);
+
+                    // $("#botonValidar").hide();
+                }
+
+            }
+        });
+
+        $(".drop").droppable({
+            tolerance: "intersect",
+            accept: ".drag",
+            drop: function(event, ui) {
+                var esteID = $(this).attr("_id");
+                dropActivo = esteID;
+                console.log("colisión con: " + esteID);
+
+                dragsColocados[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
+                console.log("dragsColocados al drop", dragsColocados);
+
+                if ($("#lugar" + dropActivo).css('display') == 'block') {
+                    // $("#lugar" + dropActivo).hide();
+                    $("#pieza" + dragActivo).addClass('match');
+                    checkMatch();
+                }
+
+            }
+        });
+
+        var dragActivo;
+        $(".drag").mousedown(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                $(this).removeClass('match');
+                $(".drag").css({
+                    'z-index': '900'
+                });
+                $(this).css({
+                    'z-index': '999'
+                });
+            }
+        });
+
+
+        $(".drag").mouseup(function() {
+            if (!$(this).hasClass('match')) {
+                console.log("No tiene class match");
+
+                // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
+
+                TweenMax.to($(this), .5, {
+                    top: (parseInt($(this).attr("data-posY") - 0) * scalePage),
+                    left: (parseInt($(this).attr("data-posX") - 0) * scalePage),
+                    ease: Back.easeOut
+                });
+
+            } else {
+                console.log("No Se mueve");
+            }
+        });
+
+
+        function checkMatch() {
+            // console.log("revisando match");
+
+            if ((dragActivo == '1' && dropActivo == '1')) {
+                // console.log("Hizo Match! 1");
+                contador++;
+
+                TweenMax.killTweensOf($("#pieza" + dragActivo));
+
+                TweenMax.to($("#pieza" + dragActivo), .01, {
+                    top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage + (scalePage * 20)),
+                    left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage + (scalePage * 180))
+                });
+
+                $("#pieza" + dragActivo).css({
+                    'cursor': 'default'
+                });
+                // $("#pieza" + dragActivo).removeClass('drag');
+                $("#pieza" + dragActivo).draggable("destroy");
+
+                console.log("drag: " + dragActivo + " con drop: " + dropActivo);
+
+                // if (dropActivo == dragActivo) {
+                aciertos++;
+                that["bien" + dropActivo] = true;
+                // }
+            }
+            console.log('aciertos ' + aciertos);
+            // console.log('contador ' + contador + ' no_objetos ' + no_objetos);
+
+            if (contador >= no_objetos[0]) {
+                console.log('Termina');
+                animacionSalida($("#pieza" + dragActivo), 'default', .5, 0);
+
+                aplicacion.terminaPantalla();
+
+            }
+
+        }
+
+        // $("#botonValidar").click(function() {
+        //     if (aciertos >= cuantasPreguntas) {
+        //         animacionEntrada($("#retroBien"), "aparecer", 1, 0);
+        //         // aplicacion.reproducirAudio(audio[1], terminaAudioRetroBien, .5);
+        //         aplicacion.terminaPantalla();
+        //     } else {
+        //         animacionEntrada($("#retroMal"), "aparecer", 1, 0);
+        //         aplicacion.reproducirAudio(audio[2], terminaAudioRetroMal, .5);
+        //     }
+        //     dejarParpadear($(this));
+        //     animacionSalida($(this), 'default', .5, 0);
+        //     $(".drag").css({
+        //         'z-index': '0'
+        //     });
+        // });
+
+        // function terminaAudioRetroBien() {
+        //     parpadear($("#botonContinuar"));
+        //     $("#botonContinuar").click(function() {
+        //         aplicacion.siguientePagina();
+        //     });
+        // }
+
+        // function terminaAudioRetroMal() {
+        //     parpadear($("#botonReintentar"));
+        //     $("#botonReintentar").click(function() {
+        //         aplicacion.recargarPagina();
+        //     });
+        // }
+
+    }
+    // Arrastre-- -- -- -- -- -- -- -- -- -
+
+
+
+    // $('#botonReiniciar').click(function() {
+    //     if (($(this)).css('cursor') == 'pointer') {
+    //         top.location.reload();
+    //     }
+    // });
+</script>
+
+</html>

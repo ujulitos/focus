@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 11</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina11/titulo.png" data-posX="0" data-posY="0">
+    <img class="elementos" id="img01" src="../img/pagina11/img01.png" data-posX="0" data-posY="0">
+    <img class="elementos" id="img02" src="../img/pagina11/img02.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="img03" src="../img/pagina11/img03.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="img04" src="../img/pagina11/img04.png" data-posX="0" data-posY="0" alt="">
+
+    <div _id="3" id="lugar3" class="elementos boton drop" data-posX="550" data-posY="122" style="width: 45px; height: 45px;"></div>
+    <div _id="5" id="lugar5" class="elementos boton drop" data-posX="550" data-posY="180" style="width: 45px; height: 45px;"></div>
+    <div _id="1" id="lugar1" class="elementos boton drop" data-posX="550" data-posY="233" style="width: 45px; height: 45px;"></div>
+    <div _id="2" id="lugar2" class="elementos boton drop" data-posX="550" data-posY="347" style="width: 45px; height: 45px;"></div>
+    <div _id="4" id="lugar4" class="elementos boton drop" data-posX="550" data-posY="422" style="width: 45px; height: 45px;"></div>
+
+    <img class="elementos element drag" _id="1" id="pieza1" src="../img/pagina11/pieza1.png" data-posX="160" data-posY="230" alt="">
+    <img class="elementos element drag" _id="2" id="pieza2" src="../img/pagina11/pieza2.png" data-posX="160" data-posY="285" alt="">
+    <img class="elementos element drag" _id="3" id="pieza3" src="../img/pagina11/pieza3.png" data-posX="160" data-posY="345" alt="">
+    <img class="elementos element drag" _id="4" id="pieza4" src="../img/pagina11/pieza4.png" data-posX="160" data-posY="400" alt="">
+    <img class="elementos element drag" _id="5" id="pieza5" src="../img/pagina11/pieza5.png" data-posX="160" data-posY="455" alt="">
+
+    <img class="elementos" id="botonValidar" src="../img/pagina11/botonValidar.png" data-posX="455" data-posY="485" alt="">
+
+    <img class="elementos" id="retroBien" src="../img/pagina11/retroBien.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="botonContinuar" src="../img/pagina11/botonContinuar.png" data-posX="227" data-posY="365" alt="">
+    <img class="elementos" id="retroMal" src="../img/pagina11/retroMal.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="botonReintentar" src="../img/pagina11/botonReintentar.png" data-posX="440" data-posY="330" alt="">
+
+    <div _id="1" id="lugarFinal" class="elementos boton drop" data-posX="140" data-posY="225" style="width: 500px; height: 270px;"></div>
+    <img class="elementos element drag dragFinal" _id="1" id="piezaFinal" src="../img/pagina11/piezaFinal.png" data-posX="810" data-posY="110" alt="">
+
+    <style>
+        .boton {
+            background-color: rgba(74, 150, 232, 0);
+        }
+    </style>
+
+    <!-- Script de la página -->
+    <script>
+        $(document).ready(function() {
+
+            // Variable----------------------------------------------------
+            let aplicacion = parent;
+
+            const titulo = $('#titulo');
+            const img01 = $('#img01');
+            const img02 = $('#img02');
+            const img03 = $('#img03');
+            const img04 = $('#img04');
+
+            const pieza1 = $('#pieza1');
+            const pieza2 = $('#pieza2');
+            const pieza3 = $('#pieza3');
+            const pieza4 = $('#pieza4');
+            const pieza5 = $('#pieza5');
+
+            const retroBien = $('#retroBien');
+            const retroMal = $('#retroMal');
+
+
+            var scalePage = calcularEscala();
+            console.log('scalePage', scalePage);
+            var cuantasPreguntas = 5; //← Numero de preguntas
+            var contador = 0;
+            var no_objetos = new Array(5, 0); //← Numero de Piezas
+            var dragsColocados = new Array();
+            var aciertos = 0;
+            var minimo = 80;
+
+            for (var i = 1; i <= no_objetos; i++) {
+                this["bien" + i] = false;
+            }
+            var that;
+            that = this;
+
+            // });
+
+
+            // Arrastre-- -- -- -- -- -- -- -- -- -
+            var contadorFinal = 0;
+            var no_objetosFinal = new Array(1, 0); //← Numero de Piezas
+            var dragsColocadosFinal = new Array();
+
+            for (var i = 1; i <= no_objetosFinal; i++) {
+                this["bienFinal" + i] = false;
+            }
+            var that;
+            that = this;
+            // Arrastre-- -- -- -- -- -- -- -- -- -
+
+
+            // Audios------------------------------------------------------
+            const audio = [
+                new Audio('../audios/Pfizer_Basico_11_01.mp3'),
+                new Audio('../audios/Pfizer_Basico_11_02.mp3'),
+                new Audio('../audios/Pfizer_Basico_11_03.mp3'),
+            ]
+
+            // Al cargarse la página
+            $(window).on("load", function() {
+                redimensionarElementos();
+                aplicacion.cargando(iniciarContenido);
+                // aplicacion.activarBotonAdelante();
+            });
+
+            function iniciarContenido() {
+                animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+                animacionEntrada(img01, 'aparecer', 1, 1);
+                animacionEntrada(img02, 'aparecer', 1, 1.5);
+                aplicacion.reproducirAudio(audio[0], terminaAudio1, .5);
+            }
+
+            function terminaAudio1() {
+                animacionEntrada(img03, 'aparecer', 1, 0);
+                animacionEntrada(img04, 'aparecer', 1, .5);
+
+                setTimeout(() => {
+                    iniciaActividad();
+                }, 1000);
+            }
+
+
+            // iniciaActividad //
+            function iniciaActividad() {
+                console.log("Objetos: " + no_objetos[0]);
+
+                for (i = 1; i <= no_objetos[0]; i++) {
+                    $("#drag" + i).attr("_id" + i);
+                    $("#drop" + i).attr("_id" + i);
+                    dragsColocados[dragsColocados.length] = false;
+                    dragsColocadosFinal[dragsColocadosFinal.length] = false;
+                    //$("#drop"+i).show();
+
+                    animacionEntrada($("#pieza" + i), "izquierda-derecha", 1, 0 + (i * .1));
+                    animacionEntrada($("#lugar" + i), "default", 1, 0 + (i * 0));
+                }
+
+
+                var dragActivo;
+                $(".drag").mousedown(function() {
+                    // if ($(this).css('cursor') == 'pointer') {
+                    $(this).removeClass('match');
+                    $(".drag").css({
+                        'z-index': '900'
+                    });
+                    $(this).css({
+                        'z-index': '999'
+                    });
+                    // }
+                });
+
+
+                $(".drag").mouseup(function() {
+                    if (!$(this).hasClass('match')) {
+                        console.log("No tiene class match");
+
+                        // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
+
+                        TweenMax.to($(this), .5, {
+                            top: (parseInt($(this).attr("data-posY")) * scalePage),
+                            left: (parseInt($(this).attr("data-posX")) * scalePage),
+                            ease: Back.easeOut
+                        });
+
+                    } else {
+                        console.log("No Se mueve");
+                    }
+                });
+
+
+                $(".drag").css("cursor", "pointer");
+                $(".drag").draggable({
+                    drag: function(event, ui) {
+                        dragActivo = $(this).attr("_id");
+                        console.log("Drag seleccionado: " + dragActivo);
+
+                        if (dragsColocados[(dragActivo - 1)] != false) {
+                            var elLugarPos = dragsColocados[(dragActivo - 1)].indexOf('drop') + 4;
+                            var elLugar = parseInt(dragsColocados[(dragActivo - 1)].substr(elLugarPos, 2));
+                            console.log("elLugar", elLugar);
+                            $("#lugar" + elLugar).show();
+                            dragsColocados[(dragActivo - 1)] = false;
+                            console.log("dragsColocados al drag", dragsColocados);
+
+                            $("#botonValidar").hide();
+                        }
+
+                        if (dragsColocadosFinal[(dragActivo - 1)] != false) {
+                            var elLugarPos = dragsColocadosFinal[(dragActivo - 1)].indexOf('drop') + 4;
+                            var elLugar = parseInt(dragsColocadosFinal[(dragActivo - 1)].substr(elLugarPos, 2));
+                            console.log("elLugar", elLugar);
+                            $("#lugar" + elLugar).show();
+                            dragsColocadosFinal[(dragActivo - 1)] = false;
+                            console.log("dragsColocadosFinal al drag", dragsColocadosFinal);
+
+                            $("#botonValidar").hide();
+                        }
+
+                    }
+                });
+
+                $(".drop").droppable({
+                    tolerance: "intersect",
+                    accept: ".drag",
+                    drop: function(event, ui) {
+                        var esteID = $(this).attr("_id");
+                        dropActivo = esteID;
+                        console.log("colisión con: " + esteID);
+
+                        dragsColocados[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
+                        console.log("dragsColocados al drop", dragsColocados);
+
+                        dragsColocadosFinal[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
+                        console.log("dragsColocadosFinal al drop", dragsColocadosFinal);
+
+                        if ($("#lugar" + dropActivo).css('display') == 'block') {
+                            $("#lugar" + dropActivo).hide();
+                            $("#pieza" + dragActivo).addClass('match');
+                            $("#piezaFinal" + dragActivo).addClass('match');
+                            checkMatch();
+                            checkMatchFinal();
+                        }
+
+                    }
+                });
+
+
+
+                function checkMatch() {
+                    // console.log("revisando match");
+
+                    // if ((dragActivo == '1' && dropActivo == '3') || (dragActivo == '2' && dropActivo == '4') || (dragActivo == '3' && dropActivo == '1') || (dragActivo == '4' && dropActivo == '5') || (dragActivo == '5' && dropActivo == '2')) {
+                    //     // console.log("Hizo Match! 1");
+                    //     contador++;
+
+                    TweenMax.killTweensOf($("#pieza" + dragActivo));
+
+                    TweenMax.to($("#pieza" + dragActivo), .01, {
+                        top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) * scalePage),
+                        left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) * scalePage)
+                    });
+
+                    // $("#pieza" + dragActivo).css({
+                    //     'cursor': 'default'
+                    // });
+                    // $("#pieza" + dragActivo).removeClass('drag');
+                    // $("#pieza" + dragActivo).draggable("destroy");
+
+                    console.log("drag: " + dragActivo + " con drop: " + dropActivo);
+
+                    if (dropActivo == dragActivo) {
+                        that["bien" + dropActivo] = true;
+                    } else {
+                        that["bien" + dropActivo] = false;
+                    }
+                    // }
+                    // console.log('aciertos ' + aciertos);
+                    // console.log('contador ' + contador + ' no_objetos ' + no_objetos);
+
+                    losColocados = $.inArray(false, dragsColocados);
+                    console.log('losColocados', losColocados);
+                    if (losColocados == -1) {
+                        parpadear($("#botonValidar"));
+                        // } else {
+                        //     $("#botonValidar").hide();
+                    }
+
+                }
+
+
+                function checkMatchFinal() {
+                    console.log("revisando matchFinal");
+
+                    if ((dragActivo == '1' && dropActivo == '1')) {
+                        // console.log("Hizo Match! 1");
+                        contadorFinal++;
+
+                        TweenMax.killTweensOf($("#piezaFinal"));
+
+                        TweenMax.to($("#piezaFinal"), .01, {
+                            top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage + (scalePage * 20)),
+                            left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage + (scalePage * 180))
+                        });
+
+                        $("#piezaFinal").css({
+                            'cursor': 'default'
+                        });
+                        // $("#piezaFinal" + dragActivo).removeClass('drag');
+                        // $("#piezaFinal").draggable("destroy");
+
+                        console.log("dragFinal: " + dragActivo + " con dropFinal: " + dropActivo);
+
+                        // if (dropActivo == dragActivo) {
+                        that["bienFinal" + dropActivo] = true;
+                        // }
+                    }
+
+                    if (contadorFinal >= no_objetosFinal[0]) {
+                        console.log('Termina Final');
+
+                        animacionSalida($("#piezaFinal"), 'default', .5, 0);
+                        aplicacion.terminaPantalla();
+
+                    }
+
+                }
+
+
+                $("#botonValidar").click(function() {
+                    TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    retroalimenta();
+
+                    dejarParpadear($(this));
+                    animacionSalida($(this), 'default', .5, 0);
+
+                });
+
+                function retroalimenta() {
+                    console.log('retroalimenta');
+
+                    $(".drag").css({
+                        'z-index': '-900',
+                        'display': 'none'
+                    });
+                    $(".dragFinal").css({
+                        'z-index': '900',
+                        'display': 'block',
+                        'cursor': 'pointer'
+                    });
+
+                    TweenMax.to($("#piezaFinal"), .01, {
+                        top: (parseInt($("#piezaFinal").attr("data-posY") - 0) * scalePage),
+                        left: (parseInt($("#piezaFinal").attr("data-posX") - 0) * scalePage)
+                    });
+
+                    for (var i = 1; i <= cuantasPreguntas; i++) {
+                        console.log("bien", i, that["bien" + i]);
+
+                        if (that["bien" + i] == true) {
+                            aciertos++;
+                        }
+                    }
+                    console.log('aciertos', aciertos, ' y ', that["bien" + dropActivo]);
+
+                    //var puntuacion = Math.round((aciertos * 100) / cuantasPreguntas);
+                    //console.log("puntuacion:", puntuacion);
+
+                    //parent.set("cmi.core.score.raw", puntuacion);
+                    //var success = parent.save();
+                    //if (!success) {}
+
+
+                    if (aciertos >= cuantasPreguntas) {
+                        animacionEntrada($("#retroBien"), "aparecer", 1, 0);
+                        aplicacion.reproducirAudio(audio[1], terminaAudioRetroBien, .5);
+                        // aplicacion.terminaPantalla();
+                    } else {
+                        animacionEntrada($("#retroMal"), "aparecer", 1, 0);
+                        aplicacion.reproducirAudio(audio[2], terminaAudioRetroMal, .5);
+                    }
+                }
+
+                function terminaAudioRetroBien() {
+                    // parpadear($("#botonContinuar"));
+                    // $("#botonContinuar").click(function() {
+                    // aplicacion.siguientePagina();
+
+                    animacionEntrada($("#piezaFinal"), "aparece", 1, 0);
+                    animacionEntrada($("#lugarFinal"), "default", 1, 0);
+                    // });
+                }
+
+                function terminaAudioRetroMal() {
+                    parpadear($("#botonReintentar"));
+                    $("#botonReintentar").click(function() {
+                        aplicacion.recargarPagina();
+                    });
+                }
+
+            }
+
+
+        });
+
+        function finalPagina() {
+            // pararHablar();
+            terminaPantalla();
+            // parpadea(btnIniciar);
+            // btnIniciar.click(function(){
+            //     aplicacion.nextPag();
+            // });
+        }
+
+        function terminaPantalla() {
+            aplicacion.terminaPantalla();
+        }
+    </script>
+</body>
+
+</html>

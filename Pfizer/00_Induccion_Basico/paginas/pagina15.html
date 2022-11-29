@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 15</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina15/titulo.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01" src="../img/pagina15/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img02" src="../img/pagina15/img02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img03" src="../img/pagina15/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img04" src="../img/pagina15/img04.png" data-posX="0" data-posY="0" />
+
+    <!-- <div id="link1" class="elementos boton" data-posX="103" data-posY="265" style="width: 330px; height: 45px;"></div> -->
+
+
+    <!-- <style>
+        .boton {
+            background-color: rgba(122, 186, 255, 0.4);
+            cursor: pointer;
+        }
+    </style> -->
+
+    <!-- Script de la página -->
+    <script>
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
+        const img03 = $('#img03');
+        const img04 = $('#img04');
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Pfizer_Basico_15_01.mp3'),
+            new Audio('../audios/Pfizer_Basico_15_02.mp3'),
+            new Audio('../audios/Pfizer_Basico_15_03.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
+
+            // setTimeout(() => {
+            // aplicacion.reproducirAudio(audio[0], terminaAudio1, .5);
+            // }, 1000);
+            // aplicacion.activarBotonAdelante();
+            // }
+
+            // function terminaAudio1() {
+            animacionEntrada(img02, 'aparecer', 1, 1.5);
+            aplicacion.reproducirAudio(audio[0], terminaAudio2, 2);
+        }
+
+        function terminaAudio2() {
+            animacionEntrada(img03, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[1], terminaAudio3, .5);
+
+            // setTimeout(() => {
+            //     parpadear($('#link1'));
+            // }, 500);
+
+            // $('#link1').click(function() {
+            //     window.open('https://pfizer.sharepoint.com/sites/pfizerpolicypoint/SitePages/Welcome.aspx#', '_blank');
+            // });
+        }
+
+        function terminaAudio3() {
+            animacionEntrada(img04, 'derecha-izquierda', 1, 0);
+            aplicacion.reproducirAudio(audio[2], terminaAudioFinal, .5);
+
+        }
+
+
+
+        function terminaAudioFinal() {
+            aplicacion.terminaPantalla();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 23</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina23/titulo.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01" src="../img/pagina23/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img03" src="../img/pagina23/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img02" src="../img/pagina23/img02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="boton1" src="../img/pagina23/boton1.png" data-posX="435" data-posY="320" />
+
+
+    <!-- Script de la página -->
+    <script>
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
+        const img03 = $('#img03');
+        const boton1 = $('#boton1');
+
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Pfizer_Basico_22_01.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            aplicacion.desbloquearNavegacion();
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
+            animacionEntrada(img02, 'aparecer', 1, 1.5);
+            animacionEntrada(img03, 'izquierda-derecha', 1, 2);
+
+            // setTimeout(() => {
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, 2.5);
+            // }, 1000);
+            // aplicacion.activarBotonAdelante();
+        }
+
+        function terminaAudio1() {
+
+            // parpadear(boton1);
+
+            // $('#boton1').click(function() {
+            //     if ($(this).css('cursor') == 'pointer') {
+            //         dejarParpadear($(this));
+            //         animacionSalida($(this), 'default', 1, 0);
+            //     }
+            // });
+
+            aplicacion.terminaPantalla();
+        }
+    </script>
+</body>
+
+</html>
