@@ -66,6 +66,7 @@
 
     <div _id="1" id="lugar1" class="elementos btn_green drop" data-posX="170" data-posY="260" style="width: 500px; height: 270px;"></div>
     <img class="elementos element drag" _id="1" id="pieza1" src="../img/pagina14/pieza1.png" data-posX="810" data-posY="110" alt="">
+    <img class="elementos" id="piezaFinalCh" src="../img/pagina14/piezaFinalCh.png" data-posX="352" data-posY="340" alt="">
 
 </body>
 
@@ -94,6 +95,7 @@
     var contador = 0;
     var no_objetos = new Array(1, 0); //← Numero de Piezas
     var dragsColocados = new Array();
+    var finalizado = false;
 
     for (var i = 1; i <= no_objetos; i++) {
         this["bien" + i] = false;
@@ -407,9 +409,9 @@
 
                 TweenMax.killTweensOf($("#pieza" + dragActivo));
 
-                TweenMax.to($("#pieza" + dragActivo), .01, {
+                TweenMax.to($("#piezaFinal"), .01, {
                     top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage + (scalePage * 20)),
-                    left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage + (scalePage * 180))
+                    left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage + (scalePage * 100))
                 });
 
                 $("#pieza" + dragActivo).css({
@@ -432,6 +434,8 @@
                 console.log('Termina');
                 animacionSalida($("#pieza" + dragActivo), 'default', .5, 0);
 
+                animacionSalida($("#piezaFinal"), 'default', .5, 0);
+                animacionEntrada($("#piezaFinalCh"), "aparecer", 1, 0);
                 aplicacion.terminaPantalla();
 
             }

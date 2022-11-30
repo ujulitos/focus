@@ -53,6 +53,7 @@
 
     <div _id="1" id="lugarFinal" class="elementos boton drop" data-posX="140" data-posY="225" style="width: 500px; height: 270px;"></div>
     <img class="elementos element drag dragFinal" _id="1" id="piezaFinal" src="../img/pagina11/piezaFinal.png" data-posX="810" data-posY="110" alt="">
+    <img class="elementos" id="piezaFinalCh" src="../img/pagina11/piezaFinalCh.png" data-posX="550" data-posY="405" alt="">
 
     <style>
         .boton {
@@ -105,6 +106,7 @@
             var contadorFinal = 0;
             var no_objetosFinal = new Array(1, 0); //← Numero de Piezas
             var dragsColocadosFinal = new Array();
+            var finalizado = false;
 
             for (var i = 1; i <= no_objetosFinal; i++) {
                 this["bienFinal" + i] = false;
@@ -243,7 +245,9 @@
                             $("#pieza" + dragActivo).addClass('match');
                             $("#piezaFinal" + dragActivo).addClass('match');
                             checkMatch();
-                            checkMatchFinal();
+                            if (finalizado) {
+                                checkMatchFinal();
+                            }
                         }
 
                     }
@@ -303,8 +307,8 @@
                         TweenMax.killTweensOf($("#piezaFinal"));
 
                         TweenMax.to($("#piezaFinal"), .01, {
-                            top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage + (scalePage * 20)),
-                            left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage + (scalePage * 180))
+                            top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage + (scalePage * 70)),
+                            left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage + (scalePage * 330))
                         });
 
                         $("#piezaFinal").css({
@@ -324,6 +328,7 @@
                         console.log('Termina Final');
 
                         animacionSalida($("#piezaFinal"), 'default', .5, 0);
+                        animacionEntrada($("#piezaFinalCh"), "aparecer", 1, 0);
                         aplicacion.terminaPantalla();
 
                     }
@@ -368,7 +373,7 @@
                         }
                     }
                     console.log('aciertos', aciertos, ' y ', that["bien" + dropActivo]);
-
+                    finalizado = true;
                     //var puntuacion = Math.round((aciertos * 100) / cuantasPreguntas);
                     //console.log("puntuacion:", puntuacion);
 
