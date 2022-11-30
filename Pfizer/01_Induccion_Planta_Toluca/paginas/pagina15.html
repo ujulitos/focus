@@ -29,6 +29,11 @@
     <img class="elementos" id="img02" src="../img/pagina15/img02.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img03" src="../img/pagina15/img03.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img04" src="../img/pagina15/img04.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img05" src="../img/pagina15/img05.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img06" src="../img/pagina15/img06.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img07" src="../img/pagina15/img07.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img08" src="../img/pagina15/img08.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img09" src="../img/pagina15/img09.png" data-posX="0" data-posY="0" />
 
     <img class="elementos" id="boton1" src="../img/pagina15/boton1.png" data-posX="440" data-posY="480" />
     <img class="elementos" id="boton2" src="../img/pagina15/boton2.png" data-posX="25" data-posY="370" />
@@ -46,6 +51,11 @@
         const img02 = $('#img02');
         const img03 = $('#img03');
         const img04 = $('#img04');
+        const img05 = $('#img05');
+        const img06 = $('#img06');
+        const img07 = $('#img07');
+        const img08 = $('#img08');
+        const img09 = $('#img09');
 
         const boton1 = $('#boton1');
         const boton2 = $('#boton2');
@@ -73,21 +83,21 @@
         function iniciarContenido() {
             animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
             animacionEntrada(img01, 'aparecer', 1, 1);
-            animacionEntrada(img02, 'izquierda-derecha', 1, 1.5);
+            animacionEntrada(img02, 'aparecer', 1, 1.5);
 
             // setTimeout(() => {
-            aplicacion.reproducirAudio(audio[0], terminaAudio1, .5);
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, 2);
             // }, 1000);
             // aplicacion.activarBotonAdelante();
         }
 
         function terminaAudio1() {
-            animacionEntrada(img03, 'aparecer', 1, 0);
             aplicacion.reproducirAudio(audio[1], terminaAudio2, .5);
         }
 
         function terminaAudio2() {
-            aplicacion.reproducirAudio(audio[2], terminaAudio3, 0);
+            animacionEntrada(img03, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[2], terminaAudio3, .5);
         }
 
         function terminaAudio3() {
@@ -104,6 +114,9 @@
 
                     animacionEntrada(img04, 'aparecer', 1, .5);
                     aplicacion.reproducirAudio(audio[3], terminaAudio4, 1);
+                    animacionEntrada(img05, 'aparecer', 1, 3);
+                    animacionEntrada(img06, 'aparecer', 1, 5);
+                    animacionEntrada(img07, 'aparecer', 1, 9);
                 }
             });
 
@@ -131,7 +144,10 @@
 
         function terminaAudioPopup1_1() {
             animacionSalida(popup1, 'default', 1, 0);
-            aplicacion.reproducirAudio(audio[6], terminaAudioFinal, .5);
+
+            animacionEntrada(img08, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[6], terminaAudio5, .5);
+            animacionEntrada(img09, 'aparecer', 1, 20);
 
             terminaAudioFinal();
         }

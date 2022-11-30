@@ -62,7 +62,7 @@
     <img id="botonReintentar" class="elementos" src="../img/pagina18/botonReintentar.png" data-posX="430" data-posY="350" />
     <img id="botonReiniciar" class="elementos" src="../img/pagina18/botonReiniciar.png" data-posX="430" data-posY="340" />
 
-    <div id="puntos" class="elementos puntos" data-posX="0" data-posY="260" style="width:100%; height:25px;"></div>
+    <div id="puntos" class="elementos puntos" data-posX="0" data-posY="270" style="width:100%; height:25px;"></div>
 
 </body>
 
@@ -268,33 +268,32 @@
 
         if (puntuacion >= minimo) {
             animacionEntrada($("#retroBien"), "aparecer", 1, 0);
-            animacionEntrada($("#puntos"), "aparecer", 1, 0);
 
             // SCORM //
-            statusCurso("passed");
+            aplicacion.statusCurso("passed");
             // SCORM //
 
             aplicacion.terminaPantalla();
         } else {
             if (aplicacion.verIntento() >= 3) {
                 animacionEntrada($("#retroMal2"), "aparecer", 1, 0);
-                animacionEntrada($("#puntos"), "aparecer", 1, 0);
                 parpadear(botonReiniciar);
             } else {
                 animacionEntrada($("#retroMal"), "aparecer", 1, 0);
-                animacionEntrada($("#puntos"), "aparecer", 1, 0);
                 parpadear(botonReintentar);
             }
-            $("#puntos").html(puntuacion);
 
             // SCORM //
-            statusCurso("failed");
+            aplicacion.statusCurso("failed");
             // SCORM //         
 
         }
 
+        $("#puntos").html(puntuacion);
+        animacionEntrada($("#puntos"), "aparecer", 1, 0);
+
         // SCORM //
-        asignarCalificacion(puntuacion);
+        aplicacion.asignarCalificacion(puntuacion);
         // SCORM //
 
 
