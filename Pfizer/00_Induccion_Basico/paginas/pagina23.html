@@ -53,6 +53,9 @@
             redimensionarElementos();
             aplicacion.cargando(iniciarContenido);
             aplicacion.desbloquearNavegacion();
+            setTimeout(() => {
+                aplicacion.desactivarBotonAdelante();
+            }, 500);
         });
 
         function iniciarContenido() {

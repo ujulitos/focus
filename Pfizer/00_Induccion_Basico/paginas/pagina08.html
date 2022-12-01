@@ -28,6 +28,7 @@
     <img class="elementos" id="img01" src="../img/pagina08/img01.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img02" src="../img/pagina08/img02.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img03" src="../img/pagina08/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img04" src="../img/pagina08/img04.png" data-posX="0" data-posY="0" />
 
     <div id="link1" class="elementos boton" data-posX="406" data-posY="443" style="width: 212px; height: 40px;"></div>
     <div id="link2" class="elementos boton" data-posX="710" data-posY="443" style="width: 256px; height: 40px;"></div>
@@ -49,6 +50,7 @@
         const img01 = $('#img01');
         const img02 = $('#img02');
         const img03 = $('#img03');
+        const img04 = $('#img04');
 
         // Audios------------------------------------------------------
         const audio = [
@@ -85,7 +87,8 @@
         }
 
         function terminaAudio3() {
-            aplicacion.reproducirAudio(audio[2], terminaAudioFinal, 0);
+            animacionEntrada(img04, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[2], terminaAudioFinal, .5);
         }
 
 

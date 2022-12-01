@@ -59,7 +59,7 @@ $(window).resize(function() {
 });
 
 function escalar() {
-    recargarPagina();
+    // recargarPagina();
 }
 
 // Al cerrar la página------------------------------------------------------

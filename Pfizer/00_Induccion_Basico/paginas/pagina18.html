@@ -29,6 +29,8 @@
     <img class="elementos" id="img02" src="../img/pagina18/img02.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img03" src="../img/pagina18/img03.png" data-posX="0" data-posY="0" />
 
+    <img class="elementos" id="boton1" src="../img/pagina18/boton1.png" data-posX="815" data-posY="95" />
+
     <!-- <div id="link1" class="elementos boton" data-posX="103" data-posY="265" style="width: 330px; height: 45px;"></div> -->
 
 
@@ -48,6 +50,7 @@
         const img01 = $('#img01');
         const img02 = $('#img02');
         const img03 = $('#img03');
+        const boton1 = $('#boton1');
 
         // Audios------------------------------------------------------
         const audio = [
@@ -79,7 +82,7 @@
 
         function terminaAudio2() {
             animacionEntrada(img03, 'aparecer', 1, 0);
-            aplicacion.reproducirAudio(audio[1], terminaAudioFinal, .5);
+            aplicacion.reproducirAudio(audio[1], terminaAudio3, .5);
 
             // setTimeout(() => {
             //     parpadear($('#link1'));
@@ -90,6 +93,20 @@
             // });
         }
 
+        function terminaAudio3() {
+            parpadear(boton1);
+        }
+
+
+        // boton1
+        boton1.click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                dejarParpadear($(this));
+                // animacionSalida($(this), 'default', .5, 0);
+
+                aplicacion.siguientePagina();
+            }
+        });
 
 
         function terminaAudioFinal() {
