@@ -27,5 +27,5 @@ $(window).resize(function() {
 });
 
 function escalarElementos() {
-    redimensionarElementos();
+    // redimensionarElementos();
 }

@@ -52,7 +52,9 @@
         $(window).on("load", function() {
             redimensionarElementos();
             aplicacion.cargando(iniciarContenido);
-            // aplicacion.activarBotonAdelante();
+            setTimeout(() => {
+                aplicacion.desactivarBotonAdelante();
+            }, 500);
         });
 
         function iniciarContenido() {
