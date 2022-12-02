@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 10</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina10/titulo.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01" src="../img/pagina10/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img02" src="../img/pagina10/img02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img03" src="../img/pagina10/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonPlay" src="../img/pagina10/botonPlay.png" data-posX="695" data-posY="355" />
+
+    <video id="elVideo" class="elementos" data-posX="330" data-posY="70" style="width:680px;height:430px;" autobuffer controls controlsList="nodownload">
+        <source src="../videos/Catalogo_Firmas.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Script de la página -->
+    <script>
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
+        const img03 = $('#img03');
+        const botonPlay = $('#botonPlay');
+        const elVideo = $('#elVideo');
+
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Pfizer_Documentacion_10_01.mp3'),
+            new Audio('../audios/Pfizer_Documentacion_10_02.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
+
+            // setTimeout(() => {
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, .5);
+            // }, 1000);
+            // aplicacion.activarBotonAdelante();
+        }
+
+        function terminaAudio1() {
+            animacionEntrada(img02, 'izquierda-derecha', 1, 0);
+            aplicacion.reproducirAudio(audio[1], activarBoton, .5);
+        }
+
+        function activarBoton() {
+            animacionEntrada(img03, 'aparecer', 1, 0);
+            parpadear(botonPlay);
+
+            $("#botonPlay").click(function() {
+                dejarParpadear($(this));
+                animacionSalida($(this), 'default', 1, 0);
+                animacionEntrada(elVideo, 'default', .3, 0.1);
+                setTimeout(() => {
+                    activaVideo();
+                }, 500);
+            });
+
+            //////////////////////// VIDEO ////////////////////////
+            function activaVideo() {
+                console.log('elVideo');
+                $("#elVideo").css({
+                    'opacity': '0.999',
+                    'display': 'block'
+                });
+
+                document.getElementById("elVideo").play();
+
+                $("#elVideo").on("ended", function() {
+                    // animacion_salida($("#elVideo"), "default", 0, terminarPantalla());
+                    aplicacion.terminaPantalla();
+                });
+            }
+            //////////////////////// VIDEO ////////////////////////
+
+        }
+    </script>
+</body>
+
+</html>
