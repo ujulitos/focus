@@ -13,7 +13,6 @@
     <!-- Librerias -->
     <script src="../js/librerias/jquery.min.js"></script>
     <script src="../js/jquery-ui.min.js"></script>
-    <script src="../js/jquery.ui.touch-punch.min.js"></script>
     <script src="../js/librerias/gsap.min.js"></script>
 
     <!-- Script de animaciones -->
@@ -67,7 +66,7 @@
 
     <div _id="1" id="lugarFinal" class="elementos boton drop" data-posX="190" data-posY="255" style="width: 500px; height: 270px;"></div>
     <img class="elementos element drag dragFinal" _id="1" id="piezaFinal" src="../img/pagina19/piezaFinal.png" data-posX="810" data-posY="110" alt="">
-    <img class="elementos" id="piezaFinalCh" src="../img/pagina19/piezaFinalCh.png" data-posX="570" data-posY="285" alt="">
+    <img class="elementos" id="piezaFinalCh" src="../img/pagina19/piezaFinalCh.png" data-posX="591" data-posY="276" alt="">
 
     <style>
         .boton {
@@ -336,7 +335,7 @@
                         TweenMax.killTweensOf($("#piezaFinal"));
 
                         TweenMax.to($("#piezaFinal"), .01, {
-                            top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage + (scalePage * 30)),
+                            top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage + (scalePage * 20)),
                             left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage + (scalePage * 300))
                         });
 
@@ -356,7 +355,7 @@
                     if (contadorFinal >= no_objetosFinal[0]) {
                         console.log('Termina Final');
 
-                        animacionSalida($("#piezaFinal"), 'default', .5, 0);
+                        animacionSalida($("#piezaFinal"), 'default', .01, 0);
                         animacionEntrada($("#piezaFinalCh"), "aparecer", 1, 0);
                         aplicacion.terminaPantalla();
 
