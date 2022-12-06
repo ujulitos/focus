@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 09</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina09/titulo.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01" src="../img/pagina09/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img02" src="../img/pagina09/img02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img03" src="../img/pagina09/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img04" src="../img/pagina09/img04.png" data-posX="0" data-posY="0" />
+
+    <img class="elementos" id="boton1" src="../img/pagina09/boton1.png" data-posX="191" data-posY="213" />
+    <img class="elementos" id="popup1" src="../img/pagina09/popup1.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar1" src="../img/pagina09/botonCerrar.png" data-posX="870" data-posY="100" />
+
+    <img class="elementos" id="boton2" src="../img/pagina09/boton2.png" data-posX="649" data-posY="194" />
+    <img class="elementos" id="popup2" src="../img/pagina09/popup2.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar2" src="../img/pagina09/botonCerrar.png" data-posX="890" data-posY="100" />
+
+    <div _id="1" id="lugar1" class="elementos boton drop" data-posX="710" data-posY="255" style="width: 90px; height: 160px;"></div>
+    <img class="elementos drag" _id="1" id="pieza1" src="../img/pagina09/boton3.png" data-posX="835" data-posY="265" />
+    <img class="elementos" id="popup3" src="../img/pagina09/popup3.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrar3" src="../img/pagina09/botonCerrar.png" data-posX="890" data-posY="100" />
+
+    <img class="elementos" id="imgF01" src="../img/pagina09/imgF01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="luzF01" src="../img/pagina09/luzF01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="imgF02" src="../img/pagina09/imgF02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="luzF02" src="../img/pagina09/luzF02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="imgF03" src="../img/pagina09/imgF03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="luzF03" src="../img/pagina09/luzF03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="imgF04" src="../img/pagina09/imgF04.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="luzF04" src="../img/pagina09/luzF04.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="imgF05" src="../img/pagina09/imgF05.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="luzF05" src="../img/pagina09/luzF05.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="imgF06" src="../img/pagina09/imgF06.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="luzF06" src="../img/pagina09/luzF06.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="imgF07" src="../img/pagina09/imgF07.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="luzF07" src="../img/pagina09/luzF07.png" data-posX="0" data-posY="0" />
+
+    <style>
+        .boton {
+            background-color: rgba(67, 155, 250, 0);
+        }
+    </style>
+
+    <!-- Script de la página -->
+    <script>
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
+        const img03 = $('#img03');
+        const img04 = $('#img04');
+
+        const boton1 = $('#boton1');
+        const popup1 = $('#popup1');
+        const botonCerrar1 = $('#botonCerrar1');
+        const boton2 = $('#boton2');
+        const popup2 = $('#popup2');
+        const botonCerrar2 = $('#botonCerrar2');
+        const pieza1 = $('#pieza1');
+        const popup3 = $('#popup3');
+        const botonCerrar3 = $('#botonCerrar3');
+        const boton4 = $('#boton4');
+
+        const imgF01 = $('#imgF01');
+        const luzF01 = $('#luzF01');
+        const imgF02 = $('#imgF02');
+        const luzF02 = $('#luzF02');
+        const imgF03 = $('#imgF03');
+        const luzF03 = $('#luzF03');
+        const imgF04 = $('#imgF04');
+        const luzF04 = $('#luzF04');
+        const imgF05 = $('#imgF05');
+        const luzF05 = $('#luzF05');
+        const imgF06 = $('#imgF06');
+        const luzF06 = $('#luzF06');
+        const imgF07 = $('#imgF07');
+        const luzF07 = $('#luzF07');
+
+        var scalePage = calcularEscala();
+        console.log('scalePage', scalePage);
+        var cuantasPreguntas = 1; //← Numero de preguntas
+        var contador = 0;
+        var no_objetos = new Array(1, 0); //← Numero de Piezas
+        var dragsColocados = new Array();
+        var aciertos = 0;
+        var minimo = 80;
+
+        for (var i = 1; i <= no_objetos; i++) {
+            this["bien" + i] = false;
+        }
+        var that;
+        that = this;
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Pfizer_Patrimonial_09_01.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_02.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_03.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_04.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_05.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_06.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_07.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_08.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_09.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_10.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_11.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_09_12.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
+            animacionEntrada(img02, 'izquierda-derecha', 1, 1.5);
+
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, 1.5);
+        }
+
+        function terminaAudio1() {
+            // animacionSalida(img04, 'default', 1, 0);
+
+            // setTimeout(() => {
+            iniciaBotonera();
+            // }, 500);
+        }
+
+
+        // boton1
+        function iniciaBotonera() {
+            parpadear(boton1);
+
+            boton1.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    dejarParpadear($(this));
+                    animacionSalida($(this), 'default', .5, 0);
+                    animacionSalida(img02, 'default', .5, 0);
+
+                    window.open('../docs/Infografia_Control_de_Acceso_251122.pdf', '_blank');
+
+                    setTimeout(() => {
+                        animacionEntrada(popup1, 'aparecer', 1, 0);
+                        aplicacion.reproducirAudio(audio[1], terminaAudioPopup1, 0);
+                    }, 2000);
+                }
+            });
+        }
+
+        // boton2
+        function terminaAudioPopup1() {
+            parpadear(boton2);
+
+            boton2.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    dejarParpadear($(this));
+                    animacionSalida($(this), 'default', .5, 0);
+                    animacionSalida(popup1, 'default', .5, 0);
+
+                    animacionEntrada(popup2, 'aparecer', 1, 0);
+                    aplicacion.reproducirAudio(audio[2], terminaAudioPopup2, 0);
+                }
+            });
+        }
+
+        // botonCerrar2
+        function terminaAudioPopup2() {
+            parpadear(botonCerrar2);
+
+            botonCerrar2.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    animacionSalida($(this), 'default', 1, 0);
+                    animacionSalida(popup2, 'default', .5, 0);
+
+                    animacionEntrada(img03, 'aparecer', 1, 0);
+                    aplicacion.reproducirAudio(audio[3], iniciaArrastre, 0);
+                }
+            });
+        }
+
+        // iniciaArrastre //
+        function iniciaArrastre(cualDrag) {
+            cualDrag = 1;
+            console.log("Objetos: " + no_objetos[0]);
+
+            // for (i = 1; i <= no_objetos[0]; i++) {
+            $("#drag" + cualDrag).attr("_id" + cualDrag);
+            $("#drop" + cualDrag).attr("_id" + cualDrag);
+            dragsColocados[dragsColocados.length] = false;
+            //$("#drop"+i).show();
+
+            // animacionEntrada($("#pieza" + cualDrag), "aparecer", 1, 0);
+            parpadear($('#pieza' + cualDrag));
+            animacionEntrada($("#lugar" + cualDrag), "default", 1, 0);
+            // }
+
+
+            var dragActivo;
+            $(".drag").mousedown(function() {
+                // if ($(this).css('cursor') == 'pointer') {
+                $(this).removeClass('match');
+                $(".drag").css({
+                    'z-index': '900'
+                });
+                $(this).css({
+                    'z-index': '999'
+                });
+                // }
+            });
+
+
+            $(".drag").mouseup(function() {
+                if (!$(this).hasClass('match')) {
+                    console.log("No tiene class match");
+
+                    TweenMax.to($(this), .5, {
+                        top: (parseInt($(this).attr("data-posY")) * scalePage),
+                        left: (parseInt($(this).attr("data-posX")) * scalePage),
+                        ease: Back.easeOut
+                    });
+
+                } else {
+                    console.log("No Se mueve");
+                }
+            });
+
+            $(".drag").css("cursor", "pointer");
+            $(".drag").draggable({
+                drag: function(event, ui) {
+                    dragActivo = $(this).attr("_id");
+                    console.log("Drag seleccionado: " + dragActivo);
+
+                    if (dragsColocados[(dragActivo - 1)] != false) {
+                        var elLugarPos = dragsColocados[(dragActivo - 1)].indexOf('drop') + 4;
+                        var elLugar = parseInt(dragsColocados[(dragActivo - 1)].substr(elLugarPos, 2));
+                        console.log("elLugar", elLugar);
+                        $("#lugar" + elLugar).show();
+                        dragsColocados[(dragActivo - 1)] = false;
+                        console.log("dragsColocados al drag", dragsColocados);
+
+                        // $("#botonValidar").hide();
+                    }
+
+                }
+            });
+
+            $(".drop").droppable({
+                tolerance: "intersect",
+                accept: ".drag",
+                drop: function(event, ui) {
+                    var esteID = $(this).attr("_id");
+                    dropActivo = esteID;
+                    console.log("colisión con: " + esteID);
+
+                    dragsColocados[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
+                    console.log("dragsColocados al drop", dragsColocados);
+
+                    if ($("#lugar" + dropActivo).css('display') == 'block') {
+                        $("#lugar" + dropActivo).hide();
+                        $("#pieza" + dragActivo).addClass('match');
+                        checkMatch();
+                    }
+
+                }
+            });
+
+
+
+
+
+            function checkMatch() {
+                // console.log("revisando match");
+
+                contador++;
+                console.log('contador', contador);
+
+                animacionSalida(img02, 'default', 1, 0);
+                animacionSalida($('#popup' + (contador - 1) + '_f'), 'default', .5, 0);
+                TweenMax.killTweensOf($("#pieza" + dragActivo));
+
+                TweenMax.to($("#pieza" + dragActivo), 1, {
+                    top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) * scalePage + (scalePage * 10)),
+                    left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) * scalePage + (scalePage * 30))
+                });
+
+                console.log("drag: " + dragActivo + " con drop: " + dropActivo);
+
+                if (dropActivo == dragActivo) {
+                    that["bien" + dropActivo] = true;
+                } else {
+                    that["bien" + dropActivo] = false;
+                }
+
+                losColocados = $.inArray(false, dragsColocados);
+                console.log('losColocados', losColocados);
+                if (losColocados == -1) {
+
+                    animacionSalida($("#pieza" + dragActivo), 'default', 1, 0);
+                    animacionSalida(img03, 'default', 1, 0);
+
+                    // setTimeout(() => {
+                    animacionEntrada(popup3, 'aparecer', 1, 0);
+                    aplicacion.reproducirAudio(audio[4], terminaAudioPopup3, 0);
+                    // }, 500);
+
+                }
+
+                // function terminaAudioPopupF() {
+                //     if (contador >= cuantasPreguntas) {
+                //         // animacionEntrada(img03, 'aparecer', 1, 0);
+                //         terminaAudioFinal();
+                //     } else {
+                //         iniciaActividad((contador + 1));
+                //     }
+                // }
+
+            }
+        }
+
+        // botonCerrar3
+        function terminaAudioPopup3() {
+            parpadear(botonCerrar3);
+
+            botonCerrar3.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    animacionSalida($(this), 'default', 1, 0);
+                    animacionSalida(popup3, 'default', 1, 0);
+
+                    animacionEntrada(img04, 'aparecer', 1, 0);
+                    animacionEntrada(imgF01, 'aparecer', 1, .5);
+                    animacionEntrada(luzF01, 'aparecer', 1, .5);
+                    aplicacion.reproducirAudio(audio[5], terminaAudioF1, .5);
+                }
+            });
+        }
+
+
+        function terminaAudioF1() {
+            animacionSalida(imgF01, 'default', 1, 0);
+
+            animacionEntrada(imgF02, 'aparecer', 1, 0);
+            animacionEntrada(luzF02, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[6], terminaAudioF2, 0);
+        }
+
+        function terminaAudioF2() {
+            animacionSalida(imgF02, 'default', 1, 0);
+
+            animacionEntrada(imgF03, 'aparecer', 1, 0);
+            animacionEntrada(luzF03, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[7], terminaAudioF3, 0);
+        }
+
+        function terminaAudioF3() {
+            animacionSalida(imgF03, 'default', 1, 0);
+
+            animacionEntrada(imgF04, 'aparecer', 1, 0);
+            animacionEntrada(luzF04, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[8], terminaAudioF4, 0);
+        }
+
+        function terminaAudioF4() {
+            animacionSalida(imgF04, 'default', 1, 0);
+
+            animacionEntrada(imgF05, 'aparecer', 1, 0);
+            animacionEntrada(luzF05, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[9], terminaAudioF5, 0);
+        }
+
+        function terminaAudioF5() {
+            animacionSalida(imgF05, 'default', 1, 0);
+
+            animacionEntrada(imgF06, 'aparecer', 1, 0);
+            animacionEntrada(luzF06, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[10], terminaAudioF6, 0);
+        }
+
+        function terminaAudioF6() {
+            animacionSalida(imgF06, 'default', 1, 0);
+
+            animacionEntrada(imgF07, 'aparecer', 1, 0);
+            animacionEntrada(luzF07, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[11], terminaAudioFinal, 0);
+        }
+
+
+
+        function terminaAudioFinal() {
+            aplicacion.terminaPantalla();
+        }
+    </script>
+</body>
+
+</html>
