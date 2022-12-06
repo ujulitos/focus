@@ -30,6 +30,7 @@
     <img class="elementos" id="img03" src="../img/pagina11/img03.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonPlay" src="../img/pagina11/botonPlay.png" data-posX="400" data-posY="345" />
 
+    <img class="elementos" id="imgFondo" src="../img/pagina10/imgFondo.png" data-posX="0" data-posY="0" />
     <video id="elVideo" class="elementos" data-posX="170" data-posY="80" style="width:680px;height:430px;" autobuffer controls controlsList="nodownload">
         <source src="../videos/ITA_Uso_Sistema_Firma_Electronica_Tutorial.mp4" type="video/mp4" />
     </video>
@@ -82,6 +83,8 @@
             $("#botonPlay").click(function() {
                 dejarParpadear($(this));
                 animacionSalida($(this), 'default', 1, 0);
+
+                animacionEntrada($('#imgFondo'), 'default', .3, 0.1);
                 animacionEntrada(elVideo, 'default', .3, 0.1);
                 setTimeout(() => {
                     activaVideo();
