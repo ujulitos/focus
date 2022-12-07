@@ -26,23 +26,32 @@
 
     <img class="elementos" id="titulo" src="../img/pagina08/titulo.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img01" src="../img/pagina08/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01b" src="../img/pagina08/img01b.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img02" src="../img/pagina08/img02.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img03" src="../img/pagina08/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img03b" src="../img/pagina08/img03b.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img04" src="../img/pagina08/img04.png" data-posX="0" data-posY="0" />
 
-    <img class="elementos" id="boton1" src="../img/pagina08/boton1.png" data-posX="505" data-posY="270" />
+    <img class="elementos" id="boton1" src="../img/pagina08/boton1.png" data-posX="435" data-posY="180" />
     <img class="elementos" id="popup1" src="../img/pagina08/popup1.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar1" src="../img/pagina08/botonCerrar.png" data-posX="870" data-posY="100" />
 
     <img class="elementos" id="boton2" src="../img/pagina08/boton2.png" data-posX="493" data-posY="350" />
     <img class="elementos" id="popup2" src="../img/pagina08/popup2.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup2b" src="../img/pagina08/popup2b.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar2" src="../img/pagina08/botonCerrar.png" data-posX="900" data-posY="150" />
 
     <img class="elementos" id="boton3" src="../img/pagina08/boton3.png" data-posX="684" data-posY="176" />
     <img class="elementos" id="popup3" src="../img/pagina08/popup3.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar3" src="../img/pagina08/botonCerrar.png" data-posX="900" data-posY="90" />
 
-    <img class="elementos" id="popup4" src="../img/pagina08/popup4.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_1" src="../img/pagina08/popup4_1.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_2" src="../img/pagina08/popup4_2.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_3" src="../img/pagina08/popup4_3.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_4" src="../img/pagina08/popup4_4.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_5" src="../img/pagina08/popup4_5.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_6" src="../img/pagina08/popup4_6.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_7" src="../img/pagina08/popup4_7.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="boton4" src="../img/pagina08/boton4.png" data-posX="610" data-posY="280" />
     <img class="elementos" id="botonCerrar4" src="../img/pagina08/botonCerrar.png" data-posX="860" data-posY="110" />
 
@@ -55,8 +64,10 @@
 
         const titulo = $('#titulo');
         const img01 = $('#img01');
+        const img01b = $('#img01b');
         const img02 = $('#img02');
         const img03 = $('#img03');
+        const img03b = $('#img03b');
         const img04 = $('#img04');
 
         const boton1 = $('#boton1');
@@ -64,12 +75,19 @@
         const botonCerrar1 = $('#botonCerrar1');
         const boton2 = $('#boton2');
         const popup2 = $('#popup2');
+        const popup2b = $('#popup2b');
         const botonCerrar2 = $('#botonCerrar2');
         const boton3 = $('#boton3');
         const popup3 = $('#popup3');
         const botonCerrar3 = $('#botonCerrar3');
         const boton4 = $('#boton4');
-        const popup4 = $('#popup4');
+        const popup4_1 = $('#popup4_1');
+        const popup4_2 = $('#popup4_2');
+        const popup4_3 = $('#popup4_3');
+        const popup4_4 = $('#popup4_4');
+        const popup4_5 = $('#popup4_5');
+        const popup4_6 = $('#popup4_6');
+        const popup4_7 = $('#popup4_7');
         const botonCerrar4 = $('#botonCerrar4');
         const boton5 = $('#boton5');
 
@@ -106,6 +124,8 @@
             animacionEntrada(img01, 'aparecer', 1, 1);
 
             // setTimeout(() => {
+            // QUITAR
+            // terminaAudioPopup3();
             aplicacion.reproducirAudio(audio[0], terminaAudio1, 1.5);
             // }, 1000);
             // aplicacion.activarBotonAdelante();
@@ -141,6 +161,7 @@
         // boton1
         function iniciaBotonera() {
             parpadear(boton1);
+            animacionEntrada(img01b, 'aparecer', 1, 0);
 
             boton1.click(function() {
                 if ($(this).css('cursor') == 'pointer') {
@@ -162,6 +183,7 @@
                 if ($(this).css('cursor') == 'pointer') {
                     animacionSalida($(this), 'default', 1, 0);
                     animacionSalida(popup1, 'default', .5, 0);
+                    animacionSalida(img01b, 'default', .5, 0);
 
                     animacionEntrada(img03, 'aparecer', 1, 0);
                     aplicacion.reproducirAudio(audio[3], terminaAudioImg3_1, 0);
@@ -170,6 +192,7 @@
         }
 
         function terminaAudioImg3_1() {
+            animacionEntrada(img03b, 'aparecer', 1, 0);
             aplicacion.reproducirAudio(audio[4], terminaAudioImg3_2, 0);
         }
 
@@ -183,6 +206,7 @@
                     dejarParpadear($(this));
                     animacionSalida($(this), 'default', .5, 0);
                     animacionSalida(img03, 'default', .5, 0);
+                    animacionSalida(img03b, 'default', .5, 0);
 
                     animacionEntrada(popup2, 'aparecer', 1, 0);
                     aplicacion.reproducirAudio(audio[5], terminaAudioPopup2_1, 0);
@@ -191,6 +215,7 @@
         }
 
         function terminaAudioPopup2_1() {
+            animacionEntrada(popup2b, 'aparecer', 1, 0);
             aplicacion.reproducirAudio(audio[6], terminaAudioPopup2_2, 0);
         }
 
@@ -203,6 +228,7 @@
                     dejarParpadear($(this));
                     animacionSalida($(this), 'default', .5, 0);
                     animacionSalida(popup2, 'default', .5, 0);
+                    animacionSalida(popup2b, 'default', .5, 0);
 
                     animacionEntrada(popup3, 'aparecer', 1, 0);
                     aplicacion.reproducirAudio(audio[7], terminaAudioPopup3, 0);
@@ -220,7 +246,13 @@
                     animacionSalida($(this), 'default', .5, 0);
                     animacionSalida(popup3, 'default', .5, 0);
 
-                    animacionEntrada(popup4, 'aparecer', 1, 0);
+                    animacionEntrada(popup4_1, 'aparecer', 1, 0);
+                    animacionEntrada(popup4_2, 'aparecer', 1, 1.5);
+                    animacionEntrada(popup4_3, 'aparecer', 1, 8);
+                    animacionEntrada(popup4_4, 'aparecer', 1, 12);
+                    animacionEntrada(popup4_5, 'aparecer', 1, 20.5);
+                    animacionEntrada(popup4_6, 'aparecer', 1, 24);
+                    animacionEntrada(popup4_7, 'aparecer', 1, 30);
                     aplicacion.reproducirAudio(audio[8], terminaAudioPopup4, 0);
                 }
             });
@@ -233,7 +265,13 @@
             botonCerrar4.click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     animacionSalida($(this), 'default', 1, 0);
-                    animacionSalida(popup4, 'default', .5, 0);
+                    animacionSalida(popup4_1, 'default', .5, 0);
+                    animacionSalida(popup4_2, 'default', .5, 0);
+                    animacionSalida(popup4_3, 'default', .5, 0);
+                    animacionSalida(popup4_4, 'default', .5, 0);
+                    animacionSalida(popup4_5, 'default', .5, 0);
+                    animacionSalida(popup4_6, 'default', .5, 0);
+                    animacionSalida(popup4_7, 'default', .5, 0);
 
                     animacionEntrada(img04, 'aparecer', 1, 0);
                     aplicacion.reproducirAudio(audio[9], terminaAudioPopup5, 0);

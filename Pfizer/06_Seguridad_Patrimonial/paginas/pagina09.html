@@ -27,6 +27,7 @@
 
     <img class="elementos" id="titulo" src="../img/pagina09/titulo.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img01" src="../img/pagina09/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01b" src="../img/pagina09/img01b.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img02" src="../img/pagina09/img02.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img03" src="../img/pagina09/img03.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img04" src="../img/pagina09/img04.png" data-posX="0" data-posY="0" />
@@ -36,7 +37,13 @@
     <img class="elementos" id="botonCerrar1" src="../img/pagina09/botonCerrar.png" data-posX="870" data-posY="100" />
 
     <img class="elementos" id="boton2" src="../img/pagina09/boton2.png" data-posX="649" data-posY="194" />
-    <img class="elementos" id="popup2" src="../img/pagina09/popup2.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup2_1" src="../img/pagina09/popup2_1.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup2_2" src="../img/pagina09/popup2_2.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup2_3" src="../img/pagina09/popup2_3.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup2_4" src="../img/pagina09/popup2_4.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup2_5" src="../img/pagina09/popup2_5.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup2_6" src="../img/pagina09/popup2_6.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup2_7" src="../img/pagina09/popup2_7.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar2" src="../img/pagina09/botonCerrar.png" data-posX="890" data-posY="100" />
 
     <div _id="1" id="lugar1" class="elementos boton drop" data-posX="710" data-posY="255" style="width: 90px; height: 160px;"></div>
@@ -72,6 +79,7 @@
 
         const titulo = $('#titulo');
         const img01 = $('#img01');
+        const img01b = $('#img01b');
         const img02 = $('#img02');
         const img03 = $('#img03');
         const img04 = $('#img04');
@@ -80,7 +88,13 @@
         const popup1 = $('#popup1');
         const botonCerrar1 = $('#botonCerrar1');
         const boton2 = $('#boton2');
-        const popup2 = $('#popup2');
+        const popup2_1 = $('#popup2_1');
+        const popup2_2 = $('#popup2_2');
+        const popup2_3 = $('#popup2_3');
+        const popup2_4 = $('#popup2_4');
+        const popup2_5 = $('#popup2_5');
+        const popup2_6 = $('#popup2_6');
+        const popup2_7 = $('#popup2_7');
         const botonCerrar2 = $('#botonCerrar2');
         const pieza1 = $('#pieza1');
         const popup3 = $('#popup3');
@@ -150,6 +164,9 @@
             animacionEntrada(img01, 'aparecer', 1, 1);
             animacionEntrada(img02, 'izquierda-derecha', 1, 1.5);
 
+            // QUITAR
+            // iniciaArrastre(1);
+            // terminaAudioPopup1();
             aplicacion.reproducirAudio(audio[0], terminaAudio1, 1.5);
         }
 
@@ -177,7 +194,7 @@
                     setTimeout(() => {
                         animacionEntrada(popup1, 'aparecer', 1, 0);
                         aplicacion.reproducirAudio(audio[1], terminaAudioPopup1, 0);
-                    }, 2000);
+                    }, 7000);
                 }
             });
         }
@@ -192,7 +209,13 @@
                     animacionSalida($(this), 'default', .5, 0);
                     animacionSalida(popup1, 'default', .5, 0);
 
-                    animacionEntrada(popup2, 'aparecer', 1, 0);
+                    animacionEntrada(popup2_1, 'aparecer', 1, 0);
+                    animacionEntrada(popup2_2, 'aparecer', 1, 7.5);
+                    animacionEntrada(popup2_3, 'aparecer', 1, 14);
+                    animacionEntrada(popup2_4, 'aparecer', 1, 18.5);
+                    animacionEntrada(popup2_5, 'aparecer', 1, 25);
+                    animacionEntrada(popup2_6, 'aparecer', 1, 33);
+                    animacionEntrada(popup2_7, 'aparecer', 1, 39.5);
                     aplicacion.reproducirAudio(audio[2], terminaAudioPopup2, 0);
                 }
             });
@@ -205,7 +228,13 @@
             botonCerrar2.click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     animacionSalida($(this), 'default', 1, 0);
-                    animacionSalida(popup2, 'default', .5, 0);
+                    animacionSalida(popup2_1, 'default', .5, 0);
+                    animacionSalida(popup2_2, 'default', .5, 0);
+                    animacionSalida(popup2_3, 'default', .5, 0);
+                    animacionSalida(popup2_4, 'default', .5, 0);
+                    animacionSalida(popup2_5, 'default', .5, 0);
+                    animacionSalida(popup2_6, 'default', .5, 0);
+                    animacionSalida(popup2_7, 'default', .5, 0);
 
                     animacionEntrada(img03, 'aparecer', 1, 0);
                     aplicacion.reproducirAudio(audio[3], iniciaArrastre, 0);
@@ -227,6 +256,7 @@
             // animacionEntrada($("#pieza" + cualDrag), "aparecer", 1, 0);
             parpadear($('#pieza' + cualDrag));
             animacionEntrada($("#lugar" + cualDrag), "default", 1, 0);
+            animacionEntrada(img01b, "default", 1, 0);
             // }
 
 

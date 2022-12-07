@@ -58,6 +58,7 @@
             new Audio('../audios/Pfizer_Patrimonial_12_02.mp3'),
             new Audio('../audios/Pfizer_Patrimonial_12_03.mp3'),
             new Audio('../audios/Pfizer_Patrimonial_12_04.mp3'),
+            new Audio('../audios/alerta.mp3'),
         ]
 
         // Al cargarse la página
@@ -84,8 +85,13 @@
         }
 
         function terminaAudio2() {
+            aplicacion.reproducirAudio(audio[4], terminaAudioAlerta, 0);
+            animacionEntrada(boton1, 'aparecer', 1, 0);
+
+        }
+
+        function terminaAudioAlerta() {
             animacionEntrada(img03, 'aparecer', 1, 0);
-            animacionEntrada(boton1, 'aparecer', 1, 2);
             aplicacion.reproducirAudio(audio[2], terminaAudio3, .5);
         }
 

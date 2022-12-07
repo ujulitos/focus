@@ -28,20 +28,21 @@
     <img class="elementos" id="img01" src="../img/pagina07/img01.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img02" src="../img/pagina07/img02.png" data-posX="0" data-posY="0" />
 
-    <img class="elementos" id="boton1" src="../img/pagina07/boton1.png" data-posX="610" data-posY="390" />
+    <img class="elementos" id="boton1" src="../img/pagina07/boton1.png" data-posX="510" data-posY="320" />
     <img class="elementos" id="popup1" src="../img/pagina07/popup1.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar1" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="150" />
 
-    <img class="elementos" id="boton2" src="../img/pagina07/boton2.png" data-posX="610" data-posY="450" />
+    <img class="elementos" id="boton2" src="../img/pagina07/boton2.png" data-posX="510" data-posY="440" />
     <img class="elementos" id="popup2" src="../img/pagina07/popup2.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar2" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="150" />
 
-    <img class="elementos" id="boton3" src="../img/pagina07/boton3.png" data-posX="550" data-posY="260" />
-    <img class="elementos" id="popup3" src="../img/pagina07/popup3.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="boton3" src="../img/pagina07/boton3.png" data-posX="470" data-posY="210" />
+    <img class="elementos" id="popup3_1" src="../img/pagina07/popup3_1.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup3_2" src="../img/pagina07/popup3_2.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar3" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="90" />
 
     <img class="elementos" id="popup4" src="../img/pagina07/popup4.png" data-posX="0" data-posY="0" />
-    <img class="elementos" id="boton4" src="../img/pagina07/boton4.png" data-posX="610" data-posY="460" />
+    <img class="elementos" id="boton4" src="../img/pagina07/boton4.png" data-posX="560" data-posY="410" />
     <img class="elementos" id="botonCerrar4" src="../img/pagina07/botonCerrar.png" data-posX="900" data-posY="150" />
 
     <!-- Script de la página -->
@@ -60,7 +61,8 @@
         const popup2 = $('#popup2');
         const botonCerrar2 = $('#botonCerrar2');
         const boton3 = $('#boton3');
-        const popup3 = $('#popup3');
+        const popup3_1 = $('#popup3_1');
+        const popup3_2 = $('#popup3_2');
         const botonCerrar3 = $('#botonCerrar3');
         const boton4 = $('#boton4');
         const popup4 = $('#popup4');
@@ -165,13 +167,14 @@
                     animacionSalida($(this), 'default', .5, 0);
                     animacionSalida(popup2, 'default', .5, 0);
 
-                    animacionEntrada(popup3, 'aparecer', 1, 0);
+                    animacionEntrada(popup3_1, 'aparecer', 1, 0);
                     aplicacion.reproducirAudio(audio[4], terminaAudioPopup3_1, 0);
                 }
             });
         }
 
         function terminaAudioPopup3_1() {
+            animacionEntrada(popup3_2, 'aparecer', 1, 0);
             aplicacion.reproducirAudio(audio[5], terminaAudioPopup3_2, 0);
         }
 
@@ -182,7 +185,8 @@
             botonCerrar3.click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     animacionSalida($(this), 'default', 1, 0);
-                    animacionSalida(popup3, 'default', .5, 0);
+                    animacionSalida(popup3_1, 'default', .5, 0);
+                    animacionSalida(popup3_2, 'default', .5, 0);
 
                     animacionEntrada(popup4, 'aparecer', 1, 0);
                     animacionEntrada(boton4, 'aparecer', 1, 0);
@@ -200,7 +204,7 @@
                     dejarParpadear($(this));
                     animacionSalida($(this), 'default', .5, 0);
 
-                    terminaAudioFinal();
+                    aplicacion.siguientePagina();
                 }
             });
         }
