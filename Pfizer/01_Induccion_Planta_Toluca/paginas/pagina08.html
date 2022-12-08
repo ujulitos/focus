@@ -29,7 +29,7 @@
     <img class="elementos" id="img02" src="../img/pagina08/img02.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonPlay" src="../img/pagina08/botonPlay.png" data-posX="510" data-posY="280" />
 
-    <video id="elVideo" class="elementos" data-posX="380" data-posY="85" style="width:630px;height:400px;" autobuffer controls controlsList="nodownload">
+    <video id="elVideo" class="elementos" data-posX="230" data-posY="100" style="width:600px;height:420px;" autobuffer controls controlsList="nodownload">
         <source src="../videos/Valores_Pfizer.mp4" type="video/mp4" />
     </video>
 
@@ -79,6 +79,8 @@
 
             $("#botonPlay").click(function() {
                 $(this).hide();
+                animacionSalida(img02, 'default', 1, 0);
+
                 animacionEntrada(elVideo, 'default', .3, 0.1);
                 setTimeout(() => {
                     activaVideo();
