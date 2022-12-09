@@ -50,9 +50,9 @@
     <img class="elementos" id="retroMal" src="../img/pagina11/retroMal.png" data-posX="0" data-posY="0" alt="">
     <img class="elementos" id="botonReintentar" src="../img/pagina11/botonReintentar.png" data-posX="440" data-posY="330" alt="">
 
-    <div _id="1" id="lugarFinal" class="elementos boton drop" data-posX="140" data-posY="225" style="width: 500px; height: 270px;"></div>
-    <img class="elementos element drag dragFinal" _id="1" id="piezaFinal" src="../img/pagina11/piezaFinal.png" data-posX="810" data-posY="110" alt="">
-    <img class="elementos" id="piezaFinalCh" src="../img/pagina11/piezaFinalCh.png" data-posX="550" data-posY="405" alt="">
+    <div _id="1" id="lugarFinal" class="elementos boton drop" data-posX="238" data-posY="218" style="width: 95px; height: 120px;"></div>
+    <img class="elementos element drag dragFinal" _id="1" id="piezaFinal" src="../img/pagina11/piezaFinal.png" data-posX="840" data-posY="240" alt="">
+    <img class="elementos" id="piezaFinalCh" src="../img/pagina11/piezaFinalCh.png" data-posX="235" data-posY="220" alt="">
 
     <style>
         .boton {
@@ -306,8 +306,8 @@
                         TweenMax.killTweensOf($("#piezaFinal"));
 
                         TweenMax.to($("#piezaFinal"), .01, {
-                            top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage + (scalePage * 70)),
-                            left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage + (scalePage * 330))
+                            top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage),
+                            left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage)
                         });
 
                         $("#piezaFinal").css({
@@ -326,7 +326,7 @@
                     if (contadorFinal >= no_objetosFinal[0]) {
                         console.log('Termina Final');
 
-                        animacionSalida($("#piezaFinal"), 'default', .5, 0);
+                        animacionSalida($("#piezaFinal"), 'default', .01, 0);
                         animacionEntrada($("#piezaFinalCh"), "aparecer", 1, 0);
                         aplicacion.terminaPantalla();
 

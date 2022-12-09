@@ -63,9 +63,9 @@
     <img id="botonReintentar" class="elementos" src="../img/pagina14/botonReintentar.png" data-posX="375" data-posY="350" />
     <img id="botonReiniciar" class="elementos" src="../img/pagina14/botonReiniciar.png" data-posX="414" data-posY="350" />
 
-    <div _id="1" id="lugar1" class="elementos btn_green drop" data-posX="170" data-posY="260" style="width: 500px; height: 270px;"></div>
-    <img class="elementos element drag" _id="1" id="pieza1" src="../img/pagina14/pieza1.png" data-posX="810" data-posY="110" alt="">
-    <img class="elementos" id="piezaFinalCh" src="../img/pagina14/piezaFinalCh.png" data-posX="352" data-posY="340" alt="">
+    <div _id="1" id="lugar1" class="elementos btn_green drop" data-posX="357" data-posY="317" style="width: 95px; height: 120px;"></div>
+    <img class="elementos element drag" _id="1" id="pieza1" src="../img/pagina14/pieza1.png" data-posX="840" data-posY="240" alt="">
+    <img class="elementos" id="piezaFinalCh" src="../img/pagina14/piezaFinalCh.png" data-posX="357" data-posY="319" alt="">
 
 </body>
 
@@ -409,8 +409,8 @@
                 TweenMax.killTweensOf($("#pieza" + dragActivo));
 
                 TweenMax.to($("#piezaFinal"), .01, {
-                    top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage + (scalePage * 20)),
-                    left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage + (scalePage * 100))
+                    top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage),
+                    left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage)
                 });
 
                 $("#pieza" + dragActivo).css({
@@ -433,7 +433,7 @@
                 console.log('Termina');
                 animacionSalida($("#pieza" + dragActivo), 'default', .5, 0);
 
-                animacionSalida($("#piezaFinal"), 'default', .5, 0);
+                animacionSalida($("#piezaFinal"), 'default', .01, 0);
                 animacionEntrada($("#piezaFinalCh"), "aparecer", 1, 0);
                 aplicacion.terminaPantalla();
 

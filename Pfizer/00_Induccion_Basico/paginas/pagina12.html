@@ -28,6 +28,17 @@
     <img class="elementos" id="img01" src="../img/pagina12/img01.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img02" src="../img/pagina12/img02.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="img03" src="../img/pagina12/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img04" src="../img/pagina12/img04.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img05" src="../img/pagina12/img05.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img06" src="../img/pagina12/img06.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img07" src="../img/pagina12/img07.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img08" src="../img/pagina12/img08.png" data-posX="0" data-posY="0" />
+
+    <img class="elementos" id="img09" src="../img/pagina12/img09.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img10" src="../img/pagina12/img10.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img11" src="../img/pagina12/img11.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img12" src="../img/pagina12/img12.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img13" src="../img/pagina12/img13.png" data-posX="0" data-posY="0" />
 
     <div id="link1" class="elementos boton" data-posX="103" data-posY="265" style="width: 330px; height: 45px;"></div>
 
@@ -48,9 +59,21 @@
         const img01 = $('#img01');
         const img02 = $('#img02');
         const img03 = $('#img03');
+        const img04 = $('#img04');
+        const img05 = $('#img05');
+        const img06 = $('#img06');
+        const img07 = $('#img07');
+        const img08 = $('#img08');
+
+        const img09 = $('#img09');
+        const img10 = $('#img10');
+        const img11 = $('#img11');
+        const img12 = $('#img12');
+        const img13 = $('#img13');
 
         // Audios------------------------------------------------------
         const audio = [
+            // new Audio('../audios/audio0.mp3'),
             new Audio('../audios/Pfizer_Basico_12_01.mp3'),
             new Audio('../audios/Pfizer_Basico_12_02.mp3'),
         ]
@@ -79,7 +102,18 @@
 
         function terminaAudio2() {
             animacionEntrada(img03, 'aparecer', 1, 0);
-            aplicacion.reproducirAudio(audio[1], terminaAudioFinal, .5);
+            aplicacion.reproducirAudio(audio[1], terminaAudioFinal, 0);
+            animacionEntrada(img04, 'aparecer', 1, 3);
+            animacionEntrada(img05, 'aparecer', 1, 4);
+            animacionEntrada(img06, 'aparecer', 1, 5);
+            animacionEntrada(img07, 'aparecer', 1, 6.5);
+            animacionEntrada(img08, 'aparecer', 1, 7.5);
+
+            animacionEntrada(img09, 'aparecer', 1, 9);
+            animacionEntrada(img10, 'aparecer', 1, 11);
+            animacionEntrada(img11, 'aparecer', 1, 14.5);
+            animacionEntrada(img12, 'aparecer', 1, 16.5);
+            animacionEntrada(img13, 'aparecer', 1, 18);
 
             setTimeout(() => {
                 parpadear($('#link1'));
