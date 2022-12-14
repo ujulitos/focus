@@ -379,6 +379,26 @@ h6 {
     color: #a84068;
 }
 
+/* .texto_limitado {
+    --max-lines: 5;
+    --line-height: 1.4;
+
+    max-height: calc(var(--max-lines)* 1em *var(--line-height));
+    line-height: var(--line-height);
+
+    overflow: hidden;
+    position: relative;
+}
+
+.texto_limitado::before {
+    content: "";
+    position: absolute;
+    height: calc(1em*var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, #f5f1ef);
+} */
 
 /* mios */
 

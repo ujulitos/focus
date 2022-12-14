@@ -1,41 +1,652 @@
 [{
         "Id": 1,
-        "autor": "Magister Marta A. Acosta C.",
-        "titulo": "Mujer Indígena y Cuidados Durante el Embarazo y Puerperio",
-        "tema": "Embarazo",
-        "anio": 2017,
+        "autor": "Karla Angélica Benítez Escobar",
+        "titulo": "Pariendo comunidad: reflexiones en torno a la partería tradicional indígena. Construyendo interculturalidad des-colonizada",
+        "tema": "Partería",
         "archivo": "Acosta C., M. y D. Cleghorn. Mujer indígena y cuidados durante el embarazo y puerperio."
     },
     {
         "Id": 2,
-        "autor": "Jair Hernando Álvarez Torre",
-        "titulo": "OTRAS PRÁCTICAS DE CRIANZA EN ALGUNAS CULTURAS ÉTNICAS DE COLOMBIA: 1 UN DIÁLOGO INTERCULTURAL",
-        "tema": "CRIANZA",
-        "anio": 2012,
+        "autor": "Raquel Paiva Dias-Scopel y Daniel Scopel ",
+        "titulo": "¿Quiénes son las parteras munduruku? Pluralismo médico y autoatención en el parto domiciliario entre indígenas en Amazonas, Brasil",
+        "tema": "Partería",
         "archivo": "Álvarez Torres, Jair Hernando, et al. Otras prácticas de crianza en algunas culturas étnicas de Colombia..."
     },
     {
         "Id": 3,
-        "autor": "Revista Aletheia",
-        "titulo": "Crianza-regulación, crianza-emancipación: estado de la cuestión de estudios sobre crianza",
-        "tema": "Crianza, teoría crítica posmoderna, regulación, emancipación.",
-        "anio": 2016,
+        "autor": "Yasnury Vanegas Moreno",
+        "titulo": "“Partería para el cuidado de la vida”. Prácticas, creencias y saberes ancestrales de parteras afronuquiseñas en el cuidado del embarazo, la atención del parto y el puerperio como posible aporte al nuevo modelo integral en salud con enfoque diferencial étnico.",
+        "tema": "Partería",
         "archivo": "Álvarez Vargas, Cristina. Crianza-regulación, crianza-emancipación,estado de la cuestión de estudios sobre crianza"
     },
     {
         "Id": 4,
-        "autor": "Emanuele Amodio, Gilberto Pérez y Claudia Poblete",
-        "titulo": "Las pautas de crianza del pueblo piaroa de Venezuela",
-        "tema": "crianza",
-        "anio": 2006,
+        "autor": "Diana Álvarez Romo y Gilberto Hernández Zinzún",
+        "titulo": "Tensiones y resistencias: la partería comunitaria tseltal y el sistema de salud mexicano",
+        "tema": "Partería",
         "archivo": "Amodio, Perez, Poblete...Las pautas de crianzapueblo piaroa en venezuela"
     },
     {
         "Id": 5,
-        "autor": "Jeanine Anderson",
-        "titulo": "Los estudios de género y sus alcances",
-        "tema": "GENERO, MUJERES",
-        "anio": 2007,
+        "autor": "Chavarría, Miguel y Fernando García",
+        "titulo": "Otra globalización es posible. Diálogo con Boaventura de Sousa Santos",
+        "tema": "Boaventura de Sousa Santos",
         "archivo": "Andersos Jeanine. Los estudios de género y sus alcances."
+    },
+    {
+        "Id": 6,
+        "autor": "Boaventura de Sousa Santos",
+        "titulo": "Justicia entre saberes. Epistemologías del Sur contra el epistemicidio",
+        "tema": "Boaventura de Sousa Santos",
+        "archivo": " "
+    },
+    {
+        "Id": 7,
+        "autor": "Boaventura de Sousa Santos",
+        "titulo": "Descolonizar el saber, reinventar el poder.",
+        "tema": "Boaventura de Sousa Santos",
+        "archivo": " "
+    },
+    {
+        "Id": 8,
+        "autor": "Boaventura de Sousa Santos",
+        "titulo": "Una concepción multicultural de los derechos humanos",
+        "tema": "Boaventura de Sousa Santos",
+        "archivo": " "
+    },
+    {
+        "Id": 9,
+        "autor": "Meneses M. P. y Bidaseca Karina. ",
+        "titulo": "Epistemologias del Sur",
+        "tema": "Boaventura de Sousa Santos",
+        "archivo": " "
+    },
+    {
+        "Id": 10,
+        "autor": "Boaventura de Sousa Santos",
+        "titulo": " De las dualidades a las ecologías.",
+        "tema": "Boaventura de Sousa Santos",
+        "archivo": " "
+    },
+    {
+        "Id": 11,
+        "autor": "́Alvarez Torres, Jair Hernando, et al. ",
+        "titulo": "Otras prácticas de crianza en algunas culturas étnicas de Colombia",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 12,
+        "autor": "́Álvarez Vargas, Cristina.",
+        "titulo": "Crianza-regulación, crianza-emancipación,estado de la cuestión de estudios sobre crianza",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 13,
+        "autor": "Amodio, Perez, Poblete",
+        "titulo": "Las Pautas de crianzapueblo Piaroa en Venezuela",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 14,
+        "autor": "Betancourt Enríquez y Bonilla Pineda",
+        "titulo": "Posibles rupturas y continuidades en las prácticas de crianza de una familia indígena Nasa que ha migrado a la comuna 18, en la ciudad de Cali",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 15,
+        "autor": "Cantor Acosta, Carvajal Herández, Reyes Reyes",
+        "titulo": "Una aproximación desde el relato mítico y el rito a las prácticas de crianza en familias indígenas Ticuna Comunidad Doce de Octubre, Amazonas Colombia",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 16,
+        "autor": "Cardona Alarcón, Ramírez Cabanzo, Vergara Arboleda, Gutiérrez Pérez",
+        "titulo": "Geografías del cuidado y la crianza desde la experiencia educativa en comunidades originarias de América Latina",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 17,
+        "autor": "Colangelo Maria adelaida",
+        "titulo": ".La crianza como proceso sociocultural. Posibles aportes de la antropología al abordaje médico de la niñez",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 18,
+        "autor": "Colangelo Maria adelaida",
+        "titulo": "Crianza infantil y diversidad cultural, aportes de la antropología a la práctica pediátrica.",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 19,
+        "autor": "Diaz Barriga, Alejandro",
+        "titulo": "Las entidades anímicas y su relación con el desarrollo de la niñez nahua prehispánica",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 20,
+        "autor": "López EstradaL. E., y Álvarez TorresJ. H. ",
+        "titulo": "Territorio, Mujeres, Estesis, Crianza Y Extractivismo Cultural",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 21,
+        "autor": "Mora Quintero, K..",
+        "titulo": "Prácticas de crianza y proceso de aculturación del pueblo indígena Curripaco",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 22,
+        "autor": "Panchi Tascon, Alexandra María",
+        "titulo": "Las prácticas de crianza durante el embarazo y el parto en las comunidades indígenas Chakiama y la zona de Dabeiba",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 23,
+        "autor": "Rivas Armas, D. C., y I. de L. Mercerón.",
+        "titulo": " Prácticas De Crianza, Legado Cultural Afrodescendiente. Narrativas De Mujeres Afrovenezolanas",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 24,
+        "autor": "Moctezuma Balderas A. ",
+        "titulo": "El trabajo de cuidados de la infancia nahua con discapacidad. El caso de las madres de la Huasteca potosina, México",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 25,
+        "autor": "Salas Achipiz, Yasmid.",
+        "titulo": "Practicas de Crianza Ancestral en familias Indígenas del pueblo Nasa en Bogota",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 26,
+        "autor": "Sandoval, S. E.",
+        "titulo": "Recuperación De La Memoria históricahistórica: el caso de Qaralamaxat Qarma’ –Etaxat, su importancia en las prácticas de maternaje de las Madres Cuidadoras de la Cultura Qom de Pampa del Indio",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 27,
+        "autor": "Sandoval, Sylvia Edith, et al. ",
+        "titulo": "Las prácticas de maternaje de las madres cuidadoras de la cultura QOM. Contribuciones para la formación de grado en perspectiva de diálogo intercultural",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 28,
+        "autor": "Varela Londoño, Chinchilla Salcedo, Murad Gutiérrez",
+        "titulo": "Prácticas de crianza en niños y niñas menores de seis años en Colombia",
+        "tema": "Saberes sobre la crianza",
+        "archivo": " "
+    },
+    {
+        "Id": 29,
+        "autor": "Acosta C., M. y D. Cleghorn.",
+        "titulo": "Mujer indígena y cuidados durante el embarazo y puerperio.",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 30,
+        "autor": "Arancibia Flores, Noelia",
+        "titulo": "Derecho al uso de la placenta como ritual cultura",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 31,
+        "autor": "Araujo Salas, Brenda",
+        "titulo": "Nacer Matsigenka: prácticas tradicionales en torno al parto en la comunidad nativa de Camisea",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 32,
+        "autor": "Banda Pérez A. et. al.",
+        "titulo": " Cuidados en el recién nacido de acuerdo a creencias y costumbres en diferentes culturas",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 33,
+        "autor": "Bedoya Quillupangui, A C. y D. L. Chicaiza Jami. ",
+        "titulo": "Conocimientos actitudes y prácticas en el cuidado del embarazo parto y puerperio de las Mujeres Indígenas",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 34,
+        "autor": "Berrío Palomo L. R. ",
+        "titulo": "Redes familiares y el lugar de los varones en el cuidado de la salud materna entre mujeres indígenas mexicanas",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 35,
+        "autor": "Borda Alvarez Maryi Mildred",
+        "titulo": "Prácticas de cuidado cultural en gestantes del sector rural del municipio de Combita Boyacá",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 36,
+        "autor": "Bula Romero J. A. y Keiner Galarza.",
+        "titulo": "Mortalidad materna en la gestante wayúu de Uribia, departamento de la Guajira, Colombia",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 37,
+        "autor": "Calderón Torres, Alfredo",
+        "titulo": "Percepción cultural del “embarazo y parto”, en las comunidades campesinas del distrito Ayaviri-Puno",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 38,
+        "autor": "Castillo-Santana, P. T., et al. ",
+        "titulo": "Salud materna indígena en mujeres Nasa y Misak del Cauca, Colombia",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 39,
+        "autor": "Cepeda Vargas Angie Paola",
+        "titulo": "P. Entre chinchorros y camillas de parto. Relatos sobre el cuidado de la salud en el embarazo, parto y posparto de mujeres indígenas wayuu ",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 40,
+        "autor": "Chávez Alvarez, R. E., et al. ",
+        "titulo": "Rescatando el autocuidado de la salud durante el embarazo, el parto y al recién nacido",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 41,
+        "autor": "Chávez Courtois et al. ",
+        "titulo": "Actos cotidianos de resistencia en el embarazo para prevenir la morbimortalidad materna",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 42,
+        "autor": "Medina, Armando y Mayca, Julio",
+        "titulo": "Creencias y costumbres relacionadas con el embarazo, parto y puerperio en comunidades nativas Awajun y Wampis-",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 43,
+        "autor": "Morgante, María Gabriela y Remorini, Carolina",
+        "titulo": "Estudio etnográfico de las relaciones intergeneracionales en el cuidado de la salud a escala doméstica durante las etapas pre y",
+        "tema": "",
+        "archivo": ""
+    },
+    {
+        "Id": "postnatal (Molinos, Salta, Argentina)",
+        "autor": "Saberes sobre el nacimiento y el embarazo",
+        "titulo": " ",
+        "tema": "",
+        "archivo": ""
+    },
+    {
+        "Id": 44,
+        "autor": "Flores Cisneros, Carmen. ",
+        "titulo": "Saber popular y prácticas de embarazo, parto y puerperio en Yahuío, Sierra Norte de Oaxaca",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 45,
+        "autor": "González Berenice,Lira; Álvarez Aguirre, Alicia y García Falconi Sulima del Carmen",
+        "titulo": " Prácticas culturales del cuidado de las mujeres otomíes durante el embarazo",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 46,
+        "autor": "Kolodin, Susan K. et al.",
+        "titulo": " Asuntos de familia Estudio cualitativo sobre-las-redes-sociales-durante-el-embarazo-y-parto-en-Mesoamérica-Chiapas-México-Guatemala-Panamá-Honduras-y-Nicaragua",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 47,
+        "autor": "Navarro, A., M. Angarita y M. P. Bejarano Beltrán. ",
+        "titulo": "Creencias y prácticas de cuidado genérico en gestantes Wayúu colombianas",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 48,
+        "autor": "Oviedo C., M. O. et al. ",
+        "titulo": "Comunidades Embera y Wounaan del departamento de Chocó prácticas de cuidado durante el proceso de gestación",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 49,
+        "autor": "Pelcastre B. et al. ",
+        "titulo": "Embarazo, parto y puerperio. creencias y prácticas de parteras en San Luis Potosí",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 50,
+        "autor": "Pérez Banda, A, et al. ",
+        "titulo": "Cuidados culturales durante el puerperio mediato en las mujeres indígenas",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 51,
+        "autor": "Rodríguez Venegas, V. y C. ",
+        "titulo": "Duarte Hidalgo. Saberes ancestrales y prácticas tradicionales. Embarazo, parto y puerperio",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 52,
+        "autor": "Cruz de la Cruz, Catalina",
+        "titulo": "Sentidos y significados del embarazo en diversas generaciones de la cultura nahua.",
+        "tema": "Saberes sobre el nacimiento y el embarazo",
+        "archivo": " "
+    },
+    {
+        "Id": 53,
+        "autor": "Anderson Jeanine",
+        "titulo": " Los estudios de género y sus alcances.",
+        "tema": "Estudios de género",
+        "archivo": " "
+    },
+    {
+        "Id": 54,
+        "autor": "Arango L. G. y Puyana Y. (comps).",
+        "titulo": " Género, mujeres y saberes en América Latina.",
+        "tema": "Estudios de género",
+        "archivo": " "
+    },
+    {
+        "Id": 55,
+        "autor": "Cumes, A. (2012).",
+        "titulo": " Mujeres indígenas, patriarcado y colonialismo. un desafía a la segregación comprensiva de las formas de dominio.",
+        "tema": "Estudios de género",
+        "archivo": " "
+    },
+    {
+        "Id": 56,
+        "autor": "Gil Hernández F. y Pérez-Bustos T. (Comps).",
+        "titulo": " Feminismo y Estudios de Género en Colombia",
+        "tema": "Estudios de género",
+        "archivo": " "
+    },
+    {
+        "Id": 57,
+        "autor": "Puig Borràs-Montalvo",
+        "titulo": "Infecciones de transmisión sexual, VIH y Sida: una aproximación a conocimientos, actitudes y prácticas de poblaciones adultas y jóvenes indígenas en las tierras bajas de Bolivia*",
+        "tema": "Estudios de género",
+        "archivo": " "
+    },
+    {
+        "Id": 58,
+        "autor": "Saavedra Hernandez",
+        "titulo": "Descolonizar el cuerpo de las mujeres: las violencias contra las mujeres tzeltales y “la sanación del corazón” como un acto",
+        "tema": "",
+        "archivo": ""
+    },
+    {
+        "Id": "político en contra del sistema colonial/patriarcal*",
+        "autor": "Estudios de género",
+        "titulo": " ",
+        "tema": "",
+        "archivo": ""
+    },
+    {
+        "Id": 59,
+        "autor": "Viveros Vigoya, Mara y Carmen Gregorio Gil. ",
+        "titulo": "Sexualidades e interseccionalidad en América Latina, el Caribe y su diáspora",
+        "tema": "Estudios de género",
+        "archivo": " "
+    },
+    {
+        "Id": 60,
+        "autor": "Argueta Villamar, Arturo.",
+        "titulo": " El diálogo de saberes, una utopía realista",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 61,
+        "autor": "Arriba, Jesús Moreno. ",
+        "titulo": "Diálogo de saberes y colaboración social intercultural. El ejemplo de la universidad veracruzana intercultural sede selvas",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 62,
+        "autor": "Cornejo I. y  Rufer M. (Eds.) ",
+        "titulo": "Horizontalidad. Hacia una crítica de la metodología",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 63,
+        "autor": "Corona Berkin S.",
+        "titulo": " Producción horizontal del conocimiento",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 64,
+        "autor": "Katzer, Leticia y Manzaneli, Macarena (Eds)",
+        "titulo": "Etnografias colaborativas, comprometidas y contemporáneas",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 65,
+        "autor": "Herrera Mahecha,Dajhanna J.",
+        "titulo": "Los Podcasts como una posible forma de reivindicación de la participación de la mujer indígena",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 66,
+        "autor": "Carlos Rodrigues Brandão, Benjamín Berlanga Gallardo, et.al (Coords)",
+        "titulo": "Investigar desde el Sur Epistemologías, metodologías y cartografías emergentes",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 67,
+        "autor": " Baenz, Mariano",
+        "titulo": "Metodologías audiovisuales participativas. Un desafío epistémico, ético y político",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 68,
+        "autor": "Mato, Daniel.",
+        "titulo": " Generación, circulación y apropiación de información y conocimientos para la construcción de sociedades equitativas",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 69,
+        "autor": "Xochitl Leyva, Jorge Alonso, R. Aída Hernández, Arturo Escobar, et.al.",
+        "titulo": "Prácticas otras de conocimiento(s). Entre crisis, entre guerras.",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 70,
+        "autor": "Rappaport Joanne",
+        "titulo": "Más allá de la observación participante: la etnografía colaborativa como innovación teórica",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 71,
+        "autor": "Yásnaya A. Gil, Darío Alemán. Et.al.",
+        "titulo": "Descolonización -Revista de la universidad",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 72,
+        "autor": "Maruja Salas",
+        "titulo": "Los Sabores y las Voces de la Tierra. Visualizando la Soberanía Alimentaria en los Andes",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 73,
+        "autor": "Santisteban Kaia",
+        "titulo": "Una revisión de las metodologías etnográficas colaborativas en la producción de conocimientos sobre memorias de la medicina mapuche.",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 74,
+        "autor": "Evelyn Dayana Cruz Suárez. Juan Felipe Bello Sánchez. Rusbling Yolima Zuleta Oviedo",
+        "titulo": "Creencias y prácticas del cuidado en la población indígena de la comunidad Cumariana, resguardo Aiwakuna Tsepajibo del municipio de Cumaribo-Vichada.",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 75,
+        "autor": "Valladares Laura",
+        "titulo": "La antropología comunitaria Una nueva relación de investigación en y con los pueblos indígenas.",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 76,
+        "autor": "Vega Cristina, Martínez-Buján R. Paredes M. (Eds.) ",
+        "titulo": "Cuidado, comunidad y común: extracciones, apropiaciones y sostenimiento de la vida",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 77,
+        "autor": "Viveros Vigoya, Mara. ",
+        "titulo": "La problemática de la representación social y su utilidad para los estudios de salud y enfermedad",
+        "tema": "Generación de Conocimiento",
+        "archivo": " "
+    },
+    {
+        "Id": 78,
+        "autor": "Arango Melo",
+        "titulo": "Cuerpos endurecidos y cuerpos protegidos. Prácticas y rituales en el orden corporal de los niños afrodescendientes del Pacífico colombiano",
+        "tema": "Rituales",
+        "archivo": " "
+    },
+    {
+        "Id": 79,
+        "autor": "Baez Cubero, Lourdes",
+        "titulo": "El juego de las alternancias: la vida y la muerte. Rituales del ciclo de vida entre los nahuas de la Sierra de Puebla",
+        "tema": "Rituales",
+        "archivo": " "
+    },
+    {
+        "Id": 80,
+        "autor": "Barabas, Alicaia M. ",
+        "titulo": "Etnoterritorios y rituales terapéuticos en Oaxaca",
+        "tema": "Rituales",
+        "archivo": " "
+    },
+    {
+        "Id": 81,
+        "autor": "Cervera Montejano, María Dolores.",
+        "titulo": " El hetsmek como expresión simbólica de la construcción de los niños mayas yucatecos como personas",
+        "tema": "Rituales",
+        "archivo": " "
+    },
+    {
+        "Id": 82,
+        "autor": "Diaz Barriga, Alejandro",
+        "titulo": "Ritos de paso de la niñez nahua durante la veintena de Izcalli",
+        "tema": "Rituales",
+        "archivo": " "
+    },
+    {
+        "Id": 83,
+        "autor": "Selva Sofia Chirif",
+        "titulo": "El proceso procreativo y la concepción de la persona en el pueblo ticuna del Amazonas peruano",
+        "tema": "Rituales",
+        "archivo": " "
+    },
+    {
+        "Id": 84,
+        "autor": "Oenning da Silva",
+        "titulo": " La educación de sí mismo y la producción del niño indígena en el noroeste amazónico de Brasil",
+        "tema": "Rituales",
+        "archivo": " "
+    },
+    {
+        "Id": 85,
+        "autor": "Banda Pérez, Álvarez-Aguirre, et.al.",
+        "titulo": "Rituales para cuidar al neonato según la cosmovisión de  comunidades Nahuas",
+        "tema": "Rituales",
+        "archivo": " "
+    },
+    {
+        "Id": 86,
+        "autor": "Viveros Vigoya, Mara.",
+        "titulo": " Los colores del antirracismo (en Améfrica Ladina)",
+        "tema": "Desigualdades sociales",
+        "archivo": " "
+    },
+    {
+        "Id": 87,
+        "autor": "Viveros, Mara, y Franklin Gil.",
+        "titulo": " De las desigualdades sociales a las diferencias culturales. Género,“raza” y etnicidad en la salud sexual y reproductiva en Colombia",
+        "tema": "Desigualdades sociales",
+        "archivo": " "
+    },
+    {
+        "Id": 88,
+        "autor": "Fierro Rivadeneira, P. y Zamora Chico. ",
+        "titulo": "La interculturalidad como práctica de revitalización…",
+        "tema": "Interculturalidad",
+        "archivo": " "
+    },
+    {
+        "Id": 89,
+        "autor": "Xochitl Leyva, Araceli Burguete y Shannon Speed (coordinadoras)",
+        "titulo": "Gobernar (en) la diversidad:  experiencias indígenas desde América Latina. Hacia la investigación de co-labor",
+        "tema": "Interculturalidad",
+        "archivo": " "
+    },
+    {
+        "Id": 90,
+        "autor": "Mato, Daniel.",
+        "titulo": "Del “diálogo de saberes” a la construcción de modalidades de “colaboración intercultural”: Aprendizajes y articulaciones más allá de la Academia",
+        "tema": "Interculturalidad",
+        "archivo": " "
+    },
+    {
+        "Id": 91,
+        "autor": "Maya Lorena Pérez Ruiz y Arturo Argueta Villamar.",
+        "titulo": " Saberes indigenas y dialogo intercultural",
+        "tema": "Interculturalidad",
+        "archivo": " "
     }
 ]

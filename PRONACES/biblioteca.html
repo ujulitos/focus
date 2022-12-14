@@ -85,8 +85,8 @@
             contenidoLibros += '<b>Autor:</b> ' + Object.values(data)[(a - 1)].autor + '';
             contenidoLibros += '<br>';
             contenidoLibros += '<b>Categoría:</b> ' + Object.values(data)[(a - 1)].tema + '.';
-            contenidoLibros += '<br>';
-            contenidoLibros += '<b>Año:</b> ' + Object.values(data)[(a - 1)].anio + '';
+            // contenidoLibros += '<br>';
+            // contenidoLibros += '<b>Año:</b> ' + Object.values(data)[(a - 1)].anio + '';
             contenidoLibros += '</p>';
             contenidoLibros += '<div style="text-align: right;">';
             contenidoLibros += '<button class="boton" onclick="abrePDF(' + "'" + Object.values(data)[(a - 1)].archivo + "'" + ');">Abrir libro</button>';
@@ -110,8 +110,9 @@
                     $('#tarjeta' + b).hide();
                     if (Object.values(data)[(b - 1)].titulo.toLowerCase().includes($(this).val().toLowerCase()) ||
                         Object.values(data)[(b - 1)].autor.toLowerCase().includes($(this).val().toLowerCase()) ||
-                        Object.values(data)[(b - 1)].tema.toLowerCase().includes($(this).val().toLowerCase()) ||
-                        Object.values(data)[(b - 1)].anio.toString().toLowerCase().includes($(this).val().toString().toLowerCase())) {
+                        Object.values(data)[(b - 1)].tema.toLowerCase().includes($(this).val().toLowerCase())
+                        //  || Object.values(data)[(b - 1)].anio.toString().toLowerCase().includes($(this).val().toString().toLowerCase())
+                    ) {
                         console.log('Encontré la palabra', $(this).val(), 'con el recurso', Object.values(data)[(b - 1)].titulo, b);
                         $('#tarjeta' + b).fadeIn();
                         // return;
