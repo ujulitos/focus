@@ -264,9 +264,20 @@ h6 {
     transition: 0.3s;
 }
 
-.boton:hover {
-    background: #f78b3e;
+.botonGde {
+    font-size: 15px;
+    padding: 8px 30px;
+    border: 0;
+    border-radius: 50px;
+    background: #ef6603;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
+.boton:hover,
+.botonGde:hover {
+    background: #f78b3e;
 }
 
 .imagen25 {
@@ -281,12 +292,12 @@ h6 {
     width: 75% !important;
 }
 
-.imagen100 {
-    width: 100% !important;
-}
-
 .imagen90 {
     width: 90% !important;
+}
+
+.imagen100 {
+    width: 100% !important;
 }
 
 @media (max-width: 575px) {
@@ -359,18 +370,26 @@ h6 {
     margin-right: 25%;
 }
 
+.form-control3 {
+    width: 30%;
+    /* margin: 0px; */
+    max-width: 400px;
+    margin-top: 0px;
+    /* margin-right: 25%; */
+}
+
 .buscador_input {
     min-width: 200px;
 }
 
 .bx {
     display: block;
-    width: 40px;
+    width: 46px;
     border: none;
-    font-size: 24px;
+    font-size: 30px;
     color: #ef6603;
     background-color: transparent;
-    margin-top: -38px;
+    margin-top: -41px;
     margin-right: 25%;
     cursor: pointer;
 }
@@ -378,6 +397,23 @@ h6 {
 .bx:hover {
     color: #a84068;
 }
+
+.bx2 {
+    display: block;
+    width: 46px;
+    border: none;
+    font-size: 60px;
+    color: #ef6603;
+    background-color: transparent;
+    margin-top: -41px;
+    margin-right: 25%;
+    cursor: pointer;
+}
+
+.bx2:hover {
+    color: #a84068;
+}
+
 
 /* .texto_limitado {
     --max-lines: 5;
@@ -559,7 +595,7 @@ h6 {
 #hero .carousel-control-next-icon,
 #hero .carousel-control-prev-icon {
     background: none;
-    font-size: 48px;
+    font-size: 50px;
     line-height: 1;
     width: auto;
     height: auto;
