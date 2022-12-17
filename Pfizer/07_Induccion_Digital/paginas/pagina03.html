@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 03</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina03/titulo.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img01" src="../img/pagina03/img01.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img03" src="../img/pagina03/img03.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="img02" src="../img/pagina03/img02.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="boton1" src="../img/pagina03/boton1.png" data-posX="220" data-posY="190" />
+    <img class="elementos" id="boton2" src="../img/pagina03/boton2.png" data-posX="380" data-posY="190" />
+    <img class="elementos" id="boton3" src="../img/pagina03/boton3.png" data-posX="560" data-posY="190" />
+    <img class="elementos" id="boton4" src="../img/pagina03/boton4.png" data-posX="740" data-posY="190" />
+
+
+    <!-- Script de la página -->
+    <script>
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
+        const img03 = $('#img03');
+        const boton1 = $('#boton1');
+        const boton2 = $('#boton2');
+        const boton3 = $('#boton3');
+        const boton4 = $('#boton4');
+
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Pfizer_Digital_03_01.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
+            animacionEntrada(img02, 'izquierda-derecha', 1, 1.5);
+            animacionEntrada(img03, 'aparecer', 1, 2);
+
+            // setTimeout(() => {
+            aplicacion.reproducirAudio(audio[0], activarBotones, 2);
+            // }, 1000);
+            // aplicacion.activarBotonAdelante();
+        }
+
+        function activarBotones() {
+            parpadear(boton1);
+            parpadear(boton2);
+            parpadear(boton3);
+            parpadear(boton4);
+
+            $('#boton1, #boton4, #boton3, #boton4').click(function() {
+                if (boton1.css('cursor') == 'pointer') {
+                    dejarParpadear($('#boton1, #boton4, #boton3, #boton4'));
+                    aplicacion.siguientePagina();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
