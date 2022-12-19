@@ -68,340 +68,340 @@
 
     <!-- Script de la página -->
     <script>
-        $(document).ready(function() {
+        // $(document).ready(function() {
 
-            // Variable----------------------------------------------------
-            let aplicacion = parent;
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
 
-            const titulo = $('#titulo');
-            const img01 = $('#img01');
-            const img02 = $('#img02');
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
 
-            const boton1 = $('#boton1_');
-            const popup1_1 = $('#popup1_1');
-            const popup1_f = $('#popup1_f');
-            const botonCerrar1 = $('#botonCerrar1');
+        const boton1 = $('#boton1_');
+        const popup1_1 = $('#popup1_1');
+        const popup1_f = $('#popup1_f');
+        const botonCerrar1 = $('#botonCerrar1');
 
-            const boton2 = $('#boton2');
-            const popup2_1 = $('#popup2_1');
-            const popup2_2 = $('#popup2_2');
-            const popup2_f = $('#popup2_f');
-            const botonCerrar2 = $('#botonCerrar2');
+        const boton2 = $('#boton2');
+        const popup2_1 = $('#popup2_1');
+        const popup2_2 = $('#popup2_2');
+        const popup2_f = $('#popup2_f');
+        const botonCerrar2 = $('#botonCerrar2');
 
-            const boton3 = $('#boton3');
-            const popup3_1 = $('#popup3_1');
-            const popup3_2 = $('#popup3_2');
-            const popup3_3 = $('#popup3_3');
-            const popup3_f = $('#popup3_f');
-            const botonCerrar3 = $('#botonCerrar3');
+        const boton3 = $('#boton3');
+        const popup3_1 = $('#popup3_1');
+        const popup3_2 = $('#popup3_2');
+        const popup3_3 = $('#popup3_3');
+        const popup3_f = $('#popup3_f');
+        const botonCerrar3 = $('#botonCerrar3');
 
-            var scalePage = calcularEscala();
-            console.log('scalePage', scalePage);
-            var cuantasPreguntas = 3; //← Numero de preguntas
-            var contador = 0;
-            var no_objetos = new Array(1, 0); //← Numero de Piezas
-            var dragsColocados = new Array();
-            var aciertos = 0;
-            var minimo = 80;
+        var scalePage = calcularEscala();
+        console.log('scalePage', scalePage);
+        var cuantasPreguntas = 3; //← Numero de preguntas
+        var contador = 0;
+        var no_objetos = new Array(1, 0); //← Numero de Piezas
+        var dragsColocados = new Array();
+        var aciertos = 0;
+        var minimo = 80;
 
-            for (var i = 1; i <= no_objetos; i++) {
-                this["bien" + i] = false;
-            }
-            var that;
-            that = this;
+        for (var i = 1; i <= no_objetos; i++) {
+            this["bien" + i] = false;
+        }
+        var that;
+        that = this;
 
-            // Audios------------------------------------------------------
-            const audio = [
-                new Audio('../audios/Pfizer_Patrimonial_05_01.mp3'),
-                new Audio('../audios/Pfizer_Patrimonial_05_02.mp3'),
-                new Audio('../audios/Pfizer_Patrimonial_05_03.mp3'),
-                // new Audio('../audios/audio0.mp3'),
-                new Audio('../audios/Pfizer_Patrimonial_05_04.mp3'),
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Pfizer_Patrimonial_05_01.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_05_02.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_05_03.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_05_04.mp3'),
 
-                new Audio('../audios/Pfizer_Patrimonial_05_05.mp3'),
-                new Audio('../audios/Pfizer_Patrimonial_05_06.mp3'),
-                // new Audio('../audios/audio0.mp3'),
-                // new Audio('../audios/audio0.mp3'),
-                new Audio('../audios/Pfizer_Patrimonial_05_07.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_05_05.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_05_06.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_05_07.mp3'),
 
-                new Audio('../audios/Pfizer_Patrimonial_05_08.mp3'),
-                new Audio('../audios/Pfizer_Patrimonial_05_09.mp3'),
-                new Audio('../audios/Pfizer_Patrimonial_05_10.mp3'),
-                // new Audio('../audios/audio0.mp3'),
-                // new Audio('../audios/audio0.mp3'),
-                // new Audio('../audios/audio0.mp3'),
-                new Audio('../audios/Pfizer_Patrimonial_05_11.mp3'),
-            ]
+            new Audio('../audios/Pfizer_Patrimonial_05_08.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_05_09.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_05_10.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            // new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/Pfizer_Patrimonial_05_11.mp3'),
+        ]
 
-            // Al cargarse la página
-            $(window).on("load", function() {
-                redimensionarElementos();
-                aplicacion.cargando(iniciarContenido);
-                // aplicacion.activarBotonAdelante();
-            });
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
+        });
 
-            function iniciarContenido() {
-                animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
-                animacionEntrada(img01, 'aparecer', 1, 1);
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
 
-                // setTimeout(() => {
-                // QUITAR
-                aplicacion.reproducirAudio(audio[0], terminaAudio1, .5);
-                // iniciaActividad((contador + 1));
-            }
+            // setTimeout(() => {
+            // QUITAR
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, .5);
+            // iniciaActividad((contador + 1));
+        }
 
-            function terminaAudio1() {
-                animacionEntrada(img02, 'aparecer', 1, 0);
-                aplicacion.reproducirAudio(audio[1], terminaAudio2, 0);
-            }
+        function terminaAudio1() {
+            animacionEntrada(img02, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[1], terminaAudio2, 0);
+        }
 
-            // function terminaAudioPopup0() {
-            //     // animacionSalida(img02, 'default', 1, 0);
-            //     // animacionSalida(img01, 'default', 1, .3);
-            //     parpadear(botonCerrar0);
+        // function terminaAudioPopup0() {
+        //     // animacionSalida(img02, 'default', 1, 0);
+        //     // animacionSalida(img01, 'default', 1, .3);
+        //     parpadear(botonCerrar0);
+        // }
+
+        // // botonCerrar0
+        // botonCerrar0.click(function() {
+        //     if ($(this).css('cursor') == 'pointer') {
+        //         dejarParpadear($(this));
+        //         animacionSalida($(this), 'default', 1, 0);
+        //         animacionSalida(popup0, 'default', 1, 0);
+
+        //         animacionEntrada(img02, 'aparecer', 1, .5);
+        //         aplicacion.reproducirAudio(audio[2], terminaAudio2, .5);
+        //     }
+        // });
+
+
+        function terminaAudio2() {
+            // animacionSalida(img02, 'default', 1, 0);
+            // setTimeout(() => {
+            iniciaActividad((contador + 1));
+            // }, 500);
+        }
+
+        // iniciaActividad //
+        function iniciaActividad(cualDrag) {
+            console.log("Objetos: " + no_objetos[0]);
+
+            // for (i = 1; i <= no_objetos[0]; i++) {
+            $("#drag" + cualDrag).attr("_id" + cualDrag);
+            $("#drop" + cualDrag).attr("_id" + cualDrag);
+            dragsColocados[dragsColocados.length] = false;
+            //$("#drop"+i).show();
+
+            // animacionEntrada($("#pieza" + cualDrag), "aparecer", 1, 0);
+            parpadear($('#pieza' + cualDrag));
+            animacionEntrada($("#lugar" + cualDrag), "default", 1, 0);
             // }
 
-            // // botonCerrar0
-            // botonCerrar0.click(function() {
-            //     if ($(this).css('cursor') == 'pointer') {
-            //         dejarParpadear($(this));
-            //         animacionSalida($(this), 'default', 1, 0);
-            //         animacionSalida(popup0, 'default', 1, 0);
 
-            //         animacionEntrada(img02, 'aparecer', 1, .5);
-            //         aplicacion.reproducirAudio(audio[2], terminaAudio2, .5);
-            //     }
-            // });
-
-
-            function terminaAudio2() {
-                // animacionSalida(img02, 'default', 1, 0);
-                // setTimeout(() => {
-                iniciaActividad((contador + 1));
-                // }, 500);
-            }
-
-            // iniciaActividad //
-            function iniciaActividad(cualDrag) {
-                console.log("Objetos: " + no_objetos[0]);
-
-                // for (i = 1; i <= no_objetos[0]; i++) {
-                $("#drag" + cualDrag).attr("_id" + cualDrag);
-                $("#drop" + cualDrag).attr("_id" + cualDrag);
-                dragsColocados[dragsColocados.length] = false;
-                //$("#drop"+i).show();
-
-                // animacionEntrada($("#pieza" + cualDrag), "aparecer", 1, 0);
-                parpadear($('#pieza' + cualDrag));
-                animacionEntrada($("#lugar" + cualDrag), "default", 1, 0);
+            var dragActivo;
+            $(".drag").mousedown(function() {
+                // if ($(this).css('cursor') == 'pointer') {
+                $(this).removeClass('match');
+                $(".drag").css({
+                    'z-index': '900'
+                });
+                $(this).css({
+                    'z-index': '999'
+                });
                 // }
+            });
 
 
-                var dragActivo;
-                $(".drag").mousedown(function() {
-                    // if ($(this).css('cursor') == 'pointer') {
-                    $(this).removeClass('match');
-                    $(".drag").css({
-                        'z-index': '900'
-                    });
-                    $(this).css({
-                        'z-index': '999'
-                    });
-                    // }
-                });
+            $(".drag").mouseup(function() {
+                if (!$(this).hasClass('match')) {
+                    console.log("No tiene class match");
 
+                    // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
 
-                $(".drag").mouseup(function() {
-                    if (!$(this).hasClass('match')) {
-                        console.log("No tiene class match");
-
-                        // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
-
-                        TweenMax.to($(this), .5, {
-                            top: (parseInt($(this).attr("data-posY")) * scalePage),
-                            left: (parseInt($(this).attr("data-posX")) * scalePage),
-                            ease: Back.easeOut
-                        });
-
-                    } else {
-                        console.log("No Se mueve");
-                    }
-                });
-
-                $(".drag").css("cursor", "pointer");
-                $(".drag").draggable({
-                    drag: function(event, ui) {
-                        dragActivo = $(this).attr("_id");
-                        console.log("Drag seleccionado: " + dragActivo);
-
-                        if (dragsColocados[(dragActivo - 1)] != false) {
-                            var elLugarPos = dragsColocados[(dragActivo - 1)].indexOf('drop') + 4;
-                            var elLugar = parseInt(dragsColocados[(dragActivo - 1)].substr(elLugarPos, 2));
-                            console.log("elLugar", elLugar);
-                            $("#lugar" + elLugar).show();
-                            dragsColocados[(dragActivo - 1)] = false;
-                            console.log("dragsColocados al drag", dragsColocados);
-
-                            // $("#botonValidar").hide();
-                        }
-
-                    }
-                });
-
-                $(".drop").droppable({
-                    tolerance: "intersect",
-                    accept: ".drag",
-                    drop: function(event, ui) {
-                        var esteID = $(this).attr("_id");
-                        dropActivo = esteID;
-                        console.log("colisión con: " + esteID);
-
-                        dragsColocados[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
-                        console.log("dragsColocados al drop", dragsColocados);
-
-                        if ($("#lugar" + dropActivo).css('display') == 'block') {
-                            $("#lugar" + dropActivo).hide();
-                            $("#pieza" + dragActivo).addClass('match');
-                            checkMatch();
-                        }
-
-                    }
-                });
-
-
-
-
-
-                function checkMatch() {
-                    // console.log("revisando match");
-
-                    contador++;
-                    console.log('contador', contador);
-
-                    animacionSalida(img02, 'default', 1, 0);
-                    animacionSalida($('#popup' + (contador - 1) + '_f'), 'default', .5, 0);
-                    TweenMax.killTweensOf($("#pieza" + dragActivo));
-
-                    TweenMax.to($("#pieza" + dragActivo), 1, {
-                        top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) * scalePage + (scalePage * 10)),
-                        left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) * scalePage + (scalePage * 30))
+                    TweenMax.to($(this), .5, {
+                        top: (parseInt($(this).attr("data-posY")) * scalePage),
+                        left: (parseInt($(this).attr("data-posX")) * scalePage),
+                        ease: Back.easeOut
                     });
 
-                    console.log("drag: " + dragActivo + " con drop: " + dropActivo);
+                } else {
+                    console.log("No Se mueve");
+                }
+            });
 
-                    if (dropActivo == dragActivo) {
-                        that["bien" + dropActivo] = true;
-                    } else {
-                        that["bien" + dropActivo] = false;
-                    }
+            $(".drag").css("cursor", "pointer");
+            $(".drag").draggable({
+                drag: function(event, ui) {
+                    dragActivo = $(this).attr("_id");
+                    console.log("Drag seleccionado: " + dragActivo);
 
-                    losColocados = $.inArray(false, dragsColocados);
-                    console.log('losColocados', losColocados);
-                    if (losColocados == -1) {
+                    if (dragsColocados[(dragActivo - 1)] != false) {
+                        var elLugarPos = dragsColocados[(dragActivo - 1)].indexOf('drop') + 4;
+                        var elLugar = parseInt(dragsColocados[(dragActivo - 1)].substr(elLugarPos, 2));
+                        console.log("elLugar", elLugar);
+                        $("#lugar" + elLugar).show();
+                        dragsColocados[(dragActivo - 1)] = false;
+                        console.log("dragsColocados al drag", dragsColocados);
 
-                        animacionSalida($("#pieza" + dragActivo), 'default', 1, 0);
-
-                        setTimeout(() => {
-                            switch (contador) {
-                                case 1:
-                                    animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
-                                    aplicacion.reproducirAudio(audio[(contador + 1)], terminaAudioPopup1_1, 0);
-
-                                    function terminaAudioPopup1_1() {
-                                        parpadear($('#botonCerrar' + contador));
-                                        $('#botonCerrar' + contador).click(function() {
-                                            if ($(this).css('cursor') == 'pointer') {
-                                                animacionSalida($(this), 'default', .5, 0);
-                                                animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
-
-                                                animacionEntrada($('#popup' + contador + '_f'), 'aparecer', 1, 0);
-                                                aplicacion.reproducirAudio(audio[(contador + 2)], terminaAudioPopupF, 0);
-                                            }
-                                        });
-                                    }
-
-                                    break;
-                                case 2:
-                                    animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
-                                    aplicacion.reproducirAudio(audio[(contador + 2)], terminaAudioPopup2_1, 0);
-
-                                    function terminaAudioPopup2_1() {
-                                        animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
-
-                                        animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, .5);
-                                        aplicacion.reproducirAudio(audio[(contador + 3)], terminaAudioPopup2_2, .5);
-                                    }
-
-                                    function terminaAudioPopup2_2() {
-                                        parpadear($('#botonCerrar' + contador));
-                                        $('#botonCerrar' + contador).click(function() {
-                                            if ($(this).css('cursor') == 'pointer') {
-                                                animacionSalida($(this), 'default', .5, 0);
-                                                animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
-
-                                                animacionEntrada($('#popup' + contador + '_f'), 'aparecer', 1, 0);
-                                                aplicacion.reproducirAudio(audio[(contador + 4)], terminaAudioPopupF, 0);
-                                            }
-                                        });
-                                    }
-                                    break;
-                                case 3:
-                                    animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
-                                    aplicacion.reproducirAudio(audio[(contador + 4)], terminaAudioPopup3_1, 0);
-
-                                    function terminaAudioPopup3_1() {
-                                        animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
-
-                                        animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, .5);
-                                        aplicacion.reproducirAudio(audio[(contador + 5)], terminaAudioPopup3_2, .5);
-                                    }
-
-                                    function terminaAudioPopup3_2() {
-                                        animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
-
-                                        animacionEntrada($('#popup' + contador + '_3'), 'aparecer', 1, .5);
-                                        aplicacion.reproducirAudio(audio[(contador + 6)], terminaAudioPopup3_3, .5);
-                                    }
-
-                                    function terminaAudioPopup3_3() {
-                                        parpadear($('#botonCerrar' + contador));
-                                        $('#botonCerrar' + contador).click(function() {
-                                            if ($(this).css('cursor') == 'pointer') {
-                                                animacionSalida($(this), 'default', .5, 0);
-                                                animacionSalida($('#popup' + contador + '_3'), 'default', .5, 0);
-
-                                                animacionEntrada($('#popup' + contador + '_f'), 'aparecer', 1, 0);
-                                                aplicacion.reproducirAudio(audio[(contador + 7)], terminaAudioPopupF, 0);
-                                            }
-                                        });
-                                    }
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }, 500);
-
-                    }
-
-                    function terminaAudioPopupF() {
-                        if (contador >= cuantasPreguntas) {
-                            // animacionEntrada(img03, 'aparecer', 1, 0);
-                            terminaAudioFinal();
-                        } else {
-                            iniciaActividad((contador + 1));
-                        }
+                        // $("#botonValidar").hide();
                     }
 
                 }
+            });
+
+            $(".drop").droppable({
+                tolerance: "intersect",
+                accept: ".drag",
+                drop: function(event, ui) {
+                    var esteID = $(this).attr("_id");
+                    dropActivo = esteID;
+                    console.log("colisión con: " + esteID);
+
+                    dragsColocados[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
+                    console.log("dragsColocados al drop", dragsColocados);
+
+                    if ($("#lugar" + dropActivo).css('display') == 'block') {
+                        $("#lugar" + dropActivo).hide();
+                        $("#pieza" + dragActivo).addClass('match');
+                        checkMatch();
+                    }
+
+                }
+            });
+
+
+
+
+
+            function checkMatch() {
+                // console.log("revisando match");
+
+                contador++;
+                console.log('contador', contador);
+
+                animacionSalida(img02, 'default', 1, 0);
+                animacionSalida($('#popup' + (contador - 1) + '_f'), 'default', .5, 0);
+                TweenMax.killTweensOf($("#pieza" + dragActivo));
+
+                TweenMax.to($("#pieza" + dragActivo), 1, {
+                    top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) * scalePage + (scalePage * 10)),
+                    left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) * scalePage + (scalePage * 30))
+                });
+
+                console.log("drag: " + dragActivo + " con drop: " + dropActivo);
+
+                if (dropActivo == dragActivo) {
+                    that["bien" + dropActivo] = true;
+                } else {
+                    that["bien" + dropActivo] = false;
+                }
+
+                losColocados = $.inArray(false, dragsColocados);
+                console.log('losColocados', losColocados);
+                if (losColocados == -1) {
+
+                    animacionSalida($("#pieza" + dragActivo), 'default', 1, 0);
+
+                    setTimeout(() => {
+                        switch (contador) {
+                            case 1:
+                                animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
+                                aplicacion.reproducirAudio(audio[(contador + 1)], terminaAudioPopup1_1, 0);
+
+                                function terminaAudioPopup1_1() {
+                                    parpadear($('#botonCerrar' + contador));
+                                    $('#botonCerrar' + contador).click(function() {
+                                        if ($(this).css('cursor') == 'pointer') {
+                                            animacionSalida($(this), 'default', .5, 0);
+                                            animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
+
+                                            animacionEntrada($('#popup' + contador + '_f'), 'aparecer', 1, 0);
+                                            aplicacion.reproducirAudio(audio[(contador + 2)], terminaAudioPopupF, 0);
+                                        }
+                                    });
+                                }
+
+                                break;
+                            case 2:
+                                animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
+                                aplicacion.reproducirAudio(audio[(contador + 2)], terminaAudioPopup2_1, 0);
+
+                                function terminaAudioPopup2_1() {
+                                    animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
+
+                                    animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, .5);
+                                    aplicacion.reproducirAudio(audio[(contador + 3)], terminaAudioPopup2_2, .5);
+                                }
+
+                                function terminaAudioPopup2_2() {
+                                    parpadear($('#botonCerrar' + contador));
+                                    $('#botonCerrar' + contador).click(function() {
+                                        if ($(this).css('cursor') == 'pointer') {
+                                            animacionSalida($(this), 'default', .5, 0);
+                                            animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
+
+                                            animacionEntrada($('#popup' + contador + '_f'), 'aparecer', 1, 0);
+                                            aplicacion.reproducirAudio(audio[(contador + 4)], terminaAudioPopupF, 0);
+                                        }
+                                    });
+                                }
+                                break;
+                            case 3:
+                                animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
+                                aplicacion.reproducirAudio(audio[(contador + 4)], terminaAudioPopup3_1, 0);
+
+                                function terminaAudioPopup3_1() {
+                                    animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
+
+                                    animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, .5);
+                                    aplicacion.reproducirAudio(audio[(contador + 5)], terminaAudioPopup3_2, .5);
+                                }
+
+                                function terminaAudioPopup3_2() {
+                                    animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
+
+                                    animacionEntrada($('#popup' + contador + '_3'), 'aparecer', 1, .5);
+                                    aplicacion.reproducirAudio(audio[(contador + 6)], terminaAudioPopup3_3, .5);
+                                }
+
+                                function terminaAudioPopup3_3() {
+                                    parpadear($('#botonCerrar' + contador));
+                                    $('#botonCerrar' + contador).click(function() {
+                                        if ($(this).css('cursor') == 'pointer') {
+                                            animacionSalida($(this), 'default', .5, 0);
+                                            animacionSalida($('#popup' + contador + '_3'), 'default', .5, 0);
+
+                                            animacionEntrada($('#popup' + contador + '_f'), 'aparecer', 1, 0);
+                                            aplicacion.reproducirAudio(audio[(contador + 7)], terminaAudioPopupF, 0);
+                                        }
+                                    });
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                    }, 500);
+
+                }
+
+                function terminaAudioPopupF() {
+                    if (contador >= cuantasPreguntas) {
+                        // animacionEntrada(img03, 'aparecer', 1, 0);
+                        terminaAudioFinal();
+                    } else {
+                        iniciaActividad((contador + 1));
+                    }
+                }
+
             }
+        }
 
 
 
-            function terminaAudioFinal() {
-                aplicacion.terminaPantalla();
-            }
+        function terminaAudioFinal() {
+            aplicacion.terminaPantalla();
+        }
 
-        });
+        // });
     </script>
 </body>
 

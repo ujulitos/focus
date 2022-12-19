@@ -59,263 +59,263 @@
 
     <!-- Script de la página -->
     <script>
-        $(document).ready(function() {
+        // $(document).ready(function() {
 
-            // Variable----------------------------------------------------
-            let aplicacion = parent;
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
 
-            const titulo = $('#titulo');
-            const img01 = $('#img01');
-            const img02 = $('#img02');
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
 
-            const pieza1 = $('#pieza1');
-            const pieza2 = $('#pieza2');
-            const pieza3 = $('#pieza3');
-            const pieza4 = $('#pieza4');
-            const pieza5 = $('#pieza5');
-            const pieza6 = $('#pieza6');
+        const pieza1 = $('#pieza1');
+        const pieza2 = $('#pieza2');
+        const pieza3 = $('#pieza3');
+        const pieza4 = $('#pieza4');
+        const pieza5 = $('#pieza5');
+        const pieza6 = $('#pieza6');
 
-            const retroBien = $('#retroBien');
-            const retroMal = $('#retroMal');
+        const retroBien = $('#retroBien');
+        const retroMal = $('#retroMal');
 
 
-            var scalePage = calcularEscala();
-            console.log('scalePage', scalePage);
-            var cuantasPreguntas = 6; //← Numero de preguntas
-            var contador = 0;
-            var no_objetos = new Array(6, 0); //← Numero de Piezas
-            var dragsColocados = new Array();
-            var aciertos = 0;
-            var minimo = 80;
+        var scalePage = calcularEscala();
+        console.log('scalePage', scalePage);
+        var cuantasPreguntas = 6; //← Numero de preguntas
+        var contador = 0;
+        var no_objetos = new Array(6, 0); //← Numero de Piezas
+        var dragsColocados = new Array();
+        var aciertos = 0;
+        var minimo = 80;
 
-            for (var i = 1; i <= no_objetos; i++) {
-                this["bien" + i] = false;
+        for (var i = 1; i <= no_objetos; i++) {
+            this["bien" + i] = false;
+        }
+        var that;
+        that = this;
+
+        // });
+
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Pfizer_Planta_14_01.mp3'),
+            new Audio('../audios/Pfizer_Planta_14_02.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
+            animacionEntrada(img02, 'aparecer', 1, 1.5);
+
+            setTimeout(() => {
+                iniciaActividad();
+            }, 2000);
+        }
+
+
+        // iniciaActividad //
+        function iniciaActividad() {
+            console.log("Objetos: " + no_objetos[0]);
+
+            for (i = 1; i <= no_objetos[0]; i++) {
+                $("#drag" + i).attr("_id" + i);
+                $("#drop" + i).attr("_id" + i);
+                dragsColocados[dragsColocados.length] = false;
+                //$("#drop"+i).show();
+
+                animacionEntrada($("#pieza" + i), "izquierda-derecha", 1, 0 + (i * .1));
+                animacionEntrada($("#lugar" + i), "default", 1, 0 + (i * 0));
             }
-            var that;
-            that = this;
-
-            // });
 
 
-            // Audios------------------------------------------------------
-            const audio = [
-                new Audio('../audios/Pfizer_Planta_14_01.mp3'),
-                new Audio('../audios/Pfizer_Planta_14_02.mp3'),
-            ]
-
-            // Al cargarse la página
-            $(window).on("load", function() {
-                redimensionarElementos();
-                aplicacion.cargando(iniciarContenido);
-                // aplicacion.activarBotonAdelante();
+            var dragActivo;
+            $(".drag").mousedown(function() {
+                // if ($(this).css('cursor') == 'pointer') {
+                $(this).removeClass('match');
+                $(".drag").css({
+                    'z-index': '900'
+                });
+                $(this).css({
+                    'z-index': '999'
+                });
+                // }
             });
 
-            function iniciarContenido() {
-                animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
-                animacionEntrada(img01, 'aparecer', 1, 1);
-                animacionEntrada(img02, 'aparecer', 1, 1.5);
 
-                setTimeout(() => {
-                    iniciaActividad();
-                }, 2000);
-            }
+            $(".drag").mouseup(function() {
+                if (!$(this).hasClass('match')) {
+                    console.log("No tiene class match");
 
+                    // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
 
-            // iniciaActividad //
-            function iniciaActividad() {
-                console.log("Objetos: " + no_objetos[0]);
+                    TweenMax.to($(this), .5, {
+                        top: (parseInt($(this).attr("data-posY")) * scalePage),
+                        left: (parseInt($(this).attr("data-posX")) * scalePage),
+                        ease: Back.easeOut
+                    });
 
-                for (i = 1; i <= no_objetos[0]; i++) {
-                    $("#drag" + i).attr("_id" + i);
-                    $("#drop" + i).attr("_id" + i);
-                    dragsColocados[dragsColocados.length] = false;
-                    //$("#drop"+i).show();
-
-                    animacionEntrada($("#pieza" + i), "izquierda-derecha", 1, 0 + (i * .1));
-                    animacionEntrada($("#lugar" + i), "default", 1, 0 + (i * 0));
+                } else {
+                    console.log("No Se mueve");
                 }
+            });
 
+            $(".drag").css("cursor", "pointer");
+            $(".drag").draggable({
+                drag: function(event, ui) {
+                    dragActivo = $(this).attr("_id");
+                    console.log("Drag seleccionado: " + dragActivo);
 
-                var dragActivo;
-                $(".drag").mousedown(function() {
-                    // if ($(this).css('cursor') == 'pointer') {
-                    $(this).removeClass('match');
-                    $(".drag").css({
-                        'z-index': '900'
-                    });
-                    $(this).css({
-                        'z-index': '999'
-                    });
-                    // }
-                });
+                    if (dragsColocados[(dragActivo - 1)] != false) {
+                        var elLugarPos = dragsColocados[(dragActivo - 1)].indexOf('drop') + 4;
+                        var elLugar = parseInt(dragsColocados[(dragActivo - 1)].substr(elLugarPos, 2));
+                        console.log("elLugar", elLugar);
+                        $("#lugar" + elLugar).show();
+                        dragsColocados[(dragActivo - 1)] = false;
+                        console.log("dragsColocados al drag", dragsColocados);
 
-
-                $(".drag").mouseup(function() {
-                    if (!$(this).hasClass('match')) {
-                        console.log("No tiene class match");
-
-                        // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
-
-                        TweenMax.to($(this), .5, {
-                            top: (parseInt($(this).attr("data-posY")) * scalePage),
-                            left: (parseInt($(this).attr("data-posX")) * scalePage),
-                            ease: Back.easeOut
-                        });
-
-                    } else {
-                        console.log("No Se mueve");
-                    }
-                });
-
-                $(".drag").css("cursor", "pointer");
-                $(".drag").draggable({
-                    drag: function(event, ui) {
-                        dragActivo = $(this).attr("_id");
-                        console.log("Drag seleccionado: " + dragActivo);
-
-                        if (dragsColocados[(dragActivo - 1)] != false) {
-                            var elLugarPos = dragsColocados[(dragActivo - 1)].indexOf('drop') + 4;
-                            var elLugar = parseInt(dragsColocados[(dragActivo - 1)].substr(elLugarPos, 2));
-                            console.log("elLugar", elLugar);
-                            $("#lugar" + elLugar).show();
-                            dragsColocados[(dragActivo - 1)] = false;
-                            console.log("dragsColocados al drag", dragsColocados);
-
-                            $("#botonValidar").hide();
-                        }
-
-                    }
-                });
-
-                $(".drop").droppable({
-                    tolerance: "intersect",
-                    accept: ".drag",
-                    drop: function(event, ui) {
-                        var esteID = $(this).attr("_id");
-                        dropActivo = esteID;
-                        console.log("colisión con: " + esteID);
-
-                        dragsColocados[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
-                        console.log("dragsColocados al drop", dragsColocados);
-
-                        if ($("#lugar" + dropActivo).css('display') == 'block') {
-                            $("#lugar" + dropActivo).hide();
-                            $("#pieza" + dragActivo).addClass('match');
-                            checkMatch();
-                        }
-
-                    }
-                });
-
-
-
-
-
-                function checkMatch() {
-                    // console.log("revisando match");
-
-                    // if ((dragActivo == '3' && dropActivo == '1') || (dragActivo == '6' && dropActivo == '2') || (dragActivo == '5' && dropActivo == '3') || (dragActivo == '1' && dropActivo == '4') || (dragActivo == '2' && dropActivo == '5') || (dragActivo == '4' && dropActivo == '6')) {
-                    //     // console.log("Hizo Match! 1");
-                    //     contador++;
-
-                    TweenMax.killTweensOf($("#pieza" + dragActivo));
-
-                    TweenMax.to($("#pieza" + dragActivo), .01, {
-                        top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) * scalePage),
-                        left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) * scalePage)
-                    });
-
-                    // $("#pieza" + dragActivo).css({
-                    //     'cursor': 'default'
-                    // });
-                    // $("#pieza" + dragActivo).removeClass('drag');
-                    // $("#pieza" + dragActivo).draggable("destroy");
-
-                    console.log("drag: " + dragActivo + " con drop: " + dropActivo);
-
-                    if (dropActivo == dragActivo) {
-                        that["bien" + dropActivo] = true;
-                    } else {
-                        that["bien" + dropActivo] = false;
-                    }
-                    // }
-                    // console.log('aciertos ' + aciertos);
-                    // console.log('contador ' + contador + ' no_objetos ' + no_objetos);
-
-                    losColocados = $.inArray(false, dragsColocados);
-                    console.log('losColocados', losColocados);
-                    if (losColocados == -1) {
-                        parpadear($("#botonValidar"));
-                        // } else {
-                        //     $("#botonValidar").hide();
+                        $("#botonValidar").hide();
                     }
 
                 }
+            });
 
-                $("#botonValidar").click(function() {
-                    TweenMax.killTweensOf($(this));
-                    $(this).hide();
+            $(".drop").droppable({
+                tolerance: "intersect",
+                accept: ".drag",
+                drop: function(event, ui) {
+                    var esteID = $(this).attr("_id");
+                    dropActivo = esteID;
+                    console.log("colisión con: " + esteID);
 
-                    retroalimenta();
+                    dragsColocados[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
+                    console.log("dragsColocados al drop", dragsColocados);
 
-                    dejarParpadear($(this));
-                    animacionSalida($(this), 'default', .5, 0);
+                    if ($("#lugar" + dropActivo).css('display') == 'block') {
+                        $("#lugar" + dropActivo).hide();
+                        $("#pieza" + dragActivo).addClass('match');
+                        checkMatch();
+                    }
 
+                }
+            });
+
+
+
+
+
+            function checkMatch() {
+                // console.log("revisando match");
+
+                // if ((dragActivo == '3' && dropActivo == '1') || (dragActivo == '6' && dropActivo == '2') || (dragActivo == '5' && dropActivo == '3') || (dragActivo == '1' && dropActivo == '4') || (dragActivo == '2' && dropActivo == '5') || (dragActivo == '4' && dropActivo == '6')) {
+                //     // console.log("Hizo Match! 1");
+                //     contador++;
+
+                TweenMax.killTweensOf($("#pieza" + dragActivo));
+
+                TweenMax.to($("#pieza" + dragActivo), .01, {
+                    top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) * scalePage),
+                    left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) * scalePage)
                 });
 
-                function retroalimenta() {
-                    console.log('retroalimenta');
+                // $("#pieza" + dragActivo).css({
+                //     'cursor': 'default'
+                // });
+                // $("#pieza" + dragActivo).removeClass('drag');
+                // $("#pieza" + dragActivo).draggable("destroy");
 
-                    $(".drag").css({
-                        'z-index': '-900',
-                        'display': 'none'
-                    });
+                console.log("drag: " + dragActivo + " con drop: " + dropActivo);
 
-                    for (var i = 1; i <= cuantasPreguntas; i++) {
-                        console.log("bien", i, that["bien" + i]);
-
-                        if (that["bien" + i] == true) {
-                            aciertos++;
-                        }
-                    }
-                    console.log('aciertos', aciertos, ' y ', that["bien" + dropActivo]);
-
-                    //var puntuacion = Math.round((aciertos * 100) / cuantasPreguntas);
-                    //console.log("puntuacion:", puntuacion);
-
-                    //parent.set("cmi.core.score.raw", puntuacion);
-                    //var success = parent.save();
-                    //if (!success) {}
-
-
-                    if (aciertos >= cuantasPreguntas) {
-                        animacionEntrada($("#retroBien"), "aparecer", 1, 0);
-                        aplicacion.reproducirAudio(audio[0], terminaAudioRetroBien, .5);
-                        // aplicacion.terminaPantalla();
-                    } else {
-                        animacionEntrada($("#retroMal"), "aparecer", 1, 0);
-                        aplicacion.reproducirAudio(audio[1], terminaAudioRetroMal, .5);
-                    }
+                if (dropActivo == dragActivo) {
+                    that["bien" + dropActivo] = true;
+                } else {
+                    that["bien" + dropActivo] = false;
                 }
+                // }
+                // console.log('aciertos ' + aciertos);
+                // console.log('contador ' + contador + ' no_objetos ' + no_objetos);
 
-                function terminaAudioRetroBien() {
-                    parpadear($("#botonContinuar"));
-                    $("#botonContinuar").click(function() {
-                        aplicacion.siguientePagina();
-                    });
-                }
-
-                function terminaAudioRetroMal() {
-                    parpadear($("#botonReintentar"));
-                    $("#botonReintentar").click(function() {
-                        aplicacion.recargarPagina();
-                    });
+                losColocados = $.inArray(false, dragsColocados);
+                console.log('losColocados', losColocados);
+                if (losColocados == -1) {
+                    parpadear($("#botonValidar"));
+                    // } else {
+                    //     $("#botonValidar").hide();
                 }
 
             }
 
+            $("#botonValidar").click(function() {
+                TweenMax.killTweensOf($(this));
+                $(this).hide();
 
-        });
+                retroalimenta();
+
+                dejarParpadear($(this));
+                animacionSalida($(this), 'default', .5, 0);
+
+            });
+
+            function retroalimenta() {
+                console.log('retroalimenta');
+
+                $(".drag").css({
+                    'z-index': '-900',
+                    'display': 'none'
+                });
+
+                for (var i = 1; i <= cuantasPreguntas; i++) {
+                    console.log("bien", i, that["bien" + i]);
+
+                    if (that["bien" + i] == true) {
+                        aciertos++;
+                    }
+                }
+                console.log('aciertos', aciertos, ' y ', that["bien" + dropActivo]);
+
+                //var puntuacion = Math.round((aciertos * 100) / cuantasPreguntas);
+                //console.log("puntuacion:", puntuacion);
+
+                //parent.set("cmi.core.score.raw", puntuacion);
+                //var success = parent.save();
+                //if (!success) {}
+
+
+                if (aciertos >= cuantasPreguntas) {
+                    animacionEntrada($("#retroBien"), "aparecer", 1, 0);
+                    aplicacion.reproducirAudio(audio[0], terminaAudioRetroBien, .5);
+                    // aplicacion.terminaPantalla();
+                } else {
+                    animacionEntrada($("#retroMal"), "aparecer", 1, 0);
+                    aplicacion.reproducirAudio(audio[1], terminaAudioRetroMal, .5);
+                }
+            }
+
+            function terminaAudioRetroBien() {
+                parpadear($("#botonContinuar"));
+                $("#botonContinuar").click(function() {
+                    aplicacion.siguientePagina();
+                });
+            }
+
+            function terminaAudioRetroMal() {
+                parpadear($("#botonReintentar"));
+                $("#botonReintentar").click(function() {
+                    aplicacion.recargarPagina();
+                });
+            }
+
+        }
+
+
+        //  });
 
         function finalPagina() {
             // pararHablar();
