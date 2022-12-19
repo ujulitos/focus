@@ -76,372 +76,372 @@
 
     <!-- Script de la página -->
     <script>
-        $(document).ready(function() {
+        // $(document).ready(function() {
 
-            // Variable----------------------------------------------------
-            let aplicacion = parent;
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
 
-            const titulo = $('#titulo');
-            const img01 = $('#img01');
-            const img02 = $('#img02');
-            const img03 = $('#img03');
+        const titulo = $('#titulo');
+        const img01 = $('#img01');
+        const img02 = $('#img02');
+        const img03 = $('#img03');
 
-            const pieza1 = $('#pieza1');
-            const pieza2 = $('#pieza2');
-            const pieza3 = $('#pieza3');
-            const pieza4 = $('#pieza4');
-            const pieza5 = $('#pieza5');
-            const pieza6 = $('#pieza6');
-            const pieza7 = $('#pieza7');
-            const pieza8 = $('#pieza8');
-            const pieza9 = $('#pieza9');
-            const pieza10 = $('#pieza10');
-            const pieza11 = $('#pieza11');
-            const pieza12 = $('#pieza12');
-            const pieza13 = $('#pieza13');
+        const pieza1 = $('#pieza1');
+        const pieza2 = $('#pieza2');
+        const pieza3 = $('#pieza3');
+        const pieza4 = $('#pieza4');
+        const pieza5 = $('#pieza5');
+        const pieza6 = $('#pieza6');
+        const pieza7 = $('#pieza7');
+        const pieza8 = $('#pieza8');
+        const pieza9 = $('#pieza9');
+        const pieza10 = $('#pieza10');
+        const pieza11 = $('#pieza11');
+        const pieza12 = $('#pieza12');
+        const pieza13 = $('#pieza13');
 
-            const retroBien = $('#retroBien');
-            const retroMal = $('#retroMal');
+        const retroBien = $('#retroBien');
+        const retroMal = $('#retroMal');
 
 
-            var scalePage = calcularEscala();
-            console.log('scalePage', scalePage);
-            var cuantasPreguntas = 5; //← Numero de preguntas
-            var contador = 0;
-            var no_objetos = new Array(13, 0); //← Numero de Piezas
-            var dragsColocados = new Array();
-            var aciertos = 0;
-            var minimo = 80;
+        var scalePage = calcularEscala();
+        console.log('scalePage', scalePage);
+        var cuantasPreguntas = 5; //← Numero de preguntas
+        var contador = 0;
+        var no_objetos = new Array(13, 0); //← Numero de Piezas
+        var dragsColocados = new Array();
+        var aciertos = 0;
+        var minimo = 80;
 
-            for (var i = 1; i <= no_objetos; i++) {
-                this["bien" + i] = false;
+        for (var i = 1; i <= no_objetos; i++) {
+            this["bien" + i] = false;
+        }
+        var that;
+        that = this;
+
+        // });
+
+
+        // Arrastre-- -- -- -- -- -- -- -- -- -
+        var contadorFinal = 0;
+        var no_objetosFinal = new Array(1, 0); //← Numero de Piezas
+        var dragsColocadosFinal = new Array();
+        var finalizado = false;
+
+        for (var i = 1; i <= no_objetosFinal; i++) {
+            this["bienFinal" + i] = false;
+        }
+        var that;
+        that = this;
+        // Arrastre-- -- -- -- -- -- -- -- -- -
+
+
+        // Audios------------------------------------------------------
+        const audio = [
+            // new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/Pfizer_Basico_19_01.mp3'),
+            new Audio('../audios/Pfizer_Basico_19_02.mp3'),
+            new Audio('../audios/Pfizer_Basico_19_03.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function() {
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+            // aplicacion.activarBotonAdelante();
+        });
+
+        function iniciarContenido() {
+            animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
+            animacionEntrada(img01, 'aparecer', 1, 1);
+            animacionEntrada(img02, 'aparecer', 1, 1.5);
+            aplicacion.reproducirAudio(audio[0], terminaAudio1, 2);
+        }
+
+        function terminaAudio1() {
+            animacionEntrada(img03, 'aparecer', 1, .5);
+
+            setTimeout(() => {
+                iniciaActividad();
+            }, 1000);
+        }
+
+
+        // iniciaActividad //
+        function iniciaActividad() {
+            console.log("Objetos: " + no_objetos[0]);
+
+            for (i = 1; i <= no_objetos[0]; i++) {
+                $("#drag" + i).attr("_id" + i);
+                $("#drop" + i).attr("_id" + i);
+                dragsColocados[dragsColocados.length] = false;
+                dragsColocadosFinal[dragsColocadosFinal.length] = false;
+                //$("#drop"+i).show();
+
+                animacionEntrada($("#pieza" + i), "izquierda-derecha", 1, 0 + (i * .1));
+                animacionEntrada($("#lugar" + i), "default", 1, 0 + (i * 0));
             }
-            var that;
-            that = this;
-
-            // });
 
 
-            // Arrastre-- -- -- -- -- -- -- -- -- -
-            var contadorFinal = 0;
-            var no_objetosFinal = new Array(1, 0); //← Numero de Piezas
-            var dragsColocadosFinal = new Array();
-            var finalizado = false;
-
-            for (var i = 1; i <= no_objetosFinal; i++) {
-                this["bienFinal" + i] = false;
-            }
-            var that;
-            that = this;
-            // Arrastre-- -- -- -- -- -- -- -- -- -
-
-
-            // Audios------------------------------------------------------
-            const audio = [
-                // new Audio('../audios/audio0.mp3'),
-                new Audio('../audios/Pfizer_Basico_19_01.mp3'),
-                new Audio('../audios/Pfizer_Basico_19_02.mp3'),
-                new Audio('../audios/Pfizer_Basico_19_03.mp3'),
-            ]
-
-            // Al cargarse la página
-            $(window).on("load", function() {
-                redimensionarElementos();
-                aplicacion.cargando(iniciarContenido);
-                // aplicacion.activarBotonAdelante();
+            var dragActivo;
+            $(".drag").mousedown(function() {
+                // if ($(this).css('cursor') == 'pointer') {
+                $(this).removeClass('match');
+                $(".drag").css({
+                    'z-index': '900'
+                });
+                $(this).css({
+                    'z-index': '999'
+                });
+                // }
             });
 
-            function iniciarContenido() {
-                animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
-                animacionEntrada(img01, 'aparecer', 1, 1);
-                animacionEntrada(img02, 'aparecer', 1, 1.5);
-                aplicacion.reproducirAudio(audio[0], terminaAudio1, 2);
+
+            $(".drag").mouseup(function() {
+                if (!$(this).hasClass('match')) {
+                    console.log("No tiene class match");
+
+                    // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
+
+                    TweenMax.to($(this), .5, {
+                        top: (parseInt($(this).attr("data-posY") - 0) * scalePage),
+                        left: (parseInt($(this).attr("data-posX") - 0) * scalePage),
+                        ease: Back.easeOut
+                    });
+
+                } else {
+                    console.log("No Se mueve");
+                }
+            });
+
+
+            $(".drag").css("cursor", "pointer");
+            $(".drag").draggable({
+                drag: function(event, ui) {
+                    dragActivo = $(this).attr("_id");
+                    console.log("Drag seleccionado: " + dragActivo);
+
+                    if (dragsColocados[(dragActivo - 1)] != false) {
+                        var elLugarPos = dragsColocados[(dragActivo - 1)].indexOf('drop') + 4;
+                        var elLugar = parseInt(dragsColocados[(dragActivo - 1)].substr(elLugarPos, 2));
+                        console.log("elLugar", elLugar);
+                        $("#lugar" + elLugar).show();
+                        dragsColocados[(dragActivo - 1)] = false;
+                        console.log("dragsColocados al drag", dragsColocados);
+
+                        $("#botonValidar").hide();
+                    }
+
+                    if (dragsColocadosFinal[(dragActivo - 1)] != false) {
+                        var elLugarPos = dragsColocadosFinal[(dragActivo - 1)].indexOf('drop') + 4;
+                        var elLugar = parseInt(dragsColocadosFinal[(dragActivo - 1)].substr(elLugarPos, 2));
+                        console.log("elLugar", elLugar);
+                        $("#lugar" + elLugar).show();
+                        dragsColocadosFinal[(dragActivo - 1)] = false;
+                        console.log("dragsColocadosFinal al drag", dragsColocadosFinal);
+
+                        $("#botonValidar").hide();
+                    }
+
+                }
+            });
+
+            $(".drop").droppable({
+                tolerance: "intersect",
+                accept: ".drag",
+                drop: function(event, ui) {
+                    var esteID = $(this).attr("_id");
+                    dropActivo = esteID;
+                    console.log("colisión con: " + esteID);
+
+                    dragsColocados[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
+                    console.log("dragsColocados al drop", dragsColocados);
+
+                    dragsColocadosFinal[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
+                    console.log("dragsColocadosFinal al drop", dragsColocadosFinal);
+
+                    if ($("#lugar" + dropActivo).css('display') == 'block') {
+                        $("#lugar" + dropActivo).hide();
+                        $("#pieza" + dragActivo).addClass('match');
+                        $("#piezaFinal" + dragActivo).addClass('match');
+                        checkMatch();
+                        if (finalizado) {
+                            checkMatchFinal();
+                        }
+                    }
+
+                }
+            });
+
+
+
+            function checkMatch() {
+                // console.log("revisando match");
+
+                // if ((dragActivo == '1' && dropActivo == '3') || (dragActivo == '2' && dropActivo == '4') || (dragActivo == '3' && dropActivo == '1') || (dragActivo == '4' && dropActivo == '5') || (dragActivo == '5' && dropActivo == '2')) {
+                //     // console.log("Hizo Match! 1");
+                //     contador++;
+
+                TweenMax.killTweensOf($("#pieza" + dragActivo));
+
+                TweenMax.to($("#pieza" + dragActivo), .01, {
+                    top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) * scalePage + (scalePage * 00)),
+                    left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) * scalePage + (scalePage * 00))
+                });
+
+                // $("#pieza" + dragActivo).css({
+                //     'cursor': 'default'
+                // });
+                // $("#pieza" + dragActivo).removeClass('drag');
+                // $("#pieza" + dragActivo).draggable("destroy");
+
+                console.log("drag: " + dragActivo + " con drop: " + dropActivo);
+
+                if (dropActivo == dragActivo) {
+                    that["bien" + dropActivo] = true;
+                } else {
+                    that["bien" + dropActivo] = false;
+                }
+                // }
+                // console.log('aciertos ' + aciertos);
+                // console.log('contador ' + contador + ' no_objetos ' + no_objetos);
+
+                losColocados = $.inArray(false, dragsColocados);
+                console.log('losColocados', losColocados);
+                // if (losColocados == -1) {
+                // if ($("#lugar1").css('display') == 'none' &&
+                //     $("#lugar2").css('display') == 'none' &&
+                //     $("#lugar3").css('display') == 'none' &&
+                //     $("#lugar4").css('display') == 'none' &&
+                //     $("#lugar5").css('display') == 'none' &&
+                //     $("#lugar6").css('display') == 'none') {
+                for (a = 1; a <= no_objetos[0]; a++) {
+                    if ($("#lugar" + a).css('display') == 'none') {
+                        parpadear($("#botonValidar"));
+                        // } else {
+                        //     $("#botonValidar").hide();
+                    }
+                }
+
             }
 
-            function terminaAudio1() {
-                animacionEntrada(img03, 'aparecer', 1, .5);
 
-                setTimeout(() => {
-                    iniciaActividad();
-                }, 1000);
-            }
+            function checkMatchFinal() {
+                console.log("revisando matchFinal");
 
+                if ((dragActivo == '1' && dropActivo == '1')) {
+                    // console.log("Hizo Match! 1");
+                    contadorFinal++;
 
-            // iniciaActividad //
-            function iniciaActividad() {
-                console.log("Objetos: " + no_objetos[0]);
-
-                for (i = 1; i <= no_objetos[0]; i++) {
-                    $("#drag" + i).attr("_id" + i);
-                    $("#drop" + i).attr("_id" + i);
-                    dragsColocados[dragsColocados.length] = false;
-                    dragsColocadosFinal[dragsColocadosFinal.length] = false;
-                    //$("#drop"+i).show();
-
-                    animacionEntrada($("#pieza" + i), "izquierda-derecha", 1, 0 + (i * .1));
-                    animacionEntrada($("#lugar" + i), "default", 1, 0 + (i * 0));
-                }
-
-
-                var dragActivo;
-                $(".drag").mousedown(function() {
-                    // if ($(this).css('cursor') == 'pointer') {
-                    $(this).removeClass('match');
-                    $(".drag").css({
-                        'z-index': '900'
-                    });
-                    $(this).css({
-                        'z-index': '999'
-                    });
-                    // }
-                });
-
-
-                $(".drag").mouseup(function() {
-                    if (!$(this).hasClass('match')) {
-                        console.log("No tiene class match");
-
-                        // mover($(this), parseInt($(this).attr("data-posX")) - $(this).position().left, parseInt($(this).attr("data-posY")) - $(this).position().top);
-
-                        TweenMax.to($(this), .5, {
-                            top: (parseInt($(this).attr("data-posY") - 0) * scalePage),
-                            left: (parseInt($(this).attr("data-posX") - 0) * scalePage),
-                            ease: Back.easeOut
-                        });
-
-                    } else {
-                        console.log("No Se mueve");
-                    }
-                });
-
-
-                $(".drag").css("cursor", "pointer");
-                $(".drag").draggable({
-                    drag: function(event, ui) {
-                        dragActivo = $(this).attr("_id");
-                        console.log("Drag seleccionado: " + dragActivo);
-
-                        if (dragsColocados[(dragActivo - 1)] != false) {
-                            var elLugarPos = dragsColocados[(dragActivo - 1)].indexOf('drop') + 4;
-                            var elLugar = parseInt(dragsColocados[(dragActivo - 1)].substr(elLugarPos, 2));
-                            console.log("elLugar", elLugar);
-                            $("#lugar" + elLugar).show();
-                            dragsColocados[(dragActivo - 1)] = false;
-                            console.log("dragsColocados al drag", dragsColocados);
-
-                            $("#botonValidar").hide();
-                        }
-
-                        if (dragsColocadosFinal[(dragActivo - 1)] != false) {
-                            var elLugarPos = dragsColocadosFinal[(dragActivo - 1)].indexOf('drop') + 4;
-                            var elLugar = parseInt(dragsColocadosFinal[(dragActivo - 1)].substr(elLugarPos, 2));
-                            console.log("elLugar", elLugar);
-                            $("#lugar" + elLugar).show();
-                            dragsColocadosFinal[(dragActivo - 1)] = false;
-                            console.log("dragsColocadosFinal al drag", dragsColocadosFinal);
-
-                            $("#botonValidar").hide();
-                        }
-
-                    }
-                });
-
-                $(".drop").droppable({
-                    tolerance: "intersect",
-                    accept: ".drag",
-                    drop: function(event, ui) {
-                        var esteID = $(this).attr("_id");
-                        dropActivo = esteID;
-                        console.log("colisión con: " + esteID);
-
-                        dragsColocados[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
-                        console.log("dragsColocados al drop", dragsColocados);
-
-                        dragsColocadosFinal[(dragActivo - 1)] = "drag" + dragActivo + "_drop" + dropActivo;
-                        console.log("dragsColocadosFinal al drop", dragsColocadosFinal);
-
-                        if ($("#lugar" + dropActivo).css('display') == 'block') {
-                            $("#lugar" + dropActivo).hide();
-                            $("#pieza" + dragActivo).addClass('match');
-                            $("#piezaFinal" + dragActivo).addClass('match');
-                            checkMatch();
-                            if (finalizado) {
-                                checkMatchFinal();
-                            }
-                        }
-
-                    }
-                });
-
-
-
-                function checkMatch() {
-                    // console.log("revisando match");
-
-                    // if ((dragActivo == '1' && dropActivo == '3') || (dragActivo == '2' && dropActivo == '4') || (dragActivo == '3' && dropActivo == '1') || (dragActivo == '4' && dropActivo == '5') || (dragActivo == '5' && dropActivo == '2')) {
-                    //     // console.log("Hizo Match! 1");
-                    //     contador++;
-
-                    TweenMax.killTweensOf($("#pieza" + dragActivo));
-
-                    TweenMax.to($("#pieza" + dragActivo), .01, {
-                        top: (parseInt($("#lugar" + dropActivo).attr("data-posY")) * scalePage + (scalePage * 00)),
-                        left: (parseInt($("#lugar" + dropActivo).attr("data-posX")) * scalePage + (scalePage * 00))
-                    });
-
-                    // $("#pieza" + dragActivo).css({
-                    //     'cursor': 'default'
-                    // });
-                    // $("#pieza" + dragActivo).removeClass('drag');
-                    // $("#pieza" + dragActivo).draggable("destroy");
-
-                    console.log("drag: " + dragActivo + " con drop: " + dropActivo);
-
-                    if (dropActivo == dragActivo) {
-                        that["bien" + dropActivo] = true;
-                    } else {
-                        that["bien" + dropActivo] = false;
-                    }
-                    // }
-                    // console.log('aciertos ' + aciertos);
-                    // console.log('contador ' + contador + ' no_objetos ' + no_objetos);
-
-                    losColocados = $.inArray(false, dragsColocados);
-                    console.log('losColocados', losColocados);
-                    // if (losColocados == -1) {
-                    // if ($("#lugar1").css('display') == 'none' &&
-                    //     $("#lugar2").css('display') == 'none' &&
-                    //     $("#lugar3").css('display') == 'none' &&
-                    //     $("#lugar4").css('display') == 'none' &&
-                    //     $("#lugar5").css('display') == 'none' &&
-                    //     $("#lugar6").css('display') == 'none') {
-                    for (a = 1; a <= no_objetos[0]; a++) {
-                        if ($("#lugar" + a).css('display') == 'none') {
-                            parpadear($("#botonValidar"));
-                            // } else {
-                            //     $("#botonValidar").hide();
-                        }
-                    }
-
-                }
-
-
-                function checkMatchFinal() {
-                    console.log("revisando matchFinal");
-
-                    if ((dragActivo == '1' && dropActivo == '1')) {
-                        // console.log("Hizo Match! 1");
-                        contadorFinal++;
-
-                        TweenMax.killTweensOf($("#piezaFinal"));
-
-                        TweenMax.to($("#piezaFinal"), .01, {
-                            top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage),
-                            left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage)
-                        });
-
-                        $("#piezaFinal").css({
-                            'cursor': 'default'
-                        });
-                        // $("#piezaFinal" + dragActivo).removeClass('drag');
-                        // $("#piezaFinal").draggable("destroy");
-
-                        console.log("dragFinal: " + dragActivo + " con dropFinal: " + dropActivo);
-
-                        // if (dropActivo == dragActivo) {
-                        that["bienFinal" + dropActivo] = true;
-                        // }
-                    }
-
-                    if (contadorFinal >= no_objetosFinal[0]) {
-                        console.log('Termina Final');
-
-                        animacionSalida($("#piezaFinal"), 'default', .01, 0);
-                        animacionEntrada($("#piezaFinalCh"), "aparecer", 1, 0);
-                        aplicacion.terminaPantalla();
-
-                    }
-
-                }
-
-
-                $("#botonValidar").click(function() {
-                    TweenMax.killTweensOf($(this));
-                    $(this).hide();
-
-                    retroalimenta();
-
-                    dejarParpadear($(this));
-                    animacionSalida($(this), 'default', .5, 0);
-
-                });
-
-                function retroalimenta() {
-                    console.log('retroalimenta');
-
-                    $(".drag").css({
-                        'z-index': '-900',
-                        'display': 'none'
-                    });
-                    $(".dragFinal").css({
-                        'z-index': '900',
-                        'display': 'block',
-                        'cursor': 'pointer'
-                    });
+                    TweenMax.killTweensOf($("#piezaFinal"));
 
                     TweenMax.to($("#piezaFinal"), .01, {
-                        top: (parseInt($("#piezaFinal").attr("data-posY") - 0) * scalePage),
-                        left: (parseInt($("#piezaFinal").attr("data-posX") - 0) * scalePage)
+                        top: (parseInt($("#lugarFinal").attr("data-posY")) * scalePage),
+                        left: (parseInt($("#lugarFinal").attr("data-posX")) * scalePage)
                     });
 
-                    for (var i = 1; i <= cuantasPreguntas; i++) {
-                        console.log("bien", i, that["bien" + i]);
-
-                        if (that["bien" + i] == true) {
-                            aciertos++;
-                        }
-                    }
-                    console.log('aciertos', aciertos, ' y ', that["bien" + dropActivo]);
-                    finalizado = true;
-                    //var puntuacion = Math.round((aciertos * 100) / cuantasPreguntas);
-                    //console.log("puntuacion:", puntuacion);
-
-                    //parent.set("cmi.core.score.raw", puntuacion);
-                    //var success = parent.save();
-                    //if (!success) {}
-
-
-                    if (aciertos >= cuantasPreguntas) {
-                        animacionEntrada($("#retroBien"), "aparecer", 1, 0);
-                        aplicacion.reproducirAudio(audio[1], terminaAudioRetroBien, .5);
-                        // aplicacion.terminaPantalla();
-                    } else {
-                        animacionEntrada($("#retroMal"), "aparecer", 1, 0);
-                        aplicacion.reproducirAudio(audio[2], terminaAudioRetroMal, .5);
-                    }
-                }
-
-                function terminaAudioRetroBien() {
-                    // parpadear($("#botonContinuar"));
-                    // $("#botonContinuar").click(function() {
-                    // aplicacion.siguientePagina();
-
-                    animacionEntrada($("#piezaFinal"), "aparece", 1, 0);
-                    animacionEntrada($("#lugarFinal"), "default", 1, 0);
-                    // });
-                }
-
-                function terminaAudioRetroMal() {
-                    parpadear($("#botonReintentar"));
-                    $("#botonReintentar").click(function() {
-                        aplicacion.recargarPagina();
+                    $("#piezaFinal").css({
+                        'cursor': 'default'
                     });
+                    // $("#piezaFinal" + dragActivo).removeClass('drag');
+                    // $("#piezaFinal").draggable("destroy");
+
+                    console.log("dragFinal: " + dragActivo + " con dropFinal: " + dropActivo);
+
+                    // if (dropActivo == dragActivo) {
+                    that["bienFinal" + dropActivo] = true;
+                    // }
+                }
+
+                if (contadorFinal >= no_objetosFinal[0]) {
+                    console.log('Termina Final');
+
+                    animacionSalida($("#piezaFinal"), 'default', .01, 0);
+                    animacionEntrada($("#piezaFinalCh"), "aparecer", 1, 0);
+                    aplicacion.terminaPantalla();
+
                 }
 
             }
 
 
-        });
+            $("#botonValidar").click(function() {
+                TweenMax.killTweensOf($(this));
+                $(this).hide();
+
+                retroalimenta();
+
+                dejarParpadear($(this));
+                animacionSalida($(this), 'default', .5, 0);
+
+            });
+
+            function retroalimenta() {
+                console.log('retroalimenta');
+
+                $(".drag").css({
+                    'z-index': '-900',
+                    'display': 'none'
+                });
+                $(".dragFinal").css({
+                    'z-index': '900',
+                    'display': 'block',
+                    'cursor': 'pointer'
+                });
+
+                TweenMax.to($("#piezaFinal"), .01, {
+                    top: (parseInt($("#piezaFinal").attr("data-posY") - 0) * scalePage),
+                    left: (parseInt($("#piezaFinal").attr("data-posX") - 0) * scalePage)
+                });
+
+                for (var i = 1; i <= cuantasPreguntas; i++) {
+                    console.log("bien", i, that["bien" + i]);
+
+                    if (that["bien" + i] == true) {
+                        aciertos++;
+                    }
+                }
+                console.log('aciertos', aciertos, ' y ', that["bien" + dropActivo]);
+                finalizado = true;
+                //var puntuacion = Math.round((aciertos * 100) / cuantasPreguntas);
+                //console.log("puntuacion:", puntuacion);
+
+                //parent.set("cmi.core.score.raw", puntuacion);
+                //var success = parent.save();
+                //if (!success) {}
+
+
+                if (aciertos >= cuantasPreguntas) {
+                    animacionEntrada($("#retroBien"), "aparecer", 1, 0);
+                    aplicacion.reproducirAudio(audio[1], terminaAudioRetroBien, .5);
+                    // aplicacion.terminaPantalla();
+                } else {
+                    animacionEntrada($("#retroMal"), "aparecer", 1, 0);
+                    aplicacion.reproducirAudio(audio[2], terminaAudioRetroMal, .5);
+                }
+            }
+
+            function terminaAudioRetroBien() {
+                // parpadear($("#botonContinuar"));
+                // $("#botonContinuar").click(function() {
+                // aplicacion.siguientePagina();
+
+                animacionEntrada($("#piezaFinal"), "aparece", 1, 0);
+                animacionEntrada($("#lugarFinal"), "default", 1, 0);
+                // });
+            }
+
+            function terminaAudioRetroMal() {
+                parpadear($("#botonReintentar"));
+                $("#botonReintentar").click(function() {
+                    aplicacion.recargarPagina();
+                });
+            }
+
+        }
+
+
+        // });
 
         function finalPagina() {
             // pararHablar();
