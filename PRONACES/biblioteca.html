@@ -1,11 +1,11 @@
 <section id="biblioteca" class="services">
     <div class="container">
 
-        <div class="section-pretitle">
+        <!-- <div class="section-pretitle">
             <t1>Diálogo de Saberes </t1>
             <tm>/</tm>
             <t2>Saberes de Mujeres</t2>
-        </div>
+        </div> -->
 
         <div class="section-title" data-aos="fade-right">
             <h2>Biblioteca </h2>
@@ -19,9 +19,108 @@
 
 
 
-
-
         <div id="rowLibros" class="row row_libros"></div>
+
+
+
+        <br> <br>
+        <div class="divisor">
+        </div>
+
+
+        <div class="section-title" data-aos="fade-right">
+            <h2>Sitios de interés</h2>
+        </div>
+
+
+        <div id="rowSitios" class="row row_libros" style="margin-top: 0px;">
+
+            <div id="tarjeta1" class="icon-box mt-3">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="assets/img/sitio.png" class="icono_libro" style="width: 100%;" />
+                    </div>
+                    <div class="col-10">
+                        <h4 class="title">Laboratorio de Investigación: Género, Interculturalidad y Derechos Humanos de El Colegio de San Luis. </h4>
+                        <p class="description">
+                            Un espacio para generar conocimiento crítico de los problemas sociales, con metodologías dialógicas y colaborativas.
+                        </p>
+                        <div style="text-align: right;">
+                            <button class="boton" onclick="abreSitio('https://laboratoriogenero.colsan.edu.mx/index.php');">Ir al Sitio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tarjeta2" class="icon-box mt-3">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="assets/img/sitio.png" class="icono_libro" style="width: 100%;" />
+                    </div>
+                    <div class="col-10">
+                        <h4 class="title">Interculturalidad y Género: conocimientos para la convivencia y la equidad. </h4>
+                        <p class="description">
+                            En este sitio encontrarás una propuesta elaborada en El Colegio de San Luis para reflexionar y dialogar sobre las relaciones entre la equidad de género y la interculturalidad, así como actividades, imágenes, sugerencias de libros, lecturas y sitios de Internet con más información para favorecer el diálogo con un público amplio y diverso.
+                        </p>
+                        <div style="text-align: right;">
+                            <button class="boton" onclick="abreSitio('https://interculturalidad.colsan.edu.mx/');">Ir al Sitio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tarjeta3" class="icon-box mt-3">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="assets/img/sitio.png" class="icono_libro" style="width: 100%;" />
+                    </div>
+                    <div class="col-10">
+                        <h4 class="title">Lanzamiento del documental del LIGIDH-COLSAN “XOCHITLAKATILISTLI: Protagonistas en el nacimiento”. </h4>
+                        <!-- <p class="description">
+                            En este sitio encontrarás una propuesta elaborada en El Colegio de San Luis para reflexionar y dialogar sobre las relaciones entre la equidad de género y la interculturalidad, así como actividades, imágenes, sugerencias de libros, lecturas y sitios de Internet con más información para favorecer el diálogo con un público amplio y diverso.
+                        </p> -->
+                        <div style="text-align: right;">
+                            <button class="boton" onclick="abreSitio('https://www.youtube.com/watch?v=3VLUowXfQKc');">Ir al Sitio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tarjeta4" class="icon-box mt-3">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="assets/img/sitio.png" class="icono_libro" style="width: 100%;" />
+                    </div>
+                    <div class="col-10">
+                        <h4 class="title">Saberes indígenas: nacimiento y crianza </h4>
+                        <!-- <p class="description">
+                            En este sitio encontrarás una propuesta elaborada en El Colegio de San Luis para reflexionar y dialogar sobre las relaciones entre la equidad de género y la interculturalidad, así como actividades, imágenes, sugerencias de libros, lecturas y sitios de Internet con más información para favorecer el diálogo con un público amplio y diverso.
+                        </p> -->
+                        <div style="text-align: right;">
+                            <button class="boton" onclick="abreSitio('https://www.youtube.com/watch?v=X1r7s8LEoaY&list=WL&index=1&t=156s');">Ir al Sitio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tarjeta5" class="icon-box mt-3">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="assets/img/sitio.png" class="icono_libro" style="width: 100%;" />
+                    </div>
+                    <div class="col-10">
+                        <h4 class="title">Canal del Laboratorio de Investigación: Género, Interculturalidad y Derechos Humanos de El Colegio de San Luis. </h4>
+                        <!-- <p class="description">
+                            En este sitio encontrarás una propuesta elaborada en El Colegio de San Luis para reflexionar y dialogar sobre las relaciones entre la equidad de género y la interculturalidad, así como actividades, imágenes, sugerencias de libros, lecturas y sitios de Internet con más información para favorecer el diálogo con un público amplio y diverso.
+                        </p> -->
+                        <div style="text-align: right;">
+                            <button class="boton" onclick="abreSitio('https://www.youtube.com/channel/UC3Iu5HoBY_WIQTTUzN1I_IQ');">Ir al Sitio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 
     </div>
@@ -145,17 +244,11 @@
         console.log('abrePDF', cualPDF);
 
         window.open('assets/docs/3/3_2/3_2_6/libros/' + cualPDF + '.pdf');
+    }
 
-        // switch (cualPDF) {
-        //     case 'libro_1':
-        //         window.open('assets/docs/3/3_2/3_2_6/libros/Acosta C., M. y D. Cleghorn. Mujer indígena y cuidados durante el embarazo y puerperio..pdf');
-        //         break;
-        //     case 'libro_1':
-        //         window.open('assets/docs/3/3_2/3_2_6/libros/Acosta C., M. y D. Cleghorn. Mujer indígena y cuidados durante el embarazo y puerperio..pdf');
-        //         break;
+    function abreSitio(cualSitio) {
+        console.log('cualSitio', cualSitio);
 
-        //     default:
-        //         break;
-        // }
+        window.open(cualSitio, '_blank');
     }
 </script>
