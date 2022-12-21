@@ -93,9 +93,10 @@
     const botonReiniciar = $('#botonReiniciar');
 
     // Audios------------------------------------------------------
-    // const audio = [
-    //     new Audio('../audios/Pfizer_Planta_17_01.mp3'),
-    // ]
+    const audio = [
+        new Audio('../audios/Pfizer_Planta_18_01.mp3'),
+        new Audio('../audios/Pfizer_Planta_18_02.mp3'),
+    ]
 
     // Al cargarse la página
     $(window).on("load", function() {
@@ -116,7 +117,7 @@
     var contador = 1;
     var aciertos = 0;
     var errores = 0;
-    var minimo = 80;
+    var minimo = 90;
     var puntuacion = 0;
     var cualBoton;
 
@@ -268,18 +269,19 @@
 
         if (puntuacion >= minimo) {
             animacionEntrada($("#retroBien"), "aparecer", 1, 0);
+            aplicacion.reproducirAudio(audio[0], terminaAudioFinal, .5);
 
             // SCORM //
             aplicacion.statusCurso("passed");
             // SCORM //
 
-            aplicacion.terminaPantalla();
         } else {
             if (aplicacion.verIntento() >= 3) {
                 animacionEntrada($("#retroMal2"), "aparecer", 1, 0);
                 parpadear(botonReiniciar);
             } else {
                 animacionEntrada($("#retroMal"), "aparecer", 1, 0);
+                aplicacion.reproducirAudio(audio[1], nada, .5);
                 parpadear(botonReintentar);
             }
 
@@ -312,6 +314,12 @@
             }
         });
 
+    }
+
+    function nada() {}
+
+    function terminaAudioFinal() {
+        aplicacion.terminaPantalla();
     }
 </script>
 
