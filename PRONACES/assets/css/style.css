@@ -19,6 +19,11 @@ a {
 }
 
 a:hover {
+    color: #b83811;
+    text-decoration: none;
+}
+
+a:visited {
     color: #fc8129;
     text-decoration: none;
 }
@@ -36,9 +41,18 @@ h6 {
     text-align: justify;
 }
 
+.centrado {
+    text-align: center;
+}
+
 .imagen_redondeada {
     /* padding: 0 20px; */
     border-radius: 8px;
+}
+
+.texto_centrado {
+    max-width: min-content;
+    margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
@@ -280,6 +294,26 @@ h6 {
     background: #f78b3e;
 }
 
+.boton_img {
+    /* font-size: 14px; */
+    color: #ef6603;
+    text-decoration: none;
+    line-height: 1.3;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton_img:hover {
+    color: #b83811;
+    text-decoration: none;
+}
+
+.boton_img:visited {
+    color: #fc8129;
+    text-decoration: none;
+}
+
+
 .imagen25 {
     width: 25% !important;
 }
@@ -338,6 +372,10 @@ h6 {
     max-height: 50px;
 }
 
+.deshabilitado {
+    opacity: 0.5;
+    cursor: default;
+}
 
 .icono_libro {
     /* width: 80px; */
