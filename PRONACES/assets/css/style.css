@@ -318,6 +318,10 @@ h6 {
     width: 25% !important;
 }
 
+.imagen35 {
+    width: 35% !important;
+}
+
 .imagen50 {
     width: 50% !important;
 }
@@ -337,6 +341,7 @@ h6 {
 @media (max-width: 575px) {
 
     .imagen25,
+    .imagen35,
     .imagen50,
     .imagen75,
     .imagen90,
