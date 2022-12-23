@@ -100,6 +100,8 @@
     // Audios------------------------------------------------------
     const audio = [
         new Audio('../audios/Pfizer_Patrimonial_15_01.mp3'),
+        new Audio('../audios/Pfizer_Patrimonial_15_02.mp3'),
+        new Audio('../audios/Pfizer_Patrimonial_15_03.mp3'),
     ]
 
     // Al cargarse la página
@@ -301,25 +303,34 @@
 
         if (puntuacion >= minimo) {
             animacionEntrada($("#retroBien"), "aparecer", 1, 0);
+            aplicacion.reproducirAudio(audio[1], terminaAudioBien, .5);
 
             // SCORM //
             aplicacion.statusCurso("passed");
             // SCORM //
 
-            aplicacion.terminaPantalla();
         } else {
             if (aplicacion.verIntento() >= 3) {
                 animacionEntrada($("#retroMal2"), "aparecer", 1, 0);
                 parpadear(botonReiniciar);
             } else {
                 animacionEntrada($("#retroMal"), "aparecer", 1, 0);
-                parpadear(botonReintentar);
+                aplicacion.reproducirAudio(audio[2], terminaAudioMal, .5);
+                // parpadear(botonReintentar);
             }
 
             // SCORM //
             aplicacion.statusCurso("failed");
             // SCORM //         
 
+        }
+
+        function terminaAudioBien() {
+            aplicacion.terminaPantalla();
+        }
+
+        function terminaAudioMal() {
+            parpadear(botonReintentar);
         }
 
         $("#puntos").html(puntuacion);
