@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    navega('tonach', true);
+    navega('tochah', true);
 
 });
 
