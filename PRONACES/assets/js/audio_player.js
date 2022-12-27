@@ -128,7 +128,29 @@ function simp_loadAudio(elem) {
 }
 
 function simp_setAlbum(index) {
-    simp_cover.innerHTML = simp_a_url[index].dataset.cover ? '<div style="background:url(' + simp_a_url[index].dataset.cover + ') no-repeat;background-size:cover;width:80px;height:80px;"></div>' : '<img src="assets/img/3/3_2/imgPlayer04b.jpg" class="img-fluid imagen_redondeada imagen100"></div>';
+    var laImg;
+    console.log(simp_id);
+
+    switch (simp_id) {
+        case 'simp_embarazo':
+            laImg = 'imgPlayer01b.png';
+            break;
+        case 'simp_nacimiento':
+            laImg = 'imgPlayer02b.png';
+            break;
+        case 'simp_crianza':
+            laImg = 'imgPlayer03b.png';
+            break;
+        case 'simp_parteras':
+            laImg = 'imgPlayer04b.png';
+            break;
+        default:
+            break;
+    }
+
+
+
+    simp_cover.innerHTML = simp_a_url[index].dataset.cover ? '<div style="background:url(' + simp_a_url[index].dataset.cover + ') no-repeat;background-size:cover;width:80px;height:80px;"></div>' : '<img src="assets/img/3/3_2/' + laImg + '" class="img-fluid imagen_redondeada imagen100"></div>';
     simp_title.innerHTML = simp_source[index].querySelector('.simp-source').innerHTML;
     simp_artist.innerHTML = simp_source[index].querySelector('.simp-desc') ? simp_source[index].querySelector('.simp-desc').innerHTML : '';
 }
@@ -168,6 +190,7 @@ function simp_changeAudio(elem) {
 
 function simp_startScript() {
     ap_simp = document.querySelector('#simp');
+    simp_id = $('#simp').attr('_id');
     simp_audio = ap_simp.querySelector('#audio');
     simp_album = ap_simp.querySelector('.simp-album');
     simp_cover = simp_album.querySelector('.simp-cover');
