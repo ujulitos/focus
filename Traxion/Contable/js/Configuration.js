@@ -26,7 +26,14 @@ course.pages = [
     { title: "Pantalla", url: "Txn_Mngr_ECP_03.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_01.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_02.html", navegacion: true, menu: true },
-    { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_03.html", navegacion: true, menu: true }
+    { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_03.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_04.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_05.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_06.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_07.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_08.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_09.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_Finiquito_10.html", navegacion: true, menu: true },
 ];
 
 /* Pantallas de recursos */

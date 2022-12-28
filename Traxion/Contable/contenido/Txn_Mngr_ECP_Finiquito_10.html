@@ -26,12 +26,11 @@
 
 <body onresize="location.reload()">
     <div id="contenido">
-        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_02/img01.png"></img>
-        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_02/img02.png"></img>
-        <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_02/img03.png"></img>
-        <img id="imagen4" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_02/img04.png"></img>
-        <img id="imagen5" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_02/img05.png"></img>
-        <img id="imagen6" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_02/img06.png"></img>
+        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_Finiquito_10/img01.png"></img>
+        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_Finiquito_10/img02.png"></img>
+        <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_Finiquito_10/img03.png"></img>
+        <img id="imagen4" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_Finiquito_10/img04.png"></img>
+        <img id="imagen5" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_Finiquito_10/img05.png"></img>
         <!-- <img id="botonIniciar" class="element" _origenx="720" _origeny="451" src="images/Mybuy_01/botonIniciar.png"></img> -->
 
         <!-- cargador -->
@@ -95,13 +94,14 @@
 
         function muestraContenido() {
             animacion_entrada($("#imagen1"), "default", .7, 0.5);
-            animacion_entrada($("#imagen2"), "izq_der", .7, 2);
-            animacion_entrada($("#imagen3"), "arriba_abajo", .7, 7);
-            animacion_entrada($("#imagen4"), "arriba_abajo", .7, 14.5);
-            animacion_entrada($("#imagen5"), "arriba_abajo", .7, 20);
-            animacion_entrada($("#imagen6"), "arriba_abajo", .7, 25);
-            parent.playAudio(1, 1000, terminarPantalla);
+            animacion_entrada($("#imagen2"), "izq_der", .7, 1);
 
+            // animacion_salida($("#imagen2"), "desaparece", 16.5);
+            animacion_entrada($("#imagen3"), "default", .7, 1.5);
+            parent.playAudio(11, 2000, terminarPantalla);
+
+            animacion_entrada($("#imagen4"), "izq_der", .7, 6);
+            animacion_entrada($("#imagen5"), "izq_der", .7, 25);
         }
 
         // function terminaAudio1() {
