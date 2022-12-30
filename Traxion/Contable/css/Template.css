@@ -231,7 +231,7 @@ body {
     position: relative;
     height: 100%;
     width: 20%;
-    background: linear-gradient(to right, #864896, #B89AF2);
+    background: linear-gradient(to right, #96A825, #CDDE00);
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
     border-radius: 15px;
@@ -443,7 +443,7 @@ body {
 
 #btnCerrarTemario {
     font-size: 1.5em;
-    background: #a77ed2;
+    background: #b4c511;
     position: absolute;
     right: -22px;
     top: 13px;
@@ -460,7 +460,7 @@ body {
 
 #temarioTitle {
     position: relative;
-    background: #a77ed2;
+    background: #b4c511;
     margin: 0;
     font-size: 25px;
     /* font-weight: 600; */
@@ -492,19 +492,19 @@ body {
     margin-top: 5px;
     font-size: 13px;
     /* font-weight: 600; */
-    color: #8172ba;
+    color: #738114;
 }
 
 .tema {
     padding: 4px 0 4px 10%;
-    color: #8172ba;
+    color: #738114;
     font-weight: 600;
     font-size: 14px;
     margin-left: 35px;
 }
 
 #items i {
-    color: #B89AF2;
+    color: #cea75e;
     font-weight: 400;
     margin-right: 10px;
 }

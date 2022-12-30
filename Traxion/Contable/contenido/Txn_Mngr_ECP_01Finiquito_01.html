@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="es" />
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/preloadjs-0.6.2.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/Time.js"></script>
+    <script src="js/Animations.min.js"></script>
+    <script src="js/bounce.min.js"></script>
+    <link rel="stylesheet" href="css/Reset.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/Style.css" type="text/css" charset="utf-8" />
+    <title>Slide</title>
+</head>
+
+<body onresize="location.reload()">
+    <div id="contenido">
+        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/img01.png"></img>
+        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/img02.png"></img>
+        <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/img03.png"></img>
+        <img id="imagen4" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/img04.png"></img>
+
+        <img id="sec00_back" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec00_back.png"></img>
+        <img id="sec00_ins" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec00_ins.png"></img>
+
+        <!--seccion 1-->
+        <img id="sec01_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec01_img01.png"></img>
+        <img id="sec01_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec01_img02.png"></img>
+
+        <!--seccion 2-->
+        <img id="sec02_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec02_img01.png"></img>
+        <img id="sec02_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec02_img02.png"></img>
+
+        <!--seccion 3-->
+        <img id="sec03_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec03_img01.png"></img>
+        <img id="sec03_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec03_img02.png"></img>
+
+        <!--seccion 4-->
+        <img id="sec04_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec04_img01.png"></img>
+        <img id="sec04_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec04_img02.png"></img>
+
+        <!--seccion 5-->
+        <img id="sec05_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec05_img01.png"></img>
+        <img id="sec05_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec05_img02.png"></img>
+
+        <!--seccion 6-->
+        <img id="sec06_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec06_img01.png"></img>
+        <img id="sec06_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec06_img02.png"></img>
+
+        <!--seccion 7-->
+        <img id="sec07_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec07_img01.png"></img>
+        <img id="sec07_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec07_img02.png"></img>
+
+        <!--seccion 8-->
+        <img id="sec08_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec08_img01.png"></img>
+        <img id="sec08_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec08_img02.png"></img>
+
+        <!--seccion 9-->
+        <img id="sec09_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec09_img01.png"></img>
+        <img id="sec09_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec09_img02.png"></img>
+
+        <!--seccion 10-->
+        <!-- <img id="sec10_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec10_img01.png"></img>
+        <img id="sec10_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec10_img02.png"></img> -->
+
+        <!--seccion 11-->
+        <!-- <img id="sec11_imagen1" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec11_img01.png"></img>
+        <img id="sec11_imagen2" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec11_img02.png"></img> -->
+
+
+        <!----------------------------->
+        <img id="btnSiguiente0" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras0" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente1" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras1" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente2" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras2" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente3" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras3" class="element" _origenx="15" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente4" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras4" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente5" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras5" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente6" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras6" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente7" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras7" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente8" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras8" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente9" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras9" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente10" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <!-- <img id="btnAtras10" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente11" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img>
+        <img id="btnAtras11" class="element" _origenx="20" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonAtras.png"></img>
+        <img id="btnSiguiente12" class="element" _origenx="1145" _origeny="390" src="images/Txn_Mngr_ECP_01Finiquito_01/botonSiguiente.png"></img> -->
+
+
+        <!-- <img id="botonNota1" class="element" _origenx="140" _origeny="435" src="images/Txn_Mngr_ECP_01Finiquito_01/botonNota.png"></img>
+        <img id="sec08_imagen3" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec08_img03.png"></img>
+        <img id="sec09_imagen3" class="element" _origenx="0" _origeny="0" src="images/Txn_Mngr_ECP_01Finiquito_01/sec09_img03.png"></img>
+        <img id="botonCerrar" class="element" _origenx="1090" _origeny="140" src="images/Txn_Mngr_ECP_01Finiquito_01/botonCerrar.png"></img>
+        <img id="botonCerrarNota1" class="element" _origenx="1090" _origeny="250" src="images/Txn_Mngr_ECP_01Finiquito_01/botonCerrarNota.png"></img> -->
+
+        <!-- cargador -->
+        <div id="cargando" class=" cargando" style="width: 100px; height: 100px;"><svg style="margin: auto; background: transparent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <g transform="translate(20 50)">
+                    <circle cx="0" cy="0" r="6" fill="#e15b64" transform="scale(0.220385 0.220385)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.375s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(40 50)">
+                    <circle cx="0" cy="0" r="6" fill="#f8b26a" transform="scale(0.564378 0.564378)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.25s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(60 50)">
+                    <circle cx="0" cy="0" r="6" fill="#abbd81" transform="scale(0.881747 0.881747)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.125s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(80 50)">
+                    <circle cx="0" cy="0" r="6" fill="#81a3bd" transform="scale(0.992922 0.992922)">
+                        <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+            </svg>
+        </div>
+        <!-- <img id="cargando" class="cargando" src="images/cargando.gif"></img> -->
+
+        <canvas id="canvas_id"></canvas>
+
+    </div>
+</body>
+<style>
+    .boton {
+        background-color: rgba(167, 255, 108, 0);
+        cursor: pointer;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+
+        cacularEscala();
+        ajustarEscenario();
+
+        function preload() {
+            animacion_entrada($("#cargando"), "default", .2, 0);
+            var preload = new createjs.LoadQueue();
+            preload.addEventListener("complete", iniciaCargador);
+            $.each($('.element'), function() {
+                preload.loadFile($("#" + this.id).attr('src'));
+                //console.log($("#" + this.id).attr('src'));
+            });
+        }
+
+        function iniciaCargador(event) {
+            console.log('load complete');
+            $.each($('.element'), function() {
+                inicializar($("#" + this.id));
+            });
+            $("#cargando").show();
+            $("#cargando").css({
+                'opacity': '1'
+            });
+            animacion_salida($("#cargando"), "desaparece", 0, muestraContenido);
+        }
+
+
+        function muestraContenido() {
+            animacion_entrada($("#imagen1"), "default", .7, 0.5);
+            animacion_entrada($("#imagen2"), "default", .7, 1);
+            animacion_entrada($("#imagen3"), "default", .7, 1.3);
+            animacion_entrada($("#imagen4"), "default", .7, 7.5);
+
+            // QUITAR
+            parent.playAudio(3, 1500, terminaAudio1);
+            // parent.playAudio(0, 1500, terminaAudio1);
+        }
+
+        function terminaAudio1() {
+            setTimeout(function() {
+                animacion_salida($('#imagen4'), "default", 0);
+                animacion_salida($('#imagen3'), "default", 0.2);
+                animacion_salida($('#imagen2'), "default", 0.4);
+
+                muestraSeccion1();
+            }, 500);
+        }
+
+        // $("#boton1").click(function () {
+        //     if ($(this).css('cursor') == 'pointer') {
+        //         TweenMax.killTweensOf($(this));
+        //         $(this).hide();
+        //         // $(this).css({
+        //         // 'cursor': 'default',
+        //         // 'opacity': '1'
+        //         // });
+
+        //         animacion_salida($("#imagen5"), "desaparece", 0);
+        //         desapareceBotonera();
+        //         setTimeout(function () {
+        //             muestraSeccion1();
+        //         }, 300);
+        //     }
+        // });
+
+
+        // function terminaAudio2() {
+        //     desapareceBotonera();
+        //     setTimeout(function () {
+        //         muestraSeccion1();
+        //     }, 300);
+        // }
+
+
+        function desapareceBotonera() {
+            // animacion_salida($('#pleca'), "desaparece", 0);
+            // animacion_salida($('#imagen1'), "default", 0);
+            // animacion_salida($('#imagen2'), "default", 0);
+            // animacion_salida($('#imagen3'), "default", 0);
+            // animacion_salida($('#pleca1, #pleca2, #pleca3, #pleca4, #pleca5'), "desaparece", 0);
+            animacion_salida($('#btnAtras0, #btnSiguiente0, #btnAtras1, #btnSiguiente1, #btnAtras2, #btnSiguiente2, #btnAtras3, #btnSiguiente3, #btnAtras4, #btnSiguiente4, #btnAtras5, #btnSiguiente5, #btnAtras6, #btnSiguiente6, #btnAtras7, #btnSiguiente7, #btnAtras8, #btnSiguiente8, #btnAtras9, #btnSiguiente9, #btnAtras10, #btnSiguiente10, #btnAtras11, #btnSiguiente11, #btnAtras12, #btnSiguiente12, #btnAtras13, #btnSiguiente13, #btnAtras14, #btnSiguiente14, #btnAtras15, #btnSiguiente15, #btnAtras16, #btnSiguiente16, #btnAtras17, #btnSiguiente17, #btnAtras18, #btnSiguiente18, #btnAtras19, #btnSiguiente19, #btnAtras20, #btnSiguiente20'), "desaparece", 0);
+            animacion_salida($('#botonCerrar'), "default", 0);
+            // $('#btnAtras1, #btnSiguiente1, #btnAtras2, #btnSiguiente2, #btnAtras3, #btnSiguiente3, #btnAtras4, #btnSiguiente4, #btnAtras5, #btnSiguiente5, #btnAtras6, #btnSiguiente6').css({
+            //     'cursor': 'default'
+            // });
+        }
+
+        // $("#btnSiguiente0").click(function() {
+
+        //     if ($(this).css('cursor') == 'pointer') {
+        //         TweenMax.killTweensOf($(this));
+        //         // $(this).hide();
+        //         desapareceBotonera();
+        //         muestraSeccion1();
+        //     }
+        // });
+
+
+
+        function muestraSeccion1() {
+            console.log('1');
+
+            animacion_entrada($("#sec00_back"), "default", .7, 0);
+            animacion_entrada($('#sec00_ins'), "der_izq", .7, .5);
+            setTimeout(function() {
+                $("#btnAtras1, #btnSiguiente1").css({
+                    'display': 'block',
+                    'opacity': '0.4',
+                    'cursor': 'default'
+                });
+            }, 1500);
+
+            parent.playAudio(1, 1000, terminaAudio_ins);
+
+            function terminaAudio_ins() {
+                animacion_entrada($("#sec01_imagen1"), "izq_der", .7, .5);
+                animacion_entrada($("#sec01_imagen2"), "default", .7, 1);
+                parent.playAudio(4, 1500, terminaAudio1_Sec1);
+            }
+            // setTimeout(function () {
+            //     animacion_entrada($("#sec00_ins"), "der_izq", 0.7, 0);
+            // }, 5000);
+
+
+            function terminaAudio1_Sec1() {
+                animacion_entrada($("#btnAtras1"), "default", 0, 0);
+                $("#btnAtras1").css({
+                    'opacity': '0.4',
+                    'cursor': 'default'
+                });
+                parpadea($("#btnSiguiente1"), 0);
+            }
+
+            function desapareceSeccion1() {
+                animacion_salida($('#sec01_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec01_imagen2'), "desaparece", 0);
+                // animacion_salida($('#sec01_imagen3'), "desaparece", 0);
+            }
+
+            $("#btnSiguiente1").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion1();
+                    muestraSeccion2();
+                }
+            });
+
+        };
+
+
+        function muestraSeccion2() {
+            console.log('2');
+
+            animacion_entrada($("#sec02_imagen1"), "izq_der", .7, .5);
+            animacion_entrada($("#sec02_imagen2"), "default", .7, 1);
+
+            parent.playAudio(5, 1500, terminaAudio1_Sec2);
+
+            function terminaAudio1_Sec2() {
+                animacion_entrada($("#btnAtras2"), "default", 0, 1.5);
+                $("#btnAtras2").css({
+                    'opacity': '1',
+                    'cursor': 'pointer'
+                });
+                parpadea($("#btnSiguiente2"), 0);
+                // parpadea($("#botonCerrar"), 2);
+                // terminarPantalla();
+            }
+
+            function desapareceSeccion2() {
+                animacion_salida($('#sec02_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec02_imagen2'), "desaparece", 0);
+            }
+
+            $("#btnAtras2").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion2();
+                    muestraSeccion1();
+                }
+            });
+
+            $("#btnSiguiente2").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion2();
+                    muestraSeccion3();
+                }
+            });
+
+        };
+
+
+        function muestraSeccion3() {
+            console.log('3');
+
+            animacion_entrada($("#sec03_imagen1"), "izq_der", .7, .5);
+            animacion_entrada($("#sec03_imagen2"), "default", .7, 1);
+
+            parent.playAudio(6, 1500, terminaAudio1_Sec3);
+            // setTimeout(function() {
+            //     terminaAudio1_Sec3();
+            // }, 1000);
+
+            function terminaAudio1_Sec3() {
+                animacion_entrada($("#btnAtras3"), "default", 0, 1.5);
+                $("#btnAtras3").css({
+                    'opacity': '1',
+                    'cursor': 'pointer'
+                });
+                parpadea($("#btnSiguiente3"), 0);
+                // parpadea($("#botonCerrar"), 2);
+                // terminarPantalla();
+            }
+
+            function desapareceSeccion3() {
+                animacion_salida($('#sec03_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec03_imagen2'), "desaparece", 0);
+            }
+
+            $("#btnAtras3").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion3();
+                    muestraSeccion2();
+                }
+            });
+
+            $("#btnSiguiente3").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion3();
+                    muestraSeccion4();
+                }
+            });
+
+        };
+
+
+        function muestraSeccion4() {
+            console.log('4');
+
+            animacion_entrada($("#sec04_imagen1"), "izq_der", .7, .5);
+            animacion_entrada($("#sec04_imagen2"), "default", .7, 1);
+
+            parent.playAudio(7, 1500, terminaAudio1_Sec4);
+
+            function terminaAudio1_Sec4() {
+                animacion_entrada($("#btnAtras4"), "default", 0, 1.5);
+                $("#btnAtras4").css({
+                    'opacity': '1',
+                    'cursor': 'pointer'
+                });
+                parpadea($("#btnSiguiente4"), 0);
+                // parpadea($("#botonCerrar"), 2);
+                // terminarPantalla();
+            }
+
+            function desapareceSeccion4() {
+                animacion_salida($('#sec04_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec04_imagen2'), "desaparece", 0);
+            }
+
+            $("#btnAtras4").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion4();
+                    muestraSeccion3();
+                }
+            });
+
+            $("#btnSiguiente4").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion4();
+                    muestraSeccion5();
+                }
+            });
+
+        };
+
+
+        function muestraSeccion5() {
+            console.log('5');
+
+            animacion_entrada($("#sec05_imagen1"), "izq_der", .7, .5);
+            animacion_entrada($("#sec05_imagen2"), "default", .7, 1);
+
+            parent.playAudio(8, 1500, terminaAudio1_Sec5);
+            // setTimeout(function() {
+            //     terminaAudio1_Sec5();
+            // }, 1000);
+
+            function terminaAudio1_Sec5() {
+                animacion_entrada($("#btnAtras5"), "default", 0, 1.5);
+                $("#btnAtras5").css({
+                    'opacity': '1',
+                    'cursor': 'pointer'
+                });
+                parpadea($("#btnSiguiente5"), 0);
+                // parpadea($("#botonCerrar"), 2);
+                // terminarPantalla();
+            }
+
+            function desapareceSeccion5() {
+                animacion_salida($('#sec05_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec05_imagen2'), "desaparece", 0);
+            }
+
+            $("#btnAtras5").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion5();
+                    muestraSeccion4();
+                }
+            });
+
+            $("#btnSiguiente5").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion5();
+                    muestraSeccion6();
+                }
+            });
+
+        };
+
+
+
+        function muestraSeccion6() {
+            console.log('6');
+
+            animacion_entrada($("#sec06_imagen1"), "izq_der", .7, .5);
+            animacion_entrada($("#sec06_imagen2"), "default", .7, 1);
+
+            parent.playAudio(9, 1500, terminaAudio1_Sec6);
+
+            function terminaAudio1_Sec6() {
+                animacion_entrada($("#btnAtras6"), "default", 0, 1.5);
+                $("#btnAtras6").css({
+                    'opacity': '1',
+                    'cursor': 'pointer'
+                });
+                parpadea($("#btnSiguiente6"), 0);
+                // parpadea($("#botonCerrar"), 2);
+                // terminarPantalla();
+            }
+
+            function desapareceSeccion6() {
+                animacion_salida($('#sec06_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec06_imagen2'), "desaparece", 0);
+            }
+
+            $("#btnAtras6").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion6();
+                    muestraSeccion5();
+                }
+            });
+
+            $("#btnSiguiente6").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion6();
+                    muestraSeccion7();
+                }
+            });
+
+        };
+
+
+        function muestraSeccion7() {
+            console.log('7');
+
+            animacion_entrada($("#sec07_imagen1"), "izq_der", .7, .5);
+            animacion_entrada($("#sec07_imagen2"), "default", .7, 1);
+
+            parent.playAudio(10, 1000, terminaAudio1_Sec7);
+            // setTimeout(function() {
+            //     terminaAudio1_Sec7();
+            // }, 1000);
+
+            function terminaAudio1_Sec7() {
+                animacion_entrada($("#btnAtras7"), "default", 0, 1.5);
+                $("#btnAtras7").css({
+                    'opacity': '1',
+                    'cursor': 'pointer'
+                });
+                parpadea($("#btnSiguiente7"), 0);
+                // parpadea($("#botonCerrar"), 2);
+                // terminarPantalla();
+            }
+
+            function desapareceSeccion7() {
+                animacion_salida($('#sec07_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec07_imagen2'), "desaparece", 0);
+            }
+
+            $("#btnAtras7").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion7();
+                    muestraSeccion6();
+                }
+            });
+
+            $("#btnSiguiente7").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion7();
+                    muestraSeccion8();
+                }
+            });
+
+        };
+
+
+        function muestraSeccion8() {
+            console.log('8');
+
+            animacion_entrada($("#sec08_imagen1"), "izq_der", .7, .5);
+            animacion_entrada($("#sec08_imagen2"), "default", .7, 1);
+
+            parent.playAudio(11, 1000, terminaAudio1_Sec8);
+
+            function terminaAudio1_Sec8() {
+                animacion_entrada($("#btnAtras8"), "default", 0, 1.5);
+                $("#btnAtras8").css({
+                    'opacity': '1',
+                    'cursor': 'pointer'
+                });
+                parpadea($("#btnSiguiente8"), 0);
+                // parpadea($("#botonNota1"), 0);
+            }
+
+            ///////////////// botonNota1 ////////////////
+            // $("#botonNota1").click(function() {
+            //     if ($(this).css('cursor') == 'pointer') {
+            //         TweenMax.killTweensOf($(this));
+            //         $(this).hide();
+            //         // $(this).css({
+            //         // 'cursor': 'default',
+            //         // 'opacity': '1'
+            //         // });
+            //         animacion_entrada($("#sec08_imagen3"), "default", 0.7, 0);
+            //         parent.playAudio(185, 500, terminaAudio2_Sec8);
+            //     }
+            // });
+
+            // function terminaAudio2_Sec8() {
+            //     parpadea($("#botonCerrarNota1"), 0);
+            // }
+
+            // $("#botonCerrarNota1").click(function() {
+            //     if ($(this).css('cursor') == 'pointer') {
+            //         //TweenMax.killTweensOf($(this));
+            //         $(this).hide();
+
+            //         animacion_salida($('#sec08_imagen3'), "desaparece", 0);
+            //         parpadea($("#btnSiguiente8"), 0);
+            //     }
+            // });
+
+            function desapareceSeccion8() {
+                animacion_salida($('#sec08_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec08_imagen2'), "desaparece", 0);
+            }
+
+            $("#btnAtras8").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion8();
+                    muestraSeccion7();
+                }
+            });
+
+            $("#btnSiguiente8").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion8();
+                    muestraSeccion9();
+                }
+            });
+
+        };
+
+
+        function muestraSeccion9() {
+            console.log('9');
+
+            animacion_entrada($("#sec09_imagen1"), "izq_der", .7, .5);
+            animacion_entrada($("#sec09_imagen2"), "default", .7, 1);
+
+            parent.playAudio(12, 1000, terminaAudio1_Sec9);
+            // setTimeout(function() {
+            //     terminaAudio1_Sec9();
+            // }, 1000);
+
+            function terminaAudio1_Sec9() {
+                animacion_entrada($("#btnAtras9"), "default", 0, 1.5);
+                $("#btnAtras9").css({
+                    'opacity': '1',
+                    'cursor': 'pointer'
+                });
+                // parpadea($("#btnSiguiente9"), 0);
+                terminarPantalla();
+            }
+
+
+            function desapareceSeccion9() {
+                animacion_salida($('#sec09_imagen1'), "desaparece", 0);
+                animacion_salida($('#sec09_imagen2'), "desaparece", 0);
+            }
+
+            $("#btnAtras9").click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    //TweenMax.killTweensOf($(this));
+                    $(this).hide();
+
+                    desapareceBotonera();
+                    desapareceSeccion9();
+                    muestraSeccion8();
+                }
+            });
+
+            // $("#btnSiguiente9").click(function() {
+            //     if ($(this).css('cursor') == 'pointer') {
+            //         //TweenMax.killTweensOf($(this));
+            //         $(this).hide();
+
+            //         desapareceBotonera();
+            //         desapareceSeccion9();
+            //         muestraSeccion10();
+            //     }
+            // });
+
+        };
+
+
+
+
+        // function terminaAudio1() {
+        //     terminarPantalla();
+        // }
+
+
+        ///////////////// botón 1 ////////////////
+        // $("#boton1").click(function() {
+        //     if ($(this).css('cursor') == 'pointer') {
+        //         TweenMax.killTweensOf($(this));
+        //         $(this).hide();
+        //         // $(this).css({
+        //         // 'cursor': 'default',
+        //         // 'opacity': '1'
+        //         // });
+
+        //     terminarPantalla();
+        //     parent.nextPage();
+        //     }
+        // });
+
+
+
+        preload();
+
+    });
+</script>
+
+</html>
