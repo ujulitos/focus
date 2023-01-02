@@ -39,7 +39,7 @@ course.pages = [
     { title: "Pantalla", url: "Txn_Mngr_ECP_13ISN_01.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP_14Contabilizacion_01.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP_15Dispersion_01.html", navegacion: true, menu: true },
-    { title: "Pantalla", url: "Txn_Mngr_ECP_16Valesn_01.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_16Vales_01.html", navegacion: true, menu: true },
 ];
 
 /* Pantallas de recursos */
@@ -94,4 +94,20 @@ var grupoAudios = new buzz.group([
     /*40*/ new buzz.sound("contenido/audios/Percepciones_04", { formats: ["mp3"], preload: true }),
     /*41*/ new buzz.sound("contenido/audios/Percepciones_05", { formats: ["mp3"], preload: true }),
     /*42*/ new buzz.sound("contenido/audios/Percepciones_06", { formats: ["mp3"], preload: true }),
+    /*43*/ new buzz.sound("contenido/audios/Sueldos_01", { formats: ["mp3"], preload: true }),
+    /*44*/ new buzz.sound("contenido/audios/Sueldos_02", { formats: ["mp3"], preload: true }),
+    /*45*/ new buzz.sound("contenido/audios/Sueldos_03", { formats: ["mp3"], preload: true }),
+    /*46*/ new buzz.sound("contenido/audios/Sueldos_04", { formats: ["mp3"], preload: true }),
+    /*47*/ new buzz.sound("contenido/audios/Sueldos_05", { formats: ["mp3"], preload: true }),
+    /*48*/ new buzz.sound("contenido/audios/Sueldos_06", { formats: ["mp3"], preload: true }),
+    /*49*/ new buzz.sound("contenido/audios/Sueldos_07", { formats: ["mp3"], preload: true }),
+    /*50*/ new buzz.sound("contenido/audios/Nomina_01", { formats: ["mp3"], preload: true }),
+    /*51*/ new buzz.sound("contenido/audios/Nomina_02", { formats: ["mp3"], preload: true }),
+    /*52*/ new buzz.sound("contenido/audios/Nomina_03", { formats: ["mp3"], preload: true }),
+    /*53*/ new buzz.sound("contenido/audios/Nomina_04", { formats: ["mp3"], preload: true }),
+    /*54*/ new buzz.sound("contenido/audios/Nomina_05", { formats: ["mp3"], preload: true }),
+    /*55*/ new buzz.sound("contenido/audios/Nomina_06_07", { formats: ["mp3"], preload: true }),
+    /*56*/ new buzz.sound("contenido/audios/Nomina_08", { formats: ["mp3"], preload: true }),
+    /*57*/ new buzz.sound("contenido/audios/Nomina_09_11", { formats: ["mp3"], preload: true }),
+    /*58*/ new buzz.sound("contenido/audios/Nomina_12", { formats: ["mp3"], preload: true }),
 ]);
