@@ -35,6 +35,7 @@
     <img class="elementos" id="boton1" src="../img/pagina09/boton1.png" data-posX="191" data-posY="213" />
     <img class="elementos" id="popup1" src="../img/pagina09/popup1.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar1" src="../img/pagina09/botonCerrar.png" data-posX="870" data-posY="100" />
+    <img class="elementos" id="botonContinuar" src="../img/pagina09/botonContinuar.png" data-posX="420" data-posY="320" />
 
     <img class="elementos" id="boton2" src="../img/pagina09/boton2.png" data-posX="649" data-posY="194" />
     <img class="elementos" id="popup2_1" src="../img/pagina09/popup2_1.png" data-posX="0" data-posY="0" />
@@ -87,6 +88,7 @@
         const boton1 = $('#boton1');
         const popup1 = $('#popup1');
         const botonCerrar1 = $('#botonCerrar1');
+        const botonContinuar = $('#botonContinuar');
         const boton2 = $('#boton2');
         const popup2_1 = $('#popup2_1');
         const popup2_2 = $('#popup2_2');
@@ -191,13 +193,24 @@
 
                     window.open('../docs/Infografia_Control_de_Acceso_251122.pdf', '_blank');
 
-                    setTimeout(() => {
-                        animacionEntrada(popup1, 'aparecer', 1, 0);
-                        aplicacion.reproducirAudio(audio[1], terminaAudioPopup1, 0);
-                    }, 7000);
+                    parpadear(botonContinuar);
+                    // setTimeout(() => {
+                    //     animacionEntrada(popup1, 'aparecer', 1, 0);
+                    //     aplicacion.reproducirAudio(audio[1], terminaAudioPopup1, 0);
+                    // }, 7000);
                 }
             });
         }
+
+        botonContinuar.click(function() {
+            if ($(this).css('cursor') == 'pointer') {
+                dejarParpadear($(this));
+                animacionSalida($(this), 'default', .5, 0);
+
+                animacionEntrada(popup1, 'aparecer', 1, 0);
+                aplicacion.reproducirAudio(audio[1], terminaAudioPopup1, 0);
+            }
+        });
 
         // boton2
         function terminaAudioPopup1() {
