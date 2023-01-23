@@ -40,6 +40,9 @@
     <img class="elementos" id="popup0" src="../img/pagina07/popup0.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar0" src="../img/pagina07/botonCerrar.png" data-posX="780" data-posY="130" />
 
+    <img class="elementos" id="popupf" src="../img/pagina07/popupf.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="botonCerrarf" src="../img/pagina07/botonCerrar.png" data-posX="780" data-posY="130" />
+
     <!-- Script de la página -->
     <script>
         // Variable----------------------------------------------------
@@ -60,12 +63,15 @@
 
         const popup0 = $('#popup0');
         const botonCerrar0 = $('#botonCerrar0');
+        const popupf = $('#popupf');
+        const botonCerrarf = $('#botonCerrarf');
 
         // Audios------------------------------------------------------
         const audio = [
             new Audio('../audios/Pfizer_Documentacion_07_01.mp3'),
             new Audio('../audios/Pfizer_Documentacion_07_02.mp3'),
             new Audio('../audios/Pfizer_Documentacion_07_03.mp3'),
+            new Audio('../audios/Pfizer_Documentacion_07_04.mp3'),
         ]
 
         // Al cargarse la página
@@ -106,7 +112,7 @@
                 animacionSalida(popup0, 'default', 1, 0);
 
                 animacionEntrada(img02, 'aparecer', 1, .5);
-                aplicacion.reproducirAudio(audio[2], terminaAudioFinal, .5);
+                aplicacion.reproducirAudio(audio[2], terminaAudio2, .5);
 
                 animacionEntrada(img03, 'aparecer', 1, 2);
                 animacionEntrada(img04, 'aparecer', 1, 7);
@@ -120,6 +126,27 @@
             }
         });
 
+        function terminaAudio2() {
+            animacionEntrada(popupf, 'aparecer', 1, 0);
+            aplicacion.reproducirAudio(audio[3], terminaAudioPopupf, .5);
+        }
+
+        function terminaAudioPopupf() {
+            // animacionSalida(img02, 'default', 1, 0);
+            // animacionSalida(img01, 'default', 1, .3);
+            parpadear(botonCerrarf);
+
+            botonCerrarf.click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    dejarParpadear($(this));
+                    animacionSalida($(this), 'default', 1, 0);
+                    animacionSalida(popupf, 'default', 1, 0);
+
+                    terminaAudioFinal();
+                }
+            });
+
+        }
 
 
 

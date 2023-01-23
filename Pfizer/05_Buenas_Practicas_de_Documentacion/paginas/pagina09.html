@@ -47,25 +47,23 @@
     <img class="elementos drag" _id="5" id="pieza5" src="../img/pagina09/boton5.png" data-posX="320" data-posY="360" />
     <img class="elementos drag" _id="6" id="pieza6" src="../img/pagina09/boton6.png" data-posX="310" data-posY="270" />
 
-    <img class="elementos" id="popup1" src="../img/pagina09/popup1.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup1_1" src="../img/pagina09/popup1_1.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup1_2" src="../img/pagina09/popup1_2.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar1" src="../img/pagina09/botonCerrar.png" data-posX="870" data-posY="120" />
     <img class="elementos" id="popup2" src="../img/pagina09/popup2.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar2" src="../img/pagina09/botonCerrar.png" data-posX="870" data-posY="120" />
-    <img class="elementos" id="popup3" src="../img/pagina09/popup3.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup3_1" src="../img/pagina09/popup3_1.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup3_2" src="../img/pagina09/popup3_2.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar3" src="../img/pagina09/botonCerrar.png" data-posX="870" data-posY="120" />
-    <img class="elementos" id="popup4" src="../img/pagina09/popup4.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_1" src="../img/pagina09/popup4_1.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_2" src="../img/pagina09/popup4_2.png" data-posX="0" data-posY="0" />
+    <img class="elementos" id="popup4_3" src="../img/pagina09/popup4_3.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar4" src="../img/pagina09/botonCerrar.png" data-posX="870" data-posY="120" />
-    <img class="elementos" id="popup5" src="../img/pagina09/popup5.png" data-posX="0" data-posY="0" />
-    <img class="elementos" id="botonCerrar5" src="../img/pagina09/botonCerrar.png" data-posX="870" data-posY="120" />
-    <img class="elementos" id="popup6_1" src="../img/pagina09/popup6_1.png" data-posX="0" data-posY="0" />
-    <img class="elementos" id="popup6_2" src="../img/pagina09/popup6_2.png" data-posX="0" data-posY="0" />
-    <img class="elementos" id="popup6_3" src="../img/pagina09/popup6_3.png" data-posX="0" data-posY="0" />
-    <img class="elementos" id="botonCerrar6" src="../img/pagina09/botonCerrar.png" data-posX="870" data-posY="120" />
 
-    <img class="elementos" id="botonAdelante1" src="../img/pagina09/botonAdelante.png" data-posX="920" data-posY="330" />
-    <img class="elementos" id="botonAtras2" src="../img/pagina09/botonAtras.png" data-posX="20" data-posY="330" />
-    <img class="elementos" id="botonAdelante2" src="../img/pagina09/botonAdelante.png" data-posX="920" data-posY="330" />
-    <img class="elementos" id="botonAtras3" src="../img/pagina09/botonAtras.png" data-posX="20" data-posY="330" />
+    <img class="elementos" id="botonAdelante1" src="../img/pagina09/botonAdelante.png" data-posX="920" data-posY="100" />
+    <img class="elementos" id="botonAtras2" src="../img/pagina09/botonAtras.png" data-posX="20" data-posY="100" />
+    <img class="elementos" id="botonAdelante2" src="../img/pagina09/botonAdelante.png" data-posX="920" data-posY="100" />
+    <img class="elementos" id="botonAtras3" src="../img/pagina09/botonAtras.png" data-posX="20" data-posY="100" />
 
     <style>
         .boton {
@@ -89,29 +87,25 @@
         const botonCerrar0 = $('#botonCerrar0');
 
         const boton1 = $('#boton1');
-        const popup1 = $('#popup1');
+        const popup1_1 = $('#popup1_1');
+        const popup1_2 = $('#popup1_2');
         const botonCerrar1 = $('#botonCerrar1');
         const boton2 = $('#boton2');
         const popup2 = $('#popup2');
         const botonCerrar2 = $('#botonCerrar2');
         const boton3 = $('#boton3');
-        const popup3 = $('#popup3');
+        const popup3_1 = $('#popup3_1');
+        const popup3_2 = $('#popup3_2');
         const botonCerrar3 = $('#botonCerrar3');
         const boton4 = $('#boton4');
-        const popup4 = $('#popup4');
+        const popup4_1 = $('#popup4_1');
+        const popup4_2 = $('#popup4_2');
+        const popup4_3 = $('#popup4_3');
         const botonCerrar4 = $('#botonCerrar4');
-        const boton5 = $('#boton5');
-        const popup5 = $('#popup5');
-        const botonCerrar5 = $('#botonCerrar5');
-        const boton6 = $('#boton6');
-        const popup6_1 = $('#popup6_1');
-        const popup6_2 = $('#popup6_2');
-        const popup6_3 = $('#popup6_3');
-        const botonCerrar6 = $('#botonCerrar6');
 
         var scalePage = calcularEscala();
         console.log('scalePage', scalePage);
-        var cuantasPreguntas = 6; //← Numero de preguntas
+        var cuantasPreguntas = 4; //← Numero de preguntas
         var contador = 0;
         var no_objetos = new Array(1, 0); //← Numero de Piezas
         var dragsColocados = new Array();
@@ -131,7 +125,9 @@
             new Audio('../audios/Pfizer_Documentacion_09_03.mp3'),
             new Audio('../audios/Pfizer_Documentacion_09_04.mp3'),
             new Audio('../audios/Pfizer_Documentacion_09_05.mp3'),
+            new Audio('../audios/Pfizer_Documentacion_09_05a.mp3'),
             new Audio('../audios/Pfizer_Documentacion_09_06.mp3'),
+            new Audio('../audios/Pfizer_Documentacion_09_05_01.mp3'),
             new Audio('../audios/Pfizer_Documentacion_09_07.mp3'),
             new Audio('../audios/Pfizer_Documentacion_09_08.mp3'),
             // new Audio('../audios/audio0.mp3'),
@@ -184,14 +180,15 @@
                 animacionSalida($(this), 'default', 1, 0);
                 animacionSalida(popup0, 'default', 1, 0);
 
-                animacionEntrada(img02, 'aparecer', 1, .5);
-                aplicacion.reproducirAudio(audio[2], terminaAudio2, .5);
+                // animacionEntrada(img02, 'aparecer', 1, .5);
+                // aplicacion.reproducirAudio(audio[2], terminaAudio2, .5);
+                terminaAudio2();
             }
         });
 
 
         function terminaAudio2() {
-            animacionSalida(img02, 'default', 1, 0);
+            // animacionSalida(img02, 'default', 1, 0);
 
             setTimeout(() => {
                 iniciaActividad((contador + 1));
@@ -317,12 +314,19 @@
                     animacionSalida($("#pieza" + dragActivo), 'default', 1, 0);
 
                     setTimeout(() => {
-                        if (contador == 6) {
-                            animacionEntrada($("#popup6_1"), 'aparecer', 1, 0);
-                        } else {
+                        if (contador == 1) {
+                            animacionEntrada($("#popup1_1"), 'aparecer', 1, 0);
+                            aplicacion.reproducirAudio(audio[3], terminaAudioPopup, .5);
+                        } else if (contador == 2) {
                             animacionEntrada($("#popup" + contador), 'aparecer', 1, 0);
+                            aplicacion.reproducirAudio(audio[5], terminaAudioPopup, .5);
+                        } else if (contador == 3) {
+                            animacionEntrada($("#popup3_1"), 'aparecer', 1, 0);
+                            aplicacion.reproducirAudio(audio[9], terminaAudioPopup, .5);
+                        } else if (contador == 4) {
+                            animacionEntrada($("#popup4_1"), 'aparecer', 1, 0);
+                            aplicacion.reproducirAudio(audio[10], terminaAudioPopup, .5);
                         }
-                        aplicacion.reproducirAudio(audio[(contador + 2)], terminaAudioPopup, .5);
                     }, 500);
 
                 }
@@ -331,82 +335,151 @@
 
         function terminaAudioPopup() {
 
-            if (contador == 6) {
+            if (contador == 1) {
 
                 parpadear($('#botonAdelante1'));
 
-                $('#botonAdelante1').click(function() {
+                $('#botonAdelante1').off().click(function() {
                     if ($(this).css('cursor') == 'pointer') {
                         dejarParpadear($(this));
                         animacionSalida($(this), 'default', .5, 0);
 
-                        animacionSalida($("#popup6_1"), 'default', .5, 0);
-                        animacionEntrada($("#popup6_2"), 'aparecer', 1, 0);
-                        aplicacion.reproducirAudio(audio[9], terminaAudioPopup6_2, .5);
+                        animacionSalida($("#popup1_1"), 'default', .5, 0);
+                        animacionEntrada($("#popup1_2"), 'aparecer', 1, 0);
+                        aplicacion.reproducirAudio(audio[4], terminaAudioPopup1_2, .5);
                     }
                 });
 
-                function terminaAudioPopup6_2() {
+                function terminaAudioPopup1_2() {
                     parpadear($('#botonAtras2'));
-                    parpadear($('#botonAdelante2'));
+                    parpadear($('#botonCerrar' + contador));
 
-                    $('#botonAtras2').click(function() {
+                    $('#botonAtras2').off().click(function() {
                         if ($(this).css('cursor') == 'pointer') {
                             dejarParpadear($(this));
                             animacionSalida($(this), 'default', .5, 0);
                             dejarParpadear($('#botonAdelante2'));
                             animacionSalida($('#botonAdelante2'), 'default', 1, 0);
 
-                            animacionSalida($("#popup6_2"), 'default', .5, 0);
-                            animacionEntrada($("#popup6_1"), 'aparecer', 1, 0);
-                            aplicacion.reproducirAudio(audio[8], terminaAudioPopup, .5);
+                            animacionSalida($("#popup1_2"), 'default', .5, 0);
+                            animacionEntrada($("#popup1_1"), 'aparecer', 1, 0);
+                            aplicacion.reproducirAudio(audio[3], terminaAudioPopup, .5);
                         }
                     });
-                    $('#botonAdelante2').click(function() {
+                }
+
+            } else if (contador == 3) {
+
+                parpadear($('#botonAdelante1'));
+
+                $('#botonAdelante1').off().click(function() {
+                    if ($(this).css('cursor') == 'pointer') {
+                        dejarParpadear($(this));
+                        animacionSalida($(this), 'default', .5, 0);
+
+                        animacionSalida($("#popup3_1"), 'default', .5, 0);
+                        animacionEntrada($("#popup3_2"), 'aparecer', 1, 0);
+                        aplicacion.reproducirAudio(audio[7], terminaAudioPopup3_2, .5);
+                    }
+                });
+
+                function terminaAudioPopup3_2() {
+                    parpadear($('#botonAtras2'));
+                    parpadear($('#botonCerrar' + contador));
+
+                    $('#botonAtras2').off().click(function() {
+                        if ($(this).css('cursor') == 'pointer') {
+                            dejarParpadear($(this));
+                            animacionSalida($(this), 'default', .5, 0);
+                            dejarParpadear($('#botonAdelante2'));
+                            animacionSalida($('#botonAdelante2'), 'default', 1, 0);
+
+                            animacionSalida($("#popup3_2"), 'default', .5, 0);
+                            animacionEntrada($("#popup3_1"), 'aparecer', 1, 0);
+                            aplicacion.reproducirAudio(audio[9], terminaAudioPopup, .5);
+                        }
+                    });
+                }
+
+            } else if (contador == 4) {
+
+                parpadear($('#botonAdelante1'));
+
+                $('#botonAdelante1').off().click(function() {
+                    if ($(this).css('cursor') == 'pointer') {
+                        dejarParpadear($(this));
+                        animacionSalida($(this), 'default', .5, 0);
+
+                        animacionSalida($("#popup4_1"), 'default', .5, 0);
+                        animacionEntrada($("#popup4_2"), 'aparecer', 1, 0);
+                        aplicacion.reproducirAudio(audio[11], terminaAudioPopup4_2, .5);
+                    }
+                });
+
+                function terminaAudioPopup4_2() {
+                    parpadear($('#botonAtras2'));
+                    parpadear($('#botonAdelante2'));
+
+                    $('#botonAtras2').off().click(function() {
+                        if ($(this).css('cursor') == 'pointer') {
+                            dejarParpadear($(this));
+                            animacionSalida($(this), 'default', .5, 0);
+                            dejarParpadear($('#botonAdelante2'));
+                            animacionSalida($('#botonAdelante2'), 'default', 1, 0);
+
+                            animacionSalida($("#popup4_2"), 'default', .5, 0);
+                            animacionEntrada($("#popup4_1"), 'aparecer', 1, 0);
+                            aplicacion.reproducirAudio(audio[10], terminaAudioPopup, .5);
+                        }
+                    });
+                    $('#botonAdelante2').off().click(function() {
                         if ($(this).css('cursor') == 'pointer') {
                             dejarParpadear($(this));
                             animacionSalida($(this), 'default', .5, 0);
                             dejarParpadear($('#botonAtras2'));
                             animacionSalida($('#botonAtras2'), 'default', .5, 0);
 
-                            animacionSalida($("#popup6_2"), 'default', .5, 0);
-                            animacionEntrada($("#popup6_3"), 'aparecer', 1, 0);
-                            aplicacion.reproducirAudio(audio[10], terminaAudioPopup6_3, .5);
+                            animacionSalida($("#popup4_2"), 'default', .5, 0);
+                            animacionEntrada($("#popup4_3"), 'aparecer', 1, 0);
+                            aplicacion.reproducirAudio(audio[12], terminaAudioPopup4_3, .5);
                         }
                     });
                 }
 
-                function terminaAudioPopup6_3() {
+                function terminaAudioPopup4_3() {
                     parpadear($('#botonAtras3'));
                     parpadear($('#botonCerrar' + contador));
 
-                    $('#botonAtras3').click(function() {
+                    $('#botonAtras3').off().click(function() {
                         if ($(this).css('cursor') == 'pointer') {
                             dejarParpadear($(this));
                             animacionSalida($(this), 'default', .5, 0);
                             dejarParpadear($('#botonCerrar' + contador));
                             animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
 
-                            animacionSalida($("#popup6_3"), 'default', .5, 0);
-                            animacionEntrada($("#popup6_2"), 'aparecer', 1, 0);
-                            aplicacion.reproducirAudio(audio[9], terminaAudioPopup6_2, .5);
+                            animacionSalida($("#popup4_3"), 'default', .5, 0);
+                            animacionEntrada($("#popup4_2"), 'aparecer', 1, 0);
+                            aplicacion.reproducirAudio(audio[11], terminaAudioPopup4_2, .5);
                         }
                     });
-                }
-
-                function terminaAudioPopup6_4() {
-                    parpadear($('#botonCerrar' + contador));
                 }
 
             } else {
                 parpadear($('#botonCerrar' + contador));
             }
 
-            $('#botonCerrar' + contador).click(function() {
+            $('#botonCerrar' + contador).off().click(function() {
                 if ($(this).css('cursor') == 'pointer') {
+                    dejarParpadear($(this));
                     animacionSalida($(this), 'default', .5, 0);
                     animacionSalida($('#popup' + contador), 'default', .5, 0);
-                    animacionSalida($('#popup6_3'), 'default', .5, 0);
+                    animacionSalida($('#popup1_1'), 'default', .5, 0);
+                    animacionSalida($('#popup1_2'), 'default', .5, 0);
+                    animacionSalida($('#popup3_1'), 'default', .5, 0);
+                    animacionSalida($('#popup3_2'), 'default', .5, 0);
+                    animacionSalida($('#popup4_1'), 'default', .5, 0);
+                    animacionSalida($('#popup4_2'), 'default', .5, 0);
+                    animacionSalida($('#popup4_3'), 'default', .5, 0);
                     animacionSalida($('#botonAtras2'), 'default', .5, 0);
                     animacionSalida($('#botonAtras3'), 'default', .5, 0);
 

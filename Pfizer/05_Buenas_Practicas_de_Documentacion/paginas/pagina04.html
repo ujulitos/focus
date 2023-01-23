@@ -79,7 +79,7 @@
         function iniciarContenido() {
             animacionEntrada(titulo, 'izquierda-derecha', .5, .5);
             animacionEntrada(img01, 'aparecer', 1, 1);
-            animacionEntrada(img02, 'aparecer', 1, 1.5);
+            // animacionEntrada(img02, 'aparecer', 1, 1.5);
 
             aplicacion.reproducirAudio(audio[0], terminaAudio1, .5);
 
@@ -106,6 +106,7 @@
                 dejarParpadear($(this));
                 animacionSalida($(this), 'default', 1, 0);
                 animacionSalida(popup0, 'default', 1, 0);
+                animacionEntrada(img02, 'aparecer', 1, 0);
                 aplicacion.reproducirAudio(audio[2], terminaAudio2, .5);
             }
         });
