@@ -79,20 +79,8 @@
     <img class="elementos" id="popup7_2" src="../img/pagina12/popup7_2.png" data-posX="0" data-posY="0" />
     <img class="elementos" id="botonCerrar7" src="../img/pagina12/botonCerrar.png" data-posX="910" data-posY="90" />
 
-    <img class="elementos" id="botonAdelante1" src="../img/pagina12/botonAdelante.png" data-posX="920" data-posY="120" />
-    <img class="elementos" id="botonAtras1" src="../img/pagina12/botonAtras.png" data-posX="20" data-posY="120" />
-    <img class="elementos" id="botonAdelante2" src="../img/pagina12/botonAdelante.png" data-posX="920" data-posY="120" />
-    <img class="elementos" id="botonAtras2" src="../img/pagina12/botonAtras.png" data-posX="20" data-posY="120" />
-    <img class="elementos" id="botonAdelante3" src="../img/pagina12/botonAdelante.png" data-posX="920" data-posY="120" />
-    <img class="elementos" id="botonAtras3" src="../img/pagina12/botonAtras.png" data-posX="20" data-posY="120" />
-    <img class="elementos" id="botonAdelante4" src="../img/pagina12/botonAdelante.png" data-posX="920" data-posY="120" />
-    <img class="elementos" id="botonAtras4" src="../img/pagina12/botonAtras.png" data-posX="20" data-posY="120" />
-    <img class="elementos" id="botonAdelante5" src="../img/pagina12/botonAdelante.png" data-posX="920" data-posY="120" />
-    <img class="elementos" id="botonAtras5" src="../img/pagina12/botonAtras.png" data-posX="20" data-posY="120" />
-    <img class="elementos" id="botonAdelante6" src="../img/pagina12/botonAdelante.png" data-posX="920" data-posY="120" />
-    <img class="elementos" id="botonAtras6" src="../img/pagina12/botonAtras.png" data-posX="20" data-posY="120" />
-    <img class="elementos" id="botonAdelante7" src="../img/pagina12/botonAdelante.png" data-posX="920" data-posY="120" />
-    <img class="elementos" id="botonAtras7" src="../img/pagina12/botonAtras.png" data-posX="20" data-posY="120" />
+    <img class="elementos" id="botonAdelante" src="../img/pagina12/botonAdelante.png" data-posX="920" data-posY="120" />
+    <img class="elementos" id="botonAtras" src="../img/pagina12/botonAtras.png" data-posX="280" data-posY="120" />
 
     <div id="link1" class="elementos boton" data-posX="390" data-posY="295" style="width: 485px; height: 60px;"></div>
 
@@ -242,9 +230,8 @@
         }
 
         function terminaAudio2() {
-            parpadear($('#botonAdelante1'));
-
-            $('#botonAdelante1').off().click(function() {
+            parpadear($('#botonAdelante'));
+            $('#botonAdelante').off().click(function() {
                 if ($(this).css('cursor') == 'pointer') {
                     dejarParpadear($(this));
                     animacionSalida($(this), 'default', 1, 0);
@@ -257,12 +244,28 @@
         }
 
         function terminaAudio3() {
-            parpadear($('#botonAdelante2'));
-
-            $('#botonAdelante2').off().click(function() {
+            parpadear($('#botonAtras'));
+            $('#botonAtras').off().click(function() {
                 if ($(this).css('cursor') == 'pointer') {
-                    dejarParpadear($(this));
-                    animacionSalida($(this), 'default', 1, 0);
+                    dejarParpadear($('#botonAtras'));
+                    animacionSalida($('#botonAtras'), 'default', .5, 0);
+                    dejarParpadear($('#botonAdelante'));
+                    animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
+                    animacionSalida(img05, 'default', 1, 0);
+
+                    animacionEntrada(img04, 'aparecer', 1, 1);
+                    aplicacion.reproducirAudio(audio[2], terminaAudio2, 1);
+                }
+            });
+
+            parpadear($('#botonAdelante'));
+            $('#botonAdelante').off().click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    dejarParpadear($('#botonAtras'));
+                    animacionSalida($('#botonAtras'), 'default', .5, 0);
+                    dejarParpadear($('#botonAdelante'));
+                    animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                     animacionSalida(img05, 'default', 1, 0);
                     animacionEntrada(img06, 'aparecer', 1, .5);
@@ -272,12 +275,28 @@
         }
 
         function terminaAudio4() {
-            parpadear($('#botonAdelante3'));
-
-            $('#botonAdelante3').off().click(function() {
+            parpadear($('#botonAtras'));
+            $('#botonAtras').off().click(function() {
                 if ($(this).css('cursor') == 'pointer') {
-                    dejarParpadear($(this));
-                    animacionSalida($(this), 'default', 1, 0);
+                    dejarParpadear($('#botonAtras'));
+                    animacionSalida($('#botonAtras'), 'default', .5, 0);
+                    dejarParpadear($('#botonAdelante'));
+                    animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
+                    animacionSalida(img06, 'default', 1, 0);
+
+                    animacionEntrada(img05, 'aparecer', 1, .5);
+                    aplicacion.reproducirAudio(audio[3], terminaAudio3, 1);
+                }
+            });
+
+            parpadear($('#botonAdelante'));
+            $('#botonAdelante').off().click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    dejarParpadear($('#botonAtras'));
+                    animacionSalida($('#botonAtras'), 'default', .5, 0);
+                    dejarParpadear($('#botonAdelante'));
+                    animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                     animacionSalida(img06, 'default', 1, 0);
                     animacionEntrada(img07, 'aparecer', 1, .5);
@@ -295,12 +314,29 @@
         }
 
         function terminaAudio5() {
-            parpadear($('#botonAdelante4'));
-
-            $('#botonAdelante4').off().click(function() {
+            parpadear($('#botonAtras'));
+            $('#botonAtras').off().click(function() {
                 if ($(this).css('cursor') == 'pointer') {
-                    dejarParpadear($(this));
-                    animacionSalida($(this), 'default', 1, 0);
+                    dejarParpadear($('#botonAtras'));
+                    animacionSalida($('#botonAtras'), 'default', .5, 0);
+                    dejarParpadear($('#botonAdelante'));
+                    animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
+                    animacionSalida(img07, 'default', 1, 0);
+                    animacionSalida($('#link1'), 'default', 1, 0);
+
+                    animacionEntrada(img06, 'aparecer', 1, .5);
+                    aplicacion.reproducirAudio(audio[4], terminaAudio4, 1);
+                }
+            });
+
+            parpadear($('#botonAdelante'));
+            $('#botonAdelante').off().click(function() {
+                if ($(this).css('cursor') == 'pointer') {
+                    dejarParpadear($('#botonAtras'));
+                    animacionSalida($('#botonAtras'), 'default', .5, 0);
+                    dejarParpadear($('#botonAdelante'));
+                    animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                     animacionSalida(img07, 'default', 1, 0);
                     animacionSalida($('#link1'), 'default', 1, 0);
@@ -330,10 +366,14 @@
                             aplicacion.reproducirAudio(audio[7], terminaAudioPopup1_1, 0);
 
                             function terminaAudioPopup1_1() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, 0);
@@ -343,10 +383,29 @@
                             }
 
                             function terminaAudioPopup1_2() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
+
+                                        animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[7], terminaAudioPopup1_1, 0);
+                                    }
+                                });
+
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_3'), 'aparecer', 1, 0);
@@ -356,10 +415,31 @@
                             }
 
                             function terminaAudioPopup1_3() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
+
+                                        animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[7], terminaAudioPopup1_1, 0);
+                                    }
+                                });
+
                                 parpadear($('#botonCerrar' + contador));
                                 $('#botonCerrar' + contador).off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
                                         animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                                         animacionSalida($('#popup' + contador + '_3'), 'default', 0, 0);
                                         terminaAudioPopupF();
@@ -372,10 +452,14 @@
                             aplicacion.reproducirAudio(audio[10], terminaAudioPopup2_1, 0);
 
                             function terminaAudioPopup2_1() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, 0);
@@ -385,10 +469,29 @@
                             }
 
                             function terminaAudioPopup2_2() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
+
+                                        animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[10], terminaAudioPopup2_1, 0);
+                                    }
+                                });
+
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_3'), 'aparecer', 1, 0);
@@ -398,10 +501,31 @@
                             }
 
                             function terminaAudioPopup2_3() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_3'), 'default', 0, 0);
+
+                                        animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[11], terminaAudioPopup2_2, .5);
+                                    }
+                                });
+
                                 parpadear($('#botonCerrar' + contador));
                                 $('#botonCerrar' + contador).off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
                                         animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                                         animacionSalida($('#popup' + contador + '_3'), 'default', 0, 0);
                                         terminaAudioPopupF();
@@ -414,10 +538,14 @@
                             aplicacion.reproducirAudio(audio[13], terminaAudioPopup3_1, 0);
 
                             function terminaAudioPopup3_1() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, 0);
@@ -427,10 +555,31 @@
                             }
 
                             function terminaAudioPopup3_2() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
+
+                                        animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[13], terminaAudioPopup3_1, 0);
+                                    }
+                                });
+
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_3'), 'aparecer', 1, 0);
@@ -440,10 +589,31 @@
                             }
 
                             function terminaAudioPopup3_3() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_3'), 'default', .5, 0);
+
+                                        animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[14], terminaAudioPopup3_2, .5);
+                                    }
+                                });
+
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_3'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_4'), 'aparecer', 1, 0);
@@ -453,10 +623,31 @@
                             }
 
                             function terminaAudioPopup3_4() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_4'), 'default', 0, 0);
+
+                                        animacionEntrada($('#popup' + contador + '_3'), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[15], terminaAudioPopup3_3, .5);
+                                    }
+                                });
+
                                 parpadear($('#botonCerrar' + contador));
                                 $('#botonCerrar' + contador).off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
                                         animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                                         animacionSalida($('#popup' + contador + '_4'), 'default', 0, 0);
                                         terminaAudioPopupF();
@@ -473,6 +664,10 @@
                                 $('#botonCerrar' + contador).off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
                                         animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                                         animacionSalida($('#popup' + contador + '_1'), 'default', 0, 0);
                                         terminaAudioPopupF();
@@ -485,10 +680,14 @@
                             aplicacion.reproducirAudio(audio[18], terminaAudioPopup5_1, 0);
 
                             function terminaAudioPopup5_1() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, 0);
@@ -498,10 +697,31 @@
                             }
 
                             function terminaAudioPopup5_2() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
+
+                                        animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[18], terminaAudioPopup5_1, 0);
+                                    }
+                                });
+
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_3'), 'aparecer', 1, 0);
@@ -511,10 +731,31 @@
                             }
 
                             function terminaAudioPopup5_3() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_3'), 'default', .5, 0);
+
+                                        animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[19], terminaAudioPopup5_2, .5);
+                                    }
+                                });
+
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_3'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_4'), 'aparecer', 1, 0);
@@ -524,10 +765,31 @@
                             }
 
                             function terminaAudioPopup5_4() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_4'), 'default', .5, 0);
+
+                                        animacionEntrada($('#popup' + contador + '_3'), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[20], terminaAudioPopup5_3, .5);
+                                    }
+                                });
+
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_4'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_5'), 'aparecer', 1, 0);
@@ -537,10 +799,31 @@
                             }
 
                             function terminaAudioPopup5_5() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_5'), 'default', .5, 0);
+
+                                        animacionEntrada($('#popup' + contador + '_4'), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[21], terminaAudioPopup5_4, .5);
+                                    }
+                                });
+
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_5'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_6'), 'aparecer', 1, 0);
@@ -550,10 +833,31 @@
                             }
 
                             function terminaAudioPopup5_6() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_6'), 'default', .5, 0);
+
+                                        animacionEntrada($('#popup' + contador + '_5'), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[22], terminaAudioPopup5_5, .5);
+                                    }
+                                });
+
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_6'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_7'), 'aparecer', 1, 0);
@@ -563,10 +867,31 @@
                             }
 
                             function terminaAudioPopup5_7() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_7'), 'default', 0, 0);
+
+                                        animacionEntrada($('#popup' + contador + '_6'), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[23], terminaAudioPopup5_6, .5);
+                                    }
+                                });
+
                                 parpadear($('#botonCerrar' + contador));
                                 $('#botonCerrar' + contador).off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
                                         animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                                         animacionSalida($('#popup' + contador + '_7'), 'default', 0, 0);
                                         terminaAudioPopupF();
@@ -583,6 +908,10 @@
                                 $('#botonCerrar' + contador).off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
                                         animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                                         animacionSalida($('#popup' + contador + '_1'), 'default', 0, 0);
                                         terminaAudioPopupF();
@@ -595,10 +924,14 @@
                             aplicacion.reproducirAudio(audio[26], terminaAudioPopup7_1, 0);
 
                             function terminaAudioPopup7_1() {
-                                parpadear($('#botonAdelante' + contador));
-                                $('#botonAdelante' + contador).off().click(function() {
+                                parpadear($('#botonAdelante'));
+                                $('#botonAdelante').off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
-                                        animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+
                                         animacionSalida($('#popup' + contador + '_1'), 'default', .5, 0);
 
                                         animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, 0);
@@ -608,10 +941,31 @@
                             }
 
                             function terminaAudioPopup7_2() {
+                                parpadear($('#botonAtras'));
+                                $('#botonAtras').off().click(function() {
+                                    if ($(this).css('cursor') == 'pointer') {
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
+                                        dejarParpadear($('#botonCerrar' + contador));
+                                        animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
+
+                                        animacionSalida($('#popup' + contador + '_2'), 'default', 0, 0);
+
+                                        animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[26], terminaAudioPopup7_1, 0);
+                                    }
+                                });
+
                                 parpadear($('#botonCerrar' + contador));
                                 $('#botonCerrar' + contador).off().click(function() {
                                     if ($(this).css('cursor') == 'pointer') {
                                         animacionSalida($(this), 'default', .5, 0);
+                                        dejarParpadear($('#botonAtras'));
+                                        animacionSalida($('#botonAtras'), 'default', .5, 0);
+                                        dejarParpadear($('#botonAdelante'));
+                                        animacionSalida($('#botonAdelante'), 'default', .5, 0);
 
                                         animacionSalida($('#popup' + contador + '_2'), 'default', 0, 0);
                                         terminaAudioPopupF();
