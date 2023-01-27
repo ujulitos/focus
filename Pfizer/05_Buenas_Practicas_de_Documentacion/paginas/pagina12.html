@@ -80,7 +80,7 @@
     <img class="elementos" id="botonCerrar7" src="../img/pagina12/botonCerrar.png" data-posX="910" data-posY="90" />
 
     <img class="elementos" id="botonAdelante" src="../img/pagina12/botonAdelante.png" data-posX="920" data-posY="120" />
-    <img class="elementos" id="botonAtras" src="../img/pagina12/botonAtras.png" data-posX="280" data-posY="120" />
+    <img class="elementos" id="botonAtras" src="../img/pagina12/botonAtras.png" data-posX="40" data-posY="120" />
 
     <div id="link1" class="elementos boton" data-posX="390" data-posY="295" style="width: 485px; height: 60px;"></div>
 
@@ -425,10 +425,10 @@
                                         dejarParpadear($('#botonCerrar' + contador));
                                         animacionSalida($('#botonCerrar' + contador), 'default', .5, 0);
 
-                                        animacionSalida($('#popup' + contador + '_2'), 'default', .5, 0);
+                                        animacionSalida($('#popup' + contador + '_3'), 'default', .5, 0);
 
-                                        animacionEntrada($("#popup" + contador + "_1"), 'aparecer', 1, 0);
-                                        aplicacion.reproducirAudio(audio[7], terminaAudioPopup1_1, 0);
+                                        animacionEntrada($('#popup' + contador + '_2'), 'aparecer', 1, 0);
+                                        aplicacion.reproducirAudio(audio[8], terminaAudioPopup1_2, .5);
                                     }
                                 });
 
