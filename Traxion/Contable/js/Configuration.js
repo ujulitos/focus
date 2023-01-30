@@ -23,7 +23,7 @@ var course = new Object();
 course.pages = [
     { title: "Pantalla", url: "Txn_Mngr_ECP__01.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP__02.html", navegacion: true, menu: true },
-    { title: "Pantalla", url: "Txn_Mngr_ECP__03.html", navegacion: true, menu: true },
+    // { title: "Pantalla", url: "Txn_Mngr_ECP__03.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP_01Finiquito_01.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP_02Creditos_01.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP_03CuotasIMSS_01.html", navegacion: true, menu: true },
@@ -44,6 +44,8 @@ course.pages = [
     { title: "Pantalla", url: "Txn_Mngr_ECP_18PEAguinaldo_01.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP_19PEBonos_01.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Txn_Mngr_ECP_20PEPTU_01.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_21ContOracle_01.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Txn_Mngr_ECP_22RepNomina_01.html", navegacion: true, menu: true },
 ];
 
 /* Pantallas de recursos */
