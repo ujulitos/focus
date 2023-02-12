@@ -23,6 +23,7 @@ function descargaReporte() {
     var elRegistro;
     var cuantasTasks;
     var elNombre;
+    moment.locale('en');
     /***********Variables usadas para pintar el reporte**********/
     var nombre;
     var usuario;
@@ -32,7 +33,7 @@ function descargaReporte() {
     const arregloCategorias = [];
     const arregloMensajes = [];
     const arregloTask = [];
-    var totalDias;
+    var totaldays;
     var totalCategorias;
     var totalTask;
     var totalMessage;
@@ -40,9 +41,11 @@ function descargaReporte() {
     var dataTasks;
     /************************************************************************/
 
+    const URLTask = "" + laUrlAPI + "/Tasks/.json?auth=" + secret + "";
+
     function cargaDatos() {
         $.ajax({
-            url: 'js/tasks.json',
+            url: URLTask,
             type: 'get',
             dataType: 'json',
             cache: false,
@@ -127,12 +130,12 @@ function descargaReporte() {
                     }
                     console.log('cuantasTasks', cuantasTasks);
 
-                    console.log(' cuantasCats_Semana', 1, Object.keys(Object.values(dataTasks.weeks['week0' + 1].cats)).length);
+                    // console.log(' cuantasCats_Semana', 1, Object.keys(Object.values(dataTasks.weeks['week0' + 1].cats)).length);
 
                     for (a = 1; a <= cuantasSemanas; a++) {
                         this['cuantasCats_Semana' + a] = Object.keys(Object.values(dataTasks.weeks['week0' + a].cats)).length;
                         that = this;
-                        console.log(' cuantasCats_Semana', a, this['cuantasCats_Semana' + a]);
+                        // console.log(' cuantasCats_Semana', a, this['cuantasCats_Semana' + a]);
 
                         for (b = 1; b <= that['cuantasCats_Semana' + a]; b++) {
                             that['cuantasCats_Semana' + a + '_subCat' + b] = Object.keys(Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].subcats).length;
@@ -142,6 +145,19 @@ function descargaReporte() {
                                 that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c] = Object.keys(Object.values(Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].subcats)[(c - 1)].tasks).length;
                                 // console.log('cuantasCats_Semana', a + '_subCat' + b + '_task' + c, that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c]);
 
+                                for (d = 1; d <= that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c]; d++) {
+                                    // console.log('cuantosDays', d);
+
+                                    // if (d != 1) {
+                                    that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c + '_day' + d] = Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)][1];
+
+                                    if (that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c + '_day' + d] == 'all') {
+                                        that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c + '_day' + d] = 1;
+                                        that['cuantasCats_SemanaX' + a + '_subCat' + b + '_task' + c + '_day' + d] = 'all';
+                                    }
+                                    // console.log('cuantasCats_Semana', a + '_subCat' + b + '_task' + d, that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c + '_day' + d]);
+                                    // }
+                                }
                             }
                             // console.log('------------------------');
                         }
@@ -180,91 +196,124 @@ function descargaReporte() {
                         for (b = 1; b <= that['cuantasCats_Semana' + a]; b++) {
                             for (c = 1; c <= that['cuantasCats_Semana' + a + '_subCat' + b]; c++) {
                                 for (d = 1; d <= that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c]; d++) {
+                                    for (e = 1; e <= that['cuantasCats_Semana' + a + '_subCat' + b + '_task' + c + '_day' + d]; e++) {
 
-                                    that['semana' + a + '_Checked'] = false;
-                                    that['semana' + a + '_cat' + b + '_Checked'] = false;
-                                    that['semana' + a + '_cat' + b + '_subcat' + c + '_Checked'] = false;
-                                    that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_Checked'] = false;
+                                        that['semana' + a + '_Checked'] = false;
+                                        that['semana' + a + '_cat' + b + '_Checked'] = false;
+                                        that['semana' + a + '_cat' + b + '_subcat' + c + '_Checked'] = false;
+                                        that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_Checked'] = false;
+                                        that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_day' + e + '_Checked'] = false;
 
-                                    contenidoReporte += '<tr>';
-                                    contenidoReporte += '<td class="row_nombre">' + dataReg.Name.replace(/ /g, "&nbsp;") + '</td>';
-                                    contenidoReporte += '<td class="row_nombre_coach">' + elPerfilNombre + ' ' + elPerfilApellido + '</td>';
-                                    contenidoReporte += '<td class="row_start_date">' + laStartDate.replace(/ /g, "&nbsp;") + '</td>';
-                                    that['idTablaSemana'] = a;
-                                    // console.log('that[idTablaSemana]', that['idTablaSemana']);
-                                    contenidoReporte += '<td>' + dataTasks.weeks['week0' + a].name.replace(/ /g, "&nbsp;") + '</td>';
-                                    that['idTablaCat'] = b;
-                                    // console.log('that[idTablaCat]', that['idTablaCat']);
-                                    contenidoReporte += '<td>' + Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
+                                        contenidoReporte += '<tr>';
+                                        contenidoReporte += '<td class="row_nombre">' + dataReg.Name.replace(/ /g, "&nbsp;") + '</td>';
+                                        contenidoReporte += '<td class="row_nombre_coach">' + elPerfilNombre + ' ' + elPerfilApellido + '</td>';
+                                        contenidoReporte += '<td class="row_start_date">' + moment(laStartDate).format('MMMM Do YYYY') + '</td>';
+                                        that['idTablaSemana'] = a;
+                                        // console.log('that[idTablaSemana]', that['idTablaSemana']);
+                                        contenidoReporte += '<td>' + dataTasks.weeks['week0' + a].name.replace(/ /g, "&nbsp;") + '</td>';
+                                        that['idTablaCat'] = b;
+                                        // console.log('that[idTablaCat]', that['idTablaCat']);
+                                        contenidoReporte += '<td>' + Object.values(dataTasks.weeks['week0' + a].cats)[(b - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
 
-                                    that['idTablaSubCat'] = c;
-                                    // console.log('that[idTablaSubCat]', that['idTablaSubCat']);
-                                    contenidoReporte += '<td>' + Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
-                                    that['idTablaTarea'] = d;
-                                    // console.log('that[idTablaTarea]', that['idTablaTarea']);
-                                    // contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)].replace(/ /g, "&nbsp;") + '</td>';
-                                    contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)][0] + '</td>';
+                                        that['idTablaSubCat'] = c;
+                                        // console.log('that[idTablaSubCat]', that['idTablaSubCat']);
+                                        contenidoReporte += '<td>' + Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].name.replace(/ /g, "&nbsp;") + '</td>';
+                                        that['idTablaTarea'] = d;
+                                        // console.log('that[idTablaTarea]', that['idTablaTarea']);
+                                        // contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)].replace(/ /g, "&nbsp;") + '</td>';
 
-
-                                    for (m = 1; m <= cuantasTasks; m++) {
-
-                                        if (cuantasTasks == 0) {
-                                            lasTasks[(m - 1)] = ' ';
+                                        if (that['cuantasCats_SemanaX' + a + '_subCat' + b + '_task' + c + '_day' + d] != 'all') {
+                                            contenidoReporte += '<td>' + 'Day ' + e + ' - ' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)][0].replace(/ /g, "&nbsp;") + '</td>';
+                                        } else {
+                                            contenidoReporte += '<td>' + Object.values(Object.values(Object.values(Object.values(dataTasks.weeks['week0' + a].cats))[(b - 1)].subcats)[(c - 1)].tasks)[(d - 1)][0].replace(/ /g, "&nbsp;") + '</td>';
                                         }
+                                        that['idTablaDay'] = e;
 
-                                        if (m <= cuantasTasks) {
+                                        for (m = 1; m <= cuantasTasks; m++) {
 
-                                            var elRegistro_ = lasTasks[(m - 1)];
-                                            // console.log('elRegistro_', elRegistro_);
-
-                                            if (lasTasks[0] != '0') {
-                                                var elRegistroSemanaPrev = lasTasks[(m - 1)].split('laTask_s')[1];
-                                                // console.log('elRegistroSemanaPrev', elRegistroSemanaPrev);
-                                                var elRegistroSemana = elRegistroSemanaPrev.split('_c')[0];
-                                                // console.log('elRegistroSemana', elRegistroSemana);
-
-                                                var elRegistroCatPrev = lasTasks[(m - 1)].split('_c')[1];
-                                                // console.log('elRegistroCatPrev', elRegistroCatPrev);
-                                                var elRegistroCat = elRegistroCatPrev.split('_sc')[0];
-                                                // console.log('elRegistroCat', elRegistroCat);
-
-                                                var elRegistroSubcatPrev = lasTasks[(m - 1)].split('_sc')[1];
-                                                // console.log('elRegistroSubcatPrev', elRegistroSubcatPrev);
-                                                var elRegistroSubcat = elRegistroSubcatPrev.split('_t')[0];
-                                                // console.log('elRegistroSubcat', elRegistroSubcat);
-
-                                                var elRegistroTask = lasTasks[(m - 1)].split('t')[1];
-                                                // console.log('elRegistroTask', elRegistroTask);
+                                            if (cuantasTasks == 0) {
+                                                lasTasks[(m - 1)] = ' ';
                                             }
 
-                                            if (elRegistroSemana == that['idTablaSemana']) {
-                                                that['semana' + a + '_Checked'] = true;
-                                                if (elRegistroCat == that['idTablaCat']) {
-                                                    that['semana' + a + '_cat' + b + '_Checked'] = true;
-                                                    if (elRegistroSubcat == that['idTablaSubCat']) {
-                                                        that['semana' + a + '_cat' + b + '_subcat' + c + '_Checked'] = true;
-                                                        if (elRegistroTask == that['idTablaTarea']) {
-                                                            that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_Checked'] = true;
+                                            if (m <= cuantasTasks) {
+
+                                                // var elRegistro_ = lasTasks[(m - 1)];
+                                                // console.log('elRegistro_', elRegistro_);
+
+                                                if (lasTasks[0] != '0') {
+                                                    var elRegistroSemanaPrev = lasTasks[(m - 1)].split('laTask_s')[1];
+                                                    // console.log('elRegistroSemanaPrev', elRegistroSemanaPrev);
+                                                    var elRegistroSemana = elRegistroSemanaPrev.split('_c')[0];
+                                                    // console.log('elRegistroSemana', elRegistroSemana);
+
+                                                    var elRegistroCatPrev = lasTasks[(m - 1)].split('_c')[1];
+                                                    // console.log('elRegistroCatPrev', elRegistroCatPrev);
+                                                    var elRegistroCat = elRegistroCatPrev.split('_sc')[0];
+                                                    // console.log('elRegistroCat', elRegistroCat);
+
+                                                    var elRegistroSubcatPrev = lasTasks[(m - 1)].split('_sc')[1];
+                                                    // console.log('elRegistroSubcatPrev', elRegistroSubcatPrev);
+                                                    var elRegistroSubcat = elRegistroSubcatPrev.split('_t')[0];
+                                                    // console.log('elRegistroSubcat', elRegistroSubcat);
+
+                                                    // var elRegistroTask = lasTasks[(m - 1)].split('t')[1];
+                                                    // if (isNaN(elRegistroTask)) {
+                                                    var elRegistroTaskPrev = lasTasks[(m - 1)].split('_t')[1];
+                                                    var elRegistroTask = elRegistroTaskPrev.split('_d')[0];
+                                                    // }
+                                                    // console.log('elRegistroTask', elRegistroTask);
+
+                                                    var elRegistroDay = lasTasks[(m - 1)].split('d')[1];
+                                                    // if (elRegistroDay == undefined) {
+                                                    //     elRegistroDay = lasTasks[(m - 1)].split('t')[1];
+                                                    // }
+                                                    // console.log('elRegistroDay', elRegistroDay);
+                                                }
+
+                                                if (elRegistroSemana == that['idTablaSemana']) {
+                                                    that['semana' + a + '_Checked'] = true;
+                                                    if (elRegistroCat == that['idTablaCat']) {
+                                                        that['semana' + a + '_cat' + b + '_Checked'] = true;
+                                                        if (elRegistroSubcat == that['idTablaSubCat']) {
+                                                            that['semana' + a + '_cat' + b + '_subcat' + c + '_Checked'] = true;
+                                                            if (elRegistroTask == that['idTablaTarea']) {
+                                                                that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_Checked'] = true;
+                                                                if (elRegistroDay == that['idTablaDay']) {
+                                                                    that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_day' + e + '_Checked'] = true;
+                                                                }
+                                                            }
+
                                                         }
                                                     }
                                                 }
+
+                                            } else {
+                                                that['semana' + a + '_Checked'] = false;
+                                                that['semana' + a + '_cat' + b + '_Checked'] = false;
+                                                that['semana' + a + '_cat' + b + '_subcat' + c + '_Checked'] = false;
+                                                that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_Checked'] = false;
+                                                that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_day' + e + '_Checked'] = false;
+                                                // c = 1;
                                             }
-
-                                        } else {
-                                            that['semana' + a + '_Checked'] = false;
-                                            that['semana' + a + '_cat' + b + '_Checked'] = false;
-                                            that['semana' + a + '_cat' + b + '_subcat' + c + '_Checked'] = false;
-                                            that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_Checked'] = false;
-                                            // c = 1;
                                         }
-                                    }
 
 
-                                    if (that['semana' + a + '_Checked']) {
-                                        if (that['semana' + a + '_cat' + b + '_Checked']) {
-                                            if (that['semana' + a + '_cat' + b + '_subcat' + c + '_Checked']) {
-                                                if (that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_Checked']) {
-                                                    contenidoReporte += '<td class="centrado_bold">' + 'X' + '</td>';
+                                        if (that['semana' + a + '_Checked']) {
+                                            if (that['semana' + a + '_cat' + b + '_Checked']) {
+                                                if (that['semana' + a + '_cat' + b + '_subcat' + c + '_Checked']) {
+                                                    if (that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_Checked']) {
+                                                        if (that['cuantasCats_SemanaX' + a + '_subCat' + b + '_task' + c + '_day' + d] == 'all') {
+                                                            contenidoReporte += '<td class="centrado_bold">' + 'X' + '</td>';
+                                                        } else {
+                                                            if (that['semana' + a + '_cat' + b + '_subcat' + c + '_task' + d + '_day' + e + '_Checked']) {
+                                                                contenidoReporte += '<td class="centrado_bold">' + 'X' + '</td>';
+                                                            } else {
+                                                                contenidoReporte += '<td class="centrado_bold"> </td>';
+                                                            }
+                                                        }
+                                                    } else {
+                                                        contenidoReporte += '<td class="centrado_bold"> </td>';
+                                                    }
                                                 } else {
                                                     contenidoReporte += '<td class="centrado_bold"> </td>';
                                                 }
@@ -274,11 +323,9 @@ function descargaReporte() {
                                         } else {
                                             contenidoReporte += '<td class="centrado_bold"> </td>';
                                         }
-                                    } else {
-                                        contenidoReporte += '<td class="centrado_bold"> </td>';
-                                    }
 
-                                    contenidoReporte += '</tr>';
+                                        contenidoReporte += '</tr>';
+                                    }
                                 }
                             }
                         }

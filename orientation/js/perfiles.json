@@ -1,7 +1,7 @@
 {
     "perfiles": {
         "pf1": "IBP",
-        "pf2": "Coach"
+        "pf2": "Coach",
         "pf3": "Admin"
     },
     "visible": true

@@ -864,8 +864,8 @@
          case "Distribution_Agreement":
              //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Distribution_Agreement.pdf');
              Swal.fire({
-                 title: 'ION Coaching',
-                 html: '<iframe src="https://' + laURL + 'docs/Distribution_Agreement.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 title: 'Distribution Agreement',
+                 html: '<iframe src="http://docs.google.com/gview?url=https://revisioni4l.mx/revision/appweb/Onboarding_v7/docs/web/Distribution_Agreement468.pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
                  showCloseButton: true,
                  showConfirmButton: false,
                  heightAuto: true,
@@ -874,12 +874,12 @@
                  backdrop: `rgb(0 0 0 / 60%)`
              });
              break;
-         case "ION_SetUp":
+         case "Classroom Day":
              // window.open('docs/ION_SetUp.pdf');
              //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/ION_SetUp.pdf');
              Swal.fire({
-                 title: 'ION Coaching',
-                 html: '<iframe src="https://' + laURL + 'docs/ION_SetUp.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 title: 'Classroom Day',
+                 html: '<iframe src="http://docs.google.com/gview?url=https://revisioni4l.mx/revision/appweb/Onboarding_v7/docs/web/Classroom_Day.pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
                  showCloseButton: true,
                  showConfirmButton: false,
                  heightAuto: true,
@@ -892,21 +892,7 @@
              //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf');
              Swal.fire({
                  title: 'Handheld (HHC)',
-                 html: '<iframe src="http://docs.google.com/viewer?url=' + laURL + 'docs/Handheld_(HHC).pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
-                 showCloseButton: true,
-                 showConfirmButton: false,
-                 heightAuto: true,
-                 width: '100%',
-                 background: '#f3f3f3',
-                 backdrop: `rgb(0 0 0 / 60%)`
-             });
-             break;
-         case "Scan_Based_Trading_(SBT)":
-             // window.open('docs/Scan_Based_Trading_(SBT).pdf');
-             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Scan_Based_Trading_(SBT).pdf');
-             Swal.fire({
-                 title: 'ION Coaching',
-                 html: '<iframe src="https://' + laURL + 'docs/Scan_Based_Trading_(SBT).pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 html: '<iframe src="http://docs.google.com/gview?url=https://revisioni4l.mx/revision/appweb/Onboarding_v7/docs/web/Handheld_(HHC).pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
                  showCloseButton: true,
                  showConfirmButton: false,
                  heightAuto: true,
@@ -919,8 +905,8 @@
              // window.open('docs/Safe_Carry_Over_(SCO).pdf');
              //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/Safe_Carry_Over_(SCO).pdf');
              Swal.fire({
-                 title: 'ION Coaching',
-                 html: '<iframe src="https://' + laURL + 'docs/Safe_Carry_Over_(SCO).pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 title: 'Safe Carry Over (SCO)',
+                 html: '<iframe src="http://docs.google.com/gview?url=https://revisioni4l.mx/revision/appweb/Onboarding_v7/docs/web/Safe_Carry_Over_(SCO).pdf&embedded=true" style="min-height:80vh; width:100%"></iframe>',
                  showCloseButton: true,
                  showConfirmButton: false,
                  heightAuto: true,
@@ -933,8 +919,8 @@
              // window.open('docs/SETTLEMENT.pdf');
              //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
              Swal.fire({
-                 title: 'ION Coaching',
-                 html: '<iframe src="https://' + laURL + 'docs/SETTLEMENT.pdf#toolbar=0" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 title: 'Settlement',
+                 html: '<iframe src="http://docs.google.com/gview?url=https://revisioni4l.mx/revision/appweb/Onboarding_v7/docs/web/Settlement.pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
                  showCloseButton: true,
                  showConfirmButton: false,
                  heightAuto: true,
@@ -943,6 +929,128 @@
                  backdrop: `rgb(0 0 0 / 60%)`
              });
              break;
+         case "Aramark Order Form":
+             // window.open('docs/SETTLEMENT.pdf');
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             Swal.fire({
+                 title: 'Aramark Clothing Options & order Form',
+                 html: '<iframe src="http://docs.google.com/gview?url=https://revisioni4l.mx/revision/appweb/Onboarding_v7/docs/web/Aramark_Clothing_Options_and_Order_Form.pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             break;
+         case "SBT Introduction":
+             // window.open('docs/SETTLEMENT.pdf');
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             Swal.fire({
+                 title: 'SBT Introduction',
+                 html: '<iframe src="http://docs.google.com/gview?url=https://revisioni4l.mx/revision/appweb/Onboarding_v7/docs/web/Scan_Based_Trading_(SBT)_Introduction.pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             break;
+         case "Scan Based Trading SBT":
+             // window.open('docs/SETTLEMENT.pdf');
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             Swal.fire({
+                 title: 'Scan Based Trading SBT',
+                 html: '<iframe src="http://docs.google.com/gview?url=https://revisioni4l.mx/revision/appweb/Onboarding_v7/docs/web/Scan_Based_Trading_(SBT).pdf&embedded=true" type="application/pdf" style="min-height:80vh; width:100%"></iframe>',
+                 showCloseButton: true,
+                 showConfirmButton: false,
+                 heightAuto: true,
+                 width: '100%',
+                 background: '#f3f3f3',
+                 backdrop: `rgb(0 0 0 / 60%)`
+             });
+             break;
+         case "ION Video 1 – Route Summary Page Overview":
+             // window.open('docs/SETTLEMENT.pdf');
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             Swal.fire({
+                title: 'ION Video 1 – Route Summary Page Overview',
+                html: '<video id="vid1" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                '<source src="docs/IONVideo1.mp4" type="video/mp4">' +
+                '</video>',
+                showCloseButton: true,
+                showConfirmButton: false,
+                heightAuto: true,
+                width: '100%',
+                background: '#f3f3f3',
+                backdrop: `rgb(0 0 0 / 60%)`
+            });
+            break;
+         case "ION Video 2 – Product & Store Tabs within Route Summary Page":
+             // window.open('docs/SETTLEMENT.pdf');
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             Swal.fire({
+                title: 'ION Video 2 – Product & Store Tabs within Route Summary Page',
+                html: '<video id="vid1" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                '<source src="docs/IONVideo2.mp4" type="video/mp4">' +
+                '</video>',
+                showCloseButton: true,
+                showConfirmButton: false,
+                heightAuto: true,
+                width: '100%',
+                background: '#f3f3f3',
+                backdrop: `rgb(0 0 0 / 60%)`
+            });
+            break;
+         case "ION Video 9 – How to Make Order Adjustment within Product Summary Page":
+             // window.open('docs/SETTLEMENT.pdf');
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             Swal.fire({
+                title: 'ION Video 9 – How to Make Order Adjustment within Product Summary Page',
+                html: '<video id="vid9" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                '<source src="docs/IONVideo9.mp4" type="video/mp4">' +
+                '</video>',
+                showCloseButton: true,
+                showConfirmButton: false,
+                heightAuto: true,
+                width: '100%',
+                background: '#f3f3f3',
+                backdrop: `rgb(0 0 0 / 60%)`
+            });
+            break;
+         case "ION Video 6 – Customer Service Pattern within Store Summary Page":
+             // window.open('docs/SETTLEMENT.pdf');
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             Swal.fire({
+                title: 'ION Video 6 – Customer Service Pattern within Store Summary Page',
+                html: '<video id="vid6" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                '<source src="docs/IONVideo6.mp4" type="video/mp4">' +
+                '</video>',
+                showCloseButton: true,
+                showConfirmButton: false,
+                heightAuto: true,
+                width: '100%',
+                background: '#f3f3f3',
+                backdrop: `rgb(0 0 0 / 60%)`
+            });
+            break;
+         case "ION Video 5 – Promotion Tab & New Items within Store Summary Page":
+             // window.open('docs/SETTLEMENT.pdf');
+             //  window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/SETTLEMENT.pdf');
+             Swal.fire({
+                title: 'ION Video 5 – Promotion Tab & New Items within Store Summary Page',
+                html: '<video id="vid6" width="100%" class="video" autoplay playsinline controls="true" controlsList="nodownload">' +
+                '<source src="docs/IONVideo5.mp4" type="video/mp4">' +
+                '</video>',
+                showCloseButton: true,
+                showConfirmButton: false,
+                heightAuto: true,
+                width: '100%',
+                background: '#f3f3f3',
+                backdrop: `rgb(0 0 0 / 60%)`
+            });
+            break;
          case "http":
              // window.open('docs/SETTLEMENT.pdf');
              window.open(cualLink);
@@ -974,7 +1082,7 @@
              // window.open('docs/ION_Coaching.pdf');
              window.open('http://docs.google.com/viewer?url=' + laURL + 'docs/ION_Coaching.pdf');
              // Swal.fire({
-             //     title: 'ION Coaching',
+             //     title: 'ION Intelligent Ordering Network',
              //     html: '<object data="docs/ION_Coaching.pdf" type="application/pdf" style="min-height:80vh; width:100%"></object>',
              //     showCloseButton: true,
              //     showConfirmButton: false,
