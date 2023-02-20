@@ -142,7 +142,7 @@ function simp_setAlbum(index) {
             laImg = 'imgPlayer03b.png';
             break;
         case 'simp_parteras':
-            laImg = 'imgPlayer04b.png';
+            laImg = 'imgPlayer04b.jpg';
             break;
         default:
             break;
