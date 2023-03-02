@@ -19,13 +19,22 @@
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1" style="pointer-events: none; color: #b1b1b1;">
+                            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                                 Comunidades de Hidalgo
                             </div>
                         </h2>
                         <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                                <div>
+                                    <strong>Yahualica</strong> es un municipio ubicado en la Huasteca Hidalguense, según el último censo de población y vivienda, su población total sumó 24,674 habitantes, de los cuales, 18,557 eran hablantes de lengua indígena –náhuatl-, son las mujeres quienes mantienen el náhuatl como forma de comunicación cotidiana.
+                                    <br> <br>
+                                    <div style="text-align: right;">
+                                        <button class="boton" onclick="abrePDF('comun_hidalgo_1');">Leer más</button>
+                                    </div>
+                                </div>
+                                <br>
+
                             </div>
                         </div>
                     </div>
@@ -153,6 +162,9 @@
         console.log('abrePDF', cualPDF);
 
         switch (cualPDF) {
+            case 'comun_hidalgo_1':
+                window.open('assets/docs/3/3_1/3_1_2/hidalgo/SemblanzaHidalgo.pdf');
+                break;
             case 'comun_oaxaca_1':
                 window.open('assets/docs/3/3_1/3_1_2/oaxaca/SemblanzaGuelatao.pdf');
                 break;
