@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="es" />
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/preloadjs-0.6.2.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/Time.js"></script>
+    <script src="js/Animations.min.js"></script>
+    <script src="js/bounce.min.js"></script>
+    <script src="js/ripple.js"></script>
+    <link rel="stylesheet" href="css/Reset.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/ripple.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/Style.css" type="text/css" charset="utf-8" />
+    <title>Slide</title>
+</head>
+
+<body onresize="location.reload()">
+    <div id="contenido">
+        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/img01.png"></img>
+        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/img02.png"></img>
+        <img id="instrucciones" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/instrucciones.png"></img>
+
+        <img id="sec_img1" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img01.png"></img>
+        <img id="sec_img1_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img01_.png"></img>
+        <img id="sec_img2" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img02.png"></img>
+        <img id="sec_img2_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img02_.png"></img>
+        <img id="sec_img3" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img03.png"></img>
+        <img id="sec_img3_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img03_.png"></img>
+        <img id="sec_img4" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img04.png"></img>
+        <img id="sec_img4_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img04_.png"></img>
+        <img id="sec_img5" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img05.png"></img>
+        <img id="sec_img5_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img05_.png"></img>
+        <img id="sec_img6" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img06.png"></img>
+        <img id="sec_img6_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img06_.png"></img>
+        <img id="sec_img7" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img07.png"></img>
+        <img id="sec_img7_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img07_.png"></img>
+        <img id="sec_img8" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img08.png"></img>
+        <img id="sec_img8_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img08_.png"></img>
+        <img id="sec_img9" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img09.png"></img>
+        <img id="sec_img9_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img09_.png"></img>
+        <img id="sec_img10" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img10.png"></img>
+        <img id="sec_img10_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img10_.png"></img>
+        <img id="sec_img11" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img11.png"></img>
+        <img id="sec_img11_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img11_.png"></img>
+        <img id="sec_img12" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img12.png"></img>
+        <img id="sec_img12_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img12_.png"></img>
+        <img id="sec_img13" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img13.png"></img>
+        <img id="sec_img13_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img13_.png"></img>
+        <img id="sec_img14" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img14.png"></img>
+        <img id="sec_img14_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img14_.png"></img>
+        <img id="sec_img15" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img15.png"></img>
+        <img id="sec_img15_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img15_.png"></img>
+        <img id="sec_img16" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img16.png"></img>
+        <img id="sec_img16_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img16_.png"></img>
+        <img id="sec_img17" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img17.png"></img>
+        <img id="sec_img17_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img17_.png"></img>
+        <img id="sec_img18" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img18.png"></img>
+        <img id="sec_img18_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img18_.png"></img>
+        <img id="sec_img19" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img19.png"></img>
+        <img id="sec_img19_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img19_.png"></img>
+        <img id="sec_img20" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img20.png"></img>
+        <img id="sec_img20_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img20_.png"></img>
+        <img id="sec_img21" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img21.png"></img>
+        <img id="sec_img21_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img21_.png"></img>
+        <img id="sec_img22" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img22.png"></img>
+        <img id="sec_img22_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img22_.png"></img>
+        <img id="sec_img23" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img23.png"></img>
+        <img id="sec_img23_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img23_.png"></img>
+        <img id="sec_img24" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img24.png"></img>
+        <img id="sec_img24_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img24_.png"></img>
+        <img id="sec_img25" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img25.png"></img>
+        <img id="sec_img25_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img25_.png"></img>
+        <img id="sec_img26" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img26.png"></img>
+        <img id="sec_img26_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img26_.png"></img>
+        <img id="sec_img27" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img27.png"></img>
+        <img id="sec_img27_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img27_.png"></img>
+        <img id="sec_img28" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img28.png"></img>
+        <img id="sec_img28_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img28_.png"></img>
+        <img id="sec_img29" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img29.png"></img>
+        <img id="sec_img29_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img29_.png"></img>
+        <img id="sec_img30" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img30.png"></img>
+        <img id="sec_img30_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img30_.png"></img>
+        <img id="sec_img31" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img31.png"></img>
+        <img id="sec_img31_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img31_.png"></img>
+        <img id="sec_img32" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img32.png"></img>
+        <img id="sec_img32_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img32_.png"></img>
+        <img id="sec_img33" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img33.png"></img>
+        <img id="sec_img33_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img33_.png"></img>
+        <img id="sec_img34" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img34.png"></img>
+        <img id="sec_img34_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img34_.png"></img>
+        <img id="sec_img35" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img35.png"></img>
+        <img id="sec_img35_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img35_.png"></img>
+        <img id="sec_img36" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img36.png"></img>
+        <img id="sec_img36_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img36_.png"></img>
+        <img id="sec_img37" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img37.png"></img>
+        <img id="sec_img37_" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_04/sec_img37_.png"></img>
+
+        <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
+
+        <img id="btnSiguiente" class="element" _origenx="1120" _origeny="360" src="images/JCuervo_CVE_EstOrg_04/botonSiguiente.png"></img>
+        <img id="btnAtras" class="element" _origenx="45" _origeny="360" src="images/JCuervo_CVE_EstOrg_04/botonAtras.png"></img>
+
+
+        <!-- cargador -->
+        <div id="cargando" class=" cargando" style="width: 100px; height: 100px;"><svg style="margin: auto; background: transparent; display: block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <g transform="translate(20 50)">
+                    <circle cx="0" cy="0" r="6" fill="#e15b64" transform="scale(0.220385 0.220385)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.375s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(40 50)">
+                    <circle cx="0" cy="0" r="6" fill="#f8b26a" transform="scale(0.564378 0.564378)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.25s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(60 50)">
+                    <circle cx="0" cy="0" r="6" fill="#abbd81" transform="scale(0.881747 0.881747)">
+                        <animateTransform attributeName="transform" type="scale" begin="-0.125s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+                <g transform="translate(80 50)">
+                    <circle cx="0" cy="0" r="6" fill="#81a3bd" transform="scale(0.992922 0.992922)">
+                        <animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform>
+                    </circle>
+                </g>
+            </svg>
+        </div>
+        <!-- <img id="cargando" class="cargando" src="images/cargando.gif"></img> -->
+
+        <canvas id="canvas_id"></canvas>
+
+    </div>
+</body>
+<style>
+    .boton {
+        background-color: rgba(167, 255, 108, 0);
+        cursor: pointer;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+
+        var cuantasSecciones = 37;
+        var conMouse;
+        this.punto1 = [300, 350, 2000, 500];
+        this.punto2 = [300, 530, 2000, 500];
+        this.punto3 = [370, 530, 1000, 500];
+        this.punto4 = [360, 520, 1000, 500];
+        this.punto5 = [370, 590, 1000, 500];
+        this.punto6 = [460, 520, 1000, 500];
+        this.punto7 = [360, 680, 1000, 500];
+        this.punto8 = [350, 750, 1000, 500];
+        this.punto9 = [345, 800, 1000, 500];
+        this.punto10 = [370, 650, 1000, 500];
+        this.punto11 = [500, 330, 1000, 500];
+        this.punto12 = [260, 500, 1000, 500];
+        this.punto13 = [330, 650, 1000, 500];
+        this.punto14 = [270, 650, 1000, 500];
+        this.punto15 = [300, 410, 1000, 500];
+        this.punto16 = [340, 630, 1000, 500];
+        this.punto17 = [370, 570, 1000, 500];
+        this.punto18 = [400, 720, 1000, 500];
+        this.punto19 = [270, 870, 1000, 500];
+        this.punto20 = [520, 380, 1000, 500];
+        this.punto21 = [320, 530, 1000, 500];
+        this.punto22 = [240, 530, 1000, 500];
+        this.punto23 = [545, 630, 1000, 500];
+        this.punto24 = [410, 1010, 1000, 500];
+        this.punto25 = [300, 350, 1000, 500];
+        this.punto26 = [500, 550, 1000, 500];
+        this.punto27 = [500, 550, 1000, 500];
+        this.punto28 = [500, 550, 1000, 500];
+        this.punto29 = [500, 550, 1000, 500];
+        this.punto30 = [500, 550, 1000, 500];
+        this.punto31 = [500, 550, 1000, 500];
+        this.punto32 = [500, 550, 1000, 500];
+        this.punto33 = [500, 550, 1000, 500];
+        this.punto34 = [500, 550, 1000, 500];
+        this.punto35 = [500, 550, 1000, 500];
+        this.punto36 = [500, 550, 1000, 500];
+        this.punto37 = [500, 550, 1000, 500];
+        that = this;
+
+
+        cacularEscala();
+        ajustarEscenario();
+
+        function preload() {
+            animacion_entrada($("#cargando"), "default", .2, 0);
+            var preload = new createjs.LoadQueue();
+            preload.addEventListener("complete", iniciaCargador);
+            $.each($('.element'), function() {
+                preload.loadFile($("#" + this.id).attr('src'));
+                //console.log($("#" + this.id).attr('src'));
+            });
+        }
+
+        function iniciaCargador(event) {
+            console.log('load complete');
+            $.each($('.element'), function() {
+                inicializar($("#" + this.id));
+            });
+            $("#cargando").show();
+            $("#cargando").css({
+                'opacity': '1'
+            });
+            animacion_salida($("#cargando"), "desaparece", 0, muestraContenido);
+        }
+
+
+        function muestraContenido() {
+            animacion_entrada($("#imagen1"), "default", .7, 0.5);
+            animacion_entrada($("#imagen2"), "default", .7, 1);
+
+            // QUITAR
+            parent.playAudio(0, 1500, terminaAudio1);
+        }
+
+        function terminaAudio1() {
+            animacion_salida($("#imagen2"), "desaparece", 0, muestraSeccion);
+        }
+
+
+        function muestraSeccion(cualSeccion) {
+            if (cualSeccion == undefined) {
+                cualSeccion = 1;
+            }
+            console.log('muestraSeccion', cualSeccion);
+
+            switch (cualSeccion) {
+                case 1:
+                    animacion_entrada($("#instrucciones"), "der_izq", .7, 0);
+                    conMouse = false;
+                    break;
+                case 25:
+                    conMouse = false;
+                    break;
+                case 26:
+                    conMouse = false;
+                    break;
+                default:
+                    conMouse = true;
+                    break;
+            }
+
+            animacion_entrada($('#sec_img' + cualSeccion + ''), "izq_der", .7, 0.5);
+            animacion_entrada($('#sec_img' + cualSeccion + '_'), "default", .7, 1);
+
+            parent.playAudio(cualSeccion, 1500, terminaAudio);
+
+
+            function desapareceSeccion() {
+                animacion_salida($('#sec_img' + cualSeccion + ''), "desaparece", 0);
+                animacion_salida($('#sec_img' + cualSeccion + '_'), "desaparece", 0);
+            }
+
+            function terminaAudio() {
+
+                if (cualSeccion != cuantasSecciones) {
+                    if (conMouse) {
+                        mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
+                        parpadea($("#btnSiguiente"), 3);
+                    } else {
+                        parpadea($("#btnSiguiente"), 0);
+                    }
+                } else {
+                    if (cualSeccion == cuantasSecciones) {
+                        terminarPantalla();
+                    }
+                }
+
+                if (cualSeccion != 1) {
+                    parpadea($("#btnAtras"), 3);
+                }
+                $("#btnAtras").off().click(function() {
+                    if ($(this).css('cursor') == 'pointer') {
+                        desapareceBotonera();
+                        desapareceSeccion();
+                        muestraSeccion((cualSeccion - 1));
+                    }
+                });
+                $("#btnSiguiente").off().click(function() {
+                    if ($(this).css('cursor') == 'pointer') {
+                        desapareceBotonera();
+                        desapareceSeccion();
+                        muestraSeccion((cualSeccion + 1));
+                    }
+                });
+            }
+
+        };
+
+
+
+
+        function desapareceBotonera() {
+            animacion_salida($('#btnAtras, #btnSiguiente'), "desaparece", 0);
+            animacion_salida($('#botonCerrar'), "desaparece", 0);
+            // TweenMax.killTweensOf($("#btnAtras"));
+            // $("#btnAtras").hide();
+            // TweenMax.killTweensOf($("#btnSiguiente"));
+            // $("#btnSiguiente").hide();
+        }
+
+
+
+        // setTimeout(function() {
+        // }, 2000);
+
+        // $("#contenido").off().click(function() {
+        //     hazRipple($('#mouse').attr('_origeny'), $('#mouse').attr('_origenx'));
+        // });
+
+        preload();
+
+    });
+</script>
+
+</html>

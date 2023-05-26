@@ -24,6 +24,13 @@ course.pages = [
     { title: "Pantalla", url: "JCuervo_CVE_EstOrg_01.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "JCuervo_CVE_EstOrg_02.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "JCuervo_CVE_EstOrg_03.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "JCuervo_CVE_EstOrg_04.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "JCuervo_CVE_EstOrg_05.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "JCuervo_CVE_EstOrg_06.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "JCuervo_CVE_EstOrg_07.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "JCuervo_CVE_EstOrg_08.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "JCuervo_CVE_EstOrg_09.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "JCuervo_CVE_EstOrg_10.html", navegacion: true, menu: true }
 ];
 
 /* Pantallas de recursos */
@@ -62,5 +69,5 @@ var grupoAudios = new buzz.group([
     /*24*/ new buzz.sound("contenido/audios/audio0", { formats: ["mp3"], preload: true }),
     /*25*/ new buzz.sound("contenido/audios/audio0", { formats: ["mp3"], preload: true }),
     /*26*/ new buzz.sound("contenido/audios/audio0", { formats: ["mp3"], preload: true }),
-    /*27*/ new buzz.sound("contenido/audios/audio0", { formats: ["mp3"], preload: true }),
+    /*27*/ new buzz.sound("contenido/audios/audio0", { formats: ["mp3"], preload: true })
 ]);
