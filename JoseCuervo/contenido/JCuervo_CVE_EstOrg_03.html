@@ -63,6 +63,29 @@
         <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img01_subts_01.png"></img>
         <img id="sec_img2_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img02_subts_01.png"></img>
         <img id="sec_img3_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img03_subts_01.png"></img>
+        <img id="sec_img4_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img04_subts_01.png"></img>
+        <img id="sec_img5_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img05_subts_01.png"></img>
+        <img id="sec_img6_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img06_subts_01.png"></img>
+        <img id="sec_img7_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img07_subts_01.png"></img>
+        <img id="sec_img8_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img08_subts_01.png"></img>
+        <img id="sec_img9_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img09_subts_01.png"></img>
+        <img id="sec_img10_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img10_subts_01.png"></img>
+        <img id="sec_img11_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img11_subts_01.png"></img>
+        <img id="sec_img12_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img12_subts_01.png"></img>
+        <img id="sec_img13_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img13_subts_01.png"></img>
+        <img id="sec_img14_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img14_subts_01.png"></img>
+        <img id="sec_img15_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img15_subts_01.png"></img>
+        <img id="sec_img16_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img16_subts_01.png"></img>
+        <img id="sec_img17_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img17_subts_01.png"></img>
+        <img id="sec_img18_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img18_subts_01.png"></img>
+        <img id="sec_img19_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img19_subts_01.png"></img>
+        <img id="sec_img20_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img20_subts_01.png"></img>
+        <img id="sec_img21_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img21_subts_01.png"></img>
+        <img id="sec_img22_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img22_subts_01.png"></img>
+        <img id="sec_img23_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img23_subts_01.png"></img>
+        <img id="sec_img24_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img24_subts_01.png"></img>
+        <img id="sec_img25_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img25_subts_01.png"></img>
+        <img id="sec_img26_subts_01" class="element" _origenx="0" _origeny="0" src="images/JCuervo_CVE_EstOrg_03/sec_img26_subts_01.png"></img>
 
 
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
@@ -114,6 +137,7 @@
         var cuantasSecciones = 26;
         var conMouse;
         var subtsOn;
+        var altoSubts = 125;
         this.punto1 = [300, 350, 2000, 500];
         this.punto2 = [300, 530, 2000, 500];
         this.punto3 = [370, 530, 1000, 500];
@@ -198,13 +222,43 @@
                     animacion_entrada($("#instrucciones"), "der_izq", .7, 0);
                     conMouse = false;
                     break;
+                case 5:
+                    altoSubts = 190;
+                    break;
+                case 7:
+                    altoSubts = 190;
+                    break;
+                case 11:
+                    altoSubts = 72;
+                    break;
+                case 14:
+                    altoSubts = 149;
+                    break;
+                case 15:
+                    altoSubts = 72;
+                    break;
+                case 16:
+                    altoSubts = 149;
+                    break;
+                case 20:
+                    altoSubts = 72;
+                    break;
+                case 23:
+                    altoSubts = 72;
+                    break;
+                case 24:
+                    altoSubts = 72;
+                    break;
                 case 25:
+                    altoSubts = 72;
                     conMouse = false;
                     break;
                 case 26:
+                    altoSubts = 125;
                     conMouse = false;
                     break;
                 default:
+                    altoSubts = 125;
                     conMouse = true;
                     break;
             }
@@ -222,10 +276,11 @@
 
             function terminaAudio() {
 
-                salen_subtitulos();
                 subtsOn = false;
+                animacion_salida($('#sec_img' + cualSeccion + '_subts_01'), "arriba_abajo", .7);
                 animacion_entrada($('#btnSubts'), "default", .5, 1.2);
                 $('#btnSubts').css({
+                    'top': (parseInt($('#btnSubts').attr("_origeny")) * scalePage),
                     'cursor': 'pointer'
                 });
 
@@ -271,17 +326,17 @@
                             TweenMax.fromTo($(this), .4, {
                                 top: (parseInt($(this).attr("_origeny")) * scalePage) - 0
                             }, {
-                                top: (parseInt($(this).attr("_origeny")) * scalePage) - 125,
+                                top: (parseInt($(this).attr("_origeny")) * scalePage) - (altoSubts * scalePage),
                                 alpha: 1,
                                 ease: Back.easeOut,
                                 delay: 0
                             });
                             subtsOn = true;
                         } else {
-                            salen_subtitulos(0);
+                            animacion_salida($('#sec_img' + cualSeccion + '_subts_01'), "arriba_abajo", 0);
 
-                            TweenMax.fromTo($(this), .7, {
-                                top: (parseInt($(this).attr("_origeny")) * scalePage) - 125
+                            TweenMax.fromTo($(this), .6, {
+                                top: (parseInt($(this).attr("_origeny")) * scalePage) - (altoSubts * scalePage)
                             }, {
                                 top: (parseInt($(this).attr("_origeny")) * scalePage) - 0,
                                 alpha: 1,
@@ -305,6 +360,7 @@
         function desapareceSeccion(cualSeccion) {
             animacion_salida($('#sec_img' + cualSeccion), "desaparece", 0);
             animacion_salida($('#sec_img' + cualSeccion + '_subts_01'), "desaparece", 0);
+            animacion_salida($('#btnSubts'), "desaparece", 0);
         }
 
         function desapareceBotonera() {
