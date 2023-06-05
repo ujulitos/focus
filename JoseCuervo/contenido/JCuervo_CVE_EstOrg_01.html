@@ -95,11 +95,9 @@
             // animacion_entrada($("#imagen1"), "default", .2, .1);
             animacion_entrada($("#imagen2"), "der_izq", .7, .5);
             animacion_entrada($("#imagen3"), "izq_der", .5, 1);
-            animacion_entrada($("#imagen4"), "izq_der", .5, 2);
+            animacion_entrada($("#imagen4"), "izq_der", .5, 1.5);
 
-            // parent.playAudio(1, 1000, terminaAudio1);
-
-            parpadea($("#botonIniciar"), 3);
+            parent.playAudio(1, 1800, terminaAudio1);
 
             // // Subtítulos 1//
             // salen_subtitulos();
@@ -109,7 +107,7 @@
         }
 
         function terminaAudio1() {
-            // parpadea($("#botonIniciar"), 0);
+            parpadea($("#botonIniciar"), 0);
         }
 
 
