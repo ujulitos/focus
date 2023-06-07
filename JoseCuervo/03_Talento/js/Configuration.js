@@ -41,15 +41,15 @@ recursos.pages = [
 /* Audios del curso */
 var grupoAudios = new buzz.group([
       /*0*/ new buzz.sound("contenido/audios/audio0", { formats: ["mp3"], preload: true }),
-    /*1*/ new buzz.sound("contenido/audios/01", { formats: ["mp3"], preload: true }),
-    /*2*/ new buzz.sound("contenido/audios/02", { formats: ["mp3"], preload: true }),
-    /*3*/ new buzz.sound("contenido/audios/03", { formats: ["mp3"], preload: true }),
-    /*4*/ new buzz.sound("contenido/audios/04", { formats: ["mp3"], preload: true }),
-    /*5*/ new buzz.sound("contenido/audios/05", { formats: ["mp3"], preload: true }),
-    /*6*/ new buzz.sound("contenido/audios/06", { formats: ["mp3"], preload: true }),
-    /*7*/ new buzz.sound("contenido/audios/07", { formats: ["mp3"], preload: true }),
-    /*8*/ new buzz.sound("contenido/audios/08", { formats: ["mp3"], preload: true }),
-    /*9*/ new buzz.sound("contenido/audios/09", { formats: ["mp3"], preload: true }),
+    /*1*/ new buzz.sound("contenido/audios/1", { formats: ["mp3"], preload: true }),
+    /*2*/ new buzz.sound("contenido/audios/2", { formats: ["mp3"], preload: true }),
+    /*3*/ new buzz.sound("contenido/audios/3", { formats: ["mp3"], preload: true }),
+    /*4*/ new buzz.sound("contenido/audios/4", { formats: ["mp3"], preload: true }),
+    /*5*/ new buzz.sound("contenido/audios/5", { formats: ["mp3"], preload: true }),
+    /*6*/ new buzz.sound("contenido/audios/6", { formats: ["mp3"], preload: true }),
+    /*7*/ new buzz.sound("contenido/audios/7", { formats: ["mp3"], preload: true }),
+    /*8*/ new buzz.sound("contenido/audios/8", { formats: ["mp3"], preload: true }),
+    /*9*/ new buzz.sound("contenido/audios/9", { formats: ["mp3"], preload: true }),
     /*10*/ new buzz.sound("contenido/audios/10", { formats: ["mp3"], preload: true }),
     /*11*/ new buzz.sound("contenido/audios/11", { formats: ["mp3"], preload: true }),
     /*12*/ new buzz.sound("contenido/audios/12", { formats: ["mp3"], preload: true }),
@@ -103,6 +103,5 @@ var grupoAudios = new buzz.group([
     /*60*/ new buzz.sound("contenido/audios/60", { formats: ["mp3"], preload: true }),
     /*61*/ new buzz.sound("contenido/audios/61", { formats: ["mp3"], preload: true }),
     /*62*/ new buzz.sound("contenido/audios/62", { formats: ["mp3"], preload: true }),    
-    /*63*/ new buzz.sound("contenido/audios/63", { formats: ["mp3"], preload: true }),
-    /*63*/ new buzz.sound("contenido/audios/64", { formats: ["mp3"], preload: true })
+    /*63*/ new buzz.sound("contenido/audios/63", { formats: ["mp3"], preload: true })
 ]);
