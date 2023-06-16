@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 09 | I4L</title>
+
+</head>
+
+<body>
+
+    <img class="elementos" id="titulo" src="./img/pagina09/titulo.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="img02" src="./img/pagina09/img02.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="img03" src="./img/pagina09/img03.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="img01" src="./img/pagina09/img01.png" data-posX="0" data-posY="0" alt="">
+
+    <!-- Script de la página -->
+    <script type="module">
+        import { aplicacion } from './js/app.js';
+        import { animacionEntrada, animacionSalida } from './js/animaciones.js';
+        import { cargando } from './js/funciones.js';
+        import {flotar, hablar, pausarHablar, reanudarHablar, pararHablar} from './js/movimientosRobot.js';
+
+        jQuery(function($){
+            
+            // Cargar Audios------------------------------------------------------
+            const audio = [
+                new Audio('./audios/Prosa_M3_Seguridad_08_1.mp3'),
+                new Audio('./audios/Prosa_M3_Seguridad_08_2.mp3'),
+                new Audio('./audios/Prosa_M3_Seguridad_08_3.mp3'),
+            ]
+
+            //Crear Variables-----------------------------------------------------
+            const titulo = $('#titulo');
+            const img01 = $('#img01');
+            const img02 = $('#img02');
+            const img03 = $('#img03');
+             
+            //Iniciar contenido de la página--------------------------------------
+            cargando(iniciarPagina);
+
+            function iniciarPagina(){
+                animacionEntrada(titulo, 'izquierda-derecha', 1, .5);
+             
+                aplicacion.reproducirAudio(audio[0], terminaAudio1, 2000);             
+            }
+
+            function terminaAudio1(){
+              animacionEntrada(img02, 'default', 1, 0);
+              animacionEntrada(img01, 'izquierda-derecha', 1, .5);
+                setTimeout(() => {
+                    aplicacion.reproducirAudio(audio[1], terminaAudio2);
+                }, 1000);
+            }  
+            
+            function terminaAudio2(){
+              animacionEntrada(img03, 'default', 1, 0);
+         
+                setTimeout(() => {
+                    aplicacion.reproducirAudio(audio[2], finalPagina);
+                }, 500);
+            }
+            
+            function finalPagina(){
+                // pararHablar();
+                terminaPantalla();
+                  // parpadea(btnIniciar);
+                // btnIniciar.click(function(){
+                //     aplicacion.nextPag();
+                // });
+            }
+           
+            function terminaPantalla(){
+                  aplicacion.terminaPantalla();
+                }
+        });
+    </script>
+
+    <!-- Termina Script -->
+</body>
+
+</html>
