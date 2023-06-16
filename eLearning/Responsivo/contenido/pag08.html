@@ -1,0 +1,130 @@
+<div class="seccion animated fadeIn slow">
+
+    <section id="dos" class="my-5">
+
+        <h2 class="red-text text-center">Autoridades Regulatorias</h2>
+
+        <br>
+
+        <blockquote id="laNota" class="blockquote bq-danger">
+            <div class="row text-left">
+                <div class="col-lg-10">
+                    Presiona sobre cada logotipo
+                </div>
+            </div>
+        </blockquote>
+
+
+
+
+
+    </section>
+
+
+
+    <section id="dos" class="my-5 text-center">
+
+        <div class="row">
+
+            <div id="botonModal_1" class="col-4" style="padding-right: 0px; padding-left: 0px; cursor: pointer;">
+                <!-- <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF)"> -->
+                <img class="img-fluid" src="contenido/img/ima_slide30_01.png" />
+                <!-- </a> -->
+            </div>
+
+            <div id="botonModal_2" class="col-4" style="padding-right: 0px; padding-left: 0px; cursor: pointer;">
+                <!-- <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Secretaría de Hacienda y Crédito Público (SHCP)"> -->
+                <img class="img-fluid" src="contenido/img/ima_slide30_02.png" />
+                <!-- </a> -->
+            </div>
+
+            <div id="botonModal_3" class="col-4" style="padding-right: 0px; padding-left: 0px; cursor: pointer;">
+                <!-- <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Banco de México (BANXICO"> -->
+                <img class="img-fluid" src="contenido/img/ima_slide30_03.png" />
+                <!-- </a> -->
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div id="botonModal_4" class="col-4" style="padding-right: 0px; padding-left: 0px; cursor: pointer;">
+                <!-- <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Comisión Nacional del Sistema de Ahorro para el Retiro (CONSAR)"> -->
+                <img class="img-fluid" src="contenido/img/ima_slide30_04.png" />
+                <!-- </a> -->
+            </div>
+
+            <div class="col-4" style="padding-right: 0px; padding-left: 0px;">
+                <img class="img-fluid" src="contenido/img/ima_slide30_05.png" />
+            </div>
+
+            <div class="col-4" style="padding-right: 0px; padding-left: 0px;">
+                <img class="img-fluid" src="contenido/img/ima_slide30_06.png" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div id="botonModal_5" class="col-4" style="padding-right: 0px; padding-left: 0px; cursor: pointer;">
+                <!-- <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Comisión Nacional de Seguros y Fianzas (CNSF)"> -->
+                <img class="img-fluid" src="contenido/img/ima_slide30_07.png" />
+                <!-- </a> -->
+            </div>
+
+            <div id="botonModal_6" class="col-4" style="padding-right: 0px; padding-left: 0px; cursor: pointer;">
+                <!-- <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Instituto para la Protección al Ahorro Bancario (IPAB)"> -->
+                <img class="img-fluid" src="contenido/img/ima_slide30_08.png" />
+                <!-- </a> -->
+            </div>
+
+            <div id="botonModal_7" class="col-4" style="padding-right: 0px; padding-left: 0px; cursor: pointer;">
+                <!-- <a tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Comisión Nacional Bancaria y de Valores (CNBV)"> -->
+                <img class="img-fluid" src="contenido/img/ima_slide30_09.png" />
+                <!-- </a> -->
+            </div>
+
+        </div>
+
+</div>
+
+</section>
+
+
+<!-- <div id="completa" class="btn btn-outline-warning btn-rounded waves-effect">Termina Pantalla</div> -->
+
+</div>
+
+
+
+<script>
+    $(document).ready(function() {
+        // activaSeccion('1');
+
+        // $('#completa').off().click(function (event) {
+        //     terminaPantalla();
+        // });
+        terminaConScroll = true;
+
+        // popovers Initialization
+        $(function() {
+            $('[data-toggle="popover"]').popover()
+        })
+
+
+
+        var cuantosModales = 7;
+
+        for (a = 1; a <= cuantosModales; a++) {
+            $('#botonModal_' + a).click(function(event) {
+                event.preventDefault();
+
+                cualBoton = parseInt($(this).attr('id').substr(-1));
+                console.log('cualBoton', cualBoton);
+
+                $('#modal_p08_' + cualBoton).modal();
+            });
+        }
+
+
+
+    });
+
+</script>

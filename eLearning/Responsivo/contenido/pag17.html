@@ -1,0 +1,77 @@
+<div class="seccion animated fadeIn slow">
+    <section id="uno" class="text-center my-5">
+
+        <!-- <img class="img_completa wow" src="contenido/img/img01.jpg" /> -->
+        <div class="img_completa" style="background: url(contenido/img/ima02_contraportada.jpg);"> </div>
+        <div class="texto_portada" style="padding: 50px; background-color: hsla(0, 0%, 0%, 0.5);">
+            <h2 class="titulo_md2 animated zoomIn">¡Felicidades!</h2>
+            <h5 class="titulo_ch2 animated zoomIn">Concluiste el módulo:</h5><br>
+            <h1 class="titulo_gde2 animated zoomIn">Sistema Financiero</h1>
+            <h5 class="titulo_ch animated fadeInUpBig">Nivel intermedio</h5><br>
+            <!-- <h5 class="titulo_ch animated fadeInUpBig">Integración del Sistema Financiero</h5><br> -->
+            <!-- <h5 class="titulo_ch animated fadeInUpBig">Nivel intermedio</h5><br> -->
+        </div>
+
+
+        <!-- <div class="titulo_img animated fadeIn">
+            <img class="img_completa wow" src="contenido/img/El-liderazgo-empresarial.jpg" alt="Sample image" />
+        </div> -->
+
+
+
+    </section>
+    <!-- <hr class="mb-5"> -->
+
+</div>
+
+
+<!-- <div id="completa" class="btn btn-outline-warning btn-rounded waves-effect">Termina Pantalla</div> -->
+<style>
+    @media only screen and (max-width: 1200px) {
+        #contenidoMain {
+            width: 120%;
+            margin-left: -10%;
+        }
+    }
+
+    @media only screen and (max-width: 960px) {
+        #contenidoMain {
+            width: 110%;
+            margin-left: -10%;
+        }
+    }
+
+</style>
+
+<script>
+    $(document).ready(function() {
+        // activaSeccion('1');
+
+        // $('#completa').off().click(function (event) {
+        terminaPantalla();
+        // });
+        terminaConScroll = true;
+
+
+
+        $(".img_completa").css({
+            'height': $(window).height() - 115 + 'px',
+        });
+        $(".texto_portada").css({
+            'margin-top': (($(window).height() / 5) - $(window).height()) + 'px',
+        });
+
+    });
+
+    $(window).resize(function() {
+
+        $(".img_completa").css({
+            'height': $(window).height() - 115 + 'px',
+        });
+        $(".texto_portada").css({
+            'margin-top': (($(window).height() / 5) - $(window).height()) + 'px',
+        });
+
+    });
+
+</script>

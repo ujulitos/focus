@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="i4L">
+    <meta property="og:description" content="eLearning Responsivo">
+    <meta property="og:image" content="http://ideas4learning.com/revision/DEMOS/responsivo/img/thumb.jpg">
+
+    <title>i4L</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase-database.js"></script>
+
+    <link href="css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet" />
+    <link href="css/estilos.css" rel="stylesheet">
+    <link href="contenido/css/estilos.css" rel="stylesheet">
+</head>
+
+<body class="fixed-sn white-skin">
+
+    <div class="contenedor">
+
+        <!--Main Navigation-->
+        <header id="top-section">
+
+            <!-- Sidebar navigation -->
+            <div id="slide-out" class="side-nav fixed">
+                <ul id="manuIzq" data-scrollbar>
+                    <!-- Logo -->
+                    <li>
+                        <div class="logo-wrapper">
+                            <div class="progreso_div">
+                                <div id="progreso_tot" class="progreso_tot"></div>
+                                <div id="progreso_act" class="progreso_act"></div>
+                                <div id="progreso_texto" class="progreso_texto"></div>
+                            </div>
+                            <div class="titulo_div">
+                                <!-- <img src="img/logo.png" class="img-fluid flex-center"> -->
+                                <div id="titulo_texto" class="titulo_texto"></div>
+                                <div id="subtitulo_texto" class="subtitulo_texto"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--/. Logo -->
+                    <!--Social-->
+                    <li>
+                        <ul class="titulo_temas">
+                            <li>TEMARIO</li>
+                        </ul>
+                    </li>
+                    <!--/Social-->
+
+                    <!-- Temas -->
+                    <div id="temas"></div>
+                    <!--/. Temas -->
+                </ul>
+                <div class="sidenav-bg mask-strong"></div>
+            </div>
+            <!--/. Sidebar navigation -->
+            <!-- Navbar -->
+            <nav class="navbar fixed-top double-nav">
+                <!-- SideNav slide-out button -->
+                <div class="float-left">
+                    <a href="#" data-activates="slide-out" class="button-collapse" title="Menú">
+                        <i class="mdi mdi-menu"></i>
+                    </a>
+                </div>
+                <!-- Breadcrumb-->
+                <div class="breadcrumb_logo"></div>
+                <div class="breadcrumb mr-auto">
+                    <div id="breadcrumb" class="breadcrumb"></div>
+                </div>
+                <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                    <li id="botonSalir" class="nav-item" title="Cerrar">
+                        <a class="nav-link waves-effect waves-orange">
+                            <i class="mdi mdi-power-standby"></i>
+                        </a>
+                    </li>
+                    <li id="botonAyuda" class="nav-item" title="Ayuda">
+                        <a class="nav-link waves-effect waves-orange">
+                            <i class="mdi mdi-help-circle-outline"></i>
+                        </a>
+                    </li>
+                    <li id="botonAnterior" class="nav-item" title="Anterior">
+                        <a class="nav-link mask waves-effect waves-orange">
+                            <i class="mdi mdi-arrow-left-thick"></i>
+                        </a>
+                    </li>
+                    <li id="botonSiguiente" class="nav-item" title="Siguiente">
+                        <a class="nav-link waves-effect waves-orange">
+                            <i class="mdi mdi-arrow-right-thick"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- ScrollPorciento -->
+                <div class="scroll_pagina"></div>
+            </nav>
+            <!-- /.Navbar -->
+
+        </header>
+        <!--Main Navigation-->
+
+        <main id="contenidoMain" data-scrollbar>
+            <div id="contenido" class="container-fluid mt-5"></div>
+        </main>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--Footer-->
+        <footer id="botonSiguiente_inf" class="page-footer waves-effect">
+
+            <div class="footer_int1 text-center">SIGUIENTE TEMA</div>
+            <div class="footer_int2 text-center mdi mdi-chevron-down"></div>
+
+        </footer>
+        <!--/Footer-->
+
+    </div>
+
+
+    <!-- Retro Bien -->
+    <div class="modal fade" id="retroBien" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-notify modal-success" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">¡Felicidades!</p>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="boton_cerrar mdi mdi-close"></span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="mdi mdi-check-outline mb-3 icono_paloma animated rotateIn"></i>
+                        <p>Tu puntuación ha sido de</p>
+                        <p id="puntaje_div_bien" class="icono_paloma"></p>
+                        <p>Has aprobado la actividad.</p>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-success" data-dismiss="modal">Cerrar</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Retro Bien-->
+
+
+    <!-- Retro Mal -->
+    <div class="modal fade" id="retroMal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">¡Oh oh!</p>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="boton_cerrar mdi mdi-close"></span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="mdi mdi-close-outline mb-3 icono_tache animated rotateIn"></i>
+                        <p>Tu puntuación ha sido de</p>
+                        <p id="puntaje_div_mal" class="icono_tache"></p>
+                        <p>Consulta nuevamente los temas revisados para reafirmar tus conocimientos.</p>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Retro Mal-->
+
+
+
+    <!-- Modal Ayuda -->
+    <div class="modal fade bottom" id="modalAyuda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-full-height modal-bottom modal-orange" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">Ayuda</p>
+                    <div class="boton_cerrar nav-link mdi mdi-close waves-effect waves-light" data-dismiss="modal"></div>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+
+                    <div class="text-center">
+                        <i class="mdi mdi-help-circle-outline icono_ayuda"></i>
+                        <br>
+                        <!-- <b>¿Qué tipo de ayuda necesitas?</b>
+                        <br>
+                        <br>
+                        <br> -->
+                        <p>En la esquina superior derecha puedes encontrar tu menú de navegación, el cual se integra de:
+                            <br><br>
+                            <b>Botón cerrar.</b> Por medio de este botón, puedes cerrar este curso, si al cerrarlo aún no lo concluyes, puedes regresar nuevamente a terminarlo.
+                            <br>
+                            <b>Botón ayuda.</b> Este botón te permite acceder a la ayuda del curso.
+                            <br>
+                            <b>Botón retroceder y botón avanzar.</b> Estos botones te permiten moverte hacia adelante y hacia atrás en el curso. Utilízalos cada vez que necesites volver a ver el tema anterior, o para continuar con el tema siguiente.
+                            <br>
+                            <b>Menú lateral izquierdo.</b> En éste puedes verificar tu avance y los temas que has cursado.
+                        </p>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Modal Ayuda-->
+
+    <!-- Modal Salir -->
+    <div class="modal fade" id="modalSalir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-notify modal-orange" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">Cerrar</p>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="mdi mdi-alert mb-3 icono_salir animated rotateIn"></i>
+                        <h4>¿Realmente deseas cerrar el curso?</h4>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" id="botonSalirNo" class="btn btn-orange-outline waves-effect" data-dismiss="modal">Cancelar</a>
+                    <a type="button" id="botonSalirSi" class="btn btn-orange" data-dismiss="modal">Aceptar</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Modal Salir -->
+
+
+
+
+
+    <!-- Modal 1 -->
+    <div id="modal_p08_1" class="modal fade fadeIn bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="he ading lead red-text">Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF)</p>
+                    <div class="boton_cerrarn_negro nav-link mdi mdi-close waves-effect" data-dismiss="modal"></div>
+                </div>
+
+                <div class="modal-body" style="padding: 20px 50px 50px 50px; height: 70%;">
+                    <div class="row">
+                        <div class="col-lg-3 mb-3">
+                            <img class="img-fluid" src="contenido/img/logo_condusef.png" />
+                        </div>
+                        <div class="col-lg-9">
+                            <p class="text-justify">
+                                Promueve y difunde la educación y la transparencia financiera para que los usuarios tomen decisiones informadas sobre los beneficios, costos y riesgos de los productos y servicios ofertados en el sistema financiero mexicano. Protege los intereses de las instituciones financieras, mediante la supervisión y regulación, además, de proporcionales servicios de asesoría y defensa de sus derechos.
+                                <br> <br>
+                                <blockquote class="blockquote bq-info">
+                                    <div class="row text-left">
+                                        <div class="col-lg-10">
+                                            <a href="https://www.gob.mx/condusef" target="_blank">https://www.gob.mx/condusef</a>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 1 -->
+
+    <!-- Modal 2 -->
+    <div id="modal_p08_2" class="modal fade fadeIn bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="he ading lead red-text">Secretaría de Hacienda y Crédito Público (SHCP)</p>
+                    <div class="boton_cerrarn_negro nav-link mdi mdi-close waves-effect" data-dismiss="modal"></div>
+                </div>
+
+                <div class="modal-body" style="padding: 20px 50px 50px 50px;">
+                    <div class="row">
+                        <div class="col-lg-3 mb-3">
+                            <img class="img-fluid" src="contenido/img/logo_SHCP.png" />
+                        </div>
+                        <div class="col-lg-9">
+                            <p class="text-justify">
+                                Es una dependencia del Ejecutivo Federal, es decir, reporta directamente al Presidente de la República. Su asignación más importante radica en la <b>regulación de los ingresos del Gobierno Federal</b> a través de impuestos y contribuciones, así como de la coordinación del gasto federal que anualmente es aprobado por la Cámara de Diputados a propuesta de la propia SHCP.
+                                <br> <br>
+                                <b>En materia financiera y bancaria,</b> la Secretaría de Hacienda es la encargada de planear, coordinar, evaluar y vigilar el sistema bancario del país.
+                                <br> <br>
+                                <blockquote class="blockquote bq-info">
+                                    <div class="row text-left">
+                                        <div class="col-lg-10">
+                                            <a href="https://www.gob.mx/hacienda" target="_blank">https://www.gob.mx/hacienda</a>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+
+    <!-- Modal 3 -->
+    <div id="modal_p08_3" class="modal fade fadeIn bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="he ading lead red-text">Banco de México (BANXICO)</p>
+                    <div class="boton_cerrarn_negro nav-link mdi mdi-close waves-effect" data-dismiss="modal"></div>
+                </div>
+
+                <div class="modal-body" style="padding: 20px 50px 50px 50px;">
+                    <div class="row">
+                        <div class="col-lg-3 mb-3">
+                            <img class="img-fluid" src="contenido/img/logo_BM.png" />
+                        </div>
+                        <div class="col-lg-9">
+                            <p class="text-justify">
+                                Es el Banco Central de la República Mexicana y es una entidad independiente (autónoma) del Gobierno Federal. Su finalidad es proveer a la economía del país de moneda nacional y su objetivo prioritario es procurar la estabilidad de precios, es decir, mantener la inflación baja, para así <strong class="green-text" style="font-weight: 500;">preservar el poder adquisitivo de la moneda nacional.</strong> Adicionalmente le corresponde promover el sano desarrollo del sistema financiero y el buen funcionamiento de los sistemas de pago.
+                                <br> <br>
+                                En materia financiera, el Banco de México puede emitir regulación para fomentar el sano desarrollo del sistema financiero. Una buena parte de las normas emitidas por el banco central tiene como propósito regular las operaciones de crédito, de depósito y los servicios que ofrecen los bancos y las casas de bolsa. Recientemente, el Congreso de la Unión le otorgó facultades al Banco de México para que emita regulación sobre comisiones y tasas de interés, así como cualquier otro concepto de cobro por las operaciones o servicios que las entidades financieras lleven a cabo con los clientes.
+                                <br> <br>
+                                <blockquote class="blockquote bq-info">
+                                    <div class="row text-left">
+                                        <div class="col-lg-10">
+                                            <a href="https://www.banxico.org.mx/" target="_blank">https://www.banxico.org.mx/</a>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <img style="width: 100%; height: 420px;" src="contenido/img/ima_slide12_.png" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+
+    <!-- Modal 4 -->
+    <div id="modal_p08_4" class="modal fade fadeIn bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="he ading lead red-text">Comisión Nacional del Sistema de Ahorro para el Retiro (CONSAR)</p>
+                    <div class="boton_cerrarn_negro nav-link mdi mdi-close waves-effect" data-dismiss="modal"></div>
+                </div>
+
+                <div class="modal-body" style="padding: 20px 50px 50px 50px; height: 60%;">
+                    <div class="row">
+                        <div class="col-lg-3 mb-3">
+                            <img class="img-fluid" src="contenido/img/logo_CONSAR.png" />
+                        </div>
+                        <div class="col-lg-9">
+                            <p class="text-justify">
+                                Es la encargada de regular y supervisar eficazmente el Sistema de Ahorro para el Retiro (SAR) para que cada ahorrador construya su patrimonio pensionario.
+                                <br>
+                                <ul>
+                                    <li>Establece las reglas para que el SAR funcione adecuadamente </li>
+                                    <li>Vigila que se resguarden adecuadamente los recursos de los trabajadores </li>
+                                    <li>Supervisa que los recursos de los trabajadores se inviertan de acuerdo con los parámetros y límites establecidos por la Comisión (régimen de inversión) </li>
+                                    <li>Se asegura de que brinden la información requerida para los trabajadores </li>
+                                    <li>Está facultada para imponer multas a las AFORE y sanciones a los empleados de éstas en caso de algún incumplimiento</li>
+                                </ul>
+                                <br>
+                                <blockquote class="blockquote bq-info">
+                                    <div class="row text-left">
+                                        <div class="col-lg-10">
+                                            <a href="https://www.gob.mx/consar" target="_blank">https://www.gob.mx/consar</a>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 4 -->
+
+    <!-- Modal 5 -->
+    <div id="modal_p08_5" class="modal fade fadeIn bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="he ading lead red-text">Comisión Nacional de Seguros y Fianzas (CNSF)</p>
+                    <div class="boton_cerrarn_negro nav-link mdi mdi-close waves-effect" data-dismiss="modal"></div>
+                </div>
+
+                <div class="modal-body" style="padding: 20px 50px 50px 50px;">
+                    <div class="row">
+                        <div class="col-lg-3 mb-3">
+                            <img class="img-fluid" src="contenido/img/logo_CNSF.png" />
+                        </div>
+                        <div class="col-lg-9">
+                            <p class="text-justify">
+                                Es un órgano desconcentrado de la Secretaría de Hacienda y Crédito Público, encargado de supervisar que la operación de los sectores asegurador y afianzador se apegue al marco normativo, preservando la solvencia y estabilidad financiera de las instituciones de seguros y fianzas, para garantizar los intereses del público usuario, así como promover el sano desarrollo de estos sectores con el propósito de extender la cobertura de sus servicios a la mayor parte posible de la población.
+                                <br> <br>
+                                <blockquote class="blockquote bq-info">
+                                    <div class="row text-left">
+                                        <div class="col-lg-10">
+                                            <a href="https://www.gob.mx/cnsf" target="_blank">https://www.gob.mx/cnsf</a>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 5 -->
+
+    <!-- Modal 6 -->
+    <div id="modal_p08_6" class="modal fade fadeIn bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="he ading lead red-text">Instituto para la Protección al Ahorro Bancario (IPAB)</p>
+                    <div class="boton_cerrarn_negro nav-link mdi mdi-close waves-effect" data-dismiss="modal"></div>
+                </div>
+
+                <div class="modal-body" style="padding: 20px 50px 50px 50px;">
+                    <div class="row">
+                        <div class="col-lg-3 mb-3">
+                            <img class="img-fluid" src="contenido/img/logo_IPAB.png" />
+                        </div>
+                        <div class="col-lg-9">
+                            <p class="text-justify">
+                                Es una institución del Gobierno Federal encargada de administrar el Seguro de Depósitos Bancarios en beneficio y protección de los ahorradores del sistema bancario.
+                                <br> <br>
+                                El Seguro de Depósitos Bancarios tiene como características fundamentales garantizar hasta por <strong>400 mil UDIs;</strong> es decir aproximadamente dos millones cuatrocientos mil pesos, los depósitos bancarios de las personas físicas o morales, de forma automática y gratuita para los ahorradores, sin necesidad de que realicen trámite alguno para el reembolso de su dinero.
+                            </p>
+                            <img src="contenido/img/slide_27.jpg" style="width: 100%; padding: 30px;" />
+                            <p class="text-justify">
+                                El Seguro de Depósitos que administra el IPAB protege, entre otros, los depósitos a la vista, como cuentas de cheques; depósitos en cuentas de ahorro; depósitos a plazo o retirables con previo aviso, como los certificados de depósito; depósitos retirables en días preestablecidos, y depósitos en cuenta corriente asociados a tarjetas de débito.
+                                <br> <br>
+                                <blockquote class="blockquote bq-info">
+                                    <div class="row text-left">
+                                        <div class="col-lg-10">
+                                            <a href="https://www.gob.mx/ipab" target="_blank">https://www.gob.mx/ipab</a>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 6 -->
+
+    <!-- Modal 7 -->
+    <div id="modal_p08_7" class="modal fade fadeIn bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="he ading lead red-text">Comisión Nacional Bancaria y de Valores (CNBV)</p>
+                    <div class="boton_cerrarn_negro nav-link mdi mdi-close waves-effect" data-dismiss="modal"></div>
+                </div>
+
+                <div class="modal-body" style="padding: 20px 50px 50px 50px;  height: 50%;">
+                    <div class="row">
+                        <div class="col-lg-3 mb-3">
+                            <img class="img-fluid" src="contenido/img/logo_CNBV.png" />
+                        </div>
+                        <div class="col-lg-9">
+                            <p class="text-justify">
+                                La Comisión Nacional Bancaria y de Valores (CNBV), es un órgano desconcentrado de la Secretaría de Hacienda y Crédito Público (SHCP). Tiene facultades en materia de autorización, regulación, supervisión y sanción sobre los diversos sectores y entidades que integran el sistema financiero en México, así como sobre aquellas personas físicas y morales que realicen actividades previstas en las leyes relativas al sistema financiero, particularmente en lo referente al sector bancario y bursátil.
+                                <br> <br>
+                                <blockquote class="blockquote bq-info">
+                                    <div class="row text-left">
+                                        <div class="col-lg-10">
+                                            <a href="https://www.gob.mx/cnbv" target="_blank">https://www.gob.mx/cnbv</a>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 7 -->
+
+
+
+
+</body>
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/smooth-scrollbar.js"></script>
+<script src="js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="js/toastr.min.js"></script>
+<script src="js/checkMobile.js"></script>
+<script src="js/Buzz.min.js"></script>
+<script src="js/Audios.min.js"></script>
+<script src="js/jssor.slider.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/SCORM_API_wrapper.min.js"></script>
+<script src="js/Time.min.js"></script>
+<script src="js/Conection.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/browserDct.min.js"></script>
+<script src="js/spdDct.min.js"></script>
+<script src="js/ApiI4L.min.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+    // SideNav Button Initialization
+    $(".button-collapse").sideNav();
+    new WOW().init();
+
+</script>
+
+
+
+
+</html>

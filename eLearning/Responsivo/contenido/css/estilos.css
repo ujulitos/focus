@@ -1,0 +1,162 @@
+a,
+a:hover,
+a:focus {
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+.titulo_md {
+    font-size: 60px;
+    font-weight: 200;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+}
+
+.titulo_ch {
+    font-size: 36px;
+    font-weight: 400;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+
+.titulo_gde {
+    font-size: 80px;
+    font-weight: 100;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.titulo_md2 {
+    font-size: 60px;
+    font-weight: 200;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+.titulo_ch2 {
+    font-size: 34px;
+    font-weight: 200;
+    animation-duration: 1.5s;
+    animation-delay: .5s;
+}
+
+.titulo_gde2 {
+    font-size: 70px;
+    font-weight: 100;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+}
+
+.titulo_img {
+    animation-delay: 2s;
+}
+
+.sem-none {
+    opacity: 0;
+
+}
+
+.sem-blue {
+    background-color: blue !important;
+
+}
+
+.sem-green {
+    background-color: green !important;
+
+}
+
+.sem-red {
+    background: url(../img/semf_02.png);
+    background-repeat: no-repeat, repeat;
+    background-color: red !important;
+
+}
+
+.texto1 {
+    color: #000;
+}
+
+.parrafo_imagen {
+    text-align: left;
+}
+
+.img_completa {
+    /* height: 2000px; */
+    /* position: absolute; */
+    width: 130%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    margin-left: -15%;
+    margin-top: -80px;
+}
+
+.texto_portada {
+    margin-top: -1900px;
+    color: #fff;
+}
+
+.card_titulo {
+    padding: 30px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.swal2-modal .swal2-styled:focus {
+    overflow: hidden !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.boton_registrar {
+    font-size: .81rem !important;
+}
+
+.list-group-item.active {
+    background: #F46149;
+    border-color: #F46149;
+}
+
+/* @media */
+
+@media only screen and (max-width: 1200px) {
+
+
+    .img_completa {
+        width: 140%;
+        margin-left: -10%;
+
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .texto_portada {
+        width: 85%;
+        margin-left: 10%;
+    }
+
+    .parrafo_imagen {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .titulo_md,
+    .titulo_md2 {
+        font-size: 30px;
+    }
+
+    .titulo_ch,
+    .titulo_ch2 {
+        font-size: 20px;
+    }
+
+    .titulo_gde,
+    .titulo_gde2 {
+        font-size: 40px;
+    }
+}

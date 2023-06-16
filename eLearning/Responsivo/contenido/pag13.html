@@ -1,0 +1,153 @@
+<div class="seccion animated fadeIn slow">
+
+    <!-- Section: Features v.3 -->
+    <section id="cuatro" class="my-5">
+
+        <!-- Section description -->
+        <!-- <p class="lead grey-text text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> -->
+        <h2 class="h1-responsive  text-center my-2 red-text">Función de los Organismos Internacionales</h2>
+        <!-- <p class="text-center red-text">El Sector de Seguros y Fianzas</p> -->
+        <br><br>
+
+        <!-- deck -->
+        <div class="card-deck">
+
+            <!--- acordion ---->
+            <div class="card lg-4 md-12 card-cascade wider" id="accordionExample1">
+                <div class="view view-cascade boton rgba-orange-strong" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="cursor: pointer;">
+                    <div class="card_titulo text-center white-text">
+                        Fondo Monetario Internacional
+                        <br> <br>
+                        <img class="img-fluid" src="contenido/img/slide_51_01.png" style="max-width: 60%; margin-left: auto; margin-right: auto;" />
+                    </div>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="card_titulo text-center">
+                            <p class="lead">Tiene como objetivo principal evitar las crisis en los sistemas monetarios, alentando a los países a adoptar medidas de política económica bien fundadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------>
+
+            <div class="card lg-4 md-12 card-cascade wider" id="accordionExample2">
+                <div class="view view-cascade boton" id="heading2" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="cursor: pointer;">
+                    <div class="rgba-green-strong">
+                        <div class="card_titulo text-center white-text">
+                            Banco Mundial
+                            <br> <br>
+                            <img class="img-fluid" src="contenido/img/slide_51_02.png" style="max-width: 60%; margin-left: auto; margin-right: auto;" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample2">
+                    <div class="card-body">
+                        <div class="card_titulo text-center">
+                            <p class="lead">Es la institución financiera internacional de mayor importancia.</p>
+                            <br><br><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------>
+
+            <div class="card lg-4 md-12 card-cascade wider" id="accordionExample3">
+                <div class="view view-cascade boton" id="heading3" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="cursor: pointer;">
+                    <div class="rgba-red-strong">
+                        <div class="card_titulo text-center white-text">
+                            General Agreement on Tariffs and Trade
+                            <img class="img-fluid" src="contenido/img/slide_51_03.png" style="max-width: 60%; margin-left: auto; margin-right: auto;" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample3">
+                    <div class="card-body">
+                        <div class="card_titulo text-center">
+                            <p class="lead">Fue creado por los acuerdos de Bretón Woods y es considerado como el precursor de la Organización Mundial de Comercio. </p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- deck 1 -->
+
+
+    </section>
+
+
+
+    <br> <br>
+
+
+
+    <section id="uno" class="my-5 text-center">
+
+
+        <blockquote id="laNota" class="blockquote bq-danger">
+            <div class="row text-left">
+                <div class="col-lg-10">
+                    Pulsa sobre el ícono PDF para conocer más acerca de estos organismos.
+                </div>
+            </div>
+        </blockquote>
+
+        <br>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="btn_pdf" class="text-center">
+                    <a href="contenido/docs/FuncionOrganismosInternacionales.pdf" target="_blank"> <img style="max-width: 70px; cursor: pointer;" src="contenido/img/icono_pdf.png" /></a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+    <!-- <div id="completa" class="btn btn-outline-warning btn-rounded waves-effect">Termina Pantalla</div> -->
+
+</div>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        // activaSeccion('2');
+        $('pdf1').css('cursor', 'pointer');
+
+        $('#pdf1').off().click(function(event) {
+            window.open("contenido/docs/archivo1.pdf", "_blank");
+        });
+
+        $('#pdf2').off().click(function(event) {
+            window.open("contenido/docs/archivo2.pdf", "_blank");
+        });
+
+        $('#pdf3').off().click(function(event) {
+            window.open("contenido/docs/archivo3.pdf", "_blank");
+        });
+        // $('#completa').off().click(function (event) {
+        //     terminaPantalla();
+        // });
+        terminaConScroll = true;
+
+        // popovers Initialization
+        $(function() {
+            $('[data-toggle="popover"]').popover()
+        })
+
+    });
+
+</script>
