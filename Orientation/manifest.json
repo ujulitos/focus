@@ -1,0 +1,30 @@
+{
+    "name": "Independent Business Partner",
+    "short_name": "Independent Business Partner",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#001489",
+    "theme_color": "#001489",
+    "icons": [
+        {
+            "src": "bimbo-1x.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "bimbo-2x.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "bimbo-3x.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "bimbo-4x.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+}

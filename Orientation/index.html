@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="icon" type="image/png" href="osito.ico" />
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Orientation"> -->
+
+    <link rel="apple-touch-icon" href="bimbo-1x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="bimbo-2x.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="bimbo-3x.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="bimbo-4x.png">
+
+    <meta name="theme-color" content="#222">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orientation</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+    <script src="js/pouchdb.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script> -->
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <!-- <link href="css/hc-offcanvas-nav.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="css/calendar.css" />
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <link href="css/estilos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/addtohomescreen.css">
+
+
+</head>
+
+<body class="theme-default">
+
+    <div id="elNavBar" class="navbar">
+        <div id="botonHome" class="botonHome">
+            <i class="material-icons-outlined">home</i>
+        </div>
+        <div class="docs-header navbar_titulo"></div>
+        <div class="nombre_perfil"></div>
+        <!-- <div id="navbar_boton_menu" class="nombre_perfil izq navbar_boton_menu"></div> -->
+        <!-- <div id="navbar_boton_ayuda" class="navbar_boton_ayuda">
+            <i class="material-icons">info</i>
+        </div> -->
+        <!-- <div id="botonAtras" class="botonAtras">
+            <i class="material-icons">reply</i>
+            <span></span>
+        </div> -->
+        <div id="botonSalir" class="botonSalir">
+            <i class="material-icons">logout</i>
+            <span></span>
+        </div>
+        <div id="botonAtras" class="botonAtras">
+            <i class="material-icons">reply</i>
+        </div>
+
+        <div id="divSelectPar" class="">
+            <select id="elSelectPar" class="operator"></select>
+        </div>
+        <div id="divToolsWrapper">
+            <div id="divTools" class="owl-carousel owl-theme">
+                <!-- <span class="five columns">&nbsp;</span> -->
+                <!-- <span class="two columns"> -->
+                <div id="botonTools" class="boton_tools"><span class="material-icons-outlined">construction</span>Tools</div>
+                <div id="botonReporte" class="boton_tools"><span class="material-icons-outlined">analytics</span>Report</div>
+                <div id="botonCalendario" class="boton_tools"> <span class="material-icons-outlined">calendar_month</span>Calendar</div>
+                <!-- </span> -->
+                <!-- <span class="five columns">&nbsp;</span> -->
+            </div>
+        </div>
+    </div>
+    <div id="elNavBarTasks" class="navbar_tasks">
+        <div class="subnames">
+            <div class="subname1_txt"></div>
+            <br>
+            <div class="subname2_txt"></div>
+        </div> <!-- <div id="botonGuardar" class="button button-primary boton_guardar">Save</div> -->
+
+    </div>
+    <div id="tablaReporte" class="tablas"></div>
+
+
+
+    <div class="modal modal-op en">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-close-icon">
+                    <a href="javascript:void(0)" class="close-modal"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+                <div class="modal-content-inner">
+
+                    <iframe src="https://muchofocus.com/orientation/docs/Distribution_Agreement.pdf" width="100%" height="100%"></iframe>
+
+                </div>
+                <hr class="modal-buttons-seperator">
+                <div class="modal-buttons">
+                    <button class="button button-primary close-modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="container" class="container"></div>
+
+
+</body>
+
+<!-- JS Files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<!-- <script src="js/smooth-scrollbar.js"></script> -->
+<script src="js/sweetalert2.all.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/md5.pack.js"></script>
+<script src="js/table2excel.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/addtohomescreen.js"></script>
+<!-- <script src="js/hc-offcanvas-nav.js"></script> -->
+<script src="js/app.js"></script>
+
+<!-- secciones -->
+<script src="js/sec_splash.js"></script>
+<script src="js/sec_login.js"></script>
+<script src="js/sec_home.js"></script>
+<script src="js/sec_tasks.js"></script>
+<script src="js/sec_calendar.js"></script>
+<script src="js/sec_tools.js"></script>
+<!-- <script src="js/reporteStatus.js"></script> -->
+<script src="js/report.js"></script>
+
+
+<!-- <script>
+    $(document).ready(function() {});
+</script> -->
+
+</html>
