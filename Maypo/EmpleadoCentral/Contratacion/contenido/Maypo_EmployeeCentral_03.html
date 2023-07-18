@@ -75,7 +75,7 @@
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
         <img id="btnSubts" class="element" _origenx="1100" _origeny="627" src="images/Maypo_EmployeeCentral_03/botonSubts.png"></img>
-        <img id="btnSiguiente" class="element" _origenx="1130" _origeny="360" src="images/Maypo_EmployeeCentral_03/botonSiguiente.png"></img>
+        <img id="btnSiguiente" class="element" _origenx="1150" _origeny="360" src="images/Maypo_EmployeeCentral_03/botonSiguiente.png"></img>
         <img id="btnAtras" class="element" _origenx="15" _origeny="360" src="images/Maypo_EmployeeCentral_03/botonAtras.png"></img>
 
 
@@ -120,13 +120,28 @@
 
         var cuantasSecciones = 18;
         var cualAudio = 2;
-        var conMouse = false;
+        var conMouse = true;
         var conSubts = true;
         // var subtsOn;
         // var altoSubts = 125;
-        // this.punto1 = [300, 350, 2000, 500];
-        // this.punto2 = [300, 530, 2000, 500];
-        // this.punto3 = [370, 530, 1000, 500];
+        this.punto1 = [205, 895, 2000, 500];
+        this.punto2 = [510, 740, 2000, 500];
+        this.punto3 = [440, 645, 1000, 500];
+        this.punto4 = [410, 560, 1000, 500];
+        this.punto5 = [410, 1050, 1000, 500];
+        this.punto6 = [420, 1030, 1000, 500];
+        this.punto7 = [310, 810, 1000, 500];
+        this.punto8 = [460, 320, 1000, 500];
+        this.punto9 = [540, 320, 1000, 500];
+        this.punto10 = [480, 530, 1000, 500];
+        this.punto11 = [270, 400, 1000, 500];
+        this.punto12 = [305, 450, 1000, 500];
+        this.punto13 = [440, 390, 1000, 500];
+        this.punto14 = [390, 800, 1000, 500];
+        this.punto15 = [200, 530, 1000, 500];
+        this.punto16 = [275, 530, 1000, 500];
+        this.punto17 = [310, 410, 1000, 500];
+        this.punto18 = [305, 440, 1000, 500];
         that = this;
 
 
@@ -186,9 +201,9 @@
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
                     break;
                 default:
-                    altoSubts = 125;
+                    // altoSubts = 125;
                     conSubts = true;
-                    conMouse = false;
+                    conMouse = true;
                     break;
             }
 
@@ -214,9 +229,10 @@
                 // });
 
                 setTimeout(function() {
+                    mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
+
                     if (cualSeccion != cuantasSecciones) {
                         if (conMouse) {
-                            // mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
                             parpadea($("#btnSiguiente"), 4);
                         } else {
                             parpadea($("#btnSiguiente"), 0);
