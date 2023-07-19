@@ -47,7 +47,7 @@
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
         <img id="btnSubts" class="element" _origenx="1100" _origeny="627" src="images/Maypo_EmployeeCentral_06/botonSubts.png"></img>
-        <img id="btnSiguiente" class="element" _origenx="1140" _origeny="360" src="images/Maypo_EmployeeCentral_06/botonSiguiente.png"></img>
+        <img id="btnSiguiente" class="element" _origenx="1150" _origeny="360" src="images/Maypo_EmployeeCentral_06/botonSiguiente.png"></img>
         <img id="btnAtras" class="element" _origenx="15" _origeny="360" src="images/Maypo_EmployeeCentral_06/botonAtras.png"></img>
 
 
@@ -92,13 +92,14 @@
 
         var cuantasSecciones = 4;
         var cualAudio = 29;
-        var conMouse = false;
+        var conMouse = true;
         var conSubts = true;
         // var subtsOn;
         // var altoSubts = 125;
-        // this.punto1 = [300, 350, 2000, 500];
-        // this.punto2 = [300, 530, 2000, 500];
-        // this.punto3 = [370, 530, 1000, 500];
+        this.punto1 = [300, 1065, 2000, 500];
+        this.punto2 = [305, 660, 2000, 500];
+        this.punto3 = [560, 990, 1000, 500];
+        this.punto4 = [480, 990, 1000, 500];
         that = this;
 
 
@@ -158,9 +159,9 @@
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
                     break;
                 default:
-                    altoSubts = 125;
+                    // altoSubts = 125;
                     conSubts = true;
-                    conMouse = false;
+                    conMouse = true;
                     break;
             }
 
@@ -186,9 +187,10 @@
                 // });
 
                 setTimeout(function() {
+                    mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
+
                     if (cualSeccion != cuantasSecciones) {
                         if (conMouse) {
-                            // mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
                             parpadea($("#btnSiguiente"), 4);
                         } else {
                             parpadea($("#btnSiguiente"), 0);
