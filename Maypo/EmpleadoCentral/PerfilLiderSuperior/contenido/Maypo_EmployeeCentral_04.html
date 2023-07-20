@@ -28,25 +28,25 @@
 
 <body onresize="location.reload()">
     <div id="contenido">
-        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/img01.png"></img>
-        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/img02.png"></img>
-        <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/img03.png"></img>
-        <img id="instrucciones" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/instrucciones.png"></img>
+        <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/img01.png"></img>
+        <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/img02.png"></img>
+        <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/img03.png"></img>
+        <img id="instrucciones" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/instrucciones.png"></img>
 
-        <img id="sec_img1" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img01.png"></img>
-        <img id="sec_img2" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img02.png"></img>
-        <img id="sec_img3" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img03.png"></img>
+        <img id="sec_img1" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img01.png"></img>
+        <img id="sec_img2" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img02.png"></img>
+        <img id="sec_img3" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img03.png"></img>
 
-        <!-- <img id="img_subts_fondo" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/img_subts_fondo.png"></img> -->
-        <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img01_subts_01.png"></img>
-        <img id="sec_img2_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img02_subts_01.png"></img>
-        <img id="sec_img3_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img03_subts_01.png"></img>
+        <!-- <img id="img_subts_fondo" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/img_subts_fondo.png"></img> -->
+        <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img01_subts_01.png"></img>
+        <img id="sec_img2_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img02_subts_01.png"></img>
+        <img id="sec_img3_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img03_subts_01.png"></img>
 
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
-        <img id="btnSubts" class="element" _origenx="1100" _origeny="627" src="images/Maypo_EmployeeCentral_03/botonSubts.png"></img>
-        <img id="btnSiguiente" class="element" _origenx="1150" _origeny="360" src="images/Maypo_EmployeeCentral_03/botonSiguiente.png"></img>
-        <img id="btnAtras" class="element" _origenx="15" _origeny="360" src="images/Maypo_EmployeeCentral_03/botonAtras.png"></img>
+        <img id="btnSubts" class="element" _origenx="1100" _origeny="627" src="images/Maypo_EmployeeCentral_04/botonSubts.png"></img>
+        <img id="btnSiguiente" class="element" _origenx="1150" _origeny="360" src="images/Maypo_EmployeeCentral_04/botonSiguiente.png"></img>
+        <img id="btnAtras" class="element" _origenx="15" _origeny="360" src="images/Maypo_EmployeeCentral_04/botonAtras.png"></img>
 
 
         <!-- cargador -->
@@ -136,7 +136,7 @@
             // Subtítulos Fondo //
             // animacion_entrada($("#sec_img01_subts_01"), "izq_der", .5, 2.5);
             // QUITAR
-            parent.playAudio(2, 1500, terminaAudio1);
+            parent.playAudio(34, 1500, terminaAudio1);
         }
 
         function terminaAudio1() {
@@ -150,6 +150,9 @@
                 cualSeccion = 1;
             }
             console.log('muestraSeccion', cualSeccion);
+
+            parent.audioPausado = true;
+            parent.switchPausa();
 
             switch (cualSeccion) {
                 case 1:
@@ -172,6 +175,14 @@
 
             parent.playAudio((cualAudio + cualSeccion), 2000, terminaAudio);
 
+            if (cualSeccion != cuantasSecciones) {
+                if (conMouse) {
+                    setTimeout(function() {
+                        mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
+                    }, 1500);
+                }
+            }
+
 
             function terminaAudio() {
 
@@ -186,9 +197,7 @@
                 setTimeout(function() {
                     if (cualSeccion != cuantasSecciones) {
                         if (conMouse) {
-                            mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
-
-                            parpadea($("#btnSiguiente"), 4);
+                            parpadea($("#btnSiguiente"), 0);
                         } else {
                             parpadea($("#btnSiguiente"), 0);
                         }

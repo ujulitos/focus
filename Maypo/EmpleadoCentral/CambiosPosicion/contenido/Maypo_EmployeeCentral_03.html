@@ -157,6 +157,9 @@
             }
             console.log('muestraSeccion', cualSeccion);
 
+            parent.audioPausado = true;
+            parent.switchPausa();
+
             switch (cualSeccion) {
                 case 1:
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
@@ -178,6 +181,12 @@
 
             parent.playAudio((cualAudio + cualSeccion), 2000, terminaAudio);
 
+            if (conMouse) {
+                setTimeout(function() {
+                    mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
+                }, 1500);
+            }
+
 
             function terminaAudio() {
 
@@ -190,11 +199,9 @@
                 // });
 
                 setTimeout(function() {
-                    mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
-
                     if (cualSeccion != cuantasSecciones) {
                         if (conMouse) {
-                            parpadea($("#btnSiguiente"), 4);
+                            parpadea($("#btnSiguiente"), 0);
                         } else {
                             parpadea($("#btnSiguiente"), 0);
                         }

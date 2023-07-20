@@ -326,7 +326,7 @@ body {
 
 .boton_temario {
     top: -25px;
-    left: 850px;
+    left: 790px;
     width: 60px;
     height: 60px;
     padding: 0px;
@@ -366,8 +366,7 @@ body {
     height: 44px;
 }
 
-.boton_audio,
-.boton_audio_off {
+.boton_audio {
     top: -25px;
     left: 970px;
     width: 60px;
@@ -382,23 +381,22 @@ body {
 
 .boton_reload {
     top: -25px;
-    left: 910px;
+    left: 850px;
     width: 60px;
     height: 60px;
     padding: 0px;
 }
 
-.boton_pausa,
-.boton_pausa_off {
-    top: -12px;
-    left: 740px;
-    width: 44px;
-    height: 44px;
+.boton_pausa {
+    top: -25px;
+    left: 910px;
+    width: 60px;
+    height: 60px;
     padding: 0px;
     /* display: none; */
 }
 
-#boton_pausa_off {
+#btnPausa_off {
     display: none;
 }
 

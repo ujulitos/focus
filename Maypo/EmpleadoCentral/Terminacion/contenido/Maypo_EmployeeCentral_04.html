@@ -165,12 +165,14 @@
             animacion_entrada($("#imagen3"), "default", .7, .5, muestraSeccion);
         }
 
-
         function muestraSeccion(cualSeccion) {
             if (cualSeccion == undefined) {
                 cualSeccion = 1;
             }
             console.log('muestraSeccion', cualSeccion);
+
+            parent.audioPausado = true;
+            parent.switchPausa();
 
             switch (cualSeccion) {
                 case 1:
@@ -183,6 +185,7 @@
                     break;
             }
 
+
             // Subtítulos Fondo //
             cambiaSubtitulos(parent.haySubtitulos);
             // animacion_entrada($("#img_subts_fondo"), "abajo_arriba", .5, 0);
@@ -192,6 +195,12 @@
             // subtsOn = true;
 
             parent.playAudio((cualAudio + cualSeccion), 2000, terminaAudio);
+
+            if (conMouse) {
+                setTimeout(function() {
+                    mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
+                }, 1500);
+            }
 
 
             function terminaAudio() {
@@ -205,11 +214,9 @@
                 // });
 
                 setTimeout(function() {
-                    mueveMouse(that['punto' + cualSeccion][0], that['punto' + cualSeccion][1], that['punto' + cualSeccion][2], that['punto' + cualSeccion][3]);
-
                     if (cualSeccion != cuantasSecciones) {
                         if (conMouse) {
-                            parpadea($("#btnSiguiente"), 4);
+                            parpadea($("#btnSiguiente"), 0);
                         } else {
                             parpadea($("#btnSiguiente"), 0);
                         }
