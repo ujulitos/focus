@@ -1,0 +1,10 @@
+[ 
+    { "categoria" : "Selecciona una opción" },
+    { "categoria" : "Audio" },
+    { "categoria" : "Empaquetado" },
+    { "categoria" : "Imagen" },
+    { "categoria" : "PDF" },
+    { "categoria" : "PowerPoint" },
+    { "categoria" : "Video" },
+    { "categoria" : "Word" }  
+]

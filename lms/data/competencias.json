@@ -1,0 +1,103 @@
+{
+    "factores": {
+        "f1": "Presencia universal",
+        "f2": "Ejecución superior en el PV",
+        "f3": "Servir para crecer"
+    },
+    "grupos": {
+        "f1": {
+            "g1": "Análisis de información",
+            "g2": "Planeación y toma de decisiones",
+            "g3": "Distribución rentable"
+        },
+        "f2": {
+            "g1": "Conocimiento del mercado",
+            "g2": "Channel trade marketing",
+            "g3": "Fotografía de éxito / PVP"
+        },
+        "f3": {
+            "g1": "Servicio",
+            "g2": "Mejora continua"
+        }
+    },
+    "competencias": {
+        "f1": {
+            "g1": {
+                "c1": "Herramientas IT",
+                "c2": "Indicadores operativos",
+                "c3": "Cuadro de ventas",
+                "c4": "Conocimiento del entorno",
+                "c5": "Estructura del área comercial"
+            },
+            "g2": {
+                "c1": "Plan de negocio",
+                "c2": "Revenue Growth Management",
+                "c3": "Estrategia comercial/tácnica comercial",
+                "c4": "Planeación de Ventas",
+                "c5": "Inteligencia comercial",
+                "c6": "Administración de cuentas clave",
+                "c7": "Semana típica"
+            },
+            "g3": {
+                "c1": "Distribución granular",
+                "c2": "Modelo de distribución",
+                "c3": "Especialización de canales",
+                "c4": "Método de distribución",
+                "c5": "Finanzas comerciales",
+                "c6": "Costo de distribución",
+                "c7": "Control de la devolución",
+                "c8": "Créditos al cliente",
+                "c9": "Cadena de suministro",
+                "c10": "Administración y despacho"
+            }
+        },
+        "f2": {
+            "g1": {
+                "c1": "Análisis del mercado",
+                "c2": "Temporalidades",
+                "c3": "Tendencias comerciales",
+                "c4": "Supervisiones",
+                "c5": "Estudios de mercado",
+                "c6": "Bases de la mercadotecnia"
+            },
+            "g2": {
+                "c1": "Promociones",
+                "c2": "Penetración",
+                "c3": "Activación comercial",
+                "c4": "Categorías de productos",
+                "c5": "Nuevos productos",
+                "c6": "Estrategias de marca",
+                "c7": "Plan comercial",
+                "c8": "Medios para vender más",
+                "c9": "Material Punto de Venta"
+            },
+            "g3": {
+                "c1": "Portafolio de productos",
+                "c2": "Primera posición",
+                "c3": "Exhibiciones",
+                "c4": "Imagen de marca",
+                "c5": "Planogramación",
+                "c6": "Marcas básicas",
+                "c7": "Cruce de categorías"
+            }
+        },
+        "f3": {
+            "g1": {
+                "c1": "Perfil del cliente",
+                "c2": "Procesos e indicadores del cliente",
+                "c3": "Relación con el cliente",
+                "c4": "Negociación con clientes",
+                "c5": "Desarrollo del cliente"
+            },
+            "g2": {
+                "c1": "Modelo de negocio y gobierno de datos",
+                "c2": "Productividad en Ventas",
+                "c3": "Capitalizar buenas prácticas",
+                "c4": "Estándares de desempeño",
+                "c5": "Seguridad y bienestar de Ventas",
+                "c6": "Auditorias y revisiones funcionales",
+                "c7": "Sustentabilidad en Ventas"
+            }
+        }
+    }
+}

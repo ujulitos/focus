@@ -1,0 +1,353 @@
+<!-- <script src="../js/idGenerator.js"></script> -->
+<div id="seccionSesiones">
+
+    <div>
+        <div>
+            <input id="buscadorSesiones" class="form-control form-control2" type="text" placeholder="Buscar..." />
+            <i id="buscadorClean" class="nc-icon-glyph ui-1_simple-remove form-control form-control2"></i>
+        </div>
+    </div>
+
+
+    <div class="header">
+        <!-- <h2 class="titulo_seccion">Sesiones</h2> -->
+    </div>
+
+    <div class="sesiones_int"></div>
+
+
+    <!-- Modal Sesión -->
+    <div class="modal fade" id="modalAgregaSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ancho" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Sesión</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body sessiont">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12">
+                                    <label>Seleccione el ambiente de aprendizaje:</label>
+                                </div>
+                                <br>
+                                <div class="col-sm-12 col-md-10">
+                                    <select id="ambiente" class="form-control select2" data-allow-clear="true" data-placeholder="Selecione un ambiente de aprendizaje" style="width: 100%">
+                                        <option></option>
+                                        <optgroup id="selectAmbiente" label="Ambientes de Aprendizaje"></optgroup>
+                                    </select>
+                                    <small id="elistadoaa" class="form-text txError sps ocultar text-muted" style="width:100%">Seleccione un ambiente de aprendizaje</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12">
+                                    <label class="mtopto">Instructor</label>
+                                </div>
+                                <br>
+                                <div class="col-sm-12 col-md-10">
+                                    <select id="instructor" class="form-control select2" data-allow-clear="true" data-placeholder="Selecione un instructor" style="width: 100%">
+                                        <option></option>
+                                        <optgroup id="selectInstructor" label="Instructores"></optgroup>
+                                    </select>
+                                    <small id="einstructor" class="form-text txError sps ocultar text-muted">Seleccione un instructor</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Fecha de Inicio</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="fechaInicio" type="text" class="form-control date-picker" data-datepicker-color="primary" required placeholder="Ingrese la fecha de Inicio">
+                                    <small id="efechaInicio" class="form-text txError ocultar sps text-muted">Ingrese la fecha de inicio</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Fecha de fin</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="fechaFin" type="text" class="form-control date-picker" data-datepicker-color="primary" required placeholder="Ingrese la fecha de fin">
+                                    <small id="efechaFin" class="form-text txError sps  ocultar text-muted">Ingrese la fecha de fin</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Organización</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <select id="organizacion" class="form-control"> </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">País</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <select id="pais" class="form-control"> </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Estado</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <!-- <select id="estado" class="form-control"> </select> -->
+                                    <input id="estado" type="text" class="form-control" required placeholder="Ingrese un estado">
+                                    <small id="eestado" class="form-text txError sps ocultar text-muted">Seleccione un Estado</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Localidad</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="localidad" type="text" class="form-control" required placeholder="Ingrese una localidad">
+                                    <small id="elocalidad" class="form-text txError sps  ocultar text-muted">Ingrese una localidad</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Centro de trabajo</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="centroTrabajo" type="text" class="form-control" required placeholder="Ingrese un centro de trabajo">
+                                    <small id="ecentroTrabajo" class="form-text txError sps ocultar text-muted">Ingrese un centro de trabajo</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Sala</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="sala" type="text" class="form-control" required placeholder="Ingrese una sala">
+                                    <small id="esala" class="form-text txError sps  ocultar text-muted">Ingrese una sala</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-round" data-dismiss="modal">Cancelar</button>
+                    <button id="btnAddSession" type="button" class="btn btn-primary btn-round">Agregar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Sesión -->
+
+    <!-- Modal Editar Sesión -->
+    <div class="modal fade" id="modalEditarSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ancho" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Sesión</h5>
+                    <span id="clave_sesion_titulo" class="clave_sesion" style="margin-top: 7px; margin-left: 30px;"></span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body sessiont">
+                    <input type="hidden" id="hiddenIdSesion">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12">
+                                    <label>Seleccione el ambiente de aprendizaje</label>
+                                </div>
+                                <br>
+                                <div class="col-sm-12 col-md-10">
+                                    <select id="_ambiente" class="form-control select2" data-allow-clear="true" data-placeholder="Selecione un ambiente de aprendizaje" style="width: 100%">
+                                        <option></option>
+                                        <optgroup id="_selectAmbiente" label="Ambientes de Aprendizaje"></optgroup>
+                                    </select>
+                                    <small id="_elistadoaa" class="form-text txError sps ocultar text-muted" style="width:100%">Seleccione un ambiente de aprendizaje</small>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12">
+                                    <label class="mtopto">Instructor</label>
+                                </div>
+                                <div class="col-sm-12 col-md-10">
+                                    <select id="_instructor" class="form-control select2" data-allow-clear="true" data-placeholder="Selecione un instructor" style="width: 100%">
+                                        <option></option>
+                                        <optgroup id="_selectInstructor" label="Instructores"></optgroup>
+                                    </select>
+                                    <small id="_einstructor" class="form-text txError  ocultar sps text-muted">Seleccione un instructor</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Fecha de Inicio</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="_fechaInicio" type="text" class="form-control date-picker" data-datepicker-color="primary" required>
+                                    <small id="_efechaInicio" class="form-text txError  ocultar sps text-muted">Ingrese la fecha de inicio</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Fecha de fin</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="_fechaFin" type="text" class="form-control date-picker" data-datepicker-color="primary" required>
+                                    <small id="_efechaFin" class="form-text txError  ocultar sps text-muted">Ingrese la fecha de fin </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Organización</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <select id="_organizacion" class="form-control"> </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">País</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <select id="_pais" class="form-control"> </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Estado</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <!-- <select id="_estado" class="form-control"> </select> -->
+                                    <input id="_estado" type="text" class="form-control" required placeholder="Ingrese un estado">
+                                    <small id="_eestado" class="form-text txError  ocultar sps text-muted">Seleccione un Estado</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Localidad</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="_localidad" type="text" class="form-control" required placeholder="Ingrese una localidad">
+                                    <small id="_elocalidad" class="form-text txError  ocultar sps text-muted">Ingrese una localidad</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Centro de trabajo</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="_centroTrabajo" type="text" class="form-control" required placeholder="Ingrese un centro de trabajo">
+                                    <small id="_ecentroTrabajo" class="form-text  ocultar txError sps text-muted">Ingrese un centro de trabajo</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label class="mtopto">Sala</label>
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <input id="_sala" type="text" class="form-control" required required placeholder="Ingrese la sala">
+                                    <small id="_esala" class="form-text txError   ocultar sps text-muted">Ingrese la sala</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-round" data-dismiss="modal">Cancelar</button>
+                    <button id="btnEditarSession" type="button" class="btn btn-primary btn-round">Guardar
+                        sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Editar Sesión -->
+</div>
+
+<div id="modalBorrarSesion" class="ui small basic modal">
+    <h3 class="ui icon header modal_header">
+        <i class="nc-icon-outline ui-2_time-countdown"></i>
+        <br><br> Eliminar Sesión
+    </h3>
+    <div class="content modal_contenido">
+        <p>¿Realmente desea eliminar esta sesión?</p>
+    </div>
+    <div class="actions modal_botones">
+        <div id="botonCancelarBorrarSesion" class="btn btn-primary cancel btn-round botonEntrar">
+            Cancelar
+            <i class="nc-icon-outline ui-1_simple-remove" style="padding-left: 5px;"></i>
+        </div>
+        <div id="botonAceptarBorrarSesion" class="btn btn-success ok btn-round">
+            Aceptar
+            <i class="nc-icon-outline ui-1_check" style="padding-left: 5px;"></i>
+        </div>
+    </div>
+</div>
+
+<script>
+    activaSecSesiones();
+
+</script>
