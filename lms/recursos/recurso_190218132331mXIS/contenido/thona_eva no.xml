@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions name="" backgroundButtonSelected="#1781A2" backgroundButton="#1EC3C9">
+<question text="¿Cuáles son las categorías en las que se organizan nuestros productos?" number="1">
+	<answer correct="false" number="1" text="• Paquetes Vida Flexible &lt;br&gt;• Seguros de Vida y Accidentes &lt;br&gt;• Seguros COVID &lt;br&gt;• Seguros Grupo y Colectivo &lt;br&gt;• Thona Elite-Gastos Grupo" retro="" />
+	<answer correct="true" number="2" text="• Productos Paquete Individual &lt;br&gt;• Seguros de Vida Grupo &lt;br&gt;• Seguros COVID &lt;br&gt;• Seguros de Accidentes Personales Colectivo &lt;br&gt;• Thona Elite"  retro="" />
+	<answer correct="false" number="3" text="• Seguros de Vida Individual &lt;br&gt;• Seguros de Accidentes Grupo &lt;br&gt;• Seguros COVIDA &lt;br&gt;• Seguros Personales Colectivo &lt;br&gt;• Seguros Elite" retro="" />
+</question>
+<question text="¿Qué tipo de protección ofrece el seguro Escolar?" number="2">
+	<answer correct="false" number="1" text="Protección en el ramo de Vida" retro="" />
+	<answer correct="true" number="2" text="Protección en el ramo de Accidentes"  retro="" />
+	<answer correct="false" number="3" text="Protección en el ramo de Gastos Médicos" retro="" />
+</question>
+<question text="Son las dos coberturas con las que cuenta el Seguro COVID 19:" number="3">
+	<answer correct="false" number="1" text="Hospitalización por COVID 19 y Plan de asistencias Thona" retro="" />
+	<answer correct="false" number="2" text="Renta diaria por hospitalización y Atención médica urgente"  retro="" />
+	<answer correct="true" number="3" text="Gastos funerarios y Renta diaria por hospitalización" retro="" />
+</question>
+<question text="¿Cuáles son los productos que forman parte de la subcategoría “Gastos Médicos Mayores en dólares” de los productos Thona Elite?" number="4">
+	<answer correct="false" number="1" text="Vital, Ideal y Selecto" retro="" />
+	<answer correct="true" number="2" text="Selecto, Ideal y Óptimo"  retro="" />
+	<answer correct="false" number="3" text="Ideal, Selecto y Vital Plus" retro="" />
+</question>
+<question text="¿A quiénes les brinda protección el Seguro de Eventos?" number="5">
+	<answer correct="false" number="1" text="A los asistentes y a los organizadores." retro="" />
+	<answer correct="false" number="2" text="Al personal y a los organizadores"  retro="" />
+	<answer correct="true" number="3" text="A los asistentes y al personal" retro="" />
+</question>
+<question text="Es el producto de Paquete Individual en el que puedes imaginar, crear y armar el mejor seguro con total libertad para tus clientes." number="6">
+	<answer correct="false" number="1" text="Ideal" retro="" />
+	<answer correct="true" number="2" text="Viflex"  retro="" />
+	<answer correct="false" number="3" text="GmProtec" retro="" />
+</question>
+<question text="Es el seguro en donde se le paga una suma asegurada al contratante (una institución educativa), a fin de que se cubra la matrícula pendiente y, de este modo, un alumno concluya su ciclo escolar, nivel educativo o último grado que curse." number="7">
+	<answer correct="true" number="1" text="Orfandad" retro="" />
+	<answer correct="false" number="2" text="Escolar"  retro="" />
+	<answer correct="false" number="3" text="ViCapital" retro="" />
+</question>
+<question text="Se trata de seguros dirigidos a organizaciones que buscan proteger a sus usuarios, invitados o colaboradores de cualquier accidente dentro de sus instalaciones." number="8">
+	<answer correct="false" number="1" text="Empleados, Deportivo y Selecto" retro="" />
+	<answer correct="true" number="2" text="Deportivo, Ecoturismo y Escolar"  retro="" />
+	<answer correct="false" number="3" text="Vital Plus, Empleados y GmProtec" retro="" />
+</question>
+</questions>

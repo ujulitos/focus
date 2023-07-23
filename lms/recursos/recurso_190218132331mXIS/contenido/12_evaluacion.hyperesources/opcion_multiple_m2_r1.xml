@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<questions name="" backgroundButtonSelected="#1599D5" backgroundButton="#17485A">
+<question text="Elige el enunciado que corresponda a la dimensión subordinada." type="text" number="1">
+	<answer correct="false" number="1" text="Considero que es momento de tomar seriamente tu trabajo y cumplas con esfuerzo tus tareas" retro="Sé que tienes mejores cosas hacer, pero deseaba saber, ¿cuándo recibiré el reembolso de mis viáticos?" />
+	<answer correct="true" number="2" text="Sé que tienes mejores cosas hacer, pero deseaba saber, ¿cuándo recibiré el reembolso de mis viáticos?"  retro="" />
+	<answer correct="false" number="3" text="El segundo sábado de cada mes la asistencia a trabajar es obligatoria para la mitad del equipo, los intercambios no son válidos"  retro="Sé que tienes mejores cosas hacer, pero deseaba saber, ¿cuándo recibiré el reembolso de mis viáticos" />
+</question>
+<question text="El jefe de área intenta llamar la atención de un integrante del equipo de la siguiente forma:[br/] [br/] [i] “Continúa con el mismo nivel de rendimiento que tienes ahora y nunca saldrás de esta área como algo mejor que un técnico reparador” El técnico respondió. “No tengo problema, es lo que siempre quise.[/i]” [br/] Debido a ser la primera persona de su familia en tener un trabajo calificado el técnico se sentía orgulloso de permanecer en su puesto. [br/][br/] ¿Qué olvidó considerar el jefe de área para realizar una crítica constructiva?" type="text" number="2">
+	<answer correct="true" number="1" text="Marco de referencia" retro="" />
+	<answer correct="false" number="2" text="La motivación del técnico"  retro="Marco de referencia" />
+	<answer correct="false" number="3" text="La dimensión cálida en su mensaje"  retro="Marco de referencia" />
+</question>
+<question text="Lee la siguiente conversación entre el líder del equipo y el colaborador encargado de realizar el reporte de ventas del último trimestre quien ha tenido ciertas complicaciones que requieren la intervención o apoyo por parte de otros compañeros: [br/]
+	Líder: Jorge, ese reporte es muy importante para definir las metas del siguiente año… ¿será posible entregarlo antes de tiempo para revisarlo?[br/]
+Jorge: Puedo equivocarme…pero no deberíamos basar las metas en los resultados de ese informe.[br/]
+Líder: Comprendo que estos últimos meses han sido complicados, pero necesitamos contar con información confiable para avanzar.[br/]
+Jorge: Haré lo posible por terminarlo, pero he tenido bastante trabajo extra, no estoy seguro de tenerlo antes…[br/][br/]
+Las frases de Jorge indican que no tiene el control total de sus acciones, además no le fue posible expresar que necesitaba ayuda. ¿Qué necesita Jorge para romper la barrera de comunicación que ha creado?" type="text" number="3">
+	<answer correct="true" number="1" text="Persuadir con su mensaje y mencionar claramente sus necesidades " retro="" />
+	<answer correct="false" number="2" text="Utilizar un tono frío y dominante que le dé confianza"  retro="Persuadir con su mensaje y mencionar claramente sus necesidades" />
+	<answer correct="false" number="3" text="Mandarle un correo al líder diciéndole que no podrá terminar el reporte"  retro="Persuadir con su mensaje y mencionar claramente sus necesidades " />
+</question>
+<question text="En una junta de trabajo del equipo, un integrante se encuentra en la exposición de una propuesta: [br/][i] “Un buen elemento en el área de venta necesita conocer las propuestas que tienen mayor probabilidad de cerrar efectivamente y cuáles requieren de más esfuerzos, así como el estatus de cada uno de los procesos de ventas que ha emprendido.[/i]” [br/] ¿Cuál de las siguientes respuestas indica una escucha activa por parte de sus compañeros?" type="text" number="4">
+	<answer correct="false" number="1" text="No creo que ese sea el motivo de los malos resultados que los vendedores tienen, la crisis económica trae consigo desventajas para las empresas." retro=" Podemos decir que es conveniente llevar el control a través de alguna herramienta que permita conocer qué tan potencial puede ser un cliente." />
+	<answer correct="false" number="2" text="Es muy interesante lo que mencionas, podemos escalar tu propuesta al director general de la empresa, prepararé una nueva reunión."  retro="Podemos decir que es conveniente llevar el control a través de alguna herramienta que permita conocer qué tan potencial puede ser un cliente." />
+	<answer correct="true" number="3" text="Podemos decir que es conveniente llevar el control a través de alguna herramienta que permita conocer qué tan potencial puede ser un cliente." retro="" />
+</question>
+<question text="Lee el siguiente planteamiento:[br/][i] “El dueño de la empresa nos ha pedido un esfuerzo extra para terminar la documentación necesaria para participar en la licitación, por lo que se tendrá que trabajar el fin de semana para acabar cuanto antes[/i]”[br/] ¿Cuál de las siguientes respuestas promueve una relación interpersonal de cooperación en el equipo?" type="text" number="5">
+	<answer correct="false" number="1" text="Propongo que los compañeros que son menos participativos en el equipo sean quienes se presenten a trabajar el fin de semana y así la carga de trabajo sea justa para todo el equipo." retro="Comprendo que necesitamos esforzarnos más, propongo repartir este trabajo extra entre unos días más del fin de semana. Así, los que no podemos venir todavía podemos ayudar." />
+	<answer correct="false" number="2" text="¿Trabajar en fin de semana? ¡Imposible! Tengo que llevar a mis hijos a entrenamiento y no podré presentarme, espero que comprendan la situación y me exenten de dicho requerimiento."  retro="Comprendo que necesitamos esforzarnos más, propongo repartir este trabajo extra entre unos días más del fin de semana. Así, los que no podemos venir todavía podemos ayudar." />
+	<answer correct="true" number="3" text="Comprendo que necesitamos esforzarnos más, propongo repartir este trabajo extra entre unos días más del fin de semana. Así, los que no podemos venir todavía podemos ayudar."  retro="" />
+</question>
+<question text="En un día normal de trabajo el equipo recibe una noticia, es indispensable que un representante del equipo se quede en la empresa fuera de horarios laborales debido a una situación crítica. Lo que ocasiona las siguientes reacciones:[br/] Integrante 1: ¡No es posible! Hoy es la graduación de mi hijo, no puedo quedarme. [br/] Integrante 2: No te preocupes, comprendemos la importancia de este evento para ti.[br/] Integrante 3: Sé que no debo decirlo pero ya son bastantes veces las que me he quedado a cubrir al equipo no me quedaré.[br/] Integrante 2: Reconozco que apoyas siempre al equipo, pero debemos buscar una solución que nos convenga a todos.[br/]
+Integrante 4: Tienes razón, pero siempre en estas situaciones algunos de los integrantes sale perdiendo y no recibe nada a cambio y se necesita urgentemente enviar al director el nombre de la persona que se quedará.[br/] ¿Cuál de los siguientes integrantes desempeña el rol de trabajador en equipo?" type="text" number="6">
+	<answer correct="false" number="1" text="Integrante 1" retro="Integrante 2" />
+	<answer correct="true" number="2" text="Integrante 2"  retro="" />
+	<answer correct="false" number="3" text="Integrante 4"  retro="Integrante 2" />
+</question>
+<question text="En una reunión del equipo sobre cómo mejorar el proceso de venta se menciona lo siguiente:[br/]Integrante 1: El proceso de venta requiere de propuestas innovadoras que nos permita cumplir este propósito, será mejor que investiguemos los datos más actuales sobre este tema.[br/]Integrante 2: Con base en la experiencia que tuve al estudiar mi doctorado en el extranjero puedo exponer los casos de éxito en empresas americanas que pudieron mejorar sus ventas.[br/] Integrante 3: Si les parece conveniente puedo hacer una recapitulación de las propuestas que se hagan y al final podemos decidir la más conveniente.[br/] ¿En cuál de los 3 integrantes la diversidad de experiencias resulta negativa para el equipo?" type="text" number="7">
+	<answer correct="false" number="1" text= "Integrante 1" retro="Integrante 3" />
+	<answer correct="false" number="2" text="Integrante 2"  retro="Integrante 3" />
+	<answer correct="true" number="3" text="Integrante 3"  retro="" />
+</question>
+<question text="Un equipo se encuentra definiendo lo siguiente:[br/]Integrante 1: Ahora que se han expuesto los puntos de vista de cada uno sobre la mejor forma de reportar el nivel de cumplimiento de metas podemos decidir cuál será el mejor para el equipo.[br/] Integrante 2: Considero que lo mejor es utilizar una herramienta de administración de tareas donde cada una de nosotras tenga acceso para documentar los avances.[br/]  Integrante 3: Me parece adecuado, aunque no necesitamos de una herramienta, aun así insisto que la fecha límite para mostrar resultados sea cada 12 días y así evitar afectar nuestros inicios o fines de cada mes cuando el trabajo tiende a aumentar.[br/] ¿En qué etapa de desarrollo se encuentra el equipo?" type="text" number="8">
+	<answer correct="true" number="1" text="Normatividad " retro="" />
+	<answer correct="false" number="2" text="Formativa"  retro="Normatividad" />
+	<answer correct="false" number="3" text="Confrontación"  retro="Normatividad" />
+</question>
+</questions>
