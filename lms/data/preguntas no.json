@@ -1,8 +1,0 @@
-[ 
-    { "tipo" : "Selecciona una opción" },
-    { "tipo" : "Opción múltiple" },
-    { "tipo" : "Falso / Verdadero" },
-    { "tipo" : "Marcado de casillas" },
-    { "tipo" : "Escala" },
-    { "tipo" : "Pregunta abierta" }    
-]
