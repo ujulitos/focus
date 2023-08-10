@@ -621,9 +621,9 @@ function inicializaAPI() {
         //alert("PARAMETROS:\n\nID curso "+lms_item_id+"\nScore "+score+"\nStatus "+lesson_status+"\nSession Time "+session_time+"\nSuspend data "+suspend_data+"\nLocation "+lesson_location+"\nTotal time "+calcT3());
         //	alert("interactions: "+ interactions.length);
         for (x = 0; x < interactions.length; x++) {
-            alert("interaccion sola de " + x + " " + interactions[x]);
+            // alert("interaccion sola de " + x + " " + interactions[x]);
             for (y = 0; y < interactions[x].length; y++) {
-                alert("interaccion " + x + " con subindice " + y + " ****** " + interactions[x][y])
+                // alert("interaccion " + x + " con subindice " + y + " ****** " + interactions[x][y])
             }
         }
 
@@ -732,7 +732,7 @@ function inicializaAPI() {
     }
 
     function logit_lms(message, priority) {
-        alert("logit lms " + message + " " + priority)
+        // alert("logit lms " + message + " " + priority)
 
     }
 
@@ -801,7 +801,7 @@ function inicializaAPI() {
         for (a = 0; a < total_timePorRecurso.length; a++) {
             substractTimes(total_timePorRecurso[a], session_time);
             total_timeFinal += total_timePorRecurso[a] + "*";
-            alert(total_timeFinal);
+            // alert(total_timeFinal);
         }
         total_timeFinal = total_timeFinal.substring(0, (total_timeFinal.length - 1));
         return "'" + total_timeFinal + "'";
