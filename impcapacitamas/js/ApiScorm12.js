@@ -185,7 +185,7 @@ function inicializaAPI() {
                 f_lesson_location = snapshot.child('cmi_core_lesson_location').val();
                 console.log('f_lesson_location: ', f_lesson_location);
                 if (f_lesson_location == null || f_lesson_location == '' || f_lesson_location == undefined) {
-                    f_lesson_location = '0';
+                    // f_lesson_location = '0';
                 }
 
                 f_score_min = snapshot.child('cmi_core_score_min').val();
