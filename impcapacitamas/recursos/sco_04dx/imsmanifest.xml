@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest identifier="cT9byVNAotNso" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lom="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<manifest identifier="KH8SjeieIyEdT" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lom="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
 <metadata>
 <schema>ADL SCORM</schema>
 <schemaversion>1.2</schemaversion>
@@ -44,7 +44,7 @@
 <file href="res/data/quiz1/fonts/fnt2.woff"/>
 <file href="res/data/quiz1/fonts/fnt3.woff"/>
 <file href="res/data/quiz1/fonts/fnt4.woff"/>
-<file href="res/data/quiz1/images/9b1e-c173-1c37-e24a.jpg"/>
+<file href="res/data/quiz1/images/c963-faa4-84aa-1f59.jpg"/>
 <file href="res/data/quiz1/images/img-1b2234cc814597cd23edd6fc06fb19b5de234167.jpg"/>
 <file href="res/data/quiz1/images/img-fce9c0358f313aafbf56698aa792cf2bc523fbba.jpg"/>
 <file href="res/data/quiz1/images/quiz_bg_0.png"/>

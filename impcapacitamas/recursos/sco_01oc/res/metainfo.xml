@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<presentation guid="BE83A833-4A30-46AE-A6BA-5B3DE41F791A" version="0" availableOffline="1">
+<presentation guid="A0EED305-85A5-42A3-AF42-8E65950C2EF7" version="0" availableOffline="1">
 	<info>
 		<title>sco_c01</title>
 		<description>sco_c01</description>
 	</info>
-	<files index="id7" thumbnail="id1085" totalSize="63430663">
+	<files index="id7" thumbnail="id1085" totalSize="63428470">
 		<file id="id4">lms.js</file>
 		<file id="id5">data/goodbye.html</file>
 		<file id="id7">index.html</file>

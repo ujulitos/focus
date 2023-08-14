@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<presentation guid="4BE61F5F-6D47-4C11-AB35-D0FA370A3F59" version="0" availableOffline="1">
+<presentation guid="C2861BA1-F3BB-4C5D-A46F-696910CAED73" version="0" availableOffline="1">
 	<info>
 		<title>sco_dx02</title>
 		<description>sco_dx02</description>
 	</info>
-	<files index="id7" thumbnail="id43" totalSize="10003362">
+	<files index="id7" thumbnail="id42" totalSize="9806702">
 		<file id="id4">lms.js</file>
 		<file id="id5">data/goodbye.html</file>
 		<file id="id7">index.html</file>
@@ -17,28 +17,27 @@
 		<file id="id14">data/quiz1/fonts/fnt1.woff</file>
 		<file id="id15">data/quiz1/fonts/fnt2.woff</file>
 		<file id="id16">data/quiz1/fonts/fnt3.woff</file>
-		<file id="id17">data/quiz1/fonts/fnt4.woff</file>
-		<file id="id18">data/quiz1/images/img-3eb0eccfe870da73226af95106e5157c5215086b.jpg</file>
-		<file id="id19">data/quiz1/images/quiz_bg_0.png</file>
-		<file id="id20">data/quizplayer.js</file>
-		<file id="id21">data/player.js</file>
-		<file id="id26">data/browsersupport.js</file>
-		<file id="id27">data/apple-touch-icon.png</file>
-		<file id="id28">data/favicon.ico</file>
-		<file id="id29">data/fnt0.woff</file>
-		<file id="id30">data/fnt1.woff</file>
-		<file id="id31">data/fnt2.woff</file>
-		<file id="id32">data/fnt3.woff</file>
-		<file id="id33">data/fnt4.woff</file>
-		<file id="id34">data/fnt5.woff</file>
-		<file id="id35">data/fnt6.woff</file>
-		<file id="id36">data/html5-unsupported.html</file>
-		<file id="id37">data/img0.png</file>
-		<file id="id38">data/img1.png</file>
-		<file id="id39">data/img2.png</file>
-		<file id="id40">data/img3.png</file>
-		<file id="id41">data/img4.png</file>
-		<file id="id42">data/img5.png</file>
-		<file id="id43">data/ismplayer/preview.png</file>
+		<file id="id17">data/quiz1/images/img-3eb0eccfe870da73226af95106e5157c5215086b.jpg</file>
+		<file id="id18">data/quiz1/images/quiz_bg_0.png</file>
+		<file id="id19">data/quizplayer.js</file>
+		<file id="id20">data/player.js</file>
+		<file id="id25">data/browsersupport.js</file>
+		<file id="id26">data/apple-touch-icon.png</file>
+		<file id="id27">data/favicon.ico</file>
+		<file id="id28">data/fnt0.woff</file>
+		<file id="id29">data/fnt1.woff</file>
+		<file id="id30">data/fnt2.woff</file>
+		<file id="id31">data/fnt3.woff</file>
+		<file id="id32">data/fnt4.woff</file>
+		<file id="id33">data/fnt5.woff</file>
+		<file id="id34">data/fnt6.woff</file>
+		<file id="id35">data/html5-unsupported.html</file>
+		<file id="id36">data/img0.png</file>
+		<file id="id37">data/img1.png</file>
+		<file id="id38">data/img2.png</file>
+		<file id="id39">data/img3.png</file>
+		<file id="id40">data/img4.png</file>
+		<file id="id41">data/img5.png</file>
+		<file id="id42">data/ismplayer/preview.png</file>
 	</files>
 </presentation>
