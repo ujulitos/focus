@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest identifier="U8tWH5tZzN82T" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lom="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<manifest identifier="Lh19jzUH9GisX" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lom="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
 <metadata>
 <schema>ADL SCORM</schema>
 <schemaversion>1.2</schemaversion>
@@ -147,15 +147,15 @@
 <file href="res/data/slide36.js"/>
 <file href="res/data/slide36.css"/>
 <file href="res/data/thmb37.png"/>
-<file href="res/data/slide37.js"/>
-<file href="res/data/slide37.css"/>
-<file href="res/data/thmb38.png"/>
 <file href="res/data/intr2.js"/>
 <file href="res/data/intr2/fonts/fnt0.woff"/>
 <file href="res/data/intr2/fonts/fnt1.woff"/>
 <file href="res/data/intr2/fonts/fnt2.woff"/>
 <file href="res/data/intr2/fonts/fnt3.woff"/>
 <file href="res/data/intr2/images/interaction_bg_1.png"/>
+<file href="res/data/thmb38.png"/>
+<file href="res/data/slide38.js"/>
+<file href="res/data/slide38.css"/>
 <file href="res/data/thmb39.png"/>
 <file href="res/data/slide39.js"/>
 <file href="res/data/slide39.css"/>
@@ -178,12 +178,6 @@
 <file href="res/data/slide45.js"/>
 <file href="res/data/slide45.css"/>
 <file href="res/data/thmb46.png"/>
-<file href="res/data/slide46.js"/>
-<file href="res/data/slide46.css"/>
-<file href="res/data/thmb47.png"/>
-<file href="res/data/slide47.js"/>
-<file href="res/data/slide47.css"/>
-<file href="res/data/thmb48.png"/>
 <file href="res/data/intr3.js"/>
 <file href="res/data/intr3/fonts/fnt0.woff"/>
 <file href="res/data/intr3/fonts/fnt1.woff"/>
@@ -191,6 +185,12 @@
 <file href="res/data/intr3/fonts/fnt3.woff"/>
 <file href="res/data/intr3/images/img-3889e0e7084d119c0826c7fc705948ad98d5a0e1.png"/>
 <file href="res/data/intr3/images/interaction_bg_2.png"/>
+<file href="res/data/thmb47.png"/>
+<file href="res/data/slide47.js"/>
+<file href="res/data/slide47.css"/>
+<file href="res/data/thmb48.png"/>
+<file href="res/data/slide48.js"/>
+<file href="res/data/slide48.css"/>
 <file href="res/data/thmb49.png"/>
 <file href="res/data/slide49.js"/>
 <file href="res/data/slide49.css"/>
@@ -243,12 +243,6 @@
 <file href="res/data/slide65.js"/>
 <file href="res/data/slide65.css"/>
 <file href="res/data/thmb66.png"/>
-<file href="res/data/slide66.js"/>
-<file href="res/data/slide66.css"/>
-<file href="res/data/thmb67.png"/>
-<file href="res/data/slide67.js"/>
-<file href="res/data/slide67.css"/>
-<file href="res/data/thmb68.png"/>
 <file href="res/data/quiz1.js"/>
 <file href="res/data/quiz1/fonts/fnt0.woff"/>
 <file href="res/data/quiz1/fonts/fnt1.woff"/>
@@ -257,10 +251,9 @@
 <file href="res/data/quiz1/images/img-3eb0eccfe870da73226af95106e5157c5215086b.jpg"/>
 <file href="res/data/quiz1/images/img-98059f940e40070174ce27d17c925050a9ae3e70.png"/>
 <file href="res/data/quiz1/images/quiz_bg_0.png"/>
-<file href="res/data/thmb69.jpg"/>
-<file href="res/data/slide69.js"/>
-<file href="res/data/slide69.css"/>
-<file href="res/data/sound1.mp3"/>
+<file href="res/data/thmb67.jpg"/>
+<file href="res/data/slide67.js"/>
+<file href="res/data/slide67.css"/>
 <file href="res/data/quizplayer.js"/>
 <file href="res/data/intplayer1.js"/>
 <file href="res/data/intplayer2.js"/>
@@ -345,20 +338,20 @@
 <file href="res/data/img58.png"/>
 <file href="res/data/img59.png"/>
 <file href="res/data/img6.png"/>
-<file href="res/data/img60.png"/>
+<file href="res/data/img60.svg"/>
 <file href="res/data/img61.png"/>
 <file href="res/data/img62.png"/>
 <file href="res/data/img63.png"/>
 <file href="res/data/img64.svg"/>
 <file href="res/data/img65.png"/>
 <file href="res/data/img66.png"/>
-<file href="res/data/img67.png"/>
+<file href="res/data/img67.svg"/>
 <file href="res/data/img68.svg"/>
 <file href="res/data/img69.png"/>
 <file href="res/data/img7.png"/>
 <file href="res/data/img70.png"/>
-<file href="res/data/img71.svg"/>
-<file href="res/data/img72.svg"/>
+<file href="res/data/img71.png"/>
+<file href="res/data/img72.png"/>
 <file href="res/data/img73.png"/>
 <file href="res/data/img74.png"/>
 <file href="res/data/img75.png"/>
@@ -368,11 +361,7 @@
 <file href="res/data/img79.png"/>
 <file href="res/data/img8.png"/>
 <file href="res/data/img80.png"/>
-<file href="res/data/img81.png"/>
-<file href="res/data/img82.png"/>
-<file href="res/data/img83.png"/>
-<file href="res/data/img84.png"/>
-<file href="res/data/img85.svg"/>
+<file href="res/data/img81.svg"/>
 <file href="res/data/img9.png"/>
 <file href="res/data/ismplayer/preview.png"/>
 </resource>
