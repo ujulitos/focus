@@ -114,11 +114,11 @@
         var conSubts = true;
         // var subtsOn;
         // var altoSubts = 125;
-        this.punto1 = [545, 700, 2000, 500];
-        this.punto2 = [480, 405, 2000, 500];
-        this.punto3 = [315, 560, 1000, 500];
+        this.punto1 = [535, 410, 2000, 500];
+        this.punto2 = [535, 410, 2000, 500];
+        this.punto3 = [300, 560, 1000, 500];
         this.punto4 = [420, 720, 1000, 500];
-        this.punto5 = [335, 400, 1000, 500];
+        this.punto5 = [350, 305, 2000, 500];
         this.punto6 = [100, 100, 2000, 500];
         this.punto7 = [100, 100, 2000, 500];
         this.punto8 = [290, 490, 1000, 500];
@@ -187,6 +187,7 @@
             switch (cualSeccion) {
                 case 1:
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
+                    conMouse = false;
                     break;
                 case 6:
                     conMouse = false;
