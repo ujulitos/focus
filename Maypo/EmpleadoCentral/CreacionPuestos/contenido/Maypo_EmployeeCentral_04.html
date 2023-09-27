@@ -37,12 +37,14 @@
         <img id="sec_img2" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img02.png"></img>
         <img id="sec_img3" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img03.png"></img>
         <img id="sec_img4" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img04.png"></img>
+        <img id="sec_img5" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_05/sec_img04.png"></img>
 
         <!-- <img id="img_subts_fondo" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/img_subts_fondo.png"></img> -->
         <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img01_subts_01.png"></img>
         <img id="sec_img2_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img02_subts_01.png"></img>
         <img id="sec_img3_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img03_subts_01.png"></img>
         <img id="sec_img4_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img04_subts_01.png"></img>
+        <img id="sec_img5_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_04/sec_img05_subts_01.png"></img>
 
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
@@ -90,16 +92,17 @@
 <script>
     $(document).ready(function() {
 
-        var cuantasSecciones = 4;
-        var cualAudio = 7;
+        var cuantasSecciones = 5;
+        var cualAudio = 8;
         var conMouse = true;
         var conSubts = true;
         // var subtsOn;
         // var altoSubts = 125;
-        this.punto1 = [220, 865, 2000, 500];
+        this.punto1 = [220, 865, 3000, 500];
         this.punto2 = [270, 1040, 2000, 500];
-        this.punto3 = [510, 1060, 1000, 500];
-        this.punto4 = [350, 1060, 1000, 500];
+        this.punto3 = [510, 1060, 2000, 500];
+        this.punto4 = [350, 1060, 2000, 500];
+        this.punto5 = [540, 1050, 2000, 500];
         that = this;
 
 
@@ -139,7 +142,7 @@
             // Subtítulos Fondo //
             // animacion_entrada($("#sec_img01_subts_01"), "izq_der", .5, 2.5);
             // QUITAR
-            parent.playAudio(7, 1500, terminaAudio1);
+            parent.playAudio(cualAudio, 1500, terminaAudio1);
         }
 
         function terminaAudio1() {
@@ -160,6 +163,9 @@
             switch (cualSeccion) {
                 case 1:
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
+                    break;
+                case 4:
+                    conMouse = false;
                     break;
                 default:
                     // altoSubts = 125;
