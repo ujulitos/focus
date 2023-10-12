@@ -1,0 +1,280 @@
+<script src="contenido/js/random.min.js"></script>
+
+<div class="seccion">
+
+    <!-- Section: Features v.3 -->
+    <section id="tres" class="my-5">
+
+        <div id="textoCompleto100" class="textoCompleto100">
+            <div class="encabezado1">
+                Evaluación Final
+            </div>
+            <div class='texto1'>
+                A continuación te presentamos una serie de preguntas que servirán como repaso a lo que hemos revisado. Selecciona la respuesta
+                correcta:
+                <br>
+                <br>
+                <br>
+
+                <div id="evaluacion_div" class="evaluacion_div"> </div>
+
+                <br>
+                <br>
+
+                <div id="botonCalificar" class="btn btn-info btn-rounded waves-effect waves-light disabled">Enviar</div>
+
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Section: Features v.3 -->
+
+
+    <!-- Retro Bien -->
+    <div class="modal fade" id="retroBien" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-notify modal-success" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">¡Felicidades!</p>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="boton_cerrar mdi mdi-close"></span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="mdi mdi-check-outline mb-3 icono_paloma animated rotateIn"></i>
+                        <p>Tu puntuación ha sido de</p>
+                        <p id="puntaje_div_bien" class="icono_paloma"></p>
+                        <p>Has aprobado la evaluación.</p>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-success" data-dismiss="modal">Cerrar</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Retro Bien-->
+
+
+    <!-- Retro Mal -->
+    <div class="modal fade" id="retroMal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">¡Oh oh!</p>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="boton_cerrar mdi mdi-close"></span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="mdi mdi-close-outline mb-3 icono_tache animated rotateIn"></i>
+                        <p>Tu puntuación ha sido de</p>
+                        <p id="puntaje_div_mal" class="icono_tache"></p>
+                        <p>Te recomendamos volver a cursar el contenido.</p>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Retro Mal-->
+
+
+
+</div>
+
+
+
+
+<script>
+
+    var cuantasPreguntas;
+    var cuantasRespuestas = 3;
+    var lasRespuestas = new Array();
+    var lasCorrectas = new Array();
+    var preguntasRandom = new Array();
+    var aciertos = 0;
+    var minimo = 80;
+    var that = this;
+
+    function validaRadios(obj) {
+        var cualPregunta = parseInt(obj.name.substr(4, 2));
+        var seleccionada = parseInt(obj.value);
+        lasRespuestas[(cualPregunta - 1)] = seleccionada;
+        var laCorrecta = lasCorrectas[(cualPregunta - 1)];
+        console.log('Pregunta', cualPregunta, 'correcta', laCorrecta);
+
+        habilitaBotonSimple($('#botonCalificar'), true);
+        $("input:radio").each(function () {
+            var name = $(this).attr("name");
+
+            if ($("input:radio[name=" + name + "]:checked").length == 0) {
+                habilitaBotonSimple($('#botonCalificar'), false);
+            }
+        });
+
+    }
+
+
+    function evalua() {
+        var contador = 0;
+
+        for (a = 1; a <= cuantasPreguntas; a++) {
+            contador++;
+
+            $("input:radio[name=resp" + a + "]").prop("disabled", true);
+            for (b = 1; b <= cuantasRespuestas; b++) {
+                $('#label' + a + '_' + b).css({ 'cursor': 'default' });
+            }
+
+            if (lasRespuestas[(contador - 1)] == lasCorrectas[(contador - 1)]) {
+                aciertos++;
+                $('#label' + contador + '_' + lasRespuestas[(contador - 1)]).addClass('green lighten-5');
+                $('#label' + contador + '_' + lasRespuestas[(contador - 1)] + '>i').addClass('mdi-check').css({
+                    'color': '#2e7d32'
+                });
+            } else {
+                $('#label' + contador + '_' + lasRespuestas[(contador - 1)]).addClass('deep-orange lighten-5');
+                $('#label' + contador + '_' + lasRespuestas[(contador - 1)] + '>i').addClass('mdi-close').css({
+                    'color': '#dd2c00'
+                });
+            }
+        }
+        retroalimenta();
+    }
+
+
+    function retroalimenta() {
+        console.log('aciertos', aciertos);
+
+        var puntuacion = Math.round((aciertos / cuantasPreguntas) * 100);
+        console.log("puntuacion:", puntuacion);
+
+        set("cmi.core.score.raw", puntuacion);
+        var success = save();
+        if (!success) { }
+
+        if (puntuacion >= minimo) {
+            set("cmi.core.lesson_status", "passed");
+            var success = save();
+
+            $('#puntaje_div_bien').append(puntuacion);
+            $('#retroBien').modal();
+        } else {
+            // set("cmi.core.lesson_status", "completed");
+            // var success = save();
+            set("cmi.core.lesson_status", "failed");
+            var success = save();
+
+            $('#puntaje_div_mal').append(puntuacion);
+            $('#retroMal').modal();
+        }
+
+        terminaPantalla();
+    }
+
+
+    $('#botonCalificar').click(function () {
+        habilitaBotonSimple($(this), false);
+        evalua();
+    });
+
+
+
+
+
+    $(document).ready(function () {
+        // activaSeccion('2');
+
+        function loadScript(url, callback) {
+
+            var script = document.createElement("script")
+            script.type = "text/javascript";
+
+            if (script.readyState) {  //IE
+                script.onreadystatechange = function () {
+                    if (script.readyState == "loaded" ||
+                        script.readyState == "complete") {
+                        script.onreadystatechange = null;
+                        callback();
+                    }
+                };
+            } else {  //Others
+                script.onload = function () {
+                    callback();
+                };
+            }
+
+            script.src = url;
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+
+        loadScript("contenido/js/evaluacion.js", function () {
+            pintaEvaluacion();
+        });
+
+
+        function pintaEvaluacion() {
+
+            cuantasPreguntas = eva.preguntas.length;
+            preguntasRandom = noRepRandom(cuantasPreguntas);
+            var contador = 0;
+            var evaContenido = '';
+
+            $('#evaluacion_div').empty();
+
+            for (a = 1; a <= cuantasPreguntas; a++) {
+                contador++;
+
+                evaContenido += '<a class="encabezado">' + contador + ' - </a>';
+                evaContenido += eva.preguntas[(preguntasRandom[(contador - 1)] - 1)].pregunta;
+                evaContenido += '<ul>';
+                evaContenido += '<input type="radio" name="resp' + contador + '" id="r' + contador + '_1" value="1" onchange="validaRadios(this);" />';
+                evaContenido += '<label id="label' + contador + '_1" style="display:inline-table;" for="r' + contador + '_1">';
+                evaContenido += eva.preguntas[(preguntasRandom[(contador - 1)] - 1)].respuesta1;
+                evaContenido += '<i class="mdi" style="padding:10px;"></i></label>';
+                evaContenido += '<br>';
+                evaContenido += '<input type="radio" name="resp' + contador + '" id="r' + contador + '_2" value="2" onchange="validaRadios(this);" />';
+                evaContenido += '<label id="label' + contador + '_2" style="display:inline-table;" for="r' + contador + '_2">';
+                evaContenido += eva.preguntas[(preguntasRandom[(contador - 1)] - 1)].respuesta2;
+                evaContenido += '<i class="mdi" style="padding:10px;"></i></label>';
+                evaContenido += '<br>';
+                evaContenido += '<input type="radio" name="resp' + contador + '" id="r' + contador + '_3" value="3" onchange="validaRadios(this);" />';
+                evaContenido += '<label id="label' + contador + '_3" style="display:inline-table;" for="r' + contador + '_3">';
+                evaContenido += eva.preguntas[(preguntasRandom[(contador - 1)] - 1)].respuesta3;
+                evaContenido += '<i class="mdi" style="padding:10px;"></i></label>';
+                evaContenido += '</ul>';
+
+                lasCorrectas[(contador - 1)] = parseInt(eva.preguntas[(preguntasRandom[(contador - 1)] - 1)].correcta);
+            }
+
+            $('#evaluacion_div').append(evaContenido);
+
+        }
+
+
+
+    });
+
+</script>
