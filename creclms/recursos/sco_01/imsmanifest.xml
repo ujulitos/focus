@@ -1,38 +1,92 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<manifest 
-	identifier="uJL" 
-	version="1" 
-	xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" 
-	xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
-						http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
-						http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
-	
-<!-- metadata -->
-	<metadata>
-		<schema>ADL SCORM</schema>
-		<schemaversion>1.2</schemaversion>
-	</metadata>
-	
-<!-- organizations -->
-	<organizations default="CURSO">
-		<organization identifier="CURSO">
-			<title>i4L - Responsivo</title>
-			<item identifier="item0" identifierref="ref01">
-				<title>eLearning Responsivo</title>
-			</item>
-		</organization>
-	</organizations>
-	
-<!-- resources -->
-	<resources>
-		<resource identifier="ref01" type="webcontent" adlcp:scormtype="sco" href="index.html"></resource>
-	</resources>
+<?xml version="1.0" ?>
+<manifest identifier="AB_UFCX2XOiR222ZkVyBG1gwo3FsDjJrUhOSn7r9" version="1"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <adlcp:location>metadata.xml</adlcp:location>
+  </metadata>
+  <organizations default="articulate_rise">
+      <organization identifier="articulate_rise">
+      <title>Principios básicos de nutrición</title>
+      <item identifier="i1" identifierref="r1" isvisible="true">
+        <title>Principios básicos de nutrición</title>
+        <adlcp:datafromlms>eyJjcHYiOiJVaE9TbjdyOSIsInJsZCI6ZmFsc2V9</adlcp:datafromlms>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="r1" type="webcontent" adlcp:scormtype="sco" href="scormdriver/indexAPI.html">
+      <!-- SCORMDRIVER STUFF -->
+      <file href="scormdriver/indexAPI.html" />
+      <file href="scormdriver/preloadIntegrity.js" />
+      <file href="scormdriver/driverOptions.js" />
+      <file href="scormdriver/AICCComm.html" />
+      <file href="scormdriver/auto-scripts/AutoBookmark.js" />
+      <file href="scormdriver/auto-scripts/AutoCompleteSCO.js" />
+      <file href="scormdriver/auto-scripts/CourseExit.js" />
+      <file href="scormdriver/blank.html" />
+      <file href="scormdriver/goodbye.html" />
+      <file href="scormdriver/scormdriver.js" />
+      <file href="scormdriver/browsersniff.js" />
 
+      <!-- RUNTIME COMMON STUFF -->
+      <file href="scormcontent/index.html" />
+      <file href="scormcontent/lib/main.bundle.js"/>
+
+      
+        <file href="scormcontent/lib/fonts/icomoon.ttf"/>
+        <file href="scormcontent/lib/fonts/icomoon.woff"/>
+
+        <file href="scormcontent/lib/icomoon.css"/>
+        <file href="scormcontent/lib/main.bundle.css"/>
+        <file href="scormcontent/lib/player-0.0.11.min.js"/>
+        <file href="scormcontent/lib/lzwcompress.js"/>
+      
+
+      <!-- RUNTIME CONTENT STUFF -->
+      <file href="scormcontent/lib/fonts/OpenSans-Italic.woff" />
+<file href="scormcontent/lib/fonts/OpenSans-Bold.woff" />
+<file href="scormcontent/lib/fonts/OpenSans-Regular.woff" />
+<file href="scormcontent/lib/fonts/OpenSans-Light.woff" />
+<file href="scormcontent/lib/fonts/Raleway-Black.woff" />
+<file href="scormcontent/lib/fonts/Raleway-Italic.woff" />
+<file href="scormcontent/lib/fonts/Raleway-Bold.woff" />
+<file href="scormcontent/lib/fonts/Raleway-Regular.woff" />
+<file href="scormcontent/lib/fonts/Raleway-Light.woff" />
+<file href="scormcontent/lib/fonts/Lato-Black.woff" />
+<file href="scormcontent/lib/fonts/Lato-Italic.woff" />
+<file href="scormcontent/lib/fonts/Lato-Bold.woff" />
+<file href="scormcontent/lib/fonts/Lato-Regular.woff" />
+<file href="scormcontent/lib/fonts/Lato-Light.woff" />
+<file href="scormcontent/assets/CVcHdhBy0JB9QU3U_small.png" />
+<file href="scormcontent/assets/UfLfyZhbo5KgROoF_small.png" />
+<file href="scormcontent/assets/itfLJ4qJljmYCdSp_HNsiOKwgAfb9geek.png" />
+<file href="scormcontent/assets/MT7h3dSOGh7o-9Ul_2raBGkZQc5yAB8FB.jpg" />
+<file href="scormcontent/assets/7aPLxGIciDbW13TM_dOAMOSV7ORVFppk6.jpg" />
+<file href="scormcontent/assets/Oqr_HoCHXFH5t9pG__Imh1gQpsy0LX-ur.jpg" />
+<file href="scormcontent/assets/eVhNOk8XITKQXpX7_XquHi8FafWA8emNW.jpg" />
+<file href="scormcontent/assets/p7BuEJszNhYyeP54_z3KV5QL1DCHZG5-r.jpg" />
+<file href="scormcontent/assets/i7epbV_5MKkJU2p7_4uR6txmES99aeC0L.jpg" />
+<file href="scormcontent/assets/xJxxAmlpoznXGRqM_MbqibQXOh4tY9chk.jpg" />
+<file href="scormcontent/assets/VdnXxSKBns2jpz4Q_C66hoQLqKDyDQ0tZ.jpg" />
+<file href="scormcontent/assets/LNyn6F9YIHy0-qU7_34bU__vInfUxAcHm.jpg" />
+<file href="scormcontent/assets/GeDPzjMUafXabxlK_3HdBoAKOyaykg4lC.png" />
+<file href="scormcontent/assets/cv193pYY7NUVRg7j_5u5uRRswrrE0P3H0.jpg" />
+<file href="scormcontent/assets/I9rOPaho3aNaC5zD_vQE77Np5ZfdNOsK4.jpg" />
+<file href="scormcontent/assets/iB8eCNFd-z6jJJ9H_jbWPoGKTv21Art-x.jpg" />
+<file href="scormcontent/assets/l3HXCyJ890WZFPiK_XWagaSgnOIyNLKuV.jpg" />
+<file href="scormcontent/assets/lbqRA0nYRP5bm-Ey_YL0NujAIXiRv1RQq.jpg" />
+<file href="scormcontent/assets/x2nrEqNWg1VJlUE8_yk6pSKGx2mL15lqd.jpg" />
+<file href="scormcontent/assets/qQDcofZTrVzx3Ar9_WLg8M16y95VuGAKF.jpg" />
+<file href="scormcontent/assets/C7pYuEEFJVuNQX_z_S5qI7V_TPkqCbgCo.jpg" />
+<file href="scormcontent/assets/PoYB-WqeumXMnuHj_qcUaEz-TnecLd7B6.jpg" />
+
+    </resource>
+  </resources>
 </manifest>
-
-
-
-
-
