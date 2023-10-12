@@ -169,8 +169,8 @@ header,
 }
 
 .navbar {
-    background: #fd8772;
-    /* background: linear-gradient(to right, #fd8772 20% ,#F77E48 100%); */
+    background: #f08858;
+    /* background: linear-gradient(to right, #f08858 20% ,#F77E48 100%); */
     box-shadow: none;
     height: 0px;
     margin-top: -5px;
@@ -179,8 +179,8 @@ header,
 }
 
 .panel-header {
-    background: #fd8772;
-    /* background: linear-gradient(to right, #fd8772 0% ,#F77E48 100%); */
+    background: #f08858;
+    /* background: linear-gradient(to right, #f08858 0% ,#F77E48 100%); */
     box-shadow: none;
     height: 120px;
     padding-top: 40px;
