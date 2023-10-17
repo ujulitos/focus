@@ -22,9 +22,6 @@ var elPerfilDisplay;
 var elPerfil;
 var elPerfilNombre;
 var elUsuarioNivel;
-var cuantosRecursos;
-var cuantosRecursosVisibles;
-var cuantosRecursosDisponibles;
 var elContenido;
 var elContenidoLanzado = false;
 var cuantosUsuarios;
@@ -37,8 +34,6 @@ var laFechaInicial;
 var laFechaFinal;
 var laFechaFormateada;
 var cualContenido;
-var arrayCategorias = new Array();
-var cuantasCategorias = 0;
 var laSesionActual;
 var minutosMaxSession = 30;
 var that;
@@ -273,8 +268,9 @@ function ingresa(usuarioId) {
         $('.contenido').show();
         $('.nombre_perfil').text(elPerfilNombre);
 
-
-        navega('inicio');
+        // QUITAR
+        // navega('inicio');
+        navega('cursos');
     }
 }
 
@@ -377,463 +373,12 @@ function pintaInicio() {
     $('#subseccion').html('');
 }
 
-
-
-
-
-
-function cuentaRecursos() {
-    console.log('cuentaRecursos');
-    cuantosRecursosDisponibles = 0;
-
-    if (revisaConexion) {
-        firebase.database().ref(laUrlBase + 'Recursos').once('value').then(function(snapshot) {
-            if (snapshot.val() != null) {
-                var contadorRecursos = 0;
-                var contadorRecursosVisbles = 0;
-                cuantosRecursos = snapshot.numChildren();
-                console.log('cuantosRecursos', cuantosRecursos);
-
-                snapshot.forEach(function(childSnapshot) {
-                    contadorRecursos++;
-
-                    this['CursoId' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Id').val();
-                    // console.log('CursoId' + contadorRecursos + ': ', this['CursoId' + contadorRecursos]);
-                    this['cursoNombre' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Nombre').val();
-                    // console.log('cursoNombre ' + contadorRecursos + ': ', this['cursoNombre' + contadorRecursos]);
-                    this['cursoVisible' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Visible').val();
-                    // console.log('cursoVisible ' + contadorRecursos + ': ', this['cursoVisible' + contadorRecursos]);
-                    this['cursoNivel' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Nivel').val();
-                    // console.log('cursoNivel', this['cursoNivel' + contadorRecursos]);
-                    if (this['cursoVisible' + contadorRecursos] == true) {
-                        if (this['cursoNivel' + contadorRecursos] <= elUsuarioNivel) {
-                            contadorRecursosVisbles++;
-                        }
-                    }
-
-                    this['cursoCategoria' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Categoria').val();
-                    // console.log('cursoCategoria ' + contadorRecursos + ': ', this['cursoCategoria' + contadorRecursos]);
-                    this['cursoDesc' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Descripcion').val();
-                    // console.log('Descripcion del Curso: ', this['cursoDesc' + contadorRecursos]);
-                    this['cursoDurac' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Duracion').val();
-                    // console.log('Duración del Curso: ', this['cursoDurac' + contadorRecursos]);
-                    this['cursoObj' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Objetivos').val();
-                    // console.log('Objetivos del Curso: ', this['cursoObj' + contadorRecursos]);
-                    // this['cursoTemario' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Temario').val();
-                    // console.log('Temario del Curso: ', this['cursoTemario' + contadorRecursos]);
-                    this['cursoLiga' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Liga').val();
-                    // console.log('Liga del Curso: ', this['cursoLiga' + contadorRecursos]);
-                    this['cursoPortada' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Portada').val();
-                    // console.log('Portada del Curso: ', this['cursoPortada' + contadorRecursos]);
-                    that = this;
-
-                    cuantosRecursos = contadorRecursos;
-                    cuantosRecursosVisibles = contadorRecursosVisbles;
-
-                });
-
-
-                firebase.database().ref(laUrlBase + 'Usuarios').orderByChild('Id').equalTo(usuarioId).once('value').then(function(snapshot) {
-                    if (snapshot.val() != null) {
-                        var contadorRecursosDisponibles = 0;
-
-                        snapshot.forEach(function(childSnapshot) {
-                            childSnapshot.forEach(function(childSnapshot2) {
-                                var laClase = childSnapshot2.child('Clase').val();
-                                // console.log('laClase', laClase);
-
-                                childSnapshot2.forEach(function(childSnapshot3) {
-                                    console.log('childSnapshot3', childSnapshot3.key);
-
-                                    if (childSnapshot3.key != "Clase") {
-                                        contadorRecursosDisponibles++;
-                                        this['elCursoId' + contadorRecursosDisponibles] = childSnapshot3.child('Id').val();
-                                        console.log('elCursoId', this['elCursoId' + contadorRecursosDisponibles]);
-                                        var laFecha_abrePrev = childSnapshot3.child('Fecha_abre').val();
-                                        console.log('laFecha_abrePrev', laFecha_abrePrev);
-                                        var laFecha_cierraPrev = childSnapshot3.child('Fecha_cierra').val();
-                                        console.log('laFecha_cierraPrev', laFecha_cierraPrev);
-
-                                        moment.locale('es');
-                                        laFecha_abre = moment(laFecha_abrePrev, ["DD/MM/YYYY", "YYYY-MM-DD"]).format();
-                                        // console.log('laFecha_abre', laFecha_abre);
-                                        laFecha_cierra = moment(laFecha_cierraPrev, ["DD/MM/YYYY", "YYYY-MM-DD"]).add(1, 'd').format();
-                                        console.log('laFecha_cierra', laFecha_cierra);
-                                        var elHoy = moment().format();
-                                        console.log('elHoy', elHoy);
-                                        console.log('elHoy formateado', moment().format("DD/MM/YYYY"));
-
-                                        this['elCursoVisible' + contadorRecursosDisponibles] = 0;
-                                        if (elHoy >= laFecha_abre) {
-                                            // console.log('hoy es mas que laFecha_abre');
-                                            if (elHoy <= laFecha_cierra) {
-                                                // console.log('hoy es mas que laFecha_cierra');
-                                                this['elCursoVisible' + contadorRecursosDisponibles] = this['elCursoId' + contadorRecursosDisponibles];
-                                                cuantosRecursosDisponibles++;
-                                                cuantosRecursosDisponibles = contadorRecursosDisponibles;
-
-                                                console.log('Estamos dentro con el elCursoId', this['elCursoVisible' + contadorRecursosDisponibles]);
-                                            } else {
-                                                // console.log('hoy es menos que laFecha_cierra');
-                                            }
-                                        } else {
-                                            // console.log('hoy es menos que laFecha_abre');
-                                        }
-                                        // console.log('childSnapshot3.key', childSnapshot3.key);
-                                        if (childSnapshot3.key === "val") {
-                                            cuantosRecursosDisponibles = -1;
-                                            // console.log('cuantosRecursosDisponibles', cuantosRecursosDisponibles);
-                                        }
-
-
-                                        those = this;
-                                    }
-                                });
-                            });
-
-                        });
-
-
-                        return pintaCategorias().then(function() {
-                            pintaCursos().then(function() {
-                                pintaCursosDisponibles().then(function() {
-                                    activaBotonesCategorias().then(function() {
-                                        activaLanzarCursos();
-                                    });
-                                });
-                            });
-                        });
-
-
-                    }
-                });
-            }
-        });
-    }
+function pintaAyuda() {
+    $('#subtituloSeccion').html('');
+    $('#subseccion').html('');
 }
 
 
-
-function leeEstatusCurso(estatusNo) {
-    if (revisaConexion) {
-
-        var elRefRevisado = laUrlBase + 'Lecciones/' + usuarioId + '/objeto_' + that['CursoId' + estatusNo];
-        // console.log('elRefRevisado', elRefRevisado);
-        // var contador = 0;
-
-        firebase.database().ref(elRefRevisado).once('value').then(function(snapshot) {
-            if (snapshot.val() != null) {
-
-                var cursoRevisado = snapshot.child('Revisado').val();
-                // console.log('Curso Revisado: ', cursoRevisado);
-
-                if (cursoRevisado == true) {
-                    $('#estatus_curso' + estatusNo + ' > i').addClass('nc-icon-outline arrows-1_minimal-down');
-                }
-            }
-        });
-
-        // SCORM //
-        elRefSCORM = laUrlBase + 'Lecciones/' + usuarioId + '/objeto_' + that['CursoId' + estatusNo] + '/SCORM_12';
-        // console.log('elRefSCORM', elRefSCORM);
-
-        firebase.database().ref(elRefSCORM).once('value').then(function(snapshot) {
-            // console.log('el snapshot.val() es', snapshot.val());
-
-            if (snapshot.val() != null) {
-
-                var f_lesson_status = snapshot.child('cmi_core_lesson_status').val();
-                // console.log('lesson_status: ', f_lesson_status);
-
-                var score = snapshot.child('cmi_core_score_raw').val();
-                // console.log('score: ', score);
-
-                var f_lesson_location = snapshot.child('cmi_core_lesson_location').val();
-                // console.log('f_lesson_location: ', f_lesson_location);
-
-                var f_suspend_data = snapshot.child('cmi_suspend_data').val();
-                // console.log('f_suspend_data: ', f_suspend_data);
-
-                if (f_lesson_status == 'not attempted') {
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-glyph');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-outline');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').addClass('nc-icon-outline weather_moon-full icon_gris');
-                }
-                if (f_lesson_status == 'incomplete') {
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-glyph');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-outline');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').addClass('nc-icon-glyph ui-2_time icon_amarillo');
-                }
-                if (f_lesson_status == 'completed') {
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-glyph');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-outline');
-                    // $('#estatus_curso_scorm' + estatusNo + ' > i').addClass('nc-icon-glyph weather_moon-full');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').addClass('nc-icon-glyph ui-1_check-circle-08 icon_verde');
-                }
-                if (f_lesson_status == 'passed') {
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-glyph');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-outline');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').addClass('nc-icon-glyph ui-1_check-circle-08 icon_verde');
-                }
-                if (f_lesson_status == 'failed') {
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-glyph');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').removeClass('nc-icon-outline');
-                    $('#estatus_curso_scorm' + estatusNo + ' > i').addClass('nc-icon-glyph ui-1_circle-remove icon_rojo');
-                }
-
-                $('#calif_curso_scorm' + estatusNo).html(score);
-            }
-        });
-
-    }
-}
-
-
-function pintaCategorias() {
-
-    var contenidoCategorias = '';
-    $('#categorias').empty();
-
-    var arrayCategoriasPrev = new Array();
-    for (a = 1; a <= cuantosRecursosVisibles; a++) {
-        arrayCategoriasPrev.push(that['cursoCategoria' + a]);
-    }
-    // console.log('arrayCategoriasPrev', arrayCategoriasPrev);
-
-    function unique(arrayCategoriasPrev) {
-        return $.grep(arrayCategoriasPrev, function(el, index) {
-            return index == $.inArray(el, arrayCategoriasPrev);
-        });
-    }
-    arrayCategorias = unique(arrayCategoriasPrev);
-    // console.log('arrayCategorias', arrayCategorias);
-    cuantasCategorias = arrayCategorias.length;
-    console.log('cuantasCategorias', cuantasCategorias);
-
-    // for (a = 1; a <= cuantasCategorias; a++) {
-    //     contenidoCategorias += '<div class="categoria">';
-    //     contenidoCategorias += arrayCategorias[(a - 1)];
-    //     contenidoCategorias += '<div  id="botonCategoria' + a + '" class="btn btn-sm btn-toggle btn-categoria active" data-toggle="button">';
-    //     contenidoCategorias += '<div class="handle"></div>';
-    //     contenidoCategorias += '</div>';
-    //     contenidoCategorias += '</div>';
-    // }
-
-    // $('#categorias').append(contenidoCategorias);
-
-    return $.ajax();
-}
-
-
-function pintaCursos() {
-
-    var contador = 0;
-    var anchoColumnas = 6;
-    // if (cuantosRecursosVisibles >= 3) {
-    if (cuantosRecursos >= 3) {
-        anchoColumnas = 6;
-    }
-    var contenidoSecCursos = '';
-    $('.recursos_int').empty();
-
-
-    for (a = 1; a <= cuantasCategorias; a++) {
-        this['cuantosElemPorCategoria' + a] = 0;
-
-        contenidoSecCursos += '<div id="grupoCategoria' + a + '" class="grupo_categoria">';
-        contenidoSecCursos += '<p class="titulo_categoria">' + arrayCategorias[(a - 1)] + ' </p>';
-
-        contenidoSecCursos += '<div class="row">';
-        contenidoSecCursos += '<div class="col-md-10 ml-auto mr-auto">';
-        contenidoSecCursos += '<div class="row">';
-
-        for (b = 1; b <= cuantosRecursosVisibles; b++) {
-
-            if (that['cursoCategoria' + b] == arrayCategorias[(a - 1)]) {
-                this['cuantosElemPorCategoria' + a]++;
-
-                // console.log('cursoNivel', b, ' ', that['cursoNivel' + b], ' y elUsuarioNivel', elUsuarioNivel);
-                // if (that['cursoNivel' + b] <= elUsuarioNivel) {
-
-                if (that['cursoNivel' + b] <= elUsuarioNivel) {
-
-                    // contenidoSecCursos += '<div class="col-md-' + anchoColumnas + ' ml-auto mr-auto">';
-                    contenidoSecCursos += '<div class="col-md-' + anchoColumnas + '">';
-                    contenidoSecCursos += '<div id="tarjeta' + b + '" class="card card_con_sombra" style="display:none;">';
-                    contenidoSecCursos += '<img class="card-img-top" src=/img/objeto_portada_min.jpg></img>';
-
-                    contenidoSecCursos += '<div class="card-body">';
-                    // contenidoSecCursos += '<h6 class="category text-danger">' + this['cursoCategoria' + b] + '</h6>';
-                    
-                    contenidoSecCursos += '<h5 id="curso_titulo' + b + '" class="curso_titulo card-title">' + this['cursoNombre' + b] + '</h5>';
-
-                    contenidoSecCursos += '<div class="card-desc">';
-                    contenidoSecCursos += '<p class="card-text" ><b>Descripción: </b><br>' + this['cursoDesc' + b] + '</p>';
-                    contenidoSecCursos += '<p class="card-text" ><b>Duración: </b><br>' + this['cursoDurac' + b] + '</p>';
-                    if (this['cursoObj' + b] != null) {
-                        contenidoSecCursos += '<p class="card-text" ><b>Objetivos: </b><br>' + this['cursoObj' + b] + '</p>';
-                    }
-                    if (this['cursoTemario' + b] != null) {
-                        contenidoSecCursos += '<p class="card-text" ><b>Temario: </b><br>' + this['cursoTemario' + b] + '</p>';
-                    }
-                    contenidoSecCursos += '</div>';
-
-                    /* borde */
-                    contenidoSecCursos += '<div class="mdl-card__actions mdl-card--border">';
-                    // contenidoSecCursos += '<div id="estatus_curso' + b + '" class="icono_status" style="float:left; margin: 10px 20px;"><i class="now-ui-icons check-circle-07 icon_estatus"></i></div>';
-                    contenidoSecCursos += '<div id="estatus_curso_scorm' + b + '" class="icono_status" style="float:left; margin: 10px 0px;"><i class="nc-icon-outline weather_moon-full icon_estatus_scorm"></i>';
-                    contenidoSecCursos += '<div id="calif_curso_scorm' + b + '" class="estatus_texto"></div>';
-                    contenidoSecCursos += '</div>';
-
-                    contenidoSecCursos += '<div class="card-botones">';
-                    contenidoSecCursos += '<div id="botonMasInfo' + b + '" class="btn btn-sm btn-round botonMasInfo">Más info <i class="nc-icon-outline arrows-1_minimal-down"></i></div>';
-                    contenidoSecCursos += '<div id="botonEditar' + b + '" class="btn btn-sm btn-round botonEditar">Editar</div>';
-                    contenidoSecCursos += '<div id="botonAsignar' + b + '" class="btn btn-sm btn-round botonAsignar">Asignar</div>';
-                  
-                    if (this['cursoVisible' + b]) {
-                        contenidoSecCursos += '<div id="botonIniciarCurso' + b + '" class="btn btn-verde btn-round botonIniciarCurso">Ver</div>';
-                    } else {
-                        contenidoSecCursos += '<div id="botonIniciarCurso' + b + '" class="btn btn-verde btn-round botonIniciarCurso" disabled>Ver</div>';
-                    }
-                    contenidoSecCursos += '</div>';
-                    /* borde */
-
-                    contenidoSecCursos += '</div>';
-                    contenidoSecCursos += '</div>';
-                    contenidoSecCursos += '</div>';
-                    contenidoSecCursos += '</div>';
-
-                }
-            }
-
-        }
-
-        contenidoSecCursos += '</div>';
-        contenidoSecCursos += '</div>';
-        contenidoSecCursos += '</div>';
-        contenidoSecCursos += '</div>';
-
-        console.log(arrayCategorias[(a - 1)], this['cuantosElemPorCategoria' + a]);
-
-    }
-
-    $('.recursos_int').append(contenidoSecCursos);
-    // $('#subtituloSeccion').html('<a  >' + cuantosRecursosVisibles + '</a> recursos en total');
-
-
-    //////////////// por asignación ////////////////      
-    for (c = 1; c <= cuantosRecursosVisibles; c++) {
-        contador++;
-        // var Id_dx = parseInt(that['CursoId' + c].split('_')[1].split('dx')[0]);
-        // console.log('Id_dx', Id_dx);
-        // console.log('el Recurso Visible c', c, those['elCursoVisible' + c]);
-        var Id_oc = parseInt(that['CursoId' + c].split('_')[1].split('oc')[0]);
-        // console.log('Id_oc', c, Id_oc);
-
-        for (d = 1; d <= cuantosRecursosDisponibles; d++) {
-            // console.log('el Recurso Visible d', d, those['elCursoVisible' + d]);
-            if (those['elCursoVisible' + d] == Id_oc) {
-
-                // console.log('d', d, $('#tarjeta' + c));
-
-                $('#tarjeta' + c).css({
-                    'opacity': '0',
-                    'display': 'flex'
-                });
-                $('#tarjeta' + c).animate({
-                    opacity: 1
-                });
-
-                cambiaPortada(c);
-            }
-        }
-
-        leeEstatusCurso(contador);
-    }
-    console.log('cuantosRecursosDisponibles', cuantosRecursosDisponibles);
-
-    return $.ajax();
-
-}
-
-function pintaCursosDisponibles() {
-
-    // si no hay nada, presenta todos
-    console.log('cuantosRecursosDisponibles', cuantosRecursosDisponibles);
-    if (cuantosRecursosDisponibles == -1) {
-        for (dd = 1; dd <= cuantosRecursosVisibles; dd++) {
-            // console.log('d', d, $('#tarjeta' + dd));
-            $('#tarjeta' + dd).css({
-                'opacity': '0',
-                'display': 'flex'
-            });
-            $('#tarjeta' + dd).animate({
-                opacity: 1
-            });
-
-            cambiaPortada(dd);
-        }
-    }
-
-    return $.ajax();
-}
-
-function cambiaPortada(cualPortada) {
-    // console.log('cambiaPortada', cualPortada);
-
-    var noCache = generarId();
-    var image = new Image();
-    image.onload = function() {
-        $('#tarjeta' + cualPortada + ' img').attr("src", image.src + '?' + noCache);
-    }
-    image.src = that['cursoPortada' + cualPortada];
-}
-
-
-function activaBotonesCategorias() {
-
-    for (a = 1; a <= cuantasCategorias; a++) {
-        $("#botonCategoria" + a).click(function(event) {
-            event.preventDefault();
-            var cualCategoria = $(this).attr('id').substr(14, 3);
-            $('#grupoCategoria' + cualCategoria).slideToggle();
-        });
-    }
-
-    return $.ajax();
-}
-
-
-function activaLanzarCursos() {
-
-    for (a = 1; a <= cuantosRecursos; a++) {
-        this['carta_abierta' + a] = false;
-        var that = this;
-
-        $("#botonMasInfo" + a).click(function(event) {
-            event.preventDefault();
-            var cualCard = $(this).attr('id').substr(12, 3);
-            $('#tarjeta' + cualCard).find('.card-desc').slideToggle();
-            if (that['carta_abierta' + cualCard] == false) {
-                $(this).html('Menos info<i class="nc-icon-outline arrows-1_minimal-up"></i>');
-                that['carta_abierta' + cualCard] = true;
-            } else {
-                $(this).html('Más info<i class="nc-icon-outline arrows-1_minimal-down"></i>');
-                that['carta_abierta' + cualCard] = false;
-            }
-        });
-    }
-
-    for (a = 1; a <= cuantosRecursos; a++) {
-        $("#botonIniciarCurso" + a).click(function(event) {
-            event.preventDefault();
-            elContenido = $(this).attr('id').substr(17, 3);
-            // console.log('elContenido', elContenido);
-            // window.open(that['cursoLiga' + elContenido]);
-            lanzaContenido(elContenido);
-        });
-    }
-}
 
 
 
@@ -902,7 +447,7 @@ function cierraContenido() {
     });
     ajustaEscalaContenido();
 
-    navega('recursos');
+    navega('cursos');
 }
 
 
@@ -965,9 +510,14 @@ function activaSecInicio() {
     // componentHandler.upgradeAllRegistered();  
 }
 
+function activaSecAyuda() {
+    pintaAyuda();
+    // componentHandler.upgradeAllRegistered();  
+}
 
-function activaSecRecursos() {
-    cuentaRecursos();
+
+function activaSecCursos() {
+    cuentaCursos();
     // componentHandler.upgradeAllRegistered();
 }
 
@@ -1289,11 +839,11 @@ function navega(cualSeccion) {
     $("#content").empty();
     $("#content").load('inc/' + cualSeccion + '.html', function() {
         // console.log('cualSeccion', cualSeccion, 'cargada.');
-        $("#boton_inicio, #boton_recursos, #boton_usuarios, #boton_lecciones, #boton_admin, #boton_resultados, #boton_ayuda").parent().removeClass('active').addClass('inactive');
+        $("#boton_inicio, #boton_cursos, #boton_recursos, #boton_usuarios, #boton_lecciones, #boton_admin, #boton_resultados, #boton_ayuda").parent().removeClass('active').addClass('inactive');
         $("#boton_" + cualSeccion).parent().removeClass('inactive').addClass('active');
     });
 
-    // $("#boton_inicio, #boton_recursos, #boton_usuarios, #boton_lecciones, #boton_admin, #boton_resultados, #boton_ayuda").show();
+    // $("#boton_inicio, #boton_cursos, #boton_recursos, #boton_usuarios, #boton_lecciones, #boton_admin, #boton_resultados, #boton_ayuda").show();
 
     if (elPerfil === "Administrador" || elPerfil === "Prueba") {
         $("#boton_admin").parent().removeClass('oculto');
@@ -1445,7 +995,7 @@ $(document).ready(function() {
     });
 
 
-    $("#boton_inicio, #boton_recursos, #boton_usuarios, #boton_lecciones, #boton_admin, #boton_resultados, #boton_ayuda").click(function(event) {
+    $("#boton_inicio, #boton_cursos, #boton_recursos, #boton_usuarios, #boton_lecciones, #boton_admin, #boton_resultados, #boton_ayuda").click(function(event) {
         if ($(this).css('cursor') == 'pointer') {
             var cualSeccion = $(this).attr('id').substr(6, $(this).attr('id').length);
             event.preventDefault();

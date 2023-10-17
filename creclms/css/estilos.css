@@ -33,6 +33,7 @@ html,
 body {
     /* background-color: #ebecf1; */
     font-family: Montserrat, Helvetica Neue, Arial, sans-serif;
+    background-color: #f2f2f2;
 }
 
 .videoFondo {
@@ -63,19 +64,14 @@ header,
 }
 
 .logo {
-    height: 85px;
+    height: 150px;
     background-image: url(../img/logo.png);
-    background-color: #f2f2f21a;
-    background-size: 100px;
+    background-size: 200px;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: -20px;
+    /* margin-bottom: 20px; */
 }
 
-.logo:after {
-    margin-bottom: -5px;
-    background-color: hsla(0, 0%, 100%, 0) !important;
-}
 
 .sidebar {
     box-shadow: 0 2px 22px 0 rgba(0, 0, 0, .1), 0 2px 5px 0 rgba(0, 0, 0, .1);
@@ -222,18 +218,23 @@ header,
 }
 
 .logo_ch {
-    height: 200px;
+    height: 150px;
     background-image: url(../img/logo_ch.png);
-    background-size: 200px;
+    background-size: 120px;
     background-repeat: no-repeat;
     background-position: center;
-    /* margin-top: -100px; */
-    /* margin-bottom: 50px; */
+    margin-bottom: -50px;
+    margin-left: -20px;
+}
+
+.logo_ch:after {
+    margin-bottom: -5px;
+    background-color: hsla(0, 0%, 100%, 0) !important;
 }
 
 .main-panel,
 .jumbotron {
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
 }
 
 .main-panel,
@@ -286,6 +287,18 @@ header,
     color: #ffffff !important;
 }
 
+.input_label {
+    font-size: 12px;
+}
+
+.input_editar {
+    height: 36px;
+    font-size: 14px;
+}
+
+.area_editor {
+    height: 100px;
+}
 
 /* .input-group * {
     width: auto !important;
@@ -387,7 +400,23 @@ header,
 
 #botonEntrar {
     width: 200px;
+}
 
+.nav-tabs .nav-item {
+    margin-bottom: -21px;
+}
+
+.tab_link {
+    display: block;
+    color: #3f3e41;
+    border-bottom: 0px;
+}
+
+.tab_link.active {
+    color: #f96332;
+    /* background-color: #f5f5f5; */
+    border-bottom: 2px solid #f96332;
+    font-weight: bold;
 }
 
 .deshabilitado {
@@ -465,6 +494,12 @@ header,
     /* color: hsla(0, 0%, 100%, .5); */
     margin: 0 auto;
     font-size: 14px;
+}
+
+/* secciones */
+
+#secEditarCurso {
+    display: none;
 }
 
 /* player */
@@ -547,6 +582,14 @@ header,
     padding: 20px 0 40px 0;
 }
 
+.grupo_categoria_ch {
+    border-top-style: solid;
+    border-top-color: #d7dbdf;
+    border-width: 1px;
+    padding-top: 20px;
+    padding: 20px 0 0 0;
+}
+
 .categoria {
     display: inline-block;
     margin: 5px;
@@ -603,8 +646,8 @@ header,
 }
 
 .botonMasInfo,
-.botonEditar,
-.botonAsignar {
+.botonEditarCurso,
+.botonAsignarCurso {
     margin-right: 5px;
     padding-right: 10px;
     padding-left: 10px;
@@ -621,26 +664,26 @@ header,
     background-color: rgb(82, 138, 139) !important;
 }
 
-.botonEditar {
+.botonEditarCurso {
     background-color: darksalmon;
-    pointer-events: none !important;
+    /* pointer-events: none !important; */
 }
 
-/* .botonEditar:hover,
-.botonEditar:active {
+.botonEditarCurso:hover,
+.botonEditarCurso:active {
     background-color: rgb(218, 131, 102) !important;
-} */
+}
 
-.botonAsignar {
+.botonAsignarCurso {
     margin-right: 15px;
     background-color: yellowgreen;
-    pointer-events: none !important;
+    /* pointer-events: none !important; */
 }
 
-/* .botonAsignar:hover,
-.botonAsignar:active {
+.botonAsignarCurso:hover,
+.botonAsignarCurso:active {
     background-color: rgb(140, 184, 53) !important;
-} */
+}
 
 .icon_estatus,
 .icon_estatus_scorm {
@@ -727,12 +770,13 @@ header,
 /* datatables */
 
 .cardUsuarios {
-    border-radius: 20px;
+    /* border-radius: 20px; */
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(to bottom right, #374a3f 0%, #5c739d 100%);
-    color: #ffffff;
+    box-shadow: none !important;
+    /* background: linear-gradient(to bottom right, #374a3f 0%, #5c739d 100%); */
+    /* color: #ffffff; */
 }
 
 table.dataTable {
@@ -762,14 +806,14 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 
 div.dataTables_wrapper div div div label,
 div.dataTables_wrapper div div div label select {
-    color: #ffffff;
+    /* color: #ffffff; */
     display: initial;
     width: 100px;
     font-size: 14px;
 }
 
 div.dataTables_wrapper div div div label input {
-    color: #ffffff;
+    /* color: #ffffff; */
     display: initial;
     width: 50%;
     font-size: 14px;
@@ -784,7 +828,7 @@ div.dataTables_wrapper div div div label input {
     margin-top: 50px;
 }
 
-.botonEditarUsuario i,
+.botonEditarCursoUsuario i,
 .botonEliminarUsuario i {
     font-size: 20px;
     line-height: 1.5;
@@ -801,7 +845,7 @@ div.dataTables_wrapper div div div label input {
     height: 30px;
     line-height: 30px;
     /* color: #2c2c2c; */
-    color: #ffffff;
+    /* color: #ffffff; */
     cursor: pointer;
     font-size: 14px;
     text-transform: uppercase;
@@ -830,8 +874,8 @@ div.dataTables_wrapper div div div label input {
 }
 
 .pagination .page-item.active>.page-link {
-    color: #fff;
-    box-shadow: 0 1px 15px 1px rgba(39, 39, 39, .1);
+    /* color: #fff; */
+    /* box-shadow: 0 1px 15px 1px rgba(39, 39, 39, .1); */
 }
 
 .pagination .page-item.active>.page-link,
@@ -899,6 +943,27 @@ div.dataTables_wrapper div div div label input {
     color: #f96332;
 }
 
+.botonEliminarUsuario {
+    margin-left: 10px !important;
+}
+
+.botonEliminarUsuario>i {
+    margin-top: 0px !important;
+}
+
+.botonEditarUsuario {
+    background-color: #f89f3f !important;
+    color: #fff;
+}
+
+.botonEditarUsuario:hover {
+    background-color: #ff8300 !important;
+    color: #fff;
+}
+
+.botonEditarUsuario>i {
+    margin-top: 10px !important;
+}
 
 /* modal */
 
