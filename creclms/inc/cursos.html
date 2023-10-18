@@ -1,63 +1,61 @@
-<link href="css/toggle.css" rel="stylesheet" />
+ <div id="seccionCursos">
 
-<div id="seccionCursos">
+     <!-- <div class="header"> -->
+     <div class="container">
+         <br>
+         <!-- <h2 class="titulo_seccion">Categorías</h2> -->
+         <!-- <div id="categorias" class="lista_categorias"></div> -->
+     </div>
+     <!-- </div> -->
 
-    <!-- <div class="header"> -->
-    <div class="container">
-        <br>
-        <!-- <h2 class="titulo_seccion">Categorías</h2> -->
-        <!-- <div id="categorias" class="lista_categorias"></div> -->
-    </div>
-    <!-- </div> -->
-
-    <div class="cursos_int"></div>
+     <div class="cursos_int"></div>
 
 
 
 
 
 
-    <div id="secEditarCurso" class="container py-5">
+     <div id="secEditarCurso" class="container py-5">
 
-        <div class="row">
-            <div class="col-12 text-right">
-                <button id="botonCancelarCurso" class="btn btn-naranja btn-round ml-auto">Regresar</button>
-            </div>
-        </div>
-        <br>
+         <div class="row">
+             <div class="col-12 text-right">
+                 <button id="botonCancelarCurso" class="btn btn-naranja btn-round ml-auto">Regresar</button>
+             </div>
+         </div>
+         <br>
 
-        <div class="pt-5 pl-5 pr-5 py-0 bg-white rounded">
-            <!-- Rounded tabs -->
-            <ul id="tabCursos" role="tablist" class="nav nav-tabs nav-pills flex-column flex-sm-row text-center border-0 rounded-nav">
-                <li class="nav-item flex-sm-fill">
-                    <a id="botonInfoGral" data-toggle="tab" href="#infoGral" role="tab" aria-selected="true" class="tab_link active ">Información</a>
-                </li>
-                <li class="nav-item flex-sm-fill">
-                    <a id="botonElContenido" data-toggle="tab" href="#elcontenido" role="tab" aria-selected="false" class="tab_link">Contenido</a>
-                </li>
-                <li class="nav-item flex-sm-fill">
-                    <a id="botonInscripciones" data-toggle="tab" href="#inscripciones" role="tab" aria-selected="false" class="tab_link">Inscribir</a>
-                </li>
-                <li class="nav-item flex-sm-fill">
-                    <a id="botonReportes" data-toggle="tab" href="#reportes" role="tab" aria-selected="false" class="tab_link">Reportes</a>
-                </li>
-            </ul>
-            <br>
-            <div class="grupo_categoria_ch"></div>
+         <div class="pt-5 pl-5 pr-5 py-0 bg-white rounded">
+             <!-- Rounded tabs -->
+             <ul id="tabCursos" role="tablist" class="nav nav-tabs nav-pills flex-column flex-sm-row text-center border-0 rounded-nav">
+                 <li class="nav-item flex-sm-fill">
+                     <a id="botonInfoGral" data-toggle="tab" href="#infoGral" role="tab" aria-selected="true" class="tab_link active ">Información</a>
+                 </li>
+                 <li class="nav-item flex-sm-fill">
+                     <a id="botonElContenido" data-toggle="tab" href="#elcontenido" role="tab" aria-selected="false" class="tab_link">Contenido</a>
+                 </li>
+                 <li class="nav-item flex-sm-fill">
+                     <a id="botonInscripciones" data-toggle="tab" href="#inscripciones" role="tab" aria-selected="false" class="tab_link">Inscribir</a>
+                 </li>
+                 <li class="nav-item flex-sm-fill">
+                     <a id="botonReportes" data-toggle="tab" href="#reportes" role="tab" aria-selected="false" class="tab_link">Reportes</a>
+                 </li>
+             </ul>
+             <br>
+             <div class="grupo_categoria_ch"></div>
 
-            <div id="tabCursosContent" class="tab-content">
-                <div id="infoGral" role="tabpanel" class="tab-pane fade px-4 py-5 show active">
-                    <h5 class="titulo">Información General</h5>
-                    <br> <br>
-                    <h6 class="input_label">Título</h6>
-                    <input type="text" class="form-control input_editar" data-maxlength="65" id="nombreCurso" value="Curso 1" placeholder="Título del Curso">
-                    <br> <br>
-                    <h6 class="input_label">Descripción</h6>
-                    <input type="text" class="form-control input_editar" data-maxlength="65" id="descripcionCurso" value="Esta es la descripción del Curso 1" placeholder="Descripción del Curso">
-                    <br> <br>
-                    <h6 class="input_label">Objetivos</h6>
+             <div id="tabCursosContent" class="tab-content">
+                 <div id="infoGral" role="tabpanel" class="tab-pane fade px-4 py-5 show active">
+                     <h5 class="titulo">Información General</h5>
+                     <br> <br>
+                     <h6 class="input_label">Título</h6>
+                     <input type="text" class="form-control input_editar" data-maxlength="65" id="nombreCurso" value="Curso 1" placeholder="Título del Curso">
+                     <br> <br>
+                     <h6 class="input_label">Descripción</h6>
+                     <input type="text" class="form-control input_editar" data-maxlength="65" id="descripcionCurso" value="Esta es la descripción del Curso 1" placeholder="Descripción del Curso">
+                     <br> <br>
+                     <h6 class="input_label">Objetivos</h6>
 
-                    <textarea name="content" id="editor1" class="area_editor">
+                     <textarea name="content" id="editor1" class="area_editor">
                        Estos son los objetivos del Curso 1:
                        <ul>
                             <li>Objetivo 1</li>
@@ -66,10 +64,10 @@
                         </ul>
                     </textarea>
 
-                    <br> <br>
-                    <h6 class="input_label">Temario</h6>
+                     <br> <br>
+                     <h6 class="input_label">Temario</h6>
 
-                    <textarea name="content" id="editor2" class="area_editor">
+                     <textarea name="content" id="editor2" class="area_editor">
                        Este es el temario del Curso 1:
                        <ul>
                             <li>Tema 1</li>
@@ -78,73 +76,71 @@
                         </ul>
                     </textarea>
 
-                    <br> <br>
-                    <h6 class="input_label">Portada</h6>
+                     <br> <br>
+                     <h6 class="input_label">Portada</h6>
 
-                    <form method="POST" name="upload_image" id="upload_image" enctype="multipart/form-data">
-                        <!-- <div class="input-field">
+                     <form method="POST" name="upload_image" id="upload_image" enctype="multipart/form-data">
+                         <!-- <div class="input-field">
                             <input type="text" name="name-1" id="name-1">
                             <label for="name-1">Name</label> </div>
                         <div class="input-field">
                             <input type="text" name="description-1" id="description-1">
                             <label for="description-1">Description</label>
                         </div> -->
-                        <div class="input-field">
-                            <!-- <label class="active">Imagen</label> -->
-                            <div class="input-images-1" style="padding-top: .5rem;"> </div>
-                        </div>
-                        <!-- <button>Submit and display data</button> -->
+                         <div class="input-field">
+                             <!-- <label class="active">Imagen</label> -->
+                             <div class="input-images-1" style="padding-top: .5rem;"> </div>
+                         </div>
+                         <!-- <button>Submit and display data</button> -->
 
-                    </form>
+                     </form>
 
-                    <br> <br>
-                    <div class="row">
-                        <div class="col-12 text-right">
-                            <button id=" " class="btn btn-naranja btn-round ml-auto">Cancelar</button>
-                            <button id=" " class="btn btn-verde2 btn-round ml-auto">Guardar</button>
-                        </div>
-                    </div>
-                </div>
+                     <br> <br>
+                     <div class="row">
+                         <div class="col-12 text-right">
+                             <button id=" " class="btn btn-naranja btn-round ml-auto">Cancelar</button>
+                             <button id=" " class="btn btn-verde2 btn-round ml-auto">Guardar</button>
+                         </div>
+                     </div>
+                 </div>
 
-                <div id="elcontenido" role="tabpanel" class="tab-pane fade px-4 py-5">
-                    <h5 class="titulo">Contenido</h5>
-                    <br> <br>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div id="inscripciones" role="tabpanel" class="tab-pane fade px-4 py-5">
-                    <h5 class="titulo">Inscribir usuarios</h5>
-                    <br> <br>
-                    <!-- tabla usuarios -->
-                    <div class="row">
-                        <div class="col-md-12 ml-auto mr-auto" style="width: 100%;">
-                            <div class="card cardUsuarios">
-                                <!-- <div class="card-header">
+                 <div id="elcontenido" role="tabpanel" class="tab-pane fade px-4 py-5">
+                     <h5 class="titulo">Contenido</h5>
+                     <br> <br>
+                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                 </div>
+                 <div id="inscripciones" role="tabpanel" class="tab-pane fade px-4 py-5">
+                     <h5 class="titulo">Inscribir usuarios</h5>
+                     <br> <br>
+                     <!-- tabla usuarios -->
+                     <div class="row">
+                         <div class="col-md-12 ml-auto mr-auto" style="width: 100%;">
+                             <div class="card cardUsuarios">
+                                 <!-- <div class="card-header">
                                     <h4 class="card-title"></h4>
                                 </div> -->
-                                <div class="card-body">
-                                    <table id="tablaUsuarios" class="table table-striped dataTable dtr-inline" role="grid" aria-describedby="datatable_info" style="width: 100%;" width="100%" cellspacing="0">
-                                        <thead></thead>
-                                    </table>
-                                    <div class="toolbar">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- tabla usuarios -->
-                </div>
-                <div id="reportes" role="tabpanel" class="tab-pane fade px-4 py-5">
-                    <h5 class="titulo">Reportes</h5>
-                    <br> <br>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-            <!-- End rounded tabs -->
-        </div>
+                                 <div class="card-body">
+                                     <table id="tablaUsuarios" class="table table-striped dataTable dtr-inline" role="grid" aria-describedby="datatable_info" style="width: 100%;" width="100%" cellspacing="0">
+                                         <thead></thead>
+                                     </table>
+                                     <div class="toolbar">
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- tabla usuarios -->
+                 </div>
+                 <div id="reportes" role="tabpanel" class="tab-pane fade px-4 py-5">
+                     <h5 class="titulo">Reportes</h5>
+                     <br> <br>
+                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                 </div>
+             </div>
+             <!-- End rounded tabs -->
+         </div>
 
-    </div>
-
-
+     </div>
 
 
 
@@ -152,9 +148,11 @@
 
 
 
-</div>
 
 
-<script>
-    cuentaCursos();
-</script>
+ </div>
+
+
+ <script>
+     cuentaCursos();
+ </script>

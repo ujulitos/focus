@@ -270,7 +270,7 @@ function ingresa(usuarioId) {
 
         // QUITAR
         // navega('inicio');
-        navega('cursos');
+        navega('recursos');
     }
 }
 

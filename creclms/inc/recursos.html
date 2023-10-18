@@ -1,69 +1,445 @@
-<link href="css/toggle.css" rel="stylesheet" />
-
 <div id="seccionRecursos">
 
-    <!-- <div class="header"> -->
     <div class="container">
         <br>
-        <!-- <h2 class="titulo_seccion">Categorías</h2> -->
-        <!-- <div id="categorias" class="lista_categorias"></div> -->
+        <div class="grupo_categoria">
+            <p class="titulo_reportes">Recursos</p>
+        </div>
     </div>
-    <!-- </div> -->
+
+    <div>
+        <div>
+            <input id="buscadorRecursos" class="form-control form-control2" type="text" placeholder="Buscar..." />
+            <i id="buscadorClean" class="nc-icon-glyph ui-1_simple-remove form-control form-control2"></i>
+        </div>
+    </div>
+    <div class="header">
+        <!-- <h2 class="titulo_seccion">Categorías</h2> -->
+        <div id="categorias" class="lista_categorias"></div>
+    </div>
 
     <div class="recursos_int"></div>
-
-
-
-
-
-
-    <div class="container py-5">
-
-        <div class="p-5 bg-white rounded shad ow mb-5">
-            <!-- Rounded tabs -->
-            <ul id="myTab" role="tablist" class="nav nav-tabs nav-pills flex-column flex-sm-row text-center border-0 rounded-nav">
-                <li class="nav-item flex-sm-fill">
-                    <button id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" class="active btn btn-naranja btn-round">Información General</button>
-                </li>
-                <li class="nav-item flex-sm-fill">
-                    <button id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" class="btn btn-naranja btn-round">Recursos</a>
-                </li>
-                <li class="nav-item flex-sm-fill">
-                    <button id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false" class="btn btn-naranja btn-round">Reportes</a>
-                </li>
-            </ul>
-            <br>
-            <div class="grupo_categoria"></div>
-
-            <div id="myTabContent" class="tab-content">
-                <div id="home" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade px-4 py-5 show active">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div id="profile" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade px-4 py-5">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div id="contact" role="tabpanel" aria-labelledby="contact-tab" class="tab-pane fade px-4 py-5">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-            <!-- End rounded tabs -->
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-
 
 </div>
 
 
+<div class="modal fade" id="modalAddRecurso" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog ancho" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Recurso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="page1">
+
+                    <form id="formRecursoAdd" method="POST" action="javascript:void(0);">
+                        <div id="rError" class="alert alert-danger ocultar" role="alert"> </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-11">
+                                <label class="mtopto">Nombre del recurso</label>
+                                <input id="rNombre" class="form-control _recurso" type="text" placeholder="Nombre del recurso" required="true">
+                            </div>
+                            <div class="col-sm-12 col-md-3">
+                                <input id="rNombreCorto" class="form-control _recurso ocultar" type="text" placeholder="Nombre Corto" required="true">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <label class="mtopto">Formato del recurso</label>
+                                <div class="form-group">
+                                    <select id="rCategoria" class="form-control mt" required="true"></select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <label class="mtopto">Duración del recurso (minutos)</label>
+                                <div>
+                                    <input id="rDuracion" type="text" class="form-control _recurso" placeholder="(minutos)" value="0" minimo="0" required="true" onkeypress="isInputNumber(event)">
+                                    <div id="botonInputMas1" class="btn btn-sm btn-round botonInputMas mas"> <i class="nc-icon-glyph ui-1_bold-add"></i></div>
+                                    <div id="botonInputMenos1" class="btn btn-sm btn-round botonInputMenos menos"> <i class="nc-icon-glyph ui-1_bold-delete"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <label class="mtopto">Organización</label>
+                                <div class="form-group">
+                                    <select id="rOrganizacion" class="form-control mt" required="true"></select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-7 form-group has-label">
+                                <label class="mtopto">Descripción del recurso</label>
+                                <input id="rDescripcion" class="form-control _recurso" name="email" type="text" placeholder="Descripción" required="false">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="wizard-card  col-sm12 col-md-6 ml-auto mr-auto">
+                                <div class="picture-container">
+                                    <h8 class="titulo_seccion"><br>Seleccione recurso</h8>
+                                    <br><br>
+                                    <form id="formZip" class="wizard-card" method="post" enctype="multipart/form-data">
+                                        <input id="inputZip" type="file" class="_recurso" accept=".zip,.html,.pdf,.doc,.docx,.ppt,.pptx,audio/*,.jpg,.jpeg,.png,video/*">
+                                    </form>
+                                </div>
+                                <br><br><br>
+                                <div id="recursoNombreSi" class="objeto_nombre">
+                                    <h8 class="titulo_seccion">Recurso:</h8>
+                                    <br><br>
+                                    <span id="recursoNombreTexto" class="clave_sesion"></span>
+                                </div>
+                            </div>
+                            <div class="wizard-card  col-sm12 col-md-6 ml-auto mr-auto">
+                                <div class="picture-container">
+                                    <h8 class="titulo_seccion"><br>Seleccione portada</h8>
+                                    <br><br>
+                                    La imagen para portada debe ser en formato "jpg" o "png".<br>
+                                    El tamaño mínimo debe ser 200 x 200 pixeles.<br>
+                                    El archivo debe pesar máximo 500Kb.
+                                    <br><br>
+                                    <div class="picture">
+                                        <img id="imgPortadaRecursoPreview" src="img/recurso.jpg" class="picture-src" title="" />
+                                        <form id="formPortadaRecurso" class="wizard-card" method="post" enctype="multipart/form-data">
+                                            <input id="inputPortadaRecurso" type="file" class="_recurso" accept="image/x-png,image/jpeg">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-round" data-dismiss="modal" onclick="cleanUploadRecurso()">Cancelar</button>
+                    <button id="botonGuardaNuevoRecurso" type="submit" class="btn btn-primary btn-round">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Nuevo Recurso  -->
+
+
+
+<!-- Modal Editar Recurso  -->
+<div class="modal fade" id="emodalAddRecurso" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog ancho" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Objeto</h5> <input type="hidden" id="idRecursoEdit">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="page1">
+
+                    <form id="eformRecursoAdd" method="POST" action="javascript:void(0);">
+                        <div id="erError" class="alert alert-danger ocultar" role="alert"> </div>
+
+                        <div class="row">
+                            <div class="col-sm-12 col-md-11">
+                                <label class="mtopto">Nombre del recurso</label>
+                                <input id="erNombre" class="form-control e_recurso" type="text" placeholder="Nombre del recurso" required="true">
+                            </div>
+                            <div class="col-sm-12 col-md-3">
+
+                                <input id="erNombreCorto" class="form-control e_recurso ocultar" type="text" placeholder="Nombre Corto" required="true">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <label class="mtopto">Formato del recurso</label>
+                                <select id="erCategoria" class="form-control mt" required="true"></select>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <label class="mtopto">Duración del recurso (minutos)</label>
+                                <div>
+                                    <input id="erDuracion" type="text" class="form-control _recurso" placeholder="(minutos)" value="0" minimo="0" required="true" onkeypress="isInputNumber(event)">
+                                    <div id="botonInputMas2" class="btn btn-sm btn-round botonInputMas mas"> <i class="nc-icon-glyph ui-1_bold-add"></i></div>
+                                    <div id="botonInputMenos2" class="btn btn-sm btn-round botonInputMenos menos"> <i class="nc-icon-glyph ui-1_bold-delete"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <label class="mtopto">Organización</label>
+                                <div class="form-group">
+                                    <select id="erOrganizacion" class="form-control mt" required="true"></select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-7 form-group has-label">
+                                <label class="mtopto">Descripción del recurso</label>
+                                <input id="erDescripcion" class="form-control e_recurso" name="email" type="text" placeholder="Descripción" required="false">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row ">
+                            <div class="wizard-card  col-sm12 col-md-6 ml-auto mr-auto">
+                                <div class="picture-container">
+                                    <h8 class="titulo_seccion"><br>Seleccione recurso</h8>
+                                    <br><br><br>
+                                    <form id="eformZip" class="wizard-card" method="post" enctype="multipart/form-data">
+                                        <input id="einputZip" type="file" class="e_recurso" accept=".zip,.html,.pdf,.doc,.docx,.ppt,.pptx,audio/*,.jpg,.jpeg,.png,video/*">
+                                    </form>
+                                </div>
+                                <br><br><br>
+                                <div id="erecursoNombreSi" class="objeto_nombre">
+                                    <h8 class="titulo_seccion">Recurso:</h8>
+                                    <br><br>
+                                    <span id="erecursoNombreTexto" class="clave_sesion"></span>
+                                </div>
+                            </div>
+                            <div class="wizard-card  col-sm12 col-md-6 ml-auto mr-auto">
+                                <input type="hidden" id="ocultaPortada">
+                                <div class="picture-container">
+                                    <h8 class="titulo_seccion"><br>Seleccione portada</h8>
+                                    <br><br>
+                                    La imagen para portada debe ser en formato "jpg" o "png".<br>
+                                    El tamaño mínimo debe ser 200 x 200 pixeles.<br>
+                                    El archivo debe pesar máximo 500Kb.
+                                    <br><br>
+                                    <div class="picture">
+                                        <img id="eimgPortadaRecursoPreview" src="img/recurso.jpg" class="picture-src" title="" />
+                                        <form id="eformPortadaRecurso" class="wizard-card" method="post" enctype="multipart/form-data">
+                                            <input id="einputPortadaRecurso" type="file" class="e_recurso" accept="image/x-png,image/jpeg">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-round" data-dismiss="modal" onclick="_cleanUploadRecurso()">Cancelar</button>
+                    <button id="ebotonGuardaNuevoRecurso" type="submit" class="btn btn-primary btn-round">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal Nueva Pregunta  -->
+<div class="modal fade" id="modalAddPregunta" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog ancho" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="modalAddPreguntaTitulo" class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="page1">
+
+                    <form id="formPreguntaAdd" method="POST" action="javascript:void(0);">
+                        <div id="rPregError" class="alert alert-danger ocultar" role="alert"> </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                                <label class="mtopto">Tipo de pregunta</label>
+                                <div class="form-group">
+                                    <select id="tipoPregunta" class="form-control mt" required="true"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <label class="mtopto">Nombre de la pregunta</label>
+                                <input id="rNombrePregunta" class="form-control _recurso" type="text" placeholder="Nombre de la pregunta" required="false">
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label class="mtopto">Descripción de la pregunta</label>
+                                <input id="rDescripcionPregunta" class="form-control _recurso" type="text" placeholder="Descripción de la pregunta" required="true">
+                            </div>
+                        </div>
+                        <br> <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-8">
+                                <label class="mtopto">Pregunta</label>
+                                <input id="rPregunta" class="form-control _recurso" type="text" placeholder="Texto de la pregunta" required="true">
+                            </div>
+                        </div>
+                        <br> <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div>
+                                    <!-- <label class="mtopto">Respuesta 1</label> -->
+                                    <input id="rRespuesta1" class="form-control _recurso" type="text" placeholder="Respuesta 1" required="true">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 radio_opcion elegida">
+                                <div class="form-check form-check-radio">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="correcta" id="correcta1" value="1" checked>
+                                        <span class="form-check-sign"></span>
+                                        Correcta
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div>
+                                    <!-- <label class="mtopto">Respuesta 2</label> -->
+                                    <input id="rRespuesta2" class="form-control _recurso" type="text" placeholder="Respuesta 2" required="true">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 radio_opcion">
+                                <div class="form-check form-check-radio">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="correcta" id="correcta2" value="2">
+                                        <span class="form-check-sign"></span>
+                                        Correcta
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div>
+                                    <!-- <label class="mtopto">Respuesta 3</label> -->
+                                    <input id="rRespuesta3" class="form-control _recurso" type="text" placeholder="Respuesta 3" required="true">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-3 radio_opcion">
+                                <div class="form-check form-check-radio">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="correcta" id="correcta3" value="3">
+                                        <span class="form-check-sign"></span>
+                                        Correcta
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-11">
+                                <label class="mtopto">Retroalimentación Correcta</label>
+                                <input id="rRetroBien" class="form-control _recurso" type="text" placeholder="Retroalimentación Correcta" required="true">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-11">
+                                <label class="mtopto">Retroalimentación Incorrecta</label>
+                                <input id="rRetroMal" class="form-control _recurso" type="text" placeholder="Retroalimentación Incorrecta" required="true">
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-round" data-dismiss="modal" onclick="cleanUploadPregunta()">Cancelar</button>
+                    <button id="botonGuardaNuevaPregunta" type="submit" class="btn btn-primary btn-round">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Nueva Pregunta  -->
+
+
+
+<!-- modalBorrarRecurso -->
+<div id="modalBorrarRecurso" class="ui small basic modal">
+    <h3 class="ui icon header modal_header">
+        <i class="nc-icon-outline design-2_ruler-pencil"></i>
+        <br><br> Eliminar Recurso
+    </h3>
+    <div class="content text-center">
+        <p>¿Realmente desea eliminar este Recurso?</p>
+    </div>
+    <div class="actions text-center">
+        <div id="botonCancelarBorrarRecurso" class="btn btn-naranja cancel btn-round botonEntrar">
+            Cancelar
+            <i class="nc-icon-outline ui-1_simple-remove" style="padding-left: 5px;"></i>
+        </div>
+        <div id="botonAceptarBorrarRecurso" class="btn btn-verde2 ok btn-round">
+            Aceptar
+            <i class="nc-icon-outline ui-1_check" style="padding-left: 5px;"></i>
+        </div>
+    </div>
+</div>
+<!-- modalBorrarRecurso -->
+
+
+<div class="modal fade" id="modalVerObjeto" tabindex="-1" role="dialog" aria-hidden="true">
+    <div id="modalVerObjetoDialog" class="modal-dialog modal-xl" role="document">
+        <div id="modalVerObjetoContent" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="objetoTitulo"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="modalVerObjeto_body" class="modal-body"> </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="modalVerPregunta" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="preguntaTitulo"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div id="modalVerPregunta_body" class="modal-body modal_pregunta_body">
+
+                <div id="vDescripcionPregunta" class="pregunta_desc"></div>
+
+                <br> <br> <br>
+
+                <div id="vPregunta" class="pregunta_preg"></div>
+                <br> <br>
+                <div id="vRespuesta1" class="pregunta_resps"></div>
+                <br>
+                <div id="vRespuesta2" class="pregunta_resps"></div>
+                <br>
+                <div id="vRespuesta3" class="pregunta_resps"></div>
+
+                <br> <br> <br> <br>
+                <div class="titulo_retro">Retroalimentación Correcta:</div>
+                <div id="vRetroBien" class="pregunta_retro_bien"></div>
+                <br> <br>
+                <div class="titulo_retro">Retroalimentación Incorrecta:</div>
+                <div id="vRetroMal" class="pregunta_retro_mal"></div>
+
+            </div>
+
+            <!-- <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary btn-round" data-dismiss="modal" onclick="cleanUploadPregunta()">Cancelar</button>
+                 <button id="botonGuardaNuevaPregunta" type="submit" class="btn btn-primary btn-round">Guardar</button>
+             </div> -->
+
+        </div>
+    </div>
+</div>
+
 <script>
-    cuentaRecursos();
+    activaSecRecursos();
 </script>
