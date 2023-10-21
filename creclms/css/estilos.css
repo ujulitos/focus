@@ -430,6 +430,14 @@ header,
     background-color: #f89f3f !important;
 }
 
+.btn-verde {
+    background-color: #558f3a;
+}
+
+.btn-verde:hover {
+    background-color: #16614f;
+}
+
 .btn-verde2 {
     background-color: #558f3a;
 }
@@ -486,6 +494,44 @@ header,
 
 #botonEntrar {
     width: 200px;
+}
+
+.botonInputMenos,
+.botonInputMas {
+    float: right;
+    margin-right: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 10px;
+    font-weight: bolder;
+    background-color: transparent !important;
+    height: 16px;
+    padding-top: 1px;
+    z-index: 888;
+    color: #f89f3f !important;
+}
+
+.botonInputMas {
+    margin-top: -35px;
+}
+
+.botonInputMenos {
+    margin-top: -20px;
+}
+
+.botonInputMas:hover,
+.botonInputMenos:hover {
+    color: #ff8300;
+    background-color: #fff !important;
+    border: 1px solid #Fa7A50 !important;
+}
+
+.recurso_duracion {
+    width: 200px;
+}
+
+.input_duracion {
+    height: 40px;
 }
 
 .nav-tabs .nav-item {
@@ -582,8 +628,14 @@ header,
     font-size: 14px;
 }
 
+.texto_subtitulo {
+    color: #5d5d5d;
+    font-size: 12px;
+}
+
 /* secciones */
 
+#secEditarRecurso,
 #secEditarCurso {
     display: none;
 }
@@ -621,7 +673,7 @@ header,
     margin: -25px 30px;
     float: right;
     line-height: 0.8em;
-    margin-top: -28px;
+    margin-top: 7px;
 }
 
 .navegacion_player {
@@ -634,6 +686,11 @@ header,
 }
 
 /* seccion recursos */
+
+.tabla_recursos {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
 
 .titulo_seccion {
     font-size: 22px;
@@ -670,6 +727,7 @@ header,
     font-weight: bold;
 }
 
+.titulo_recursos,
 .titulo_reportes {
     color: #fd8772;
     font-weight: bold;
@@ -705,12 +763,54 @@ header,
     margin-left: 15px !important;
 }
 
-.btn-verde {
-    background-color: #558f3a;
+.recursos_lista>tbody>tr>td {
+    vertical-align: top !important;
 }
 
-.btn-verde:hover {
-    background-color: #16614f;
+.recurso_nombre {
+    display: flex;
+}
+
+.recurso_imagen {
+    max-width: 100px;
+}
+
+.recurso_nombre_int {
+    margin-left: 20px;
+}
+
+.recurso_titulo {
+    font-size: 20px;
+    color: #007377;
+}
+
+.recurso_subtitulo {
+    font-size: 12px;
+    vertical-align: top;
+    color: #fd8772;
+}
+
+.texto_limitado {
+    --max-lines: 5;
+    --line-height: 1.4;
+
+    max-height: calc(var(--max-lines)* 1em *var(--line-height));
+    line-height: var(--line-height);
+
+    overflow: hidden;
+    position: relative;
+    margin-top: 0px;
+}
+
+.texto_limitado::before {
+    content: "";
+    position: absolute;
+    height: calc(1em*var(--line-height));
+    width: 100%;
+    margin-top: 0px;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, #ffffff);
 }
 
 /* cards */
@@ -929,10 +1029,13 @@ div.dataTables_wrapper div div div label input {
     margin-top: 50px;
 }
 
-.botonEditarCursoUsuario i,
+.botonVerRecurso i,
+.botonEditarRecurso i,
+.botonEliminarRecurso i,
+.botonEditarUsuario i,
 .botonEliminarUsuario i {
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: inherit;
+    margin-top: 10px;
 }
 
 .pagination .page-item .page-link {
@@ -1044,26 +1147,16 @@ div.dataTables_wrapper div div div label input {
     color: #f96332;
 }
 
-.botonEliminarUsuario {
-    margin-left: 10px !important;
-}
-
-.botonEliminarUsuario>i {
-    margin-top: 0px !important;
-}
-
-.botonEditarUsuario {
+.botonEditarUsuario,
+.botonEditarRecurso {
     background-color: #f89f3f !important;
     color: #fff;
 }
 
-.botonEditarUsuario:hover {
+.botonEditarUsuario:hover,
+.botonEditarRecurso:hover {
     background-color: #ff8300 !important;
     color: #fff;
-}
-
-.botonEditarUsuario>i {
-    margin-top: 10px !important;
 }
 
 /* modal */
@@ -1125,6 +1218,10 @@ div.dataTables_wrapper div div div label input {
     .main-panel .content {
         padding-left: 0px;
         padding-right: 0px;
+    }
+
+    #secRecursos {
+        margin-bottom: 20px;
     }
 }
 

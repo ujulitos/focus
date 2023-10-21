@@ -427,6 +427,7 @@ function lanzaContenido(cualContenido) {
 
 
 function cierraContenido() {
+    console.log('cierraContenido!');
 
     registraRevisado();
     elContenidoLanzado = false;
@@ -515,9 +516,13 @@ function activaSecAyuda() {
     // componentHandler.upgradeAllRegistered();  
 }
 
-
 function activaSecCursos() {
     cuentaCursos();
+    // componentHandler.upgradeAllRegistered();
+}
+
+function activaSecRecursos() {
+    cuentaRecursos();
     // componentHandler.upgradeAllRegistered();
 }
 
@@ -1005,8 +1010,79 @@ $(document).ready(function() {
     });
 
 
+    $(document).on('mouseover mousedown press mouseup', '.botonInputMenos, .botonInputMas', function() {
+        $(this).parent().find($('input')).focus();
+    });
+    $(document).on('mouseleave', '.botonInputMenos, .botonInputMas', function() {
+        $(this).parent().find($('input')).blur();
+    });
+    $(document).on('click', '.botonInputMenos, .botonInputMas', function() {
+        ajustaValorInput($(this).attr('id'));
+    });
 
-    detectaUnloadContenido();
+
+  
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode != 46 && charCode > 31 &&
+        (charCode < 48 || charCode > 57))
+        return false;
+
+    return true;
+}
+
+
+function isInputNumber(evt) {
+    var ch = String.fromCharCode(evt.which);
+    if (!(/[0-9]/.test(ch))) {
+        evt.preventDefault();
+    }
+}
+
+function ajustaValorInput(cualBoton) {
+    // console.log('ajustaValorInput', cualBoton);
+
+    var elValorCont = parseInt($('#' + cualBoton).parent().find($('input')).val());
+    var elMin = $('#' + cualBoton).parent().find($('input')).attr('minimo');
+    var elMax = $('#' + cualBoton).parent().find($('input')).attr('maximo');
+    // console.log('elMin', elMin, 'elMax', elMax);
+
+    if (isNaN(elValorCont)) {
+        if (!isNaN(elMin)) {
+            elValorCont = elMin;
+        } else {
+            elValorCont = 0;
+        }
+    }
+
+    if ($('#' + cualBoton).hasClass('menos')) {
+        if (elMin != undefined) {
+            if (elValorCont > elMin) {
+                elValorCont--;
+            }
+        } else {
+            elValorCont--;
+        }
+    }
+
+    if ($('#' + cualBoton).hasClass('mas')) {
+        if (elMax != undefined) {
+            if (elValorCont < elMax) {
+                elValorCont++;
+            }
+        } else {
+            elValorCont++;
+        }
+    }
+    // console.log('elValorCont', elValorCont);
+    if (!$('#' + cualBoton).parent().find($('input')).attr('disabled')) {
+        $('#' + cualBoton).parent().find($('input')).val(elValorCont).trigger("change");
+    }
+
+}
+
+
+detectaUnloadContenido();
 
     leeLocalStorage();
 

@@ -153,12 +153,6 @@ function activaSecRecursos() {
     });
 
 
-    $("#tipoPregunta, #etipoPregunta").change(function() {
-        if ($(this).val() != 'Selecciona una opción') {
-            console.log('tipoPregunta', $(this).val());
-        }
-    });
-
     $(".form-check-input").change(function() {
         laOpcionCorrecta = parseInt($(this).val());
         console.log('laOpcionCorrecta', laOpcionCorrecta);
@@ -190,17 +184,6 @@ function activaSecRecursos() {
         // pintaRecursos();
     });
 
-    // $("#buscadorRecursos").change(function() {
-    //     if ($(this).val().length > 0) {
-    //         $(this).css({
-    //             'background-color': 'rgba(255, 255, 255, 1)'
-    //         })
-    //     } else {
-    //         $(this).css({
-    //             'background-color': 'rgba(255, 255, 255, 0.8)'
-    //         })
-    //     }
-    // });
 
     $("#buscadorClean").click(function(e) {
         e.preventDefault();
@@ -622,128 +605,6 @@ function UpdateRecurso(laLigaRecurso) {
 }
 
 
-// var laUrlBase = '';
-
-function fbSaveRecurso(recurso) {
-    console.log('fbSaveRecurso', recurso);
-    var onComplete = function(error) {
-        if (error) {
-            $.notify({
-                message: 'Ocurrió un error en la sincronización.'
-            }, {
-                type: 'danger',
-                allow_dismiss: true,
-                delay: 1500,
-                allow_dismiss: false
-            });
-            console.log('Ocurrió un error en la sincronización.');
-
-        } else {
-            // cleanUploadRecurso();
-            // cuentaRecursos();
-            $.notify({
-                message: 'El recurso se agregó correctamente'
-            }, {
-                type: 'success',
-                allow_dismiss: true,
-                delay: 1500,
-                allow_dismiss: false
-            });
-            console.log('Sincronización realizada.');
-            cleanUploadRecurso();
-            $("#modalAddRecurso .close").click();
-            cuentaRecursos();
-        }
-    };
-
-    if (revisaConexion) {
-        var dataRef = firebase.database().ref(laUrlBase + 'Recursos'); //Obtengo nodo.
-        var keyRecurso = dataRef.ref.child(recurso.Id); //Agrego recurso vacio con ID:recurso.Id .
-        firebase.database().ref(keyRecurso).set(recurso, onComplete); //Reemplazo datos.
-    }
-}
-
-function fbUpdateRecurso(recurso) {
-    console.log('fbUpdateRecurso', recurso);
-    var onComplete = function(error) {
-        if (error) {
-            $.notify({
-                message: 'Ocurrió un error en la sincronización.'
-            }, {
-                type: 'danger',
-                allow_dismiss: true,
-                delay: 1500,
-                allow_dismiss: false
-            });
-            console.log('Ocurrió un error en la sincronización.');
-
-        } else {
-            // _cleanUploadRecurso();
-            // cuentaRecursos();
-            $.notify({
-                message: 'El recurso se actualizó correctamente'
-            }, {
-                type: 'success',
-                allow_dismiss: true,
-                delay: 1500,
-                allow_dismiss: false
-            });
-            console.log('Sincronización realizada.');
-            _cleanUploadRecurso();
-            $("#emodalAddRecurso .close").click();
-            cuentaRecursos();
-        }
-    };
-
-    if (revisaConexion) {
-        var dataRef = firebase.database().ref(laUrlBase + 'Recursos'); //Obtengo nodo.
-        var keyRecurso = dataRef.ref.child(recurso.Id); //Agrego recurso vacio con ID:recurso.Id .
-        firebase.database().ref(keyRecurso).set(recurso, onComplete); //Reemplazo datos.
-    }
-
-}
-
-
-function fbSavePregunta(recurso) {
-    console.log('fbSavePregunta', recurso);
-    var onComplete = function(error) {
-        if (error) {
-            $.notify({
-                message: 'Ocurrió un error en la sincronización.'
-            }, {
-                type: 'danger',
-                allow_dismiss: true,
-                delay: 1500,
-                allow_dismiss: false
-            });
-            console.log('Ocurrió un error en la sincronización.');
-
-        } else {
-            // cleanUploadRecurso();
-            // cuentaRecursos();
-            $.notify({
-                message: 'La pregunta se agregó correctamente'
-            }, {
-                type: 'success',
-                allow_dismiss: true,
-                delay: 1500,
-                allow_dismiss: false
-            });
-            console.log('Sincronización realizada.');
-            cleanUploadPregunta();
-            $("#modalAddPregunta .close").click();
-            cuentaRecursos();
-        }
-    };
-
-    if (revisaConexion) {
-        var dataRef = firebase.database().ref(laUrlBase + 'Recursos'); //Obtengo nodo.
-        var keyRecurso = dataRef.ref.child(recurso.Id); //Agrego recurso vacio con ID:recurso.Id .
-        firebase.database().ref(keyRecurso).set(recurso, onComplete); //Reemplazo datos.
-    }
-}
-
-
 
 function cuentaRecursos() {
     console.log('cuentaRecursos');
@@ -755,8 +616,8 @@ function cuentaRecursos() {
             if (snapshot.val() != null) {
                 var contadorRecursos = 0;
                 var contadorRecursosVisbles = 0;
-                cuantosRecursos = snapshot.numChildren();
-                console.log('cuantosRecursos', cuantosRecursos);
+                // cuantosRecursos = snapshot.numChildren();
+                // console.log('cuantosRecursos', cuantosRecursos);
 
                 snapshot.forEach(function(childSnapshot) {
                     if (childSnapshot.key != undefined && childSnapshot.key != null && childSnapshot.key != '' && childSnapshot.key != 'undefined' && childSnapshot.key != 'val') {
@@ -774,38 +635,14 @@ function cuentaRecursos() {
                         //};
                         this['recursoCategoria' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Categoria').val();
                         // console.log('recurso ' + contadorRecursos + ': ', this['recursoCategoria' + contadorRecursos]);
-                        this['recursoOrganizacion' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Organizacion').val();
-                        // console.log('recurso ' + contadorRecursos + ': ', this['recursoOrganizacion' + contadorRecursos]);
                         this['recursoDesc' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Descripcion').val();
                         // console.log('Descripcion del recurso: ', this['recursoDesc' + contadorRecursos]);
                         this['recursoDuracion' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Duracion').val();
                         // console.log('Duración del recurso: ', this['recursoDuracion' + contadorRecursos]);
-                        // this['cursoObj' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Objetivos').val();
-                        // console.log('Objetivos del recurso: ', this['cursoObj' + contadorRecursos]);
-                        // this['cursoTemario' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Temario').val();
-                        // console.log('Temario del recurso: ', this['cursoTemario' + contadorRecursos]);
                         this['recursoLiga' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Liga').val();
                         // console.log('Liga del recurso: ', this['recursoLiga' + contadorRecursos]);
                         this['recursoPortada' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Portada').val();
                         // console.log('Portada del recurso: ', this['recursoPortada' + contadorRecursos]);
-
-                        // Pregunta
-                        if (this['recursoCategoria' + contadorRecursos] == 'Pregunta') {
-                            this['recursoPregunta' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Pregunta').val();
-                            console.log('Pregunta: ', this['recursoPregunta' + contadorRecursos]);
-                            this['recursoRespuesta1' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Respuesta1').val();
-                            console.log('Respuesta 1: ', this['recursoRespuesta1' + contadorRecursos]);
-                            this['recursoRespuesta2' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Respuesta2').val();
-                            console.log('Respuesta 2: ', this['recursoRespuesta2' + contadorRecursos]);
-                            this['recursoRespuesta3' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Respuesta3').val();
-                            console.log('Respuesta 3: ', this['recursoRespuesta3' + contadorRecursos]);
-                            this['recursoCorrecta' + contadorRecursos] = snapshot.child(childSnapshot.key).child('Correcta').val();
-                            console.log('Correcta: ', this['recursoCorrecta' + contadorRecursos]);
-                            this['recursoRetroBien' + contadorRecursos] = snapshot.child(childSnapshot.key).child('RetroBien').val();
-                            console.log('RetroBien: ', this['recursoRetroBien' + contadorRecursos]);
-                            this['recursoRetroMal' + contadorRecursos] = snapshot.child(childSnapshot.key).child('RetroMal').val();
-                            console.log('RetroMal: ', this['recursoRetroMal' + contadorRecursos]);
-                        }
 
                         that = this;
                         cuantosRecursos = contadorRecursos;
@@ -818,27 +655,18 @@ function cuentaRecursos() {
                 // losRecursos = snapshot.val();
                 // console.log('%c losRecursos', 'color: orange; font-weight:900;', losRecursos);
 
-                return pintaCategorias().then(function() {
-                    pintaRecursos().then(function() {
-                        activaBotonesCategprias().then(function() {
-                            activaLanzarRecursos().then(function() {
-                                cargador('oculta');
-                            });
-                        });
-                    });
-                });
-
-            } else {
-                return pintaCategorias().then(function() {
-                    pintaRecursos().then(function() {
-                        activaBotonesCategprias().then(function() {
-                            activaLanzarRecursos().then(function() {
-                                cargador('oculta');
-                            });
-                        });
-                    });
-                });
             }
+
+
+            return pintaRecursos().then(function() {
+                activaBotonesRecursos().then(function() {
+                    activaLanzarRecursos().then(function() {
+                        cargador('oculta');
+                    });
+                });
+            });
+
+
         });
     };
 };
@@ -868,41 +696,6 @@ function leeEstatusRecurso(estatusNo) {
 }
 
 
-function pintaCategorias() {
-
-    var contenidoCategorias = '';
-    $('#categorias').empty();
-
-    var arrayCategoriasPrev = new Array();
-    for (a = 1; a <= cuantosRecursosVisibles; a++) {
-        arrayCategoriasPrev.push(that['recursoCategoria' + a]);
-    }
-    // console.log('arrayCategoriasPrev', arrayCategoriasPrev);
-
-    function unique(arrayCategoriasPrev) {
-        return $.grep(arrayCategoriasPrev, function(el, index) {
-            return index == $.inArray(el, arrayCategoriasPrev);
-        });
-    }
-    arrayCategorias = unique(arrayCategoriasPrev);
-    // console.log('arrayCategorias', arrayCategorias);
-    cuantasCategorias = arrayCategorias.length;
-    console.log('cuantasCategorias', cuantasCategorias);
-
-    for (a = 1; a <= cuantasCategorias; a++) {
-        contenidoCategorias += '<div class="categoria">';
-        contenidoCategorias += arrayCategorias[(a - 1)];
-        contenidoCategorias += '<div  id="botonCategoria' + a + '" class="btn btn-sm btn-toggle btn-categoria active" data-toggle="button">';
-        contenidoCategorias += '<div class="handle"></div>';
-        contenidoCategorias += '</div>';
-        contenidoCategorias += '</div>';
-    }
-
-    $('#categorias').append(contenidoCategorias);
-
-    return $.ajax();
-}
-
 
 function pintaRecursos() {
 
@@ -920,7 +713,7 @@ function pintaRecursos() {
     // Agregar Recurso //
 
 
-    contenidoSecCursos += '<label class="btn btn-primary btn-round botonAgregar item boton_gris2_alt" style="float: right; margin-top: -50px;" data-toggle="modal" data-target="#modalAddRecurso"><i class="nc-icon-glyph ui-1_bold-add"></i>&nbsp; Agregar Recurso';
+    contenidoSecCursos += '<label class="btn btn-primary btn-round botonAgregarRecurso item boton_gris2_alt" style="float: right; margin-top: -60px;" data-toggle="modal" data-target="#modalAddRecurso"><i class="nc-icon-glyph ui-1_bold-add"></i>&nbsp; Agregar Recurso';
     // contenidoSecCursos += '<button  type="file" accept=".zip,.pdf,.ppt,.pptx,video/*" style="display: none;" data-toggle="modal" data-target="#modalAddRecurso"></button>';
     // contenidoSecCursos += '<button    style="display: none;" onClick="abreMenuRecursos()"></button>';
     contenidoSecCursos += '</label>';
@@ -940,78 +733,65 @@ function pintaRecursos() {
     // contenidoSecCursos += '</div>';
 
 
-    for (a = 1; a <= cuantasCategorias; a++) {
-        this['cuantosElemPorCategoria' + a] = 0;
+    contenidoSecCursos += '<div class="pt-4 pl-5 pr-5 py-3 bg-white rounded tabla_recursos">';
 
-        contenidoSecCursos += '<div id="grupoCategoria' + a + '" class="grupo_categoria">';
-        contenidoSecCursos += '<p class="titulo_categoria">' + arrayCategorias[(a - 1)] + ' </p>';
+    contenidoSecCursos += '<table class="table recursos_lista">';
+    contenidoSecCursos += '    <thead>';
+    contenidoSecCursos += '        <tr>';
+    contenidoSecCursos += '            <th class="col-5">';
+    contenidoSecCursos += '                <h6 class="input_label">Recurso</h6>';
+    contenidoSecCursos += '            </th>';
+    contenidoSecCursos += '            <th class="col-3">';
+    contenidoSecCursos += '                <h6 class="input_label">Descripción</h6>';
+    contenidoSecCursos += '            </th>';
+    contenidoSecCursos += '            <th class="col-2">';
+    contenidoSecCursos += '                <h6 class="input_label">Duración</h6>';
+    contenidoSecCursos += '            </th>';
+    contenidoSecCursos += '            <th class="col-2">';
+    contenidoSecCursos += '                <h6 class="input_label">Acciones</h6>';
+    contenidoSecCursos += '            </th>';
+    contenidoSecCursos += '        </tr>';
+    contenidoSecCursos += '    </thead>';
+    contenidoSecCursos += '    <tbody>';
 
-        contenidoSecCursos += '<div class="row">';
-        contenidoSecCursos += '<div class="col-md-10 ml-auto mr-auto">';
-        contenidoSecCursos += '<div class="row">';
+    for (a = 1; a <= cuantosRecursos; a++) {
 
+        contenidoSecCursos += '            <tr>';
+        contenidoSecCursos += '                <td>';
+        contenidoSecCursos += '        <div class="recurso_nombre">';
+        contenidoSecCursos += '           <div id="recurso_imagen1" class="recurso_imagen">';
+        contenidoSecCursos += '                <img src="https://muchofocus.com/creclms/recursos/sco_01/objeto_portada.jpg" alt="">';
+        contenidoSecCursos += '            </div>';
+        contenidoSecCursos += '            <div class="recurso_nombre_int">';
+        contenidoSecCursos += '                <span id="recurso_titulo1" class="recurso_titulo">Principios básicos de nutrición</span>';
+        contenidoSecCursos += '                <br>';
+        contenidoSecCursos += '                <span id="recurso_subtitulo1" class="recurso_subtitulo">SCORM</span>';
+        contenidoSecCursos += '            </div>';
+        contenidoSecCursos += '         </div>';
+        contenidoSecCursos += '     </td>';
+        contenidoSecCursos += '    <td id="recurso_descripcion1">';
+        contenidoSecCursos += '        <p class="texto_limitado">En este espacio descubrirás los conceptos generales de nutrición, la importancia de proporcionar a las mascotas un alimento de calidad y con el balance adecuado, así como la información clave que podemos encontrar en el empaque de los alimentos.</p>';
+        contenidoSecCursos += '    </td>';
+        contenidoSecCursos += '    <td id="recurso_duracion1">1 hora</td>';
+        contenidoSecCursos += '    <td>';
+        contenidoSecCursos += '        <div id="botonVerRecurso1" class="btn btn-round btn-icon btn-verde2 botonVerRecurso" data-toggle="modal" data-target="#modalVerRecurso">';
+        contenidoSecCursos += '            <i class="nc-icon-outline education_glasses"></i>';
+        contenidoSecCursos += '      </div>';
+        contenidoSecCursos += '      <div id="botonEditarRecurso1" class="btn btn-round btn-icon btn-verde2 botonEditarRecurso">';
+        contenidoSecCursos += '          <i class="nc-icon-outline ui-1_pencil"></i>';
+        contenidoSecCursos += '     </div>';
+        contenidoSecCursos += '        <div id="botonEliminarRecurso1" class="btn btn-round btn-icon btn-primary botonEliminarRecurso" onclick="eliminarRecurso(this)">';
+        contenidoSecCursos += '             <i class="nc-icon-outline ui-1_trash-simple"></i>';
+        contenidoSecCursos += '         </div>';
+        contenidoSecCursos += '      </td>';
+        contenidoSecCursos += '   </tr>';
 
-        for (b = 1; b <= cuantosRecursosVisibles; b++) {
-
-            if (that['recursoCategoria' + b] == arrayCategorias[(a - 1)]) {
-                this['cuantosElemPorCategoria' + a]++;
-
-                var noCache = generarId();
-
-                contenidoSecCursos += '<div class="col-md-' + anchoColumnas + '">';
-                contenidoSecCursos += '<div id="tarjeta' + b + '" class="card">';
-                contenidoSecCursos += '<img class="card-img portada_recurso" src="' + this['recursoPortada' + b] + '?' + noCache + '"></img>';
-
-                contenidoSecCursos += '<div class="card-body">';
-                contenidoSecCursos += '<h6 class="category text-danger">' + this['recursoCategoria' + b] + '</h6>';
-                contenidoSecCursos += '<h5 id="curso_titulo' + b + '" class="curso_titulo card-title">' + this['recursoNombre' + b] + '</h5>';
-
-                contenidoSecCursos += '<div class="card-desc">';
-                if (this['recursoDuracion' + b]) {
-                    contenidoSecCursos += '<p class="card-text" ><b>Duración: </b><br>' + this['recursoDuracion' + b] + ' minutos</p>';
-                }
-                contenidoSecCursos += '<p class="card-text" ><b>Descripción: </b><br>' + this['recursoDesc' + b] + '</p>';
-                // contenidoSecCursos += '<p class="card-text" ><b>Categoria: </b><br>' + this['recursoCategoria' + b] + '</p>';
-                if (this['recursoOrganizacion' + b]) {
-                    contenidoSecCursos += '<p class="card-text" ><b>Organizacion: </b><br>' + this['recursoOrganizacion' + b] + '</p>';
-                }
-                contenidoSecCursos += '</div>';
-
-                contenidoSecCursos += '<div class="mdl-card__actions mdl-card--border">';
-                contenidoSecCursos += '<div class="card-botones">';
-
-                if (this['recursoCategoria' + b] == 'Pregunta') {
-                    contenidoSecCursos += '<div id="botonVerPregunta' + b + '" class="btn btn-sm btn-round botonVerPregunta" data-toggle="modal" data-target="#modalVerPregunta"><i class="nc-icon-glyph education_glasses"></i>&nbsp; Ver</div>';
-                } else {
-                    contenidoSecCursos += '<div id="botonVerObjeto' + b + '" class="btn btn-sm btn-round botonVerObjeto" data-toggle="modal" data-target="#modalVerObjeto"><i class="nc-icon-glyph education_glasses"></i>&nbsp; Ver</div>'; //Boton LANZAR
-                }
-
-                if (this['recursoCategoria' + b] == 'Pregunta') {
-                    contenidoSecCursos += '<div id="botonEditarP' + b + '" class="btn btn-sm btn-round botonEditar" onclick="loadEditarPregunta(this)" data-toggle="modal" data-target="#modalAddPregunta"><i class="nc-icon-glyph ui-1_pencil"></i>&nbsp; Editar</div>';
-                } else {
-                    contenidoSecCursos += '<div id="botonEditarR' + b + '" class="btn btn-sm btn-round botonEditar" onclick="loadEditarRecurso(this)" data-toggle="modal" data-target="#emodalAddRecurso"><i class="nc-icon-glyph ui-1_pencil"></i>&nbsp; Editar</div>';
-                }
-
-                contenidoSecCursos += '<div id="btnEliminar' + b + '" class="btn btn-sm btn-round botonEliminar" onclick="eliminarRecurso(this)" ><i class="nc-icon-glyph ui-1_trash-simple"></i>&nbsp; Eliminar</div>';
-                // contenidoSecCursos += '<div id="botonAsignar' + b + '" class="btn btn-sm btn-round botonAsignar">Asignar</div>';
-                contenidoSecCursos += '<div id="botonMasInfo' + b + '" class="btn btn-sm btn-round botonMasInfo">Más info <i class="nc-icon-outline arrows-1_minimal-down" style="margin-left: 5px;"></i></div>';
-                contenidoSecCursos += '</div>';
-
-                contenidoSecCursos += '</div>';
-                contenidoSecCursos += '</div>';
-                contenidoSecCursos += '</div>';
-                contenidoSecCursos += '</div>';
-            };
-
-        };
-
-        contenidoSecCursos += '</div>';
-        contenidoSecCursos += '</div>';
-        contenidoSecCursos += '</div>';
-        contenidoSecCursos += '</div>';
-
-        console.log(arrayCategorias[(a - 1)], this['cuantosElemPorCategoria' + a]);
     };
+
+    contenidoSecCursos += '           </tbody>';
+    contenidoSecCursos += '    </table>';
+
+    contenidoSecCursos += ' </div>';
 
 
     $('.recursos_int').append(contenidoSecCursos);
@@ -1021,179 +801,21 @@ function pintaRecursos() {
 
 }
 
-function fbEliminarRecurso(key) {
 
-    var onComplete = function(error) {
-        if (error) {
-            $.notify({
-                // options
-                message: 'Ocurrió un error en la sincronización.'
-            }, {
-                // settings
-                type: 'danger',
-                allow_dismiss: true,
-                delay: 1500,
-                allow_dismiss: false,
-            });
-            console.log('Ocurrió un error en la sincronización.');
-        } else {
-            cuentaRecursos();
-            var parametros = {
-                CODE: 'delete',
-                archivo: key
-            };
-            console.log("[ELIMINAR ARCHIVO]");
-            console.log(parametros);
-            $.post("php/rmdir.php", parametros);
 
-            $.notify({
-                // options
-                message: 'El recurso se borró correctamente'
-            }, {
-                // settings
-                type: 'info',
-                allow_dismiss: true,
-                delay: 1500,
-                allow_dismiss: false,
-            });
-            setTimeout(cuentaRecursos(), 100);
-            console.log('Sincronización realizada.');
-        };
+function eliminarRecurso(cualRecurso) {
+    // event.preventDefault();
+    console.log("eliminarRecurso", cualRecurso);
+    for (b = 1; b <= cuantosRecursos; b++) {
+        $('#modalBorrarRecurso').modal({
+            transition: 'scale'
+        }).modal('show');
+        $(document).off('click', '#botonCancelarBorrarRecurso').on('click', '#botonCancelarBorrarRecurso', function(e) {});
+        $(document).off('click', '#botonAceptarBorrarRecurso').on('click', '#botonAceptarBorrarRecurso', function(e) {
+            // borrarRecurso(that['recursoId' + cualRecurso]);
+        });
     };
-    if (revisaConexion) {
-        firebase.database().ref().child('Recursos/' + key).remove(onComplete);
-        pintaCategorias();
-    }
-}
-
-
-function eliminarRecurso(A) {
-    console.log("Click Eliminar aquí: ");
-    var idCompuesto = A.id;
-    var ID = idCompuesto.replace("btnEliminar", "");
-    var key = that['recursoId' + ID];
-    console.log(key);
-    $('#modalBorrarRecurso').modal({
-        transition: 'scale'
-    }).modal('show');
-    $(document).off('click', '#botonCancelarBorrarRecurso').on('click', '#botonCancelarBorrarRecurso', function(e) {
-        console.log("Cancelar Borrar Recurso");
-    });
-    $(document).off('click', '#botonAceptarBorrarRecurso').on('click', '#botonAceptarBorrarRecurso', function(e) {
-        console.log("Aceptar Borrar Recurso");
-        fbEliminarRecurso(key);
-    });
-
-
-}
-
-function loadEditarRecurso(A) {
-    console.log('loadEditarRecurso', A.id.replace("botonEditarR", ""));
-
-    _cleanUploadRecurso();
-    var noCache = generarId();
-    console.log("Click Editar aquí: ");
-    var idCompuesto = A.id;
-    var ID = idCompuesto.replace("botonEditarR", "");
-    var key = that['recursoId' + ID];
-    elRecursoId = that['recursoId' + ID];
-    console.log("ID Recurso a Editar: ");
-    console.log(key);
-
-    if (revisaConexion) {
-        firebase.database().ref(laUrlBase + 'Recursos/' + key).once('value').then(function(snapshot) {
-            if (snapshot.val() != null) {
-                var R = snapshot.val();
-                console.log('Recurso a Editar');
-                console.log(R);
-
-                IdRecurso = R.Id;
-                $("#idRecursoEdit").val(R.Id);
-                $("#erError").html("").addClass("ocultar");
-                $("#erNombre").val(R.Nombre);
-                $("#erNombreCorto").val(R.Nombre_corto);
-                $("#erCategoria").val(R.Categoria);
-                $("#erDuracion").val(R.Duracion);
-                $("#erOrganizacion").val(R.Organizacion);
-                $("#erDescripcion").val(R.Descripcion);
-                Portada = R.Portada;
-                Liga = R.Liga;
-                $("#ocultaPortada").val(R.Portada);
-
-
-                $("#eimgPortadaRecursoPreview").attr("src", R.Portada + '?' + noCache);
-                if (R.Visible) {
-                    $("#erVisible").addClass('active');
-                } else {
-                    $("#erVisible").removeClass('active');
-                }
-
-                $("#einputZip").val(null);
-                $("#einputPortadaRecurso").val(null);
-
-                cambiaAttrInput(R.Categoria);
-
-                // $('#erecursoNombreSi').show();
-                // $('#erecursoNombreTexto').html((R.Liga.substr(R.Liga.lastIndexOf('/') + 1)));
-
-                // $(document).off('click', '#erecursoNombreTexto').on('click', '#erecursoNombreTexto', function(e) {
-                //     window.open(R.Liga);
-                // });
-
-            }
-        });
-    }
-}
-
-
-function loadEditarPregunta(A) {
-    console.log('loadEditarPregunta', A.id.replace("botonEditarP", ""));
-
-    cleanUploadPregunta();
-    var noCache = generarId();
-    console.log("Click Editar aquí: ");
-    var idCompuesto = A.id;
-    var ID = idCompuesto.replace("botonEditarP", "");
-    var key = that['recursoId' + ID];
-    elRecursoId = that['recursoId' + ID];
-    console.log("ID Recurso a Editar: ");
-    console.log(key);
-
-    if (revisaConexion) {
-        firebase.database().ref(laUrlBase + 'Recursos/' + key).once('value').then(function(snapshot) {
-            if (snapshot.val() != null) {
-                var R = snapshot.val();
-                console.log('Pregunta a Editar');
-                console.log(R);
-
-                IdRecurso = R.Id;
-                $("#idRecursoEdit").val(R.Id);
-                $("#erError").html("").addClass("ocultar");
-                // $("#erNombreCorto").val(R.Nombre_corto);
-                $("#tipoPregunta").val(R.Tipo);
-                $("#rNombrePregunta").val(R.Nombre);
-                $("#rDescripcionPregunta").val(R.Descripcion);
-
-                $("#rPregunta").val(R.Pregunta);
-                $("#rRespuesta1").val(R.Respuesta1);
-                $("#rRespuesta2").val(R.Respuesta2);
-                $("#rRespuesta3").val(R.Respuesta3);
-                $("#correcta" + R.Correcta).prop('checked', true);
-                laOpcionCorrecta = R.Correcta;
-
-                $("#rRetroBien").val(R.RetroBien);
-                $("#rRetroMal").val(R.RetroMal);
-
-            }
-        });
-    }
-
-    // laCategoria = that['recursoCategoria' + ID];
-    // if (laCategoria != 'Pregunta') {
-    // } else {
-    abreModalPregunta('editar');
-    // }
-}
+};
 
 
 function cambiaAttrInput(cualVal) {
@@ -1244,14 +866,27 @@ function cambiaAttrInput(cualVal) {
 }
 
 
-function activaBotonesCategprias() {
+function activaBotonesRecursos() {
 
-    for (a = 1; a <= cuantasCategorias; a++) {
-        $("#botonCategoria" + a).click(function(event) {
+    for (a = 1; a <= cuantosRecursos; a++) {
+
+        $("#botonEditarRecurso" + a).click(function(event) {
             event.preventDefault();
-            var cualCategoria = $(this).attr('id').substr(14, 3);
-            $('#grupoCategoria' + cualCategoria).slideToggle();
+            var elRecurso = $(this).attr('id').substr(18, 3);
+            console.log('elRecurso', elRecurso);
+            editaRecurso(elRecurso);
         });
+
+        $("#botonCancelarRecurso").click(function(event) {
+            event.preventDefault();
+            regresaReursos();
+        });
+
+        $("#botonGuardarRecurso").click(function(event) {
+            event.preventDefault();
+            regresaReursos();
+        });
+
     }
 
     return $.ajax();
@@ -1278,33 +913,12 @@ function activaLanzarRecursos() {
         });
     }
 
-    // for (a = 1; a <= cuantosRecursosVisibles; a++) {
-    //     $(document).off('click', '#botonIniciarCurso' + a).on('click', '#botonIniciarCurso' + a, function(event) {
-    //         event.preventDefault();
-    //         elContenido = $(this).attr('id').substr(17, 3);
-    //         // console.log('elContenido', elContenido);
-    //         window.open(that['recursoLiga' + elContenido]);
-    //         // lanzaContenidoVisualizar(elContenido);
-    //     });
-    // }
-
-    $(".botonVerObjeto").click(function(event) {
+    $(".botonVerRecurso").click(function(event) {
         event.preventDefault();
         var _Pos = $(this).attr('id').indexOf('_');
-        var cualRecurso = $(this).attr('id').substr(14, $(this).attr('id').length - (_Pos + 1));
+        var cualRecurso = $(this).attr('id').substr(15, $(this).attr('id').length - (_Pos + 1));
 
-        console.log('botonVerObjeto', cualRecurso);
-        ////////////////
-        lanzaObjetoVisualizar(cualRecurso);
-        ////////////////
-    });
-
-    $(".botonVerPregunta").click(function(event) {
-        event.preventDefault();
-        var _Pos = $(this).attr('id').indexOf('_');
-        var cualRecurso = $(this).attr('id').substr(16, $(this).attr('id').length - (_Pos + 1));
-
-        console.log('botonVerPregunta', cualRecurso);
+        console.log('botonVerRecurso', cualRecurso);
         ////////////////
         lanzaObjetoVisualizar(cualRecurso);
         ////////////////
@@ -1314,9 +928,64 @@ function activaLanzarRecursos() {
     return $.ajax();
 }
 
-// function abreAddRecursos() {
-//     $('#modalAddRecurso').modal('show');
-// }
+
+function editaRecurso(cualRecurso) {
+    console.log('editaRecurso', cualRecurso);
+
+    $('.recursos_int').css({
+        'display': 'none'
+    });
+    $("#secEditarRecurso").css({
+        'display': 'block'
+    });
+
+    $("#tabRecursos>li>a").removeClass("active");
+    $("#tabRecursosContent>.active").removeClass("active");
+    $("#botonInfoGral").addClass('show active');
+    $("#infoGral").addClass('show active');
+
+
+    // Editor //
+    ClassicEditor.create(document.querySelector('#editor1'))
+        .then(editor => {
+            // console.log('editor', editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor.create(document.querySelector('#editor2'))
+        .then(editor => {
+            // console.log('editor', editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    // Editor //
+
+    // upload image //
+    $('.input-images-1').imageUploader();
+    // upload image //
+
+}
+
+function regresaReursos() {
+
+    $('.recursos_int').css({
+        'display': 'block'
+    });
+    $("#secEditarRecurso").css({
+        'display': 'none'
+    });
+
+    // Editor //
+    $('#editor1').remove();
+    $('#editor2').remove();
+
+    // upload image //
+    $('.image-uploader').remove();
+
+}
+
 
 // menús verticales //
 function abreMenuRecursos() {
@@ -1341,7 +1010,7 @@ $(document).on('mouseup', 'body *', function(e) {
 function lanzaObjetoVisualizar(cualContenido) {
     console.log('cualContenido', cualContenido);
 
-    $("#modalVerObjeto_body").empty();
+    $("#modalVerRecurso_body").empty();
     var elContenido = '';
     // elContenidoLanzado = true;
 
@@ -1368,9 +1037,9 @@ function lanzaObjetoVisualizar(cualContenido) {
             break;
 
 
-        case 'Empaquetado':
+        case 'SCORM':
 
-            $("#modalVerObjeto_body").html('<iframe name="curso" id="curso" src="' + laLiga + '" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
+            $("#modalVerRecurso_body").html('<iframe name="curso" id="curso" src="' + laLiga + '" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
 
             break;
 
@@ -1384,7 +1053,7 @@ function lanzaObjetoVisualizar(cualContenido) {
                 elContenido += '</audio>';
                 elContenido += '</div>';
 
-                $("#modalVerObjeto_body").html(elContenido);
+                $("#modalVerRecurso_body").html(elContenido);
             }, 500);
 
             break;
@@ -1393,7 +1062,7 @@ function lanzaObjetoVisualizar(cualContenido) {
 
         case 'Imagen':
 
-            $("#modalVerObjeto_body").html('<iframe name="curso" id="curso" src="' + laLiga + '" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
+            $("#modalVerRecurso_body").html('<iframe name="curso" id="curso" src="' + laLiga + '" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
 
             // elContenido += '<div name="curso" id="curso" style="width:100%; height:100%; overflow: scroll;">';
             // elContenido += '<img id="laImagen" src="' + laLiga + '">';
@@ -1410,7 +1079,7 @@ function lanzaObjetoVisualizar(cualContenido) {
             // elContenido += '<object src="' + laLiga + '" width="100%" height="100%"></object>';
             elContenido += '</div>';
 
-            $("#modalVerObjeto_body").html(elContenido);
+            $("#modalVerRecurso_body").html(elContenido);
 
             break;
 
@@ -1418,7 +1087,7 @@ function lanzaObjetoVisualizar(cualContenido) {
 
         case 'Video':
 
-            // $("#modalVerObjeto_body").html('<iframe name="curso" id="curso" src="' + laLiga + '" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
+            // $("#modalVerRecurso_body").html('<iframe name="curso" id="curso" src="' + laLiga + '" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
 
             elContenido += '<div name="curso" id="curso" style="background-color: #000000;">';
             elContenido += '<video id="elVideo" style="width:100%; height:100%;" autobuffer controls autoplay controlsList="nodownload">';
@@ -1426,7 +1095,7 @@ function lanzaObjetoVisualizar(cualContenido) {
             elContenido += '</video>';
             elContenido += '</div>';
 
-            $("#modalVerObjeto_body").html(elContenido);
+            $("#modalVerRecurso_body").html(elContenido);
 
             setTimeout(function() {
                 ajustaEscalaContenidoInst();
@@ -1438,7 +1107,7 @@ function lanzaObjetoVisualizar(cualContenido) {
 
         case 'Word':
 
-            $("#modalVerObjeto_body").html('<iframe name="curso" id="curso" src="https://docs.google.com/gview?url=' + laLiga + '&embedded=true" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
+            $("#modalVerRecurso_body").html('<iframe name="curso" id="curso" src="https://docs.google.com/gview?url=' + laLiga + '&embedded=true" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
 
             // elContenido += '<div name="curso" id="curso" style="width:100%; height:100%;">';
             // elContenido += '<img  id="laImagen" src="' + laLiga + '">';
@@ -1450,7 +1119,7 @@ function lanzaObjetoVisualizar(cualContenido) {
 
         case 'PowerPoint':
 
-            $("#modalVerObjeto_body").html('<iframe name="curso" id="curso" src="https://docs.google.com/gview?url=' + laLiga + '&embedded=true" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
+            $("#modalVerRecurso_body").html('<iframe name="curso" id="curso" src="https://docs.google.com/gview?url=' + laLiga + '&embedded=true" frameborder="0" scrolling="yes" border="0" style="display: block; height: 100vh; width: 100vw; width:100%; height:100%;"></iframe>');
 
             // elContenido += '<div name="curso" id="curso" style="width:100%; height:100%;">';
             // elContenido += '<img  id="laImagen" src="' + laLiga + '">';
@@ -1479,30 +1148,20 @@ function lanzaObjetoVisualizar(cualContenido) {
 
 
 
-function cierraContenido() {
+function cierraContenidoRecurso() {
 
-    registraRevisado();
-    elContenidoLanzado = false;
-
-    habilitaBoton($('#botonCerrar'), true);
-    $("#content").empty();
-    $('#barra_player').hide();
-    $('.main-panel').removeClass('main-panel_100');
-    $('.panel-header, .sidebar, .navbar-toggler').show();
-    $('.panel-header').css({
-        'width': '100%'
+    $('#modalVerRecurso').on('hide.bs.modal', function() {
+        $("#modalVerRecurso_body").empty();
     });
-    ajustaEscalaContenido();
 
-    navega('recursos');
 }
 
 
 
 function detectaUnloadVerRec() {
 
-    $('#modalVerObjeto').on('hide.bs.modal', function() {
-        $("#modalVerObjeto_body").empty();
+    $('#modalVerRecurso').on('hide.bs.modal', function() {
+        $("#modalVerRecurso_body").empty();
     });
 
     // if (elContenidoLanzado == true) {
@@ -1528,11 +1187,11 @@ function ajustaEscalaContenidoVer() {
     // console.log('elAncho', elAncho, 'y elAlto', elAlto);
 
     // if (elContenidoLanzado == true) {
-    $("#modalVerObjetoContent").css({
+    $("#modalVerRecursoContent").css({
         'height': (elAlto - 50) + 'px',
         'width': (elAncho - 50) + 'px'
     });
-    $("#modalVerObjetoDialog").css({
+    $("#modalVerRecursoDialog").css({
         'margin-left': '30px'
     });
     // }
