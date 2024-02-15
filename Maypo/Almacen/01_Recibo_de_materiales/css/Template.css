@@ -326,7 +326,8 @@ body {
 
 .boton_temario {
     top: -25px;
-    left: 790px;
+    /* left: 790px; */
+    left: 850px;
     width: 60px;
     height: 60px;
     padding: 0px;
@@ -381,7 +382,8 @@ body {
 
 .boton_reload {
     top: -25px;
-    left: 850px;
+    /* left: 850px; */
+    left: 910px;
     width: 60px;
     height: 60px;
     padding: 0px;
@@ -389,7 +391,8 @@ body {
 
 .boton_pausa {
     top: -25px;
-    left: 910px;
+    /* left: 910px; */
+    left: 970px;
     width: 60px;
     height: 60px;
     padding: 0px;
@@ -448,7 +451,7 @@ body {
 
 #btnCerrarTemario {
     font-size: 1.5em;
-    background: #86b825;
+    background: #1a5581;
     position: absolute;
     right: -22px;
     top: 13px;
@@ -465,7 +468,7 @@ body {
 
 #temarioTitle {
     position: relative;
-    background: #86b825;
+    background: #1a5581;
     margin: 0;
     font-size: 25px;
     /* font-weight: 600; */
@@ -516,7 +519,7 @@ body {
 }
 
 .linkactivo:hover {
-    background-color: #87b8253a;
+    background-color: #1a548118;
     /* color: #FFF; */
     cursor: pointer;
 }

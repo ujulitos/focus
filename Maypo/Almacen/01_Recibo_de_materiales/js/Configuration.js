@@ -23,9 +23,8 @@ var course = new Object();
 course.pages = [
     { title: "Pantalla", url: "Maypo_Almacen_01.html", navegacion: true, menu: true },
     // { title: "Pantalla", url: "Maypo_Almacen_02.html", navegacion: true, menu: true },
-    { title: "Pantalla", url: "Maypo_Almacen_03.html", navegacion: true, menu: true }
-    // { title: "Pantalla", url: "Maypo_Almacen_04.html", navegacion: true, menu: true },
-    // { title: "Pantalla", url: "Maypo_Almacen_05.html", navegacion: true, menu: true }
+    { title: "Pantalla", url: "Maypo_Almacen_03.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Maypo_Almacen_04.html", navegacion: true, menu: true }
 ];
 
 /* Pantallas de recursos */
@@ -37,13 +36,18 @@ recursos.pages = [
 
 /* Audios del curso */
 var grupoAudios = new buzz.group([
-    /*00*/ new buzz.sound("contenido/audios/audio0", { formats: ["mp3"], preload: true }),
-    /*00*/ new buzz.sound("contenido/audios/audio0", { formats: ["mp3"], preload: true }),
     /*00*/ new buzz.sound("contenido/audios/audio0", { formats: ["mp3"], preload: true })
 ]);
 
 /* Videos del curso */
 var grupoVideos = [
-    /*01*/ 'videos/Recibo_de_materiales_01.mp4',
-    /*02*/ 'videos/Recibo_de_materiales_02.mp4'
+    /*00*/ 'video0',
+    /*01*/ 'video1',
+    /*02*/ 'video2',
+    /*03*/ 'video3',
+    /*04*/ 'video4',
+    /*05*/ 'video5',
+    /*06*/ 'video6',
+    /*07*/ 'video7',
+    /*08*/ 'video8'
 ];

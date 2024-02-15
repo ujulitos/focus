@@ -22,12 +22,16 @@ function playAudio(cualAudio, delay, funcion, parametro) {
 
     elRetardo = setTimeout(function() {
         // buzz.sounds[cualAudio].play();
-        $("#video1")[0].play();
+        $("#com").contents().find("#contenido").find("#" + grupoVideos[cualAudio])[0].play();
     }, delay);
 
     if (funcion != undefined && funcion != 'repetir') {
         // console.log('funcion undefined', cualAudio, delay, funcion, parametro);
         // buzz.sounds[cualAudio].unbind('ended');
+        $("#com").contents().find("#contenido").find("#" + grupoVideos[cualAudio]).on('ended', function() {
+            console.log('Video has ended!');
+            funcion(parametro);
+        });
         // buzz.sounds[cualAudio].bind("ended", function(e) {
         //     funcion(parametro);
         // });
@@ -90,22 +94,17 @@ function pausaAudio() {
     console.log('pausaAudio');
     clearTimeout(elRetardo);
     // buzz.all().pause();
-    console.log($("#video1")[0]);
-    if ($("#video1").length) {
-        $("#video1")[0].pause();
-        pausado = true;
+    if ($("#com").contents().find("#contenido").find("#" + grupoVideos[currentAudio]).length) {
+        $("#com").contents().find("#contenido").find("#" + grupoVideos[currentAudio])[0].pause();
     }
+    pausado = true;
 }
 
 function despausaAudio() {
     console.log('despausaAudio');
-    // if (currentAudio != null || currentAudio != undefined || currentAudio != '') {
-    // playAudio(currentAudio, 0, currentCallBack);
-    if ($("#video1").length) {
-        $("#video1")[0].play();
-        pausado = false;
+    if (currentAudio != null || currentAudio != undefined || currentAudio != '') {
+        playAudio(currentAudio, 0, currentCallBack);
     }
-    // }
 }
 
 function changeVolumen(volumens) {
