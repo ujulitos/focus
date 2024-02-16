@@ -856,6 +856,13 @@ function updateTracking() {
             'cursor': 'pointer',
             'opacity': '1'
         });
+        ////////// Inicio //////////
+        $('#btnTemario').show();
+        $('#btnReload').show();
+        $('#btnPausa').show();
+        $('#btnPrev').show();
+        $('#btnNext').show();
+        ////////// Inicio //////////
     } else {
         //$("#btnPrev").hide();
         $("#btnPrev").removeClass('btnNavOver');
@@ -863,6 +870,13 @@ function updateTracking() {
             'cursor': 'default',
             'opacity': '0.4'
         });
+        ////////// Inicio //////////
+        $('#btnTemario').hide();
+        $('#btnReload').hide();
+        $('#btnPausa').hide();
+        $('#btnPrev').hide();
+        $('#btnNext').hide();
+        ////////// Inicio //////////
     }
 
     /* Actualización de avance */

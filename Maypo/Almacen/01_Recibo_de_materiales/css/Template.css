@@ -524,6 +524,15 @@ body {
     cursor: pointer;
 }
 
+/* Inicio */
+#btnTemario,
+#btnReload,
+#btnPausa,
+#btnPrev,
+#btnNext {
+    display: none;
+}
+
 /* Estilo Mobil */
 
 /*
