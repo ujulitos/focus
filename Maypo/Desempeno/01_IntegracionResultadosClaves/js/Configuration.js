@@ -25,7 +25,6 @@ course.pages = [
     { title: "Pantalla", url: "Maypo_EmployeeCentral_02.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Maypo_EmployeeCentral_03.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Maypo_EmployeeCentral_04.html", navegacion: true, menu: true },
-    { title: "Pantalla", url: "Maypo_EmployeeCentral_05.html", navegacion: true, menu: true }
 ];
 
 /* Pantallas de recursos */
