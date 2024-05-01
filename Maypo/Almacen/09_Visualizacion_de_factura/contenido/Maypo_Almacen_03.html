@@ -36,6 +36,10 @@
         <video id="video5" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_de_factura_05.mp4" type="video/mp4"> </video>
         <video id="video6" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_de_factura_06.mp4" type="video/mp4"> </video>
         <video id="video7" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_de_factura_07.mp4" type="video/mp4"> </video>
+        <video id="video8" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_de_factura_08.mp4" type="video/mp4"> </video>
+        <video id="video9" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_de_factura_09.mp4" type="video/mp4"> </video>
+        <video id="video10" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_de_factura_10.mp4" type="video/mp4"> </video>
+        <video id="video11" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_de_factura_11.mp4" type="video/mp4"> </video>
         <img id="videoMask" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/videoMask.png"></img>
 
         <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/img01.png"></img>
@@ -49,6 +53,10 @@
         <img id="sec_img4" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img04.png"></img>
         <img id="sec_img5" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img05.png"></img>
         <img id="sec_img6" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img06.png"></img>
+        <img id="sec_img7" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img07.png"></img>
+        <img id="sec_img8" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img08.png"></img>
+        <img id="sec_img9" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img09.png"></img>
+        <img id="sec_img10" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img10.png"></img>
 
         <!-- <img id="img_subts_fondo" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/img_subts_fondo.png"></img> -->
         <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img01_subts_01.png"></img>
@@ -57,6 +65,10 @@
         <img id="sec_img4_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img04_subts_01.png"></img>
         <img id="sec_img5_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img05_subts_01.png"></img>
         <img id="sec_img6_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img06_subts_01.png"></img>
+        <img id="sec_img7_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img07_subts_01.png"></img>
+        <img id="sec_img8_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img08_subts_01.png"></img>
+        <img id="sec_img9_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img09_subts_01.png"></img>
+        <img id="sec_img10_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img10_subts_01.png"></img>
 
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
@@ -104,7 +116,7 @@
 <script>
     $(document).ready(function() {
 
-        var cuantasSecciones = 6;
+        var cuantasSecciones = 10;
         var cualVideo = 2;
         var conMouse = true;
         var conSubts = true;
@@ -114,8 +126,12 @@
         this.punto2 = [370, 530, 1000, 4000];
         this.punto3 = [215, 350, 1000, 4000];
         this.punto4 = [265, 400, 1000, 4000];
-        this.punto5 = [415, 365, 2000, 7000];
-        this.punto6 = [370, 530, 1000, 4000];
+        this.punto5 = [240, 325, 1000, 4000];
+        this.punto6 = [450, 570, 2000, 10000];
+        this.punto7 = [290, 375, 2000, 3000];
+        this.punto8 = [415, 375, 2000, 5000];
+        this.punto9 = [415, 375, 2000, 5000];
+        this.punto10 = [370, 530, 1000, 4000];
         that = this;
 
 
@@ -182,7 +198,7 @@
                 case 1:
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
                     break;
-                case 6:
+                case 10:
                     conMouse = false;
                     break;
                 default:
