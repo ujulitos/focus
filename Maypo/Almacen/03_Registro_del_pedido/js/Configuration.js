@@ -66,5 +66,7 @@ var grupoVideos = [
     /*20*/ 'video20',
     /*21*/ 'video21',
     /*22*/ 'video22',
-    /*23*/ 'video23'
+    /*23*/ 'video23',
+    /*24*/ 'video24',
+    /*25*/ 'video25'
 ];
