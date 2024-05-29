@@ -45,6 +45,7 @@
         <video id="video21" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Registro_del_pedido_21.mp4" type="video/mp4"> </video>
         <video id="video22" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Registro_del_pedido_22.mp4" type="video/mp4"> </video>
         <video id="video23" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Registro_del_pedido_23.mp4" type="video/mp4"> </video>
+        <video id="video24" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Registro_del_pedido_24.mp4" type="video/mp4"> </video>
         <img id="videoMask" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/videoMask.png"></img>
 
         <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/img01.png"></img>
@@ -67,6 +68,7 @@
         <img id="sec_img13" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/sec_img13.png"></img>
         <img id="sec_img14" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/sec_img14.png"></img>
         <img id="sec_img15" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/sec_img15.png"></img>
+        <img id="sec_img16" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/sec_img16.png"></img>
 
         <!-- <img id="img_subts_fondo" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/img_subts_fondo.png"></img> -->
         <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/sec_img01_subts_01.png"></img>
@@ -84,6 +86,7 @@
         <img id="sec_img13_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/sec_img13_subts_01.png"></img>
         <img id="sec_img14_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/sec_img14_subts_01.png"></img>
         <img id="sec_img15_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/sec_img15_subts_01.png"></img>
+        <img id="sec_img16_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_05/sec_img16_subts_01.png"></img>
 
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
@@ -131,27 +134,28 @@
 <script>
     $(document).ready(function() {
 
-        var cuantasSecciones = 15;
+        var cuantasSecciones = 16;
         var cualVideo = 9;
         var conMouse = true;
         var conSubts = true;
         // var subtsOn;
         // var altoSubts = 125;
         this.punto1 = [220, 370, 2000, 13000];
-        this.punto2 = [285, 720, 1000, 7000];
+        this.punto2 = [265, 720, 2000, 7000];
         this.punto3 = [290, 320, 1000, 5000];
         this.punto4 = [340, 490, 2000, 2000];
         this.punto5 = [515, 750, 2000, 2000];
-        this.punto6 = [515, 520, 2000, 2000];
+        this.punto6 = [515, 520, 2000, 8000];
         this.punto7 = [380, 390, 2000, 18000];
         this.punto8 = [480, 670, 2000, 4000];
         this.punto9 = [415, 500, 2000, 2000];
-        this.punto10 = [295, 400, 2000, 7000];
-        this.punto11 = [295, 570, 2000, 2000];
-        this.punto12 = [430, 550, 2000, 2000];
-        this.punto13 = [430, 580, 1000, 2000];
-        this.punto14 = [425, 505, 1000, 4000];
-        this.punto15 = [260, 500, 2000, 8000];
+        this.punto10 = [415, 500, 2000, 2000];
+        this.punto11 = [295, 400, 2000, 7000];
+        this.punto12 = [295, 570, 2000, 2000];
+        this.punto13 = [430, 550, 2000, 2000];
+        this.punto14 = [430, 580, 1000, 2000];
+        this.punto15 = [425, 505, 1000, 4000];
+        this.punto16 = [260, 500, 2000, 8000];
         that = this;
 
 
@@ -222,6 +226,9 @@
                     conMouse = false;
                     break;
                 case 5:
+                    conMouse = false;
+                    break;
+                case 10:
                     conMouse = false;
                     break;
                 default:
