@@ -26,7 +26,9 @@ course.pages = [
     { title: "Pantalla", url: "Maypo_Almacen_03.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Maypo_Almacen_04.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Maypo_Almacen_05.html", navegacion: true, menu: true },
-    { title: "Pantalla", url: "Maypo_Almacen_06.html", navegacion: true, menu: true }
+    { title: "Pantalla", url: "Maypo_Almacen_06.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Maypo_Almacen_07.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Maypo_Almacen_08.html", navegacion: true, menu: true }
 ];
 
 /* Pantallas de recursos */
@@ -68,5 +70,15 @@ var grupoVideos = [
     /*22*/ 'video22',
     /*23*/ 'video23',
     /*24*/ 'video24',
-    /*25*/ 'video25'
+    /*25*/ 'video25',
+    /*26*/ 'video26',
+    /*27*/ 'video27',
+    /*28*/ 'video28',
+    /*29*/ 'video29',
+    /*30*/ 'video30',
+    /*31*/ 'video31',
+    /*32*/ 'video32',
+    /*33*/ 'video33',
+    /*34*/ 'video34',
+    /*35*/ 'video35'
 ];
