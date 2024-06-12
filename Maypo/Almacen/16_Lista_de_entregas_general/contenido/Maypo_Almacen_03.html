@@ -38,6 +38,7 @@
         <video id="video7" class="element video" _origenx="570" _origeny="120" preload="auto" src="videos/Lista_de_entregas_general_07.mp4" type="video/mp4"> </video>
         <video id="video8" class="element video" _origenx="570" _origeny="120" preload="auto" src="videos/Lista_de_entregas_general_08.mp4" type="video/mp4"> </video>
         <video id="video9" class="element video" _origenx="570" _origeny="120" preload="auto" src="videos/Lista_de_entregas_general_09.mp4" type="video/mp4"> </video>
+        <video id="video10" class="element video" _origenx="570" _origeny="120" preload="auto" src="videos/Lista_de_entregas_general_10.mp4" type="video/mp4"> </video>
         <img id="videoMask" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/videoMask.png"></img>
 
         <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/img01.png"></img>
@@ -53,6 +54,7 @@
         <img id="sec_img6" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img06.png"></img>
         <img id="sec_img7" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img07.png"></img>
         <img id="sec_img8" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img08.png"></img>
+        <img id="sec_img9" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img09.png"></img>
 
         <!-- <img id="img_subts_fondo" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/img_subts_fondo.png"></img> -->
         <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img01_subts_01.png"></img>
@@ -63,6 +65,7 @@
         <img id="sec_img6_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img06_subts_01.png"></img>
         <img id="sec_img7_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img07_subts_01.png"></img>
         <img id="sec_img8_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img08_subts_01.png"></img>
+        <img id="sec_img9_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img09_subts_01.png"></img>
 
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
@@ -110,7 +113,7 @@
 <script>
     $(document).ready(function() {
 
-        var cuantasSecciones = 8;
+        var cuantasSecciones = 9;
         var cualVideo = 2;
         var conMouse = true;
         var conSubts = true;
@@ -119,11 +122,12 @@
         this.punto1 = [290, 670, 2000, 2000];
         this.punto2 = [370, 300, 1000, 3000];
         this.punto3 = [215, 130, 1000, 4000];
-        this.punto4 = [500, 510, 2000, 2000];
-        this.punto5 = [430, 165, 2000, 2000];
-        this.punto6 = [515, 750, 2000, 2000];
-        this.punto7 = [295, 210, 2000, 2000];
-        this.punto8 = [535, 400, 2000, 3000];
+        this.punto4 = [375, 570, 2000, 2000];
+        this.punto5 = [500, 510, 2000, 2000];
+        this.punto6 = [430, 165, 2000, 2000];
+        this.punto7 = [300, 120, 2000, 22000];
+        this.punto8 = [295, 210, 2000, 2000];
+        this.punto9 = [335, 400, 2000, 2000];
         that = this;
 
 
@@ -168,7 +172,7 @@
             // parent.playAudio(cualVideo, 1500, terminaVideo1);
             setTimeout(function() {
                 terminaVideo1();
-            }, 2500);
+            }, 4500);
         }
 
         function terminaVideo1() {
@@ -190,7 +194,7 @@
                 case 1:
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
                     break;
-                case 6:
+                case 8:
                     conMouse = false;
                     break;
                 default:
