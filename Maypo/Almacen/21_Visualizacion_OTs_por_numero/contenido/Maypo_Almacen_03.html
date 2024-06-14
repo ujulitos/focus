@@ -42,7 +42,6 @@
         <video id="video11" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_OTs_por_nmero_11.mp4" type="video/mp4"> </video>
         <video id="video12" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_OTs_por_nmero_12.mp4" type="video/mp4"> </video>
         <video id="video13" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_OTs_por_nmero_13.mp4" type="video/mp4"> </video>
-        <video id="video14" class="element video" _origenx="-260" _origeny="140" preload="auto" src="videos/Visualizacin_OTs_por_nmero_14.mp4" type="video/mp4"> </video>
         <img id="videoMask" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/videoMask.png"></img>
 
         <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/img01.png"></img>
@@ -62,7 +61,6 @@
         <img id="sec_img10" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img10.png"></img>
         <img id="sec_img11" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img11.png"></img>
         <img id="sec_img12" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img12.png"></img>
-        <img id="sec_img13" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img13.png"></img>
 
         <!-- <img id="img_subts_fondo" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/img_subts_fondo.png"></img> -->
         <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img01_subts_01.png"></img>
@@ -77,7 +75,6 @@
         <img id="sec_img10_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img10_subts_01.png"></img>
         <img id="sec_img11_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img11_subts_01.png"></img>
         <img id="sec_img12_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img12_subts_01.png"></img>
-        <img id="sec_img13_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_03/sec_img13_subts_01.png"></img>
 
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
@@ -125,7 +122,7 @@
 <script>
     $(document).ready(function() {
 
-        var cuantasSecciones = 13;
+        var cuantasSecciones = 12;
         var cualVideo = 2;
         var conMouse = true;
         var conSubts = true;
@@ -135,15 +132,14 @@
         this.punto2 = [370, 530, 1000, 4000];
         this.punto3 = [215, 360, 1000, 4000];
         this.punto4 = [290, 500, 1000, 3000];
-        this.punto5 = [475, 570, 2000, 3000];
-        this.punto6 = [265, 315, 2000, 3000];
-        this.punto7 = [435, 650, 2000, 3000];
-        this.punto8 = [290, 410, 2000, 2000];
-        this.punto9 = [420, 510, 2000, 4000];
-        this.punto10 = [560, 870, 2000, 5000];
-        this.punto11 = [265, 350, 2000, 8000];
-        this.punto12 = [395, 360, 2000, 3000];
-        this.punto13 = [560, 870, 2000, 5000];
+        this.punto5 = [370, 325, 2000, 3000];
+        this.punto6 = [435, 650, 2000, 3000];
+        this.punto7 = [420, 510, 2000, 2000];
+        this.punto8 = [380, 400, 2000, 4000];
+        this.punto9 = [560, 870, 2000, 5000];
+        this.punto10 = [265, 350, 2000, 8000];
+        this.punto11 = [560, 750, 2000, 19000];
+        this.punto12 = [560, 870, 2000, 5000];
         that = this;
 
 
@@ -188,7 +184,7 @@
             // parent.playAudio(cualVideo, 1500, terminaVideo1);
             setTimeout(function() {
                 terminaVideo1();
-            }, 2500);
+            }, 4500);
         }
 
         function terminaVideo1() {
@@ -210,16 +206,13 @@
                 case 1:
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
                     break;
-                case 5:
+                case 6:
                     conMouse = false;
                     break;
-                case 7:
+                case 9:
                     conMouse = false;
                     break;
-                case 10:
-                    conMouse = false;
-                    break;
-                case 13:
+                case 12:
                     conMouse = false;
                     break;
                 default:
