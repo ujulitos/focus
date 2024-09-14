@@ -30,7 +30,9 @@ course.pages = [
     { title: "Pantalla", url: "Maypo_EmployeeCentral_07.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Maypo_EmployeeCentral_08.html", navegacion: true, menu: true },
     { title: "Pantalla", url: "Maypo_EmployeeCentral_09.html", navegacion: true, menu: true },
-    { title: "Pantalla", url: "Maypo_EmployeeCentral_10.html", navegacion: true, menu: true }
+    { title: "Pantalla", url: "Maypo_EmployeeCentral_10.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Maypo_EmployeeCentral_11.html", navegacion: true, menu: true },
+    { title: "Pantalla", url: "Maypo_EmployeeCentral_12.html", navegacion: true, menu: true }
 ];
 
 /* Pantallas de recursos */
@@ -62,8 +64,8 @@ var grupoAudios = new buzz.group([
     /*16*/ new buzz.sound("contenido/audios/16", { formats: ["mp3"], preload: true }),
     /*17*/ new buzz.sound("contenido/audios/17", { formats: ["mp3"], preload: true }),
     /*18*/ new buzz.sound("contenido/audios/18", { formats: ["mp3"], preload: true }),
-
     /*19*/ new buzz.sound("contenido/audios/19", { formats: ["mp3"], preload: true }),
+
     /*20*/ new buzz.sound("contenido/audios/20", { formats: ["mp3"], preload: true }),
     /*21*/ new buzz.sound("contenido/audios/21", { formats: ["mp3"], preload: true }),
     /*22*/ new buzz.sound("contenido/audios/22", { formats: ["mp3"], preload: true }),
@@ -78,6 +80,7 @@ var grupoAudios = new buzz.group([
     /*30*/ new buzz.sound("contenido/audios/30", { formats: ["mp3"], preload: true }),
     /*31*/ new buzz.sound("contenido/audios/31", { formats: ["mp3"], preload: true }),
     /*32*/ new buzz.sound("contenido/audios/32", { formats: ["mp3"], preload: true }),
+
     /*33*/ new buzz.sound("contenido/audios/33", { formats: ["mp3"], preload: true }),
     /*34*/ new buzz.sound("contenido/audios/34", { formats: ["mp3"], preload: true }),
     /*35*/ new buzz.sound("contenido/audios/35", { formats: ["mp3"], preload: true }),
@@ -89,21 +92,21 @@ var grupoAudios = new buzz.group([
     /*41*/ new buzz.sound("contenido/audios/41", { formats: ["mp3"], preload: true }),
     /*42*/ new buzz.sound("contenido/audios/42", { formats: ["mp3"], preload: true }),
     /*43*/ new buzz.sound("contenido/audios/43", { formats: ["mp3"], preload: true }),
-
     /*44*/ new buzz.sound("contenido/audios/44", { formats: ["mp3"], preload: true }),
     /*45*/ new buzz.sound("contenido/audios/45", { formats: ["mp3"], preload: true }),
     /*46*/ new buzz.sound("contenido/audios/46", { formats: ["mp3"], preload: true }),
     /*47*/ new buzz.sound("contenido/audios/47", { formats: ["mp3"], preload: true }),
     /*48*/ new buzz.sound("contenido/audios/48", { formats: ["mp3"], preload: true }),
+
     /*49*/ new buzz.sound("contenido/audios/49", { formats: ["mp3"], preload: true }),
     /*50*/ new buzz.sound("contenido/audios/50", { formats: ["mp3"], preload: true }),
     /*51*/ new buzz.sound("contenido/audios/51", { formats: ["mp3"], preload: true }),
     /*52*/ new buzz.sound("contenido/audios/52", { formats: ["mp3"], preload: true }),
     /*53*/ new buzz.sound("contenido/audios/53", { formats: ["mp3"], preload: true }),
     /*54*/ new buzz.sound("contenido/audios/54", { formats: ["mp3"], preload: true }),
-
     /*55*/ new buzz.sound("contenido/audios/55", { formats: ["mp3"], preload: true }),
     /*56*/ new buzz.sound("contenido/audios/56", { formats: ["mp3"], preload: true }),
+
     /*57*/ new buzz.sound("contenido/audios/57", { formats: ["mp3"], preload: true }),
     /*58*/ new buzz.sound("contenido/audios/58", { formats: ["mp3"], preload: true }),
     /*59*/ new buzz.sound("contenido/audios/59", { formats: ["mp3"], preload: true }),
@@ -115,17 +118,16 @@ var grupoAudios = new buzz.group([
     /*65*/ new buzz.sound("contenido/audios/65", { formats: ["mp3"], preload: true }),
     /*66*/ new buzz.sound("contenido/audios/66", { formats: ["mp3"], preload: true }),
     /*67*/ new buzz.sound("contenido/audios/67", { formats: ["mp3"], preload: true }),
+
     /*68*/ new buzz.sound("contenido/audios/68", { formats: ["mp3"], preload: true }),
     /*69*/ new buzz.sound("contenido/audios/69", { formats: ["mp3"], preload: true }),
     /*70*/ new buzz.sound("contenido/audios/70", { formats: ["mp3"], preload: true }),
     /*71*/ new buzz.sound("contenido/audios/71", { formats: ["mp3"], preload: true }),
-
     /*72*/ new buzz.sound("contenido/audios/72", { formats: ["mp3"], preload: true }),
     /*73*/ new buzz.sound("contenido/audios/73", { formats: ["mp3"], preload: true }),
     /*74*/ new buzz.sound("contenido/audios/74", { formats: ["mp3"], preload: true }),
     /*75*/ new buzz.sound("contenido/audios/75", { formats: ["mp3"], preload: true }),
     /*76*/ new buzz.sound("contenido/audios/76", { formats: ["mp3"], preload: true }),
-
     /*77*/ new buzz.sound("contenido/audios/77", { formats: ["mp3"], preload: true }),
     /*78*/ new buzz.sound("contenido/audios/78", { formats: ["mp3"], preload: true }),
     /*79*/ new buzz.sound("contenido/audios/79", { formats: ["mp3"], preload: true }),
@@ -134,12 +136,27 @@ var grupoAudios = new buzz.group([
     /*82*/ new buzz.sound("contenido/audios/82", { formats: ["mp3"], preload: true }),
     /*83*/ new buzz.sound("contenido/audios/83", { formats: ["mp3"], preload: true }),
     /*84*/ new buzz.sound("contenido/audios/84", { formats: ["mp3"], preload: true }),
+
     /*85*/ new buzz.sound("contenido/audios/85", { formats: ["mp3"], preload: true }),
     /*86*/ new buzz.sound("contenido/audios/86", { formats: ["mp3"], preload: true }),
     /*87*/ new buzz.sound("contenido/audios/87", { formats: ["mp3"], preload: true }),
     /*88*/ new buzz.sound("contenido/audios/88", { formats: ["mp3"], preload: true }),
     /*89*/ new buzz.sound("contenido/audios/89", { formats: ["mp3"], preload: true }),
-    /*90*/ new buzz.sound("contenido/audios/90", { formats: ["mp3"], preload: true }),
 
-    /*91*/ new buzz.sound("contenido/audios/91", { formats: ["mp3"], preload: true })
+    /*90*/ new buzz.sound("contenido/audios/90", { formats: ["mp3"], preload: true }),
+    /*91*/ new buzz.sound("contenido/audios/91", { formats: ["mp3"], preload: true }),
+    /*92*/ new buzz.sound("contenido/audios/92", { formats: ["mp3"], preload: true }),
+    /*93*/ new buzz.sound("contenido/audios/93", { formats: ["mp3"], preload: true }),
+    /*94*/ new buzz.sound("contenido/audios/94", { formats: ["mp3"], preload: true }),
+    /*95*/ new buzz.sound("contenido/audios/95", { formats: ["mp3"], preload: true }),
+    /*96*/ new buzz.sound("contenido/audios/96", { formats: ["mp3"], preload: true }),
+    /*97*/ new buzz.sound("contenido/audios/97", { formats: ["mp3"], preload: true }),
+    /*98*/ new buzz.sound("contenido/audios/98", { formats: ["mp3"], preload: true }),
+    /*99*/ new buzz.sound("contenido/audios/99", { formats: ["mp3"], preload: true }),
+    /*100*/ new buzz.sound("contenido/audios/100", { formats: ["mp3"], preload: true }),
+    /*101*/ new buzz.sound("contenido/audios/101", { formats: ["mp3"], preload: true }),
+    /*102*/ new buzz.sound("contenido/audios/102", { formats: ["mp3"], preload: true }),
+    /*103*/ new buzz.sound("contenido/audios/103", { formats: ["mp3"], preload: true }),
+
+    /*104*/ new buzz.sound("contenido/audios/104", { formats: ["mp3"], preload: true })
 ]);

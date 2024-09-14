@@ -37,12 +37,24 @@
         <img id="sec_img2" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img02.png"></img>
         <img id="sec_img3" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img03.png"></img>
         <img id="sec_img4" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img04.png"></img>
+        <img id="sec_img5" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img05.png"></img>
+        <img id="sec_img6" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img06.png"></img>
+        <img id="sec_img7" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img07.png"></img>
+        <img id="sec_img8" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img08.png"></img>
+        <img id="sec_img9" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img09.png"></img>
+        <img id="sec_img10" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img10.png"></img>
 
         <!-- <img id="img_subts_fondo" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/img_subts_fondo.png"></img> -->
         <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img01_subts_01.png"></img>
         <img id="sec_img2_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img02_subts_01.png"></img>
         <img id="sec_img3_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img03_subts_01.png"></img>
         <img id="sec_img4_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img04_subts_01.png"></img>
+        <img id="sec_img5_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img05_subts_01.png"></img>
+        <img id="sec_img6_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img06_subts_01.png"></img>
+        <img id="sec_img7_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img07_subts_01.png"></img>
+        <img id="sec_img8_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img08_subts_01.png"></img>
+        <img id="sec_img9_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img09_subts_01.png"></img>
+        <img id="sec_img10_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_08/sec_img10_subts_01.png"></img>
 
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
@@ -90,16 +102,22 @@
 <script>
     $(document).ready(function() {
 
-        var cuantasSecciones = 4;
-        var cualAudio = 72;
+        var cuantasSecciones = 10;
+        var cualAudio = 57;
         var conMouse = true;
         var conSubts = true;
         // var subtsOn;
         // var altoSubts = 125;
-        this.punto1 = [220, 720, 3000, 7000];
-        this.punto2 = [400, 430, 2000, 7000];
-        this.punto3 = [320, 440, 1000, 10000];
-        this.punto4 = [550, 350, 2000, 5000];
+        this.punto1 = [340, 390, 3000, 1000];
+        this.punto2 = [405, 630, 3000, 10000];
+        this.punto3 = [480, 630, 2000, 25000];
+        this.punto4 = [445, 635, 2000, 6000];
+        this.punto5 = [445, 630, 1000, 5000];
+        this.punto6 = [495, 410, 2000, 44000];
+        this.punto7 = [375, 435, 2000, 7000];
+        this.punto8 = [230, 1090, 2000, 5000];
+        this.punto9 = [250, 430, 2000, 3000];
+        this.punto10 = [395, 700, 2000, 12000];
         that = this;
 
 
@@ -160,6 +178,7 @@
             switch (cualSeccion) {
                 case 1:
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
+                    conMouse = false;
                     break;
                     // case 3:
                     //     conMouse = false;
