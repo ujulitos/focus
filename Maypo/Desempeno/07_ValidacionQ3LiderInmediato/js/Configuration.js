@@ -45,7 +45,9 @@ var grupoAudios = new buzz.group([
     /*05*/ new buzz.sound("contenido/audios/04", { formats: ["mp3"], preload: true }),
     /*06*/ new buzz.sound("contenido/audios/05", { formats: ["mp3"], preload: true }),
     /*07*/ new buzz.sound("contenido/audios/06", { formats: ["mp3"], preload: true }),
-    /*08*/ new buzz.sound("contenido/audios/07", { formats: ["mp3"], preload: true }),
-    
-    /*09*/ new buzz.sound("contenido/audios/08", { formats: ["mp3"], preload: true })
+    /*08*/ new buzz.sound("contenido/audios/07", { formats: ["mp3"], preload: true }),    
+    /*09*/ new buzz.sound("contenido/audios/08", { formats: ["mp3"], preload: true }),
+    /*10*/ new buzz.sound("contenido/audios/09", { formats: ["mp3"], preload: true }),
+
+    /*11*/ new buzz.sound("contenido/audios/10", { formats: ["mp3"], preload: true })
 ]);

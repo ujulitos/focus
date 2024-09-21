@@ -40,6 +40,11 @@
         <img id="sec_img5" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img05.png"></img>
         <img id="sec_img6" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img06.png"></img>
         <img id="sec_img7" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img07.png"></img>
+        <img id="sec_img8" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img08.png"></img>
+        <img id="sec_img9" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img09.png"></img>
+        <img id="sec_img10" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img10.png"></img>
+        <img id="sec_img11" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img11.png"></img>
+        <img id="sec_img12" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img12.png"></img>
 
         <!-- <img id="img_subts_fondo" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/img_subts_fondo.png"></img> -->
         <img id="sec_img1_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img01_subts_01.png"></img>
@@ -49,6 +54,11 @@
         <img id="sec_img5_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img05_subts_01.png"></img>
         <img id="sec_img6_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img06_subts_01.png"></img>
         <img id="sec_img7_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img07_subts_01.png"></img>
+        <img id="sec_img8_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img08_subts_01.png"></img>
+        <img id="sec_img9_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img09_subts_01.png"></img>
+        <img id="sec_img10_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img10_subts_01.png"></img>
+        <img id="sec_img11_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img11_subts_01.png"></img>
+        <img id="sec_img12_subts_01" class="element" _origenx="0" _origeny="0" src="images/Maypo_EmployeeCentral_03/sec_img12_subts_01.png"></img>
 
         <img id="mouse" class="element" _origenx="-20" _origeny="20" src="images/mouse.png"></img>
 
@@ -96,19 +106,24 @@
 <script>
     $(document).ready(function() {
 
-        var cuantasSecciones = 7;
+        var cuantasSecciones = 12;
         var cualAudio = 2;
         var conMouse = true;
         var conSubts = true;
         // var subtsOn;
         // var altoSubts = 125;
-        this.punto1 = [320, 510, 3000, 5000];
-        this.punto2 = [440, 320, 2000, 4000];
-        this.punto3 = [540, 990, 2000, 6000];
-        this.punto4 = [420, 785, 2000, 9000];
-        this.punto5 = [525, 590, 2000, 4000];
-        this.punto6 = [550, 830, 2000, 14000];
-        this.punto7 = [275, 435, 2000, 1000];
+        this.punto1 = [450, 475, 3000, 14000];
+        this.punto2 = [520, 590, 2000, 2000];
+        this.punto3 = [350, 980, 2000, 7000];
+        this.punto4 = [320, 510, 2000, 5000];
+        this.punto5 = [435, 315, 2000, 4000];
+        this.punto6 = [540, 990, 2000, 6000];
+        this.punto7 = [420, 785, 2000, 10000];
+        this.punto8 = [480, 660, 2000, 7000];
+        this.punto9 = [525, 590, 2000, 4000];
+        this.punto10 = [545, 1020, 3000, 5000];
+        this.punto11 = [550, 830, 2000, 14000];
+        this.punto12 = [275, 435, 2000, 1000];
         that = this;
 
 
@@ -170,7 +185,7 @@
                 case 1:
                     animacion_entrada($("#instrucciones"), "izq_der", .7, 0);
                     break;
-                case 7:
+                case 12:
                     conMouse = false;
                     break;
                 default:
