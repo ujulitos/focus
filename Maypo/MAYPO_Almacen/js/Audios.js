@@ -61,11 +61,13 @@ function playAll() {
     //     buzz.all().unmute();
     // }, 491);
 
-    $("#video0").trigger('play');
-    $("#video0").prop('muted', true);
+    console.log('playAll');
+
+    $("#video0")[0].play();
+    // $("#video0").prop('muted', true);
     setTimeout(function() {
-        $("#video0").trigger('pause');
-    }, 200);
+        $("#video0")[0].pause();
+    }, 2000);
 }
 
 function playOne() {
