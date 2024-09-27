@@ -64,10 +64,10 @@ function playAll() {
     console.log('playAll');
 
     $("#video0")[0].play();
-    $("#video0").prop('muted', true);
+    // $("#video0").prop('muted', true);
     setTimeout(function() {
         $("#video0")[0].pause();
-    }, 200);
+    }, 2000);
 }
 
 function playOne() {

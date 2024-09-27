@@ -26,7 +26,7 @@
 
 <body onresize="location.reload()">
     <div id="contenido">
-        <video id="video1" class="element video" _origenx="560" _origeny="300" preload="auto" playsinline src="videos/Estado_de_almacn_01.mp4" type="video/mp4"> </video>
+        <video id="video1" class="element video" _origenx="560" _origeny="300" preload="auto" playsinline autoplay src="videos/Estado_de_almacn_01.mp4" type="video/mp4"> </video>
         <img id="imagen2" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_01/img02.png"></img>
         <img id="imagen1" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_01/img01.png"></img>
         <img id="imagen3" class="element" _origenx="0" _origeny="0" src="images/Maypo_Almacen_01/img03.png"></img>
@@ -67,6 +67,7 @@
     $(document).ready(function() {
 
         var cualVideo = 1;
+        $("#video" + cualVideo)[0].pause();
 
         cacularEscala();
         ajustarEscenario();
