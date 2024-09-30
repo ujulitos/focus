@@ -124,13 +124,16 @@
             setTimeout(function() {
                 // buzz.sounds[cualAudio].play();
                 $("#video1")[0].play();
+
+                $("#video1").on('ended', function() {
+                    console.log('Video has ended!');
+                    $("#video1").hide();
+                });
             }, 2300);
+
             parpadea($("#botonIniciar"), 10);
 
-            $("#video1").on('ended', function() {
-                console.log('Video has ended!');
-                $("#video1").hide();
-            });
+
 
 
 
