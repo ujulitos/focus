@@ -109,7 +109,17 @@
             animacion_entrada($("#imagen3"), "izq_der", .7, 1);
             animacion_entrada($("#imagen4"), "izq_der", .7, 1.3);
 
-            parent.playAudio(1, 2300, terminaVideo1);
+            // parent.playAudio(1, 2300, terminaVideo1);
+            setTimeout(function() {
+                // buzz.sounds[cualAudio].play();
+                $("#video" + 1)[0].play();
+            }, 2300);
+            $("#video" + 1).on('ended', function() {
+                console.log('Video has ended!');
+                terminaVideo1();
+            });
+
+
             animacion_entrada($("#video" + cualVideo), "default", .7, 2.2);
             // animacion_entrada($("#videoMask"), "default", .5, 0);
             // setTimeout(function() {
